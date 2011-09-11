@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	Indratu Fortress
+	@author Ritsu
+ -->
+<spawns>
+	<!-- Artifact of the Balaur -->
+	<spawn map="310090000" npcid="700515" pool="1" interval="295">
+		<object staticid="54" x="491.68869" y="516.29236" h="100" z="968.84601"/>
+	</spawn>
+	<!-- Fortress Gate -->
+	<spawn map="310090000" npcid="700372" pool="1" interval="295">
+		<object staticid="52" x="524.15771" y="481.23468" h="95" z="1013.5057"/>
+		<object staticid="53" x="480.01099" y="575.1013" h="95" z="1013.5405"/>
+	</spawn>
+	<!-- Indratu Legion Abyss Gate -->
+	<spawn map="310090000" npcid="700361" pool="1" interval="295">
+		<object staticid="28" x="564.38025" y="324.95798" h="36" z="1015.7567"/>
+	</spawn>
+</spawns>
