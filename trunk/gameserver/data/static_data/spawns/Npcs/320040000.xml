@@ -1,0 +1,7 @@
+<!-- NPCs/Objects spawns by Atomix from http://aion.atomixro.com
+Thanks to Matej for helping me.
+map npcid pool interval
+object x y z h
+ -->
+<spawns>
+</spawns>
