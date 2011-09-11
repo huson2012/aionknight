@@ -723,7 +723,7 @@ Forteresses et Artefacts Abyssaux-->
 				<loc x="2800.1663" y="2643.2434" z="1483.2761" h="0"/>
 			</siege_guard>
 			<siege_guard npcid_dr="263210" npcid_da="263209" npcid_li="263208">
-				<loc x="2986.9849" y="2579.4719" z="1482.2784" h="33"/>
+				<loc x="2985.7788" y="2579.5676" z="1489.0897" h="33"/>
 			</siege_guard>
 			<siege_guard npcid_dr="263257" npcid_da="263256" npcid_li="263255">
 				<loc x="2898.8772" y="2551.4897" z="1503.711" h="30"/>
@@ -752,7 +752,7 @@ Forteresses et Artefacts Abyssaux-->
 				<loc x="3010.7576" y="2591.5854" z="1473.1433" h="0"/>
 			</siege_guard>
 			<siege_guard npcid_dr="263260" npcid_da="263259" npcid_li="263258">
-				<loc x="3213.7043" y="2659.624" z="1465.052" h="15"/>
+				<loc x="3212.0295" y="2659.824" z="1479.0453" h="15"/>
 			</siege_guard>
 			<siege_guard npcid_dr="275117" npcid_da="275113" npcid_li="275109">
 				<loc x="2774.1379" y="2646.1616" z="1539.0356" h="30"/>
