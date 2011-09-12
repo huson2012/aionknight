@@ -24,6 +24,7 @@ import java.sql.Timestamp;
 import java.util.Calendar;
 
 import org.apache.log4j.Logger;
+import org.openaion.gameserver.configs.administration.AdminConfig;
 import org.openaion.gameserver.configs.main.CustomConfig;
 import org.openaion.gameserver.dataholders.DataManager;
 import org.openaion.gameserver.model.EmotionType;
@@ -119,11 +120,13 @@ public class PortalController extends NpcController
 				}
 
 				PlayerGroup group = player.getPlayerGroup();
-				if(portalTemplate.isGroup() && group == null)
-				{
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ENTER_ONLY_PARTY_DON);
-					return;
+				if(player.getAccessLevel() < AdminConfig.INSTANCE_NO_GROUP) {
+					if (portalTemplate.isGroup() && group == null) {
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ENTER_ONLY_PARTY_DON);
+						return;
+					}
 				}
+				
               for (PortalItem portalItem : portalTemplate.getPortalItem()) {
            Item item = player.getInventory().getFirstItemByItemId(portalItem.getItemid());
            if (item == null) {
@@ -196,9 +199,20 @@ public class PortalController extends NpcController
 				}
 				else
 				{
-					if(portalTemplate.isGroup() && group != null)
+					if(portalTemplate.isGroup())
 					{
-						WorldMapInstance instance = InstanceService.getRegisteredInstance(worldId, group.getGroupId());
+						WorldMapInstance instance;
+						if(group != null) {
+							instance = InstanceService.getRegisteredInstance(worldId, group.getGroupId());
+							}
+							else {
+								instance = InstanceService.getRegisteredInstance(worldId, player.getObjectId());
+								if(instance != null)
+									transfer(player, instance);
+								else
+									port(player);
+								return;
+							}
 						// register if not yet created
 						if(instance == null)
 						{
