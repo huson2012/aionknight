@@ -83,8 +83,8 @@ public class AdminConfig
 	@Property(key = "gameserver.administration.command.gag", defaultValue = "3")
 	public static int	COMMAND_GAG;
 
-  @Property(key = "gameserver.administration.command.goto", defaultValue = "3")
-  public static int COMMAND_GOTO;
+	@Property(key = "gameserver.administration.command.goto", defaultValue = "3")
+	public static int COMMAND_GOTO;
 	
 	@Property(key = "gameserver.administration.command.givemissingskills", defaultValue = "3")
 	public static int	COMMAND_GIVEMISSINGSKILLS;
@@ -173,8 +173,8 @@ public class AdminConfig
 	@Property(key = "gameserver.administration.command.savespawndata", defaultValue = "3")
 	public static int	COMMAND_SAVESPAWNDATA;
   
-  @Property(key = "gameserver.administration.command.dropinfo", defaultValue = "0")
-  public static int COMMAND_DROPINFO;
+	@Property(key = "gameserver.administration.command.dropinfo", defaultValue = "0")
+	public static int COMMAND_DROPINFO;
 
 	@Property(key = "gameserver.administration.command.sendfakeserverpacket", defaultValue = "3")
 	public static int	COMMAND_SENDFAKESERVERPACKET;
@@ -227,17 +227,17 @@ public class AdminConfig
 	@Property(key = "gameserver.administration.command.zone", defaultValue = "3")
 	public static int	COMMAND_ZONE;
   
-  @Property(key = "gameserver.administration.command.enchant", defaultValue = "3")
-  public static int	COMMAND_ENCHANT;
+	@Property(key = "gameserver.administration.command.enchant", defaultValue = "3")
+	public static int	COMMAND_ENCHANT;
 
-  @Property(key = "gameserver.administration.command.socket", defaultValue = "3")
-  public static int	COMMAND_SOCKET;
+	@Property(key = "gameserver.administration.command.socket", defaultValue = "3")
+	public static int	COMMAND_SOCKET;
 
-  @Property(key = "gameserver.administration.command.powerup", defaultValue = "3")
-  public static int	COMMAND_POWERUP;
+	@Property(key = "gameserver.administration.command.powerup", defaultValue = "3")
+	public static int	COMMAND_POWERUP;
 	
-  @Property(key = "gameserver.administration.command.godstone", defaultValue = "3")
-  public static int	COMMAND_GODSTONE;
+	@Property(key = "gameserver.administration.command.godstone", defaultValue = "3")
+	public static int	COMMAND_GODSTONE;
 
 	@Property(key ="gameserver.administration.command.worldban", defaultValue = "3")
 	public static int	COMMAND_WORLDBAN;
@@ -311,7 +311,10 @@ public class AdminConfig
 	@Property(key = "gameserver.administration.command.preset", defaultValue = "3")
 	public static int	COMMAND_APPLY_PRESET;
 
-        @Property(key = "gameserver.administration.command.pvp", defaultValue = "3")
+    @Property(key = "gameserver.administration.command.pvp", defaultValue = "3")
 	public static int	COMMAND_PVP;
+	
+	@Property(key = "gameserver.administration.instancenogroup", defaultValue = "3")
+	public static int INSTANCE_NO_GROUP;
 
 }
