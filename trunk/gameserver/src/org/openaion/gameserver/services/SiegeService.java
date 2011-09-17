@@ -475,6 +475,15 @@ public class SiegeService
 					loc.setNextState(vulnext ? 1 : 0);
 					broadcastUpdate(loc);
 				}
+
+				World.getInstance().doOnAllPlayers(new Executor<Player>(){
+					@Override
+					public boolean run (Player player)
+					{
+						sendVulnerabilityInfo(player);
+						return true;
+					}
+				});
 			}
 		}, 3000);
 	}
@@ -1235,7 +1244,12 @@ public class SiegeService
 	
 	public void onPlayerLogin(final Player player)
 	{
-		//alertVulnerable(player);
+		alertVulnerable(player);
+		sendVulnerabilityInfo(player);
+	}
+	
+	public void sendVulnerabilityInfo(final Player player)
+	{
 		PacketSendUtility.sendPacket(player, new SM_ABYSS_ARTIFACT_INFO(locations.values()));
 		PacketSendUtility.sendPacket(player, new SM_SIEGE_AETHERIC_FIELDS(locations.values()));
 		PacketSendUtility.sendPacket(player, new SM_ABYSS_ARTIFACT_INFO3(locations.values()));
@@ -1256,7 +1270,6 @@ public class SiegeService
 				}, 1500);				
 			}
 		}
-		
 	}
 	
 	private void writeLogAbyssStatus()

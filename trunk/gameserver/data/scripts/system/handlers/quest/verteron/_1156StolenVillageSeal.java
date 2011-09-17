@@ -32,6 +32,7 @@ import org.openaion.gameserver.utils.ThreadPoolManager;
 
 /**
 * @author Rhys2002
+* @modified Frost
 *
 */
 public class _1156StolenVillageSeal extends QuestHandler
@@ -96,7 +97,7 @@ public class _1156StolenVillageSeal extends QuestHandler
 			{
 				case 700003:
 				{
-					if (var == 0 && env.getDialogId() == 25)
+					if (var == 0 && env.getDialogId() == 26)
 					    return sendQuestDialog(env, 1352);
 					else if(env.getDialogId() == 10000)
 					{

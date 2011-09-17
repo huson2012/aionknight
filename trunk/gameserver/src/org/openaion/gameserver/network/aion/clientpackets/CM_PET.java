@@ -190,7 +190,7 @@ public class CM_PET extends AionClientPacket
 					player.getState() != (CreatureState.ACTIVE.getId() | CreatureState.POWERSHARD.getId()))
 				{
 					PacketSendUtility.sendPacket(player, 
-						SM_SYSTEM_MESSAGE.STR_MSGBOX_TOYPET_FEED_CANT_FEED(SM_SYSTEM_MESSAGE.MSG_ASF_COMBAT));
+						SM_SYSTEM_MESSAGE.STR_MSGBOX_TOYPET_FEED_CANT_FEED(SM_SYSTEM_MESSAGE.STR_MSG_ASF_COMBAT));
 					return;
 				}
 				ToyPetService.getInstance().feedPet(player, foodObjId, foodAmount);

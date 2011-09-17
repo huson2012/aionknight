@@ -15,6 +15,7 @@ import java.util.TreeMap;
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.dao.DAOManager;
 import org.openaion.gameserver.dao.InventoryDAO;
+import org.openaion.gameserver.controllers.movement.StartMovingListener;
 import org.openaion.gameserver.model.DescriptionId;
 import org.openaion.gameserver.model.EmotionType;
 import org.openaion.gameserver.model.Gender;
@@ -25,6 +26,7 @@ import org.openaion.gameserver.model.gameobjects.PersistentState;
 import org.openaion.gameserver.model.gameobjects.state.CreatureState;
 import org.openaion.gameserver.model.gameobjects.stats.listeners.ItemEquipmentListener;
 import org.openaion.gameserver.model.items.ItemSlot;
+import org.openaion.gameserver.model.TaskId;
 import org.openaion.gameserver.model.templates.item.ArmorType;
 import org.openaion.gameserver.model.templates.item.ItemTemplate;
 import org.openaion.gameserver.model.templates.item.LevelRestrict;
@@ -985,13 +987,6 @@ public class Equipment
 	 */
 	private boolean soulBindItem(final Player player, final Item item, final int slot)
 	{
-		if (player.getState() != CreatureState.ACTIVE.getId() &&
-			player.getState() != (CreatureState.ACTIVE.getId() | CreatureState.POWERSHARD.getId()))
-		{
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.CANT_EQUIP_ITEM_IN_ACTION());
-			return false;
-		}
-		
 		RequestResponseHandler responseHandler = new RequestResponseHandler(player){
 
 			public void acceptRequest(Creature requester, Player responder)
@@ -999,27 +994,59 @@ public class Equipment
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item
 					.getObjectId(), item.getItemId(), 5000, 4), true);
 
+				int sysMsgId = 0;
+				if (player.isInState(CreatureState.CHAIR))
+					sysMsgId = SM_SYSTEM_MESSAGE.STR_MSG_ACT_STATE_SITTING_ON_CHAIR;
+				else if (player.isInState(CreatureState.FLYING))
+					sysMsgId = SM_SYSTEM_MESSAGE.STR_MSG_ACT_STATE_FREE_FLYING;
+				else if (player.isInState(CreatureState.RESTING))
+					sysMsgId = SM_SYSTEM_MESSAGE.STR_MSG_ACT_STATE_SITTING;
+				else if (player.isInState(CreatureState.WEAPON_EQUIPPED))
+					sysMsgId = SM_SYSTEM_MESSAGE.STR_MSG_ASF_COMBAT;
+				else if (player.isInState(CreatureState.GLIDING))
+					sysMsgId = SM_SYSTEM_MESSAGE.STR_MSG_ASF_GLIDE;
+		
+				if (sysMsgId != 0)
+				{
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_SOUL_BOUND_INVALID_STANCE(sysMsgId));
+					return;
+				}
+				player.getController().cancelTask(TaskId.ITEM_USE);
+		
+				player.getObserveController().attach(new StartMovingListener() {
+					@Override
+					public void moved()
+					{
+						if (item.isEquipped())
+							return;
+						player.getController().cancelTask(TaskId.ITEM_USE);
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.SOUL_BOUND_ITEM_CANCELED(new DescriptionId(Integer.parseInt(item.getName()))));
+						PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemId(), 0, 8), true);
+					}
+				});
+
 				final WorldPosition position = player.getCommonData().getPosition().clone();
 
 				// item usage animation
-				ThreadPoolManager.getInstance().schedule(new Runnable(){
-
-					public void run()
-					{
-						PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),
-							item.getObjectId(), item.getItemId(), 0, 6), true);
-						if(!position.equals(player.getCommonData().getPosition()))
-						{ // player moved, binding is canceled.
-							return;
+				player.getController().addNewTask(TaskId.ITEM_USE,
+					ThreadPoolManager.getInstance().schedule(new Runnable(){
+	
+						public void run()
+						{
+							PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),
+								item.getObjectId(), item.getItemId(), 0, 6), true);
+							if(!position.equals(player.getCommonData().getPosition()))
+							{ // player moved, binding is canceled.
+								return;
+							}
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE
+								.SOUL_BOUND_ITEM_SUCCEED(new DescriptionId(item.getNameID())));
+							item.setSoulBound(true);
+							equip(slot, item);
+							PacketSendUtility.broadcastPacket(player, new SM_UPDATE_PLAYER_APPEARANCE(player.getObjectId(),
+								getEquippedItemsWithoutStigma()), true);	
 						}
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE
-							.SOUL_BOUND_ITEM_SUCCEED(new DescriptionId(item.getNameID())));
-						item.setSoulBound(true);
-						equip(slot, item);
-						PacketSendUtility.broadcastPacket(player, new SM_UPDATE_PLAYER_APPEARANCE(player.getObjectId(),
-							getEquippedItemsWithoutStigma()), true);	
-					}
-				}, 5100);
+				}, 5100));
 			}
 
 			public void denyRequest(Creature requester, Player responder)
