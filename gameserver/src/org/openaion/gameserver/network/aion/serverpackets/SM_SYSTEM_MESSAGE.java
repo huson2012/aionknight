@@ -350,6 +350,13 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	}
 	
 	/**
+	 * Soul-binding of items not possible while %0.
+	 */
+	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_INVALID_STANCE(int systemMessageId) {
+		return new SM_SYSTEM_MESSAGE(1300489, new DescriptionId(systemMessageId * 2 + 1));
+	}
+	
+	/**
 	 * You cannot equip or remove items while in action
 	 */
 	public static SM_SYSTEM_MESSAGE CANT_EQUIP_ITEM_IN_ACTION() {
@@ -1709,9 +1716,19 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	
 	/**
-	 * in combat
+	 * status-messages
 	 */
-	public static int MSG_ASF_COMBAT = 1400079;
+	public static int STR_CUSTOM_ANIM_TYPE_REST = 902875;
+	public static int STR_MSG_ACT_STATE_STANDING = 1400053;
+	public static int STR_MSG_ACT_STATE_PATH_FLYING = 1400054;
+	public static int STR_MSG_ACT_STATE_FREE_FLYING = 1400055;
+	public static int STR_MSG_ACT_STATE_RIDING = 1400056;
+	public static int STR_MSG_ACT_STATE_SITTING = 1400057;
+	public static int STR_MSG_ACT_STATE_SITTING_ON_CHAIR = 1400058;
+	public static int STR_MSG_ACT_STATE_DEAD = 1400059;
+	public static int STR_MSG_ACT_STATE_DEFAULT = 1400064;
+	public static int STR_MSG_ASF_COMBAT = 1400079;
+	public static int STR_MSG_ASF_GLIDE = 1400082;
 	
 	/** 
 	 * You cannot feed your pet %0.

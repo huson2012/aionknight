@@ -20,15 +20,17 @@ import java.nio.ByteBuffer;
 import java.util.List;
 
 import org.openaion.gameserver.model.gameobjects.Item;
+import org.openaion.gameserver.model.templates.item.ItemTemplate;
 import org.openaion.gameserver.network.aion.AionConnection;
-import org.openaion.gameserver.network.aion.AionServerPacket;
+import org.openaion.gameserver.network.aion.InventoryPacket;
 
 
 /**
  * @author Avol
+ * modified by xj2479564
  */
 
-public class SM_VIEW_PLAYER_DETAILS extends AionServerPacket
+public class SM_VIEW_PLAYER_DETAILS extends InventoryPacket
 {
 	private List<Item> items;
 	private int size;
@@ -44,44 +46,40 @@ public class SM_VIEW_PLAYER_DETAILS extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
-
-		writeD(buf, targetObjId); // unk
-		writeC(buf, 11); //unk
-		writeC(buf, size); // itemCount
-		writeC(buf, 0);
-		writeD(buf, 0);
-		for(Item item : items)
-		{	
-			//////general info/////////////
-			writeD(buf, item.getItemTemplate().getTemplateId());//itemId
-			writeH(buf, 36); // 
-			writeD(buf, item.getItemTemplate().getNameId());// itemNameId
-			writeH(buf, 0);
-			/////who knows/////////////
-			writeH(buf, 36);
-			writeC(buf, 4);
-			writeC(buf, 1);
-			writeH(buf, 0);
-			writeH(buf, 0);
-			writeC(buf, 0);
-			////////////////////////
-			writeH(buf, 0);
-			writeC(buf, 6);
-			writeH(buf, item.getEquipmentSlot()); // slot
-			writeH(buf, 0);
-			writeC(buf, 0);
-			writeH(buf, 62);
-			writeH(buf, (int) item.getItemCount()); // count
-			////////////////////////
-			//Here comes the lol part.
-			////////////////////////
-			writeD(buf, 0);
-			writeD(buf, 0);
-			writeD(buf, 0);
-			writeD(buf, 0);
-			writeD(buf, 0);
-			writeC(buf, 0);
-		}
-		
+   
+	    writeD(buf, targetObjId); // unk
+        writeC(buf, 11); //unk
+        writeC(buf, size); // itemCount
+        writeC(buf, 0);
+        writeD(buf, 0);
+         
+        for (Item item : items) 
+        {
+            
+            /**
+             * IF ItemSlot.MAIN_HAND
+             * OR ItemSlot.MAIN_OR_SUB
+             * no need writeD.
+             */
+            if((item.getEquipmentSlot()&1) == 0)
+                writeD(buf, item.getObjectId());
+            
+            ItemTemplate itemTemplate = item.getItemTemplate();
+            writeD(buf, itemTemplate.getTemplateId());
+            writeH(buf, 0x24);
+            writeD(buf, itemTemplate.getNameId());
+            writeH(buf, 0);
+            
+            if (item.getItemTemplate().isArmor())
+                writeArmorInfo(buf, item);
+            else if (item.getItemTemplate().isWeapon()) 
+                writeWeaponInfo(buf, item);
+            else
+                writeGeneralItemInfo(buf, item);
+       
+        }
+        
+       
 	}
+	       
 }
