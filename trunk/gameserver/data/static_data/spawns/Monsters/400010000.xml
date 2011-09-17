@@ -1385,10 +1385,10 @@
 	<spawn map="400010000" npcid="266554" pool="1" interval="10800">
 		<object x="2705.621" y="797.0386" z="2865.1409" h="29"/>
 	</spawn>
-	<!-- Hespheria (Monster Normal lvl:5)-->
+	<!-- Hespheria (Monster Normal lvl:5)
 	<spawn map="400010000" npcid="268016" pool="1" interval="210">
 		<object x="1996.37" y="1259.09" z="2945.788" h="106"/>
-	</spawn>
+	</spawn>-->
 	<!-- Highmage Nobris (Named Mob Normal lvl:26) -->
 	<spawn map="400010000" npcid="253011" pool="1" interval="1800">
 		<object x="2192.0" y="3120.0" z="1666.829" h="28"/>
@@ -1437,10 +1437,10 @@
 		<object x="2204.7" y="3283.59" z="1656.4243" h="27"/>
 		<object x="2146.17" y="3143.89" z="1654.8877" h="79"/>
 	</spawn>
-	<!-- Hildebrant (Monster Normal lvl:50)-->
+	<!-- Hildebrant (Monster Normal lvl:50)
 	<spawn map="400010000" npcid="268052" pool="1" interval="210">
 		<object x="2057.733" y="1245.032" z="2956.286" h="120"/>
-	</spawn>
+	</spawn>-->
 	<!-- Himir (Monster Normal lvl:50)-->
 	<spawn map="400010000" npcid="271018" pool="1" interval="210">
 		<object x="740.64" y="2952.3" z="2884.2969" h="50"/>
@@ -2017,10 +2017,10 @@
 		<object x="3049.79" y="3419.489" z="1522.5997" h="56"/>
 		<object x="3237.842" y="3282.055" z="1540.443" h="62"/>
 	</spawn>
-	<!-- Lifton (Monster Normal lvl:50)-->
+	<!-- Lifton (Monster Normal lvl:50)
 	<spawn map="400010000" npcid="268081" pool="1" interval="210">
 		<object x="2008.964" y="1252.901" z="2945.4092" h="34"/>
-	</spawn>
+	</spawn>-->
 	<!-- Light's Defender (Monster Normal lvl:50)-->
 	<spawn map="400010000" npcid="251033" pool="6" interval="210">
 		<object x="2265.08" y="1828.4" z="2264.4392" h="109"/>
