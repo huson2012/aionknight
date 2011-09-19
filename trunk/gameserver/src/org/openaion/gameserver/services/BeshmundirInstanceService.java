@@ -58,14 +58,14 @@ public class BeshmundirInstanceService
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799518, 933f, 444f, 220f, (byte)25, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216588)// island 2
+        else if(monster.getObjectTemplate().getTemplateId() == 216588)// island 2
         {
             SpawnTemplate spawn;
             
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799519, 788f, 442f, 220f, (byte)25, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216589)// island 3spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799520, 817f, 276f, 220f, (byte)25, 0, 0, true);
+        else if(monster.getObjectTemplate().getTemplateId() == 216589)// island 3spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799520, 817f, 276f, 220f, (byte)25, 0, 0, true);
         {
             SpawnTemplate spawn;
             
@@ -105,49 +105,49 @@ public class BeshmundirInstanceService
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216175, 1434.53f, 1584.14f, 305.825f, (byte)98, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }        
-        if(monster.getObjectTemplate().getTemplateId() == 216175)
+        else if(monster.getObjectTemplate().getTemplateId() == 216175)
         {
             SpawnTemplate spawn;
             //Gatekeeper Kutarrun
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216171, 1394.33f, 1451.41f, 307.793f, (byte)119, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }        
-        if(monster.getObjectTemplate().getTemplateId() == 216171)
+        else if(monster.getObjectTemplate().getTemplateId() == 216171)
         {
             SpawnTemplate spawn;
             //Protector Dinata (Contemplation chamber)
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216177, 1501.43f, 1593.96f, 329.945f, (byte)89, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216177)
+        else if(monster.getObjectTemplate().getTemplateId() == 216177)
         {
             SpawnTemplate spawn;
             //Gatekeeper Rhapsharr                        
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216173, 1573.23f, 1426.84f, 304.66f, (byte)54, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216173)
+        else if(monster.getObjectTemplate().getTemplateId() == 216173)
         {
             SpawnTemplate spawn;
             //Judge Kramaka (petition chamber)
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216181, 1640.2f, 1428.82f, 305.835f, (byte)57, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216181)
+        else if(monster.getObjectTemplate().getTemplateId() == 216181)
         {
             SpawnTemplate spawn;
             //Gatekeeper Samarrn
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216172, 1522.82f, 1353.76f, 307.793f, (byte)33, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216172)
+        else if(monster.getObjectTemplate().getTemplateId() == 216172)
         {
             SpawnTemplate spawn;
             //Protector Narma (Suplication chamber)
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216179, 1631.57f, 1495.91f, 329.945f, (byte)66, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        if(monster.getObjectTemplate().getTemplateId() == 216179)
+        else if(monster.getObjectTemplate().getTemplateId() == 216179)
         {
             SpawnTemplate spawn;
             //Isbariya the Resolute Boss                        

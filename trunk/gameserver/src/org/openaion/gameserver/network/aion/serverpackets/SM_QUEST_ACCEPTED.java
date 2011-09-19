@@ -88,7 +88,7 @@ public class SM_QUEST_ACCEPTED extends AionServerPacket
 		switch(action)
 		{
 			case 1:
-			if(GSConfig.SERVER_VERSION.startsWith("2.1"))
+			if(GSConfig.SERVER_VERSION.startsWith("2.5"))
 			{
 				writeC(buf, action);
 				writeD(buf, questId);

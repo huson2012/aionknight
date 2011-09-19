@@ -120,7 +120,7 @@ public class EncryptionKeyPair
 	 */
 	private final boolean validateClientPacket(ByteBuffer buf)
 	{
-		if(GSConfig.SERVER_VERSION.startsWith("2.1"))
+		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
 		staticClientPacketCode = 0x57;
 		boolean valid = false;
 		byte buf0 = buf.get(0);
