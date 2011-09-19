@@ -16,22 +16,21 @@
  */
 package org.openaion.gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
-
-import org.openaion.gameserver.configs.main.GSConfig;
 import org.openaion.gameserver.configs.main.CustomConfig;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.dataholders.QuestsData;
+import org.openaion.gameserver.configs.main.GSConfig;
 import org.openaion.gameserver.model.Race;
 import org.openaion.gameserver.model.gameobjects.player.Player;
 import org.openaion.gameserver.network.aion.AionConnection;
 import org.openaion.gameserver.network.aion.AionServerPacket;
 import org.openaion.gameserver.quest.model.QuestState;
 import org.openaion.gameserver.quest.model.QuestStatus;
+
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 
 
 /**
@@ -78,7 +77,7 @@ public class SM_QUEST_LIST extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
-		if(GSConfig.SERVER_VERSION.startsWith("2.1"))
+		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
 		{
 			writeH(buf, 0x01);
 			writeH(buf, (-1*completeQuestList.size()) & 0xFFFF);

@@ -5,14 +5,15 @@
 
 package org.openaion.gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
 import org.openaion.gameserver.configs.main.GSConfig;
 import org.openaion.gameserver.model.gameobjects.Item;
 import org.openaion.gameserver.model.items.ItemId;
 import org.openaion.gameserver.model.templates.item.ItemTemplate;
 import org.openaion.gameserver.network.aion.AionConnection;
 import org.openaion.gameserver.network.aion.InventoryPacket;
+
+import java.nio.ByteBuffer;
+
 
 /**
  *
@@ -34,7 +35,7 @@ public class SM_WAREHOUSE_UPDATE extends InventoryPacket
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
 		writeC(buf, warehouseType);
-		if(GSConfig.SERVER_VERSION.startsWith("2.1"))
+		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
 		writeH(buf, 19);
 		else
 		writeH(buf, 13);

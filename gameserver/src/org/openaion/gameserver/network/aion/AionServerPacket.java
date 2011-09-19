@@ -55,7 +55,7 @@ public abstract class AionServerPacket extends BaseServerPacket
 		/** obfuscate packet id */
 		byte op = Crypt.encodeOpcodec(value);
 		buf.put(op);
-		if(GSConfig.SERVER_VERSION.startsWith("2.1"))
+		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
 			Crypt.staticServerPacketCode = 0x54;
 		/** put static server packet code */
 		buf.put(Crypt.staticServerPacketCode);
