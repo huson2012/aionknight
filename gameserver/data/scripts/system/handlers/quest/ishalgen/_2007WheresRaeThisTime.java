@@ -17,16 +17,23 @@
 package quest.ishalgen;
 
 import org.openaion.gameserver.model.EmotionType;
+import org.openaion.gameserver.model.gameobjects.Creature;
+import org.openaion.gameserver.model.gameobjects.Npc;
 import org.openaion.gameserver.model.gameobjects.player.Player;
+import org.openaion.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import org.openaion.gameserver.network.aion.serverpackets.SM_EMOTION;
+import org.openaion.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import org.openaion.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
 import org.openaion.gameserver.quest.handlers.QuestHandler;
 import org.openaion.gameserver.quest.model.QuestCookie;
 import org.openaion.gameserver.quest.model.QuestState;
 import org.openaion.gameserver.quest.model.QuestStatus;
-
+import org.openaion.gameserver.utils.PacketSendUtility;
+import org.openaion.gameserver.utils.ThreadPoolManager;
 
 /**
  * @author Mr. Poke
- *
+ * Fixed by Pashatr, Lucky
  */
 public class _2007WheresRaeThisTime extends QuestHandler
 {
@@ -108,12 +115,8 @@ public class _2007WheresRaeThisTime extends QuestHandler
 						case 26:
 							if(var == 4)
 								return sendQuestDialog(env, 2375);
-							else if (var == 8)
-								return sendQuestDialog(env, 2716);
 						case 10004:
 							return defaultCloseDialog(env, 4, 5);
-						case 10005:
-							return defaultCloseDialog(env, 8, 0, true, false);
 					}
 					break;
 				case 700085:
@@ -123,7 +126,19 @@ public class _2007WheresRaeThisTime extends QuestHandler
 				case 700087:
 					return defaultQuestUseNpc(env, 7, 8, EmotionType.NEUTRALMODE2, EmotionType.START_LOOT, false);
 			}
-		}
+        } else if (qs.getStatus() == QuestStatus.REWARD) {
+            switch (env.getTargetId()) {
+                case 10005:
+                    switch (env.getDialogId()) {
+                        case 26:
+                            if (var == 8)
+                                return sendQuestDialog(env, 3057);
+                        case 1006:
+                            PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 171));
+                    }
+                    break;
+            }
+        }
 		return defaultQuestRewardDialog(env, 203516, 3057);
 	}
 
@@ -150,8 +165,11 @@ public class _2007WheresRaeThisTime extends QuestHandler
 				qs.setQuestVar(7);
 				break;
 			case 7:
-				defaultQuestMovie(env, 56);
 				qs.setQuestVar(8);
+				break;					
+			case 8:
+				defaultQuestMovie(env, 56);
+				qs.setStatus(QuestStatus.REWARD);				
 				break;
 		}
 		updateQuestStatus(env);
