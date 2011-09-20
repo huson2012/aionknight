@@ -180,7 +180,8 @@ public class ServerPacketsOpcodes
         addPacketOpcode(SM_LEGION_INFO.class,0x8D, idSet);
         addPacketOpcode(SM_LEGION_UPDATE_TITLE.class,0x91, idSet);
         addPacketOpcode(SM_LEGION_UPDATE_MEMBER.class,0x8E, idSet);
-        addPacketOpcode(SM_LEGION_LEAVE_MEMBER.class,0x8F, idSet);            
+        addPacketOpcode(SM_LEGION_LEAVE_MEMBER.class,0x8F, idSet);
+        addPacketOpcode(SM_MOTION.class,0x93, idSet);            
         addPacketOpcode(SM_SUMMON_PANEL.class,0x96, idSet);
         addPacketOpcode(SM_SUMMON_UPDATE.class,0x98, idSet);
         addPacketOpcode(SM_SUMMON_OWNER_REMOVE.class,0x99, idSet);
