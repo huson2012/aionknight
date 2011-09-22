@@ -19,6 +19,8 @@ package org.openaion.gameserver.network.aion;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import org.openaion.gameserver.model.account.PlayerAccountData;
 import org.openaion.gameserver.model.gameobjects.Item;
 import org.openaion.gameserver.model.gameobjects.player.PlayerAppearance;
@@ -35,6 +37,8 @@ import org.openaion.gameserver.model.items.ItemSlot;
  */
 public abstract class PlayerInfo extends AionServerPacket
 {
+	private static Logger log = Logger.getLogger(PlayerInfo.class);
+
 	protected PlayerInfo()
 	{
 
@@ -165,10 +169,18 @@ public abstract class PlayerInfo extends AionServerPacket
 
 			if(item.getItemTemplate().isArmor() || item.getItemTemplate().isWeapon())
 			{
-
-				if(item.getItemTemplate().getItemSlot() <= ItemSlot.PANTS.getSlotIdMask())
+				if(item.getEquipmentSlot() <= ItemSlot.PANTS.getSlotIdMask())
 				{
-					writeC(buf, 1);
+					// added by Deimos
+					// 2weapon show on character selection screen
+					if (item.getItemTemplate().isWeapon() && item.getEquipmentSlot() == 2 )
+					{
+						writeC(buf, 0x02);
+					}
+					else 
+					{
+						writeC(buf, 0x01);
+					}
 					writeD(buf, item.getItemSkinTemplate().getTemplateId());
 					GodStone godStone = item.getGodStone();
 					writeD(buf, godStone != null ? godStone.getItemId() : 0);

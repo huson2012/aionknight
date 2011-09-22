@@ -467,7 +467,11 @@ public class SkillList
 	{
 		return weaponMasterySkills.get(weaponType);
 	}
-	
+
+	public Integer getDualMasterySkill()
+	{
+		return dualMasterySkill;
+	}	
 	/**
 	 * 
 	 * @param armorType
@@ -477,12 +481,7 @@ public class SkillList
 	{
 		return armorMasterySkills.get(armorType);
 	}
-	
-	public Integer getDualMasterySkill()
-	{
-		return dualMasterySkill;
-	}
-	
+
 	public Integer getShieldMasterySkill()
 	{
 		return shieldMasterySkill;

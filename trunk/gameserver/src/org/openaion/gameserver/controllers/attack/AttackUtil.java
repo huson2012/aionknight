@@ -128,61 +128,61 @@ public class AttackUtil
 		
 		attackList.addAll(splitDamage(hitCount, damage, status));
 		
-		//calculate offhand damage
-		if(attacker instanceof Player && ((Player)attacker).getEquipment().getOffHandWeaponType() != null)
+		//calculate subhand damage
+		if(attacker instanceof Player && ((Player)attacker).getEquipment().getSubHandWeaponType() != null)
 		{
-			int offHandDamage = StatFunctions.calculateOffHandPhysicDamageToTarget(attacker, attacked);
+			int subHandDamage = StatFunctions.calculateSubHandPhysicDamageToTarget(attacker, attacked);
 			
-			AttackStatus offHandStatus;
+			AttackStatus subHandStatus;
 			switch(status)
 			{
 				case DODGE:
-					offHandStatus = AttackStatus.OFFHAND_DODGE;
+					subHandStatus = AttackStatus.SUBHAND_DODGE;
 					break;
 				case CRITICAL_DODGE:
-					offHandStatus = AttackStatus.OFFHAND_CRITICAL_DODGE;
+					subHandStatus = AttackStatus.SUBHAND_CRITICAL_DODGE;
 					break;
 				case BLOCK:
-					offHandStatus = AttackStatus.OFFHAND_BLOCK;
+					subHandStatus = AttackStatus.SUBHAND_BLOCK;
 					break;
 				case CRITICAL_BLOCK:
-					offHandStatus = AttackStatus.OFFHAND_CRITICAL_BLOCK;
+					subHandStatus = AttackStatus.SUBHAND_CRITICAL_BLOCK;
 					break;
 				case PARRY:
-					offHandStatus = AttackStatus.OFFHAND_PARRY;
+					subHandStatus = AttackStatus.SUBHAND_PARRY;
 					break;
 				case CRITICAL_PARRY:
-					offHandStatus = AttackStatus.OFFHAND_CRITICAL_PARRY;
+					subHandStatus = AttackStatus.SUBHAND_CRITICAL_PARRY;
 					break;
 				case CRITICAL:
-					offHandStatus = AttackStatus.OFFHAND_CRITICAL;
+					subHandStatus = AttackStatus.SUBHAND_CRITICAL;
 					break;
 				default:
-					offHandStatus = AttackStatus.OFFHAND_NORMALHIT;
+					subHandStatus = AttackStatus.SUBHAND_NORMALHIT;
 					break;
 			}
 			
-			offHandDamage = calculateOffHandResult(attacker, attacked, offHandDamage, offHandStatus);
+			subHandDamage = calculateSubHandResult(attacker, attacked, subHandDamage, subHandStatus);
 	
 			//multiplier
-			offHandDamage = Math.round(offHandDamage * damageMultiplier);
+			subHandDamage = Math.round(subHandDamage * damageMultiplier);
 			
 			
-			switch (offHandStatus)
+			switch (subHandStatus)
 			{
-				case OFFHAND_DODGE:
-				case OFFHAND_CRITICAL_DODGE:
-					offHandDamage = 0;
+				case SUBHAND_DODGE:
+				case SUBHAND_CRITICAL_DODGE:
+					subHandDamage = 0;
 					break;
 				default:
-					if (offHandDamage <= 0)
-						offHandDamage = 1;
+					if (subHandDamage <= 0)
+						subHandDamage = 1;
 					break;
 			}
 			
 			
-			int offHandHits =  Rnd.get(1,gameStats.getCurrentStat(StatEnum.OFF_HAND_HITS));
-			attackList.addAll(splitDamage(offHandHits, offHandDamage, offHandStatus));
+			int subHandHits =  Rnd.get(1,gameStats.getCurrentStat(StatEnum.SUB_HAND_HITS));
+			attackList.addAll(splitDamage(subHandHits, subHandDamage, subHandStatus));
 		}
 		
 		//effect on critical hit
@@ -260,7 +260,7 @@ public class AttackUtil
 	}
 
 	/**
-	 * used to calculate offhand attack
+	 * used to calculate subhand attack
 	 * 
 	 * @param attacker
 	 * @param attacked
@@ -268,21 +268,21 @@ public class AttackUtil
 	 * @param status
 	 * @return
 	 */
-	private static int calculateOffHandResult(Creature attacker, Creature attacked, int damage, AttackStatus status)
+	private static int calculateSubHandResult(Creature attacker, Creature attacked, int damage, AttackStatus status)
 	{
 		switch(status)
 		{
-			case OFFHAND_DODGE:
-			case OFFHAND_CRITICAL_DODGE:
+			case SUBHAND_DODGE:
+			case SUBHAND_CRITICAL_DODGE:
 				damage = 0;
 				break;
-			case OFFHAND_BLOCK:
-			case OFFHAND_CRITICAL_BLOCK:
+			case SUBHAND_BLOCK:
+			case SUBHAND_CRITICAL_BLOCK:
 				int shieldDamageReduce = attacked.getGameStats().getCurrentStat(StatEnum.DAMAGE_REDUCE);
 				damage -= Math.round((damage * shieldDamageReduce) / 100);
 				break;
-			case OFFHAND_PARRY:
-			case OFFHAND_CRITICAL_PARRY:
+			case SUBHAND_PARRY:
+			case SUBHAND_CRITICAL_PARRY:
 				damage *= 0.6;
 				break;
 		}
@@ -291,11 +291,11 @@ public class AttackUtil
 		int criticalReduce = attacked.getGameStats().getCurrentStat(StatEnum.PHYSICAL_CRITICAL_DAMAGE_REDUCE);
 		switch(status)
 		{
-			case OFFHAND_CRITICAL_DODGE:
-			case OFFHAND_CRITICAL_BLOCK:
-			case OFFHAND_CRITICAL_PARRY:
-			case OFFHAND_CRITICAL:
-				WeaponType weaponType = ((Player)attacker).getEquipment().getOffHandWeaponType();
+			case SUBHAND_CRITICAL_DODGE:
+			case SUBHAND_CRITICAL_BLOCK:
+			case SUBHAND_CRITICAL_PARRY:
+			case SUBHAND_CRITICAL:
+				WeaponType weaponType = ((Player)attacker).getEquipment().getSubHandWeaponType();
 				damage = calculateWeaponCritical(damage, criticalReduce, weaponType);
 				break;
 		}

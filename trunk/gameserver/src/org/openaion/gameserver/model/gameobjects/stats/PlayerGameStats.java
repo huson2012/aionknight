@@ -126,12 +126,12 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 						{
 							if(slots != ItemSlot.MAIN_HAND.getSlotIdMask() && slots != ItemSlot.SUB_HAND.getSlotIdMask())
 							{
-								if(((Player) owner).getEquipment().getOffHandWeaponType() != null)
+								if(((Player) owner).getEquipment().getSubHandWeaponType() != null)
 									slots = ItemSlot.MAIN_OR_SUB.getSlotIdMask();
 								else
 								{
 									slots = ItemSlot.MAIN_HAND.getSlotIdMask();
-									setStat(StatEnum.OFF_HAND_ACCURACY, 0, false);
+									setStat(StatEnum.SUB_HAND_ACCURACY, 0, false);
 								}
 							}
 							else if(slots == ItemSlot.MAIN_HAND.getSlotIdMask())
@@ -259,15 +259,15 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 			this.currentFlySpeed = newFlySpeed;
 			this.currentAttackSpeed = newAttackSpeed;
 			
-			//clear stats of offhand, if offhand == null
-			if (owner.getEquipment().getOffHandWeaponType() == null)
+			//clear stats of subhand, if subhand == null
+			if (owner.getEquipment().getSubHandWeaponType() == null)
 			{
-				this.setStat(StatEnum.OFF_HAND_CRITICAL, 0);
-				this.setStat(StatEnum.OFF_HAND_CRITICAL, 0, true);
-				this.setStat(StatEnum.OFF_HAND_PHYSICAL_ATTACK, 0);
-				this.setStat(StatEnum.OFF_HAND_PHYSICAL_ATTACK, 0, true);
-				this.setStat(StatEnum.OFF_HAND_ACCURACY, 0);
-				this.setStat(StatEnum.OFF_HAND_ACCURACY, 0, true);
+				this.setStat(StatEnum.SUB_HAND_CRITICAL, 0);
+				this.setStat(StatEnum.SUB_HAND_CRITICAL, 0, true);
+				this.setStat(StatEnum.SUB_HAND_PHYSICAL_ATTACK, 0);
+				this.setStat(StatEnum.SUB_HAND_PHYSICAL_ATTACK, 0, true);
+				this.setStat(StatEnum.SUB_HAND_ACCURACY, 0);
+				this.setStat(StatEnum.SUB_HAND_ACCURACY, 0, true);
 			}		
 			
 			//compute stats for summons, not used yet
@@ -381,8 +381,8 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 		initStat(StatEnum.WILL, will);
 		initStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK, Math.round(18 * (power * 0.01f)));
 		initStat(StatEnum.MAIN_HAND_CRITICAL, mainHandCritRate);
-		initStat(StatEnum.OFF_HAND_PHYSICAL_ATTACK, 0);
-		initStat(StatEnum.OFF_HAND_CRITICAL, 0);
+		initStat(StatEnum.SUB_HAND_PHYSICAL_ATTACK, 0);
+		initStat(StatEnum.SUB_HAND_CRITICAL, 0);
 		initStat(StatEnum.ATTACK_SPEED, attackSpeed);
 		initStat(StatEnum.ATTACK_RANGE, attackRange);
 		initStat(StatEnum.PHYSICAL_DEFENSE, 0);
@@ -391,7 +391,7 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 		initStat(StatEnum.BLOCK, Math.round(agility * 3.1f - 248.5f + 12.4f * owner.getLevel()));
 		initStat(StatEnum.DAMAGE_REDUCE, 0);
 		initStat(StatEnum.MAIN_HAND_ACCURACY, Math.round((accuracy * 2 - 10) + 8 * owner.getLevel()));
-		initStat(StatEnum.OFF_HAND_ACCURACY, Math.round((accuracy * 2 - 10) + 8 * owner.getLevel()));
+		initStat(StatEnum.SUB_HAND_ACCURACY, Math.round((accuracy * 2 - 10) + 8 * owner.getLevel()));
 		initStat(StatEnum.MAGICAL_RESIST, 0);
 		initStat(StatEnum.WIND_RESISTANCE, 0);
 		initStat(StatEnum.FIRE_RESISTANCE, 0);

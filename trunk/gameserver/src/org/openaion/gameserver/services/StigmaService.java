@@ -231,7 +231,7 @@ public class StigmaService
 			//trying to remove dual/wielding stigma
 			if (skillId == 19 || skillId == 360)
 			{
-				if (player.getEquipment().isDualWieldEquipped())
+				if (player.getEquipment().isDualWieldEquipped() || player.getEquipment().isOffDualWieldEquipped() )
 				{
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_STIGMA_CANNT_UNEQUIP_STONE_FIRST_UNEQUIP_CURRENT_EQUIPPED_ITEM());
 					return false;

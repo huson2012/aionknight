@@ -45,7 +45,6 @@ public class DualMasteryEffect extends BufEffect
 		Player player = (Player)  effect.getEffector();
 		player.getEffectController().unsetDualMastery();
 		player.getEffectController().unsetDualEffect();
-		
 	}
 
 	@Override

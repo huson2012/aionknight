@@ -68,9 +68,9 @@
 			<xs:enumeration value="MAIN_HAND_ACCURACY" />
 			<xs:enumeration value="MAIN_HAND_CRITICAL" />
 			<xs:enumeration value="MAIN_HAND_POWER" />
-			<xs:enumeration value="OFF_HAND_ACCURACY" />
-			<xs:enumeration value="OFF_HAND_CRITICAL" />
-			<xs:enumeration value="OFF_HAND_POWER" />
+			<xs:enumeration value="SUB_HAND_ACCURACY" />
+			<xs:enumeration value="SUB_HAND_CRITICAL" />
+			<xs:enumeration value="SUB_HAND_POWER" />
 			<xs:enumeration value="MAGICAL_ATTACK" />
 			<xs:enumeration value="MAGICAL_ACCURACY" />
 			<xs:enumeration value="MAGICAL_CRITICAL" />

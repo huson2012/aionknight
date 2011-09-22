@@ -19,6 +19,8 @@ package org.openaion.gameserver.network.aion;
 import java.nio.ByteBuffer;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import org.openaion.gameserver.model.gameobjects.Item;
 import org.openaion.gameserver.model.gameobjects.stats.modifiers.SimpleModifier;
 import org.openaion.gameserver.model.gameobjects.stats.modifiers.StatModifier;
@@ -35,6 +37,8 @@ import org.openaion.gameserver.model.templates.item.ItemTemplate;
  */
 public abstract class InventoryPacket extends AionServerPacket
 {
+	private static Logger log = Logger.getLogger(InventoryPacket.class);
+	
 	/**
 	 *  The header of every item block
 	 * @param buf
@@ -157,7 +161,6 @@ public abstract class InventoryPacket extends AionServerPacket
 			writeFusionStones(buf,item);
 			writeC(buf, item.hasOptionalFusionSocket() ? item.getOptionalFusionSocket() : 0x00);
 		}
-		
 		writeC(buf, 0x06);
 		
 		writeD(buf, item.isEquipped() ? itemSlotId : 0x00);
@@ -180,12 +183,12 @@ public abstract class InventoryPacket extends AionServerPacket
 		writeD(buf, god == null ? 0 : god.getItemId());			
 		writeD(buf, 0);
 		writeD(buf, 0);//unk 1.5.1.9
-		/*
+/*
 		writeC(buf, 0);
 		writeC(buf, 0x0A);
 		writeH(buf, 0x19);
 		writeD(buf, 0x07);
-		*/	
+*/	
 			/*
 			 * This is where item bonuses should be inserted.
 			 * The format is as follows:
