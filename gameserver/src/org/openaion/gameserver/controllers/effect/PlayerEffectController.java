@@ -197,7 +197,7 @@ public class PlayerEffectController extends EffectController
 	}
 	
 	/**
-	 * Set dualEffect, used in calculation of offhand damage
+	 * Set dualEffect, used in calculation of subhand damage
 	 * @param dualEffect
 	 */
 	

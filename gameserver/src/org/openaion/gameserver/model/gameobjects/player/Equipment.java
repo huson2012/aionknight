@@ -13,6 +13,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 import org.apache.log4j.Logger;
+
 import org.openaion.commons.database.dao.DAOManager;
 import org.openaion.gameserver.dao.InventoryDAO;
 import org.openaion.gameserver.controllers.movement.StartMovingListener;
@@ -724,17 +725,30 @@ public class Equipment
 
 	/**
 	 *
-	 * @return <tt>WeaponType</tt> of current weapon in off hand or null
+	 * @return <tt>WeaponType</tt> of current weapon in sub hand or null
 	 */
-	public WeaponType getOffHandWeaponType()
+	public WeaponType getSubHandWeaponType()
 	{
-		Item offHandItem = equipment.get(ItemSlot.SUB_HAND.getSlotIdMask());
-		if(offHandItem != null && offHandItem.getItemTemplate().isWeapon())
-			return offHandItem.getItemTemplate().getWeaponType();
+		Item subHandItem = equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()); ///
+		if(subHandItem != null && subHandItem.getItemTemplate().isWeapon())
+			return subHandItem.getItemTemplate().getWeaponType();
 
 		return null;
 	}
 
+	/**
+	 *
+	 * @return <tt>WeaponType</tt> of current weapon in sub off hand or null
+	 */
+	public WeaponType getSubOffHandWeaponType()
+	{
+		Item subOffHandItem = equipment.get(ItemSlot.SUB_OFF_HAND.getSlotIdMask()); ///
+		if(subOffHandItem != null && subOffHandItem.getItemTemplate().isWeapon())
+			return subOffHandItem.getItemTemplate().getWeaponType();
+
+		return null;
+	}
+	
 	public boolean isArrowEquipped()
 	{
 		Item arrow = equipment.get(ItemSlot.SUB_HAND.getSlotIdMask());
@@ -767,11 +781,12 @@ public class Equipment
 		return null;
 	}
 
-	public Item getOffHandPowerShard()
-	{
-		Item offHandPowerShard = equipment.get(ItemSlot.POWER_SHARD_LEFT.getSlotIdMask());
-		if(offHandPowerShard != null)
-			return offHandPowerShard;
+<<<<<<< .mine	public Item getsubHandPowerShard()
+=======	public Item getSubHandPowerShard()
+>>>>>>> .theirs	{
+		Item subHandPowerShard = equipment.get(ItemSlot.POWER_SHARD_LEFT.getSlotIdMask());
+		if(subHandPowerShard != null)
+			return subHandPowerShard;
 
 		return null;
 	}
@@ -836,7 +851,7 @@ public class Equipment
 	}
 
 	/**
-	 * Switch OFF and MAIN hands
+	 * Switch SUB and MAIN hands
 	 */
 	public void switchHands()
 	{
@@ -916,7 +931,7 @@ public class Equipment
 		{
 			return true;
 		}
-		if(equipment.get(ItemSlot.MAIN_HAND.getSlotIdMask()) == null 
+		if(equipment.get(ItemSlot.MAIN_HAND.getSlotIdMask()) == null  //check this later
 			&&	equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()) != null 
 			&&	equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()).getItemTemplate().getWeaponType() == weaponType)
 		{
@@ -950,9 +965,19 @@ public class Equipment
 		return equipment.get(ItemSlot.MAIN_HAND.getSlotIdMask());
 	}
 	
-	public Item getOffHandWeapon()
+	public Item getSubHandWeapon()
 	{
 		return equipment.get(ItemSlot.SUB_HAND.getSlotIdMask());
+	}
+
+	public Item getMainOffHandWeapon()
+	{
+		return equipment.get(ItemSlot.MAIN_OFF_HAND.getSlotIdMask());
+	}
+	
+	public Item getSubOffHandWeapon()
+	{
+		return equipment.get(ItemSlot.SUB_OFF_HAND.getSlotIdMask());
 	}
 
 	/**
@@ -1069,15 +1094,33 @@ public class Equipment
 	
 	public boolean isDualWieldEquipped()
 	{
-		if (this.getMainHandWeapon() != null && this.getOffHandWeapon() != null && getOffHandWeaponType() != null)
+		if (this.getMainHandWeapon() != null && this.getSubHandWeapon() != null && getSubHandWeaponType() != null)
 		{
-			switch (getOffHandWeaponType())
+			switch (getSubHandWeaponType())
 			{
 				case DAGGER_1H:
 				case MACE_1H:
 				case SWORD_1H:
 				case TOOLHOE_1H:
-					if (this.getMainHandWeapon().getObjectId() != this.getOffHandWeapon().getObjectId())
+					if (this.getMainHandWeapon().getObjectId() != this.getSubHandWeapon().getObjectId())
+						return true;
+				break;
+			}
+		}
+		return false;
+	}
+	
+	public boolean isOffDualWieldEquipped()
+	{
+		if (this.getMainOffHandWeapon() != null && this.getSubOffHandWeapon() != null && getSubOffHandWeaponType() != null)
+		{
+			switch (getSubOffHandWeaponType())
+			{
+				case DAGGER_1H:
+				case MACE_1H:
+				case SWORD_1H:
+				case TOOLHOE_1H:
+					if (this.getMainOffHandWeapon().getObjectId() != this.getSubOffHandWeapon().getObjectId())
 						return true;
 				break;
 			}

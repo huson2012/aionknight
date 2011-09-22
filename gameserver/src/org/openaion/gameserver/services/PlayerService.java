@@ -180,7 +180,6 @@ public class PlayerService
 		/**
 		 * Player common data and appearance should be already loaded in account
 		 */
-		
 		PlayerAccountData playerAccountData = account.getPlayerAccountData(playerObjId);
 		PlayerCommonData pcd = playerAccountData.getPlayerCommonData();
 		PlayerAppearance appearance = playerAccountData.getAppereance();

@@ -111,7 +111,7 @@ public class SM_STATS_INFO extends AionServerPacket
 		
 		writeH(buf, pgs.getCurrentStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK)); // [current main hand attack]
 
-		writeH(buf, pgs.getCurrentStat(StatEnum.OFF_HAND_PHYSICAL_ATTACK)); // [off hand attack]
+		writeH(buf, pgs.getCurrentStat(StatEnum.SUB_HAND_PHYSICAL_ATTACK)); // [sub hand attack]
 
 		writeH(buf, pgs.getCurrentStat(StatEnum.PHYSICAL_DEFENSE));// [current pdef]
 
@@ -128,12 +128,12 @@ public class SM_STATS_INFO extends AionServerPacket
 
 		writeH(buf, pgs.getCurrentStat(StatEnum.MAIN_HAND_CRITICAL));// [current main hand crit rate]
 
-		writeH(buf, pgs.getCurrentStat(StatEnum.OFF_HAND_CRITICAL));// [current off hand crit rate]
+		writeH(buf, pgs.getCurrentStat(StatEnum.SUB_HAND_CRITICAL));// [current sub hand crit rate]
 
 		
 		writeH(buf, pgs.getCurrentStat(StatEnum.MAIN_HAND_ACCURACY));// [current main_hand_accuracy]
 
-		writeH(buf, pgs.getCurrentStat(StatEnum.OFF_HAND_ACCURACY));// [current off_hand_accuracy]
+		writeH(buf, pgs.getCurrentStat(StatEnum.SUB_HAND_ACCURACY));// [current SUB_hand_accuracy]
 
 		writeH(buf, (int)((pgs.getCurrentStat(StatEnum.BOOST_CASTING_TIME)-100)*0.1));
 		writeH(buf, pgs.getCurrentStat(StatEnum.MAGICAL_ACCURACY));// [current magic accuracy]
@@ -202,7 +202,7 @@ public class SM_STATS_INFO extends AionServerPacket
 
 		writeH(buf, pgs.getBaseStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK));// [base main hand attack]
 
-		writeH(buf, pgs.getBaseStat(StatEnum.OFF_HAND_PHYSICAL_ATTACK));// [base off hand attack]
+		writeH(buf, pgs.getBaseStat(StatEnum.SUB_HAND_PHYSICAL_ATTACK));// [base sub hand attack]
 		
 		writeH(buf, (int)(pgs.getBaseStat(StatEnum.MAGICAL_ATTACK)*pgs.getCurrentStat(StatEnum.KNOWLEDGE)*0.01)); // [base magical attack] 
 		writeH(buf, pgs.getBaseStat(StatEnum.PHYSICAL_DEFENSE)); // [base pdef]
@@ -221,14 +221,14 @@ public class SM_STATS_INFO extends AionServerPacket
 
 		writeH(buf, pgs.getBaseStat(StatEnum.MAIN_HAND_CRITICAL)); // [base main hand crit rate]
 
-		writeH(buf, pgs.getBaseStat(StatEnum.OFF_HAND_CRITICAL)); // [base off hand crit rate]
+		writeH(buf, pgs.getBaseStat(StatEnum.SUB_HAND_CRITICAL)); // [base sub hand crit rate]
 
 		writeH(buf, pgs.getBaseStat(StatEnum.MAGICAL_CRITICAL)); // [base or current MAGICAL crit rate] VERSION 1.9 
 		writeH(buf, 0); // [unk] VERSION 1.9 
 		
 		writeH(buf, pgs.getBaseStat(StatEnum.MAIN_HAND_ACCURACY)); // [base main hand accuracy]
 
-		writeH(buf, pgs.getBaseStat(StatEnum.OFF_HAND_ACCURACY)); // [base off hand accuracy]
+		writeH(buf, pgs.getBaseStat(StatEnum.SUB_HAND_ACCURACY)); // [base sub hand accuracy]
 
 		writeH(buf, 0); // [base Casting speed] VERSION 2.1 
 

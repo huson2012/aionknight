@@ -277,6 +277,7 @@ public class ItemEquipmentListener
 			
 		if(masterySet && !weaponEquiped)
 		{
+			
 			owner.getEffectController().removePassiveEffect(skillId);
 		}
 		//add effect if weapon is equiped
@@ -324,21 +325,23 @@ public class ItemEquipmentListener
 		//don't calculate for not initialized equipment
 		if(owner.getEquipment() == null)
 			return;
-		
-		int currentDualMasterySkill =  owner.getEffectController().getDualMastery();
-		if (owner.getEquipment().isDualWieldEquipped() && currentDualMasterySkill != 0)
+
+			int currentDualMasterySkill =  owner.getEffectController().getDualMastery();
+		if (!owner.getEquipment().isDualWieldEquipped() && currentDualMasterySkill != 0 )
 		{
 			owner.getEffectController().removePassiveEffect(currentDualMasterySkill);
 			return;
 		}
-		
-		boolean weaponsEquiped = (owner.getEquipment().getOffHandWeapon() != null && owner.getEquipment().getMainHandWeapon() != null);
+
 		Integer skillId = owner.getSkillList().getDualMasterySkill();
 		if(skillId == null)
+		{
 			return;
+		}	
+
+		boolean weaponsEquiped = (owner.getEquipment().getSubHandWeapon() != null && owner.getEquipment().getMainHandWeapon() != null);
 		boolean masterySet = owner.getEffectController().isDualMasterySet(skillId);
 		//remove effect if no weapon is equiped
-			
 		if(masterySet && !weaponsEquiped)
 		{
 			owner.getEffectController().removePassiveEffect(skillId);

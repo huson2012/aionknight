@@ -99,9 +99,9 @@ public class PowerUp extends AdminCommand
 		player.getGameStats().setStat(StatEnum.MAIN_HAND_ACCURACY, admin.getGameStats().getStatBonus(StatEnum.MAIN_HAND_ACCURACY) *index);
 		player.getGameStats().setStat(StatEnum.MAIN_HAND_CRITICAL, admin.getGameStats().getStatBonus(StatEnum.MAIN_HAND_CRITICAL) *index);
 		player.getGameStats().setStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK, admin.getGameStats().getStatBonus(StatEnum.MAIN_HAND_PHYSICAL_ATTACK) *index);
-		player.getGameStats().setStat(StatEnum.OFF_HAND_ACCURACY, admin.getGameStats().getStatBonus(StatEnum.OFF_HAND_ACCURACY) *index);
-		player.getGameStats().setStat(StatEnum.OFF_HAND_CRITICAL, admin.getGameStats().getStatBonus(StatEnum.OFF_HAND_CRITICAL) *index);
-		player.getGameStats().setStat(StatEnum.OFF_HAND_PHYSICAL_ATTACK, admin.getGameStats().getStatBonus(StatEnum.OFF_HAND_PHYSICAL_ATTACK) *index);
+		player.getGameStats().setStat(StatEnum.SUB_HAND_ACCURACY, admin.getGameStats().getStatBonus(StatEnum.SUB_HAND_ACCURACY) *index);
+		player.getGameStats().setStat(StatEnum.SUB_HAND_CRITICAL, admin.getGameStats().getStatBonus(StatEnum.SUB_HAND_CRITICAL) *index);
+		player.getGameStats().setStat(StatEnum.SUB_HAND_PHYSICAL_ATTACK, admin.getGameStats().getStatBonus(StatEnum.SUB_HAND_PHYSICAL_ATTACK) *index);
 				
 		player.getGameStats().setStat(StatEnum.MAGICAL_ATTACK, admin.getGameStats().getStatBonus(StatEnum.MAGICAL_ATTACK) *index);
 		player.getGameStats().setStat(StatEnum.MAGICAL_ACCURACY, admin.getGameStats().getStatBonus(StatEnum.MAGICAL_ACCURACY) *index);

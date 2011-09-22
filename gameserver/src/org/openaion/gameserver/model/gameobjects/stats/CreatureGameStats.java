@@ -454,7 +454,7 @@ public class CreatureGameStats<T extends Creature>
 					{
 						if(slots != ItemSlot.MAIN_HAND.getSlotIdMask() && slots != ItemSlot.SUB_HAND.getSlotIdMask())
 						{
-							if(((Player) owner).getEquipment().getOffHandWeaponType() != null)
+							if(((Player) owner).getEquipment().getSubHandWeaponType() != null)
 								slots = ItemSlot.MAIN_OR_SUB.getSlotIdMask();
 							else
 							{

@@ -283,8 +283,8 @@ public class StatFunctions
 		{
 			int min = ags.getCurrentStat(StatEnum.MAIN_MIN_DAMAGES);
 			int max = ags.getCurrentStat(StatEnum.MAIN_MAX_DAMAGES);
-			int min2 = ags.getCurrentStat(StatEnum.OFF_MIN_DAMAGES);
-			int max2 = ags.getCurrentStat(StatEnum.OFF_MAX_DAMAGES);
+			int min2 = ags.getCurrentStat(StatEnum.SUB_MIN_DAMAGES);
+			int max2 = ags.getCurrentStat(StatEnum.SUB_MAX_DAMAGES);
 			
 			//weapon with higher average should be taken into account for skills
 			if (skillDamages > 0)
@@ -416,12 +416,12 @@ public class StatFunctions
 	 * @param target
 	 * @return
 	 */
-	public static int calculateOffHandPhysicDamageToTarget(Creature attacker, Creature attacked)
+	public static int calculateSubHandPhysicDamageToTarget(Creature attacker, Creature attacked)
 	{
 		CreatureGameStats<?> ags = attacker.getGameStats();
 
-		int min = ags.getCurrentStat(StatEnum.OFF_MIN_DAMAGES);
-		int max = ags.getCurrentStat(StatEnum.OFF_MAX_DAMAGES);
+		int min = ags.getCurrentStat(StatEnum.SUB_MIN_DAMAGES);
+		int max = ags.getCurrentStat(StatEnum.SUB_MAX_DAMAGES);
 		int average = Math.round((min + max)/2);
 
 		Equipment equipment = ((Player)attacker).getEquipment();
@@ -429,26 +429,27 @@ public class StatFunctions
 		if(average < 1)
 		{
 			average = 1;
-			log.warn("Weapon stat MIN_MAX_DAMAGE resulted average zero in off-hand calculation");
-			log.warn("Weapon ID: " + String.valueOf(equipment.getOffHandWeapon().getItemTemplate().getTemplateId()));
+			log.warn("Weapon stat MIN_MAX_DAMAGE resulted average zero in sub-hand calculation");
+			log.warn("Weapon ID: " + String.valueOf(equipment.getSubHandWeapon().getItemTemplate().getTemplateId()));
 			log.warn("MIN_DAMAGE = " + String.valueOf(min));
 			log.warn("MAX_DAMAGE = " + String.valueOf(max));
 		}
 
 		int base = Rnd.get(min,max);
 		
-		int damage = base + ags.getStatBonus(StatEnum.OFF_HAND_PHYSICAL_ATTACK);
+		int damage = base + ags.getStatBonus(StatEnum.SUB_HAND_PHYSICAL_ATTACK);
 
 		if(attacker.isInState(CreatureState.POWERSHARD))
 		{
-			Item offHandPowerShard = equipment.getOffHandPowerShard();
-			if(offHandPowerShard != null)
-			{
-				damage += offHandPowerShard.getItemTemplate().getWeaponBoost();
-				equipment.usePowerShard(offHandPowerShard, 1);
+<<<<<<< .mine			Item subHandPowerShard = equipment.getsubHandPowerShard();
+			if(subHandPowerShard != null)
+=======			Item subHandPowerShard = equipment.getSubHandPowerShard();
+			if(subHandPowerShard != null)
+>>>>>>> .theirs			{
+				damage += subHandPowerShard.getItemTemplate().getWeaponBoost();
+				equipment.usePowerShard(subHandPowerShard, 1);
 			}
 		}
-
 		int dualEffect = ((Player)attacker).getEffectController().getDualEffect();
 		if (dualEffect == 0)
 		{
@@ -558,9 +559,9 @@ public class StatFunctions
 		    return 100;			
 		int accurancy;
 
-		if(attacker instanceof Player && ((Player) attacker).getEquipment().getOffHandWeaponType() != null)
+		if(attacker instanceof Player && ((Player) attacker).getEquipment().getSubHandWeaponType() != null)
 			accurancy = Math.round((attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_ACCURACY) + attacker
-				.getGameStats().getCurrentStat(StatEnum.OFF_HAND_ACCURACY)) / 2);
+				.getGameStats().getCurrentStat(StatEnum.SUB_HAND_ACCURACY)) / 2);
 		else
 			accurancy = attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_ACCURACY);
 
@@ -594,9 +595,9 @@ public class StatFunctions
 		
 		int accuracy;
 		
-		if(attacker instanceof Player && ((Player) attacker).getEquipment().getOffHandWeaponType() != null)
+		if(attacker instanceof Player && ((Player) attacker).getEquipment().getSubHandWeaponType() != null)
 			accuracy = Math.round((attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_ACCURACY) + attacker
-				.getGameStats().getCurrentStat(StatEnum.OFF_HAND_ACCURACY)) / 2);
+				.getGameStats().getCurrentStat(StatEnum.SUB_HAND_ACCURACY)) / 2);
 		else
 			accuracy = attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_ACCURACY);
 
@@ -626,9 +627,9 @@ public class StatFunctions
 		
 		int accuracy;
 
-		if(attacker instanceof Player && ((Player) attacker).getEquipment().getOffHandWeaponType() != null)
+		if(attacker instanceof Player && ((Player) attacker).getEquipment().getSubHandWeaponType() != null)
 			accuracy = Math.round((attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_ACCURACY) + attacker
-				.getGameStats().getCurrentStat(StatEnum.OFF_HAND_ACCURACY)) / 2);
+				.getGameStats().getCurrentStat(StatEnum.SUB_HAND_ACCURACY)) / 2);
 		else
 			accuracy = attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_ACCURACY);
 
@@ -658,9 +659,9 @@ public class StatFunctions
 		if(attacker.getObserveController().checkAttackerStatus(AttackStatus.CRITICAL))
 			return 100;
 
-		if(attacker instanceof Player && ((Player) attacker).getEquipment().getOffHandWeaponType() != null)
+		if(attacker instanceof Player && ((Player) attacker).getEquipment().getSubHandWeaponType() != null)
 			critical = Math.round((attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_CRITICAL) + attacker
-				.getGameStats().getCurrentStat(StatEnum.OFF_HAND_CRITICAL)) / 2); 
+				.getGameStats().getCurrentStat(StatEnum.SUB_HAND_CRITICAL)) / 2); 
 		else
 			critical = attacker.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_CRITICAL); 
 			

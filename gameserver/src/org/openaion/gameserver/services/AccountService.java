@@ -133,28 +133,35 @@ public class AccountService
 
 		PlayerDAO playerDAO = DAOManager.getDAO(PlayerDAO.class);
 		PlayerAppearanceDAO appereanceDAO = DAOManager.getDAO(PlayerAppearanceDAO.class);
-
+		
 		List<Integer> playerOids = playerDAO.getPlayerOidsOnAccount(accountId);
-
 		for(int playerOid : playerOids)
 		{
 			PlayerCommonData playerCommonData = playerDAO.loadPlayerCommonData(playerOid);
 			PlayerAppearance appereance = appereanceDAO.load(playerOid);
 
-			
 			LegionMember legionMember = DAOManager.getDAO(LegionMemberDAO.class).loadLegionMember(playerOid);
-			
+
 			/**
 			 * Load only equipment and its stones to display on character selection screen
 			 */
-			List<Item> equipment = DAOManager.getDAO(InventoryDAO.class).loadEquipment(playerOid);
-			
-			PlayerAccountData acData = new PlayerAccountData(playerCommonData, appereance, equipment,
-				legionMember);
-			playerDAO.setCreationDeletionTime(acData);
+			List<Item> equipments = DAOManager.getDAO(InventoryDAO.class).loadEquipment(playerOid);
 
+			// added by Deimos
+			// Remove MAIN_OFF_HAND and SUB_OFF_HAND slot weapons from character selection screen
+			for (int i = equipments.size() - 1; i >= 0; --i)
+			{
+				if (equipments.get(i).getEquipmentSlot() == 131072 || equipments.get(i).getEquipmentSlot() == 262144)
+				{ 
+					equipments.remove(i);
+				}
+				
+			}
+
+			PlayerAccountData acData = new PlayerAccountData(playerCommonData, appereance, equipments, legionMember);
+			playerDAO.setCreationDeletionTime(acData);
 			account.addPlayerAccountData(acData);
-			
+
 			/**
 			 * load account warehouse only once
 			 */	

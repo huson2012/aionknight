@@ -61,7 +61,7 @@ public class CM_EQUIP_ITEM extends AionClientPacket
 
 		if(!RestrictionsManager.canChangeEquip(activePlayer))
 			return;
-		
+
 		switch(action)
 		{
 			case 0:
@@ -83,9 +83,9 @@ public class CM_EQUIP_ITEM extends AionClientPacket
 		if(resultItem != null || action == 2)
 		{
 			PacketSendUtility.broadcastPacket(activePlayer, new SM_UPDATE_PLAYER_APPEARANCE(activePlayer.getObjectId(),
-				equipment.getEquippedItemsWithoutStigma()), true);		
+				equipment.getEquippedItemsWithoutStigma()), true);
 		}
-		
+
 		if (!equipment.isShieldEquipped())
 		{
 			for (Effect effect : activePlayer.getEffectController().getNoShowEffects())

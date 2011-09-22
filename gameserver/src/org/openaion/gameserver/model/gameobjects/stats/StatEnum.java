@@ -66,10 +66,10 @@ public enum StatEnum
 	MAIN_HAND_ACCURACY(0, "mainhandaccuracy"),
 	MAIN_HAND_CRITICAL(0, "mainhandcritical"),
 	MAIN_HAND_PHYSICAL_ATTACK(0, "mainhandpattack"),
-	OFF_HAND_HITS(0, "offhandhits"),
-	OFF_HAND_ACCURACY(0, "offhandaccuracy"),
-	OFF_HAND_CRITICAL(0, "offhandcritical"),
-	OFF_HAND_PHYSICAL_ATTACK(0, "offhandpattack"),
+	SUB_HAND_HITS(0, "subhandhits"),
+	SUB_HAND_ACCURACY(0, "subhandaccuracy"),
+	SUB_HAND_CRITICAL(0, "subhandcritical"),
+	SUB_HAND_PHYSICAL_ATTACK(0, "subhandpattack"),
 	CRITICAL_RESIST(0, "physicalcriticalreducerate"),
 
 	MAGICAL_ATTACK(27, "magicalattack"),
@@ -155,8 +155,8 @@ public enum StatEnum
 	
     MAIN_MAX_DAMAGES(0, "mainmaxdamages"),
 	MAIN_MIN_DAMAGES(0, "mainmindamages"),
-	OFF_MAX_DAMAGES(0, "offmaxdamages"),
-	OFF_MIN_DAMAGES(0, "offmindamages");
+	SUB_MAX_DAMAGES(0, "submaxdamages"),
+	SUB_MIN_DAMAGES(0, "submindamages");
 
 	private String name;
 	private boolean replace;
@@ -249,7 +249,7 @@ public enum StatEnum
 					switch(slot)
 					{
 						case SUB_HAND:
-							return OFF_HAND_PHYSICAL_ATTACK;
+							return SUB_HAND_PHYSICAL_ATTACK;
 						case MAIN_HAND:
 							return MAIN_HAND_PHYSICAL_ATTACK;
 					}
@@ -258,7 +258,7 @@ public enum StatEnum
 				switch(slot)
 				{
 					case SUB_HAND:
-						return OFF_HAND_ACCURACY;
+						return SUB_HAND_ACCURACY;
 					case MAIN_HAND:
 						return MAIN_HAND_ACCURACY;
 				}
@@ -266,7 +266,7 @@ public enum StatEnum
 				switch(slot)
 				{
 					case SUB_HAND:
-						return OFF_HAND_CRITICAL;
+						return SUB_HAND_CRITICAL;
 					case MAIN_HAND:
 						return MAIN_HAND_CRITICAL;
 				}
@@ -274,7 +274,7 @@ public enum StatEnum
 				switch(slot)
 				{
 					case SUB_HAND:
-						return OFF_HAND_HITS;
+						return SUB_HAND_HITS;
 					case MAIN_HAND:
 						return MAIN_HAND_HITS;
 				}
@@ -282,7 +282,7 @@ public enum StatEnum
 				switch(slot)
 				{
 					case SUB_HAND:
-						return OFF_MIN_DAMAGES;
+						return SUB_MIN_DAMAGES;
 					case MAIN_HAND:
 						return MAIN_MIN_DAMAGES;
 				}
@@ -290,7 +290,7 @@ public enum StatEnum
 				switch(slot)
 				{
 					case SUB_HAND:
-						return OFF_MAX_DAMAGES;
+						return SUB_MAX_DAMAGES;
 					case MAIN_HAND:
 						return MAIN_MAX_DAMAGES;
 				}

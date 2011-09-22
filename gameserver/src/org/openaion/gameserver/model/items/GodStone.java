@@ -85,8 +85,8 @@ public class GodStone extends ItemStone
 			public void attack(Creature creature)
 			{
 				int rand = Rnd.get(probability - probabilityLeft, probability);
-				//half the chance for offhandWeapon
-				if (item == player.getEquipment().getOffHandWeapon() && player.getEquipment().isDualWieldEquipped())
+				//half the chance for subhandWeapon
+				if (item == player.getEquipment().getSubHandWeapon() && player.getEquipment().isDualWieldEquipped())
 					rand *= 0.5;
 
 				if(rand > Rnd.get(0, 1000))
