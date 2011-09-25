@@ -1,9 +1,4 @@
-= Introduction =
-
-Aion Knight 2.5 
-
-
-= Details =
+= Aion Knight 2.5 =
 
 Свободно развивающийся и распространяющийся проект.
 
