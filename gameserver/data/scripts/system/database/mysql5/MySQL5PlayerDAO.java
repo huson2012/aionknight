@@ -100,7 +100,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 		{
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(
-				"UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, player_class=?, last_online=?, cube_size=?, advenced_stigma_slot_size=?, warehouse_size=?, note=?, bind_point=?, title_id=?, mailboxLetters=?, repletionstate=? WHERE id=?");
+				"UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, player_class=?, last_online=?, cube_size=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, bind_point=?, title_id=?, mailboxLetters=?, repletionstate=? WHERE id=?");
 
 			log.debug("[DAO: MySQL5PlayerDAO] storing player "+player.getObjectId()+" "+player.getName());
 
@@ -259,7 +259,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 				cd.setGender(Gender.valueOf(resultSet.getString("gender")));
 				cd.setNote(resultSet.getString("note"));
 				cd.setCubesize(resultSet.getInt("cube_size"));
-				cd.setAdvencedStigmaSlotSize(resultSet.getInt("advenced_stigma_slot_size"));
+				cd.setAdvencedStigmaSlotSize(resultSet.getInt("advanced_stigma_slot_size"));
 				cd.setBindPoint(resultSet.getInt("bind_point"));
 				cd.setTitleId(resultSet.getInt("title_id"));
 				cd.setWarehouseSize(resultSet.getInt("warehouse_size"));
