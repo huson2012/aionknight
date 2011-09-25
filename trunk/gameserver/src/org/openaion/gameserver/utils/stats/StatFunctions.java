@@ -441,11 +441,9 @@ public class StatFunctions
 
 		if(attacker.isInState(CreatureState.POWERSHARD))
 		{
-<<<<<<< .mine			Item subHandPowerShard = equipment.getsubHandPowerShard();
+		Item subHandPowerShard = equipment.getSubHandPowerShard();
 			if(subHandPowerShard != null)
-=======			Item subHandPowerShard = equipment.getSubHandPowerShard();
-			if(subHandPowerShard != null)
->>>>>>> .theirs			{
+			{
 				damage += subHandPowerShard.getItemTemplate().getWeaponBoost();
 				equipment.usePowerShard(subHandPowerShard, 1);
 			}

@@ -781,9 +781,8 @@ public class Equipment
 		return null;
 	}
 
-<<<<<<< .mine	public Item getsubHandPowerShard()
-=======	public Item getSubHandPowerShard()
->>>>>>> .theirs	{
+	public Item getSubHandPowerShard()
+	{
 		Item subHandPowerShard = equipment.get(ItemSlot.POWER_SHARD_LEFT.getSlotIdMask());
 		if(subHandPowerShard != null)
 			return subHandPowerShard;

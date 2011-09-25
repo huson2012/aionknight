@@ -399,7 +399,7 @@ CREATE TABLE `players` (
   `deletion_date` timestamp NULL DEFAULT NULL,
   `last_online` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   `cube_size` tinyint(1) NOT NULL DEFAULT '0',
-  `advenced_stigma_slot_size` tinyint(1) NOT NULL DEFAULT '0',
+  `advanced_stigma_slot_size` tinyint(1) NOT NULL DEFAULT '0',
   `warehouse_size` tinyint(1) NOT NULL DEFAULT '0',
   `mailboxLetters` tinyint(4) NOT NULL DEFAULT '0',
   `bind_point` int(11) NOT NULL DEFAULT '0',
