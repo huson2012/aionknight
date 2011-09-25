@@ -623,6 +623,10 @@
 	<spawn map="210040000" npcid="700188" pool="1" interval="295">
 		<object x="970.44293" y="2193.9727" z="129.75" h="40"/>
 	</spawn>
+	<!-- Jewel Box (Object Normal lvl:1) -->
+	<spawn map="210040000" npcid="730032" pool="1" interval="295">
+		<object staticid="1409" x="134.44017" y="1598.0187" z="120.25" h="62"/>
+	</spawn>
 	<!-- Junior Soldier (NPC Elite lvl:45)-->
 	<spawn map="210040000" npcid="207845" interval="295">
 		<object x="173.94011" y="1659.813" z="122" h="87" />
@@ -1671,5 +1675,10 @@
 	<!-- Gunes -->
 	<spawn map="210040000" npcid="204529" pool="1" interval="295">
 		<object x="2492.7559" y="316.12332" z="414.56137" h="11" w="188"/>
+	</spawn>
+	<!-- Changes Joshi and FlegelDEV -->
+	<!-- Road-portal Heiron to Eltnen -->
+	<spawn map="210040000" npcid="257833" pool="1" interval="295">
+		<object x="1680.04" y="116.889" z="135.817" h="89"/>
 	</spawn>
 </spawns>

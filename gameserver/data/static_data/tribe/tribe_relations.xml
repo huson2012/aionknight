@@ -459,6 +459,7 @@
 		<support>
 			<to>KRALL</to>
 			<to>BROWNIE</to>
+			<to>DEMIHUMANOID</to>
 		</support>
 	</tribe>
 	<tribe base="MONSTER" name="BROWNIECOWARD">
@@ -2244,7 +2245,10 @@
 	<tribe base="MONSTER" name="TRICO"/>
 	<tribe base="GUARD" name="PROTECTGUARD_LIGHT">
 		<friend>
+			<to>FANATIC</to>
 			<to>MONSTER</to>
+			<to>AGGRESSIVESINGLEMONSTER</to>
+			<to>DEMIHUMANOID</to>
 		</friend>
 	</tribe>
 	<tribe base="GUARD_DARK" name="PROTECTGUARD_DARK">
@@ -2514,6 +2518,7 @@
 			<to>PC_DARK</to>
 		</aggro>
 		<support>
+			<to>PROTECTGUARD_LIGHT</to>
 			<to>FANATIC</to>
 			<to>XDRAKAN_ELEMENTALIST</to>
 			<to>XDRAKAN_PRIEST</to>

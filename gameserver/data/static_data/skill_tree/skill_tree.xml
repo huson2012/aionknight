@@ -3965,25 +3965,25 @@
     <skill skillId="1079" name="Radiant Cure I" minLevel="23" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1079" name="Radiant Cure I" minLevel="24" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="16" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="17" skillLevel="2" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="18" skillLevel="3" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="19" skillLevel="4" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="20" skillLevel="5" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="21" skillLevel="6" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="22" skillLevel="7" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="23" skillLevel="8" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1066" name="Summon Holy Servant I" minLevel="24" skillLevel="9" race="PC_DARK" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="16" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="17" skillLevel="2" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="18" skillLevel="3" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="19" skillLevel="4" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="20" skillLevel="5" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="21" skillLevel="6" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="22" skillLevel="7" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="23" skillLevel="8" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-    <skill skillId="1083" name="Summon Holy Servant I" minLevel="24" skillLevel="9" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" /> 
-
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="16" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="17" skillLevel="2" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="18" skillLevel="3" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="19" skillLevel="4" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="20" skillLevel="5" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="21" skillLevel="6" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="22" skillLevel="7" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="23" skillLevel="8" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1066" name="Summon Holy Servant I" minLevel="24" skillLevel="9" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
+	
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="16" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="17" skillLevel="2" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="18" skillLevel="3" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="19" skillLevel="4" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="20" skillLevel="5" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="21" skillLevel="6" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="22" skillLevel="7" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="23" skillLevel="8" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
+    <skill skillId="1083" name="Summon Holy Servant I" minLevel="24" skillLevel="9" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
 	
     <skill skillId="1045" name="Tranquility I" minLevel="16" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1045" name="Tranquility I" minLevel="17" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>

@@ -18,10 +18,6 @@
 	Dark Poeta
  -->
 <spawns>
-	<!-- Auxiliary Power Generator (Object Hero lvl:50)-->
-	<spawn map="300040000" npcid="214896" pool="1" interval="295">
-		<object x="254.91415" y="334.6687" z="121.82052" h="24"/>
-	</spawn>
 	<!-- Balaur Barricade (Object Normal lvl:50)-->
 	<spawn map="300040000" npcid="700558" pool="3" interval="295">
 		<object staticid="55" x="309.50507" y="983.87494" z="111.14812" h="55"/>
@@ -89,10 +85,6 @@
 		<object x="267.67084" y="1162.3098" z="147.94595" h="102"/>
 		<object x="249.0203" y="1310.5864" z="149.3099" h="32"/>
 	</spawn>
-	<!-- Emergency Generator (Object Hero lvl:50)-->
-	<spawn map="300040000" npcid="214897" pool="1" interval="295">
-		<object x="248.8292" y="361.8071" z="124.2962" h="99"/>
-	</spawn>
 	<!-- Generator Core Controller (NPC Normal lvl:50)-->
 	<spawn map="300040000" npcid="281210" pool="1" interval="295">
 		<object x="247.49515" y="337.92334" z="121.61827" h="98"/>
@@ -106,10 +98,6 @@
 	<!-- Balaur Abyss Gate (Object Normal lvl:20)-->
 	<spawn map="300040000" npcid="700478" pool="1" interval="295">
 		<object x="299.2822" y="316.08322" z="133.52367" h="57"/>
-	</spawn>
-	<!-- Main Power Generator (Object Hero lvl:50)-->
-	<spawn map="300040000" npcid="214895" pool="1" interval="295">
-		<object x="231.45505" y="308.22177" z="120.63396" h="62"/>
 	</spawn>
 	<!-- Red Journal (Object Normal lvl:1)-->
 	<spawn map="300040000" npcid="730148" pool="1" interval="295">

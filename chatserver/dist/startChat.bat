@@ -1,7 +1,7 @@
 @echo off
-title Aion Extreme Emu Chat Server Console
+title Aion Knight Chat Server Console
 :start
-echo Starting Aion Extreme Emu Chat Server.
+echo Starting Aion Knight Chat Server.
 echo.
 REM -------------------------------------
 REM Default parameters for a basic server.

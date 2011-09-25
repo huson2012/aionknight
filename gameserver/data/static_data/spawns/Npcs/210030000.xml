@@ -936,4 +936,9 @@
 	<spawn map="210030000" npcid="798395" pool="1" interval="295">
 		<object x="2324.02" y="1807.74" z="194.651" h="75"/>
 	</spawn>
+	<!-- Changes Joshi and FlegelDEV -->
+	<!-- Road-portal Verteron to Eltnen -->
+	<spawn map="210030000" npcid="258135" pool="1" interval="295">
+		<object x="2692.27" y="1822.28" z="141.656" h="119"/>
+	</spawn>
 </spawns>

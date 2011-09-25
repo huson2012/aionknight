@@ -181,14 +181,6 @@
 	<spawn map="220040000" npcid="204761" pool="1" interval="295">
 		<object x="553.0461" y="1919.2844" z="261.25" h="77"/>
 	</spawn>
-	<!-- Columba (NPC Normal lvl:50) -->
-	<spawn map="220040000" npcid="799848" pool="1" interval="295">
-		<object x="358.12292" y="258.47794" z="234.42291" h="25"/>
-	</spawn>
-	<!-- Copterus (NPC Normal lvl:50) -->
-	<spawn map="220040000" npcid="799855" pool="1" interval="295">
-		<object x="355.9832" y="259.42017" z="234.42291" h="25"/>
-	</spawn>
 	<!-- Scomber (NPC Normal lvl:50) -->
 	<spawn map="220040000" npcid="799857" pool="1" interval="295">
       <object x="354.0302" y="259.50912" z="234.42291" h="25"/>
@@ -1096,7 +1088,6 @@
 	<spawn map="220040000" npcid="203358" pool="2" interval="295">
 		<object x="2327.678" y="1251.371" z="469.08142" h="111"/>
 		<object x="2427.6128" y="2097.0002" z="577.6734" h="119"/>
-		<object x="256.8184" y="359.30444" z="238.544517" h="115"/>
 	</spawn>
 	<!-- Tartu (NPC Normal lvl:50) -->
 	<spawn map="220040000" npcid="204716" pool="1" interval="295">
@@ -1238,25 +1229,9 @@
 	<spawn map="220040000" npcid="205288" pool="1" interval="295">
 		<object x="452.94806" y="337.92743" z="233.82686" h="36"/>
 	</spawn>
-	<!-- Deryk (NPC Field Warden Registrar lvl:50) -->
-	<spawn map="220040000" npcid="799845" pool="1" interval="295">
-		<object x="343.52768" y="266.8047" z="234.42296" h="3"/>
-	</spawn>
-	<!-- Scomber (NPC Field Warden Armor Steward lvl:50) -->
-	<spawn map="220040000" npcid="799857" pool="1" interval="295">
-		<object x="347.07416" y="260.49255" z="234.42296" h="15"/>
-	</spawn>
-	<!-- Mola (NPC Field Warden Shield Steward lvl:50) -->
-	<spawn map="220040000" npcid="799859" pool="1" interval="295">
-		<object x="349.12347" y="259.18317" z="234.42296" h="18"/>
-	</spawn>
 	<!-- Copterus (NPC Field Warden Weapon Steward lvl:50) -->
 	<spawn map="220040000" npcid="799855" pool="1" interval="295">
 		<object x="357.00674" y="258.3615" z="234.42293" h="31"/>
-	</spawn>
-	<!-- Rhynnus (NPC Field Warden Special Steward lvl:50) -->
-	<spawn map="220040000" npcid="799858" pool="1" interval="295">
-		<object x="362.3428" y="263.68216" z="234.42293" h="50"/>
 	</spawn>
 	<!-- Columba (NPC Field Warden lvl:50) -->
 	<spawn map="220040000" npcid="799848" pool="1" interval="295">
@@ -1294,29 +1269,33 @@
 	<spawn map="220040000" npcid="798374" pool="1" interval="295">
 		<object x="853" y="2825" z="345.62" h="6"/>
 	</spawn>
-	<!-- NPC mentora -->
-	<!-- pabia -->
+	<!-- Pabia -->
 	<spawn map="220040000" npcid="799873" pool="1" interval="295">
-		<object x="377.692" y="362.69415" z="229.175" h="19"/>
-	</spawn>
-	<!-- volkos -->
-	<spawn map="220040000" npcid="799929" pool="1" interval="295">
-		<object x="380.71356" y="362.05676" z="229.177" h="79"/>
-	</spawn>
-	<!-- waiern -->
-	<spawn map="220040000" npcid="799926" pool="1" interval="295">
-		<object x="384.37097" y="358.49222" z="229.180" h="9"/>
+		<object x="377.74353" y="362.51752" z="229.17537" h="20"/>
 	</spawn>
 	<!-- Ostmark -->
 	<spawn map="220040000" npcid="799927" pool="1" interval="295">
-		<object x="382.85663" y="349.37115" z="229.182" h="39"/>
+		<object x="380.1821" y="352.3261" z="231" h="20"/>
+	</spawn>
+	<!-- Waiern -->
+	<spawn map="220040000" npcid="799926" pool="1" interval="295">
+		<object x="384.49" y="358.43" z="231" h="20"/>
 	</spawn>
 	<!-- Karolinger -->
 	<spawn map="220040000" npcid="799928" pool="1" interval="295">
-		<object x="385.97473" y="355.55853" z="229.182" h="10"/>
+		<object x="384.0994" y="355.1363" z="231" h="20"/>
 	</spawn>
-	<!-- lessim -->
+	<!-- Lessim -->
 	<spawn map="220040000" npcid="799930" pool="1" interval="295">
-		<object x="385.53656" y="350.75388" z="229.183" h="42"/>
+		<object x="383.2036" y="352.2055" z="231" h="20"/>
+	</spawn>
+	<!-- Volkos -->
+	<spawn map="220040000" npcid="799929" pool="1" interval="295">
+		<object x="380.4012" y="362.0211" z="231" h="20"/>
+	</spawn>
+	<!-- Changes Joshi and FlegelDEV -->
+	<!-- Road-portal Beluslan to Morheim -->
+	<spawn map="220040000" npcid="257533" pool="1" interval="295">
+		<object x="971.7657" y="122.641426" z="394.98312" h="96"/>
 	</spawn>
 </spawns>

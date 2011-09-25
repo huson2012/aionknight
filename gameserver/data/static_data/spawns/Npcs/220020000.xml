@@ -897,7 +897,7 @@
 	<spawn map="220020000" npcid="204345" pool="1" interval="295">
 		<object x="2363.7217" y="1717.3469" z="103.43981" h="5"/>
 	</spawn>
-	<!-- Roday (NPC Elite lvl:50)  (Need walker route  NPC fly support) -->
+	<!-- Roday (NPC Elite lvl:50)  (Need walker route + NPC fly support) -->
 	<spawn map="220020000" npcid="204313" pool="1" interval="295">
 		<object x="300.7608" y="2271.2434" z="448.6631" h="58"/>
 	</spawn>
@@ -1319,29 +1319,13 @@
 	<spawn map="220020000" npcid="799796" interval="295">
 		<object x="261.67685" y="2369.4736" z="446" h="100" />
 	</spawn>
-	<!-- Npc mentora -->
-	<!-- Barlile -->
-	<spawn map="220020000" npcid="799872" interval="295">
-		<object x="264.97296" y="2314.5422" z="445.122" h="87" />
+	<!-- Changes Joshi and FlegelDEV -->
+	<!-- Road-portal Morheim to Altgard -->
+	<spawn map="220020000" npcid="257234" interval="295">
+		<object x="401.47552" y="2959.4053" z="325" h="45" />
 	</spawn>
-	<!-- zaksen -->
-	<spawn map="220020000" npcid="799925" interval="295">
-		<object x="255.928" y="2313.73" z="445.122" h="80" />
-	</spawn>
-	<!-- Alf -->
-	<spawn map="220020000" npcid="799922" interval="295">
-		<object x="260.463" y="2313.61" z="445.122" h="33" />
-	</spawn>
-	<!-- orphis -->
-	<spawn map="220020000" npcid="799921" interval="295">
-		<object x="252.263363" y="2315.1313" z="445.122" h="13" />
-	</spawn>
-	<!-- Jantman -->
-	<spawn map="220020000" npcid="799923" interval="295">
-		<object x="250.71764" y="2317.588" z="445.122" h="5" />
-	</spawn>
-	<!-- Toriyam -->
-	<spawn map="220020000" npcid="799924" interval="295">
-		<object x="250.594" y="2321.9" z="445.122" h="117" />
+	<!-- Road-portal Morheim to Beluslan -->
+	<spawn map="220020000" npcid="257235" interval="295" >
+		<object x="2047.1138" y="3000.418" z="249.34573" h="17" />
 	</spawn>
 </spawns>
