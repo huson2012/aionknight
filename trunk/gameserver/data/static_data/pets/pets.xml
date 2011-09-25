@@ -82,9 +82,19 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.9"/>
 	</pet>
+	<pet id="900017" name="Fuzzy Elroco" nameid="1600053" eggid="190000053">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.9"/>
+	</pet>	
 	<pet id="900018" name="Sawteeth Rotan" nameid="1600055" eggid="190000016">
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.3"/>
 	</pet>
+	<pet id="900018" name="Sawteeth Rotan" nameid="1600055" eggid="190000037">
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.3"/>
+	</pet>
+	<pet id="900018" name="Sawteeth Rotan" nameid="1600055" eggid="190000038">
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.3"/>
+	</pet>	
 	<pet id="900019" name="Skullabra Krall" nameid="1600057" eggid="190020001">
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.4"/>
@@ -98,36 +108,82 @@
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
 	</pet>
 	<pet id="900022" name="Golden Wuf" nameid="1600063" eggid="190000017">
-		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.4"/>
 	</pet>
+	<pet id="900022" name="Golden Wuf" nameid="1600063" eggid="190000043">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.4"/>
+	</pet>
+	<pet id="900022" name="Golden Wuf" nameid="1600063" eggid="190000044">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.4"/>
+	</pet>	
 	<pet id="900023" name="Silver Wuf" nameid="1600065" eggid="190020004">
 		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.4"/>
 	</pet>
+	<pet id="900023" name="Silver Wuf" nameid="1600065" eggid="190000045">
+		<petfunction type="alarm"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.4"/>
+	</pet>
+	<pet id="900023" name="Silver Wuf" nameid="1600065" eggid="190000068">
+		<petfunction type="alarm"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.4"/>
+	</pet>	
 	<pet id="900024" name="Desert Naeda" nameid="1600067" eggid="190000027">
 		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="2"/>
 	</pet>
+	<pet id="900024" name="Desert Naeda" nameid="1600067" eggid="190020005">
+		<petfunction type="alarm"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="2"/>
+	</pet>	
+	<pet id="900024" name="Desert Naeda" nameid="1600067" eggid="190000030">
+		<petfunction type="alarm"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="2"/>
+	</pet>		
 	<pet id="900025" name="Jumpy Shugo" nameid="1600069" eggid="190020006">
 		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1"/>
 	</pet>
+	<pet id="900025" name="Jumpy Shugo" nameid="1600069" eggid="190020066">
+		<petfunction type="alarm"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1"/>
+	</pet>	
 	<pet id="900026" name="Acute Shugo" nameid="1600071" eggid="190020007">
+		<petfunction type="alarm"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1"/>
+	</pet>
+	<pet id="900026" name="Acute Shugo" nameid="1600071" eggid="190020067">
 		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1"/>
 	</pet>
 	<pet id="900027" name="Golden Nyanco" nameid="1600073" eggid="190020008">
 		<petfunction type="alarm"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1" altitude="1.5"/>
+	</pet>
+	<pet id="900027" name="Golden Nyanco" nameid="1600073" eggid="190000048">
+		<petfunction type="alarm"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1" altitude="1.5"/>
+	</pet>	
+	<pet id="900028" name="Pink Nyanco" nameid="1600075" eggid="190020009">
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1" altitude="1.5"/>
 	</pet>
-	<pet id="900028" name="Pink Nyanco" nameid="1600075" eggid="190020009">
-		<petfunction type="alarm"/>
+	<pet id="900028" name="Pink Nyanco" nameid="1600075" eggid="190000049">
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1" altitude="1.5"/>
+	</pet>
+	<pet id="900028" name="Pink Nyanco" nameid="1600075" eggid="190000069">
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1" altitude="1.5"/>
 	</pet>
 	<pet id="900029" name="Pesky Manduri" nameid="1600077" eggid="190020010">
@@ -135,11 +191,14 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.5"/>
 	</pet>
-	<pet id="900030" name="Mischievous Manduri" nameid="1600079" eggid="190020011">
-		<petfunction type="alarm"/>
+	<pet id="900030" name="Whitebeard Manduri" nameid="1600079" eggid="190020011">
 		<petfunction type="wing" id="1030000"/>
-		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.5"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.6"/>
 	</pet>
+	<pet id="900030" name="Whitebeard Manduri" nameid="1600079" eggid="190000050">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.6"/>
+	</pet>	
 	<pet id="900031" name="Bluehair Steren" nameid="1600081" eggid="190020012">
 		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030000"/>
@@ -168,6 +227,12 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.2"/>
 	</pet>
+	<pet id="900035" name="Potbelly Inquin" nameid="1600089" eggid="190020048">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020010"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="1.2"/>
+	</pet>	
 	<pet id="900036" name="Cresent Inquin" nameid="1600091" eggid="190020014">
 		<petfunction type="warehouse" slots="12"/>
 		<petfunction type="bag" id="1020010"/>
@@ -184,8 +249,14 @@
 		<petfunction type="warehouse" slots="12"/>
 		<petfunction type="bag" id="1020011"/>
 		<petfunction type="wing" id="1030000"/>
-		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.7"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.0"/>
 	</pet>
+	<pet id="900038" name="Goldmane Trico" nameid="1600095" eggid="190000046">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020011"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.0"/>
+	</pet>	
 	<pet id="900039" name="Micro MuMu" nameid="1600097" eggid="190020017">
 		<petfunction type="warehouse" slots="18"/>
 		<petfunction type="bag" id="1020012"/>
@@ -198,6 +269,12 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
 	</pet>
+	<pet id="900129" name="Mini MuMu" nameid="1600099" eggid="190020094">
+		<petfunction type="warehouse" slots="18"/>
+		<petfunction type="bag" id="1020012"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
+	</pet>	
 	<pet id="900041" name="Shugo Lass" nameid="1600103" eggid="190020019">
 		<petfunction type="warehouse" slots="24"/>
 		<petfunction type="bag" id="1020013"/>
@@ -230,6 +307,11 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.6"/>
 	</pet>
+	<pet id="900046" name="Hungry Porgus" nameid="1600111" eggid="190000028">
+		<petfunction type="food" id="10"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.6"/>
+	</pet>	
 	<pet id="900047" name="Pudgy Porgus" nameid="1600113" eggid="190020021">
 		<petfunction type="food" id="11"/>
 		<petfunction type="wing" id="1030000"/>
@@ -249,13 +331,28 @@
 		<petfunction type="food" id="14"/>
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.7"/>
 	</pet>
-	<pet id="900051" name="Eager Sprigg" nameid="1600121" eggid="190020025">
+	<pet id="900050" name="Azure Drakie" nameid="1600119" eggid="190000054">
+		<petfunction type="food" id="14"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.7"/>
+	</pet>	
+	<pet id="900051" name="Pointyhat Sprigg" nameid="1600121" eggid="190020025">
 		<petfunction type="warehouse" slots="12"/>
 		<petfunction type="bag" id="1020014"/>
-		<petfunction type="alarm"/>
 		<petfunction type="wing" id="1030001"/>
-		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.7"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.7"/>
 	</pet>
+	<pet id="900051" name="Pointyhat Sprigg" nameid="1600121" eggid="190000051">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020014"/>
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.7"/>
+	</pet>
+	<pet id="900051" name="Pointyhat Sprigg" nameid="1600121" eggid="190000070">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020014"/>
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.7"/>
+	</pet>	
 	<pet id="900052" name="Crimson Kerub" nameid="1600123" eggid="190020026">
 		<petfunction type="warehouse" slots="12"/>
 		<petfunction type="bag" id="1020015"/>
@@ -278,6 +375,12 @@
 		<petstats reaction="cowardly" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
 	<pet id="900055" name="Golden Drakie" nameid="1600129" eggid="190020029">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="food" id="17"/>
+		<petfunction type="bag" id="1020021"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.7"/>
+	</pet>
+	<pet id="900055" name="Golden Drakie" nameid="1600129" eggid="190000047">
 		<petfunction type="warehouse" slots="12"/>
 		<petfunction type="food" id="17"/>
 		<petfunction type="bag" id="1020021"/>
@@ -310,7 +413,19 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
 	</pet>
+	<pet id="900059" name="Wild Kitter" nameid="1600137" eggid="190000029">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
+	</pet>	
 	<pet id="900060" name="Beluslan Kitter" nameid="1600139" eggid="190020033">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
+	</pet>
+	<pet id="900060" name="Beluslan Kitter" nameid="1600139" eggid="190000039">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
+	</pet>
+	<pet id="900060" name="Beluslan Kitter" nameid="1600139" eggid="190000040">
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
 	</pet>
@@ -322,6 +437,14 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
 	</pet>
+	<pet id="900062" name="Heiron Kitter" nameid="1600143" eggid="190000041">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
+	</pet>
+	<pet id="900062" name="Heiron Kitter" nameid="1600143" eggid="190000042">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.3"/>
+	</pet>	
 	<pet id="900063" name="White Dagg" nameid="1600145" eggid="190000025">
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.2"/>
@@ -330,6 +453,10 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.2"/>
 	</pet>
+	<pet id="900064" name="Border Daggie" nameid="1600147" eggid="190000052">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1.2"/>
+	</pet>	
 	<pet id="900065" name="Speckled Ailu" nameid="1600149" eggid="190010003">
 		<petfunction type="warehouse" slots="6"/>
 		<petfunction type="wing" id="1030001"/>
@@ -339,11 +466,23 @@
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900066" name="Purple Ribbit" nameid="1600339" eggid="190000055">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>
 	<pet id="900067" name="Green Ribbit" nameid="1600341" eggid="190020038">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900067" name="Green Ribbit" nameid="1600341" eggid="190000056">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>	
 	<pet id="900068" name="Croaking Ribbit" nameid="1600343" eggid="190020039">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>
+	<pet id="900068" name="Croaking Ribbit" nameid="1600343" eggid="190000057">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
@@ -351,6 +490,10 @@
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900069" name="Blue Ribbit" nameid="1600345" eggid="190000058">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>	
 	<pet id="900070" name="Silver Ribbit" nameid="1600347" eggid="190020041">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
@@ -359,19 +502,39 @@
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900071" name="Red Ribbit" nameid="1600349" eggid="190000060">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>	
 	<pet id="900072" name="Tangerine Ribbit" nameid="1600351" eggid="190020043">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900072" name="Tangerine Ribbit" nameid="1600351" eggid="190000061">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>	
 	<pet id="900073" name="Violet Ribbit" nameid="1600353" eggid="190020044">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900073" name="Violet Ribbit" nameid="1600353" eggid="190000062">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>	
 	<pet id="900074" name="Auric Ribbit" nameid="1600355" eggid="190020045">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
+	<pet id="900074" name="Auric Ribbit" nameid="1600355" eggid="190000063">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>	
 	<pet id="900075" name="Black Ribbit" nameid="1600357" eggid="190020046">
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
+	</pet>
+	<pet id="900075" name="Black Ribbit" nameid="1600357" eggid="190000064">
 		<petfunction type="wing" id="1030001"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
@@ -385,7 +548,7 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.8"/>
 	</pet>
-	<pet id="900078" name="Silvertail Dorion" nameid="1600406" eggid="1900100004">
+	<pet id="900078" name="Silvertail Dorion" nameid="1600406" eggid="190010004">
 		<petfunction type="warehouse" slots="6"/>
 		<petfunction type="bag" id="1020009"/>
 		<petfunction type="wing" id="1030001"/>
@@ -395,10 +558,18 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
 	</pet>
+	<pet id="900079" name="Dapper Taegeuk Shugo" nameid="1600408" eggid="190020051">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
+	</pet>	
 	<pet id="900080" name="Cute Taegeuk Shugo" nameid="1600410" eggid="190020050">
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
 	</pet>
+	<pet id="900080" name="Cute Taegeuk Shugo" nameid="1600410" eggid="190020052">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="1"/>
+	</pet>	
 	<pet id="900085" name="Stately Crestlich" nameid="1600420" eggid="190020057">
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.7"/>
 	</pet>
@@ -445,6 +616,11 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.6"/>
 	</pet>
+	<pet id="900094" name="Pudgy Porgus" nameid="1600113" eggid="190000032">
+		<petfunction type="food" id="25"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6" walk_speed="1.132" height="0.6"/>
+	</pet>	
 	<pet id="900095" name="jumpy shugo" nameid="1600563" eggid="190020068">
 		<petfunction type="food" id="27"/>
 		<petfunction type="wing" id="1030000"/>
@@ -568,12 +744,72 @@
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.5"/>
 	</pet>
-	<pet id="900123" name="turkish kitter" nameid="1609023" eggid="190000072">
+	<pet id="900123" name="turkish kitter" nameid="1609023" eggid="190000071">
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="1.3"/>
 	</pet>
-	<pet id="900124" name="crikey kitter" nameid="1609025" eggid="190000074">
+	<pet id="900123" name="turkish kitter" nameid="1609023" eggid="190000072">
 		<petfunction type="wing" id="1030000"/>
 		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="1.3"/>
 	</pet>	
+	<pet id="900124" name="crikey kitter" nameid="1609025" eggid="190000074">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="1.3"/>
+	</pet>
+	<pet id="900124" name="crikey kitter" nameid="1609025" eggid="190000073">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="1.3"/>
+	</pet>	
+	<pet id="900084" name="Crimson Kerub" nameid="1600418" eggid="190020056">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020014"/>
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.7"/>
+	</pet>	
+	<pet id="900084" name="Crimson Kerub" nameid="1600418" eggid="190000036">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020014"/>
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.7"/>
+	</pet>
+	<pet id="900083" name="Eager Sprigg" nameid="1600416" eggid="190000035">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020014"/>
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.7"/>
+	</pet>	
+	<pet id="900083" name="Eager Sprigg" nameid="1600416" eggid="190020055">
+		<petfunction type="warehouse" slots="12"/>
+		<petfunction type="bag" id="1020014"/>
+		<petfunction type="wing" id="1030001"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.7"/>
+	</pet>
+<pet id="900039" name="Micro MuMu" nameid="1600097" eggid="190020017">
+		<petfunction type="warehouse" slots="18"/>
+		<petfunction type="bag" id="1020012"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.7"/>
+	</pet>
+<pet id="900128" name="Micro MuMu" nameid="1600097" eggid="190020093">
+		<petfunction type="warehouse" slots="18"/>
+		<petfunction type="bag" id="1020012"/>
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.7"/>
+	</pet>	
+<pet id="900082" name="Mischievous Manduri" nameid="1600414" eggid="190020054">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.5"/>
+	</pet>
+<pet id="900082" name="Mischievous Manduri" nameid="1600414" eggid="190000034">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.5"/>
+	</pet>
+<pet id="900081" name="Pesky Manduri" nameid="1600412" eggid="190020053">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.5"/>
+	</pet>	
+<pet id="900081" name="Pesky Manduri" nameid="1600412" eggid="190000033">
+		<petfunction type="wing" id="1030000"/>
+		<petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="0.5"/>
+	</pet>		
 </pets>

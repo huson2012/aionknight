@@ -173,7 +173,7 @@
 		<exitpoint mapid="300030000" x="513" y="668" z="331"/>
 	</portal>
 	<!-- Nochsana Training Camp Exit -->
-	<portal npcid="700438" instance="false" minlevel="25" maxlevel="28" group="true">
+	<portal npcid="700438" instance="false" minlevel="25" maxlevel="28" group="false">
 		<entrypoint mapid="300030000" x="466.89075" y="708" z="345"/>
 		<exitpoint mapid="400010000" x="876.7211" y="3079.2874" z="1644.5786" race="ASMODIANS"/>
 		<exitpoint mapid="400010000" x="2890" y="754" z="1498.5786" race="ELYOS"/>
@@ -804,65 +804,12 @@
 		<entrypoint mapid="220070000" x="2974.4292" y="1205.7853" z="241.9072"/>
 		<exitpoint mapid="220070000" x="2927.791" y="921.5419" z="35.288937"/>
 	</portal>
-	<!-- LF4_2011_In_Teleporter_Li -->
-	<portal npcid="257233" instance="false" minlevel="50" maxlevel="60" group="false" race="ELYOS">
-		<exitpoint mapid="210050000" x="1676.0245" y="2194.4194" z="324.94763"/>
-	</portal>
-	<!-- LF4_2011_In_Teleporter_Da -->
-	<portal npcid="257234" instance="false" minlevel="50" maxlevel="60" group="false" race="ASMODIANS">
-		<exitpoint mapid="210050000" x="1676.0245" y="2194.4194" z="324.94763"/>
-	</portal>
-	<!-- LF4_2011_In_Teleporter_Dr -->
-	<portal npcid="257235" instance="false" minlevel="50" maxlevel="60" group="false">
-		<exitpoint mapid="210050000" x="1676.0245" y="2194.4194" z="324.94763"/>
-	</portal>
-	<!-- LF4_2021_In_Teleporter_Li -->
-	<portal npcid="257533" instance="false" minlevel="50" maxlevel="60" group="false" race="ELYOS">
-		<exitpoint mapid="210050000" x="815.45436" y="1980.3673" z="337.3635"/>
-	</portal>
-	<!-- LF4_2021_In_Teleporter_Da -->
-	<portal npcid="257534" instance="false" minlevel="50" maxlevel="60" group="false" race="ASMODIANS">
-		<exitpoint mapid="210050000" x="815.45436" y="1980.3673" z="337.3635"/>
-	</portal>
-	<!-- LF4_2021_In_Teleporter_Dr -->
-	<portal npcid="257535" instance="false" minlevel="50" maxlevel="60" group="false">
-		<exitpoint mapid="210050000" x="815.45436" y="1980.3673" z="337.3635"/>
-	</portal>
-	<!-- DF4_3011_In_Teleporter_Li -->
-	<portal npcid="257833" instance="false" minlevel="50" maxlevel="60" group="false" race="ELYOS">
-		<exitpoint mapid="220070000" x="1254.2212" y="831.2192" z="310.10916"/>
-	</portal>
-	<!-- DF4_3011_In_Teleporter_Da -->
-	<portal npcid="257834" instance="false" minlevel="50" maxlevel="60" group="false" race="ASMODIANS">
-		<exitpoint mapid="220070000" x="1254.2212" y="831.2192" z="310.10916"/>
-	</portal>
-	<!-- DF4_3011_In_Teleporter_Dr -->
-	<portal npcid="257835" instance="false" minlevel="50" maxlevel="60" group="false">
-		<exitpoint mapid="220070000" x="1254.2212" y="831.2192" z="310.10916"/>
-	</portal>
-	<!-- DF4_3021_In_Teleporter_Li -->
-	<portal npcid="258133" instance="false" minlevel="50" maxlevel="60" group="false" race="ELYOS">
-		<exitpoint mapid="220070000" x="1941.3992" y="1068.9736" z="326.93292"/>
-	</portal>
-	<!-- DF4_3021_In_Teleporter_Da -->
-	<portal npcid="258134" instance="false" minlevel="50" maxlevel="60" group="false" race="ASMODIANS">
-		<exitpoint mapid="220070000" x="1941.3992" y="1068.9736" z="326.93292"/>
-	</portal>
 	<!--Beluslan teleport stone statue -->
 	<portal npcid="730055" instance="false" minlevel="40" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="220040000" x="1737.7941" y="1721.357" z="572.625"/>
 		<exitpoint mapid="220040000" x="1761.6423" y="1773.4304" z="672.3485"/>
 	</portal>
-	<!-- DF4_3021_In_Teleporter_Dr -->
-	<portal npcid="258135" instance="false" minlevel="50" maxlevel="60" group="false">
-		<exitpoint mapid="220070000" x="1941.3992" y="1068.9736" z="326.93292"/>
-	</portal>
-	<!-- Pandaemonium Underground Exit -->
- 	<portal npcid="730067" instance="false" minlevel="1" maxlevel="60" group="false">
-		<exitpoint mapid="120010000" x="1657.5" y="1398.7" z="194.66542" race="ASMODIANS"/>
-		<exitpoint mapid="110010000" x="1322.0" y="1511.0" z="567.90906" race="ELYOS"/>
- 	</portal>
-    <!-- 2.5 Instances by Hadesh and Destructor -->
+	<!-- 2.5 Instances by Hadesh and Destructor -->
 	<!-- Esoterrace Entrance Elyos -->
 	<portal npcid="730409" instance="true" minlevel="50" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="210050000" x="930.49" y="1904.88" z="338.01" />
@@ -877,27 +824,33 @@
 	<portal npcid="205437" minlevel="50" maxlevel="60" instance="false" group="false">
 		<entrypoint mapid="300250000" x="1316.596" y="1148.0472" z="51.676174"/>
 		<exitpoint mapid="210050000" x="932.951355" y="1906.001343" z="340.000" race="ELYOS"/>
-		<exitpoint mapid="210070000" x="1287.057617" y="857.303101" z="312.459076" race="ASMODIANS"/>
+		<exitpoint mapid="220070000" x="1287.057617" y="857.303101" z="312.459076" race="ASMODIANS"/>
 	</portal>
 	<!-- Pvp Zone -->
 	<portal npcid="250148" instance="false" minlevel="50" maxlevel="55" group="false">
+		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
+		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="484.684" y="517.064" z="1032.84" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="633.1899" y="540.5875" z="1031.0491" race="ASMODIANS"/>
 	</portal>
 	<!-- Pvp Zone Terrase Teleporter Ely/Asmo -->
 	<portal npcid="250146" instance="false" minlevel="50" maxlevel="55" group="false">
-	<entrypoint mapid="300100000" x="393.3586" y="546.53845" z="1072.0844"/>
+	   <entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
+	   <entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 	<exitpoint mapid="300100000" x="489.95102" y="498.1902" z="951.7029" race="ELYOS"/>
 	<exitpoint mapid="300100000" x="613.9179" y="501.58667" z="942.24" race="ASMODIANS"/>
 	</portal>
 	<!-- Pvp Zone Out Teleporter Ely/Asmo -->
 	<portal npcid="250147" instance="false" minlevel="50" maxlevel="55" group="false">
+	   <entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
+	   <entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="484.684" y="517.064" z="1032.84" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="633.1899" y="540.5875" z="1031.0491" race="ASMODIANS"/>
 	</portal>
 	<!-- Pvp Zone Endboss Teleporter Ely/Asmo -->
 	<portal npcid="217778" instance="true" minlevel="50" maxlevel="60" group="true">
-		<entrypoint mapid="300100000" x="2019.51" y="1467.34" z="947.018"/>
+		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
+		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="375.63638" y="510.2968" z="1072.1212"/>
 	<portalitem id="1" itemid="168000112" quantity="1"/>
 	</portal>
@@ -926,5 +879,47 @@
 	<portal npcid="730301" instance="false" minlevel="50" maxlevel="55" group="false">
 		<entrypoint mapid="220070000" x="730.8245" y="2289.9814" z="389.6456" race="ASMODIANS"/>
 		<exitpoint mapid="220070000" x="723.8195" y="2276.3245" z="389.6456"/>
+	</portal>
+	<!-- Changes Joshi and FlegelDEV -->
+	<!-- Roads to other map -->
+	<!-- Verteron to Eltnen -->
+	<portal npcid="258135" instance="false" minlevel="20" maxlevel="60" group="false" race="ELYOS">
+		<entrypoint mapid="210030000" x="2962.2664" y="1822.282" z="141.65634"/>
+		<exitpoint mapid="210020000" x="109.3882" y="2385.6294" z="230.16324"/>
+	</portal>
+	<!-- Eltnen to Verteron -->
+	<portal npcid="257835" instance="false" minlevel="20" maxlevel="60" group="false" race="ELYOS">
+		<entrypoint mapid="210020000" x="107.3882" y="2385.6294" z="228.16324"/>
+		<exitpoint mapid="210030000" x="2688.5173" y="1822.8547" z="143.65634"/>
+	</portal>
+	<!-- Eltnen to Heiron -->
+	<portal npcid="257834" instance="false" minlevel="10" maxlevel="60" group="false" race="ELYOS">
+		<entrypoint mapid="210020000" x="2346.2915" y="2915.0833" z="356.54688"/>
+		<exitpoint mapid="210040000" x="1680.0441" y="116.888985" z="137.81668"/>
+	</portal>
+	<!-- Heiron to Eltnen -->
+	<portal npcid="257833" instance="false" minlevel="10" maxlevel="60" group="false" race="ELYOS">
+		<entrypoint mapid="210040000" x="1680.0441" y="116.888985" z="135.81668"/>
+		<exitpoint mapid="210020000" x="2346.2915" y="2915.0833" z="358.54688"/>
+	</portal>
+	<!-- Altgard to Morheim -->
+	<portal npcid="257233" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
+		<entrypoint mapid="220030000" x="2852.1843" y="1360.8065" z="248.5"/>
+		<exitpoint mapid="220020000" x="401.47552" y="2959.4053" z="327"/>
+	</portal>
+	<!-- Morheim to Altgard -->
+	<portal npcid="257234" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
+		<entrypoint mapid="220020000" x="401.47552" y="2959.4053" z="325"/>
+		<exitpoint mapid="220030000" x="2852.1843" y="1360.8065" z="250.5"/>
+	</portal>
+	<!-- Morheim to Beluslan -->
+	<portal npcid="257235" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
+		<entrypoint mapid="220020000" x="2047.1138" y="3000.418" z="249.34573"/>
+		<exitpoint mapid="220040000" x="971.3177" y="123.94148" z="396.68887"/>
+	</portal>
+	<!-- Beluslan to Morheim -->
+	<portal npcid="257533" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
+		<entrypoint mapid="220040000" x="971.3177" y="123.94148" z="396.68887"/>
+		<exitpoint mapid="220020000" x="2047.1138" y="3000.418" z="251.34573"/>
 	</portal>
 </portal_templates>

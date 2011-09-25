@@ -777,11 +777,7 @@
 	</spawn>
 	<!-- Umkata's Grave (Object Normal lvl:1)-->
 	<spawn map="220030000" npcid="700098" pool="1" interval="295">
-		<object x="2896.16000" y="1742.63000" z="254.75" h="110"/>
-	</spawn>
-	<!-- Umkata l'Infatigable lv:l8)-->
-	<spawn map="220030000" npcid="210752" pool="1" interval="295">
-		<object x="2895.6716" y="1733.8147" z="254.38394" h="34"/>
+		<object x="2894.8237" y="1739.6812" z="254.75" h="82"/>
 	</spawn>
 	<!-- Umkata's Jewel Box (Object Normal lvl:1)-->
 	<spawn map="220030000" npcid="700097" pool="1" interval="295">
@@ -859,32 +855,37 @@
 	<spawn map="220030000" npcid="700141" pool="1" interval="295">
 		<object x="2452.26" y="2547.32" z="315.226" h="27"/>
 	</spawn>
-	<!--  Ash ( lvl:3) -->
-	<spawn map="220030000" npcid="799920" pool="1" interval="295">
-		<object x="1707.99" y="1821.86" z="254.74" h="10"/>
-	</spawn>
-	<!--  Imiron ( lvl:3) -->
+	<!-- Imiron -->
 	<spawn map="220030000" npcid="799919" pool="1" interval="295">
-		<object x="1711.6266" y="1824.8656" z="254.92256" h="38"/>
+		<object x="1711.1252" y="1826.1426" z="254.82924" h="98"/>
 	</spawn>
-	<!-- Setimner ( lvl:3) -->
+	<!-- Setimner -->
 	<spawn map="220030000" npcid="799917" pool="1" interval="295">
-		<object x="1713.86" y="1819.27" z="254.946" h="31"/>
+		<object x="1711.317" y="1827.73" z="256" h="17"/>
 	</spawn>
-	<!-- Rancier ( lvl:3) -->
+	<!-- Rancier -->
 	<spawn map="220030000" npcid="799881" pool="1" interval="295">
-		<object x="1710.61" y="1829.79" z="254.875" h="13"/>
+		<object x="1710.642" y="1831.006" z="256" h="17"/>
 	</spawn>
-	<!--  Varasgalf ( lvl:3) -->
+	<!-- Varasgalf -->
 	<spawn map="220030000" npcid="799918" pool="1" interval="295">
-		<object x="1706.48" y="1833.7" z="254.864" h="33"/>
+		<object x="1707.094" y="1834.22" z="256" h="17"/>
 	</spawn>
-	<!-- Isonne ( lvl:3) -->
-	<spawn map="220030000" npcid="799864" pool="1" interval="295">
-		<object x="1700.924" y="1841.6876" z="255.16405" h="37"/>
+	<!-- Ash -->
+	<spawn map="220030000" npcid="799920" pool="1" interval="295">
+		<object x="1705.976" y="1824.718" z="256" h="17"/>
 	</spawn>
-	<!--  Gallum ( lvl:3) -->
+	<!-- Gallum -->
 	<spawn map="220030000" npcid="799847" pool="1" interval="295">
-		<object x="1697.34" y="1841.54" z="255.32" h="14"/>
+		<object x="1698.493" y="1842.375" z="256" h="17"/>
+	</spawn>	
+	<!-- Isonne -->
+	<spawn map="220030000" npcid="799864" pool="1" interval="295">
+		<object x="1700.4143" y="1842.9777" z="255.0639" h="98"/>
+	</spawn>
+	<!-- Changes Joshi and FlegelDEV -->
+	<!-- Road-portal Altgard to Morheim -->
+	<spawn map="220030000" npcid="257233" pool="1" interval="295">
+		<object x="2852.1843" y="1360.8065" z="248.5" h="100"/>
 	</spawn>
 </spawns>

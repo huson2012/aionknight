@@ -14,7 +14,7 @@
 	</title>
 	<title id="3" race="0">
 		<modifiers>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="4" race="0">
@@ -76,7 +76,7 @@
 	</title>
 	<title id="14" race="0">
 		<modifiers>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="4" bonus="true"/>
 		</modifiers>
 	</title>
@@ -110,14 +110,14 @@
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
 			<add name="EVASION" value="6" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="20" race="0">
 		<modifiers>
 			<add name="MAXHP" value="30" bonus="true"/>
 			<add name="MAXMP" value="24" bonus="true"/>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="21" race="0">
@@ -130,13 +130,13 @@
 	<title id="22" race="0">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
-			<add name="FLY_SPEED" value="1" bonus="true"/>
+			<rate name="FLY_SPEED" value="1" bonus="true"/>
 			<add name="FLY_TIME" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="23" race="0">
 		<modifiers>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 			<add name="PHYSICAL_CRITICAL" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
 		</modifiers>
@@ -144,7 +144,7 @@
 	<title id="24" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="1" bonus="true"/>
-			<add name="SPEED" value="4" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
 		</modifiers>
 	</title>
@@ -203,15 +203,15 @@
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="34" race="0">
 		<modifiers>
 			<add name="MAXHP" value="60" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="35" race="0">
@@ -231,9 +231,9 @@
 	<title id="37" race="0">
 		<modifiers>
 			<add name="MAXHP" value="80" bonus="true"/>
-			<add name="SPEED" value="3" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="38" race="0">
@@ -251,13 +251,13 @@
 	</title>
 	<title id="40" race="0">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="41" race="0">
 		<modifiers>
-			<add name="SPEED" value="5" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="42" race="0">
@@ -269,7 +269,7 @@
 	</title>
 	<title id="43" race="0">
 		<modifiers>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="44" race="0">
@@ -280,7 +280,7 @@
 	</title>
 	<title id="45" race="0">
 		<modifiers>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="EVASION" value="4" bonus="true"/>
 			<add name="FLY_TIME" value="3" bonus="true"/>
 		</modifiers>
@@ -310,14 +310,14 @@
 		<modifiers>
 			<add name="MAXHP" value="52" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="30" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="50" race="0">
 		<modifiers>
 			<add name="MAXHP" value="65" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="10" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="51" race="1">
@@ -350,7 +350,7 @@
 	<title id="56" race="1">
 		<modifiers>
 			<add name="PARRY" value="6" bonus="true"/>
-			<add name="SPEED" value="2" bonus="true"/>
+			<rate name="SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="57" race="1">
@@ -387,14 +387,14 @@
 	<title id="62" race="1">
 		<modifiers>
 			<add name="MAXHP" value="40" bonus="true"/>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="63" race="1">
 		<modifiers>
 			<add name="PARRY" value="8" bonus="true"/>
 			<add name="EVASION" value="6" bonus="true"/>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="64" race="1">
@@ -420,14 +420,14 @@
 		<modifiers>
 			<add name="MAXHP" value="36" bonus="true"/>
 			<add name="MAXMP" value="36" bonus="true"/>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="68" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
 			<add name="EVASION" value="6" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="69" race="1">
@@ -440,7 +440,7 @@
 	<title id="70" race="1">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="6" bonus="true"/>
-			<add name="FLY_SPEED" value="1" bonus="true"/>
+			<rate name="FLY_SPEED" value="1" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="71" race="1">
@@ -459,7 +459,7 @@
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="10" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="8" bonus="true"/>
-			<add name="SPEED" value="4" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="74" race="1">
@@ -523,15 +523,15 @@
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="84" race="1">
 		<modifiers>
 			<add name="MAXHP" value="60" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="85" race="1">
@@ -551,9 +551,9 @@
 	<title id="87" race="1">
 		<modifiers>
 			<add name="MAXHP" value="80" bonus="true"/>
-			<add name="SPEED" value="3" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="88" race="1">
@@ -571,13 +571,13 @@
 	</title>
 	<title id="90" race="1">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="91" race="1">
 		<modifiers>
-			<add name="SPEED" value="5" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="92" race="1">
@@ -589,7 +589,7 @@
 	</title>
 	<title id="93" race="1">
 		<modifiers>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="94" race="1">
@@ -601,7 +601,7 @@
 	</title>
 	<title id="95" race="1">
 		<modifiers>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="EVASION" value="4" bonus="true"/>
 			<add name="FLY_TIME" value="3" bonus="true"/>
 		</modifiers>
@@ -630,14 +630,14 @@
 		<modifiers>
 			<add name="MAXHP" value="52" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="30" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="100" race="1">
 		<modifiers>
 			<add name="MAXHP" value="65" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="10" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="101" race="2">
@@ -658,19 +658,19 @@
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
 			<add name="EVASION" value="3" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="104" race="2">
 		<modifiers>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 			<add name="MAXHP" value="100" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="105" race="2">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 			<add name="MAXHP" value="150" bonus="true"/>
 		</modifiers>
 	</title>
@@ -678,7 +678,7 @@
 		<modifiers>
 			<add name="MAXHP" value="60" bonus="true"/>
 			<add name="MAXMP" value="60" bonus="true"/>
-			<add name="SPEED" value="2" bonus="true"/>
+			<rate name="SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="107" race="0">
@@ -706,8 +706,8 @@
 	</title>
 	<title id="110" race="0">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
@@ -723,7 +723,7 @@
 		<modifiers>
 			<add name="BLOCK" value="14" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="25" bonus="true"/>
-			<add name="BOOST_HATE" value="2" bonus="true"/>
+			<rate name="BOOST_HATE" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="113" race="0">
@@ -736,9 +736,9 @@
 	</title>
 	<title id="114" race="0">
 		<modifiers>
-			<add name="SPEED" value="3" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="115" race="0">
@@ -757,8 +757,8 @@
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="17" bonus="true"/>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="118" race="0">
@@ -789,20 +789,20 @@
 	</title>
 	<title id="123" race="0">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-1" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="124" race="0">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="125" race="0">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="126" race="1">
@@ -830,8 +830,8 @@
 	</title>
 	<title id="129" race="1">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
@@ -847,7 +847,7 @@
 		<modifiers>
 			<add name="BLOCK" value="14" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="25" bonus="true"/>
-			<add name="BOOST_HATE" value="2" bonus="true"/>
+			<rate name="BOOST_HATE" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="132" race="1">
@@ -860,9 +860,9 @@
 	</title>
 	<title id="133" race="1">
 		<modifiers>
-			<add name="SPEED" value="3" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+                        <rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="134" race="1">
@@ -881,8 +881,8 @@
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="17" bonus="true"/>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="137" race="1">
@@ -913,20 +913,20 @@
 	</title>
 	<title id="142" race="1">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-1" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="143" race="1">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="144" race="1">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="145" race="2">
@@ -938,20 +938,20 @@
 	</title>
 	<title id="146" race="2">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
-			<add name="SPEED" value="4" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="147" race="0">
 		<modifiers>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="148" race="1">
 		<modifiers>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
 		</modifiers>
 	</title>
@@ -973,24 +973,24 @@
 	</title>
 	<title id="151" race="2">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="152" race="2">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-1" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
-			<add name="SPEED" value="2" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
+			<rate name="SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="153" race="2">
 		<modifiers>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="154" race="0">
@@ -1009,7 +1009,7 @@
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
 			<add name="MAGICAL_CRITICAL" value="4" bonus="true"/>
-			<add name="SPEED" value="5" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="157" race="1">
@@ -1028,35 +1028,35 @@
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
 			<add name="MAGICAL_CRITICAL" value="4" bonus="true"/>
-			<add name="SPEED" value="5" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="160" race="2">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="161" race="2">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
-			<add name="FLY_SPEED" value="3" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
+			<rate name="FLY_SPEED" value="3" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="162" race="2">
 		<modifiers>
-			<add name="SPEED" value="5" bonus="true"/>
-			<add name="FLY_SPEED" value="4" bonus="true"/>
-			<add name="ATTACK_SPEED" value="-2" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
+			<rate name="FLY_SPEED" value="4" bonus="true"/>
+			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="163" race="2">
 		<modifiers>
-			<add name="SPEED" value="5" bonus="true"/>
-			<add name="FLY_SPEED" value="4" bonus="true"/>
-			<add name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
+			<rate name="FLY_SPEED" value="4" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
 	<title id="164" race="0">
@@ -1150,7 +1150,7 @@
 	<title id="176" race="2">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
-			<add name="FLY_SPEED" value="2" bonus="true"/>
+			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="17" bonus="true"/>
 		</modifiers>
 	</title>	
@@ -1163,35 +1163,35 @@
 	</title>	
 	<title id="178" race="2">
 		<modifiers>
-			<add name="SPEED" value="5" bonus="true"/>
+			<rate name="SPEED" value="5" bonus="true"/>
 			<add name="MAXHP" value="100" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="10" bonus="true"/>
 		</modifiers>
 	</title>	
 	<title id="179" race="2">
 		<modifiers>
-			<add name="SPEED" value="3" bonus="true"/>
+			<rate name="SPEED" value="3" bonus="true"/>
 			<add name="MAXHP" value="500" bonus="true"/>
 			<add name="MAGICAL_RESIST" value="20" bonus="true"/>
 		</modifiers>
 	</title>	
 	<title id="180" race="2">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
 			<add name="MAXHP" value="500" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="3" bonus="true"/>
 		</modifiers>
 	</title>	
 	<title id="181" race="2">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
 			<add name="MAXHP" value="500" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="3" bonus="true"/>
 		</modifiers>
 	</title>	
 	<title id="182" race="2">
 		<modifiers>
-			<add name="SPEED" value="4" bonus="true"/>
+			<rate name="SPEED" value="4" bonus="true"/>
 			<add name="ATTACK_SPEED" value="-4" bonus="true"/>
 			<add name="BOOST_CASTING_TIME" value="-4" bonus="true"/>
 		</modifiers>

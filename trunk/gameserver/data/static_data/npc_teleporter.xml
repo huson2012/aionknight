@@ -446,14 +446,14 @@
 	</teleporter_template>
 	<teleporter_template npc_id="203986" name="Navilreas" teleportId="109" type="FLIGHT">
 		<locations>
-			<telelocation loc_id="21" teleportid="21001" price="1200"/>
+			<telelocation loc_id="21" teleportid="19001" price="1200"/>
 			<telelocation loc_id="23" teleportid="22001" price="1800"/>
 			<telelocation loc_id="114" teleportid="120001" price="1800"/>
 		</locations>
 	</teleporter_template>
 	<teleporter_template npc_id="203962" name="Tareash" teleportId="110" type="FLIGHT">
 		<locations>
-			<telelocation loc_id="21" teleportid="19001" price="1500"/>
+			<telelocation loc_id="21" teleportid="21001" price="1500"/>
 			<telelocation loc_id="22" teleportid="23001" price="1800"/>
 			<telelocation loc_id="115" teleportid="122001" price="1800"/>
 		</locations>

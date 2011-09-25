@@ -1,7 +1,7 @@
 @echo off
-title Open Aion Login Server Console
+title Aion Knight Login Server Console
 :start
-echo Open Aion Login Server.
+echo Aion Knight Login Server.
 echo.
 REM -------------------------------------
 REM Default parameters for a basic server.

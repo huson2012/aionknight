@@ -655,12 +655,14 @@
 	</zone>
 	<zone mapid="220030000" name="Q2016" priority="17">
 		<points>
-			<point x="1651" y="253"/>
-			<point x="1640" y="241"/>
-			<point x="1634" y="229"/>
-			<point x="1634" y="214"/>
-			<point x="1644" y="199"/>
-			<point x="1664" y="197"/>
+			<point x="1672" y="256"/>
+			<point x="1686" y="247"/>
+			<point x="1704" y="246"/>
+			<point x="1712" y="235"/>
+			<point x="1707" y="226"/>
+			<point x="1699" y="221"/>
+			<point x="1672" y="221"/>
+			<point x="1661" y="236"/>
 		</points>
 		<link>MUMU_VILLAGE_220030000</link>
 	</zone>

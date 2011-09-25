@@ -23,10 +23,6 @@
 	<spawn map="400010000" npcid="730129" pool="1" interval="295">
 		<object x="870.27" y="3105.7075" z="1643.903" h="0" staticid="277"/>
 	</spawn>
-	<!-- Tostig -->
-	<spawn map="400010000" npcid="799870" pool="1" interval="105">
-		<object x="926.0446" y="2999.131" z="1655.3525" h="43"/>
-	</spawn>
 	<!-- Darkhum -->
 	<spawn map="400010000" npcid="278152" pool="1" interval="105">
 		<object x="983.8046" y="2911.05" z="1642.3351" h="55"/>
