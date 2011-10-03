@@ -1,17 +1,20 @@
 package org.openaion.gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
 import org.openaion.gameserver.model.gameobjects.player.Player;
 import org.openaion.gameserver.model.group.PlayerGroup;
 import org.openaion.gameserver.network.aion.AionConnection;
 import org.openaion.gameserver.network.aion.AionServerPacket;
+import org.openaion.gameserver.services.AcademyBootcampService;
 import org.openaion.gameserver.services.DredgionInstanceService;
+
+import java.nio.ByteBuffer;
+
+import javolution.util.FastMap;
 
 
 /**
  * 
- * @author Dns, ginho1
+ * @author Dns, ginho1,xtreme007, kosyachok
  * 
  */
 public class SM_INSTANCE_SCORE extends AionServerPacket
@@ -26,6 +29,8 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	private PlayerGroup	elyosGroup;
 	private PlayerGroup	asmosGroup;
 	private boolean		showRank;
+	private int[] playersInsigmas;
+	private FastMap<Integer, Integer> arenaPoints;
 
 	public SM_INSTANCE_SCORE(int mapId, int instanceTime, int stopTime, int totalPoints, int points, int kills, int rank)
 	{
@@ -46,7 +51,19 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		this.asmosGroup = asmosGroup;
 		this.showRank = showRank;
 	}
-
+	
+	/**
+	 * Academy bootcamp counter
+	 */
+	public SM_INSTANCE_SCORE(int mapId, FastMap<Integer, Integer> points, PlayerGroup group, int[] playersInsigmas, boolean showRank)
+	{
+		this.mapId = mapId;
+		this.elyosGroup = group;
+		this.showRank = showRank;
+		this.playersInsigmas = playersInsigmas;
+		this.instanceTime = 0;
+		this.arenaPoints = points;
+	}
 	/**
 	 * {@inheritDoc}
 	 */
@@ -89,14 +106,14 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 
 				int spaces = (member.getName().length() * 2) + 2;
 
-				if(spaces < 42)
-					writeB(buf, new byte[(42 - spaces)]);
+				if(spaces < 52)
+					writeB(buf, new byte[(52 - spaces)]);
 
 				count++;
 			}
 
 			if(count < 6)
-				writeB(buf, new byte[76 * (6 - count)]);//spaces
+				writeB(buf, new byte[80 * (6 - count)]);//spaces
 
 			count = 0;
 
@@ -124,14 +141,14 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 
 				int spaces = (member.getName().length() * 2) + 2;
 
-				if(spaces < 42)
-					writeB(buf, new byte[(42 - spaces)]);
+				if(spaces < 52)
+					writeB(buf, new byte[(52 - spaces)]);
 
 				count++;
 			}
 
 			if(count < 6)
-				writeB(buf, new byte[76 * (6 - count)]);//spaces
+				writeB(buf, new byte[80 * (6 - count)]);//spaces
 
 			int elyosScore = DredgionInstanceService.getInstance().getGroupScore(elyosGroup);
 			int asmosScore = DredgionInstanceService.getInstance().getGroupScore(asmosGroup);
@@ -154,10 +171,34 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 
 			writeH(buf, 0);//unk
 
-		}else{
+		}
+		else if(AcademyBootcampService.isAcademyBootcamp(mapId))
+		{
 			writeD(buf, mapId);
-			writeD(buf, instanceTime); // unknown
-			writeD(buf, stopTime); // unknown
+			writeD(buf, instanceTime);
+
+			if(showRank)
+				writeD(buf, 3145728);
+			else
+				writeD(buf, 2097152);
+			int i = 0;
+			for(Player member : elyosGroup.getMembers())
+			{
+				writeD(buf, member.getObjectId());//playerObjectId
+				writeD(buf, arenaPoints.get(member.getObjectId()) == null ? 0 : arenaPoints.get(member.getObjectId()));
+				writeD(buf, 0);
+				writeD(buf, playersInsigmas[i]);
+				i++;
+			}
+			
+			if(elyosGroup.size() < 6)
+				writeB(buf, new byte[16 * (6 - elyosGroup.size())]);//spaces
+		}
+		else
+		{
+			writeD(buf, mapId);
+			writeD(buf, instanceTime); // instanceTime
+			writeD(buf, stopTime); // stopTime
 			writeD(buf, totalPoints); // 0, 1, 2
 			writeD(buf, points);
 			writeD(buf, kills);

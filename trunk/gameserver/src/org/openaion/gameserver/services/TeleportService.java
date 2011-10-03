@@ -29,6 +29,7 @@ import org.openaion.gameserver.model.gameobjects.player.Storage;
 import org.openaion.gameserver.model.gameobjects.state.CreatureState;
 import org.openaion.gameserver.model.instances.Dredgion;
 import org.openaion.gameserver.model.templates.BindPointTemplate;
+import org.openaion.gameserver.model.templates.portal.EntryPoint;
 import org.openaion.gameserver.model.templates.portal.ExitPoint;
 import org.openaion.gameserver.model.templates.portal.PortalTemplate;
 import org.openaion.gameserver.model.templates.spawn.SpawnTemplate;
@@ -582,6 +583,24 @@ public class TeleportService
 		}
 		if(exitPoint != null)
 			teleportTo(player, worldId, instanceId, exitPoint.getX(), exitPoint.getY(), exitPoint.getZ(), delay);
+	}
+	
+	public static void teleportToInstanceExit(Player player, int worldId, int instanceId, int delay)
+	{
+		PortalTemplate template = DataManager.PORTAL_DATA.getInstancePortalTemplate(worldId, player.getCommonData().getRace());
+		if(template == null)
+		{
+			log.warn("No portal template found for instance : " + worldId);
+			return;
+		}
+		EntryPoint exitPoint = null;
+		for(EntryPoint point : template.getEntryPoint())
+		{
+			if(point.getRace() == null || point.getRace().equals(player.getCommonData().getRace()))
+				exitPoint = point;
+		}
+		if(exitPoint != null)
+			teleportTo(player, exitPoint.getMapId(), exitPoint.getX(), exitPoint.getY(), exitPoint.getZ(), delay);
 	}
 	
 	public static void teleportToNpc(Player player, int npcId)

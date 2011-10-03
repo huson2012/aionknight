@@ -22,10 +22,10 @@ package org.openaion.gameserver.utils.i18n;
  */
 public enum CustomMessageId
 {
-    WELCOME_PREMIUM("Welcome Premium Member to %s server.\nPowered by Aion-Extreme&OA 2010 www.aion-core.net.\nSERVER RATES:\nExp Rate: %d\nQuest Rate: %d\nDrop Rate: %d\n"),
-    WELCOME_REGULAR("Welcome to %s server.\nPowered by Aion-Extreme&OA 2010 www.aion-core.net.\nSERVER RATES:\nExp Rate: %d\nQuest Rate: %d\nDrop Rate: %d\n"),
+    WELCOME_PREMIUM("Welcome Premium Member to %s server.\nPowered by Aion-Knight&OA 2011 http://aion-knight.ru.\nSERVER RATES:\nExp Rate: %d\nQuest Rate: %d\nDrop Rate: %d\n"),
+    WELCOME_REGULAR("Welcome to %s server.\nPowered by Aion-Knight&OA 2011 http://aion-knight.ru.\nSERVER RATES:\nExp Rate: %d\nQuest Rate: %d\nDrop Rate: %d\n"),
     SERVER_REVISION("Server Revision: %-6s"),
-    WELCOME_BASIC("Welcome to %s server.\nPowered by Aion-Extreme&OA 2011 www.aion-core.net."),
+    WELCOME_BASIC("Welcome to %s server.\nPowered by Aion-Knight&OA 2011 http://aion-knight.ru."),
     ANNOUNCE_GM_CONNECTION("%s just entered into Atreia."),
         COMMAND_NOT_ENOUGH_RIGHTS("You dont have enough rights to execute this command"),
         PLAYER_NOT_ONLINE("The player %s is not online"),
