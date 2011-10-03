@@ -1,5 +1,5 @@
 @echo off
-title Aion Europe  Emulator BuildAll Console -- by Ares!Dallas
+title Aion-Knight Emulator Console (BUILD)
 
 CLS
 :MENU

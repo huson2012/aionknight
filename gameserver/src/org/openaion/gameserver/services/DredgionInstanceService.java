@@ -481,6 +481,12 @@ public class DredgionInstanceService extends InstanceService
 			int elyosGroupPoints = getGroupScore(elyosGroup);
 			int asmosGroupPoints = getGroupScore(asmosGroup);
 
+			if(elyosGroupPoints < 0)
+			elyosGroupPoints = (elyosGroupPoints * (-1));
+			
+			if(asmosGroupPoints < 0)
+			asmosGroupPoints = (asmosGroupPoints * (-1));
+			
 			if(elyosGroupPoints > 0 || asmosGroupPoints > 0)
 			{
 				if(elyosGroupPoints > asmosGroupPoints)
@@ -493,6 +499,8 @@ public class DredgionInstanceService extends InstanceService
 							{
 								member.setInstancePlayerAP(winningReward);
 								member.getCommonData().addAp(member.getInstancePlayerAP() + member.getInstancePlayerScore());
+								ItemService.addItem(member, 186000030, 20);
+								ItemService.addItem(member, 186000096, 5);
 							}
 							member.setInDredgion(false);
 						}
@@ -506,6 +514,7 @@ public class DredgionInstanceService extends InstanceService
 							{
 								member.setInstancePlayerAP(defeatedReward);
 								member.getCommonData().addAp(member.getInstancePlayerAP() + member.getInstancePlayerScore());
+								ItemService.addItem(member, 186000030, 5);
 							}
 	                        member.setInDredgion(false);
 						}
@@ -519,6 +528,8 @@ public class DredgionInstanceService extends InstanceService
 							{
 								member.setInstancePlayerAP(defeatedReward);
 								member.getCommonData().addAp(member.getInstancePlayerAP() + member.getInstancePlayerScore());
+								ItemService.addItem(member, 186000030, 20);
+								ItemService.addItem(member, 186000096, 5);
 							}
 	                        member.setInDredgion(false);
 						}
@@ -532,6 +543,7 @@ public class DredgionInstanceService extends InstanceService
 							{
 								member.setInstancePlayerAP(winningReward);
 								member.getCommonData().addAp(member.getInstancePlayerAP() + member.getInstancePlayerScore());
+								ItemService.addItem(member, 186000030, 5);
 							}
 	                        member.setInDredgion(false);
 						}

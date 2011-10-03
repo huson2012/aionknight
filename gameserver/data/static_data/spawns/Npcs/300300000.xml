@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	This file is part of aion-knight <aion-knight.ru>.
+
+	aion-knight is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	aion-knight is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with aion-knight.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<spawns>
+	<spawn map="300300000" npcid="205331" pool="1" interval="295">
+		<object x="345.0" y="345.0" z="96.0" h="0"/>
+	</spawn>
+</spawns>

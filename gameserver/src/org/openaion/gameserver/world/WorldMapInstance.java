@@ -53,7 +53,7 @@ public class WorldMapInstance extends ObjectContainer
 	 */
 	private Map<Integer, MapRegion>	regions				= Collections.synchronizedMap(new HashMap<Integer, MapRegion> ());
 
-	private Set<Integer>			registeredObjects	= Collections.newSetFromMap(Collections.synchronizedMap(new HashMap<Integer, Boolean>()));
+	protected Set<Integer>			registeredObjects	= Collections.newSetFromMap(Collections.synchronizedMap(new HashMap<Integer, Boolean>()));
 
 	private PlayerGroup				registeredGroup		= null;
 
