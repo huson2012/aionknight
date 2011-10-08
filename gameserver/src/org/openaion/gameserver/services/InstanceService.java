@@ -40,6 +40,7 @@ import org.openaion.gameserver.utils.ThreadPoolManager;
 import org.openaion.gameserver.world.World;
 import org.openaion.gameserver.world.WorldMap;
 import org.openaion.gameserver.world.WorldMapInstance;
+import org.openaion.gameserver.model.instances.EmpyreanCrucible;
 
 
 /**
@@ -67,7 +68,11 @@ public class InstanceService
 
 		log.info("Creating new instance: " + worldId + " " + nextInstanceId);
 
-		WorldMapInstance worldMapInstance = new WorldMapInstance(map, nextInstanceId);
+		WorldMapInstance worldMapInstance;
+		if(worldId == 300300000)        
+			worldMapInstance = new EmpyreanCrucible(map, nextInstanceId);
+		else
+			worldMapInstance= new WorldMapInstance(map, nextInstanceId);
 		startInstanceChecker(worldMapInstance);
 		map.addInstance(nextInstanceId, worldMapInstance);
 		SpawnEngine.getInstance().spawnInstance(worldId, worldMapInstance.getInstanceId());
@@ -325,55 +330,74 @@ public class InstanceService
 		}
 
 		@Override
-		public void run()
-		{
-			PortalTemplate portalTemplate = DataManager.PORTAL_DATA.getInstancePortalTemplate(worldMapInstance.getMapId(), null);
+        public void run()
+        {
+            PortalTemplate portalTemplate = DataManager.PORTAL_DATA.getInstancePortalTemplate(worldMapInstance.getMapId(), null);
 
-			if(portalTemplate != null && portalTemplate.isGroup())
-			{
-				PlayerGroup registeredGroup = worldMapInstance.getRegisteredGroup();
+            
+            if(worldMapInstance instanceof Dredgion)
+            {                           
+                Dredgion dred = (Dredgion)worldMapInstance;
 
-				if(registeredGroup == null)
-				{
-					if(worldMapInstance.getPlayersCount() == 0)
-					{
-						destroyInstance(worldMapInstance);
-						return;
-					}
-				}
-				else if(registeredGroup.size() == 0)
-				{
-					destroyInstance(worldMapInstance);
-					return;
-				}
-			}
-			else
-			{
-				if(worldMapInstance.getPlayersCount() == 0)
-				{
-					destroyInstance(worldMapInstance);
-					return;
-				}
-			}
-			
-			if(worldMapInstance instanceof Dredgion)
-			{				
-				Dredgion dred = (Dredgion)worldMapInstance;
-				
-				PlayerGroup secondGroup = dred.getSecondGroup();
-				if(secondGroup == null)
-				{
-					if(dred.getPlayersCount() == 0)
-					{
-						destroyInstance(dred);
-						return;
-					}
-				}
-				else if(secondGroup.size() == 0)
-				{
-					destroyInstance(dred);
-				}
-			}
-		}
-	}
+                PlayerGroup secondGroup = dred.getSecondGroup();
+                if(secondGroup == null)
+                {
+                    if(dred.getPlayersCount() == 0)
+                    {
+                        destroyInstance(dred);
+                        return;
+                    }
+                }
+                else if(secondGroup.size() == 0)
+                {
+                    destroyInstance(dred);
+                }
+            }
+            else if(worldMapInstance instanceof EmpyreanCrucible)
+            {
+                EmpyreanCrucible arena = (EmpyreanCrucible)worldMapInstance;
+                
+                if(arena.getPlayersCount() <= 0)
+                {
+                        PlayerGroup registeredGroup = worldMapInstance.getRegisteredGroup();
+                        
+                        if(registeredGroup != null && !arena.isRewarded())
+                        {
+                                AcademyBootcampService.getInstance().onFinishGroupReward(arena, registeredGroup);
+                                arena.setRewarded(true);
+                        }
+                        
+                        destroyInstance(arena);
+                }
+            }           
+            else if(portalTemplate != null && portalTemplate.isGroup())
+            {
+                PlayerGroup registeredGroup = worldMapInstance.getRegisteredGroup();
+
+                if(registeredGroup == null)
+                {
+                    if(worldMapInstance.getPlayersCount() == 0)
+                    {
+                        destroyInstance(worldMapInstance);
+                        return;
+                    }
+                }
+                else if(registeredGroup.size() == 0)
+                {
+                    destroyInstance(worldMapInstance);
+                    return;
+                }
+            }
+            else
+            {
+                if(worldMapInstance.getPlayersCount() == 0)
+                {
+                    destroyInstance(worldMapInstance);
+                    return;
+                }
+            }
+
+            
+        }
+    }
 }

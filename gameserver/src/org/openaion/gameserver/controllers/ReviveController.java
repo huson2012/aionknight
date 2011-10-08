@@ -37,6 +37,7 @@ import org.openaion.gameserver.skill.effect.RebirthEffect;
 import org.openaion.gameserver.skill.model.Effect;
 import org.openaion.gameserver.skill.model.SkillTemplate;
 import org.openaion.gameserver.utils.PacketSendUtility;
+import org.openaion.gameserver.services.AcademyBootcampService;
 
 
 /**
@@ -123,14 +124,14 @@ public class ReviveController
 	{
 		revive(25, 25);
 		applySoulSickness();
-		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.REVIVE);
-		PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
-		PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
-		
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.REVIVE);
+			PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
+			PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+                
 		if(player.isInInstance())
 		{
-			int instanceId = player.getInstanceId();
-			int mapId = player.getWorldId();
+				int instanceId = player.getInstanceId();
+				int mapId = player.getWorldId();
 
 			if(DredgionInstanceService.isDredgion(mapId))
 			{
@@ -138,12 +139,18 @@ public class ReviveController
 				player.getEffectController().removeAllEffects();
 				player.getLifeStats().setCurrentHpPercent(100);
 				player.getLifeStats().setCurrentMpPercent(100);
-			}else{
+			}
+			else if(AcademyBootcampService.isAcademyBootcamp(mapId))
+			{
+				TeleportService.teleportToInstanceExit(player, mapId, instanceId, 0);
+			}
+			else
+			{
 				TeleportService.teleportToInstanceEntry(player, mapId, instanceId, 0);
 			}
 		}
 		else
-			TeleportService.moveToBindLocation(player, true);		
+			TeleportService.moveToBindLocation(player, true);               
 	}
 
 	public void kiskRevive()

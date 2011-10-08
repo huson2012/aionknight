@@ -51,6 +51,8 @@ import org.openaion.gameserver.utils.ThreadPoolManager;
 import org.openaion.gameserver.world.World;
 import org.openaion.gameserver.world.WorldMap;
 import org.openaion.gameserver.world.WorldMapInstance;
+import org.openaion.gameserver.model.templates.portal.EntryPoint;
+import org.openaion.gameserver.services.AcademyBootcampService;
 
 
 
@@ -118,14 +120,13 @@ public class PortalController extends NpcController
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
 					return;
 				}
-
 				PlayerGroup group = player.getPlayerGroup();
-				if(player.getAccessLevel() < AdminConfig.INSTANCE_NO_GROUP) {
-					if (portalTemplate.isGroup() && group == null) {
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ENTER_ONLY_PARTY_DON);
-						return;
+					if(player.getAccessLevel() < AdminConfig.INSTANCE_NO_GROUP) {
+						if (portalTemplate.isGroup() && group == null) {
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ENTER_ONLY_PARTY_DON);
+							return;
+						}
 					}
-				}
 				
               for (PortalItem portalItem : portalTemplate.getPortalItem()) {
            Item item = player.getInventory().getFirstItemByItemId(portalItem.getItemid());
@@ -224,6 +225,11 @@ public class PortalController extends NpcController
 							
 							setInstanceCooldown(player, worldId, instance.getInstanceId());
 							transfer(player, instance);
+							return;
+						}
+						else if(worldId == 300300000)
+						{
+							AcademyBootcampService.getInstance().TeleportPlayerToCurrentStage(player);
 							return;
 						}
 						if(checkInstanceCooldown(player, worldId, instance.getInstanceId()))
@@ -384,5 +390,4 @@ public class PortalController extends NpcController
 		if(player.getInventory().removeFromBag(item, true))
 			PacketSendUtility.sendPacket(player, new SM_DELETE_ITEM(item.getObjectId()));
 	}
-
 }

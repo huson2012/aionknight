@@ -199,7 +199,7 @@ public class ServerPacketsOpcodes
         addPacketOpcode(SM_ABYSS_RANKING_LEGIONS.class,0xA8, idSet);
         addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class,0xA9, idSet);
         addPacketOpcode(SM_INSTANCE_COOLDOWN.class,0xAA, idSet);
-        addPacketOpcode(SM_RIFT_STATUS.class,0xAB, idSet);// test
+        //addPacketOpcode(SM_RIFT_STATUS.class,0xAB, idSet);// test
         addPacketOpcode(SM_PONG.class,0xAD, idSet);
         addPacketOpcode(SM_PRIVATE_STORE_NAME.class,0xAE, idSet);
         addPacketOpcode(SM_KISK_UPDATE.class,0xAF, idSet);
@@ -264,6 +264,7 @@ public class ServerPacketsOpcodes
         addPacketOpcode(SM_STATS_INFO.class,0xFE, idSet);
         addPacketOpcode(SM_VERSION_CHECK.class,0xFF, idSet);
         addPacketOpcode(SM_CUSTOM_PACKET.class,99999, idSet);// fake packet
+		addPacketOpcode(SM_ACADEMY_BOOTCAMP_STAGE.class,0xAB, idSet);//academy
 	}
 	
 	private void initPacketsFor_1_9()

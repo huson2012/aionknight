@@ -632,7 +632,10 @@ public class GroupService
                 BeshmundirInstanceService.getInstance().onGroupReward(owner, group);
 			case 300250000:
                 EsoterraceInstanceService.getInstance().onGroupReward(owner, group);
-			break;	
+			break;
+			case 300300000:
+				AcademyBootcampService.getInstance().onReward(group, owner);
+			break;			
 		}
 	}
 

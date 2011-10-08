@@ -193,6 +193,7 @@ public class AionPacketHandlerFactory
         addPacket(new CM_ENTER_WORLD(0xFA), State.AUTHED);// 2.1
         addPacket(new CM_LEVEL_READY(0xFB), State.IN_GAME);// 2.1
         addPacket(new CM_CUSTOM_SETTINGS(0xFE), State.IN_GAME);// 2.1
+		addPacket(new CM_ACADEMY_BOOTCAMP_EXIT(0x46), State.IN_GAME);//  2.1
 	}
 	
     private void init_1_9()

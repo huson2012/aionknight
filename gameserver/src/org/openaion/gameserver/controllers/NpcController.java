@@ -82,6 +82,7 @@ import org.openaion.gameserver.utils.PacketSendUtility;
 import org.openaion.gameserver.utils.exceptionhandlers.exception_enums;
 import org.openaion.gameserver.world.World;
 import org.openaion.gameserver.world.WorldType;
+import org.openaion.gameserver.services.AcademyBootcampService;
 
 
 /**
@@ -284,6 +285,13 @@ public class NpcController extends CreatureController<Npc>
 		if(getOwner().getObjectId() == player.getZephyrObjectId())
 		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 18));
+			return;
+		}
+		
+		//Academy recordkeeper round request
+		if(getOwner().getNpcId() == 205331)
+		{
+			AcademyBootcampService.getInstance().onRoundRequest(player, getOwner());
 			return;
 		}
 
