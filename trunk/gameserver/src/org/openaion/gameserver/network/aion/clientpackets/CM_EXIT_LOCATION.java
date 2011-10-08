@@ -18,7 +18,9 @@ package org.openaion.gameserver.network.aion.clientpackets;
 
 import org.openaion.gameserver.model.gameobjects.player.Player;
 import org.openaion.gameserver.network.aion.AionClientPacket;
+import org.openaion.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import org.openaion.gameserver.services.TeleportService;
+import org.openaion.gameserver.utils.PacketSendUtility;
 
 /**
  * @author dns
@@ -54,5 +56,6 @@ public class CM_EXIT_LOCATION extends AionClientPacket
 				break;
 			}
 		}
+		PacketSendUtility.sendPacket(activePlayer, new SM_INSTANCE_SCORE(0, 14400000, 2097152, 0, 0, 0, 0));
 	}
 }

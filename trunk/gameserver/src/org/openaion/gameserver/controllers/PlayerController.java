@@ -100,6 +100,8 @@ import org.openaion.gameserver.world.World;
 import org.openaion.gameserver.world.WorldMapInstance;
 import org.openaion.gameserver.world.WorldType;
 import org.openaion.gameserver.world.zone.ZoneInstance;
+import org.openaion.gameserver.model.instances.EmpyreanCrucible;
+import org.openaion.gameserver.network.aion.serverpackets.SM_ACADEMY_BOOTCAMP_STAGE;
 
 
 /**
@@ -317,6 +319,13 @@ public class PlayerController extends CreatureController<Player>
 		if(getOwner().getInDarkPoeta() && getOwner().getWorldId() != 300040000){
 			PacketSendUtility.sendPacket(getOwner(), new SM_INSTANCE_SCORE(0, 14400000, 2097152, 0, 0, 0, 7));
 			getOwner().setInDarkPoeta(true);
+		}
+		
+		if(getOwner().getWorldId() == 300300000 && getOwner().getPlayerGroup() != null)
+		{
+			EmpyreanCrucible arena = (EmpyreanCrucible)World.getInstance().getWorldMap(300300000).getWorldMapInstanceById(getOwner().getInstanceId());
+			PacketSendUtility.sendPacket(getOwner(), new SM_ACADEMY_BOOTCAMP_STAGE(arena.getStage(), arena.getRound(), false));
+			PacketSendUtility.sendPacket(getOwner(), new SM_INSTANCE_SCORE(300300000, arena.getArenaPoints(), getOwner().getPlayerGroup(), new int[6], false));
 		}
 
 		for (Effect ef : getOwner().getEffectController().getAbnormalEffects())
