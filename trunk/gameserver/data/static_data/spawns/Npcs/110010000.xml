@@ -1068,7 +1068,7 @@
 	</spawn>
 	<!-- Tacitus (NPC Normal lvl:55)-->
 	<spawn map="110010000" npcid="798436" interval="295">
-		<object x="1882.3486" y="1491.026" z="590.15826" h="47" />
+		<object x="1888.1498" y="1499.0139" z="590.15826" h="62" />
 	</spawn>
 	<!-- Taraerinerk (NPC Normal lvl:15)-->
 	<spawn map="110010000" npcid="798009" pool="1" interval="295">

@@ -22,6 +22,7 @@ import java.util.Set;
 import java.util.concurrent.locks.ReentrantLock;
 
 import org.apache.log4j.Logger;
+import org.openaion.gameserver.services.*;
 import org.openaion.commons.database.DatabaseFactory;
 import org.openaion.commons.database.dao.DAOManager;
 import org.openaion.commons.log4j.exceptions.Log4jInitializationError;
@@ -146,6 +147,8 @@ public class GameServer
 		log.info("Geo Loaded in " + (System.currentTimeMillis() - startTime)/1000 + " s");
 
 		NpcShoutsService.getInstance();
+		
+		RoadService.getInstance();
 		
 		Util.printSection("Spawns");
 		SpawnEngine.getInstance();

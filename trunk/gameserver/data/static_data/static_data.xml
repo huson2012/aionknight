@@ -176,4 +176,7 @@
 	<levelup_surveys>
 		<import file="levelup_surveys/surveys.xml" skipRoot="true" />
 	</levelup_surveys>
+	<roads>
+		<import file="roads/roads.xml" skipRoot="true"/>
+	</roads>
 </ae_static_data>

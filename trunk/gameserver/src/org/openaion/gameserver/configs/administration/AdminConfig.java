@@ -169,6 +169,9 @@ public class AdminConfig
 
 	@Property(key = "gameserver.administration.command.revoke", defaultValue = "3")
 	public static int	COMMAND_REVOKE;
+	
+	@Property(key = "gameserver.administration.command.road", defaultValue = "3")
+	public static int COMMAND_ROAD;
 
 	@Property(key = "gameserver.administration.command.savespawndata", defaultValue = "3")
 	public static int	COMMAND_SAVESPAWNDATA;

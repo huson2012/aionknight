@@ -183,11 +183,7 @@
 	</spawn>
 	<!-- Scomber (NPC Normal lvl:50) -->
 	<spawn map="220040000" npcid="799857" pool="1" interval="295">
-      <object x="354.0302" y="259.50912" z="234.42291" h="25"/>
-  </spawn>
-	<!-- Rhynnus (NPC Normal lvl:50) -->
-  <spawn map="220040000" npcid="799858" pool="1" interval="295">
-      <object x="352.19598" y="259.53665" z="234.42291" h="28"/>
+      <object x="347.07416" y="260.49255" z="234.42296" h="15"/>
   </spawn>
 	<!-- Mola (NPC Normal lvl:50) -->
   <spawn map="220040000" npcid="799859" pool="1" interval="295">
@@ -433,15 +429,16 @@
 		<object x="2267.48" y="1296.2158" z="473.6021" h="87"/>
 	</spawn>
 	<!-- Garrison Senior Patrol - Sorcerer (NPC Hero lvl:50) -->
-	<spawn map="220040000" npcid="207803" pool="3" interval="295">
+	<spawn map="220040000" npcid="207803" pool="4" interval="295">
 		<object x="2319.254" y="1238.0107" z="469.2669" h="95"/>
 		<object x="2252.5232" y="1202.08" z="471.875" h="113"/>
 		<object x="2241.9653" y="1256.422" z="474.63675" h="8"/>
+		<object x="472.56436" y="535.8788" z="216.4451" h="99"/>
 	</spawn>
 	<!-- Garrison Senior Patrol - Warrior (NPC Hero lvl:50) -->
 	<spawn map="220040000" npcid="207782" pool="3" interval="295">
 		<object x="2308.5347" y="1282.5668" z="486.14188" h="88"/>
-		<object x="2358.3765" y="1246.5463" z="469.32968" h="85"/>
+		<object x="2360.8958" y="1235.1868" z="469.70703" h="60"/>
 		<object x="2125.1533" y="1660.9193" z="514.374" h="64"/>
 	</spawn>
 	<!-- Geirod (NPC Elite lvl:50) -->
@@ -458,11 +455,7 @@
 	</spawn>
 	<!-- Gnalin (NPC Normal lvl:50) -->
 	<spawn map="220040000" npcid="204732" pool="1" interval="295">
-		<object x="347.8814" y="259.99274" z="235.0" h="20"/>
-	</spawn>
-	<!-- Goen (NPC Normal lvl:50) -->
-	<spawn map="220040000" npcid="205288" pool="1" interval="295">
-		<object x="451.55527" y="337.35907" z="233.82686" h="25"/>
+		<object x="348.1494" y="279.6457" z="234.42291" h="111"/>
 	</spawn>
 	<!-- Gofrunerk (NPC Normal lvl:40) -->
 	<spawn map="220040000" npcid="205246" pool="1" interval="295">
@@ -1209,10 +1202,6 @@
 	<spawn map="220040000" npcid="205234" pool="1" interval="295">
 		<object x="1942.186" y="490.7197" z="412.125" h="49"/>
 	</spawn>
-	<!-- Hudrunerk (NPC Normal lvl:50) -->
-	<spawn map="220040000" npcid="205233" pool="1" interval="295">
-		<object x="358.7955" y="439.4151" z="222.11166" h="101"/>
-	</spawn>
 	<!-- Odel (NPC Daeva of Summer lvl:55) -->
 	<spawn map="220040000" npcid="799797" pool="1" interval="295">
 		<object x="386.28958" y="343.31763" z="229.1838" h="53"/>
@@ -1228,10 +1217,6 @@
 	<!-- Goen (NPC Material Merchant lvl:45) -->
 	<spawn map="220040000" npcid="205288" pool="1" interval="295">
 		<object x="452.94806" y="337.92743" z="233.82686" h="36"/>
-	</spawn>
-	<!-- Copterus (NPC Field Warden Weapon Steward lvl:50) -->
-	<spawn map="220040000" npcid="799855" pool="1" interval="295">
-		<object x="357.00674" y="258.3615" z="234.42293" h="31"/>
 	</spawn>
 	<!-- Columba (NPC Field Warden lvl:50) -->
 	<spawn map="220040000" npcid="799848" pool="1" interval="295">
@@ -1297,5 +1282,13 @@
 	<!-- Road-portal Beluslan to Morheim -->
 	<spawn map="220040000" npcid="257533" pool="1" interval="295">
 		<object x="971.7657" y="122.641426" z="394.98312" h="96"/>
+	</spawn>
+	<!-- Rhynnus (NPC Field Warden Special Steward lvl:50) -->
+	<spawn map="220040000" npcid="799858" pool="1" interval="295">
+		<object x="362.3428" y="263.68216" z="234.42293" h="50"/>
+	</spawn>
+	<!-- Copterus (NPC Normal lvl:50) -->
+	<spawn map="220040000" npcid="799855" pool="1" interval="295">
+		<object x="355.9832" y="259.42017" z="234.42291" h="25"/>
 	</spawn>
 </spawns>

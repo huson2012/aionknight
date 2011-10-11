@@ -15,32 +15,23 @@
  *  along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.openaion.usercommands;
+package usercommands;
 
-import org.openaion.gameserver.configs.main.CustomConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.UserCommand;
-import org.openaion.gameserver.utils.i18n.CustomMessageId;
-import org.openaion.gameserver.utils.i18n.LanguageHandler;
-import org.openaion.gameserver.model.gameobjects.stats.StatEnum;
-import org.openaion.gameserver.skill.model.Effect;
-import org.openaion.gameserver.model.legion.Legion;
-import org.openaion.gameserver.services.HTMLService;
-import org.openaion.gameserver.network.aion.serverpackets.SM_QUESTIONNAIRE;
-import org.openaion.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import org.openaion.gameserver.utils.idfactory.IDFactory;
-import org.openaion.gameserver.model.group.PlayerGroup;
-import org.openaion.gameserver.utils.Util;
-import org.openaion.gameserver.world.World;
-import org.openaion.gameserver.model.Race;
-import org.openaion.gameserver.network.aion.serverpackets.SM_MESSAGE;
-import org.openaion.gameserver.model.ChatType;
-import org.openaion.gameserver.model.gameobjects.Item;
-
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import org.openaion.gameserver.model.Race;
+import org.openaion.gameserver.model.gameobjects.Item;
+import org.openaion.gameserver.model.gameobjects.player.Player;
+import org.openaion.gameserver.model.gameobjects.stats.StatEnum;
+import org.openaion.gameserver.model.group.PlayerGroup;
+import org.openaion.gameserver.model.legion.Legion;
+import org.openaion.gameserver.network.aion.serverpackets.SM_QUESTIONNAIRE;
+import org.openaion.gameserver.utils.PacketSendUtility;
+import org.openaion.gameserver.utils.Util;
+import org.openaion.gameserver.utils.chathandlers.UserCommand;
+import org.openaion.gameserver.utils.idfactory.IDFactory;
+import org.openaion.gameserver.world.World;
 
 /**
  *
@@ -132,12 +123,12 @@ public class PlayerInfo extends UserCommand {
                 sb.append("<br>Mana: [<font color='FF0000'>|||||||||| ||||||||||</font>]");
 				sb.append("<br>G&ouml;ttliche Kraft: [font color='FF0000'>|||||||||| ||||||||||</font>");
 			}
-			else //ansonsten werden Mana und Göttliche Kraft berechnet
+			else //ansonsten werden Mana und Gï¿½ttliche Kraft berechnet
             {
                 sb.append("<br>");
 				//Mana grafisch darstellen
                 sb.append("Mana: [<font color ='00FFFF'>");
-                for (i = 1; i < mpinPercent/5; i++) //grüne Gesundheitsbalken
+                for (i = 1; i < mpinPercent/5; i++) //grï¿½ne Gesundheitsbalken
                 {
                     sb.append("|");
                     if (i == 10)
@@ -157,7 +148,7 @@ public class PlayerInfo extends UserCommand {
                 }
                 sb.append("</font>] (" + mpinPercent + "%)  (" + target.getLifeStats().getCurrentMp() + "/" + target.getGameStats().getCurrentStat(StatEnum.MAXMP) + " MP)<br>");
             
-				//Göttliche Kraft grafisch darstellen
+				//Gï¿½ttliche Kraft grafisch darstellen
 				sb.append("G&ouml;ttliche Kraft: [<font color='FFCC00'>");
 				for (i = 1; i < dpinPercent/5; i++)
 				{

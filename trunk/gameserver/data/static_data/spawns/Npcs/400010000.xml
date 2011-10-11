@@ -1515,9 +1515,5 @@
 	<!-- Command members (Elys lvl:50) -->
 	<spawn map="400010000" npcid="799830" pool="1" interval="295">
 		<object x="2985.131" y="885.4396" z="1546.0913" h="37"/>
-	</spawn>
-	<!-- Stray builders (Elys lvl:50) -->
-	<spawn map="400010000" npcid="278652" pool="1" interval="295">
-		<object x="2937.6345" y="979.26746" z="1539.6614" h="97"/>
 	</spawn>	
 </spawns>

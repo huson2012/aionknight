@@ -4671,7 +4671,7 @@
 	</spawn>
 	<!-- Shaman Kalabar (Monster Elite lvl:39)-->
 	<spawn map="210020000" npcid="217090" interval="295">
-		<object x="1832.8577" y="1081.3947" z="445" h="75"/>
+		<object x="1834.6296" y="1083.6174" z="432.75696" h="14"/>
 	</spawn>
 	<!-- Shielded Skyray (Monster Elite lvl:32)-->
 	<spawn map="210020000" npcid="211785" pool="19" interval="390">

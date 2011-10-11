@@ -159,6 +159,9 @@ public class StaticData
 	@XmlElement(name = "pets")
 	public PetData					petData;
 	
+	@XmlElement(name = "roads")
+	public RoadData                roadData;
+	
 	@XmlElement(name = "droplist")
 	public DroplistData				droplistData;
 	
@@ -215,6 +218,7 @@ public class StaticData
 		DataManager.log.info("Loaded " + windstreamsData.size() + " windstream entries");
 		DataManager.log.info("Loaded " + droplistData.size() + " npc drops");
 		DataManager.log.info("Loaded " + npcShoutsData.size() + " npc shouts");
+		DataManager.log.info("Loaded " + roadData.size() + " road entries");
 		DataManager.log.info("Loaded " + levelUpSurveys.size() + " level up surveys");
 	}
 }
