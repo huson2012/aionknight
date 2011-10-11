@@ -109,6 +109,8 @@ public final class DataManager
 	public static WrappedItemData		WRAPPED_ITEM_DATA;
 	
 	public static PetFeedData			PET_FEED_DATA;
+	
+	public static RoadData              ROAD_DATA;
 
 	public static TitleData				TITLE_DATA;
 
@@ -233,6 +235,7 @@ public final class DataManager
 		SHIELD_DATA = data.shieldData;
 		FLY_RING_DATA = data.flyRingData;
 		PET_DATA = data.petData;
+		ROAD_DATA = data.roadData;
 		DROPLIST_DATA = data.droplistData;
 		NPC_SHOUTS_DATA = data.npcShoutsData;
 		LEVEL_UP_SURVEYS = data.levelUpSurveys;

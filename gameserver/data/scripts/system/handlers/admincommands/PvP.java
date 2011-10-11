@@ -1,13 +1,10 @@
-package org.openaion.admincommands;
+package admincommands;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
 import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.model.gameobjects.stats.modifiers.Executor;
-
 import org.openaion.gameserver.services.PvPZoneService;
 import org.openaion.gameserver.services.PvpService;
+import org.openaion.gameserver.utils.PacketSendUtility;
+import org.openaion.gameserver.utils.chathandlers.AdminCommand;
 
 /**
  * @author Felas , co-author Dallas, Iven, Dex
