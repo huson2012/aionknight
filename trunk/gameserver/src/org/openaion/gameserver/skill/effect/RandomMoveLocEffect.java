@@ -149,6 +149,7 @@ public class RandomMoveLocEffect extends EffectTemplate
 				return;
 			}
 
+			this.setDashParam(effect, x2, y2, z + 2);
 			this.setDashParam(effect, x2, y2, GeoEngine.getInstance().getZ(worldId, x2, y2, z));
 		
 		}

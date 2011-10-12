@@ -148,6 +148,10 @@ public class WorldPosition
 	{
 		return mapRegion.getParent().getParent().isInstanceType();
 	}
+	public boolean isInEmpyreanMap()
+	{
+		return mapRegion.getMapId() == 300300000;
+	}
 	/**
 	 * Return heading.
 	 * 

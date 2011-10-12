@@ -104,6 +104,7 @@ public class AionPacketHandlerFactory
         addPacket(new CM_SUMMON_CASTSPELL(0x3F), State.IN_GAME);// 2.1
         addPacket(new CM_DELETE_QUEST(0x42), State.IN_GAME);// 2.1
         addPacket(new CM_PLAY_MOVIE_END(0x43), State.IN_GAME);//  2.1
+		addPacket(new CM_EXIT_EC(0x46), State.IN_GAME);// 2.5
         addPacket(new CM_ITEM_REMODEL(0x48), State.IN_GAME);// 2.1
         addPacket(new CM_GODSTONE_SOCKET(0x49), State.IN_GAME);//  2.1
         addPacket(new CM_ALLIANCE_GROUP_CHANGE(0x4D), State.IN_GAME);//  1.9

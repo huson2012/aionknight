@@ -175,6 +175,7 @@ public class Player extends Creature
         private int                                                        xpBoost        = 0;
         private boolean                                                        in_darkpoeta = false;
         private boolean                                                        in_dredgion = false;
+		private boolean															in_empyrean = false;
         private int                                                        instancePVPKills = 0;
         private int                                                        instanceBalaurKills = 0;
         private int                                                        instanceCaptured = 0;
@@ -1978,7 +1979,14 @@ public class Player extends Creature
         {
                 this.in_dredgion = in_dredgion;
         }
-
+		public boolean getInEmpyrean()
+		{
+				return in_empyrean;
+		}
+		public void setInEmpyrean(boolean in_empyrean)
+		{
+		this.in_empyrean = in_empyrean;
+		}
         public int getInstancePVPKills()
         {
                 return this.instancePVPKills;

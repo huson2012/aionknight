@@ -24,6 +24,7 @@ import org.openaion.gameserver.world.MapRegion;
 import org.openaion.gameserver.world.World;
 import org.openaion.gameserver.world.WorldPosition;
 import org.openaion.gameserver.world.WorldType;
+import org.openaion.gameserver.world.*;
 
 /**
  * This class is representing visible objects. It's a base class for all in-game objects that can be spawned in the
@@ -199,6 +200,10 @@ public abstract class VisibleObject extends AionObject
 	public boolean isInInstance()
 	{
 		return position.isInstanceMap();
+	}
+	public boolean isInEmpyrean()
+	{
+		return position.isInEmpyreanMap();
 	}
 	
 	public void clearKnownlist()

@@ -199,7 +199,8 @@ public class ServerPacketsOpcodes
         addPacketOpcode(SM_ABYSS_RANKING_LEGIONS.class,0xA8, idSet);
         addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class,0xA9, idSet);
         addPacketOpcode(SM_INSTANCE_COOLDOWN.class,0xAA, idSet);
-        //addPacketOpcode(SM_RIFT_STATUS.class,0xAB, idSet);// test
+        addPacketOpcode(SM_RIFT_STATUS.class,0xAC, idSet);// test
+		addPacketOpcode(SM_STAGE_STEP_STATUS.class,0xAB, idSet);// test 2.5
         addPacketOpcode(SM_PONG.class,0xAD, idSet);
         addPacketOpcode(SM_PRIVATE_STORE_NAME.class,0xAE, idSet);
         addPacketOpcode(SM_KISK_UPDATE.class,0xAF, idSet);
