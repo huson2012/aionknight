@@ -626,6 +626,10 @@ public class GroupService
 				}
 				DredgionInstanceService.getInstance().doReward(winner, owner);
 			break;
+			case 300300000:
+				if(group.getEmpyreanCrucible() != null)
+					group.getEmpyreanCrucible().onGroupReward(owner, group);
+			break;			
 			case 300220000:
 				DivineInstanceService.getInstance().onGroupReward(owner, group);
 			case 300170000:
@@ -633,9 +637,6 @@ public class GroupService
 			case 300250000:
                 EsoterraceInstanceService.getInstance().onGroupReward(owner, group);
 			break;
-			case 300300000:
-				AcademyBootcampService.getInstance().onReward(group, owner);
-			break;			
 		}
 	}
 

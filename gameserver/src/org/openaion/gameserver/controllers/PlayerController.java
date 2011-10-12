@@ -76,6 +76,7 @@ import org.openaion.gameserver.services.AllianceService;
 import org.openaion.gameserver.services.ArenaService;
 import org.openaion.gameserver.services.ClassChangeService;
 import org.openaion.gameserver.services.DredgionInstanceService;
+import org.openaion.gameserver.services.EmpyreanCrucibleService;
 import org.openaion.gameserver.services.DuelService;
 import org.openaion.gameserver.services.InstanceService;
 import org.openaion.gameserver.services.ItemService;
@@ -408,6 +409,16 @@ public class PlayerController extends CreatureController<Player>
 		}
 		
 		super.onDie(lastAttacker);
+		
+		if(player.isInEmpyrean()){
+			if(player.isInGroup()){
+		EmpyreanCrucibleService ec = player.getPlayerGroup().getEmpyreanCrucible();
+			if(ec != null){
+		ec.onDie(player, lastAttacker);
+			return;
+				}
+			}
+		}
 		
 		if(master instanceof Npc || master == player)
 		{

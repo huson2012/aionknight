@@ -19,6 +19,7 @@ package org.openaion.gameserver.model.group;
 import java.util.Collection;
 
 import org.openaion.commons.objects.filter.ObjectFilter;
+import javolution.util.FastMap;
 import org.openaion.gameserver.configs.main.GroupConfig;
 import org.openaion.gameserver.model.gameobjects.AionObject;
 import org.openaion.gameserver.model.gameobjects.Npc;
@@ -28,8 +29,11 @@ import org.openaion.gameserver.network.aion.serverpackets.SM_GROUP_MEMBER_INFO;
 import org.openaion.gameserver.network.aion.serverpackets.SM_INSTANCE_COOLDOWN;
 import org.openaion.gameserver.network.aion.serverpackets.SM_LEAVE_GROUP_MEMBER;
 import org.openaion.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import org.openaion.gameserver.services.EmpyreanCrucibleService;
+import org.openaion.gameserver.services.DivineInstanceService;
 import org.openaion.gameserver.utils.MathUtil;
 import org.openaion.gameserver.utils.PacketSendUtility;
+import org.openaion.commons.objects.filter.ObjectFilter;
 
 import javolution.util.FastMap;
 
@@ -40,18 +44,15 @@ import javolution.util.FastMap;
  */
 public class PlayerGroup extends AionObject
 {
-	private LootGroupRules			lootGroupRules		= new LootGroupRules();
-
-	private Player				groupLeader;
-
+	private LootGroupRules				lootGroupRules		= new LootGroupRules();
+	private Player						groupLeader;
 	private FastMap<Integer, Player>	groupMembers		= new FastMap<Integer, Player>().shared();
-
-	private int				RoundRobinNr		= 0;
-	
-	private int				instancePoints		= 0;
-	private int				instanceKills		= 0;
-	private long 				instanceStartTime	= 0;
-	private boolean				instanceDisplaycounter	= true;
+	private int							RoundRobinNr		= 0;
+	private int							instancePoints		= 0;
+	private int							instanceKills		= 0;
+	private long 						instanceStartTime	= 0;
+	private boolean						instanceDisplaycounter	= true;
+	private EmpyreanCrucibleService		empyreanCrucible = null;
 
 	/**
 	 * Instantiates new player group with unique groupId
@@ -335,7 +336,15 @@ public class PlayerGroup extends AionObject
 	{
 		return instanceDisplaycounter;
 	}
-
+	public EmpyreanCrucibleService getEmpyreanCrucible()
+	{
+		return empyreanCrucible;
+	}
+	public void setEmpyreanCrucible(EmpyreanCrucibleService empyreanCrucible)
+	{
+		this.empyreanCrucible = empyreanCrucible;
+	}
+	
 	@Override
 	public String getName()
 	{

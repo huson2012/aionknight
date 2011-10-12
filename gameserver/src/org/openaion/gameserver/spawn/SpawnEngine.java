@@ -48,6 +48,7 @@ import org.openaion.gameserver.controllers.instances.HaramelController;
 import org.openaion.gameserver.controllers.instances.BeshmundirTempleController;
 import org.openaion.gameserver.controllers.instances.KromedesTrialController;
 import org.openaion.gameserver.controllers.instances.SteelRakeController;
+import org.openaion.gameserver.controllers.instances.EmpyreanCrucibleController;
 import org.openaion.gameserver.dao.SpawnDAO;
 import org.openaion.gameserver.dataholders.DataManager;
 import org.openaion.gameserver.dataholders.NpcData;
@@ -290,6 +291,17 @@ public class SpawnEngine
 				npc = new Npc(iDFactory.nextId(), new KromedesTrialController(),
 					spawn, template);
 				npc.setKnownlist(new StaticObjectKnownList(npc));
+			}
+			//Empyrean Crucible
+  			 else if (objectId == 799567 || objectId == 799568 || objectId == 799569 || objectId == 799570 || objectId == 799571 || objectId == 799572
+   			 || objectId == 205331 || objectId == 205332 || objectId == 205333 || objectId == 205334 || objectId == 205335 || objectId == 205336 || objectId == 205337
+				|| objectId == 205338 || objectId == 205339 || objectId == 205340 || objectId == 205341 || objectId == 205342 || objectId == 205343 || objectId == 205344 || objectId == 799573
+				 || objectId == 205426 || objectId == 205427 || objectId == 205428 || objectId == 205429 || objectId == 205430 || objectId == 205431)
+  			{
+  			  npc = null;
+  			  npc = new Npc(iDFactory.nextId(), new EmpyreanCrucibleController(),
+  			   spawn, template);
+  			  npc.setKnownlist(new StaticObjectKnownList(npc));
 			}
 			//restricted teleporters exception
 			if (objectId == 730218 || objectId == 730219)

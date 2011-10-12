@@ -6,6 +6,7 @@ import org.openaion.gameserver.network.aion.AionConnection;
 import org.openaion.gameserver.network.aion.AionServerPacket;
 import org.openaion.gameserver.services.AcademyBootcampService;
 import org.openaion.gameserver.services.DredgionInstanceService;
+import org.openaion.gameserver.services.EmpyreanCrucibleService;
 
 import java.nio.ByteBuffer;
 
@@ -26,8 +27,10 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	private int		points;
 	private int		kills;
 	private int		rank;
+	private int		signs;
 	private PlayerGroup	elyosGroup;
 	private PlayerGroup	asmosGroup;
+	private PlayerGroup	registeredGroup;
 	private boolean		showRank;
 	private int[] playersInsigmas;
 	private FastMap<Integer, Integer> arenaPoints;
@@ -51,7 +54,16 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		this.asmosGroup = asmosGroup;
 		this.showRank = showRank;
 	}
-	
+	public SM_INSTANCE_SCORE(int mapId, int instanceTime, PlayerGroup registeredGroup, int points, int signs, boolean showRank)
+	{
+		this.mapId = mapId;
+		this.instanceTime = instanceTime;
+		this.registeredGroup = registeredGroup;
+		this.points = points; // Hunted value
+		this.signs = signs;
+		this.showRank = showRank;
+	}
+
 	/**
 	 * Academy bootcamp counter
 	 */
@@ -170,7 +182,42 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				writeC(buf, 0xFF);
 
 			writeH(buf, 0);//unk
+			
+			}
+			else if(EmpyreanCrucibleService.isInEmpyreanCrucible(mapId))
+			{
+			
+			writeD(buf, mapId);
+			writeD(buf, instanceTime);
 
+			if(showRank)
+				writeD(buf, 3145728);
+			else
+				writeD(buf, 2097152);
+
+			int count = 0;
+
+			for(Player member : registeredGroup.getMembers())
+			{
+				writeD(buf, member.getObjectId());//playerObjectId
+				writeD(buf, points);//playerScore
+				
+				if(showRank)
+				{
+					writeD(buf, 3);
+					
+				}else{
+				
+					writeD(buf, 1);
+				}
+
+				writeD(buf, signs);//signs
+
+				count++;
+			}
+
+			if(count < 6)
+				writeB(buf, new byte[16 * (6 - count)]);//spaces
 		}
 		else if(AcademyBootcampService.isAcademyBootcamp(mapId))
 		{
