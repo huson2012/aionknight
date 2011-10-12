@@ -37,6 +37,7 @@
 			<xs:enumeration value="TKISAS" />
 			<xs:enumeration value="ASTERIA" />
 			<xs:enumeration value="DIVINE" />
+			<xs:enumeration value="RA-MIREN" />
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

@@ -367,10 +367,6 @@
 	<spawn map="210050000" npcid="799057" pool="1" interval="295">
 		<object staticid="202" x="398.93082" y="949.9519" z="460.34537" h="0"/>
 	</spawn>
-	<!-- Inggison Coin Fountain -->
-	<spawn map="210050000" npcid="730241" pool="1" interval="295">
-		<object staticid="268" x="1355.5326" y="332.65009" h="0" z="588.12"/>
-	</spawn>
 	<!-- Aerolink to Sanctum -->
 	<spawn map="210050000" npcid="730220" pool="1" interval="295">
 		<object staticid="1314" x="1375.7186" y="367.51871" h="0" z="589.44086"/>

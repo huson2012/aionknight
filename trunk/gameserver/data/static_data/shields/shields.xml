@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- Shilds Templates file. Modify by Aion Knight Team -->
+
 <shields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shields.xsd">
 	<shield name="TEMINON_SHIELD" race="ELYOS" x="3002.9207" y="903.2752" z="1520.0913" radius="313.5392" skill="8314" map="400010000"/>
  	<shield name="PRIMUM_SHIELD" race="ASMODIANS" x="893.7403" y="2953.727" z="1586.35" radius="357.0371" skill="8314" map="400010000"/>
@@ -11,4 +14,5 @@
 	<shield name="KROTAN" race="NONE" x="2057" y="1274" z="2986" radius="57" skill="8314" map="400010000" fortress_id="1221"/>
 	<shield name="TKISAS" race="NONE" x="2506" y="2108" z="3073" radius="57" skill="8314" map="400010000" fortress_id="1231"/>
 	<shield name="ASTERIA" race="NONE" x="720" y="2960" z="2920" radius="57" skill="8314" map="400010000" fortress_id="1251"/>
+	<shield name="RA-MIREN" race="NONE" x="1780" y="2282" z="2963" radius="57" skill="8314" map="400010000" fortress_id="1241"/>
 </shields>
