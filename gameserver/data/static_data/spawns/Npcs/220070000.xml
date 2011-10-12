@@ -647,9 +647,6 @@
 	<spawn map="220070000" npcid="730284" pool="1" interval="295">
 		<object staticid="367" x="1294.6669" y="1565.0956" z="304.73163" h="85"/>
 	</spawn>
-	<spawn map="220070000" npcid="730242" pool="1" interval="295">
-		<object staticid="1061" x="1815.0425" y="2915.1387" z="549.37384" h="30"/>
-	</spawn>
 	<spawn map="220070000" npcid="730249" pool="1" interval="295">
 		<object staticid="309" x="1380.2336" y="1481.8057" z="307.2828" h="0"/>
 	</spawn>

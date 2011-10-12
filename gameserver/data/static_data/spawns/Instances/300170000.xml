@@ -1054,88 +1054,87 @@
 	<spawn map="300170000" interval="295" npcid="216170" pool="1" rw="5">
 		<object x="1499.78" y="1507.1" h="0" z="300.33"/>
 	</spawn>
-	<!-- Spawn by service script
-    The Soulcaller (Monster Hero lvl:55)
+	<!-- Spawn by service script -->
+    <!-- The Soulcaller (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216159" pool="1">
 		<object x="1355.826" y="390.9307" h="94" z="249.25447"/>
 	</spawn>    
-	Ahbana the Wicked (Monster Hero lvl:55)
+	<!-- Ahbana the Wicked (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216239" pool="1" rw="5">
 		<object x="1356.57" y="147.764" h="30" z="246.274"/>
 	</spawn>
-    Taros Lifebane (Monster Hero lvl:55)
+    <!-- Taros Lifebane (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216248" pool="1" rw="20">
 		<object x="1400.43" y="1284.99" h="0" z="302.75"/>
 	</spawn>
-	Shadowshift (Monster Hero lvl:55)
+	<!-- Shadowshift (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216247" pool="1" rw="5">
 		<object x="1394.38" y="458.539" h="0" z="243.317"/>
 	</spawn>
-	The Great Virhana (Monster Hero lvl:55)
+	<!-- The Great Virhana (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216246" pool="1" rw="5">
 		<object x="1215.32" y="659.387" h="89" z="250.238"/>
 	</spawn>
-	The Plaguebearer (Monster Hero lvl:55)
+	<!-- The Plaguebearer (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216163" pool="1" rw="5">
 		<object x="1052.83" y="83.5968" h="0" z="233.842"/>
 	</spawn>
-	Vehala the Cursed (Monster Hero lvl:55)
+	<!-- Vehala the Cursed (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216242" pool="1" rw="5">
 		<object x="1103.3" y="19.5208" h="0" z="234.108"/>
 	</spawn>
-	Manadar (Monster Hero lvl:55)
+	<!-- Manadar (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216160" pool="1" rw="5">
 		<object x="1084.87" y="614.102" h="0" z="234.411"/>
 	</spawn>
-    Dorakiki the Bold (Monster Hero lvl:55)
+    <!-- Dorakiki the Bold (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216169" pool="1" rw="5">
 		<object x="1173.88" y="1212.45" h="0" z="283.5"/>
 	</spawn>
-    Isbariya the Resolute (Monster Hero lvl:55)
+    <!-- Isbariya the Resolute (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216182" pool="1" rw="5">
 		<object x="1603.43" y="1593.01" h="0" z="307.034"/>
 	</spawn>
-    Judge Kramaka (Monster Elite lvl:55)
+    <!-- Judge Kramaka (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216181" pool="1" rw="5">
 		<object x="1640.2" y="1428.82" h="0" z="305.835"/>
 	</spawn>
-	Protector Narma (Monster Elite lvl:55)
+	<!-- Protector Narma (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216179" pool="1" rw="5">
 		<object x="1631.57" y="1495.91" h="0" z="329.945"/>
 	</spawn>
-	Protector Dinata (Monster Elite lvl:55)
+	<!-- Protector Dinata (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216177" pool="1" rw="5">
 		<object x="1501.43" y="1593.96" h="0" z="329.945"/>
 	</spawn>
-	Protector Pahraza (Monster Elite lvl:55)
+	<!--Protector Pahraza (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216175" pool="1" rw="5">
 		<object x="1434.53" y="1584.14" h="0" z="305.825"/>
 	</spawn>
-	Gatekeeper Rhapsharr (Monster Elite lvl:55)
+	<!--Gatekeeper Rhapsharr (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216173" pool="1" rw="5">
 		<object x="1546.5916" y="1471.214" h="84" z="300.33008"/>
 	</spawn>
-	Gatekeeper Samarrn (Monster Elite lvl:55)
+	<!--Gatekeeper Samarrn (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216172" pool="1" rw="5">
 		<object x="1494.27" y="1362.55" h="0" z="307.793"/>
 	</spawn>
-	Gatekeeper Kutarrun (Monster Elite lvl:55)
+	<!--Gatekeeper Kutarrun (Monster Elite lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216171" pool="1" rw="5">
 		<object x="1403.51" y="1475.79" h="98" z="307.793"/>
 	</spawn>	
-	Macunbello (Monster Hero lvl:55)
+	<!--Macunbello (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216735" pool="1">
 		<object x="981.015" y="134.373" h="0" z="241.755"/>
 	</spawn>
-	Thurzon the Undying (Monster Hero lvl:55)
+	<!--Thurzon the Undying (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216525" pool="1" rw="5">
 		<object x="1398.88" y="532.729" h="0" z="241.232"/>
 	</spawn>
-	Prison Of Ice
+	<!-- Prison Of Ice -->
 	<spawn map="300170000" npcid="730275" pool="1" interval="295">
 		<object x="1611.1266" y="1604.6935" z="311.78503" h="17"/>
 	</spawn>
-     -->
 	<!-- IDCatacome_SensoryArea_Q20025 (Monster Normal lvl:55) -->
 	<spawn map="300170000" npcid="206109" pool="1" interval="295" rw="10">
 		<object x="1355.42" y="119.871" h="0" z="246.272"/>

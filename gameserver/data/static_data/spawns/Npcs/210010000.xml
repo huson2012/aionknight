@@ -92,7 +92,7 @@
 	</spawn>
 	<!-- Fredge (NPC Normal lvl:20)-->
 	<spawn map="210010000" npcid="203078" pool="1" interval="295">
-		<object x="563.46" y="1396.6" z="114.28" h="26" w="111"/>
+		<object x="563.46" y="1396.6" z="114.28" h="26" w="201"/>
 	</spawn>
 	<!-- Fulla (NPC Elite lvl:45)-->
 	<spawn map="210010000" npcid="203064" pool="1" interval="295">
@@ -239,7 +239,7 @@
 	</spawn>
 	<!-- Nier (NPC Normal lvl:20)-->
 	<spawn map="210010000" npcid="203077" pool="1" interval="295">
-		<object x="562.69" y="1395.5" z="114.61" h="27" w="111"/>
+		<object x="562.69" y="1395.5" z="114.61" h="27" w="112"/>
 	</spawn>
 	<!-- Obelisk Melponeh Campsite (Object Normal lvl:3)-->
 	<spawn map="210010000" npcid="700014" pool="1" interval="295">
@@ -342,7 +342,7 @@
 	</spawn>
 	<!-- Toleo (NPC Normal lvl:20)-->
 	<spawn map="210010000" npcid="203066" pool="1" interval="295">
-		<object x="814.7258" y="1217.3505" z="117.126656" h="41" w="112"/>
+		<object x="814.7258" y="1217.3505" z="117.126656" h="41" w="111"/>
 	</spawn>
 	<!-- Tula (NPC Normal lvl:20)-->
 	<spawn map="210010000" npcid="203082" pool="1" interval="295">

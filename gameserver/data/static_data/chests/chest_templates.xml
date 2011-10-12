@@ -18,8 +18,29 @@ xsi:noNamespaceSchemaLocation="chests_template.xsd">
     </chest>
 	<chest npcid="217105">
         <keyitem id="1" itemid="0" quantity="1"/>
+   </chest>
+	<chest npcid="217734">
+        <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
-    <!-- INSTANCES -->
+    <chest npcid="217756">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<chest npcid="217735">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<chest npcid="217757">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<chest npcid="217736">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<chest npcid="217758">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<chest npcid="217759">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<!-- INSTANCES -->
 	<chest npcid="700853">
         <keyitem id="1" itemid="185000103" quantity="1"/>
         <keyitem id="2" itemid="185000107" quantity="3"/>

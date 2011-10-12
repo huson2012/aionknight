@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--	
+	Arena
+ -->
+<spawns>
+<!-- shugo that starts the event -->
+   <spawn interval="295" map="300300000" npcid="799567" pool="1">
+      <object h="0" x="345.25" y="349.40" z="96.09"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="799573" pool="1">
+      <object h="0" x="382.18" y="355.31" z="96.74"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="205426" pool="1">
+      <object h="0" x="1253.73" y="830.22" z="358.60"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="205427" pool="1">
+      <object h="0" x="1596.69" y="147.50" z="128.87"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="205428" pool="1">
+      <object h="0" x="1818.39" y="800.33" z="470.125"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="205429" pool="1">
+      <object h="0" x="1782.73" y="1726.67" z="304.04"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="205430" pool="1">
+      <object h="0" x="1356.76" y="1754.51" z="319.42"/>
+   </spawn>
+   <spawn interval="295" map="300300000" npcid="205431" pool="1">
+      <object h="0" x="1750.59" y="1252.53" z="394.23"/>
+   </spawn>
+</spawns>
