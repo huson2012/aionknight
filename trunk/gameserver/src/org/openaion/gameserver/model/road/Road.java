@@ -22,12 +22,10 @@
 */
 
 package org.openaion.gameserver.model.road;
-
-import org.openaion.gameserver.ai.AI;
+ 
 import org.openaion.gameserver.ai.npcai.DummyAi;
 import org.openaion.gameserver.controllers.RoadController;
 import org.openaion.gameserver.model.gameobjects.Creature;
-import org.openaion.gameserver.model.templates.road.RoadPoint;
 import org.openaion.gameserver.model.templates.road.RoadTemplate;
 import org.openaion.gameserver.model.utils3d.Plane3D;
 import org.openaion.gameserver.model.utils3d.Point3D;
@@ -35,65 +33,54 @@ import org.openaion.gameserver.utils.idfactory.IDFactory;
 import org.openaion.gameserver.world.RoadKnownList;
 import org.openaion.gameserver.world.World;
 
-public class Road extends Creature
-{
+public class Road extends Creature {
+	private RoadTemplate template = null;
+	private String name = null;
+	private Plane3D plane = null;
+	private Point3D center = null;
+	private Point3D p1 = null;
+	private Point3D p2 = null;
 
-    public Road(RoadTemplate roadtemplate)
-    {
-        super(IDFactory.getInstance().nextId(), new RoadController(), null, null, World.getInstance().createPosition(roadtemplate.getMap(), roadtemplate.getCenter().getX(), roadtemplate.getCenter().getY(), roadtemplate.getCenter().getZ(), (byte)0));
-        template = null;
-        name = null;
-        plane = null;
-        center = null;
-        p1 = null;
-        p2 = null;
-        ((RoadController)getController()).setOwner(this);
-        template = roadtemplate;
-        name = roadtemplate.getName() != null ? roadtemplate.getName() : "ROAD";
-        center = new Point3D(roadtemplate.getCenter().getX(), roadtemplate.getCenter().getY(), roadtemplate.getCenter().getZ());
-        p1 = new Point3D(roadtemplate.getP1().getX(), roadtemplate.getP1().getY(), roadtemplate.getP1().getZ());
-        p2 = new Point3D(roadtemplate.getP2().getX(), roadtemplate.getP2().getY(), roadtemplate.getP2().getZ());
-        plane = new Plane3D(center, p1, p2);
-        setKnownlist(new RoadKnownList(this));
-    }
+  public Road(RoadTemplate template) {
+		super(IDFactory.getInstance().nextId(), new RoadController(), null, null, World.getInstance().createPosition(template.getMap(), template.getCenter().getX(), template.getCenter().getY(), template.getCenter().getZ(), (byte)  0));
 
-    public Plane3D getPlane()
-    {
-        return plane;
-    }
+		((RoadController)getController()).setOwner(this);
+		this.template = template;
+		this.name = (template.getName() == null ? "ROAD" : template.getName());
+		this.center = new Point3D(template.getCenter().getX(), template.getCenter().getY(), template.getCenter().getZ());
+		this.p1 = new Point3D(template.getP1().getX(), template.getP1().getY(), template.getP1().getZ());
+		this.p2 = new Point3D(template.getP2().getX(), template.getP2().getY(), template.getP2().getZ());
+		this.plane = new Plane3D(center, p1, p2);
+		setKnownlist(new RoadKnownList(this));
+	}
 
-    public RoadTemplate getTemplate()
-    {
-        return template;
-    }
+	public Plane3D getPlane() {
+		return plane;
+	}
 
-    public String getName()
-    {
-        return name;
-    }
+	public RoadTemplate getTemplate() {
+		return template;
+	}
 
-    public byte getLevel()
-    {
-        return 0;
-    }
+	@Override
+	public String getName() {
+		return name;
+	}
 
-    public void initializeAi()
-    {
-        ai = new DummyAi();
-        ai.setOwner(this);
-    }
+    @Override
+	public byte getLevel() {
+		return 0;
+	}
 
-    public void spawn()
-    {
-        World world = World.getInstance();
-        world.storeObject(this);
-        world.spawn(this);
-    }
+    @Override
+	public void initializeAi() {
+		ai = new DummyAi();
+		ai.setOwner(this);
+	}
 
-    private RoadTemplate template;
-    private String name;
-    private Plane3D plane;
-    private Point3D center;
-    private Point3D p1;
-    private Point3D p2;
+	public void spawn() {
+		World w = World.getInstance();
+		w.storeObject(this);
+		w.spawn(this);
+	}
 }

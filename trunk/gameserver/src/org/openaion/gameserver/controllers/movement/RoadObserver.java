@@ -24,81 +24,77 @@
 package org.openaion.gameserver.controllers.movement;
 
 import java.util.Random;
+
 import org.openaion.gameserver.configs.administration.AdminConfig;
 import org.openaion.gameserver.model.Race;
 import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.player.PlayerCommonData;
 import org.openaion.gameserver.model.road.Road;
 import org.openaion.gameserver.model.templates.road.RoadExit;
-import org.openaion.gameserver.model.templates.road.RoadTemplate;
-import org.openaion.gameserver.model.utils3d.Plane3D;
 import org.openaion.gameserver.model.utils3d.Point3D;
 import org.openaion.gameserver.services.TeleportService;
 import org.openaion.gameserver.utils.MathUtil;
 import org.openaion.gameserver.utils.PacketSendUtility;
 import org.openaion.gameserver.world.WorldType;
 
-// Referenced classes of package org.openaion.gameserver.controllers.movement:
-//            ActionObserver
+public class RoadObserver extends ActionObserver {
+	private Player player;
+	private Road road;
+	private Point3D oldPosition;
+	private Random random;
 
-public class RoadObserver extends ActionObserver
-{
+	public RoadObserver() {
+		super(ObserverType.MOVE);
+		this.player = null;
+		this.road = null;
+		this.oldPosition = null;
+		this.random = null;
+	}
 
-    public RoadObserver()
-    {
-        super(ActionObserver.ObserverType.MOVE);
-        player = null;
-        road = null;
-        oldPosition = null;
-        random = null;
-    }
+	public RoadObserver(Road road, Player player) {
+		super(ObserverType.MOVE);
+		this.player = player;
+		this.road = road;
+		this.oldPosition = new Point3D(player.getX(), player.getY(), player.getZ());
+		this.random = new Random();
+	}
 
-    public RoadObserver(Road road1, Player player1)
-    {
-        super(ActionObserver.ObserverType.MOVE);
-        player = player1;
-        road = road1;
-        oldPosition = new Point3D(player1.getX(), player1.getY(), player1.getZ());
-        random = new Random();
-    }
+	@Override
+	public void moved() {
+		Point3D newPosition = new Point3D(player.getX(), player.getY(), player.getZ());
+		boolean passedThrough = false;
 
-    public void moved()
-    {
-        Point3D point3d = new Point3D(player.getX(), player.getY(), player.getZ());
-        boolean flag = false;
-        if(road.getPlane().intersect(oldPosition, point3d))
-        {
-            Point3D point3d1 = road.getPlane().intersection(oldPosition, point3d);
-            if(point3d1 != null)
-            {
-                double d = Math.abs(road.getPlane().getCenter().distance(point3d1));
-                if(d < (double)road.getTemplate().getRadius())
-                    flag = true;
-            } else
-            {
-                if(!MathUtil.isIn3dRange(road, player, road.getTemplate().getRadius()));
-                flag = true;
-            }
-        }
-        if(flag)
-        {
-            if(player.getAccessLevel() >= AdminConfig.COMMAND_ROAD)
-                PacketSendUtility.sendMessage(player, (new StringBuilder()).append("You passed through ").append(road.getName()).append(" Road .").toString());
-            RoadExit roadexit = road.getTemplate().getRoadExit();
-            WorldType worldtype = player.getWorldType();
-            if(worldtype == WorldType.ELYSEA)
-            {
-                if(player.getCommonData().getRace() == Race.ELYOS)
-                    TeleportService.teleportTo(player, roadexit.getMap(), roadexit.getX(), roadexit.getY(), roadexit.getZ(), 0);
-            } else
-            if(worldtype == WorldType.ASMODAE && player.getCommonData().getRace() == Race.ASMODIANS)
-                TeleportService.teleportTo(player, roadexit.getMap(), roadexit.getX(), roadexit.getY(), roadexit.getZ(), 0);
-        }
-        oldPosition = point3d;
-    }
+		if (road.getPlane().intersect(oldPosition, newPosition)) {
+			Point3D intersectionPoint = road.getPlane().intersection(oldPosition, newPosition);
+			if (intersectionPoint != null) {
+				double distance = Math.abs(road.getPlane().getCenter().distance(intersectionPoint));
 
-    private Player player;
-    private Road road;
-    private Point3D oldPosition;
-    private Random random;
+				if (distance < road.getTemplate().getRadius()) {
+					passedThrough = true;
+				}
+			} else {
+			if (MathUtil.isIn3dRange(road, player, road.getTemplate().getRadius()));
+				passedThrough = true;
+			}
+		}
+
+		if (passedThrough) {
+			if (player.getAccessLevel() >= AdminConfig.COMMAND_ROAD) {
+				PacketSendUtility.sendMessage(player, "You went on the road " + road.getName() + ".");
+			}
+
+			RoadExit exit = road.getTemplate().getRoadExit();
+
+			WorldType type = player.getWorldType();
+			if (type == WorldType.ELYSEA) {
+				if (player.getCommonData().getRace() == Race.ELYOS) {
+					TeleportService.teleportTo(player, exit.getMap(), exit.getX(), exit.getY(), exit.getZ(), 0);
+				}
+			} else if (type == WorldType.ASMODAE) {
+				if (player.getCommonData().getRace() == Race.ASMODIANS) {
+					TeleportService.teleportTo(player, exit.getMap(), exit.getX(), exit.getY(), exit.getZ(), 0);
+				}
+			}
+		}
+		oldPosition = newPosition;
+	}
 }

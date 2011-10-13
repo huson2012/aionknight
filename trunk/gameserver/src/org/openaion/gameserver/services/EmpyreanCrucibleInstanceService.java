@@ -1,7 +1,6 @@
 package org.openaion.gameserver.services;
 
 import org.openaion.gameserver.model.gameobjects.Monster;
-import org.openaion.gameserver.model.gameobjects.Npc;
 import org.openaion.gameserver.model.gameobjects.VisibleObject;
 import org.openaion.gameserver.model.group.PlayerGroup;
 import org.openaion.gameserver.model.templates.spawn.SpawnTemplate;
@@ -61,7 +60,7 @@ public class EmpyreanCrucibleInstanceService
             SpawnEngine.getInstance().spawnObject(AdministratorArminos, group.getGroupLeader().getInstanceId());
         }
 		
-		// round7 kill  Béhémoth de la Montagne rocheuse go round8
+		// round7 kill  Bï¿½hï¿½moth de la Montagne rocheuse go round8
         if(monster.getObjectTemplate().getTemplateId() == 217598) {
             SpawnTemplate Andre;
             Andre = SpawnEngine.getInstance().addNewSpawn(300300000, group.getGroupLeader().getInstanceId(), 217594, 1625.8f, 148.939f, 126.0f, (byte)15, 0, 0, true);
@@ -75,7 +74,7 @@ public class EmpyreanCrucibleInstanceService
             SpawnEngine.getInstance().spawnObject(CrabNorris, group.getGroupLeader().getInstanceId());
         }
 		
-		// round9 kill Ingénieur Lahulahu et parler a l'assistant administrateur go round10
+		// round9 kill Ingï¿½nieur Lahulahu et parler a l'assistant administrateur go round10
         if(monster.getObjectTemplate().getTemplateId() == 217554) {
             SpawnTemplate Ingenieur;
             Ingenieur = SpawnEngine.getInstance().addNewSpawn(300300000, group.getGroupLeader().getInstanceId(), 205506, 1625.8f, 148.939f, 126.0f, (byte)15, 0, 0, true);
