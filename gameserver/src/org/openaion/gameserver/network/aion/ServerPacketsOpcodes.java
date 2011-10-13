@@ -265,7 +265,6 @@ public class ServerPacketsOpcodes
         addPacketOpcode(SM_STATS_INFO.class,0xFE, idSet);
         addPacketOpcode(SM_VERSION_CHECK.class,0xFF, idSet);
         addPacketOpcode(SM_CUSTOM_PACKET.class,99999, idSet);// fake packet
-		addPacketOpcode(SM_ACADEMY_BOOTCAMP_STAGE.class,0xAB, idSet);//academy
 	}
 	
 	private void initPacketsFor_1_9()

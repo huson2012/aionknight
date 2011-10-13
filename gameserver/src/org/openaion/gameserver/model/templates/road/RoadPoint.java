@@ -22,39 +22,44 @@
 */
 
 package org.openaion.gameserver.model.templates.road;
-
+     
 import org.openaion.gameserver.model.utils3d.Point3D;
-
-public class RoadPoint
-{
-
-    public float getX()
-    {
-        return x;
-    }
-
-    public float getY()
-    {
-        return y;
-    }
-
-    public float getZ()
-    {
-        return z;
-    }
-
-    public RoadPoint()
-    {
-    }
-
-    public RoadPoint(Point3D point3d)
-    {
-        x = (float)point3d.x;
-        y = (float)point3d.y;
-        z = (float)point3d.z;
-    }
-
-    private float x;
-    private float y;
-    private float z;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+     
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name="RoadPoint")
+public class RoadPoint {
+     
+	@XmlAttribute(name="x")
+	private float x;
+		 
+	@XmlAttribute(name="y")
+	private float y;
+		 
+	@XmlAttribute(name="z")
+	private float z;
+		 
+	public float getX() {
+		return x;
+	}
+     
+	public float getY() {
+		return y;
+	}
+     
+	public float getZ() {
+		return z;
+	}
+	
+	public RoadPoint() {
+	}
+     
+	public RoadPoint(Point3D p) {
+		x = (float) p.x;
+		y = (float) p.y;
+		z = (float) p.z;
+	}
 }

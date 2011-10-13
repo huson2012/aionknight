@@ -15,49 +15,37 @@
  * along with Aion-Knight Emu.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.openaion.gameserver.services;
-
-import java.util.Iterator;
-import java.util.List;
-import org.apache.log4j.Logger;
+/*
+ * author^
+ * Fr0st;
+ * Mr.Chayka.
+*/
+ 
+ package org.openaion.gameserver.services;
+     
 import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.dataholders.RoadData;
 import org.openaion.gameserver.model.road.Road;
 import org.openaion.gameserver.model.templates.road.RoadTemplate;
-
-public class RoadService
-{
-    private static class SingletonHolder
-    {
-
-        protected static final RoadService instance = new RoadService();
-
-
-        private SingletonHolder()
-        {
-        }
+import org.apache.log4j.Logger;
+     
+public class RoadService {
+	Logger log = Logger.getLogger(RoadService.class);
+     
+    private static class SingletonHolder {
+		protected static final RoadService instance = new RoadService();
     }
 
-
-    public static final RoadService getInstance()
-    {
-        return SingletonHolder.instance;
-    }
-
-    private RoadService()
-    {
-        log = Logger.getLogger(RoadService.class);
-        Road road;
-        for(Iterator iterator = DataManager.ROAD_DATA.getRoadTemplates().iterator(); iterator.hasNext(); log.debug((new StringBuilder()).append("Added ").append(road.getName()).append(" at m=").append(road.getWorldId()).append(",x=").append(road.getX()).append(",y=").append(road.getY()).append(",z=").append(road.getZ()).toString()))
-        {
-            RoadTemplate roadtemplate = (RoadTemplate)iterator.next();
-            road = new Road(roadtemplate);
-            road.spawn();
-        }
-
-        log.info("RoadService: Loaded!");
-    }
-
-
-    Logger log;
+	public static final RoadService getInstance()
+       {
+		return SingletonHolder.instance;
+	}
+     
+	private RoadService()
+       {
+		for (RoadTemplate rt : DataManager.ROAD_DATA.getRoadTemplates()) {
+			Road r = new Road(rt);
+			r.spawn();
+			log.debug("Added " + r.getName() + " at m=" + r.getWorldId() + ",x=" + r.getX() + ",y=" + r.getY() + ",z=" + r.getZ());
+		}
+	}
 }

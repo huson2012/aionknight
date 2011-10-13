@@ -15,27 +15,29 @@
  * along with Aion-Knight Emu.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+ /*
+ * author^
+ * Fr0st;
+ * Mr.Chayka.
+*/
+ 
 package org.openaion.gameserver.world;
-
+     
 import org.openaion.gameserver.model.gameobjects.VisibleObject;
 import org.openaion.gameserver.model.road.Road;
-import org.openaion.gameserver.model.templates.road.RoadTemplate;
 import org.openaion.gameserver.utils.MathUtil;
-
-// Referenced classes of package org.openaion.gameserver.world:
-//            KnownList
-
-public class RoadKnownList extends KnownList
-{
-
-    public RoadKnownList(VisibleObject visibleobject)
-    {
-        super(visibleobject);
-    }
-
-    protected boolean checkObjectInRange(VisibleObject visibleobject, VisibleObject visibleobject1)
-    {
-        Road road = (Road)visibleobject;
-        return MathUtil.isIn3dRange(visibleobject, visibleobject1, road.getTemplate().getRadius() * 2.0F);
-    }
+     
+public class RoadKnownList extends KnownList {
+	public RoadKnownList(VisibleObject owner) {
+		super(owner);
+	}
+     
+	@Override
+	protected boolean checkObjectInRange(VisibleObject owner, VisibleObject newObject) {
+		Road r = (Road)owner;
+		if (MathUtil.isIn3dRange(owner, newObject, r.getTemplate().getRadius() * 2)) {
+			return true;
+		}
+		return false;
+	}
 }

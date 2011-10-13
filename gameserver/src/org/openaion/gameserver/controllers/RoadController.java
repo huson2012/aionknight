@@ -23,56 +23,40 @@
 
 package org.openaion.gameserver.controllers;
 
-import javolution.util.FastMap;
-import org.apache.log4j.Logger;
 import org.openaion.gameserver.controllers.movement.RoadObserver;
-import org.openaion.gameserver.model.gameobjects.Creature;
 import org.openaion.gameserver.model.gameobjects.VisibleObject;
 import org.openaion.gameserver.model.gameobjects.player.Player;
 import org.openaion.gameserver.model.road.Road;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
 
-// Referenced classes of package org.openaion.gameserver.controllers:
-//            CreatureController, ObserveController
+	public class RoadController extends CreatureController<Road> {
+		FastMap<Player, RoadObserver> observed = new FastMap<Player, RoadObserver>().shared();
 
-public class RoadController extends CreatureController
-{
+	@Override
+	public void see(VisibleObject object) {
+		super.see(object);
 
-    public RoadController()
-    {
-        observed = new FastMap();
-        log = Logger.getLogger(RoadController.class);
-    }
+		if (!(object instanceof Player)) {
+			return;
+		}
 
-    public void see(VisibleObject visibleobject)
-    {
-        super.see(visibleobject);
-        if(!(visibleobject instanceof Player))
-        {
-            return;
-        } else
-        {
-            Player player = (Player)visibleobject;
-            RoadObserver roadobserver = new RoadObserver((Road)getOwner(), player);
-            player.getObserveController().addObserver(roadobserver);
-            observed.put(player, roadobserver);
-            log.debug((new StringBuilder()).append(((Creature)getOwner()).getName()).append(" sees ").append(player.getName()).toString());
-            return;
-        }
-    }
+		Player p = (Player)object;
+		RoadObserver observer = new RoadObserver((Road)getOwner(), p);
+		p.getObserveController().addObserver(observer);
+		observed.put(p, observer);
+		Logger.getLogger(RoadController.class).debug(getOwner().getName() + " sees " + p.getName());
+	}
 
-    public void notSee(VisibleObject visibleobject, boolean flag)
-    {
-        super.notSee(visibleobject, flag);
-        if(flag && (visibleobject instanceof Player))
-        {
-            Player player = (Player)visibleobject;
-            RoadObserver roadobserver = (RoadObserver)observed.remove(player);
-            roadobserver.moved();
-            player.getObserveController().removeObserver(roadobserver);
-            log.debug((new StringBuilder()).append(((Creature)getOwner()).getName()).append(" not sees ").append(player.getName()).toString());
-        }
-    }
-
-    FastMap observed;
-    private Logger log;
+	@Override
+	public void notSee(VisibleObject object, boolean isOutOfRange) {
+		super.notSee(object, isOutOfRange);
+		if ((isOutOfRange) && ((object instanceof Player))) {
+			Player p = (Player)object;
+			RoadObserver observer = observed.remove(p);
+			observer.moved();
+			p.getObserveController().removeObserver(observer);
+			Logger.getLogger(RoadController.class).debug(getOwner().getName() + " not sees " + p.getName());
+		}
+	}
 }
