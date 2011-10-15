@@ -69,8 +69,6 @@ public class WorldPosition
 	 */
 	public int getMapId()
 	{
-		if (mapId == 0)
-			log.warn("WorldPosition has (mapId == 0) " + this.toString());
 		return mapId;
 	}
 
