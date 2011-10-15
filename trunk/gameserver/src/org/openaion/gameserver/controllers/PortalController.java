@@ -52,7 +52,6 @@ import org.openaion.gameserver.world.World;
 import org.openaion.gameserver.world.WorldMap;
 import org.openaion.gameserver.world.WorldMapInstance;
 import org.openaion.gameserver.model.templates.portal.EntryPoint;
-import org.openaion.gameserver.services.AcademyBootcampService;
 
 
 
@@ -225,11 +224,6 @@ public class PortalController extends NpcController
 							
 							setInstanceCooldown(player, worldId, instance.getInstanceId());
 							transfer(player, instance);
-							return;
-						}
-						else if(worldId == 300300000)
-						{
-							AcademyBootcampService.getInstance().TeleportPlayerToCurrentStage(player);
 							return;
 						}
 						if(checkInstanceCooldown(player, worldId, instance.getInstanceId()))
