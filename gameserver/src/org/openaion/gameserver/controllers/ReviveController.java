@@ -37,7 +37,6 @@ import org.openaion.gameserver.skill.effect.RebirthEffect;
 import org.openaion.gameserver.skill.model.Effect;
 import org.openaion.gameserver.skill.model.SkillTemplate;
 import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.services.AcademyBootcampService;
 
 
 /**
@@ -139,10 +138,6 @@ public class ReviveController
 				player.getEffectController().removeAllEffects();
 				player.getLifeStats().setCurrentHpPercent(100);
 				player.getLifeStats().setCurrentMpPercent(100);
-			}
-			else if(AcademyBootcampService.isAcademyBootcamp(mapId))
-			{
-				TeleportService.teleportToInstanceExit(player, mapId, instanceId, 0);
 			}
 			else
 			{
