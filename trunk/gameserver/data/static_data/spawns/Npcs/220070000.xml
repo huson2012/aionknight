@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by Nephis (Nephis) -->
-<!--
-	This file is part of Zetta Core
 
-	aion-unique is free software: you can redistribute it and/or modify
+<!--
+
+	This file is part of Aion-Knight Dev. Team
+
+	Aion-Knight is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
 
-	aion-unique is distributed in the hope that it will be useful,
+	Aion-Knight is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
@@ -17,25 +18,52 @@
 	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
 	
 	Gelkmaros
-	@author Nephis From client/Retail Spawn
+
  -->
-<spawns>
+
+ <spawns>
 	<spawn map="220070000" npcid="799376" pool="1" interval="295">
 		<object x="1139.1436" y="1620.306" z="51.375" h="77"/>
 	</spawn>
 	<spawn map="220070000" npcid="205322" pool="1" interval="295">
 		<object x="1757.83" y="2961.52" z="554.866" h="11"/>
 	</spawn>
-	<spawn interval="295" map="220070000" npcid="730355" pool="1">
+	<spawn map="220070000" npcid="730355" pool="1" interval="295">
 		<object staticid="2774" x="95.994461" y="1816.0015" z="429.50076" h="0"/>
 	</spawn>
 	<!-- Ightris -->
-	<spawn interval="295" map="220070000" npcid="799242" pool="1">
+	<spawn map="220070000" npcid="799242" pool="1" interval="295">
 		<object x="1769.93" y="2828.55" z="554.979" h="38"/>
 	</spawn>
 	<!-- Baletti -->
-	<spawn interval="295" map="220070000" npcid="205298" pool="1">
+	<spawn map="220070000" npcid="205298" pool="1" interval="295">
 		<object x="1814.42" y="2852.06" z="536.205" h="8"/>
+	</spawn>
+	<!-- Marayas Relic -->
+	<spawn map="220070000" npcid="700726" pool="23" interval="295">
+		<object h="0" staticid="693" x="1924.1733" y="1917.3776" z="399.9377"/>
+		<object h="0" staticid="55" x="1917.4015" y="1942.5308" z="399.9377"/>
+		<object h="0" staticid="549" x="1947.9832" y="1883.7968" z="398.375"/>
+		<object h="0" staticid="674" x="1892.4269" y="1935.4906" z="396.125"/>
+		<object h="0" staticid="1227" x="1898.027" y="1856.9612" z="397.57898"/>
+		<object h="0" staticid="487" x="1881.1451" y="1901.1105" z="396.265"/>
+		<object h="0" staticid="682" x="1860.776" y="1875.1974" z="397.51752"/>
+		<object h="0" staticid="560" x="1861.5531" y="1888.1765" z="397.51752"/>
+		<object h="0" staticid="1059" x="1879.552" y="1852.8562" z="397.0"/>
+		<object h="0" staticid="690" x="1842.1619" y="1889.0037" z="396.375"/>
+		<object h="0" staticid="1441" x="1759.1901" y="1927.8124" z="396.3396"/>
+		<object h="0" staticid="691" x="1745.3834" y="1939.5297" z="396.3396"/>
+		<object h="0" staticid="666" x="1759.8931" y="1958.7482" z="394.33243"/>
+		<object h="0" staticid="558" x="1758.5853" y="1967.9285" z="394.16028"/>
+		<object h="0" staticid="484" x="1759.5604" y="1918.5099" z="396.3396"/>
+		<object h="0" staticid="1439" x="1736.9115" y="1939.5386" z="396.3396"/>
+		<object h="0" staticid="730" x="1766.692" y="2004.476" z="394.3393"/>
+		<object h="0" staticid="698" x="1723.0385" y="1928.302" z="396.3396"/>
+		<object h="0" staticid="741" x="1717.5502" y="1962.8503" z="394.125"/>
+		<object h="0" staticid="1173" x="1732.992" y="1982.1361" z="394.71255"/>
+		<object h="0" staticid="1440" x="1722.7267" y="1919.3121" z="396.3396"/>
+		<object h="0" staticid="1233" x="1719.1842" y="2003.0388" z="394.71255"/>
+		<object h="0" staticid="547" x="1743.8964" y="2016.1483" z="394.44968"/>
 	</spawn>
 	<spawn map="220070000" npcid="700751" pool="6" interval="295">
 		<object staticid="770" x="559.52002" y="1315.3243" z="278.10788" h="0"/>
@@ -1309,9 +1337,9 @@
 		<object x="1419.5447" y="2099.5276" z="364.81265" h="90" staticid="706" />
 	</spawn>
 	 <!-- Rift Asmo -->
-  <spawn map="220070000" npcid="700138" pool="1" interval="295">
-  <object x="1807.01" y="1091.45" z="327.56" h="0"/>
-  </spawn>
+	<spawn map="220070000" npcid="700138" pool="1" interval="295">
+		<object x="1807.01" y="1091.45" z="327.56" h="0"/>
+	</spawn>
 	<!-- Denil -->
 	<spawn map="220070000" npcid="799957" pool="1" interval="390">
 		<object x="1893.12" y="2890.7" z="554.979" h="68"/>

@@ -16,8 +16,6 @@
  */
 package quest.inggison;
 
-import java.util.Collections;
-
 import org.openaion.gameserver.controllers.PortalController;
 import org.openaion.gameserver.dataholders.DataManager;
 import org.openaion.gameserver.model.gameobjects.Item;
@@ -43,25 +41,27 @@ import org.openaion.gameserver.utils.PacketSendUtility;
 import org.openaion.gameserver.utils.ThreadPoolManager;
 import org.openaion.gameserver.world.WorldMapInstance;
 
+import java.util.Collections;
 
 /**
- * @author Nephis, modified Vincas and Rolandas
+ * @author Dex
  *
  */
+
 public class _10021FriendsforLife extends QuestHandler
 {
+    private final static int    questId = 10021;
+    private final static int[]  npc_ids = { 798927, 798954, 799022, 730008, 730019, 730024 };
 
-	private final static int	questId	= 10021;
-	private final static int[]	npc_ids	= { 798927, 798954, 799022, 730008, 730019, 730024 };
+    public _10021FriendsforLife()
+    {
+        super(questId);
+    }
 
-	public _10021FriendsforLife()
-	{
-		super(questId);
-	}
-
-	@Override
-	public void register()
-	{
+    @Override
+    public void register()
+    {
+		qe.addOnEnterWorld(questId);
 		qe.addQuestLvlUp(questId);
 		qe.setNpcQuestData(215523).addOnKillEvent(questId);
 		qe.setNpcQuestData(215522).addOnKillEvent(questId);
@@ -69,12 +69,35 @@ public class _10021FriendsforLife extends QuestHandler
 		qe.setNpcQuestData(215521).addOnKillEvent(questId);
 		qe.setQuestItemIds(182206627).add(questId);
 		qe.setQuestItemIds(182206628).add(questId);
+		qe.setQuestItemIds(164000137).add(questId);
+		qe.setQuestItemIds(164000138).add(questId);
+		qe.setQuestItemIds(164000139).add(questId);
 		for(int npc_id : npc_ids)
 			qe.setNpcQuestData(npc_id).addOnTalkEvent(questId);
 	}
 
-
-
+	@Override
+	public boolean onEnterWorldEvent(QuestCookie env)
+	{
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null)
+			return false;
+		
+		if(qs.getStatus() == QuestStatus.START || qs.getStatus() == QuestStatus.COMPLETE)
+		{
+			if(player.getWorldId() != 300190000)
+			{
+				player.getInventory().removeFromBagByItemId(182206627, 1);
+				player.getInventory().removeFromBagByItemId(182206628, 1);
+				player.getInventory().removeFromBagByItemId(164000137, 1);
+				player.getInventory().removeFromBagByItemId(164000138, 1);
+				player.getInventory().removeFromBagByItemId(164000139, 1);
+			}
+		}
+		return false;
+	}
+	
 	@Override
 	public boolean onKillEvent(QuestCookie env)
 	{
@@ -95,7 +118,24 @@ public class _10021FriendsforLife extends QuestHandler
 					updateQuestStatus(env);
 					return true;
 				}
+				break;
+			case 215488:
+				if(qs.getQuestVarById(0) == 7)
+				{
+					@SuppressWarnings("unused")
+					final int instanceId = player.getInstanceId();
+					QuestService.addNewSpawn(300190000, player.getInstanceId(), 799503, (float) 566.1413, (float) 813.3888, (float) 1375.138, (byte) 32, true);
+					return true;
+				} 
+				else if(qs != null && qs.getStatus() == QuestStatus.COMPLETE)
+				{
+					@SuppressWarnings("unused")
+					final int instanceId = player.getInstanceId();
+					QuestService.addNewSpawn(300190000, player.getInstanceId(), 799503, (float) 566.1413, (float) 813.3888, (float) 1375.138, (byte) 32, true);
+					return true;
+				} 
 		}
+		
 		return false;
     }
 
@@ -108,7 +148,7 @@ public class _10021FriendsforLife extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int var = qs.getQuestVarById(0);
 
-		if (id != 182206627 && id != 182206628)
+		if (id != 182206627 && id != 182206628 && id != 164000137 && id != 164000138 && id != 164000139)
 			return HandlerResult.UNKNOWN;
 
 		if(player.getWorldId() != 300190000)
@@ -120,6 +160,26 @@ public class _10021FriendsforLife extends QuestHandler
 			{
 				if (ItemService.canAddItems(player, Collections.singletonList(new QuestItems(182206628, 1))))
 					ItemService.addItem(player, 182206628, 1, 60 * 7200);
+			}
+			if (id == 182206627 && !hasItem(player, 182206627))
+			{
+				if (ItemService.canAddItems(player, Collections.singletonList(new QuestItems(182207604, 1))))
+					ItemService.addItem(player, 182206627, 1, 60 * 7200);
+			}
+			if (id == 164000137 && !hasItem(player, 164000137))
+			{
+				if (ItemService.canAddItems(player, Collections.singletonList(new QuestItems(164000137, 1))))
+					ItemService.addItem(player, 164000137, 1, 60 * 7200);
+			}
+			if (id == 164000138 && !hasItem(player, 164000138))
+			{
+				if (ItemService.canAddItems(player, Collections.singletonList(new QuestItems(164000138, 1))))
+					ItemService.addItem(player, 164000138, 1, 60 * 7200);
+			}
+			if (id == 164000139 && !hasItem(player, 164000139))
+			{
+				if (ItemService.canAddItems(player, Collections.singletonList(new QuestItems(164000139, 1))))
+					ItemService.addItem(player, 164000139, 1, 60 * 7200);
 			}
 			useSkill(player, item);
 		}
@@ -182,6 +242,22 @@ public class _10021FriendsforLife extends QuestHandler
 		int useDelay = item.getItemTemplate().getDelayTime();
 		player.addItemCoolDown(item.getItemTemplate().getDelayId(), System.currentTimeMillis() + useDelay, useDelay / 1000);
 
+		if (item.getItemId() == 182206627)
+		{
+			int skillId = 10251;
+			int level = 1;
+
+			Skill skill = SkillEngine.getInstance().getSkill(player, skillId, level, player.getTarget(), item.getItemTemplate());
+			if(skill != null)
+			{
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),
+				item.getObjectId(), item.getItemTemplate().getTemplateId()), true);
+			skill.useSkill();
+			}
+			return;
+		}
+		if (item.getItemId() == 182206628)
+		{
 		int skillId = item.getItemId() == 182206627 ? 10251 : 9831;
 		int level = item.getItemId() == 182206627 ? 1 : 4;
 
@@ -192,6 +268,50 @@ public class _10021FriendsforLife extends QuestHandler
 				item.getObjectId(), item.getItemTemplate().getTemplateId()), true);
 			skill.useSkill();
 		}
+			return;
+		}
+		else if (item.getItemId() == 164000137)
+		{
+			int skillId = 164000137 == 182207604 ? 10252 : 9832;
+			int level = item.getItemId() == 182207604 ? 1 : 4;
+
+			Skill skill = SkillEngine.getInstance().getSkill(player, skillId, level, player.getTarget(), item.getItemTemplate());
+			if(skill != null)
+			{
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),
+				item.getObjectId(), item.getItemTemplate().getTemplateId()), true);
+			skill.useSkill();
+			}
+			return;
+		}
+		else if (item.getItemId() == 164000138)
+		{
+			int skillId = 164000138 == 182207604 ? 10252 : 9833;
+			int level = item.getItemId() == 182207604 ? 1 : 4;
+
+			Skill skill = SkillEngine.getInstance().getSkill(player, skillId, level, player.getTarget(), item.getItemTemplate());
+			if(skill != null)
+			{
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),
+				item.getObjectId(), item.getItemTemplate().getTemplateId()), true);
+			skill.useSkill();
+			}
+			return;
+		}
+		else if (item.getItemId() == 164000139)
+		{
+			int skillId = 164000139 == 182207604 ? 10252 : 9834;
+			int level = item.getItemId() == 182207604 ? 1 : 4;
+
+			Skill skill = SkillEngine.getInstance().getSkill(player, skillId, level, player.getTarget(), item.getItemTemplate());
+			if(skill != null)
+			{
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),
+				item.getObjectId(), item.getItemTemplate().getTemplateId()), true);
+			skill.useSkill();
+			}
+			return;
+		}					
 	}
 
 	@Override
@@ -268,7 +388,7 @@ public class _10021FriendsforLife extends QuestHandler
 						}
 						WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(300190000);
 						InstanceService.registerPlayerWithInstance(newInstance, player);
-						TeleportService.teleportTo(player, 300190000, newInstance.getInstanceId(), 200.37132f, 213.762f, 1098.9293f, (byte) 35);
+						TeleportService.teleportTo(player, 300190000, newInstance.getInstanceId(), 198.82353f, 221.40387f, 1098.4879f, (byte) 41);
 						PortalController.setInstanceCooldown(player, 300190000, newInstance.getInstanceId());
 						return true;
 					}
@@ -278,6 +398,23 @@ public class _10021FriendsforLife extends QuestHandler
 				else
 					return defaultQuestStartDialog(env);
 			}
+		else if(targetId == 799503)
+		{
+			switch(env.getDialogId())
+			{
+				case 26:
+					if(var == 1)
+						return sendQuestDialog(env, 4080);
+				case 1013:
+				case 10000:
+					if(var == 1)
+					{
+						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 0));
+						TeleportService.teleportTo(player, 210050000, 2888.9226f, 359.70108f, 298.73184f, (byte) 56);
+						return true;
+					}
+			}
+		}
 		}
 		else if(qs.getStatus() != QuestStatus.START)
 		{
@@ -320,7 +457,7 @@ public class _10021FriendsforLife extends QuestHandler
 				case 10255:
 					if(var == 8)
 					{
-						qs.setStatus(QuestStatus.REWARD);
+						qs.setQuestVarById(0, 11);
 						updateQuestStatus(env);
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
@@ -334,7 +471,7 @@ public class _10021FriendsforLife extends QuestHandler
 				case -1:
 					if(var == 2)
 						return sendQuestDialog(env, 1779);
-					else if (var > 2 && var < 7)
+					else if (var > 2 && var < 3)
 						return sendQuestDialog(env, 2461);
 				break;
 				case 26:
@@ -357,15 +494,15 @@ public class _10021FriendsforLife extends QuestHandler
 				case 10002:
 					if(var == 14)
 					{
-						qs.setQuestVarById(0, 3);
+						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
+						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
+						return true;
 					}
-					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					return true;
 				case 10003:
 					if(var == 2)
 					{
-						qs.setQuestVarById(0, 11);
+						qs.setQuestVarById(0, var + 1);
 						updateQuestStatus(env);
 					}
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
@@ -398,7 +535,7 @@ public class _10021FriendsforLife extends QuestHandler
 							}
 							WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(300190000);
 							InstanceService.registerPlayerWithInstance(newInstance, player);
-							TeleportService.teleportTo(player, 300190000, newInstance.getInstanceId(), 663.20984f, 845.8575f, 1380.0017f, (byte) 25);
+							TeleportService.teleportTo(player, 300190000, newInstance.getInstanceId(), 198.82353f, 221.40387f, 1098.4879f, (byte) 41);
 							return true;
 						}
 						else
@@ -413,7 +550,7 @@ public class _10021FriendsforLife extends QuestHandler
 							player.getInventory().removeFromBagByItemId(164000099, itemCount);
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
-							//PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
+							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return sendQuestDialog(env, 10000);
 						}
 						else
@@ -442,7 +579,6 @@ public class _10021FriendsforLife extends QuestHandler
 					return sendQuestDialog(env, 3739);
 				case 10008:
 					qs.setQuestVarById(0, var + 1);
-
 					updateQuestStatus(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 					return true;

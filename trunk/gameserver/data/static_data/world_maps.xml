@@ -79,7 +79,7 @@
 	<map id="300260000" name="Ladis Forest" instance="true" instanceMapId="47" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300270000" name="Dorgel Manor" instance="true" instanceMapId="48" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300280000" name="Lentor Outpost" instance="true" instanceMapId="49" death_level="0" water_level="16" world_size="2048"/>
-	<map id="300300000" name="Empyrean Crucible" instance="true" instanceMapId="54" cooldown="10" death_level="0" water_level="16" world_size="1024"/>
+	<map id="300300000" name="Empyrean Crucible" instance="true" instanceMapId="54" cooldown="1320" death_level="0" water_level="16" world_size="1024"/>
 	<map id="300310000" name="Tahmes" instance="true" instanceMapId="156" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300240000" name="IDStation" instance="true" instanceMapId="147" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300250000" name="IDF4Re_Drana" instance="true" instanceMapId="148" death_level="0" water_level="16" world_size="2048"/>
@@ -87,7 +87,7 @@
 	<map id="300270000" name="IDElemental_2" instance="true" instanceMapId="150" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300280000" name="IDYun" instance="true" instanceMapId="151" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300290000" name="Test_MRT_IDZone" instance="true" instanceMapId="152" death_level="0" water_level="16" world_size="2048"/>
-	<map id="300300000" name="IDArena" instance="true" instanceMapId="153" death_level="0" water_level="16" world_size="2048"/>
+	<map id="300300000" name="IDArena" instance="true" instanceMapId="153" cooldown="1320" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300310000" name="IDRaksha" instance="true" instanceMapId="154" death_level="0" water_level="16" world_size="2048"/>
 	<map id="120080000" name="Arena_D_Lobby" death_level="0" water_level="16" world_type="ASMODAE" world_size="2048"/>
 	<map id="110070000" name="Arena_L_Lobby" death_level="0" water_level="16" world_type="ELYSEA" world_size="2048"/>

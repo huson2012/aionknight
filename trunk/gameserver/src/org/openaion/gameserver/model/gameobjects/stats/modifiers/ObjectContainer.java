@@ -176,6 +176,11 @@ public class ObjectContainer
 	{
 		return allArtifacts.values();
 	}
+
+	public Collection<Npc> getNpcs()
+	{
+		return allNpcs.values();
+	}
 	
 	public int getNpcsCount()
 	{
