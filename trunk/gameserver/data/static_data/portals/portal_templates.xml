@@ -827,12 +827,12 @@
 		<exitpoint mapid="220070000" x="1287.057617" y="857.303101" z="312.459076" race="ASMODIANS"/>
 	</portal>
 	<!-- Kaininel -->
-	<portal npcid="730430" instance="true" minlevel="50" maxlevel="60" group="true" race="ELYOS">
+	<portal npcid="730430" instance="false" minlevel="50" maxlevel="60" group="true" race="ELYOS">
 	  <entrypoint mapid="110070000" x="510.76837" y="217.71835" z="127.29544" />
       <exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>	  
     </portal>	
 	<!-- Marchutan -->
-	<portal npcid="730431" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
+	<portal npcid="730431" instance="false" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
       <entrypoint mapid="120080000" x="577.2926" y="261.17194" z="93.48979" />
       <exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>	  
     </portal>	
