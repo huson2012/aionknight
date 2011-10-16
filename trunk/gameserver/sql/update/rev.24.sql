@@ -1,16 +1,12 @@
--- ----------------------------
--- Table structure for `droplist`
--- ----------------------------
-DROP TABLE IF EXISTS `droplist`;
-CREATE TABLE `droplist` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `mobId` int(11) NOT NULL DEFAULT 0,
-  `itemId` int(11) NOT NULL DEFAULT 0,
-  `min` int(11) NOT NULL DEFAULT 0,
-  `max` int(11) NOT NULL DEFAULT 0,
-  `chance` float NOT NULL DEFAULT 0,
-  PRIMARY KEY (`Id`)
-) DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `droplist` (
+`Id` int(11) NOT NULL AUTO_INCREMENT,
+`mobId` int(11) NOT NULL DEFAULT 0,
+`itemId` int(11) NOT NULL DEFAULT 0,
+`min` int(11) NOT NULL DEFAULT 0,
+`max` int(11) NOT NULL DEFAULT 0,
+`chance` FLOAT NOT NULL DEFAULT 0,
+PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 217759
 INSERT INTO droplist (mobId, itemId, min, max, chance) VALUES
