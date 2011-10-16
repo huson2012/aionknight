@@ -1,4 +1,4 @@
-/*
+癤�/*
  * This file is part of aion-emu <aion-emu.com>.
  *
  *  aion-emu is free software: you can redistribute it and/or modify
@@ -298,7 +298,7 @@ public class PlayerController extends CreatureController<Player>
 
 	public void onEnterWorld()
 	{
-		// 로그인시 모션 패킷 보내기
+		// Check Motions and Update Player Status on Spawn
 		if (getOwner().getWaitingMotion() != 0)
 			PacketSendUtility.sendPacket(getOwner(), new SM_MOTION(getOwner(), getOwner().getWaitingMotion(), 1, false, true));
 		if (getOwner().getRunningMotion() != 0)

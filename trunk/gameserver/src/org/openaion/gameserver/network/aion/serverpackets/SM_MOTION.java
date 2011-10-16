@@ -1,4 +1,4 @@
-/**
+癤�/**
  * This file is part of aion-emu <aion-emu.com>.
  *
  *  aion-emu is free software: you can redistribute it and/or modify
@@ -69,8 +69,8 @@ public class SM_MOTION extends AionServerPacket
     {
 		if (readFirst)
 		{
-	        writeC(buf, 0x01); //캐릭터 정보창에 등록
-	        writeH(buf, 0x08); // 01 to 08 motions
+	        writeC(buf, 0x01); // 0x01 Learn Motion
+	        writeH(buf, 0x08); // Number of Motions
 	        int i = 0;
 	        int count = 0;
 
@@ -90,14 +90,14 @@ public class SM_MOTION extends AionServerPacket
 		{
 	        if (toSelf)
 			{
-		        writeC(buf, 0x05); // 0x05 - 모션변경 
+		        writeC(buf, 0x05); // 0x05 - Update Own Motion Status
 	        	writeH(buf, motionId);
 		       	writeC(buf, status);
 			}
 			else
 			{
-				writeC(buf, 0x07); // 모션변경
-				writeD(buf, objectId); // 플레이어 오브젝트 ID
+				writeC(buf, 0x07); // 0x07 - Update Motion Status for Other Players to See
+				writeD(buf, objectId); // objectID of Player
 				writeH(buf, waitingMotion);
 				writeH(buf, runningMotion);
 				writeH(buf, jumpingMotion);
