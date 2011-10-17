@@ -21,6 +21,7 @@ import org.openaion.gameserver.controllers.movement.ActionObserver;
 import org.openaion.gameserver.controllers.movement.ActionObserver.ObserverType;
 import org.openaion.gameserver.dataholders.DataManager;
 import org.openaion.gameserver.model.DescriptionId;
+import org.openaion.gameserver.model.EmotionType;
 import org.openaion.gameserver.model.gameobjects.Creature;
 import org.openaion.gameserver.model.gameobjects.Item;
 import org.openaion.gameserver.model.gameobjects.player.Player;
@@ -30,6 +31,7 @@ import org.openaion.gameserver.model.legion.Legion;
 import org.openaion.gameserver.model.siege.Artifact;
 import org.openaion.gameserver.model.siege.SiegeLocation;
 import org.openaion.gameserver.model.siege.SiegeType;
+import org.openaion.gameserver.network.aion.serverpackets.SM_EMOTION;
 import org.openaion.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import org.openaion.gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
 import org.openaion.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -48,7 +50,7 @@ import java.util.Collections;
 
 
 /**
- * @author Sylar
+ * @author Sylar,newlife
  *
  */
 public class ArtifactController extends NpcController
@@ -298,10 +300,11 @@ public class ArtifactController extends NpcController
 	// This function is called after skill effected list has been populated with players
 	private void castSkill()
 	{
+		//artifact attack by newlife
+		PacketSendUtility.broadcastPacket(getOwner(),
+		         new SM_EMOTION(getOwner(), EmotionType.ATTACKMODE, 97, 0));
 		
-	
-	
-		
+
 		//Cast the Artifact Skill 
 		for(Player p : World.getInstance().getPlayers())
 		{
@@ -314,6 +317,16 @@ public class ArtifactController extends NpcController
 	}
 			skill.endCast();
 		}
+		//pauza
+		try {
+			Thread.sleep(15000);
+		} catch (InterruptedException e) {
+		}
+		//perehod v son by newlife
+		PacketSendUtility.broadcastPacket(getOwner(),
+		         new SM_EMOTION(getOwner(), EmotionType.NEUTRALMODE, 97, 0));
+
+
 
 	}
 	
