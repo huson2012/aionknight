@@ -1072,10 +1072,6 @@
 	<spawn map="400010000" npcid="700413" pool="1" interval="295">
 		<object x="2884.7407" y="742.9055" z="1503.2267" h="0" staticid="38"/>
 	</spawn>
-	<!-- Primum Coin Fountain (Object Normal lvl:1) -->
-	<spawn map="400010000" npcid="730143" pool="1" interval="295">
-		<object x="847.67" y="2732.66" z="1567.86" h="0"/>
-	</spawn>
 	<!-- Protector Agnar (NPC Hero lvl:56) -->
 	<spawn map="400010000" npcid="278140" pool="1" interval="295">
 		<object x="925.0" y="3004.0" z="1655.3525" h="104"/>
@@ -1298,6 +1294,10 @@
 	<!-- Teminon Coin Fountain (Object Normal lvl:1) -->
 	<spawn map="400010000" npcid="730142" pool="1" interval="295">
 		<object x="3027.64" y="958.65" z="1462.81" h="0"/>
+	</spawn>
+	<!-- Primum Coin Fountain (Object Normal lvl:1) -->
+	<spawn map="400010000" npcid="730143" pool="1" interval="295">
+		<object x="847.67" y="2732.66" z="1567.86" h="0"/>
 	</spawn>
 	<!-- Tenoeril (NPC Normal lvl:45) -->
 	<spawn map="400010000" npcid="278521" pool="1" interval="295">

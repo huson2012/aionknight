@@ -20,6 +20,10 @@
 
  -->
 <spawns>
+	<!-- Inggison Coin Fountain -->
+	<spawn map="210050000" npcid="730241" pool="1" interval="295">
+		<object staticid="268" x="1355.5326" y="332.65009" h="0" z="588.12"/>
+	</spawn>
 	<!-- Lord Skyrose -->
 	<spawn map="210050000" npcid="296488" pool="1" interval="295">
 		<object x="557.632" y="733.041" h="18" z="479.19"/>

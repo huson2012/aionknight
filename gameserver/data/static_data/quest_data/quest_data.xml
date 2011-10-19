@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <quests>
-	<quest max_repeat_count="1" minlevel_permitted="99" nameId="2201001" name="Symbol of the Chosen" id="85">
+	<quest max_repeat_count="1" minlevel_permitted="1" nameId="2201001" name="Symbol of the Chosen" id="85">
 		<rewards exp="100" gold="200"/>
 	</quest>
 	<quest race_permitted="ELYOS" cannot_giveup="true" cannot_share="true" max_repeat_count="1" minlevel_permitted="1" nameId="2204001" name="Prologue" id="1000">
@@ -29823,7 +29823,7 @@
 		<quest_drop drop_each_member="false" chance="100" item_id="182206746" npc_id="215522"/>
 		<quest_drop drop_each_member="false" chance="100" item_id="182206746" npc_id="215523"/>
 	</quest>
-	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="255" minlevel_permitted="99" nameId="2250097" name="[Coin] Taloc Rebirth Operation" id="11048">
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="255" minlevel_permitted="50" nameId="2250097" name="[Coin] Taloc Rebirth Operation" id="11048">
 		<rewards exp="104619500"/>
 		<finished_quest_conds>
 			<condition>
@@ -29840,8 +29840,8 @@
 		<quest_drop drop_each_member="false" chance="100" item_id="182206747" npc_id="215480"/>
 		<quest_drop drop_each_member="false" chance="100" item_id="182206747" npc_id="215488"/>
 	</quest>
-	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="255" minlevel_permitted="99" nameId="2250101" name="Inggison Coin Fountain" id="11050">
-		<rewards exp="1043900"/>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="255" minlevel_permitted="50" nameId="2250101" name="Inggison Coin Fountain" id="11050">
+		<rewards exp="104390"/>
 	</quest>
 	<quest race_permitted="ELYOS" max_repeat_count="30" minlevel_permitted="53" nameId="2250103" name="Paris Je T'aime" id="11051">
 		<collect_items>
@@ -34293,7 +34293,7 @@
 		</finished_quest_conds>
 	</quest>
 	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="255" minlevel_permitted="99" nameId="2254101" name="Gelkmaros Coin Fountain" id="21050">
-		<rewards exp="1043900"/>
+		<rewards exp="104390"/>
 	</quest>
 	<quest race_permitted="ASMODIANS" max_repeat_count="30" minlevel_permitted="53" nameId="2254103" name="Trouble in Stone" id="21051">
 		<collect_items>
@@ -44848,6 +44848,416 @@
 		<finished_quest_conds>
 			<condition>
 				<quest id="80132"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18406" id="18406">
+		<rewards reward_abyss_point="450" exp="4070885"/>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215003"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18407" id="18407">
+		<rewards reward_abyss_point="90" exp="4070885"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18406"/>
+			</condition>
+		</finished_quest_conds>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215004"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="5" minlevel_permitted="50" name="Q18408" id="18408">
+		<collect_items>
+			<collect_item count="3" item_id="182215005"/>
+		</collect_items>
+		<rewards reward_abyss_point="1290" exp="5699239"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215005" npc_id="217185"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215005" npc_id="217195"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215005" npc_id="217204"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215005" npc_id="217206"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18407"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" use_class_reward="1" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18409" id="18409">
+		<rewards reward_abyss_point="450" exp="5427847"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18408"/>
+			</condition>
+		</finished_quest_conds>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215006"/>
+			<quest_work_item count="1" item_id="182215007"/>
+			<quest_work_item count="1" item_id="182215008"/>
+		</quest_work_items>
+		<fighter_selectable_reward count="1" item_id="100001137"/>
+		<fighter_selectable_reward count="1" item_id="100100876"/>
+		<fighter_selectable_reward count="1" item_id="100201005"/>
+		<fighter_selectable_reward count="1" item_id="100900871"/>
+		<fighter_selectable_reward count="1" item_id="101300838"/>
+		<fighter_selectable_reward count="1" item_id="101700913"/>
+		<knight_selectable_reward count="1" item_id="100001137"/>
+		<knight_selectable_reward count="1" item_id="100100876"/>
+		<knight_selectable_reward count="1" item_id="100900871"/>
+		<ranger_selectable_reward count="1" item_id="100201005"/>
+		<ranger_selectable_reward count="1" item_id="100001137"/>
+		<ranger_selectable_reward count="1" item_id="101700913"/>
+		<assassin_selectable_reward count="1" item_id="100001137"/>
+		<assassin_selectable_reward count="1" item_id="100201005"/>
+		<assassin_selectable_reward count="1" item_id="101700913"/>
+		<wizard_selectable_reward count="1" item_id="100500888"/>
+		<wizard_selectable_reward count="1" item_id="100600946"/>
+		<elementalist_selectable_reward count="1" item_id="100500888"/>
+		<elementalist_selectable_reward count="1" item_id="100600946"/>
+		<priest_selectable_reward count="1" item_id="100100876"/>
+		<priest_selectable_reward count="1" item_id="101500897"/>
+		<chanter_selectable_reward count="1" item_id="100100876"/>
+		<chanter_selectable_reward count="1" item_id="101500897"/>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18410" id="18410">
+		<rewards reward_abyss_point="450" exp="4070885">
+			<reward_item count="560" item_id="141000001"/>
+		</rewards>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215026"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="20" minlevel_permitted="50" name="Q18411" id="18411">
+		<collect_items>
+			<collect_item count="1" item_id="182215009"/>
+		</collect_items>
+		<rewards reward_abyss_point="870" exp="5699239"/>
+		<extrewards>
+			<reward_item count="5" item_id="186000096"/>
+		</extrewards>
+		<quest_drop drop_each_member="true" chance="5" item_id="182215009" npc_id="217179"/>
+		<quest_drop drop_each_member="true" chance="5" item_id="182215009" npc_id="217180"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18403"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="255" minlevel_permitted="50" name="Q18412" id="18412"/>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="99" name="Q18413" id="18413">
+		<collect_items>
+			<collect_item count="2" item_id="182215009"/>
+		</collect_items>
+		<rewards exp="18413" gold="36826"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18414"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="99" name="Q18414" id="18414">
+		<collect_items>
+			<collect_item count="10" item_id="182215010"/>
+		</collect_items>
+		<rewards exp="18414" gold="36828"/>
+		<quest_drop drop_each_member="true" chance="100" item_id="182215010" npc_id="217186"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18412"/>
+			</condition>
+		</finished_quest_conds>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215011"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28400" id="28400">
+		<rewards reward_abyss_point="90" exp="2713924">
+			<reward_item count="90" item_id="141000001"/>
+		</rewards>
+		<unfinished_quest_conds>
+			<condition>
+				<quest id="28410"/>
+			</condition>
+		</unfinished_quest_conds>
+		<noacquired_quest_conds>
+			<condition>
+				<quest id="28410"/>
+			</condition>
+		</noacquired_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="20" minlevel_permitted="50" name="Q28401" id="28401">
+		<rewards reward_abyss_point="1740" exp="5699239"/>
+		<extrewards>
+			<reward_item count="5" item_id="186000096"/>
+		</extrewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28410"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" max_repeat_count="1" minlevel_permitted="50" name="Q28402" id="28402">
+		<rewards reward_abyss_point="450" exp="5427847">
+			<reward_item count="560" item_id="141000001"/>
+		</rewards>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28403" id="28403">
+		<collect_items>
+			<collect_item count="20" item_id="182215012"/>
+		</collect_items>
+		<rewards reward_abyss_point="870" exp="8141771">
+			<reward_item count="1120" item_id="141000001"/>
+		</rewards>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215012" npc_id="217187"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215012" npc_id="217188"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215012" npc_id="217191"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215012" npc_id="217189"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215012" npc_id="217190"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28410"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28404" id="28404">
+		<collect_items>
+			<collect_item count="3" item_id="182215013"/>
+		</collect_items>
+		<rewards reward_abyss_point="150" exp="4070885">
+			<reward_item count="190" item_id="141000001"/>
+		</rewards>
+		<quest_drop drop_each_member="true" chance="100" item_id="182215013" npc_id="701016"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28403"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28405" id="28405">
+		<rewards title="175" reward_abyss_point="450" exp="4070885">
+			<reward_item count="560" item_id="141000001"/>
+		</rewards>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215014"/>
+			<quest_work_item count="1" item_id="182215025"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28406" id="28406">
+		<rewards reward_abyss_point="450" exp="4070885"/>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215015"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28407" id="28407">
+		<rewards reward_abyss_point="90" exp="4070885"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28406"/>
+			</condition>
+		</finished_quest_conds>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215016"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="5" minlevel_permitted="50" name="Q28408" id="28408">
+		<collect_items>
+			<collect_item count="3" item_id="182215017"/>
+		</collect_items>
+		<rewards reward_abyss_point="1290" exp="5699239"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215017" npc_id="217185"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215017" npc_id="217195"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215017" npc_id="217204"/>
+		<quest_drop drop_each_member="true" chance="80" item_id="182215017" npc_id="217206"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28407"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" use_class_reward="1" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28409" id="28409">
+		<rewards reward_abyss_point="450" exp="5427847"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28408"/>
+			</condition>
+		</finished_quest_conds>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215018"/>
+			<quest_work_item count="1" item_id="182215019"/>
+			<quest_work_item count="1" item_id="182215020"/>
+		</quest_work_items>
+		<fighter_selectable_reward count="1" item_id="100001138"/>
+		<fighter_selectable_reward count="1" item_id="100100877"/>
+		<fighter_selectable_reward count="1" item_id="100201006"/>
+		<fighter_selectable_reward count="1" item_id="100900872"/>
+		<fighter_selectable_reward count="1" item_id="101300839"/>
+		<fighter_selectable_reward count="1" item_id="101700914"/>
+		<knight_selectable_reward count="1" item_id="100001138"/>
+		<knight_selectable_reward count="1" item_id="100100877"/>
+		<knight_selectable_reward count="1" item_id="100900872"/>
+		<ranger_selectable_reward count="1" item_id="100001138"/>
+		<ranger_selectable_reward count="1" item_id="100201006"/>
+		<ranger_selectable_reward count="1" item_id="101700914"/>
+		<assassin_selectable_reward count="1" item_id="100001138"/>
+		<assassin_selectable_reward count="1" item_id="100201006"/>
+		<assassin_selectable_reward count="1" item_id="101700914"/>
+		<wizard_selectable_reward count="1" item_id="100500889"/>
+		<wizard_selectable_reward count="1" item_id="100600947"/>
+		<elementalist_selectable_reward count="1" item_id="100500889"/>
+		<elementalist_selectable_reward count="1" item_id="100600947"/>
+		<priest_selectable_reward count="1" item_id="100100877"/>
+		<priest_selectable_reward count="1" item_id="101500898"/>
+		<chanter_selectable_reward count="1" item_id="100100877"/>
+		<chanter_selectable_reward count="1" item_id="101500898"/>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28410" id="28410">
+		<rewards reward_abyss_point="450" exp="4070885">
+			<reward_item count="560" item_id="141000001"/>
+		</rewards>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215027"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="20" minlevel_permitted="50" name="Q28411" id="28411">
+		<collect_items>
+			<collect_item count="1" item_id="182215021"/>
+		</collect_items>
+		<rewards reward_abyss_point="450" exp="5699239"/>
+		<extrewards>
+			<reward_item count="5" item_id="186000096"/>
+		</extrewards>
+		<quest_drop drop_each_member="true" chance="5" item_id="182215021" npc_id="217179"/>
+		<quest_drop drop_each_member="true" chance="5" item_id="182215021" npc_id="217180"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28403"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="255" minlevel_permitted="50" name="Q28412" id="28412"/>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="99" name="Q28413" id="28413">
+		<collect_items>
+			<collect_item count="2" item_id="182215021"/>
+		</collect_items>
+		<rewards exp="28413" gold="56826"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28414"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="99" name="Q28414" id="28414">
+		<collect_items>
+			<collect_item count="10" item_id="182215022"/>
+		</collect_items>
+		<rewards exp="28414" gold="56828"/>
+		<quest_drop drop_each_member="true" chance="100" item_id="182215022" npc_id="217186"/>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28412"/>
+			</condition>
+		</finished_quest_conds>
+		<quest_work_items>
+			<quest_work_item count="1" item_id="182215023"/>
+		</quest_work_items>
+	</quest>
+	<quest race_permitted="ELYOS" max_repeat_count="1" minlevel_permitted="50" name="Q18200" id="18200">
+		<rewards exp="2713924">
+			<reward_item count="10" item_id="186000130"/>
+		</rewards>
+	</quest>
+	<quest race_permitted="ELYOS" max_repeat_count="1" minlevel_permitted="50" name="Q18201" id="18201">
+		<rewards title="164" exp="5427847">
+			<reward_item count="30" item_id="186000130"/>
+		</rewards>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18202" id="18202">
+		<rewards title="165" exp="5427847">
+			<reward_item count="90" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18201"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18203" id="18203">
+		<rewards title="166" exp="5427847">
+			<reward_item count="230" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18202"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18204" id="18204">
+		<rewards title="167" exp="5427847">
+			<reward_item count="570" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18203"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ELYOS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q18205" id="18205">
+		<rewards title="168" exp="8141771">
+			<reward_item count="1490" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="18204"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" max_repeat_count="1" minlevel_permitted="50" name="Q28200" id="28200">
+		<rewards exp="2713924">
+			<reward_item count="10" item_id="186000130"/>
+		</rewards>
+	</quest>
+	<quest race_permitted="ASMODIANS" max_repeat_count="1" minlevel_permitted="50" name="Q28201" id="28201">
+		<rewards title="169" exp="5427847">
+			<reward_item count="30" item_id="186000130"/>
+		</rewards>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28202" id="28202">
+		<rewards title="170" exp="5427847">
+			<reward_item count="90" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28201"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28203" id="28203">
+		<rewards title="171" exp="5427847">
+			<reward_item count="230" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28202"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28204" id="28204">
+		<rewards title="172" exp="5427847">
+			<reward_item count="570" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28203"/>
+			</condition>
+		</finished_quest_conds>
+	</quest>
+	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="50" name="Q28205" id="28205">
+		<rewards title="173" exp="8141771">
+			<reward_item count="1490" item_id="186000130"/>
+		</rewards>
+		<finished_quest_conds>
+			<condition>
+				<quest id="28204"/>
 			</condition>
 		</finished_quest_conds>
 	</quest>

@@ -22,6 +22,9 @@
  -->
 
  <spawns>
+ 	<spawn map="220070000" npcid="730242" pool="1" interval="295">
+		<object staticid="1061" x="1815.0425" y="2915.1387" z="549.37384" h="30"/>
+	</spawn>
 	<spawn map="220070000" npcid="799376" pool="1" interval="295">
 		<object x="1139.1436" y="1620.306" z="51.375" h="77"/>
 	</spawn>
