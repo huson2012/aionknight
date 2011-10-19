@@ -5776,25 +5776,9 @@ You can nest them as deep as you want to make complex rewards.
 	<wrapper_item id="188051341">
 		<item id="110900063" min="1" max="1" name="Andu's Party Dress"/>
 	</wrapper_item>
-	<!-- Gift-Wrapped Celebrity Line -->
-	<wrapper_item id="188051348">
-		<item id="110900129" min="1" max="1" name="Rillard's Celebrity Line"/>
-	</wrapper_item>
-	<!-- Gift-Wrapped Cocktail Scales -->
-	<wrapper_item id="188051346">
-		<item id="110900127" min="1" max="1" name="Gabrez's Cocktail Scales"/>
-	</wrapper_item>
 	<!-- Gift-Wrapped Daskin's Party Suit -->
 	<wrapper_item id="188051342">
 		<item id="110900064" min="1" max="1" name="Daskin's Party Suit"/>
-	</wrapper_item>
-	<!-- Gift-Wrapped Formalwear -->
-	<wrapper_item id="188051347">
-		<item id="110900128" min="1" max="1" name="Portia's Formalwear"/>
-	</wrapper_item>
-	<!-- Gift-Wrapped Leather Chic -->
-	<wrapper_item id="188051345">
-		<item id="110900126" min="1" max="1" name="Cinna's Leather Chic"/>
 	</wrapper_item>
 	<!-- Gift-Wrapped Marra's Party Dress -->
 	<wrapper_item id="188051343">
@@ -5803,5 +5787,21 @@ You can nest them as deep as you want to make complex rewards.
 	<!-- Gift-Wrapped Palentine's Party Dress -->
 	<wrapper_item id="188051344">
 		<item id="110900067" min="1" max="1" name="Palentine's Party Dress"/>
+	</wrapper_item>	
+	<!-- Gift-Wrapped Leather Chic -->
+	<wrapper_item id="188051345">
+		<item id="110900126" min="1" max="1" name="Cinna's Leather Chic"/>
+	</wrapper_item>
+	<!-- Gift-Wrapped Cocktail Scales -->
+	<wrapper_item id="188051346">
+		<item id="110900127" min="1" max="1" name="Gabrez's Cocktail Scales"/>
+	</wrapper_item>
+	<!-- Gift-Wrapped Formalwear -->
+	<wrapper_item id="188051347">
+		<item id="110900128" min="1" max="1" name="Portia's Formalwear"/>
+	</wrapper_item>
+	<!-- Gift-Wrapped Celebrity Line -->
+	<wrapper_item id="188051348">
+		<item id="110900129" min="1" max="1" name="Rillard's Celebrity Line"/>
 	</wrapper_item>
 </wrapped_items>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest_scripts>
+	<!-- The Crucible -->
+	<report_to id="18200" start_npc_id="798604" end_npc_id="799088"/>
+	<!-- The First Rule of the Crucible -->
+	<monster_hunt id="18201" start_npc_id="205309">
+		<monster_infos var_id="0" max_kill="1" npc_id="217527"/>
+		<monster_infos var_id="1" max_kill="1" npc_id="217528"/>
+	</monster_hunt>
+	<!-- Molfus's Approval -->
+	<monster_hunt id="18202" start_npc_id="205309">
+		<monster_infos var_id="0" max_kill="1" npc_id="217544"/>
+	</monster_hunt>
+	<!-- Keep on Driving Me Higher -->
+	<monster_hunt id="18203" start_npc_id="205309">
+		<monster_infos var_id="0" max_kill="1" npc_id="217587"/>
+	</monster_hunt>
+	<!-- A Giant Illusion -->
+	<monster_hunt id="18204" start_npc_id="205309">
+		<monster_infos var_id="0" max_kill="1" npc_id="217599"/>
+	</monster_hunt>	
+	<!-- Vanquish the Vanktrist -->
+	<monster_hunt id="18205" start_npc_id="205309">
+		<monster_infos var_id="0" max_kill="1" npc_id="217609"/>
+	</monster_hunt>
+
+	<!-- Entering the Crucible -->
+	<report_to id="28200" start_npc_id="798804" end_npc_id="799428"/>
+	<!-- Through the Wind and Fire -->
+	<monster_hunt id="28201" start_npc_id="205321">
+		<monster_infos var_id="0" max_kill="1" npc_id="217527"/>
+		<monster_infos var_id="1" max_kill="1" npc_id="217528"/>
+	</monster_hunt>
+	<!-- Halfway There -->
+	<monster_hunt id="28202" start_npc_id="205321">
+		<monster_infos var_id="0" max_kill="1" npc_id="217544"/>
+	</monster_hunt>
+	<!-- The Student Becomes the Master -->
+	<monster_hunt id="28203" start_npc_id="205321">
+		<monster_infos var_id="0" max_kill="1" npc_id="217587"/>
+	</monster_hunt>
+	<!-- Everything's Bigger in Asmodae -->
+	<monster_hunt id="28204" start_npc_id="205321">
+		<monster_infos var_id="0" max_kill="1" npc_id="217599"/>
+	</monster_hunt>	
+	<!-- From the Reaches of Nothingness -->
+	<monster_hunt id="28205" start_npc_id="205321">
+		<monster_infos var_id="0" max_kill="1" npc_id="217609"/>
+	</monster_hunt>
+</quest_scripts>
