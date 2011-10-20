@@ -62,10 +62,10 @@
             depends="compile"
             description="Create the jar file">
 
-        <jar destfile="${build}/open-aion-login.jar">
+        <jar destfile="${build}/aion-knight_login.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
-                <attribute name="Main-Class" value="org.openaion.loginserver.LoginServer"/>
+                <attribute name="Main-Class" value="ru.aionknight.loginserver.LoginServer"/>
             </manifest>
         </jar>
 
@@ -80,7 +80,7 @@
     	
     	<copy todir="${build.dist.login}">
             <fileset dir="${build}">
-                <include name="open-aion-login.jar"/>
+                <include name="aion-knight_login.jar"/>
 			</fileset>
         </copy>
     	
@@ -120,7 +120,7 @@
             </fileset>
         </copy>
 
-        <zip destfile="${build}/open-aion-loginserver.zip"
+        <zip destfile="${build}/aion-knight_loginserver.zip"
              basedir="${build.dist}" />
     </target>   
     

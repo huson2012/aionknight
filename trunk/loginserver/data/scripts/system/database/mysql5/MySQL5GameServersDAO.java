@@ -11,8 +11,9 @@ import org.apache.log4j.Logger;
 import org.openaion.commons.database.DB;
 import org.openaion.commons.database.DatabaseFactory;
 import org.openaion.commons.database.ReadStH;
-import org.openaion.loginserver.GameServerInfo;
-import org.openaion.loginserver.dao.GameServersDAO;
+
+import ru.aionknight.loginserver.GameServerInfo;
+import ru.aionknight.loginserver.dao.GameServersDAO;
 
 
 /**

@@ -5,7 +5,7 @@ echo Aion Knight Login Server.
 echo.
 REM -------------------------------------
 REM Default parameters for a basic server.
-java -Xms8m -Xmx32m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;open-aion-login.jar org.openaion.loginserver.LoginServer
+java -Xms8m -Xmx32m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;aion-knight_login.jar ru.aionknight.loginserver.LoginServer
 REM
 REM -------------------------------------
 

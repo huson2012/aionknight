@@ -3,8 +3,9 @@ package mysql5;
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DB;
 import org.openaion.commons.database.IUStH;
-import org.openaion.loginserver.dao.AccountDAO;
-import org.openaion.loginserver.model.Account;
+
+import ru.aionknight.loginserver.dao.AccountDAO;
+import ru.aionknight.loginserver.model.Account;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
