@@ -7,8 +7,9 @@ import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerMotionDAO;
-import org.openaion.gameserver.model.gameobjects.player.Player;
+
+import ru.aionknight.gameserver.dao.PlayerMotionDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
 
 
 /**

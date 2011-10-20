@@ -5,21 +5,22 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.dao.DAOManager;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dao.SpawnDAO;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.modifiers.Executor;
-import org.openaion.gameserver.model.templates.spawn.SpawnGroup;
-import org.openaion.gameserver.model.templates.spawn.SpawnTemplate;
-import org.openaion.gameserver.network.aion.serverpackets.SM_FORCED_MOVE;
-import org.openaion.gameserver.services.TeleportService;
-import org.openaion.gameserver.spawn.SpawnEngine;
-import org.openaion.gameserver.utils.MathUtil;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dao.SpawnDAO;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.modifiers.Executor;
+import ru.aionknight.gameserver.model.templates.spawn.SpawnGroup;
+import ru.aionknight.gameserver.model.templates.spawn.SpawnTemplate;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_FORCED_MOVE;
+import ru.aionknight.gameserver.services.TeleportService;
+import ru.aionknight.gameserver.spawn.SpawnEngine;
+import ru.aionknight.gameserver.utils.MathUtil;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

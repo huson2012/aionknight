@@ -18,15 +18,16 @@ package admincommands;
 
 import java.util.Set;
 
-import org.openaion.gameserver.model.drop.DropItem;
-import org.openaion.gameserver.model.drop.DropList;
-import org.openaion.gameserver.model.drop.DropTemplate;
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.services.DropService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.model.drop.DropItem;
+import ru.aionknight.gameserver.model.drop.DropList;
+import ru.aionknight.gameserver.model.drop.DropTemplate;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.services.DropService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 /**
  * @author Oliver

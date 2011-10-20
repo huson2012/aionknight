@@ -23,9 +23,10 @@ import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.DropListDAO;
-import org.openaion.gameserver.model.drop.DropList;
-import org.openaion.gameserver.model.drop.DropTemplate;
+
+import ru.aionknight.gameserver.dao.DropListDAO;
+import ru.aionknight.gameserver.model.drop.DropList;
+import ru.aionknight.gameserver.model.drop.DropTemplate;
 
 
 /**

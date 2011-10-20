@@ -24,15 +24,16 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.AbyssRankDAO;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.model.AbyssRankingResult;
-import org.openaion.gameserver.model.PlayerClass;
-import org.openaion.gameserver.model.Race;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.player.AbyssRank;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.stats.AbyssRankEnum;
+
+import ru.aionknight.gameserver.dao.AbyssRankDAO;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.model.AbyssRankingResult;
+import ru.aionknight.gameserver.model.PlayerClass;
+import ru.aionknight.gameserver.model.Race;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.player.AbyssRank;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.utils.stats.AbyssRankEnum;
 
 
 /**

@@ -29,25 +29,26 @@ import javolution.util.FastMap;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.configs.main.GSConfig;
-import org.openaion.gameserver.dao.PlayerDAO;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.dataholders.PlayerInitialData;
-import org.openaion.gameserver.dataholders.PlayerInitialData.LocationData;
-import org.openaion.gameserver.model.Gender;
-import org.openaion.gameserver.model.PlayerClass;
-import org.openaion.gameserver.model.Race;
-import org.openaion.gameserver.model.account.PlayerAccountData;
-import org.openaion.gameserver.model.gameobjects.player.Mailbox;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.player.PlayerCommonData;
-import org.openaion.gameserver.world.World;
-import org.openaion.gameserver.world.WorldPosition;
+
+import ru.aionknight.gameserver.configs.main.GSConfig;
+import ru.aionknight.gameserver.dao.PlayerDAO;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.dataholders.PlayerInitialData;
+import ru.aionknight.gameserver.dataholders.PlayerInitialData.LocationData;
+import ru.aionknight.gameserver.model.Gender;
+import ru.aionknight.gameserver.model.PlayerClass;
+import ru.aionknight.gameserver.model.Race;
+import ru.aionknight.gameserver.model.account.PlayerAccountData;
+import ru.aionknight.gameserver.model.gameobjects.player.Mailbox;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.player.PlayerCommonData;
+import ru.aionknight.gameserver.world.World;
+import ru.aionknight.gameserver.world.WorldPosition;
 
 import com.mysql.jdbc.exceptions.MySQLDataException;
 
 /**
- * Class that that is responsible for loading/storing {@link org.openaion.gameserver.model.gameobjects.player.Player}
+ * Class that that is responsible for loading/storing {@link ru.aionknight.gameserver.model.gameobjects.player.Player}
  * object from MySQL 5.
  * 
  * @author SoulKeeper, Saelya

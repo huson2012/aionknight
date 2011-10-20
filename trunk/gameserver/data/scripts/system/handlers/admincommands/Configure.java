@@ -18,28 +18,29 @@ package admincommands;
 
 import java.lang.reflect.Field;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.configs.main.CacheConfig;
-import org.openaion.gameserver.configs.main.CustomConfig;
-import org.openaion.gameserver.configs.main.DropConfig;
-import org.openaion.gameserver.configs.main.EnchantsConfig;
-import org.openaion.gameserver.configs.main.EventConfig;
-import org.openaion.gameserver.configs.main.FallDamageConfig;
-import org.openaion.gameserver.configs.main.GSConfig;
-import org.openaion.gameserver.configs.main.GroupConfig;
-import org.openaion.gameserver.configs.main.LegionConfig;
-import org.openaion.gameserver.configs.main.NpcMovementConfig;
-import org.openaion.gameserver.configs.main.PeriodicSaveConfig;
-import org.openaion.gameserver.configs.main.PricesConfig;
-import org.openaion.gameserver.configs.main.RateConfig;
-import org.openaion.gameserver.configs.main.ShutdownConfig;
-import org.openaion.gameserver.configs.main.SiegeConfig;
-import org.openaion.gameserver.configs.main.TaskManagerConfig;
-import org.openaion.gameserver.configs.network.IPConfig;
-import org.openaion.gameserver.configs.network.NetworkConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.configs.main.CacheConfig;
+import ru.aionknight.gameserver.configs.main.CustomConfig;
+import ru.aionknight.gameserver.configs.main.DropConfig;
+import ru.aionknight.gameserver.configs.main.EnchantsConfig;
+import ru.aionknight.gameserver.configs.main.EventConfig;
+import ru.aionknight.gameserver.configs.main.FallDamageConfig;
+import ru.aionknight.gameserver.configs.main.GSConfig;
+import ru.aionknight.gameserver.configs.main.GroupConfig;
+import ru.aionknight.gameserver.configs.main.LegionConfig;
+import ru.aionknight.gameserver.configs.main.NpcMovementConfig;
+import ru.aionknight.gameserver.configs.main.PeriodicSaveConfig;
+import ru.aionknight.gameserver.configs.main.PricesConfig;
+import ru.aionknight.gameserver.configs.main.RateConfig;
+import ru.aionknight.gameserver.configs.main.ShutdownConfig;
+import ru.aionknight.gameserver.configs.main.SiegeConfig;
+import ru.aionknight.gameserver.configs.main.TaskManagerConfig;
+import ru.aionknight.gameserver.configs.network.IPConfig;
+import ru.aionknight.gameserver.configs.network.NetworkConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

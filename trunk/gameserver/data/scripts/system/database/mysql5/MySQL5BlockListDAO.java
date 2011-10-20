@@ -28,12 +28,13 @@ import org.openaion.commons.database.DB;
 import org.openaion.commons.database.DatabaseFactory;
 import org.openaion.commons.database.IUStH;
 import org.openaion.commons.database.dao.DAOManager;
-import org.openaion.gameserver.dao.BlockListDAO;
-import org.openaion.gameserver.dao.PlayerDAO;
-import org.openaion.gameserver.model.gameobjects.player.BlockList;
-import org.openaion.gameserver.model.gameobjects.player.BlockedPlayer;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.player.PlayerCommonData;
+
+import ru.aionknight.gameserver.dao.BlockListDAO;
+import ru.aionknight.gameserver.dao.PlayerDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.BlockList;
+import ru.aionknight.gameserver.model.gameobjects.player.BlockedPlayer;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.player.PlayerCommonData;
 
 
 /**

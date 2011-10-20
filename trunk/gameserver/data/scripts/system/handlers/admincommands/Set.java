@@ -2,14 +2,15 @@ package admincommands;
 
 import java.util.Arrays;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.PlayerClass;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.network.aion.serverpackets.SM_TITLE_SET;
-import org.openaion.gameserver.network.aion.serverpackets.SM_TITLE_UPDATE;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.PlayerClass;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_TITLE_SET;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_TITLE_UPDATE;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

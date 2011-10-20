@@ -16,13 +16,14 @@
 */
 package admincommands;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.state.CreatureVisualState;
-import org.openaion.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
-import org.openaion.gameserver.skill.effect.EffectId;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.state.CreatureVisualState;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
+import ru.aionknight.gameserver.skill.effect.EffectId;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 /**
 * @author Divinity

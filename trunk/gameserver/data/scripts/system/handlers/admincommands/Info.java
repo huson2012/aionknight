@@ -1,12 +1,13 @@
 package admincommands;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.Gatherable;
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.Gatherable;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 /**
  * @author Nemiroff

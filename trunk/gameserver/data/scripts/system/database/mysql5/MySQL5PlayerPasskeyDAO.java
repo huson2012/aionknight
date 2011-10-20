@@ -7,7 +7,8 @@ import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerPasskeyDAO;
+
+import ru.aionknight.gameserver.dao.PlayerPasskeyDAO;
 
 
 /**

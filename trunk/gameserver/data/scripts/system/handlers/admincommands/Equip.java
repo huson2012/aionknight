@@ -17,25 +17,26 @@
 package admincommands;
 
 import java.lang.reflect.Field;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.model.gameobjects.Item;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.listeners.ItemEquipmentListener;
-import org.openaion.gameserver.model.items.ManaStone;
-import org.openaion.gameserver.model.templates.item.GodstoneInfo;
-import org.openaion.gameserver.model.templates.item.ItemTemplate;
-import org.openaion.gameserver.model.templates.item.ItemType;
-import org.openaion.gameserver.network.aion.serverpackets.SM_STATS_INFO;
-import org.openaion.gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
-import org.openaion.gameserver.services.EnchantService;
-import org.openaion.gameserver.services.ItemService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.Util;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.model.gameobjects.Item;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.listeners.ItemEquipmentListener;
+import ru.aionknight.gameserver.model.items.ManaStone;
+import ru.aionknight.gameserver.model.templates.item.GodstoneInfo;
+import ru.aionknight.gameserver.model.templates.item.ItemTemplate;
+import ru.aionknight.gameserver.model.templates.item.ItemType;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_STATS_INFO;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
+import ru.aionknight.gameserver.services.EnchantService;
+import ru.aionknight.gameserver.services.ItemService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.Util;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.World;
 
 /**
  * @author Tago

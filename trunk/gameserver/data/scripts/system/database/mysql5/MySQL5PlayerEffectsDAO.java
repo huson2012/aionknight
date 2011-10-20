@@ -24,10 +24,11 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.configs.main.CustomConfig;
-import org.openaion.gameserver.dao.PlayerEffectsDAO;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.skill.model.Effect;
+
+import ru.aionknight.gameserver.configs.main.CustomConfig;
+import ru.aionknight.gameserver.dao.PlayerEffectsDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.skill.model.Effect;
 
 
 /**

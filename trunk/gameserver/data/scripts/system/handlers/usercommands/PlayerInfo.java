@@ -20,18 +20,19 @@ package usercommands;
 import java.util.Iterator;
 import java.util.List;
 
-import org.openaion.gameserver.model.Race;
-import org.openaion.gameserver.model.gameobjects.Item;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.StatEnum;
-import org.openaion.gameserver.model.group.PlayerGroup;
-import org.openaion.gameserver.model.legion.Legion;
-import org.openaion.gameserver.network.aion.serverpackets.SM_QUESTIONNAIRE;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.Util;
-import org.openaion.gameserver.utils.chathandlers.UserCommand;
-import org.openaion.gameserver.utils.idfactory.IDFactory;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.model.Race;
+import ru.aionknight.gameserver.model.gameobjects.Item;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
+import ru.aionknight.gameserver.model.group.PlayerGroup;
+import ru.aionknight.gameserver.model.legion.Legion;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_QUESTIONNAIRE;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.Util;
+import ru.aionknight.gameserver.utils.chathandlers.UserCommand;
+import ru.aionknight.gameserver.utils.idfactory.IDFactory;
+import ru.aionknight.gameserver.world.World;
 
 /**
  *

@@ -19,21 +19,22 @@ package admincommands;
 import java.sql.Timestamp;
 import java.util.Calendar;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.player.QuestStateList;
-import org.openaion.gameserver.model.templates.GuildTemplate;
-import org.openaion.gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
-import org.openaion.gameserver.services.GuildService;
-import org.openaion.gameserver.services.QuestService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.player.QuestStateList;
+import ru.aionknight.gameserver.model.templates.GuildTemplate;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
+import ru.aionknight.gameserver.services.GuildService;
+import ru.aionknight.gameserver.services.QuestService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

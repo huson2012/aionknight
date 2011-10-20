@@ -23,12 +23,13 @@ import java.sql.Timestamp;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerQuestListDAO;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.player.QuestStateList;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
+
+import ru.aionknight.gameserver.dao.PlayerQuestListDAO;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.player.QuestStateList;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
 
 
 /**

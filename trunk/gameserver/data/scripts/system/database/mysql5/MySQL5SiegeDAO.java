@@ -25,9 +25,10 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.SiegeDAO;
-import org.openaion.gameserver.model.siege.SiegeLocation;
-import org.openaion.gameserver.model.siege.SiegeRace;
+
+import ru.aionknight.gameserver.dao.SiegeDAO;
+import ru.aionknight.gameserver.model.siege.SiegeLocation;
+import ru.aionknight.gameserver.model.siege.SiegeRace;
 
 
 /**

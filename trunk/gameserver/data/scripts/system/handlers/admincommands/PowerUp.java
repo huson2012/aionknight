@@ -1,15 +1,16 @@
 package admincommands;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.StatEnum;
-import org.openaion.gameserver.network.aion.serverpackets.SM_STATS_INFO;
-import org.openaion.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.Util;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_STATS_INFO;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.Util;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.World;
 
 /**
  * @author ginho1

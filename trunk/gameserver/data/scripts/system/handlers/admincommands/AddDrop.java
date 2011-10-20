@@ -21,15 +21,16 @@ import java.sql.SQLException;
 
 import org.openaion.commons.database.DB;
 import org.openaion.commons.database.IUStH;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.drop.DropList;
-import org.openaion.gameserver.model.drop.DropTemplate;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.services.DropService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.utils.i18n.CustomMessageId;
-import org.openaion.gameserver.utils.i18n.LanguageHandler;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.drop.DropList;
+import ru.aionknight.gameserver.model.drop.DropTemplate;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.services.DropService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.utils.i18n.CustomMessageId;
+import ru.aionknight.gameserver.utils.i18n.LanguageHandler;
 
 /**
  * 

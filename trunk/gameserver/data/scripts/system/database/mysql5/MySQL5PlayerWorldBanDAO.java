@@ -26,8 +26,9 @@ import java.sql.ResultSet;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerWorldBanDAO;
-import org.openaion.gameserver.model.gameobjects.player.Player;
+
+import ru.aionknight.gameserver.dao.PlayerWorldBanDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
 
 /**
  * @author blakawk

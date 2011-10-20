@@ -27,19 +27,20 @@ import java.util.TreeMap;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.LegionDAO;
-import org.openaion.gameserver.model.gameobjects.Item;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.player.StorageType;
-import org.openaion.gameserver.model.legion.Legion;
-import org.openaion.gameserver.model.legion.LegionEmblem;
-import org.openaion.gameserver.model.legion.LegionHistory;
-import org.openaion.gameserver.model.legion.LegionHistoryType;
-import org.openaion.gameserver.model.legion.LegionWarehouse;
+
+import ru.aionknight.gameserver.dao.LegionDAO;
+import ru.aionknight.gameserver.model.gameobjects.Item;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.player.StorageType;
+import ru.aionknight.gameserver.model.legion.Legion;
+import ru.aionknight.gameserver.model.legion.LegionEmblem;
+import ru.aionknight.gameserver.model.legion.LegionHistory;
+import ru.aionknight.gameserver.model.legion.LegionHistoryType;
+import ru.aionknight.gameserver.model.legion.LegionWarehouse;
 
 
 /**
- * Class that that is responsible for loading/storing {@link org.openaion.gameserver.model.legion.Legion} object from
+ * Class that that is responsible for loading/storing {@link ru.aionknight.gameserver.model.legion.Legion} object from
  * MySQL 5.
  * 
  * @author Simple

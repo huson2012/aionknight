@@ -20,18 +20,19 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.openaion.commons.database.dao.DAOManager;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dao.SpawnDAO;
-import org.openaion.gameserver.model.gameobjects.AionObject;
-import org.openaion.gameserver.model.gameobjects.Creature;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.templates.spawn.SpawnTemplate;
-import org.openaion.gameserver.spawn.SpawnEngine;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.World;
-import org.openaion.gameserver.world.exceptions.AlreadySpawnedException;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dao.SpawnDAO;
+import ru.aionknight.gameserver.model.gameobjects.AionObject;
+import ru.aionknight.gameserver.model.gameobjects.Creature;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.templates.spawn.SpawnTemplate;
+import ru.aionknight.gameserver.spawn.SpawnEngine;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.World;
+import ru.aionknight.gameserver.world.exceptions.AlreadySpawnedException;
 
 
 /**

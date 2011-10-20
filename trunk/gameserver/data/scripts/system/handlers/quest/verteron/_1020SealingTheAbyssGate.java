@@ -20,24 +20,25 @@ package quest.verteron;
 
 import java.util.Collection;
 
-import org.openaion.gameserver.model.EmotionType;
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.network.aion.serverpackets.SM_EMOTION;
-import org.openaion.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import org.openaion.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import org.openaion.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
-import org.openaion.gameserver.services.InstanceService;
-import org.openaion.gameserver.services.QuestService;
-import org.openaion.gameserver.services.TeleportService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.world.WorldMapInstance;
-import org.openaion.gameserver.world.WorldMapType;
+
+import ru.aionknight.gameserver.model.EmotionType;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
+import ru.aionknight.gameserver.services.InstanceService;
+import ru.aionknight.gameserver.services.QuestService;
+import ru.aionknight.gameserver.services.TeleportService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.world.WorldMapInstance;
+import ru.aionknight.gameserver.world.WorldMapType;
 
 
 /**

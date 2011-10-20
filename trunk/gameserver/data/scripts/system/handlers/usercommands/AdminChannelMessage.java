@@ -17,10 +17,11 @@
 
 package usercommands;
 
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.chathandlers.CustomChannel;
-import org.openaion.gameserver.utils.i18n.CustomMessageId;
-import org.openaion.gameserver.utils.i18n.LanguageHandler;
+
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.utils.chathandlers.CustomChannel;
+import ru.aionknight.gameserver.utils.i18n.CustomMessageId;
+import ru.aionknight.gameserver.utils.i18n.LanguageHandler;
 
 /**
  *

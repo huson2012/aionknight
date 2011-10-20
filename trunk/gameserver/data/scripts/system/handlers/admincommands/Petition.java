@@ -19,16 +19,17 @@ package admincommands;
 import java.util.Collection;
 
 import org.openaion.commons.database.dao.DAOManager;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dao.PetitionDAO;
-import org.openaion.gameserver.dao.PlayerDAO;
-import org.openaion.gameserver.model.PetitionType;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.services.MailService;
-import org.openaion.gameserver.services.PetitionService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dao.PetitionDAO;
+import ru.aionknight.gameserver.dao.PlayerDAO;
+import ru.aionknight.gameserver.model.PetitionType;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.services.MailService;
+import ru.aionknight.gameserver.services.PetitionService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.World;
 
 
 /**
@@ -59,10 +60,10 @@ public class Petition extends AdminCommand
 		// Send ticket general info
 		if (params == null || params.length == 0)
 		{
-			Collection<org.openaion.gameserver.model.Petition> petitions = PetitionService.getInstance().getRegisteredPetitions();
+			Collection<ru.aionknight.gameserver.model.Petition> petitions = PetitionService.getInstance().getRegisteredPetitions();
 			synchronized (petitions)
 			{
-				org.openaion.gameserver.model.Petition[] petitionsArray = petitions.toArray(new org.openaion.gameserver.model.Petition[0]);
+				ru.aionknight.gameserver.model.Petition[] petitionsArray = petitions.toArray(new ru.aionknight.gameserver.model.Petition[0]);
 				PacketSendUtility.sendMessage(admin, petitionsArray.length + " unprocessed petitions.");
 				if (petitionsArray.length < 5)
 				{
@@ -96,7 +97,7 @@ public class Petition extends AdminCommand
 			return;
 		}
 
-		org.openaion.gameserver.model.Petition petition = DAOManager.getDAO(PetitionDAO.class).getPetitionById(petitionId);
+		ru.aionknight.gameserver.model.Petition petition = DAOManager.getDAO(PetitionDAO.class).getPetitionById(petitionId);
 
 		if (petition == null)
 		{

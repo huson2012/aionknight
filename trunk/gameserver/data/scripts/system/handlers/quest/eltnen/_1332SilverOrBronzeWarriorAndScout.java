@@ -17,21 +17,22 @@
 
 package quest.eltnen;
 
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.dataholders.QuestsData;
-import org.openaion.gameserver.model.PlayerClass;
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.templates.QuestTemplate;
-import org.openaion.gameserver.model.templates.bonus.AbstractInventoryBonus;
-import org.openaion.gameserver.model.templates.bonus.CoinBonus;
-import org.openaion.gameserver.model.templates.bonus.InventoryBonusType;
-import org.openaion.gameserver.quest.HandlerResult;
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
-import org.openaion.gameserver.services.QuestService;
+
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.dataholders.QuestsData;
+import ru.aionknight.gameserver.model.PlayerClass;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.templates.QuestTemplate;
+import ru.aionknight.gameserver.model.templates.bonus.AbstractInventoryBonus;
+import ru.aionknight.gameserver.model.templates.bonus.CoinBonus;
+import ru.aionknight.gameserver.model.templates.bonus.InventoryBonusType;
+import ru.aionknight.gameserver.quest.HandlerResult;
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
+import ru.aionknight.gameserver.services.QuestService;
 
 /**
  * @author Orpheo

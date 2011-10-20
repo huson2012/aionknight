@@ -16,8 +16,8 @@
  */
 package languages;
 
-import org.openaion.gameserver.utils.i18n.CustomMessageId;
-import org.openaion.gameserver.utils.i18n.Language;
+import ru.aionknight.gameserver.utils.i18n.CustomMessageId;
+import ru.aionknight.gameserver.utils.i18n.Language;
 
 /**
  * @author blakawk

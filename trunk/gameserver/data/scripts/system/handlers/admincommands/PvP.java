@@ -1,10 +1,11 @@
 package admincommands;
 
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.services.PvPZoneService;
-import org.openaion.gameserver.services.PvpService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.services.PvPZoneService;
+import ru.aionknight.gameserver.services.PvpService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 /**
  * @author Felas , co-author Dallas, Iven, Dex

@@ -3,11 +3,12 @@ package usercommands;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.modifiers.Executor;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.UserCommand;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.modifiers.Executor;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.UserCommand;
+import ru.aionknight.gameserver.world.World;
 
 
 /**

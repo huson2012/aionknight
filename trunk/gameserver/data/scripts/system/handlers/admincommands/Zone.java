@@ -16,13 +16,14 @@
  */
 package admincommands;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.services.ZoneService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.zone.FlightZoneInstance;
-import org.openaion.gameserver.world.zone.ZoneInstance;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.services.ZoneService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.zone.FlightZoneInstance;
+import ru.aionknight.gameserver.world.zone.ZoneInstance;
 
 /**
  * @author ATracer
