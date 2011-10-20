@@ -5,7 +5,7 @@ echo Starting Aion Knight Chat Server.
 echo.
 REM -------------------------------------
 REM Default parameters for a basic server.
-java -Xms8m -Xmx32m -ea -cp ./libs/*;ae-chat-1.0.1.jar com.aionengine.chatserver.ChatServer
+java -Xms8m -Xmx32m -ea -cp ./libs/*;aion-knight_chat.jar ru.aionknight.chatserver.ChatServer
 REM
 REM -------------------------------------
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="AE-Chat" default="dist" basedir=".">
 	<description>
-      This file is part of Aion Europe  Emulator [www.aion-core.net]
+      This file is part of Aion-Knight  Emulator [www.aion-knight.ru]
 
          This is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser Public License as published by
@@ -53,10 +53,10 @@
 		</javac>
 	</target>
 	<target name="jar" depends="compile" description="Create the jar file">
-		<jar destfile="${build}/ae-chat-1.0.1.jar">
+		<jar destfile="${build}/aion-knight_chat.jar">
 			<fileset dir="${build.classes}"/>
 			<manifest>
-				<attribute name="Main-Class" value="com.aionengine.chatserver.ChatServer"/>
+				<attribute name="Main-Class" value="ru.aionknight.chatserver.ChatServer"/>
 			</manifest>
 		</jar>
 	</target>
@@ -67,7 +67,7 @@
 		<mkdir dir="${build.dist.chat}/libs"/>
 		<copy todir="${build.dist.chat}">
 			<fileset dir="${build}">
-				<include name="ae-chat-1.0.1.jar"/>
+				<include name="aion-knight_chat.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="${build.dist.chat}/libs">
@@ -85,6 +85,6 @@
 				<include name="*.*"/>
 			</fileset>
 		</copy>
-		<zip destfile="${build}/ae_chat.zip" basedir="${build.dist}"/>
+		<zip destfile="${build}/aion-knight_chat.zip" basedir="${build.dist}"/>
 	</target>
 </project>
