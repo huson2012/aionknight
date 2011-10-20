@@ -51,10 +51,10 @@
         <tstamp>
             <format property="date" pattern="yyyy-MM-dd-HH:mm"/>
         </tstamp>
-        <jar destfile="${build}/open-aion-commons.jar">
+        <jar destfile="${build}/aion-knight_commons.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
-                <attribute name="Premain-Class" value="com.aionengine.commons.callbacks.JavaAgentEnhancer"/>
+                <attribute name="Premain-Class" value="ru.aionknight.commons.callbacks.JavaAgentEnhancer"/>
                 <attribute name="Revision" value="${revision}"/>
                 <attribute name="Date" value="${date}"/>
             </manifest>
@@ -67,7 +67,7 @@
         <mkdir dir="${build.dist.commons}/config"/>
         <copy todir="${build.dist.commons}/libs">
             <fileset dir="${build}">
-                <include name="ax_commons.jar"/>
+                <include name="aion-knight_commons.jar"/>
             </fileset>
         </copy>
         <copy todir="${build.dist.commons}/libs">
@@ -82,7 +82,7 @@
             </fileset>
         </copy>
 
-        <zip destfile="${build}/open-aion-commons.zip"
+        <zip destfile="${build}/aion-knight_commons.zip"
              basedir="${build.dist.commons}" />
     </target>   
     
