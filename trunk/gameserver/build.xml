@@ -2,7 +2,7 @@
 <project name="GameServer" default="dist" basedir=".">
 	
     <description>
-		This file is part of Aion Extreme Emulator [www.aion-core.net]
+		This file is part of Aion-Knight [www.aion-knight.ru]
 
 		This is free software: you can redistribute it and/or modify
 		it under the terms of the GNU Lesser Public License as published by
@@ -68,10 +68,10 @@
 			<format property="date" pattern="yyyy-MM-dd-HH:mm" />
 		</tstamp>
 
-        <jar destfile="${build}/open-aion-game.jar">
+        <jar destfile="${build}/aion-knight_game.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
-                <attribute name="Main-Class" value="org.openaion.gameserver.GameServer"/>
+                <attribute name="Main-Class" value="ru.aionknight.gameserver.GameServer"/>
             	<attribute name="Revision" value="${revision}"/>
             	<attribute name="Date" value="${date}"/>
             </manifest>
@@ -89,7 +89,7 @@
     	
     	<copy todir="${build.dist.gs}">
             <fileset dir="${build}">
-                <include name="open-aion-game.jar"/>
+                <include name="aion-knight_game.jar"/>
 			</fileset>
         </copy>
     	
@@ -123,7 +123,7 @@
             </fileset>
         </copy>
 
-        <zip destfile="${build}/open-aion-gameserver.zip"
+        <zip destfile="${build}/aion-knight_gameserver.zip"
              basedir="${build.dist}" />
     </target>   
 
