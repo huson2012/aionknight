@@ -11,7 +11,7 @@ REM NOTE: Remove tag REM from previous line.
 
 REM -------------------------------------
 REM Default parameters for a basic server.
-java -Xms512m -Xmx1536m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;open-aion-game.jar org.openaion.gameserver.GameServer
+java -Xms512m -Xmx1536m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;open-aion-game.jar ru.aionknight.gameserver.GameServer
 REM -------------------------------------
 
 SET CLASSPATH=%OLDCLASSPATH%
