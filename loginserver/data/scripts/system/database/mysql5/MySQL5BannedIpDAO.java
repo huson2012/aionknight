@@ -12,8 +12,9 @@ import org.openaion.commons.database.DB;
 import org.openaion.commons.database.IUStH;
 import org.openaion.commons.database.ParamReadStH;
 import org.openaion.commons.database.ReadStH;
-import org.openaion.loginserver.dao.BannedIpDAO;
-import org.openaion.loginserver.model.BannedIP;
+
+import ru.aionknight.loginserver.dao.BannedIpDAO;
+import ru.aionknight.loginserver.model.BannedIP;
 
 
 /**

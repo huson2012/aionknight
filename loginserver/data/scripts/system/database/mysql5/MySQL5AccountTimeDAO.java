@@ -7,8 +7,9 @@ import java.sql.SQLException;
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DB;
 import org.openaion.commons.database.IUStH;
-import org.openaion.loginserver.dao.AccountTimeDAO;
-import org.openaion.loginserver.model.AccountTime;
+
+import ru.aionknight.loginserver.dao.AccountTimeDAO;
+import ru.aionknight.loginserver.model.AccountTime;
 
 
 /**
