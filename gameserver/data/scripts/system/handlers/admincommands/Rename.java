@@ -3,19 +3,20 @@ package admincommands;
 import java.util.Iterator;
 
 import org.openaion.commons.database.dao.DAOManager;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dao.PlayerDAO;
-import org.openaion.gameserver.model.gameobjects.player.Friend;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.modifiers.Executor;
-import org.openaion.gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_MEMBER;
-import org.openaion.gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
-import org.openaion.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import org.openaion.gameserver.services.PlayerService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.Util;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dao.PlayerDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.Friend;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.modifiers.Executor;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_MEMBER;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import ru.aionknight.gameserver.services.PlayerService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.Util;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.World;
 
 
 /**

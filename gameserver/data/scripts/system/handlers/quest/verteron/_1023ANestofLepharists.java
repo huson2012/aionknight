@@ -16,29 +16,30 @@
  */
 package quest.verteron;
 
-import org.openaion.gameserver.configs.main.CustomConfig;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.model.EmotionType;
-import org.openaion.gameserver.model.PlayerClass;
-import org.openaion.gameserver.model.gameobjects.Item;
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.stats.StatEnum;
-import org.openaion.gameserver.model.templates.quest.QuestItems;
-import org.openaion.gameserver.network.aion.SystemMessageId;
-import org.openaion.gameserver.network.aion.serverpackets.*;
-import org.openaion.gameserver.quest.HandlerResult;
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
-import org.openaion.gameserver.services.*;
-import org.openaion.gameserver.skill.SkillEngine;
-import org.openaion.gameserver.skill.model.Skill;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.world.WorldMapInstance;
-import org.openaion.gameserver.world.zone.ZoneName;
+
+import ru.aionknight.gameserver.configs.main.CustomConfig;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.model.EmotionType;
+import ru.aionknight.gameserver.model.PlayerClass;
+import ru.aionknight.gameserver.model.gameobjects.Item;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
+import ru.aionknight.gameserver.model.templates.quest.QuestItems;
+import ru.aionknight.gameserver.network.aion.SystemMessageId;
+import ru.aionknight.gameserver.network.aion.serverpackets.*;
+import ru.aionknight.gameserver.quest.HandlerResult;
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
+import ru.aionknight.gameserver.services.*;
+import ru.aionknight.gameserver.skill.SkillEngine;
+import ru.aionknight.gameserver.skill.model.Skill;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.world.WorldMapInstance;
+import ru.aionknight.gameserver.world.zone.ZoneName;
 
 import java.util.ArrayList;
 import java.util.Collections;

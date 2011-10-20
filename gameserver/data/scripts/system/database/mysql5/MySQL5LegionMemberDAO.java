@@ -24,16 +24,17 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.LegionMemberDAO;
-import org.openaion.gameserver.model.PlayerClass;
-import org.openaion.gameserver.model.legion.LegionMember;
-import org.openaion.gameserver.model.legion.LegionMemberEx;
-import org.openaion.gameserver.model.legion.LegionRank;
-import org.openaion.gameserver.services.LegionService;
+
+import ru.aionknight.gameserver.dao.LegionMemberDAO;
+import ru.aionknight.gameserver.model.PlayerClass;
+import ru.aionknight.gameserver.model.legion.LegionMember;
+import ru.aionknight.gameserver.model.legion.LegionMemberEx;
+import ru.aionknight.gameserver.model.legion.LegionRank;
+import ru.aionknight.gameserver.services.LegionService;
 
 
 /**
- * Class that that is responsible for loading/storing {@link org.openaion.gameserver.model.legion.LegionMember} object
+ * Class that that is responsible for loading/storing {@link ru.aionknight.gameserver.model.legion.LegionMember} object
  * from MySQL 5.
  * 
  * @author Simple

@@ -25,9 +25,10 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PetitionDAO;
-import org.openaion.gameserver.model.Petition;
-import org.openaion.gameserver.model.PetitionStatus;
+
+import ru.aionknight.gameserver.dao.PetitionDAO;
+import ru.aionknight.gameserver.model.Petition;
+import ru.aionknight.gameserver.model.PetitionStatus;
 
 import com.mysql.jdbc.exceptions.MySQLDataException;
 

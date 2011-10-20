@@ -23,12 +23,13 @@ import java.sql.ResultSet;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerAppearanceDAO;
-import org.openaion.gameserver.model.gameobjects.player.PlayerAppearance;
+
+import ru.aionknight.gameserver.dao.PlayerAppearanceDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.PlayerAppearance;
 
 
 /**
- * Class that is responsible for loading/storing {@link org.openaion.gameserver.model.gameobjects.player.PlayerAppearance} in mysql5
+ * Class that is responsible for loading/storing {@link ru.aionknight.gameserver.model.gameobjects.player.PlayerAppearance} in mysql5
  * 
  * @author SoulKeeper, AEJTester, srx47
  */

@@ -24,8 +24,9 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerMacrossesDAO;
-import org.openaion.gameserver.model.gameobjects.player.MacroList;
+
+import ru.aionknight.gameserver.dao.PlayerMacrossesDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.MacroList;
 
 
 /**

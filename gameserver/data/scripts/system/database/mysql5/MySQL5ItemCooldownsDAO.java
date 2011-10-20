@@ -23,9 +23,10 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.ItemCooldownsDAO;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.items.ItemCooldown;
+
+import ru.aionknight.gameserver.dao.ItemCooldownsDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.items.ItemCooldown;
 
 
 /**

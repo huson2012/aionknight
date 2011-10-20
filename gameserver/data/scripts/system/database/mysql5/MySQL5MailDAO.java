@@ -29,15 +29,16 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
 import org.openaion.commons.database.dao.DAOManager;
-import org.openaion.gameserver.dao.ItemStoneListDAO;
-import org.openaion.gameserver.dao.MailDAO;
-import org.openaion.gameserver.model.gameobjects.Item;
-import org.openaion.gameserver.model.gameobjects.Letter;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.player.Mailbox;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.gameobjects.player.PlayerCommonData;
-import org.openaion.gameserver.model.gameobjects.player.StorageType;
+
+import ru.aionknight.gameserver.dao.ItemStoneListDAO;
+import ru.aionknight.gameserver.dao.MailDAO;
+import ru.aionknight.gameserver.model.gameobjects.Item;
+import ru.aionknight.gameserver.model.gameobjects.Letter;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.player.Mailbox;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.player.PlayerCommonData;
+import ru.aionknight.gameserver.model.gameobjects.player.StorageType;
 
 
 /**

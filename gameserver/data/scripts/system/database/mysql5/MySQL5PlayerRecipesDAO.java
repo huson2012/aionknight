@@ -24,8 +24,9 @@ import java.util.HashSet;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.PlayerRecipesDAO;
-import org.openaion.gameserver.model.gameobjects.player.RecipeList;
+
+import ru.aionknight.gameserver.dao.PlayerRecipesDAO;
+import ru.aionknight.gameserver.model.gameobjects.player.RecipeList;
 
 
 /**

@@ -1,7 +1,8 @@
 package quest;
 
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
+
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
 
 
 /**

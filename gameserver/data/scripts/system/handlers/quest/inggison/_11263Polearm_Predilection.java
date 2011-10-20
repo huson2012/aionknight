@@ -16,15 +16,16 @@
  */
 package quest.inggison;
 
-import org.openaion.gameserver.model.gameobjects.Npc;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.templates.quest.QuestItems;
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
-import org.openaion.gameserver.services.ItemService;
-import org.openaion.gameserver.services.QuestService;
+
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.templates.quest.QuestItems;
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
+import ru.aionknight.gameserver.services.ItemService;
+import ru.aionknight.gameserver.services.QuestService;
 
 import java.util.Collections;
 

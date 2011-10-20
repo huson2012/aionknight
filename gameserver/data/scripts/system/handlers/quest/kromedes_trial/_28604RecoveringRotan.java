@@ -1,25 +1,26 @@
 package quest.kromedes_trial;
 
-import org.openaion.gameserver.model.gameobjects.Creature;
-import org.openaion.gameserver.model.gameobjects.Item;
-import org.openaion.gameserver.model.gameobjects.VisibleObject;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import org.openaion.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import org.openaion.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import org.openaion.gameserver.quest.HandlerResult;
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.quest.model.QuestStatus;
-import org.openaion.gameserver.services.QuestService;
-import org.openaion.gameserver.skill.SkillEngine;
-import org.openaion.gameserver.skill.model.Effect;
-import org.openaion.gameserver.skill.model.Skill;
-import org.openaion.gameserver.skill.model.SkillTemplate;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.world.zone.ZoneName;
+
+import ru.aionknight.gameserver.model.gameobjects.Creature;
+import ru.aionknight.gameserver.model.gameobjects.Item;
+import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import ru.aionknight.gameserver.quest.HandlerResult;
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.quest.model.QuestStatus;
+import ru.aionknight.gameserver.services.QuestService;
+import ru.aionknight.gameserver.skill.SkillEngine;
+import ru.aionknight.gameserver.skill.model.Effect;
+import ru.aionknight.gameserver.skill.model.Skill;
+import ru.aionknight.gameserver.skill.model.SkillTemplate;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.world.zone.ZoneName;
 
 
 public class _28604RecoveringRotan extends QuestHandler

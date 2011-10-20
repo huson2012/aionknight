@@ -1,13 +1,14 @@
 package quest.reshanta;
 
-import org.openaion.gameserver.model.EmotionType;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.quest.handlers.QuestHandler;
-import org.openaion.gameserver.quest.model.QuestCookie;
-import org.openaion.gameserver.quest.model.QuestState;
-import org.openaion.gameserver.services.TeleportService;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.world.zone.ZoneName;
+
+import ru.aionknight.gameserver.model.EmotionType;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.quest.handlers.QuestHandler;
+import ru.aionknight.gameserver.quest.model.QuestCookie;
+import ru.aionknight.gameserver.quest.model.QuestState;
+import ru.aionknight.gameserver.services.TeleportService;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.world.zone.ZoneName;
 
 
 public class _2076TheShadowSummons extends QuestHandler

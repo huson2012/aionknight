@@ -19,18 +19,19 @@ package admincommands;
 
 import java.util.Map;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.configs.main.SiegeConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.siege.Artifact;
-import org.openaion.gameserver.model.siege.Commander;
-import org.openaion.gameserver.model.siege.SiegeLocation;
-import org.openaion.gameserver.model.siege.SiegeRace;
-import org.openaion.gameserver.model.siege.SiegeType;
-import org.openaion.gameserver.services.SiegeService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.configs.main.SiegeConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.siege.Artifact;
+import ru.aionknight.gameserver.model.siege.Commander;
+import ru.aionknight.gameserver.model.siege.SiegeLocation;
+import ru.aionknight.gameserver.model.siege.SiegeRace;
+import ru.aionknight.gameserver.model.siege.SiegeType;
+import ru.aionknight.gameserver.services.SiegeService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 /**
  * @author Sarynth, Dallas 03/11

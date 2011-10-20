@@ -27,9 +27,10 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.NpcShoutsDAO;
-import org.openaion.gameserver.model.NpcShout;
-import org.openaion.gameserver.model.ShoutEventType;
+
+import ru.aionknight.gameserver.dao.NpcShoutsDAO;
+import ru.aionknight.gameserver.model.NpcShout;
+import ru.aionknight.gameserver.model.ShoutEventType;
 
 
 

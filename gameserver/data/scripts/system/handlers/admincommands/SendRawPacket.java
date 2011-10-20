@@ -22,12 +22,13 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET;
-import org.openaion.gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET.PacketElementType;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET.PacketElementType;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

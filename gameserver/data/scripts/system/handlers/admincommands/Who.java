@@ -2,12 +2,13 @@ package admincommands;
 
 import java.util.Collection;
 
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.Race;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
-import org.openaion.gameserver.world.World;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.Race;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import ru.aionknight.gameserver.world.World;
 
 
 /**

@@ -27,15 +27,16 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import org.apache.log4j.Logger;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.dataholders.SpawnsData;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.templates.WorldMapTemplate;
-import org.openaion.gameserver.model.templates.spawn.SpawnGroup;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
 import org.xml.sax.SAXException;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.dataholders.SpawnsData;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.templates.WorldMapTemplate;
+import ru.aionknight.gameserver.model.templates.spawn.SpawnGroup;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

@@ -27,16 +27,17 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import org.apache.log4j.Logger;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.dataholders.DataManager;
-import org.openaion.gameserver.dataholders.FlyRingData;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.model.templates.flyring.FlyRingTemplate;
-import org.openaion.gameserver.model.utils3d.Point3D;
-import org.openaion.gameserver.services.TeleportService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
 import org.xml.sax.SAXException;
+
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.dataholders.DataManager;
+import ru.aionknight.gameserver.dataholders.FlyRingData;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.templates.flyring.FlyRingTemplate;
+import ru.aionknight.gameserver.model.utils3d.Point3D;
+import ru.aionknight.gameserver.services.TeleportService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 import javolution.util.FastMap;
 

@@ -24,10 +24,11 @@ import java.sql.Timestamp;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.GuildDAO;
-import org.openaion.gameserver.model.gameobjects.PersistentState;
-import org.openaion.gameserver.model.gameobjects.player.Guild;
-import org.openaion.gameserver.model.gameobjects.player.Player;
+
+import ru.aionknight.gameserver.dao.GuildDAO;
+import ru.aionknight.gameserver.model.gameobjects.PersistentState;
+import ru.aionknight.gameserver.model.gameobjects.player.Guild;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
 
 
 /**

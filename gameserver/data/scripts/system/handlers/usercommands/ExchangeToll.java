@@ -19,16 +19,17 @@ package usercommands;
 
 import java.sql.Connection;
 
-import org.openaion.gameserver.configs.main.CustomConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.UserCommand;
-import org.openaion.gameserver.utils.i18n.CustomMessageId;
-import org.openaion.gameserver.utils.i18n.LanguageHandler;
-import org.openaion.gameserver.model.gameobjects.player.AbyssRank;
-import org.openaion.gameserver.model.account.Account;
-import org.openaion.gameserver.services.CashShopManager;
-import org.openaion.gameserver.network.aion.serverpackets.SM_INGAMESHOP_BALANCE;
+
+import ru.aionknight.gameserver.configs.main.CustomConfig;
+import ru.aionknight.gameserver.model.account.Account;
+import ru.aionknight.gameserver.model.gameobjects.player.AbyssRank;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_INGAMESHOP_BALANCE;
+import ru.aionknight.gameserver.services.CashShopManager;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.UserCommand;
+import ru.aionknight.gameserver.utils.i18n.CustomMessageId;
+import ru.aionknight.gameserver.utils.i18n.LanguageHandler;
 
 /**
  * Author: Geekswordsman

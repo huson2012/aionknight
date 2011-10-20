@@ -25,8 +25,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.AnnouncementsDAO;
-import org.openaion.gameserver.model.Announcement;
+
+import ru.aionknight.gameserver.dao.AnnouncementsDAO;
+import ru.aionknight.gameserver.model.Announcement;
 
 
 /**

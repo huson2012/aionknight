@@ -27,12 +27,13 @@ import org.openaion.commons.database.DB;
 import org.openaion.commons.database.DatabaseFactory;
 import org.openaion.commons.database.IUStH;
 import org.openaion.commons.database.ParamReadStH;
-import org.openaion.gameserver.ShutdownHook;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.services.TeleportService;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.ShutdownHook;
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.services.TeleportService;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

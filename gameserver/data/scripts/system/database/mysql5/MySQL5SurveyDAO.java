@@ -24,8 +24,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.gameserver.dao.SurveyDAO;
-import org.openaion.gameserver.model.gameobjects.Survey;
+
+import ru.aionknight.gameserver.dao.SurveyDAO;
+import ru.aionknight.gameserver.model.gameobjects.Survey;
 
 
 /**

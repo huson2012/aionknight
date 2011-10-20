@@ -19,14 +19,15 @@ package admincommands;
 import java.util.List;
 
 import org.openaion.commons.utils.AEInfos;
-import org.openaion.gameserver.ShutdownHook;
-import org.openaion.gameserver.ShutdownHook.ShutdownMode;
-import org.openaion.gameserver.configs.administration.AdminConfig;
-import org.openaion.gameserver.model.gameobjects.player.Player;
-import org.openaion.gameserver.utils.AEVersions;
-import org.openaion.gameserver.utils.PacketSendUtility;
-import org.openaion.gameserver.utils.ThreadPoolManager;
-import org.openaion.gameserver.utils.chathandlers.AdminCommand;
+
+import ru.aionknight.gameserver.ShutdownHook;
+import ru.aionknight.gameserver.ShutdownHook.ShutdownMode;
+import ru.aionknight.gameserver.configs.administration.AdminConfig;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.utils.AEVersions;
+import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
 
 
 /**
