@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest_scripts>
+	<!-- 47000:  [Daily] Altgard Orb-it -->
+	<item_collecting id="47000" start_npc_id="799847" end_npc_id="799864" action_item_id="700970"/>
+	<!-- 47001:  [Daily] Magical Mau-stery Tour -->
+	<monster_hunt id="47001" start_npc_id="799864">
+		<monster_infos var_id="0" max_kill="5" npc_id="210540"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210538"/>
+	</monster_hunt>
+	<!-- 47002:  [Daily] Declaw the Mau -->
+	<item_collecting id="47002" start_npc_id="799864" end_npc_id="799864"/>
+	<!-- 47003:   [Daily] A Global Problem -->
+	<report_to id="47003" start_npc_id="799864" end_npc_id="799872"/>
+	<!-- 47004:   [Daily] Raiders of the Lost Arkanis -->
+	<monster_hunt id="47004" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="212833"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="212835"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="212876"/>
+	</monster_hunt>
+	<!-- 47005:   [Daily] That's Vine and Dandy -->
+	<item_collecting id="47005" start_npc_id="799872" end_npc_id="799872"/>
+	<!-- 47006:   [Daily] Amplifiers With Issues -->
+	<report_to id="47006" start_npc_id="799872" end_npc_id="799872"/>
+	<!-- 47007:   [Daily] Mashing the Mist Mane -->
+	<monster_hunt id="47007" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="5" npc_id="211612"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212736"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212741"/>
+	</monster_hunt>
+	<!-- 47008:   [Daily] Corrupt Chairman -->
+	<monster_hunt id="47007" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="212879"/>
+	</monster_hunt>
+	<!-- 47100:  [Daily] Wards and Ward Orbs -->
+	<item_collecting id="47100" start_npc_id="799874" end_npc_id="799881" action_item_id="700970"/>
+	<!-- 47101:   [Daily] Physician, Kill Thyself -->
+	<monster_hunt id="47101" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="5" npc_id="210538"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210540"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211282"/>
+	</monster_hunt>
+	<!-- 47102:   [Daily] A Guide to Killing Mau -->
+	<monster_hunt id="47102" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="8" npc_id="210549"/>
+		<monster_infos var_id="0" max_kill="8" npc_id="210559"/>
+		<monster_infos var_id="0" max_kill="8" npc_id="210562"/>
+	</monster_hunt>
+	<!-- 47103:  [Daily] A Globe-Trotting Lesson -->
+	<report_to id="47103" start_npc_id="799872" end_npc_id="799921"/>
+	<!-- 47104:   [Daily] Spirits in the Sky Temple -->
+	<monster_hunt id="47004" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="212833"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="212835"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="212876"/>
+	</monster_hunt>
+	<!-- 47105:   [Daily] Thawing the Ice Claw -->
+	<monster_hunt id="47105" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="5" npc_id="212672"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212673"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212669"/>
+	</monster_hunt>
+	<!-- 47106:  [Daily] Turning Up the Amplifiers -->
+	<report_to id="47106" start_npc_id="799872" end_npc_id="799921"/>
+	<!-- 47107:  [Daily] Wards and Ward Orbs -->
+	<item_collecting id="47107" start_npc_id="799872" end_npc_id="799881" action_item_id="700970"/>
+	<!-- 47108:  [Daily] Physician, Kill Thyself  -->
+	<monster_hunt id="47108" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="5" npc_id="210538"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210540"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211282"/>
+	</monster_hunt>
+	<!-- 47109:   [Daily] A Guide to Killing Mau -->
+	<monster_hunt id="47109" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="8" npc_id="210549"/>
+		<monster_infos var_id="0" max_kill="8" npc_id="210559"/>
+		<monster_infos var_id="0" max_kill="8" npc_id="210562"/>
+	</monster_hunt>
+	<!-- 47110:  [Daily] A Globe-Trotting Lesson -->
+	<report_to id="47110" start_npc_id="799872" end_npc_id="799921"/>
+	<!-- 47111:  [Daily] Spirits in the Sky Temple -->
+	<monster_hunt id="47004" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="212833"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="212835"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="212876"/>
+	</monster_hunt>
+	<!-- 47112:   [Daily] Mau Tribute-ary  -->
+	<item_collecting id="47112" start_npc_id="799872" end_npc_id="799921" action_item_id="700975"/>
+	<!-- 47113:   [Daily] Turning Up the Amplifiers -->
+	<item_collecting id="47113" start_npc_id="799872" end_npc_id="799921" action_item_id="700975"/>
+	<!-- 47114:   [Weekly] Leading the Anti-Mau Charge  -->
+	<monster_hunt id="47114" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="5" npc_id="211612"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212736"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212741"/>
+	</monster_hunt>
+	<!-- 47115:   [Weekly] The Chairman Has the Floor -->
+	<monster_hunt id="47115" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="212879"/>
+	</monster_hunt>
+	<!-- 47116:   [Weekly] Deathsinging a Deathsong -->
+	<monster_hunt id="47116" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="213741"/>
+	</monster_hunt>
+	<!-- 47117:  [Weekly] Bakarma Brouhaha -->
+	<monster_hunt id="47117" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="9" npc_id="213628"/>
+		<monster_infos var_id="0" max_kill="9" npc_id="213652"/>
+		<monster_infos var_id="0" max_kill="9" npc_id="213670"/>
+		<monster_infos var_id="0" max_kill="9" npc_id="213663"/>
+	</monster_hunt>
+	<!-- 47118:  [Weekly] Lepharist Crackdown -->
+	<monster_hunt id="47118" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="6" npc_id="213534"/>
+		<monster_infos var_id="0" max_kill="6" npc_id="213529"/>
+		<monster_infos var_id="0" max_kill="6" npc_id="213531"/>
+		<monster_infos var_id="0" max_kill="6" npc_id="213537"/>
+	</monster_hunt>
+	<!-- 47119:  [Weekly] Strengthening the Alliance -->
+	<monster_hunt id="47119" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="7" npc_id="213299"/>
+		<monster_infos var_id="0" max_kill="7" npc_id="213301"/>
+		<monster_infos var_id="0" max_kill="7" npc_id="213312"/>
+		<monster_infos var_id="0" max_kill="7" npc_id="213698"/>
+	</monster_hunt>
+	<!-- 47120:   [Weekly] Bloody Pirates! -->
+	<monster_hunt id="47120" start_npc_id="799872">
+		<monster_infos var_id="0" max_kill="1" npc_id="215069"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="215070"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="215081"/>
+	</monster_hunt>
+</quest_scripts>

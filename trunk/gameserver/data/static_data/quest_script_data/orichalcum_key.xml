@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest_scripts>
+	<!-- 37000:   [Daily] Toxic Instruction -->
+	<item_collecting id="37000" start_npc_id="799813" end_npc_id="799835" action_item_id="700967"/>
+	<!-- 37001:  [Daily] A Tursin's Fickle Flame -->
+	<item_collecting id="37001" start_npc_id="799835" end_npc_id="799835"/>
+	<!-- 37002:  [Daily] Elite (Homework) Assignment -->
+	<monster_hunt id="37002" start_npc_id="799835">
+		<monster_infos var_id="0" max_kill="5" npc_id="210168"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210179"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210180"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210185"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210694"/>
+	</monster_hunt>
+	<!-- 37003:  [Daily] Camouflage Killers -->
+	<monster_hunt id="37003" start_npc_id="799836">
+		<monster_infos var_id="0" max_kill="5" npc_id="217169"/>
+	</monster_hunt>
+	<!-- 37004:  [Daily] Eracus Purification -->
+	<monster_hunt id="37004" start_npc_id="799836">
+		<monster_infos var_id="0" max_kill="5" npc_id="211786"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211785"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211784"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211781"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211783"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211782"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211787"/>
+	</monster_hunt>
+	<!-- 37005:  [Daily] Kaidan Treasure -->
+	<item_collecting id="37005" start_npc_id="799836" end_npc_id="799836"/>
+	<!-- 37006:  [Daily] Now You See Them -->
+	<monster_hunt id="37003" start_npc_id="799836">
+		<monster_infos var_id="0" max_kill="5" npc_id="217171"/>
+	</monster_hunt>
+	<!-- 37007:   [Daily] Lost Leaders -->
+	<monster_hunt id="37007" start_npc_id="799836">
+		<monster_infos var_id="0" max_kill="5" npc_id="212025"/>
+	</monster_hunt>
+	<!-- 37008:  [Daily] Oh Behave A Lepharist Quest -->
+	<item_collecting id="37008" start_npc_id="799836" end_npc_id="799836"/>
+	<!-- 37100:  [Daily] Mutant Ninja Ininas -->
+	<item_collecting id="37008" start_npc_id="799895" end_npc_id="799901" action_item_id="700967"/>
+	<!-- 37101:  [Daily] No Bad Deed -->
+	<monster_hunt id="37101" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="210165"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210166"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210167"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210170"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210175"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210177"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210183"/>
+	</monster_hunt>
+	<!-- 37102:  [Daily] Spare the Krall Never -->
+	<monster_hunt id="37102" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="210168"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210179"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210180"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210185"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210694"/>
+	</monster_hunt>
+	<!-- 37103:  [Daily] Camo and Carnage -->
+	<monster_hunt id="37103" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="217169"/>
+	</monster_hunt>
+	<!-- 37104:  [Daily] Rookies for Restoration -->
+	<monster_hunt id="37104" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="211786"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211785"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211784"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211781"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211783"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211782"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211787"/>
+	</monster_hunt>
+	<!-- 37105:  [Daily] Krall Disciplinary  -->
+	<monster_hunt id="37105" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="212058"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212060"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212064"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212066"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212068"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212070"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212074"/>
+	</monster_hunt>
+	<!-- 37106:  [Daily] Asmo Hunt -->
+	<monster_hunt id="37106" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="217171"/>
+	</monster_hunt>
+	<!-- 37107:   [Daily] Cool, Blue Water -->
+	<item_collecting id="37107" start_npc_id="799895" end_npc_id="799901" action_item_id="700967"/>
+	<!-- 37108:   [Daily] No Bad Deed... -->
+	<monster_hunt id="37108" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="210165"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210166"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210167"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210170"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210175"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210177"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210183"/>
+	</monster_hunt>
+	<!-- 37109:   [Daily] Spare the Krall? Never! -->
+	<monster_hunt id="37109" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="210168"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210179"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210180"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210185"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="210694"/>
+	</monster_hunt>
+	<!-- 37110:   [Daily] My Young Apprentice -->
+	<monster_hunt id="37110" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="217169"/>
+	</monster_hunt>
+	<!-- 37111:   [Daily] Rookies for Restoration -->
+	<monster_hunt id="37111" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="211786"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211785"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211784"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211781"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211783"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211782"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211787"/>
+	</monster_hunt>
+	<!-- 37112:  [Daily] Krall Disciplinary -->
+	<monster_hunt id="37112" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="212058"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212060"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212064"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212066"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212068"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212070"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212074"/>
+	</monster_hunt>
+	<!-- 37113: TODO:  [Daily] Asmo ICU -->
+	<monster_hunt id="37113" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="217171"/>
+	</monster_hunt>
+	<!-- 37114:   [Weekly] Interception and Bribery -->
+	<item_collecting id="37114" start_npc_id="799895" end_npc_id="799906" action_item_id="700974"/>
+	<!-- 37115:  [Weekly] Lephies on the Loose -->
+	<monster_hunt id="37115" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="211023"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211013"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211031"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211024"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211012"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211030"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211025"/>
+	</monster_hunt>
+	<!-- 37116:   [Weekly] The Only Mentor in Town -->
+	<monster_hunt id="37116" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="211179"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212235"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211180"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212236"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212237"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212239"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212240"/>
+	</monster_hunt>
+	<!-- 37117:   [Weekly] Indratu in da Field -->
+	<monster_hunt id="37117" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="213968"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211258"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="211256"/>
+	</monster_hunt>
+	<!-- 37118:   [Weekly] Balaur Boogeyman -->
+	<monster_hunt id="37118" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="700220"/>
+	</monster_hunt>
+	<!-- 37119:   [Weekly] Dead Daevas are Deadly -->
+	<monster_hunt id="37119" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="5" npc_id="212589"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212592"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212594"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212596"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212600"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212603"/>
+		<monster_infos var_id="0" max_kill="5" npc_id="212608"/>
+	</monster_hunt>
+	<!-- 37120:  [Weekly] Steely Resolve -->
+	<monster_hunt id="37120" start_npc_id="799895">
+		<monster_infos var_id="0" max_kill="1" npc_id="215069"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="215070"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="215081"/>
+	</monster_hunt>
+</quest_scripts>
