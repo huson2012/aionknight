@@ -22,10 +22,15 @@ import javax.xml.bind.annotation.XmlType;
 
 
 import ru.aionknight.gameserver.model.gameobjects.Creature;
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
 import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
+import ru.aionknight.gameserver.controllers.movement.MovementType;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_MOVE;
 import ru.aionknight.gameserver.network.aion.serverpackets.SM_TARGET_IMMOBILIZE;
+import ru.aionknight.gameserver.geo.GeoEngine;
 import ru.aionknight.gameserver.skill.model.Effect;
 import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.world.World;
 
 
 
@@ -60,6 +65,8 @@ public class FearEffect extends EffectTemplate
 		obj.getEffectController().setAbnormal(EffectId.FEAR.getEffectId());
 		PacketSendUtility.broadcastPacketAndReceive(obj, new SM_TARGET_IMMOBILIZE(obj));
 		obj.getController().stopMoving();
+		obj.getMoveController().setNewDirection(obj.getX()+20, obj.getY()+20, obj.getZ());
+		obj.getMoveController().schedule();
 	}
 	
 	@Override

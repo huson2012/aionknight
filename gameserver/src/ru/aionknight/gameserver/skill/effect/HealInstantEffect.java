@@ -20,6 +20,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import ru.aionknight.gameserver.skill.model.Effect;
 import ru.aionknight.gameserver.skill.model.HealType;
 
@@ -38,6 +40,12 @@ public class HealInstantEffect
 	public void applyEffect(Effect effect)
 	{
 		super.applyEffect(effect,HealType.HP);
+		if((effect.getSkillId() == 1788 || effect.getSkillId() == 1771) && effect.getEffector() instanceof Player)
+		{
+		    // give 30% of maxPM to effector
+		    Player player = (Player)effect.getEffector();
+		    player.getLifeStats().increaseMp(TYPE.MP, (player.getLifeStats().getMaxMp()/100)*(effect.getSkillId() == 1788 ? 30 : 25));
+		}
 	}
 
 	@Override

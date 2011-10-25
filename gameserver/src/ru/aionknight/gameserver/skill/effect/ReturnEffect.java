@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
 import ru.aionknight.gameserver.model.gameobjects.player.Player;
 import ru.aionknight.gameserver.services.TeleportService;
 import ru.aionknight.gameserver.skill.model.Effect;
+import ru.aionknight.gameserver.world.World;
 
 
 /**
@@ -37,8 +38,16 @@ public class ReturnEffect extends EffectTemplate
 
 	@Override
 	public void applyEffect(Effect effect)
-	{
-		TeleportService.moveToBindLocation((Player) effect.getEffector(), true, 500);
+	{	
+if(effect.getEffected() instanceof Player){
+		if(effect.getEffected().getWorldId() == 300200000)
+			return;
+		else if(effect.getEffected().getWorldId() == 310100000)
+		return;
+		else if(effect.getEffected().getWorldId() == 300030000)
+		return;
+     }
+		TeleportService.moveToBindLocation((Player) effect.getEffected(), true, 500);
 	}
 
 	@Override

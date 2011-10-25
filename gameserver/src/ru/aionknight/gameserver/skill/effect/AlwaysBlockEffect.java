@@ -58,7 +58,7 @@ public class AlwaysBlockEffect extends EffectTemplate
 				{
 					effect.endEffect();
 				}
-				else if(status == AttackStatus.BLOCK && value > 1)
+				else if(status == AttackStatus.BLOCK && value >= 1)
 				{
 					value -= 1;
 				}

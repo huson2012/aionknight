@@ -324,6 +324,11 @@ public abstract class EffectTemplate
 						return;
 
 					break;
+				case MAGICAL:
+					//compute magical resist rate
+					if(Rnd.get( 0, 100 ) < StatFunctions.calculateMagicalResistRate(effect.getEffector(), effect.getEffected(), accMod))
+						return;
+					break;
 				default:
 					//compute magical resist rate
 					if(Rnd.get( 0, 100 ) < StatFunctions.calculateMagicalResistRate(effect.getEffector(), effect.getEffected(), accMod))

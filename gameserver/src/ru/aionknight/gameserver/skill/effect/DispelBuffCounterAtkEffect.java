@@ -25,6 +25,7 @@ import ru.aionknight.gameserver.skill.model.Effect;
 import ru.aionknight.gameserver.skill.model.SkillTargetSlot;
 
 
+
 /**
  * @author ViAl
  *
@@ -46,6 +47,7 @@ public class DispelBuffCounterAtkEffect extends DamageEffect
 	@Override
 	public void calculate(Effect effect)
 	{
+
 		i = 0;
 		for (Effect ef : effect.getEffected().getEffectController().getAbnormalEffects())
 		{
@@ -56,7 +58,7 @@ public class DispelBuffCounterAtkEffect extends DamageEffect
 				i++;
 			}
 		}
-		
+	
 		int newValue = 0;
 		if (i == 1)
 			newValue = value;
@@ -67,7 +69,7 @@ public class DispelBuffCounterAtkEffect extends DamageEffect
 				
 		AttackUtil.calculateMagicalSkillAttackResult(effect, valueWithDelta, getElement(), applyActionModifiers(effect), true);
 		
-		super.calculate(effect, DamageType.MAGICAL, false);
+           super.calculate(effect, DamageType.MAGICAL, false);
 	}
 
 }

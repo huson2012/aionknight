@@ -26,6 +26,7 @@ import ru.aionknight.gameserver.controllers.movement.ActionObserver.ObserverType
 import ru.aionknight.gameserver.model.gameobjects.Creature;
 import ru.aionknight.gameserver.model.gameobjects.player.Player;
 import ru.aionknight.gameserver.skill.model.Effect;
+import ru.aionknight.gameserver.world.World;
 
 
 /**
@@ -57,6 +58,12 @@ public class ResurrectBaseEffect extends BufEffect
 				{
 					if(creature instanceof Player)
 					{
+		if(creature.getWorldId() == 300200000)
+		return;
+		else if(creature.getWorldId() == 310100000)
+		return;
+		else if(creature.getWorldId() == 300030000)
+		return;
 						((Player) creature).getReviveController().kiskRevive();
 					}
 				}

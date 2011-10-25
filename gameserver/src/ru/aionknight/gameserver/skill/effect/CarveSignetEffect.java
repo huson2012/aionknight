@@ -94,6 +94,10 @@ public class CarveSignetEffect extends DamageEffect
 
 		else
 	    effect.setCarvedSignet(nextSignetlvl);
+
+		if(effect.getSkillId() == 2280){
+			effect.setCarvedSignet(5);
+		}
 		
 		super.calculate(effect, DamageType.PHYSICAL, true);
 				
