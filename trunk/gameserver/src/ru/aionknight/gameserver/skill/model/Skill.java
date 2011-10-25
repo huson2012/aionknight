@@ -758,7 +758,7 @@ public class Skill
 			if (range != 0 && effectedList != null && effectedList.size() > 0)
 			{
 				//tolerance
-				range += 1.5f;//maybe need fix?
+				range += 3.0f;//maybe need fix?
 				if (targetType == 1)
 				{
 					for(Iterator<CreatureWithDistance> iter = effectedList.iterator(); iter.hasNext();)

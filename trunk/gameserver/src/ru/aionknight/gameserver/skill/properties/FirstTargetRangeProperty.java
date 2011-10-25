@@ -26,6 +26,11 @@ import org.apache.log4j.Logger;
 import ru.aionknight.gameserver.geo.GeoEngine;
 import ru.aionknight.gameserver.model.gameobjects.Creature;
 import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.gameobjects.Npc;
+import ru.aionknight.gameserver.model.gameobjects.Summon;
+import ru.aionknight.gameserver.model.gameobjects.Servant;
+import ru.aionknight.gameserver.model.gameobjects.Trap;
+import ru.aionknight.gameserver.model.gameobjects.NpcWithCreator;
 import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
 import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import ru.aionknight.gameserver.skill.model.Skill;
@@ -85,14 +90,16 @@ public class FirstTargetRangeProperty extends Property
 		{
 			if (effector instanceof Player)
 				PacketSendUtility.sendPacket((Player) effector, SM_SYSTEM_MESSAGE.STR_ATTACK_TOO_FAR_FROM_TARGET());
-			return false;
+			return true;
 		}
 
 		if (!GeoEngine.getInstance().canSee(effector, firstTarget))
 		{
-			if (effector instanceof Player)
+			if ((effector instanceof Summon) || (effector instanceof Servant) || (effector instanceof Trap) || (effector instanceof NpcWithCreator))
+                {
 				PacketSendUtility.sendPacket((Player) effector, SM_SYSTEM_MESSAGE.STR_SKILL_OBSTACLE);
-			return false;
+			return true;
+			}
 		}
 		return true;
 	}

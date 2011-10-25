@@ -144,6 +144,12 @@ public class PlayerController extends CreatureController<Player>
 			GroupGate groupgate = ((GroupGate) object);
 			PacketSendUtility.sendPacket(getOwner(), new SM_NPC_INFO(getOwner(), groupgate));
 		}
+		else if(object instanceof Trap)
+		{
+		    Trap trap = ((Trap) object);
+		    if(getOwner().getObjectId() == trap.getMaster().getObjectId())
+		        PacketSendUtility.sendPacket(getOwner(), new SM_NPC_INFO(trap, getOwner()));
+		}
 		else if(object instanceof Npc)
 		{
 			boolean update = false;

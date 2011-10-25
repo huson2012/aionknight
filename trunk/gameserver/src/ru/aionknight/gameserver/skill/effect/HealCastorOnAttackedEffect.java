@@ -26,6 +26,9 @@ import ru.aionknight.gameserver.controllers.movement.ActionObserver;
 import ru.aionknight.gameserver.controllers.movement.ActionObserver.ObserverType;
 import ru.aionknight.gameserver.model.gameobjects.Creature;
 import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import ru.aionknight.gameserver.model.alliance.PlayerAlliance;
+import ru.aionknight.gameserver.controllers.PlayerController;
+import ru.aionknight.gameserver.model.alliance.PlayerAllianceMember;
 import ru.aionknight.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import ru.aionknight.gameserver.skill.model.Effect;
 import ru.aionknight.gameserver.utils.MathUtil;
@@ -76,14 +79,12 @@ public class HealCastorOnAttackedEffect extends EffectTemplate
 				{
 					for (Player p : player.getPlayerGroup().getMembers())
 					{
-						if (MathUtil.isIn3dRange(effect.getEffected(),p,5.0f))
+						if ((MathUtil.isIn3dRange(effect.getEffected(),p,5.0f)) && (!p.getController().isDueling(p)))
 							p.getLifeStats().increaseHp(TYPE.HP, valueWithDelta, effect.getSkillId(), 3);
 					}
 				}
-				//TODO alliance
-				else
-				{
-					if (MathUtil.isIn3dRange(effect.getEffected(),player,5.0f))
+                 else if ((MathUtil.isIn3dRange(effect.getEffected(),player,5.0f)) && !player.getController().isDueling(player))
+                     {
 						player.getLifeStats().increaseHp(TYPE.HP, valueWithDelta, effect.getSkillId(), 3);
 				}
 			}

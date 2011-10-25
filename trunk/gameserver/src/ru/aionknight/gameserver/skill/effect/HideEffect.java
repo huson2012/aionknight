@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
+import ru.aionknight.gameserver.model.TaskId;
 import ru.aionknight.gameserver.controllers.movement.ActionObserver;
 import ru.aionknight.gameserver.controllers.movement.ActionObserver.ObserverType;
 import ru.aionknight.gameserver.model.gameobjects.Creature;
@@ -32,6 +32,7 @@ import ru.aionknight.gameserver.skill.model.Effect;
 import ru.aionknight.gameserver.skill.model.Skill;
 import ru.aionknight.gameserver.skill.model.SkillTargetSlot;
 import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.world.World;
 
 
 /**
@@ -98,7 +99,15 @@ public class HideEffect extends BufEffect
 	{
 		super.startEffect(effect);
 		
-		final Creature effected = effect.getEffected();
+		final Creature effected = effect.getEffected();	
+            if(effected instanceof Player){
+		if(effected.getWorldId() == 300200000)
+			return;
+		else if(effected.getWorldId() == 310100000)
+		return;
+		else if(effected.getWorldId() == 300030000)
+		return;
+           }
 		effect.setAbnormal(EffectId.INVISIBLE_RELATED.getEffectId());
 		effected.getEffectController().setAbnormal(EffectId.INVISIBLE_RELATED.getEffectId());
 

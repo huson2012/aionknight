@@ -36,6 +36,7 @@ import ru.aionknight.gameserver.model.templates.stats.NpcRank;
 import ru.aionknight.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
 import ru.aionknight.gameserver.skill.effect.EffectId;
 import ru.aionknight.gameserver.utils.PacketSendUtility;
+import ru.aionknight.gameserver.model.PlayerClass;
 
 
 /**
@@ -457,7 +458,7 @@ public class StatFunctions
 		}
 		
 		if(Rnd.get(0, 100) < 25)
-			damage *= (dualEffect * 0.01f);
+			damage *= (dualEffect * 0.007f);
 
 		// physical defense
 		damage -= Math.round(attacked.getGameStats().getCurrentStat(StatEnum.PHYSICAL_DEFENSE) * 0.10f);
@@ -537,6 +538,43 @@ public class StatFunctions
 
 		return multipler;
 	}
+	public static float calculatePvPMultipler(Player cls)
+	{
+		//FIXME: to correct formula, have any reference?
+		float multipler;
+		switch(cls.getCommonData().getPlayerClass()) 
+		{
+			case GLADIATOR: 
+				multipler = 0.9f;
+				break;
+			case TEMPLAR: 
+				multipler = 0.9f;
+				break;
+			case ASSASSIN:
+				multipler = 1.05f;
+				break;
+			case RANGER: 
+				multipler = 0.9f;
+				break;
+			case SORCERER: 
+				multipler = 1f;
+				break;
+			case SPIRIT_MASTER: 
+				multipler = 1f;
+				break;
+			case CLERIC: 
+				multipler = 1f;
+				break;
+			case CHANTER: 
+				multipler = 1f;
+				break;
+			default: 
+				multipler = 1f;
+		}
+ 
+		return multipler;
+	}
+	
 
 	/**
 	 *  Calculates DODGE chance
@@ -551,9 +589,8 @@ public class StatFunctions
 		//check attack status = BLIND
 		if (attacker.getObserveController().checkAttackerStatus(AttackStatus.DODGE))
 			return 100;
-		//check always dodge
-		if(attacked.getObserveController().checkAttackStatus(AttackStatus.DODGE))
-			return 100;
+		if(attacker.getEffectController().isAbnormalSet(EffectId.BLIND))
+		    return 100;
 		if(attacker.getEffectController().isAbnormalSet(EffectId.BLIND))
 		    return 100;			
 		int accurancy;
@@ -722,6 +759,8 @@ public class StatFunctions
 	{		
 		if(attacked.getObserveController().checkAttackStatus(AttackStatus.RESIST))
 			return 100;
+		//if(attacker.getEffectController().isAbnormalSet(EffectId.BLIND))
+	       //  return 100;			
 		
 		int stat_res = attacked.getGameStats().getCurrentStat(StatEnum.MAGICAL_RESIST);
 		int stat_acc = attacker.getGameStats().getCurrentStat(StatEnum.MAGICAL_ACCURACY);

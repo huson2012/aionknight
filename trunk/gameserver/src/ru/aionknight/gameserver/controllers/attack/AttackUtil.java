@@ -34,11 +34,14 @@ import ru.aionknight.gameserver.model.gameobjects.Summon;
 import ru.aionknight.gameserver.model.gameobjects.player.Player;
 import ru.aionknight.gameserver.model.gameobjects.stats.CreatureGameStats;
 import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
+import ru.aionknight.gameserver.model.gameobjects.Servant;
+import ru.aionknight.gameserver.model.gameobjects.Trap;
 import ru.aionknight.gameserver.model.siege.Influence;
 import ru.aionknight.gameserver.model.templates.item.WeaponType;
 import ru.aionknight.gameserver.skill.model.Effect;
 import ru.aionknight.gameserver.skill.model.SkillTemplate;
 import ru.aionknight.gameserver.utils.stats.StatFunctions;
+
 
 
 /**
@@ -422,17 +425,21 @@ public class AttackUtil
 			{
 				case 1:
 					if (randomChance <= 40)
-						damage /= 2;
+						damage /= 2f;
 					else if (randomChance <= 70)
-						damage *= 1.5;
+						damage *= 1.5f;
 					break;
 				case 2:
 					if (randomChance <= 25)
-						damage *= 3;
+						damage *= 3f;
+					break;
+				case 3:
+					if (randomChance <= 70)
+						damage *= 1.5f;
 					break;
 				case 6:
 					if (randomChance <= 30)
-						damage *= 2;
+						damage *= 2f;
 					break;
 				//TODO rest of the cases
 				default:
@@ -444,6 +451,9 @@ public class AttackUtil
 		if (damage <= 0)
 			damage = 1;
 		
+		if (CustomConfig.CRITICAL_EFFECTS && status == AttackStatus.CRITICAL)
+			launchEffectOnCritical((Player)effector,effected);
+			
 		calculateEffectResult(effect, effected, damage, status);
 	}
 
@@ -649,14 +659,13 @@ public class AttackUtil
 
 		//PVP damages is capped at 50% of the actual baseDamage
 		//http://www.aionsource.com/topic/123367-base-pvp-damage-reduction
-		else if((attacker instanceof Summon	|| attacker instanceof Player 
-			|| attacker instanceof NpcWithCreator) 
+		else if((attacker instanceof Player)
 			&& (target instanceof Player || target instanceof Summon)) 
 		{
 			baseDamages = Math.round(baseDamages * 0.60f);
 			float pvpAttackBonus = attacker.getGameStats().getCurrentStat(StatEnum.PVP_ATTACK_RATIO) * 0.001f;
 			float pvpDefenceBonus = target.getGameStats().getCurrentStat(StatEnum.PVP_DEFEND_RATIO) * 0.001f;
-			baseDamages = Math.round(baseDamages * (1 + pvpAttackBonus - pvpDefenceBonus));
+			baseDamages = Math.round((baseDamages * (1 + pvpAttackBonus - pvpDefenceBonus)) * StatFunctions.calculatePvPMultipler((Player)attacker));
 			
 			/**
 			 * Blessing of Azphel/Triniel
@@ -714,6 +723,14 @@ public class AttackUtil
 			}
 				
 		}
+		else if((attacker instanceof Summon) || (attacker instanceof Servant) || (attacker instanceof Trap) || (attacker instanceof NpcWithCreator)
+			&& (target instanceof Player || target instanceof Summon)) {
+			baseDamages = Math.round(baseDamages * 0.60f);
+			float pvpAttackBonus = attacker.getGameStats().getCurrentStat(StatEnum.PVP_ATTACK_RATIO) * 0.001f;
+			float pvpDefenceBonus = target.getGameStats().getCurrentStat(StatEnum.PVP_DEFEND_RATIO) * 0.001f;
+			baseDamages = Math.round(baseDamages * (1 + pvpAttackBonus - pvpDefenceBonus));
+			}
+
 
 		return baseDamages;
 
@@ -741,7 +758,7 @@ public class AttackUtil
 		if (template == null)
 			return;
 		
-		if (Rnd.get(100) > 15)//hardcoded 15% chance
+		if (Rnd.get(100) > 10)//hardcoded 15% chance
 			return;
 		
 		Effect e = new Effect(attacker, attacked, template, template.getLvl(), template.getEffectsDuration());
