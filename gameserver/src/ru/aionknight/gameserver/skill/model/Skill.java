@@ -416,7 +416,7 @@ public class Skill
 			return;
 		
 		//remove item if it was used through SkillUseAction
-		if (skillType == SkillType.ITEM && this.itemObjectId != 0 && effector instanceof Player)
+		if (skillType == SkillType.ITEM && this.itemObjectId != 0 && !this.itemTemplate.IsArena().booleanValue() && effector instanceof Player)
 		{
 			if(!((Player)effector).getInventory().removeFromBagByObjectId(itemObjectId, 1))
 				return;

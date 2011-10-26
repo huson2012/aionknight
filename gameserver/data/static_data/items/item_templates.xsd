@@ -101,6 +101,7 @@
 		<xs:attribute name="world_drop" type="xs:boolean" default="false" />
 		<xs:attribute name="doping" type="xs:boolean" default="false" />
 		<xs:attribute name="custom_item_type" type="itemCustomType" default="NONE" />
+		<xs:attribute name="arena" type="xs:boolean" default="false" />
 	</xs:complexType>
 	
 	<xs:simpleType name="itemCustomType">
@@ -146,6 +147,8 @@
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="skilluse" type="SkillUseAction"
 				minOccurs="0" maxOccurs="1" />
+			<xs:element name="arenaskilluse" type="ArenaSkillUseAction"
+				minOccurs="0" maxOccurs="1" />
 			<xs:element name="enchant" type="EnchantItemAction"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="queststart" type="QuestStartAction"
@@ -185,6 +188,15 @@
 	</xs:complexType>
 
 	<xs:complexType name="SkillUseAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="skillid" type="xs:int" />
+				<xs:attribute name="level" type="xs:int" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ArenaSkillUseAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
 				<xs:attribute name="skillid" type="xs:int" />
