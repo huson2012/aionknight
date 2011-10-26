@@ -88,41 +88,41 @@ public class _1043BalaurConspiracy extends QuestHandler
 				{
 					case 26:
 						if(var == 0)
-							return sendQuestDialog(env, 1011);
+					return sendQuestDialog(env, 1011);
 					case 10000:
 						if(var == 0)
 						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
-							return sendQuestDialog(env, 0);
+					return sendQuestDialog(env, 0);
 						}
 					default:
-						return false;
+					return false;
 				}
 			case 204020:
 				switch( env.getDialogId() )
 				{
 					case 26:
 						if(var == 1)
-							return sendQuestDialog(env, 1352);
+					return sendQuestDialog(env, 1352);
 					case 10001:
 						if(var == 1)
 						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
-							return sendQuestDialog(env, 0);
+					return sendQuestDialog(env, 0);
 						}
 					default:
-						return false;
+			return false;
 				}
 			case 204044:
 				switch( env.getDialogId() )
 				{
 					case 26:
 						if(var == 2)
-							return sendQuestDialog(env, 1693);
+					return sendQuestDialog(env, 1693);
 						else if(var == 4)
-							return sendQuestDialog(env, 2034);
+					return sendQuestDialog(env, 2034);
 					case 10002:
 						if(var == 2 && player.getPlayerGroup() != null)
 						{
@@ -209,7 +209,7 @@ public class _1043BalaurConspiracy extends QuestHandler
 										updateParty(player, -1, 0, env);
 								}
 							}, 240000);
-							return sendQuestDialog(env, 0);
+					return true;
 						}
 					case 10003:
 						if(var == 4)
@@ -217,10 +217,10 @@ public class _1043BalaurConspiracy extends QuestHandler
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 			  			    TeleportService.teleportTo(player, 210020000, 1, 263.41736f, 2794.24070f, 272.61414f, (byte) 77, 0);
-							return sendQuestDialog(env, 0);
+					return sendQuestDialog(env, 0);
 						}
 					default:
-						return false;
+					return false;
 				}
 			case 700177:
 				if(var == 2 && player.getPlayerGroup() != null)
@@ -248,12 +248,12 @@ public class _1043BalaurConspiracy extends QuestHandler
 							TeleportService.teleportTo(player, 310040000, instanceId,(float) 274.51,(float) 168.6,(float) 204.3, 0);
 						}
 					}, 3000);
-					return false;
+			return false;
 				}
 				else if (var == 2 && player.getPlayerGroup() == null)//TODO: find proper message, just temp fix
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ENTER_ONLY_PARTY_DON);
 				default:
-					return false;
+			return false;
 		}
 	}
 	
