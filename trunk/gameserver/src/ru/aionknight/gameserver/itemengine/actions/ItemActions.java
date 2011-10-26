@@ -37,6 +37,7 @@ public class ItemActions {
 		@XmlElement(name = "skilllearn", type = SkillLearnAction.class),
 		@XmlElement(name = "extract", type = ExtractAction.class),
 		@XmlElement(name = "skilluse", type = SkillUseAction.class),
+		@XmlElement(name = "arenaskilluse", type=ArenaSkillUseAction.class),
 		@XmlElement(name = "enchant", type = EnchantItemAction.class),
 		@XmlElement(name = "queststart", type = QuestStartAction.class),
 		@XmlElement(name = "dye", type = DyeAction.class),
@@ -101,6 +102,18 @@ public class ItemActions {
 				result.add((SkillUseAction)action);
 		return result;
 	}
+
+    public List<ArenaSkillUseAction> getArenaSkillUseActions()
+    {
+        List<ArenaSkillUseAction> result = new ArrayList<ArenaSkillUseAction>();
+        if (itemActions == null)
+            return result;
+
+        for(AbstractItemAction action : itemActions)
+            if(action instanceof ArenaSkillUseAction)
+                result.add((ArenaSkillUseAction)action);
+        return result;
+    }
 
 	public List<EnchantItemAction> getEnchantActions()
 	{

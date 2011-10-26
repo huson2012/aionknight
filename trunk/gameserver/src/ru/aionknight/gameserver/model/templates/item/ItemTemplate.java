@@ -203,6 +203,9 @@ public class ItemTemplate extends VisibleObjectTemplate
 	@XmlAttribute(name = "doping", required = false)
 	private Boolean				isDoping;
 
+	@XmlAttribute(name="arena", required=false)
+	private Boolean             isArena;
+
 	/**
 	 * @return the mask
 	 */
@@ -881,4 +884,14 @@ public class ItemTemplate extends VisibleObjectTemplate
 			return false;
 		return isDoping;
 	}
+
+    /**
+     * @return the IsArena
+     */
+	  public Boolean IsArena()
+	  {
+	    if (isArena == null)
+	      return Boolean.valueOf(false);
+	    return isArena;
+	  }
 }
