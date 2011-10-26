@@ -58,6 +58,11 @@ public class _2717SilverForTheFountain extends QuestHandler
 	public boolean onDialogEvent(QuestCookie env)
 	{
 		Player player = env.getPlayer();
+
+		//check to avoid players from powerleveling with l2ph
+		if (player.getLevel() < 40 || player.getWorldId() != 400010000)
+			return false;
+
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		QuestTemplate template = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
 		if(qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat(template.getMaxRepeatCount()))
@@ -94,7 +99,7 @@ public class _2717SilverForTheFountain extends QuestHandler
 		
 		if(qs.getStatus() == QuestStatus.REWARD && env.getTargetId() == 730143)
 		{
-			if (env.getDialogId() == 17)
+			if (env.getDialogId() == 18)
 			{
 				if (player.getInventory().getItemCountByItemId(186000031) > 0 &&
 					QuestService.questFinish(env, 0))
