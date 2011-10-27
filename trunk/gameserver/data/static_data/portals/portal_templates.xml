@@ -832,7 +832,7 @@
       <exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>	  
     </portal>	
 	<!-- Marchutan -->
-	<portal npcid="730431" instance="false" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
+	<portal npcid="730431" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
       <entrypoint mapid="120080000" x="577.2926" y="261.17194" z="93.48979" />
       <exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>	  
     </portal>	
