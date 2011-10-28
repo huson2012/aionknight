@@ -11,19 +11,20 @@
 	</xs:complexType>
 	<xs:complexType name="gatherableTemplate">
 		<xs:sequence>
-			<xs:element name="materials" type="Materials"/>
+			<xs:element name="materials" type="Materials" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="extra_materials" type="Materials" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="aerialAdj" type="xs:int"/>
-		<xs:attribute name="failureAdj" type="xs:int"/>
-		<xs:attribute name="successAdj" type="xs:int"/>
+		<xs:attribute name="eraseValue" type="xs:int"/>
+		<xs:attribute name="checkType" type="xs:int"/>
+		<xs:attribute name="requiredItem" type="xs:int"/>
+		<xs:attribute name="charLevel" type="xs:int"/>
 		<xs:attribute name="harvestSkill" type="xs:int"/>
 		<xs:attribute name="skillLevel" type="xs:int"/>
 		<xs:attribute name="harvestCount" type="xs:int"/>
 		<xs:attribute name="sourceType" type="xs:string"/>
 		<xs:attribute name="nameId" type="xs:int"/>
-		<xs:attribute name="name" type="xs:string"/>
-		<xs:attribute name="desc" type="xs:string"/>
 		<xs:attribute name="id" type="xs:int"/>
+		<xs:attribute name="name" type="xs:string"/>
 	</xs:complexType>
 	<xs:simpleType name="gatherableId">
 		<xs:restriction base="xs:int">
@@ -32,9 +33,9 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Materials">
-		<xs:sequence>
-			<xs:element name="material" type="Material" minOccurs="0" maxOccurs="16"/>
-		</xs:sequence>
+	  <xs:sequence>
+		<xs:element name="material" type="Material" minOccurs="0" maxOccurs="16"/>
+	  </xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Material">
 		<xs:attribute name="name" type="xs:string"/>
