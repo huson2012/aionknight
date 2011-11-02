@@ -97,7 +97,7 @@ public class _2114TheInsectProblem extends QuestHandler
 							return sendQuestDialog(env, 5);
 						else if (var == 20)
 							return sendQuestDialog(env, 6);
-					case 17:
+					case 18:
 						if (QuestService.questFinish(env, var/10-1))
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
