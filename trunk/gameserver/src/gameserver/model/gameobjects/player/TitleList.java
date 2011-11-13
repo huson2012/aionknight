@@ -14,22 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
-
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.templates.TitleTemplate;
 import gameserver.network.aion.serverpackets.SM_TITLE_LIST;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author blakawk
- * 
- */
 public class TitleList
 {
 	private LinkedHashMap<Integer, Title>	titles;

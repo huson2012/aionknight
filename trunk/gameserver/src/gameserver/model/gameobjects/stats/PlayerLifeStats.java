@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.locks.ReentrantLock;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.alliance.PlayerAllianceEvent;
 import gameserver.model.gameobjects.player.Player;
@@ -36,11 +35,6 @@ import gameserver.task.impl.PacketBroadcaster.BroadcastMode;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.zone.ZoneName;
 
-
-/**
-, sphinx
- *
- */
 public class PlayerLifeStats extends CreatureLifeStats<Player>
 {
 	protected int currentFp;
@@ -405,5 +399,4 @@ public class PlayerLifeStats extends CreatureLifeStats<Player>
 		}
 		PacketSendUtility.broadcastPacket((Player)owner, new SM_ATTACK_STATUS(owner, type, value, skillId, logId), true);	
 	}
-
 }

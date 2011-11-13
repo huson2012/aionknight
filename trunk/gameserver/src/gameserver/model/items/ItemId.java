@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,24 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
-/**
-
- *
- */
 public enum ItemId
 {
-	KINAH(182400001),
-	ANGELS_EYE(186000037),
-	DEMONS_EYE(186000038),
-	BROKEN_COIN(182005367),
-	PLATINUM_ELYOS(186000005),
-	PLATINUM_ASMODIANS(186000010),
-	RUSTED_MEDAL(182005205),
-	SILVER_MEDAL(186000031),
-	GOLDEN_MEDAL(186000030),
-	PLATINUM_MEDAL(186000096);
+	KINAH(182400001), ANGELS_EYE(186000037), DEMONS_EYE(186000038), BROKEN_COIN(182005367), 
+	PLATINUM_ELYOS(186000005), PLATINUM_ASMODIANS(186000010), RUSTED_MEDAL(182005205),
+	SILVER_MEDAL(186000031), GOLDEN_MEDAL(186000030), PLATINUM_MEDAL(186000096);
 	
 	private int itemId;
 	

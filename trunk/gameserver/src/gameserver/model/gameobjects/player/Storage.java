@@ -14,15 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
 import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.items.ItemStorage;
@@ -31,11 +30,6 @@ import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
 import gameserver.network.aion.serverpackets.SM_UPDATE_WAREHOUSE_ITEM;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author Avol
- * modified by ATracer, kosyachok
- */
 public class Storage
 {
 	private static final Logger	log	= Logger.getLogger(Storage.class);

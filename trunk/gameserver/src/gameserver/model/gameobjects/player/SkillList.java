@@ -14,15 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.templates.item.ArmorType;
@@ -36,13 +35,6 @@ import gameserver.skill.effect.WeaponMasteryEffect;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * Created on: 15.07.2009 19:33:07
- * Edited On:  13.09.2009 19:48:00
- *
- * @author IceReaper, orfeo087, Avol, AEJTester
- */
 public class SkillList
 {
 	/**

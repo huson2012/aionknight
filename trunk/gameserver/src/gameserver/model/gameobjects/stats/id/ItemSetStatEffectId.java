@@ -14,14 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats.id;
 
 import gameserver.model.gameobjects.stats.StatEffectType;
 
-/**
- * @author Antivirus
- *
- */
 public class ItemSetStatEffectId extends StatEffectId
 {
 	// Effect for the number of item set parts equipped
@@ -65,7 +62,7 @@ public class ItemSetStatEffectId extends StatEffectId
 	@Override
 	public String toString()
 	{
-		final String str = super.toString() + ",parts:" + setpart;
+		final String str = super.toString() + ", parts:" + setpart;
 		return str;
 	}
 }

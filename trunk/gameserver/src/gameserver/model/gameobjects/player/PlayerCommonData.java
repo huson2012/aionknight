@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.sql.Timestamp;
-
 import org.apache.log4j.Logger;
-
 import gameserver.GameServer;
 import gameserver.configs.main.CustomConfig;
 import gameserver.configs.main.GSConfig;
@@ -47,13 +46,6 @@ import gameserver.utils.stats.XPLossEnum;
 import gameserver.world.World;
 import gameserver.world.WorldPosition;
 
-
-/**
- * This class is holding base information about player, that may be used even when player itself is not online.
- * 
- * @author Luno
- * 
- */
 public class PlayerCommonData extends VisibleObjectTemplate
 {
 	/** Logger used by this class and {@link StaticData} class */
@@ -726,7 +718,5 @@ public class PlayerCommonData extends VisibleObjectTemplate
 			return repletionstate;
 		else
 			return 0;
-	}
-
-	
+	}	
 }

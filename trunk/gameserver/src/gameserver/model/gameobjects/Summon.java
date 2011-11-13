@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.controllers.CreatureController;
 import gameserver.controllers.SummonController;
@@ -28,10 +28,6 @@ import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.model.templates.stats.SummonStatsTemplate;
 import gameserver.world.WorldPosition;
 
-/**
-
- * 
- */
 public class Summon extends Creature
 {
 

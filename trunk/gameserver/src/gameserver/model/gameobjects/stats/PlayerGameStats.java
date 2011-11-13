@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats;
 
 import java.util.ArrayList;
@@ -23,9 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 import java.util.Map.Entry;
-
 import org.apache.log4j.Logger;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.PlayerStatsData;
 import gameserver.model.EmotionType;
@@ -44,11 +43,6 @@ import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author blakawk
- * 
- */
 public class PlayerGameStats extends CreatureGameStats<Player>
 {
 	private int currentRunSpeed = 0;

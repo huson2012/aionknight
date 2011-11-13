@@ -14,18 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
-/**
- * This is the base class for all "in-game" objects, that player can interact with, such as: npcs, monsters, players,
- * items.<br>
- * <br>
- * Each AionObject is uniquely identified by objectId.
- * 
- * @author -Nemesiss-
- * @author SoulKeeper
- * 
- */
 public abstract class AionObject
 {
 	/**

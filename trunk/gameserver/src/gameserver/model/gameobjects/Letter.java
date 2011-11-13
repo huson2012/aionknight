@@ -14,14 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import java.sql.Timestamp;
 
-/**
-
- *
- */
 public class Letter extends AionObject
 {
 	private int recipientId;

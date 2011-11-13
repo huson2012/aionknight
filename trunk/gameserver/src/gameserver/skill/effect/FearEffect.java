@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.StatEnum;
@@ -31,13 +30,6 @@ import gameserver.geo.GeoEngine;
 import gameserver.skill.model.Effect;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
-
-
-
-
-/**
- * @author Sarynth
- */
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FearEffect")
@@ -74,5 +66,4 @@ public class FearEffect extends EffectTemplate
 	{
 		effect.getEffected().getEffectController().unsetAbnormal(EffectId.FEAR.getEffectId());
 	}
-
 }

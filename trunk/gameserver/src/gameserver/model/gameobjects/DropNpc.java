@@ -14,21 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
-
 import gameserver.model.drop.DropItem;
 import gameserver.model.gameobjects.player.Player;
 
-
-/**
- * @author Simple
- * @author Jego
- */
 public class DropNpc
 {
 	private List<Integer>			allowedList			= new ArrayList<Integer>();

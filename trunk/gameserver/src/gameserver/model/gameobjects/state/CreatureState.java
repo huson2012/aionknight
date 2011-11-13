@@ -14,12 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package gameserver.model.gameobjects.state;
 
-/**
-, Sweetkr
- *
- */
 public enum CreatureState
 {
 	NPC_IDLE(1<<6), // 64 (for npc)

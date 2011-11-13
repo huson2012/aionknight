@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.Collection;
@@ -22,14 +23,8 @@ import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
-
 import gameserver.model.gameobjects.Letter;
 
-
-/**
-
- * @modified Atracer
- */
 public class Mailbox
 {
 	private Map<Integer, Letter>	mails	= new ConcurrentHashMap<Integer, Letter>();

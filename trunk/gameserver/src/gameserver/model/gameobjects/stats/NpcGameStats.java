@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats;
 
 import java.util.TreeSet;
 import java.util.concurrent.atomic.AtomicInteger;
-
-
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.stats.modifiers.StatModifier;
@@ -30,11 +29,6 @@ import gameserver.model.templates.stats.NpcStatsTemplate;
 import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author blakawk
- * 
- */
 public class NpcGameStats extends CreatureGameStats<Npc>
 {
 	AtomicInteger currentRunSpeed = new AtomicInteger();

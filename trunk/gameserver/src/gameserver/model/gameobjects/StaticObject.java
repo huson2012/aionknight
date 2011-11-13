@@ -14,18 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.controllers.StaticObjectController;
 import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.world.WorldPosition;
 
-/**
-
- *
- */
 public class StaticObject extends VisibleObject
 {
 	public StaticObject(int objectId, StaticObjectController controller,

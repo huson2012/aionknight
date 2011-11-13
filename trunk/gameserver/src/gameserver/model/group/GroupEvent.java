@@ -19,11 +19,7 @@ package gameserver.model.group;
 
 public enum GroupEvent
 {
-	LEAVE(0),
-	MOVEMENT(1),
-	ENTER(5),
-	UPDATE(5),
-	CHANGELEADER(3);
+	LEAVE(0), MOVEMENT(1), ENTER(5), UPDATE(5), CHANGELEADER(3);
 	
 	private int id;
 	private GroupEvent(int id)

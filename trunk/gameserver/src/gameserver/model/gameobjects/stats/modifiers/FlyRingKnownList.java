@@ -14,19 +14,14 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.stats.modifiers;
 
+package gameserver.model.gameobjects.stats.modifiers;
 
 import gameserver.model.flyring.FlyRing;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.utils.MathUtil;
 import gameserver.world.KnownList;
 
-
-/**
- * @author blakawk
- *
- */
 public class FlyRingKnownList extends KnownList
 {
 	public FlyRingKnownList(VisibleObject owner)

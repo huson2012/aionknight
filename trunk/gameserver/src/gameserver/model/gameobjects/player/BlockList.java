@@ -14,19 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Represents a players list of blocked users<br />
- * Blocks via a player's CommonData
- * 
- * @author Ben
- *
- */
 public class BlockList implements Iterable<BlockedPlayer>
 {
 	/**
@@ -129,5 +123,4 @@ public class BlockList implements Iterable<BlockedPlayer>
 	{
 		return blockedList.values().iterator();
 	}
-
 }

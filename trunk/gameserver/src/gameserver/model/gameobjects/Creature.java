@@ -14,15 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import java.util.concurrent.Future;
 import java.util.Map;
-
 import javolution.util.FastMap;
-
 import org.apache.commons.lang.StringUtils;
-
 import gameserver.ai.AI;
 import gameserver.controllers.CreatureController;
 import gameserver.controllers.MoveController;
@@ -46,37 +44,25 @@ import gameserver.task.impl.PacketBroadcaster.BroadcastMode;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldPosition;
 
-
-/**
- * This class is representing movable objects, its base class for all in game objects that may move
- * 
- * @author -Nemesiss-
- * 
- */
 public abstract class Creature extends VisibleObject
 {
 	/**
 	 * Reference to AI
 	 */
 	protected AI<? extends Creature> ai;
-
 	private CreatureLifeStats<? extends Creature> lifeStats;
 	private CreatureGameStats<? extends Creature> gameStats;
-
 	private EffectController effectController;
 	private MoveController moveController = null;
-	
 	private int state = CreatureState.ACTIVE.getId();
 	private int visualState = CreatureVisualState.VISIBLE.getId();
 	private int seeState = CreatureSeeState.NORMAL.getId();
 	private boolean isInCombat = false;
-	
 	private Skill castingSkill;
 	private Map<Integer, Long> skillCoolDowns;
 	private int transformedModelId;
 	private ObserveController 	observeController;
 	protected EAttackType attackType = EAttackType.PHYSICAL;
-
 	private AggroList aggroList;
 
 	/**
@@ -712,8 +698,7 @@ public abstract class Creature extends VisibleObject
 			return;
 		skillCoolDowns.remove(delayId);
 	}
-	
-	//attack type
+
 	public EAttackType getAttackType() 
 	{
 		return attackType;

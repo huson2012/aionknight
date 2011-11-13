@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.List;
-
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.model.templates.pet.FoodType;
@@ -29,11 +28,6 @@ import gameserver.model.templates.pet.PetRewardDescription;
 import gameserver.model.templates.pet.PetRewards;
 import gameserver.utils.InterruptableTask;
 
-
-/**
- * @author Sylar
- *
- */
 public class ToyPet
 {
 
@@ -471,8 +465,7 @@ public class ToyPet
 		
 		if (rewards == null)
 			return 0;
-		
-		// multiple rewards are not handled, maybe they have to be level dependant (???)
+
 		PetRewards pr = rewards.get(0);
 		PetRewardDescription random = pr.getRandomReward();
 		if (random != null)
@@ -493,9 +486,7 @@ public class ToyPet
 			}
 			else if (prd.getPrice() <= this.getLoveCount())
 				return prd.getItem();
-		}
-		
+		}		
 		return 0;
 	}
-
 }

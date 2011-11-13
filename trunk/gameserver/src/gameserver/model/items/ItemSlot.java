@@ -14,37 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import javolution.util.FastList;
 
-/**
- * This enum is defining inventory slots, to which items can be equipped.
- * @author Luno
- *
- */
 public enum ItemSlot
 {
-	MAIN_HAND(1),
-	SUB_HAND(1<<1),
-	HELMET(1<<2),
-	TORSO(1<<3),
-	GLOVES(1<<4),
-	BOOTS(1<<5),
-	EARRINGS_LEFT(1<<6),
-	EARRINGS_RIGHT(1<<7),
-	RING_LEFT(1<<8),
-	RING_RIGHT(1<<9),
-	NECKLACE(1<<10),
-	SHOULDER(1<<11),
-	PANTS(1<<12),
-	POWER_SHARD_RIGHT(1<<13),
-	POWER_SHARD_LEFT(1<<14),
-	WINGS(1<<15),
+	MAIN_HAND(1), SUB_HAND(1<<1), HELMET(1<<2), TORSO(1<<3), GLOVES(1<<4),
+	BOOTS(1<<5), EARRINGS_LEFT(1<<6), EARRINGS_RIGHT(1<<7), RING_LEFT(1<<8),
+	RING_RIGHT(1<<9), NECKLACE(1<<10), SHOULDER(1<<11), PANTS(1<<12),
+	POWER_SHARD_RIGHT(1<<13), POWER_SHARD_LEFT(1<<14), WINGS(1<<15),
 	//non-NPC equips (slot > Short.MAX)
-	WAIST(1<<16),
-	MAIN_OFF_HAND(1<<17),
-	SUB_OFF_HAND(1<<18),
+	WAIST(1<<16), MAIN_OFF_HAND(1<<17), SUB_OFF_HAND(1<<18),
 	
 	//combo
 	MAIN_OR_SUB(MAIN_HAND.slotIdMask | SUB_HAND.slotIdMask, true), // 3

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.stats;
 
+package gameserver.model.gameobjects.stats;
 
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.Summon;
@@ -25,10 +25,6 @@ import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.services.LifeStatsRestoreService;
 import gameserver.utils.PacketSendUtility;
 
-/**
-
- *
- */
 public class SummonLifeStats extends CreatureLifeStats<Summon>
 {
 

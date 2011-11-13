@@ -14,22 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAttribute;
-
-
 import gameserver.controllers.attack.AttackUtil;
 import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTargetSlot;
 
-
-
-/**
- * @author ViAl
- *
- */
 public class DispelBuffCounterAtkEffect extends DamageEffect
 {
 	@XmlAttribute
@@ -71,5 +64,4 @@ public class DispelBuffCounterAtkEffect extends DamageEffect
 		
            super.calculate(effect, DamageType.MAGICAL, false);
 	}
-
 }

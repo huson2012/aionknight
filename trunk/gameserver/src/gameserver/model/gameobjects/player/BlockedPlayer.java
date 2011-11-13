@@ -14,13 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
-/**
- * Represents a player who has been blocked
- * @author Ben
- *
- */
 public class BlockedPlayer
 {
 	

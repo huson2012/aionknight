@@ -14,20 +14,14 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats.modifiers;
 
 import java.util.Collection;
-
 import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.AionObject;
 import gameserver.utils.ThreadPoolManager;
 
-
-/**
- * @author blakawk
- *
- */
 public abstract class Executor<T extends AionObject>
 {
 	private static final Logger log = Logger.getLogger(Executor.class);

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.skill.task;
 
+package gameserver.skill.task;
 
 import gameserver.model.gameobjects.StaticObject;
 import gameserver.model.gameobjects.player.Player;
@@ -26,10 +26,6 @@ import gameserver.network.aion.serverpackets.SM_CRAFT_UPDATE;
 import gameserver.services.CraftService;
 import gameserver.utils.PacketSendUtility;
 
-/**
- * @author Mr. Poke, HellBoy
- *
- */
 public class CraftingTask extends AbstractCraftTask
 {
 	private RecipeTemplate recipeTemplate;

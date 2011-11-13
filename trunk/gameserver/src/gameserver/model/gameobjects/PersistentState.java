@@ -14,17 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
-/**
-
- *
- */
 public enum PersistentState
 {
-	NEW,
-	UPDATE_REQUIRED,
-	UPDATED,
-	DELETED,
-	NOACTION
+	NEW, UPDATE_REQUIRED, UPDATED,
+	DELETED, NOACTION
 }

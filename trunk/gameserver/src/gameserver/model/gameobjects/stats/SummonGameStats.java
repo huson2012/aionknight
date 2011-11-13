@@ -14,16 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package gameserver.model.gameobjects.stats;
-
 
 import gameserver.model.gameobjects.Summon;
 import gameserver.model.templates.stats.SummonStatsTemplate;
 
-/**
-
- *
- */
 public class SummonGameStats extends CreatureGameStats<Summon>
 {
 

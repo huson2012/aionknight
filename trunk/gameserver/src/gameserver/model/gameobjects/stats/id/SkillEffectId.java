@@ -14,14 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats.id;
 
 import gameserver.model.gameobjects.stats.StatEffectType;
 
-/**
-
- *
- */
 public class SkillEffectId extends StatEffectId
 {
 	private int effectId;
@@ -77,7 +74,7 @@ public class SkillEffectId extends StatEffectId
 	@Override
 	public String toString()
 	{
-		final String str = super.toString()+",effectId:"+effectId+",effectOrder:"+effectOrder;
+		final String str = super.toString()+", effectId: "+effectId+", effectOrder: "+effectOrder;
 		return str;
 	}
 
@@ -95,7 +92,5 @@ public class SkillEffectId extends StatEffectId
 	public int getEffectOrder()
 	{
 		return effectOrder;
-	}
-
-	
+	}	
 }

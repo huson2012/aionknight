@@ -14,22 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.SortedMap;
 import java.util.TreeMap;
-
 import org.apache.log4j.Logger;
-
 import gameserver.quest.model.QuestState;
 
-
-/**
- * @author MrPoke
- *
- */
 public class QuestStateList
 {
 	private static final Logger log = Logger.getLogger(QuestStateList.class);

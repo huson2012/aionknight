@@ -14,22 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.state;
 
-/**
- * @author Sweetkr
- *
- */
 public enum CreatureVisualState
 {
-	VISIBLE(0), // Normal
-	HIDE1(1), // Hide I
-	HIDE2(2), // Hide II
-	HIDE3(3), // Hide by Artifact?
-	HIDE10(10), // Hide from Npc?
-	HIDE13(13), // Hide from Npc?
-	HIDE20(20), // Hide from Npc?
-	BLINKING(64); // Blinking when entering to zone
+	VISIBLE(0), HIDE1(1), HIDE2(2), HIDE3(3),
+	HIDE10(10), HIDE13(13), HIDE20(20), BLINKING(64);
 
 	private int id;
 

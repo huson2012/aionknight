@@ -14,14 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats.id;
 
 import gameserver.model.gameobjects.stats.StatEffectType;
 
-/**
- * @author blakawk
- *
- */
 public class ItemStatEffectId extends StatEffectId
 {
 	private int slot;
@@ -64,7 +61,7 @@ public class ItemStatEffectId extends StatEffectId
 	@Override
 	public String toString()
 	{
-		final String str = super.toString()+",slot:"+slot;
+		final String str = super.toString()+", slot: "+slot;
 		return str;
 	}
 

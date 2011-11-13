@@ -14,26 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import gameserver.model.gameobjects.PersistentState;
 
-/**
-
- *
- */
 public class ItemStone
 {
 	protected int itemObjId;
-	
 	private int itemId;
-	
 	private int slot;
-	
 	private PersistentState persistentState;
-	
 	private ItemStoneType itemStoneType;
-	
 	public static enum ItemStoneType
 	{
 		MANASTONE,

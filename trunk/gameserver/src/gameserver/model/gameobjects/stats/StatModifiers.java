@@ -14,20 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package gameserver.model.gameobjects.stats;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import gameserver.model.gameobjects.stats.modifiers.StatModifier;
 
-
-/**
- * @author blakawk
- *
- */
 public class StatModifiers
 {
 	private Map<StatModifierPriority,List<StatModifier>> modifiers;

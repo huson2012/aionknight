@@ -14,16 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.player;
 
+package gameserver.model.gameobjects.player;
 
 import gameserver.model.PlayerClass;
 import gameserver.model.gameobjects.player.FriendList.Status;
 
-/**
- * @author Ben
- *
- */
 public class Friend
 {
 	private final PlayerCommonData pcd;

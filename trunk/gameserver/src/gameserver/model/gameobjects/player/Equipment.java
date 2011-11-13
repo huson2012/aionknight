@@ -1,6 +1,18 @@
 /**
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ *
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 
 package gameserver.model.gameobjects.player;
@@ -11,11 +23,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
-
 import org.apache.log4j.Logger;
-
 import commons.database.dao.DAOManager;
-
 import gameserver.controllers.movement.StartMovingListener;
 import gameserver.dao.InventoryDAO;
 import gameserver.model.DescriptionId;
@@ -48,11 +57,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldPosition;
 
-
-/**
- *
- * @author Avol, ATracer, kosyachok
- */
 public class Equipment
 {
 	private SortedMap<Integer, Item>	equipment		= new TreeMap<Integer, Item>();

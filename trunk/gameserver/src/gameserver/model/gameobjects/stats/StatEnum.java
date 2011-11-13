@@ -1,44 +1,30 @@
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ *
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package gameserver.model.gameobjects.stats;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
-
 import gameserver.model.items.ItemSlot;
 
-
-/**
- * @author blakawk
-
- *
- */
 @XmlType(name = "StatEnum")
 @XmlEnum
 public enum StatEnum
 {
-//	None = 0,
-//	FireResistance = 15,
-//	HP = 18,
-//	MP = 20,
-//	FlightTime = 23,
-//	Attack = 25,
-//	PhysicalDefense = 26,
-//	MagicalAttack = 27,
-//	MagicalRes = 28,
-//	AttackSpeed = 29, //%
-//	Accuracy = 30,
-//	Evasion = 31,
-//	Parry = 32,
-//	Block = 33,
-//	PhysicalCrit = 34,
-//	Speed = 36, // %
-//	FlightSpeed = 37, // %
-//	MagicalCrit = 40,
-//	Concentration = 41,
-//	MagicPower = 104,
-//	MagicalAccuracy = 105,
-//	Knowledge = 106,
-//	Agility = 107,
-//	Hate = 109
 	MAXDP(0, "maxdp"),
 	MAXHP(18, "maxhp"),
 	MAXMP(20, "maxmp"),

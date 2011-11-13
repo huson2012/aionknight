@@ -14,15 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
-
 import commons.utils.Rnd;
-
 import gameserver.ai.npcai.AggressiveAi;
 import gameserver.ai.npcai.NpcAi;
 import gameserver.configs.main.CustomConfig;
@@ -54,14 +53,6 @@ import gameserver.world.NpcKnownList;
 import gameserver.world.WorldPosition;
 import gameserver.world.WorldType;
 
-
-/**
- * This class is a base class for all in-game NPCs, what includes: monsters and npcs that player can talk to (aka
- * Citizens)
- * 
- * @author Luno
- * 
- */
 public class Npc extends Creature
 {
 	
@@ -451,6 +442,5 @@ public class Npc extends Creature
 	{
 		if(shoutThread != null)
 			shoutThread.cancel(false);
-	}
-	
+	}	
 }
