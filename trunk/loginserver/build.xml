@@ -2,17 +2,32 @@
 <project name="loginserver" default="dist" basedir=".">
 	
     <description>
-    	loginserver
+    		
+		This file is part of Aion-Knight Dev. Team [www.aion-knight.ru]
+
+		This is free software: you can redistribute it and / or modify
+		it under the terms of the GNU Lesser Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+		
+		This software is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+		GNU Lesser Public License for more details.
+		
+		You should have received a copy of the GNU Lesser Public License
+		along with this software. If not, see http://www.gnu.org/licenses/.
+    
     </description>
 	
 	<property name="jre" location="${java.home}/lib"/>
     <property name="src" location="src"/>
 	<property name="config" location="config"/>
     <property name="lib" location="lib"/>
-    <property name="build" location="build"/>
-    <property name="build.classes" location="${build}/classes"/>
-    <property name="build.dist" location="${build}/dist"/>
-	<property name="build.dist.login" location="${build.dist}/loginserver"/>
+    <property name="build" location="../tools/Compiled/LoginServer"/>
+    <property name="build.classes" location="${build}/Classes"/>
+    <property name="build.dist" location="${build}/Dist"/>
+	<property name="build.dist.login" location="${build.dist}/LoginServer"/>
     
 	<path id="bootclasspath">
         <fileset dir="${lib}">
@@ -46,11 +61,7 @@
             depends="init"
             description="Compile the source.">
 
-        <javac destdir="${build.classes}" optimize="on" debug="on" 
-        	nowarn="off" 
-        	source="1.6"
-            target="1.6">
-        	
+        <javac destdir="${build.classes}" optimize="on" debug="on" nowarn="off" source="1.6" target="1.6" includeantruntime="false">
         	<src path="${src}"/>
         	<bootclasspath refid="bootclasspath"/>
             <classpath refid="classpath"/> 
@@ -62,10 +73,10 @@
             depends="compile"
             description="Create the jar file">
 
-        <jar destfile="${build}/aion-knight_login.jar">
+        <jar destfile="${build}/JAR/ak-login.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
-                <attribute name="Main-Class" value="ru.aionknight.loginserver.LoginServer"/>
+                <attribute name="Main-Class" value="loginserver.LoginServer"/>
             </manifest>
         </jar>
 
@@ -75,12 +86,12 @@
     	<mkdir dir="${build.dist}" />
     	<mkdir dir="${build.dist.login}" />
     	<mkdir dir="${build.dist.login}/config" />
-    	<mkdir dir="${build.dist.login}/config/network" />
+    	<mkdir dir="${build.dist.login}/config" />
     	<mkdir dir="${build.dist.login}/libs" />
     	
     	<copy todir="${build.dist.login}">
             <fileset dir="${build}">
-                <include name="aion-knight_login.jar"/>
+                <include name="ak-login.jar"/>
 			</fileset>
         </copy>
     	
@@ -102,8 +113,8 @@
 			</fileset>
 		</copy>
 
-    	<copy todir="${build.dist.login}/config/network">
-			<fileset dir="config/network">
+    	<copy todir="${build.dist.login}/config">
+			<fileset dir="config">
 				<include name="*.*"/>
 			</fileset>
 		</copy>
@@ -120,7 +131,7 @@
             </fileset>
         </copy>
 
-        <zip destfile="${build}/aion-knight_loginserver.zip"
+        <zip destfile="${build}/ak-loginserver.zip"
              basedir="${build.dist}" />
     </target>   
     

@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of Zetta Core
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Ataxiar For quest: Face to the Future
-	@Author Nephis from client spawn
+	Название локации : Нарзас
+	ID локации		 : 320140000
+	Версия Клиента	 : 2.5 (Иннова)
 
  -->
+
 <spawns>
+	<!--  -->
 	<spawn map="320140000" interval="105" npcid="798342" pool="45">
 		<object x="248.348" y="287.644" h="0" z="208.124"/>
 		<object x="281.223" y="243.486" h="0" z="212.372"/>
@@ -67,6 +57,7 @@
 		<object x="262.822" y="308.359" h="0" z="205.588"/>
 		<object x="283.996" y="205.243" h="0" z="207.646"/>
 	</spawn>
+	<!--  -->
 	<spawn map="320140000" interval="105" npcid="798343" pool="38">
 		<object x="228.461" y="299.85" h="0" z="206.476"/>
 		<object x="232.271" y="273.105" h="0" z="205.79"/>
@@ -107,6 +98,7 @@
 		<object x="259.559" y="239.455" h="0" z="209.093"/>
 		<object x="233.937" y="297.762" h="0" z="206.536"/>
 	</spawn>
+	<!--  -->
 	<spawn map="320140000" interval="105" npcid="798344" pool="38">
 		<object x="278.058" y="247.029" h="0" z="212.505"/>
 		<object x="230.77" y="295.307" h="0" z="206.776"/>
@@ -147,6 +139,7 @@
 		<object x="301.94" y="256.595" h="0" z="205.307"/>
 		<object x="293.711" y="290.318" h="0" z="206.288"/>
 	</spawn>
+	<!--  -->
 	<spawn map="320140000" interval="105" npcid="798345" pool="25">
 		<object x="248.582" y="214.521" h="0" z="206.081"/>
 		<object x="244.754" y="234.766" h="0" z="206.175"/>

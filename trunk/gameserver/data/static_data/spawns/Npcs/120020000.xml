@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Храм Маркутана
+	ID локации		 : 120020000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Convent of Marchutan
-	@author Youli Spawn from KR PTS 2.0
  -->
+
 <spawns>
 	<!-- Agehia (NPC Normal lvl:50)-->
 	<spawn map="120020000" npcid="798800" pool="1" interval="105">
@@ -118,5 +108,9 @@
 	<!-- Petrarca -->
 	<spawn map="120020000" npcid="799874" interval="295" pool="1">
 		<object x="1543.62" y="1437.04" z="266" h="100" />
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="120020000" npcid="798804" pool="1">
+		<object h="10" x="1519.1742" y="1397.599" z="271.72424"/>
 	</spawn>
 </spawns>

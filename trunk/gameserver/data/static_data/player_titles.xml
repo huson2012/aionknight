@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	: Настройки титулов игроков
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <player_titles>
 	<title id="1" race="0">
 		<modifiers>

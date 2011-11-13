@@ -1,14 +1,14 @@
 package admincommands;
 
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.Creature;
-import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.CreatureGameStats;
-import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.Creature;
+import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.CreatureGameStats;
+import gameserver.model.gameobjects.stats.StatEnum;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
 public class Stat extends AdminCommand
 {

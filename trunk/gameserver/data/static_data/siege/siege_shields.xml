@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/css" href="AL-Game/data/static_data/license/Aion-Lightning.css" title="License Aion-Lightning" alternate="no"?>
-<?xml-stylesheet type="text/css" href="AL-Game/data/static_data/authors/wakizashi.css"?>
+
+<!--
+
+	Назначение файла	: Расположение щитов крепостей
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <shields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="siege_shields.xsd">
 	<shield id="1011" map="400010000" name="DIVINE_FORTRESS" radius="85.0">
 		<center x="2137.505" y="1930.4448" z="3221.5593"/>

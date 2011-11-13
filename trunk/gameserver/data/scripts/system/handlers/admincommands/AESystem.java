@@ -1,45 +1,33 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.util.List;
+import commons.utils.AEInfos;
+import gameserver.ShutdownHook;
+import gameserver.ShutdownHook.ShutdownMode;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.utils.AEVersions;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.utils.chathandlers.AdminCommand;
 
-import org.openaion.commons.utils.AEInfos;
-
-import ru.aionknight.gameserver.ShutdownHook;
-import ru.aionknight.gameserver.ShutdownHook.ShutdownMode;
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.utils.AEVersions;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-
-
-/**
- * @author lord_rex
- * 
- * //sys info - System Informations
- * //sys memory - Memory Informations
- * //sys gc - Garbage Collector
- * //sys shutdown <seconds> <announceInterval> - Call shutdown
- * //sys restart <seconds> <announceInterval> - Call restart
- * //sys threadpool - Thread pools info
- */
 public class AESystem extends AdminCommand
 {
 

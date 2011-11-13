@@ -1,58 +1,49 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- * aion-unique is free software: you can redistribute it and/or modify
+ * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * aion-unique is distributed in the hope that it will be useful,
+ * Aion-Knight is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package quest.verteron;
 
-
-import ru.aionknight.gameserver.configs.main.CustomConfig;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.PlayerClass;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
-import ru.aionknight.gameserver.model.templates.quest.QuestItems;
-import ru.aionknight.gameserver.network.aion.SystemMessageId;
-import ru.aionknight.gameserver.network.aion.serverpackets.*;
-import ru.aionknight.gameserver.quest.HandlerResult;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.*;
-import ru.aionknight.gameserver.skill.SkillEngine;
-import ru.aionknight.gameserver.skill.model.Skill;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.WorldMapInstance;
-import ru.aionknight.gameserver.world.zone.ZoneName;
-
+import gameserver.configs.main.CustomConfig;
+import gameserver.dataholders.DataManager;
+import gameserver.model.EmotionType;
+import gameserver.model.PlayerClass;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.StatEnum;
+import gameserver.model.templates.quest.QuestItems;
+import gameserver.network.aion.SystemMessageId;
+import gameserver.network.aion.serverpackets.*;
+import gameserver.quest.HandlerResult;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.*;
+import gameserver.skill.SkillEngine;
+import gameserver.skill.model.Skill;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.WorldMapInstance;
+import gameserver.world.zone.ZoneName;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
-/**
- * @author Mr. Poke
- * re-mode Dune11 www.aiongate.cz
- * re-done kecimis
- * re-done retail by Orpheo
- *
- */
 public class _1023ANestofLepharists extends QuestHandler
 {
 	private final static int	questId	= 1023;

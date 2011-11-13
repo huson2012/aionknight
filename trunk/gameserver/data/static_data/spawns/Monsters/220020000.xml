@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : 
+	ID локации		 : 
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Morheim
-	@author Atomix
-	@author_fix Kellogz (based on retail Eu spawn 01/08/2010)
  -->
+
 <spawns>
 	<!-- Abandoned Gerik (Named Mob Normal lvl:38)-->
 	<spawn map="220020000" npcid="212666" pool="1" interval="10800">
@@ -1116,14 +1105,21 @@
 		<object x="2079.75" y="435.75" z="265.07812" h="34"/>
 	</spawn>
 	<!-- Brutal Mist Mane Bulwark (Monster Elite lvl:39)-->
-	<spawn map="220020000" npcid="212865" pool="8" interval="390">
+	<spawn map="220020000" npcid="212865" pool="15" interval="390">
+		<object x="2484.25" y="448.25" z="237.375" h="78"/>
+		<object x="2473.75" y="440.46" z="233.77625" h="44"/>
+		<object x="2460.93" y="439.06" z="231.94061" h="58"/>
 		<object x="2448.29" y="436.26" z="230.40938" h="34"/>
 		<object x="2455.06" y="543.9" z="262.42126" h="73"/>
+		<object x="2457.08" y="436.32" z="231.33751" h="103"/>
 		<object x="2611.23" y="443.1" z="211.16875" h="16"/>
+		<object x="2476.72" y="443.52" z="234.825" h="21"/>
 		<object x="2651.31" y="448.77" z="215.14438" h="76"/>
 		<object x="2622.25" y="434.25" z="212.42188" h="114"/>
 		<object x="2473.41" y="595.49" z="261.875" h="79"/>
+		<object x="2464.25" y="437.75" z="232.01562" h="63"/>
 		<object x="2466.41" y="573.65" z="261.875" h="9"/>
+		<object x="2457.75" y="438.75" z="231.625" h="43"/>
 		<object x="2460.25" y="559.75" z="263.09375" h="46"/>
 	</spawn>
 	<!-- Brutal Mist Mane Clincher (Monster Elite lvl:40)-->
@@ -1415,7 +1411,7 @@
 		<object x="2941.974" y="838.9201" z="367.37662" h="111"/>
 	</spawn>
 	<!-- Brutal Mist Mane Raider (Monster Elite lvl:39)-->
-	<spawn map="220020000" npcid="212744" pool="26" interval="390">
+	<spawn map="220020000" npcid="212744" pool="28" interval="390">
 		<object x="2740.117" y="409.8276" z="236.60703" h="83"/>
 		<object x="2712.62" y="400.5517" z="228.17923" h="5"/>
 		<object x="2802.822" y="442.0989" z="257.10452" h="118"/>
@@ -1426,12 +1422,14 @@
 		<object x="2960.54" y="863.0714" z="370.0859" h="55"/>
 		<object x="2687.215" y="393.5096" z="223.05377" h="46"/>
 		<object x="2980.918" y="696.7022" z="330.4829" h="62"/>
+		<object x="2917.662" y="527.83" z="316.14612" h="43"/>
 		<object x="2685.734" y="404.4704" z="223.26663" h="42"/>
 		<object x="2946.626" y="479.6902" z="306.52014" h="27"/>
 		<object x="2737.19" y="422.0456" z="236.8143" h="81"/>
 		<object x="2958.806" y="583.6027" z="330.39984" h="8"/>
 		<object x="2939.448" y="476.8854" z="306.888" h="110"/>
 		<object x="2914.073" y="842.1152" z="369.6106" h="89"/>
+		<object x="2911.391" y="525.0144" z="316.53806" h="102"/>
 		<object x="2691.552" y="663.8528" z="259.8474" h="81"/>
 		<object x="2649.338" y="457.3603" z="216.71281" h="114"/>
 		<object x="2646.99" y="569.7748" z="221.86093" h="34"/>
@@ -1554,7 +1552,7 @@
 		<object x="2082.051" y="1143.126" z="185.875" h="76"/>
 	</spawn>
 	<!-- Brutal Mist Mane Stalker (Monster Elite lvl:38)-->
-	<spawn map="220020000" npcid="211595" pool="71" interval="390">
+	<spawn map="220020000" npcid="211595" pool="75" interval="390">
 		<object x="2237.151" y="444.5239" z="225.87003" h="4"/>
 		<object x="2272.376" y="651.6044" z="228.172" h="34"/>
 		<object x="2159.532" y="419.9014" z="247.82083" h="37"/>
@@ -1582,6 +1580,8 @@
 		<object x="2035.145" y="505.9089" z="269.56482" h="91"/>
 		<object x="2225.0" y="467.56" z="234.18" h="73"/>
 		<object x="2479.62" y="445.31" z="235.7994" h="47"/>
+		<object x="2472.11" y="495.96" z="253.84436" h="60"/>
+		<object x="2467.66" y="500.44" z="255.61" h="59"/>
 		<object x="2473.52" y="533.69" z="261.49124" h="59"/>
 		<object x="2467.46" y="577.7" z="261.64374" h="92"/>
 		<object x="2465.75" y="440.75" z="232.5" h="64"/>
@@ -1589,9 +1589,11 @@
 		<object x="2635.61" y="435.9" z="212.50626" h="49"/>
 		<object x="2459.44" y="511.96" z="258.155" h="48"/>
 		<object x="2466.83" y="575.27" z="261.79562" h="84"/>
+		<object x="2470.87" y="496.98" z="254.33185" h="84"/>
 		<object x="2461.48" y="563.73" z="263.11438" h="117"/>
 		<object x="2632.75" y="438.91" z="212.80125" h="66"/>
 		<object x="2455.03" y="437.75" z="231.23813" h="5"/>
+		<object x="2463.58" y="509.45" z="257.54813" h="62"/>
 		<object x="2456.75" y="550.25" z="262.82812" h="17"/>
 		<object x="2471.25" y="591.75" z="261.92188" h="40"/>
 		<object x="2517.915" y="650.9009" z="261.051" h="3"/>
@@ -3542,6 +3544,10 @@
 	<spawn map="220020000" npcid="212862" pool="1" interval="390">
 		<object x="2566.617" y="583.032" z="226.85114" h="107"/>
 	</spawn>
+	<!-- King Consierd (Named Mob Hero lvl:38)-->
+	<spawn map="220020000" npcid="212648" pool="1" interval="14400">
+		<object x="1309.357" y="1334.392" z="242.65831" h="72"/>
+	</spawn>
 	<!-- King Klawtun (Named Mob Elite lvl:27)-->
 	<spawn map="220020000" npcid="212819" pool="1" interval="10800">
 		<object x="1725.388" y="2654.877" z="358.57288" h="37"/>
@@ -5380,18 +5386,21 @@
 		<object x="2757.75" y="2560.77" z="157.89438" h="51"/>
 	</spawn>
 	<!-- Searcher Tayga (Monster Normal lvl:38)-->
-	<spawn map="220020000" npcid="211562" pool="18" interval="150">
+	<spawn map="220020000" npcid="211562" pool="21" interval="150">
 		<object x="2180.052" y="461.7785" z="240.99675" h="47"/>
 		<object x="1978.0" y="527.0" z="270.25" h="103"/>
 		<object x="2221.81" y="467.77" z="234.42749" h="6"/>
 		<object x="2479.75" y="443.25" z="235.42188" h="80"/>
+		<object x="2475.1" y="495.89" z="253.25937" h="48"/>
 		<object x="2462.21" y="439.41" z="231.97624" h="109"/>
+		<object x="2469.19" y="501.59" z="255.84625" h="116"/>
 		<object x="2474.34" y="535.68" z="261.565" h="0"/>
 		<object x="2469.16" y="576.38" z="261.79874" h="51"/>
 		<object x="2464.92" y="438.09" z="232.12062" h="0"/>
 		<object x="2630.11" y="447.63" z="212.26376" h="52"/>
 		<object x="2637.14" y="437.19" z="213.41623" h="66"/>
 		<object x="2462.01" y="511.73" z="257.96564" h="22"/>
+		<object x="2472.1" y="498.44" z="254.62498" h="95"/>
 		<object x="2463.29" y="562.87" z="262.91937" h="13"/>
 		<object x="2635.34" y="439.16" z="213.32376" h="78"/>
 		<object x="2455.34" y="435.78" z="231.16751" h="84"/>
@@ -7340,44 +7349,44 @@
 	</spawn>
 	<!-- Virago Looter 31 -->
     <spawn map="220020000" npcid="210895" pool="11" interval="295">
-        <object staticid="0" x="2350.9187" y="1897.0477" z="92.34387" h="18" w="0" rw="3"/>
-		<object staticid="0" x="2442.0056" y="1900.0974" z="95.238525" h="112" w="0" rw="3"/>
-		<object staticid="0" x="2413.479" y="1938.7402" z="92.04111" h="31" w="0" rw="3"/>
-		<object staticid="0" x="2366.9314" y="1967.8363" z="96.05656" h="55" w="0" rw="3"/>
-		<object staticid="0" x="2330.84" y="1935.2262" z="97.19335" h="61" w="0" rw="3"/>
-		<object staticid="0" x="2315.0322" y="1970.1285" z="107.55624" h="27" w="0" rw="3"/>
-		<object staticid="0" x="2361.2625" y="2001.709" z="104.78023" h="109" w="0" rw="3"/>
-		<object staticid="0" x="2421.6091" y="2014.7689" z="104.278885" h="11" w="0" rw="3"/>
-		<object staticid="0" x="2439.2837" y="2035.0721" z="107.97747" h="8" w="0" rw="3"/>
-		<object staticid="0" x="2381.277" y="2029.8315" z="106.65965" h="44" w="0" rw="3"/>
-		<object staticid="0" x="2570.459" y="1772.4517" z="87.99954" h="26" w="0" rw="3"/>
+        <object staticid="0" x="2350.9187" y="1897.0477" z="92.34387" h="18" w="0" rw="0"/>
+		<object staticid="0" x="2442.0056" y="1900.0974" z="95.238525" h="112" w="0" rw="0"/>
+		<object staticid="0" x="2413.479" y="1938.7402" z="92.04111" h="31" w="0" rw="0"/>
+		<object staticid="0" x="2366.9314" y="1967.8363" z="96.05656" h="55" w="0" rw="0"/>
+		<object staticid="0" x="2330.84" y="1935.2262" z="97.19335" h="61" w="0" rw="0"/>
+		<object staticid="0" x="2315.0322" y="1970.1285" z="107.55624" h="27" w="0" rw="0"/>
+		<object staticid="0" x="2361.2625" y="2001.709" z="104.78023" h="109" w="0" rw="0"/>
+		<object staticid="0" x="2421.6091" y="2014.7689" z="104.278885" h="11" w="0" rw="0"/>
+		<object staticid="0" x="2439.2837" y="2035.0721" z="107.97747" h="8" w="0" rw="0"/>
+		<object staticid="0" x="2381.277" y="2029.8315" z="106.65965" h="44" w="0" rw="0"/>
+		<object staticid="0" x="2570.459" y="1772.4517" z="87.99954" h="26" w="0" rw="0"/>
     </spawn>
 	<!-- Virago Looter 34 -->
     <spawn map="220020000" npcid="211516" pool="11" interval="295">
-        <object staticid="0" x="2714.3794" y="1719.5457" z="107.43648" h="88" w="0" rw="3"/>
-        <object staticid="0" x="2569.9292" y="1769.8884" z="87.7386" h="29" w="0" rw="3"/>
-		<object staticid="0" x="2633.233" y="1793.6129" z="89.923386" h="9" w="0" rw="3"/>
-		<object staticid="0" x="2659.0354" y="1818.3232" z="90.83934" h="17" w="0" rw="3"/>
-		<object staticid="0" x="2709.4016" y="1810.5186" z="94.75" h="31" w="0" rw="3"/>
-		<object staticid="0" x="2680.3513" y="1866.8619" z="100.04917" h="69" w="0" rw="3"/>
-		<object staticid="0" x="2656.5408" y="1745.7186" z="93.19122" h="81" w="0" rw="3"/>
-		<object staticid="0" x="2643.4878" y="1694.2789" z="94.51173" h="67" w="0" rw="3"/>
-		<object staticid="0" x="2599.247" y="1701.0442" z="96.95091" h="60" w="0" rw="3"/>
-		<object staticid="0" x="2682.596" y="1694.9749" z="95.263565" h="8" w="0" rw="3"/>
-		<object staticid="0" x="2597.4404" y="1802.3464" z="88.431625" h="63" w="0" rw="3"/>
+        <object staticid="0" x="2714.3794" y="1719.5457" z="107.43648" h="88" w="0" rw="0"/>
+        <object staticid="0" x="2569.9292" y="1769.8884" z="87.7386" h="29" w="0" rw="0"/>
+		<object staticid="0" x="2633.233" y="1793.6129" z="89.923386" h="9" w="0" rw="0"/>
+		<object staticid="0" x="2659.0354" y="1818.3232" z="90.83934" h="17" w="0" rw="0"/>
+		<object staticid="0" x="2709.4016" y="1810.5186" z="94.75" h="31" w="0" rw="0"/>
+		<object staticid="0" x="2680.3513" y="1866.8619" z="100.04917" h="69" w="0" rw="0"/>
+		<object staticid="0" x="2656.5408" y="1745.7186" z="93.19122" h="81" w="0" rw="0"/>
+		<object staticid="0" x="2643.4878" y="1694.2789" z="94.51173" h="67" w="0" rw="0"/>
+		<object staticid="0" x="2599.247" y="1701.0442" z="96.95091" h="60" w="0" rw="0"/>
+		<object staticid="0" x="2682.596" y="1694.9749" z="95.263565" h="8" w="0" rw="0"/>
+		<object staticid="0" x="2597.4404" y="1802.3464" z="88.431625" h="63" w="0" rw="0"/>
     </spawn>
 	<!-- Virago Looter 35 -->	
     <spawn map="220020000" npcid="211505" pool="11" interval="295">
-        <object staticid="0" x="2753.5713" y="1788.2415" z="115.401794" h="36" w="0" rw="3"/>
-		<object staticid="0" x="2772.928" y="1818.2919" z="94.125" h="74" w="0" rw="3"/>
-		<object staticid="0" x="2826.7253" y="1802.2744" z="97.295334" h="0" w="0" rw="3"/>
-		<object staticid="0" x="2869.0095" y="1820.7748" z="97.59804" h="4" w="0" rw="3"/>
-		<object staticid="0" x="2884.9731" y="1750.3024" z="97.30334" h="97" w="0" rw="3"/>
-		<object staticid="0" x="2856.1157" y="1701.6943" z="94.54135" h="51" w="0" rw="3"/>
-		<object staticid="0" x="2798.0647" y="1722.806" z="93.72171" h="57" w="0" rw="3"/>
-		<object staticid="0" x="2785.379" y="1862.4698" z="97.106094" h="29" w="0" rw="3"/>
-		<object staticid="0" x="2804.0176" y="1912.7104" z="110.4989" h="8" w="0" rw="3"/>
-		<object staticid="0" x="2872.2693" y="1874.7915" z="101.17447" h="104" w="0" rw="3"/>
-		<object staticid="0" x="2919.7605" y="1789.2499" z="102.9987" h="118" w="0" rw="3"/>
+        <object staticid="0" x="2753.5713" y="1788.2415" z="115.401794" h="36" w="0" rw="0"/>
+		<object staticid="0" x="2772.928" y="1818.2919" z="94.125" h="74" w="0" rw="0"/>
+		<object staticid="0" x="2826.7253" y="1802.2744" z="97.295334" h="0" w="0" rw="0"/>
+		<object staticid="0" x="2869.0095" y="1820.7748" z="97.59804" h="4" w="0" rw="0"/>
+		<object staticid="0" x="2884.9731" y="1750.3024" z="97.30334" h="97" w="0" rw="0"/>
+		<object staticid="0" x="2856.1157" y="1701.6943" z="94.54135" h="51" w="0" rw="0"/>
+		<object staticid="0" x="2798.0647" y="1722.806" z="93.72171" h="57" w="0" rw="0"/>
+		<object staticid="0" x="2785.379" y="1862.4698" z="97.106094" h="29" w="0" rw="0"/>
+		<object staticid="0" x="2804.0176" y="1912.7104" z="110.4989" h="8" w="0" rw="0"/>
+		<object staticid="0" x="2872.2693" y="1874.7915" z="101.17447" h="104" w="0" rw="0"/>
+		<object staticid="0" x="2919.7605" y="1789.2499" z="102.9987" h="118" w="0" rw="0"/>
     </spawn>
 </spawns>

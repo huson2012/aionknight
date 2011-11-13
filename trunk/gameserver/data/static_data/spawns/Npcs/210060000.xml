@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Теобомос (Элисея)
+	ID локации		 : 210060000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Theobomos
-	@author Atomix
  -->
+
 <spawns>
 	<!-- Abunka (NPC Elite lvl:50)-->
 	<spawn map="210060000" npcid="798178" pool="1" interval="295">
@@ -476,25 +466,17 @@
 	<spawn map="210060000" npcid="798159" pool="1" interval="295">
 		<object x="2217.52000" y="2234.56000" z="43.75501" h="68"/>
 	</spawn>
-	<!-- Obelisk Observatory Village(Object Normal lvl:3)-->
-	<spawn map="210060000" npcid="700399" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="210060000" npcid="700255" pool="1" interval="295">
 		<object x="2277.92100" y="2253.41160" z="62.58725" h="75"/>
 	</spawn>
-	<!-- Obelisk Meniherk Excavation Camp(Object Normal lvl:1)-->
-	<spawn map="210060000" npcid="700343" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:1)-->
+	<spawn map="210060000" npcid="250092" pool="1" interval="295">
 		<object x="1426.23720" y="1570.77800" z="31.56350" h="75"/>
 	</spawn>
-	<!-- Obelisk Jamanok Inn(Object Normal lvl:3)-->
-	<spawn map="210060000" npcid="700400" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="210060000" npcid="700256" pool="1" interval="295">
 		<object x="546.81110" y="1245.29520" z="90.21943" h="85"/>
-	</spawn>
-	<!-- Obelisk Josnack's Vigil(Object Normal lvl:3)-->
-	<spawn map="210060000" npcid="700817" pool="1" interval="295">
-		<object x="915.0556" y="2779.611" z="62.74222" h="60"/>
-	</spawn>
-	<!-- Obelisk Port Anangke(Object Normal lvl:3)-->
-	<spawn map="210060000" npcid="700816" pool="1" interval="295">
-		<object x="2673.3835" y="807.8844" z="139.0627" h="18"/>
 	</spawn>
 	<!-- Observatory Protector (NPC Elite lvl:50)-->
 	<spawn map="210060000" npcid="798161" pool="2" interval="295">
@@ -801,9 +783,17 @@
 		<object staticid="288" x="1993.2909" y="2683.592" z="67.551414" h="0"/>
 		<object staticid="288" x="1961.5552" y="2558.0857" z="83.96251" h="0"/>
 	</spawn>
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="210060000" npcid="700817" pool="1" interval="295">
+		<object x="915.0556" y="2779.611" z="62.74222" h="60"/>
+	</spawn>
 	<!-- Soul Healer (NPC Normal lvl:55)-->
 	<spawn map="210060000" npcid="205270" pool="1" interval="295">
 		<object x="914.00116" y="2781.392" z="62.124928" h="60"/>
+	</spawn>
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="210060000" npcid="700816" pool="1" interval="295">
+		<object x="2673.3835" y="807.8844" z="139.0627" h="18"/>
 	</spawn>
    <!-- Roster Scraps -->
    <spawn map="210060000" npcid="700792" pool="9" interval="295">

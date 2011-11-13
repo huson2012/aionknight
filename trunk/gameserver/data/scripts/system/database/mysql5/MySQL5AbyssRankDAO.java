@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package mysql5;
 
@@ -23,21 +23,21 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.AbyssRankDAO;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.AbyssRankingResult;
-import ru.aionknight.gameserver.model.PlayerClass;
-import ru.aionknight.gameserver.model.Race;
-import ru.aionknight.gameserver.model.gameobjects.PersistentState;
-import ru.aionknight.gameserver.model.gameobjects.player.AbyssRank;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.utils.stats.AbyssRankEnum;
+import gameserver.dao.AbyssRankDAO;
+import gameserver.dataholders.DataManager;
+import gameserver.model.AbyssRankingResult;
+import gameserver.model.PlayerClass;
+import gameserver.model.Race;
+import gameserver.model.gameobjects.PersistentState;
+import gameserver.model.gameobjects.player.AbyssRank;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.utils.stats.AbyssRankEnum;
 
 
 /**
- * @author ATracer, Divinity
+, Divinity
  *
  */
 public class MySQL5AbyssRankDAO extends AbyssRankDAO
@@ -370,7 +370,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 		{
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(SELECT_LEGION_RANKINGS);
-			/* UPDATE ASMO RANKING*/		
+			/** UPDATE ASMO RANKING*/		
 			stmt.setString(1, "ASMODIANS");
 			ResultSet resultSet = stmt.executeQuery();
 			
@@ -387,7 +387,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			stmt.close();
 			
 			stmt = con.prepareStatement(SELECT_LEGION_RANKINGS);
-			/* UPDATE ELYOS RANKING*/
+			/** UPDATE ELYOS RANKING*/
 			stmt.setString(1, "ELYOS");
 			resultSet = stmt.executeQuery();
 			

@@ -1,0 +1,100 @@
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ *
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package gameserver.model;
+
+import javax.xml.bind.annotation.XmlEnum;
+
+@XmlEnum
+public enum PlayerClass
+{
+	WARRIOR(0, true), GLADIATOR(1),	TEMPLAR(2), SCOUT(3, true),	ASSASSIN(4),
+	RANGER(5), MAGE(6, true), SORCERER(7), SPIRIT_MASTER(8), PRIEST(9, true),
+	CLERIC(10),	CHANTER(11);
+
+	private byte classId;
+	private int idMask;
+	private boolean	startingClass;
+	private PlayerClass(int classId)
+	{
+		this(classId, false);
+	}
+
+	private PlayerClass(int classId, boolean startingClass)
+	{
+		this.classId = (byte) classId;
+		this.startingClass = startingClass;
+		this.idMask = (int)Math.pow(2, classId);
+	}
+
+	public byte getClassId()
+	{
+		return classId;
+	}
+
+	public static PlayerClass getPlayerClassById(byte classId)
+	{
+		for(PlayerClass pc : values())
+		{
+			if(pc.getClassId() == classId)
+				return pc;
+		}
+
+		throw new IllegalArgumentException("There is no player class with id " + classId);
+	}
+
+	public boolean isStartingClass()
+	{
+		return startingClass;
+	}
+
+	public static PlayerClass getStartingClassFor(PlayerClass pc)
+	{
+		switch(pc)
+		{
+			case ASSASSIN:
+			case RANGER:
+				return SCOUT;
+			case GLADIATOR:
+			case TEMPLAR:
+				return WARRIOR;
+			case CHANTER:
+			case CLERIC:
+				return PRIEST;
+			case SORCERER:
+			case SPIRIT_MASTER:
+				return MAGE;
+			default:
+				return pc;
+		}
+	}
+	
+	public static PlayerClass getPlayerClassByString(String fieldName)
+	{
+		for(PlayerClass pc : values())
+		{
+			if(pc.toString().equals(fieldName))
+				return pc;
+		}
+		return null;
+	}
+	
+	public int getMask()
+	{
+		return idMask;
+	}
+}

@@ -1,34 +1,30 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dataholders.DataManager;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.NpcTemplate;
+import gameserver.services.TeleportService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.NpcTemplate;
-import ru.aionknight.gameserver.services.TeleportService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-
-/**
- * @author MrPoke and lord_rex
- *
- */
 public class MoveToNpc extends AdminCommand
 {
 
@@ -37,8 +33,8 @@ public class MoveToNpc extends AdminCommand
 		super("movetonpc");
 	}
 
-	/* (non-Javadoc)
-	 * @see org.openaion.gameserver.utils.chathandlers.AdminCommand#executeCommand(org.openaion.gameserver.model.gameobjects.player.Player, java.lang.String[])
+	/** (non-Javadoc)
+	 * @see gameserver.utils.chathandlers.AdminCommand#executeCommand(gameserver.model.gameobjects.player.Player, java.lang.String[])
 	 */
 	@Override
 	public void executeCommand(Player admin, String[] params)

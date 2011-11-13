@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+	Назначение файла	: Первоначальные данные о внешности персонажей
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <custom_presets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="presets.xsd">
 	<preset name="DF1" class="WARRIOR" gender="FEMALE" race="ASMODIANS">
 		<height>1</height>

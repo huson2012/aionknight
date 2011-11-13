@@ -1,52 +1,46 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.lang.reflect.Field;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.configs.main.CacheConfig;
+import gameserver.configs.main.CustomConfig;
+import gameserver.configs.main.DropConfig;
+import gameserver.configs.main.EnchantsConfig;
+import gameserver.configs.main.EventConfig;
+import gameserver.configs.main.FallDamageConfig;
+import gameserver.configs.main.GSConfig;
+import gameserver.configs.main.GroupConfig;
+import gameserver.configs.main.LegionConfig;
+import gameserver.configs.main.NpcMovementConfig;
+import gameserver.configs.main.PeriodicSaveConfig;
+import gameserver.configs.main.PricesConfig;
+import gameserver.configs.main.RateConfig;
+import gameserver.configs.main.ShutdownConfig;
+import gameserver.configs.main.SiegeConfig;
+import gameserver.configs.main.TaskManagerConfig;
+import gameserver.configs.network.IPConfig;
+import gameserver.configs.network.NetworkConfig;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
-
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.configs.main.CacheConfig;
-import ru.aionknight.gameserver.configs.main.CustomConfig;
-import ru.aionknight.gameserver.configs.main.DropConfig;
-import ru.aionknight.gameserver.configs.main.EnchantsConfig;
-import ru.aionknight.gameserver.configs.main.EventConfig;
-import ru.aionknight.gameserver.configs.main.FallDamageConfig;
-import ru.aionknight.gameserver.configs.main.GSConfig;
-import ru.aionknight.gameserver.configs.main.GroupConfig;
-import ru.aionknight.gameserver.configs.main.LegionConfig;
-import ru.aionknight.gameserver.configs.main.NpcMovementConfig;
-import ru.aionknight.gameserver.configs.main.PeriodicSaveConfig;
-import ru.aionknight.gameserver.configs.main.PricesConfig;
-import ru.aionknight.gameserver.configs.main.RateConfig;
-import ru.aionknight.gameserver.configs.main.ShutdownConfig;
-import ru.aionknight.gameserver.configs.main.SiegeConfig;
-import ru.aionknight.gameserver.configs.main.TaskManagerConfig;
-import ru.aionknight.gameserver.configs.network.IPConfig;
-import ru.aionknight.gameserver.configs.network.NetworkConfig;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-
-
-/**
- * @author ATracer
- *
- */
 public class Configure extends AdminCommand
 {
 

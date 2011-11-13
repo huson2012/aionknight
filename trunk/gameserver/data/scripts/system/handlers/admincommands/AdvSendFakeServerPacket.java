@@ -1,19 +1,20 @@
-/*
- * This file is part of aion-emu <aion-emu.com>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-emu is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-emu is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-emu.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.io.File;
@@ -21,7 +22,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -30,42 +30,22 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import org.apache.log4j.Logger;
-
-import ru.aionknight.gameserver.GameServerError;
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET.PacketElementType;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.utils.i18n.CustomMessageId;
-import ru.aionknight.gameserver.utils.i18n.LanguageHandler;
-
-
-/**
- * This admin command is used for sending custom packets from server to client.
- * <p/>
- * Sends packets based on xml mappings in folder "./data/packets".<br />
- * Command details: "//send [1]<br />
- *  * 1 - packet mappings name.<br />
- *  *   - 'demo' for file './data/packets/demo.xml'<br />
- *  *   - 'test' for file './data/packets/test.xml'<br />
- *  * Reciever is a targetted by admin player. If target is 'null' or not a Player - sends to admin.<br />
- * <p/> 
- * Created on: 14.07.2009 13:54:46
- *
- * @author Aquanox
- */
+import gameserver.GameServerError;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET;
+import gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET.PacketElementType;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.utils.i18n.CustomMessageId;
+import gameserver.utils.i18n.LanguageHandler;
 
 public class AdvSendFakeServerPacket extends AdminCommand
 {
 	private static final Logger logger = Logger.getLogger(AdvSendFakeServerPacket.class);
-
 	private static final File FOLDER = new File("./data/packets");
-
 	private Unmarshaller unmarshaller;
 
 	/**

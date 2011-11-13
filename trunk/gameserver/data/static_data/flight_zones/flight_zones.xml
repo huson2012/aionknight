@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	Назначение файла	: Описание зон, в которых разрен полет
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <flight_zones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="flight_zones.xsd">
+	<!-- Элтенен -->
 	<flight_zone name="FlyingzoneShape1" mapid="210020000">
 		<points bottom="87.143188" top="317.143188">
 			<point y="2493.936035" x="195.300858"/>
@@ -14,6 +24,7 @@
 			<point y="2516.0271" x="420.044708"/>
 		</points>
 	</flight_zone>
+	<!-- Элтенен -->
 	<flight_zone name="FlyingzoneShape2" mapid="210020000">
 		<points bottom="15.594482" top="315.594482">
 			<point y="414.005005" x="432.786865"/>
@@ -40,6 +51,7 @@
 			<point y="448.164185" x="385.077759"/>
 		</points>
 	</flight_zone>
+	<!-- Бертрон -->
 	<flight_zone name="LF1_FZ_Illusionary_Lake" mapid="210030000">
 		<points bottom="90.000000" top="260.000000">
 			<point y="2062.75" x="2181.620117"/>
@@ -88,6 +100,7 @@
 			<point y="2084.385986" x="2184.986328"/>
 		</points>
 	</flight_zone>
+	<!-- Бертрон -->
 	<flight_zone name="LF1_FZ_Verterron" mapid="210030000">
 		<points bottom="96.949997" top="296.949997">
 			<point y="1455.087769" x="1456.564697"/>
@@ -113,6 +126,7 @@
 			<point y="1520.136597" x="1434.638306"/>
 		</points>
 	</flight_zone>
+	<!-- Интердика -->
 	<flight_zone name="LF3_FZ_Town3" mapid="210040000">
 		<points bottom="100.000000" top="290.000000">
 			<point y="2761.648926" x="931.83136"/>
@@ -134,6 +148,7 @@
 			<point y="2806.052246" x="911.281067"/>
 		</points>
 	</flight_zone>
+	<!-- Интердика -->
 	<flight_zone name="FlyingzoneShapeMain1" mapid="210040000">
 		<points bottom="318.178864" top="698.178864">
 			<point y="579.720642" x="2280.246826"/>
@@ -156,6 +171,7 @@
 			<point y="643.982239" x="2307.563232"/>
 		</points>
 	</flight_zone>
+	<!-- Ингисон -->
 	<flight_zone name="FlyingzoneShapeOP1" mapid="210050000">
 		<points bottom="312.140137" top="515.200134">
 			<point y="369.917267" x="2643.866211"/>
@@ -175,6 +191,7 @@
 			<point y="413.997986" x="2658.574463"/>
 		</points>
 	</flight_zone>
+	<!-- Ингисон -->
 	<flight_zone name="FlyingzoneShapeSubzone_OD_2" mapid="210050000">
 		<points bottom="55.000000" top="240.000000">
 			<point y="2387.350098" x="2237.97998"/>
@@ -220,6 +237,7 @@
 			<point y="2370.455566" x="2286.645752"/>
 		</points>
 	</flight_zone>
+	<!-- Ингисон -->
 	<flight_zone name="FlyingzoneShapeSubzone_OD_1" mapid="210050000">
 		<points bottom="200.000000" top="375.000000">
 			<point y="1027.569458" x="697.574524"/>
@@ -262,6 +280,7 @@
 			<point y="1049.710083" x="694.369202"/>
 		</points>
 	</flight_zone>
+	<!-- Морхейм -->
 	<flight_zone name="FlyingzoneShapeSubzone_1" mapid="220020000">
 		<points bottom="429.233368" top="579.233368">
 			<point y="2273.871826" x="155.654877"/>
@@ -282,6 +301,7 @@
 			<point y="2347.015869" x="131.857025"/>
 		</points>
 	</flight_zone>
+	<!-- Морхейм -->
 	<flight_zone name="FlyingzoneShapeSubzone_3" mapid="220020000">
 		<points bottom="20.000000" top="220.000000">
 			<point y="1145.346924" x="1499.529419"/>
@@ -302,6 +322,7 @@
 			<point y="1246.053101" x="1496.904907"/>
 		</points>
 	</flight_zone>
+	<!-- Альтгард -->
 	<flight_zone name="DF1A_FZ_Town3" mapid="220030000">
 		<points bottom="200.000000" top="440.000000">
 			<point y="1604.5" x="2407.379883"/>
@@ -330,6 +351,7 @@
 			<point y="1639.875" x="2401.754883"/>
 		</points>
 	</flight_zone>
+	<!-- Альтгард -->
 	<flight_zone name="DF1_FZ_Verterron" mapid="220030000">
 		<points bottom="240.000000" top="440.000000">
 			<point y="1772.634766" x="1397.008301"/>
@@ -356,6 +378,7 @@
 			<point y="1908.735229" x="1426.095459"/>
 		</points>
 	</flight_zone>
+	<!-- Белуслан -->
 	<flight_zone name="FlyingzoneShapeSubZone_E1" mapid="220040000">
 		<points bottom="122.175346" top="454.475334">
 			<point y="2518.887695" x="619.739014"/>
@@ -388,6 +411,7 @@
 			<point y="2527.781006" x="597.913147"/>
 		</points>
 	</flight_zone>
+	<!-- Белуслан -->
 	<flight_zone name="FlyingzoneShapeDF3_Outpost_out3" mapid="220040000">
 		<points bottom="89.735176" top="434.735176">
 			<point y="117.799118" x="180.944214"/>
@@ -402,6 +426,7 @@
 			<point y="68.742516" x="358.741455"/>
 		</points>
 	</flight_zone>
+	<!-- Келькмарос -->
 	<flight_zone name="FlyingzoneShapeDF4_FlyingZoneA6" mapid="220070000">
 		<points bottom="138.479996" top="418.479996">
 			<point y="2258.790039" x="1213.98999"/>
@@ -434,6 +459,7 @@
 			<point y="2248.424316" x="1143.481689"/>
 		</points>
 	</flight_zone>
+	<!-- Келькмарос -->
 	<flight_zone name="FlyingzoneShapeDF4_FlyingZoneOde01" mapid="220070000">
 		<points bottom="93.000000" top="353.000000">
       <point y="1973.25" x="1073.079956"/>
@@ -467,6 +493,7 @@
 			<point y="2011.648804" x="1085.79187"/>
 		</points>
 	</flight_zone>
+	<!-- Келькмарос -->
 	<flight_zone name="FlyingzoneShapeDF4_FlyingZoneOde02" mapid="220070000">
 		<points bottom="36.439999" top="266.439999">
 			<point y="1593.640015" x="1211.77002"/>

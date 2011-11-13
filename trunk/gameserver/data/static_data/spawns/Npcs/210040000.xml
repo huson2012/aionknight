@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Интердика (Элисея)
+	ID локации		 : 210040000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+ -->
 
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.If not, see <http://www.gnu.org/licenses/>.
-
-	Heiron
-
--->
 <spawns>
 	<!-- Aetherogenetics Lab Entrance (Object Normal lvl:1) -->
 	<spawn map="210040000" npcid="730034" pool="1" interval="295">
@@ -156,7 +146,7 @@
 	</spawn>
 	<!-- Ardenia (NPC Normal lvl:50) -->
 	<spawn map="210040000" npcid="205230" pool="1" interval="295">
-		<object staticid="0" x="147.13731" y="1567.2695" z="119.73804" h="70"/>
+		<object staticid="0" x="147.13731" y="1567.2695" z="119.73804" h="70" w="328"/>
 	</spawn>
 	<!-- Aririnirerk (NPC Normal lvl:50) -->
 	<spawn map="210040000" npcid="798073" pool="1" interval="295">
@@ -581,7 +571,7 @@
 	</spawn>
 	<!-- Heraloene (NPC Normal lvl:10) -->
 	<spawn map="210040000" npcid="790018" pool="1" interval="295">
-		<object x="1659.78000" y="2724.50000" z="117.00000" h="60"/>
+		<object x="1659.78000" y="2724.50000" z="117.00000" h="60" w="329"/>
 	</spawn>
 	<!-- Herthia (NPC Elite lvl:40) -->
 	<spawn map="210040000" npcid="205228" pool="1" interval="295">
@@ -608,7 +598,7 @@
 		<object x="1661.1476" y="2688.7085" z="115.375" h="26"/>
 	</spawn>
 	<!-- Indratu Fortress Abyss Gate -->
-	<spawn map="210040000" npcid="700271" pool="1" interval="295">
+	<spawn map="210040000" npcid="700565" pool="1" interval="295">
 		<object x="1875.06" y="2585.26" z="140.745" h="9"/>
 	</spawn>
 	<!-- Iorene (NPC Normal lvl:50) -->
@@ -713,7 +703,7 @@
 	</spawn>
 	<!-- Lantis (NPC Elite lvl:50) -->
 	<spawn map="210040000" npcid="204540" pool="1" interval="295">
-		<object x="1630.35220" y="2720.44380" z="117.91499" h="10"/>
+		<object x="1630.35220" y="2720.44380" z="117.91499" h="10" w="330"/>
 	</spawn>
 	<!-- Liske (NPC Normal lvl:50) -->
 	<spawn map="210040000" npcid="204545" pool="1" interval="295">
@@ -1447,7 +1437,7 @@
 		<object staticid="287" x="1104.3123" y="285.21426" z="105.953705" h="17"/>
 	</spawn>
 	<!-- Xanthe (NPC Normal lvl:50) -->
-	<spawn map="210040000" npcid="204609" pool="1" interval="295">
+	<spawn map="210040000" npcid="211074" pool="1" interval="295">
 		<object x="1785.04480" y="1350.85970" z="102.25000" h="33"/>
 	</spawn>
 	<!-- Young Elim (NPC Normal lvl:2) -->
@@ -1676,9 +1666,15 @@
 	<spawn map="210040000" npcid="204529" pool="1" interval="295">
 		<object x="2492.7559" y="316.12332" z="414.56137" h="11" w="188"/>
 	</spawn>
-	<!-- Changes Joshi and FlegelDEV -->
-	<!-- Road-portal Heiron to Eltnen -->
-	<spawn map="210040000" npcid="257833" pool="1" interval="295">
-		<object x="1680.04" y="116.889" z="135.817" h="89"/>
-	</spawn>
+   <spawn interval="295" map="210040000" npcid="207776" pool="1">
+      <object h="93" x="2010.5503" y="1403.7637" z="118.21561" w="460"/>
+   </spawn>
+   <spawn interval="295" map="210040000" npcid="207747" pool="2">
+      <object h="94" x="2008.8386" y="1402.7312" z="118.322586" w="461"/>
+      <object h="33" x="2007.2177" y="1386.5402" z="118.125"/>
+   </spawn>
+   <spawn interval="295" map="210040000" npcid="207754" pool="2">
+      <object h="2" x="2013.412" y="1390.8813" z="118.125" w="462"/>
+      <object h="0" x="1997.1202" y="1396.7987" z="118.38607"/>
+   </spawn>
 </spawns>

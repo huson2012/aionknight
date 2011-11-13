@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	
+	Название файла	: 'tribe_relations.xsd'
+	Версия файла	: 1.0.1 (Beta)
+	Версия клиента	: 2.5 (Иннова)
+
+-->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
 

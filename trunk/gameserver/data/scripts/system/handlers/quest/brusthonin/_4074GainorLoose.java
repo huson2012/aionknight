@@ -1,16 +1,16 @@
 package quest.brusthonin;
 
 
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.bonus.AbstractInventoryBonus;
-import ru.aionknight.gameserver.model.templates.bonus.InventoryBonusType;
-import ru.aionknight.gameserver.model.templates.bonus.RedeemBonus;
-import ru.aionknight.gameserver.quest.HandlerResult;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.QuestService;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.bonus.AbstractInventoryBonus;
+import gameserver.model.templates.bonus.InventoryBonusType;
+import gameserver.model.templates.bonus.RedeemBonus;
+import gameserver.quest.HandlerResult;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.QuestService;
 
 
 /**

@@ -1,19 +1,19 @@
 package admincommands;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.dao.DAOManager;
+import commons.database.dao.DAOManager;
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dao.SpawnDAO;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.spawn.SpawnTemplate;
-import ru.aionknight.gameserver.spawn.SpawnEngine;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dao.SpawnDAO;
+import gameserver.dataholders.DataManager;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.spawn.SpawnTemplate;
+import gameserver.spawn.SpawnEngine;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

@@ -1,47 +1,41 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package quest.morheim;
 
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
+import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import gameserver.quest.HandlerResult;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.ZoneService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.zone.ZoneName;
 
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
-import ru.aionknight.gameserver.quest.HandlerResult;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.ZoneService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.zone.ZoneName;
-
-
-
-/**
- * @author Hellboy aion4Free
- *
- */
 public class _2038ALostDaeva extends QuestHandler
 {	
 	private final static int	questId	= 2038;

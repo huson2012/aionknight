@@ -1,12 +1,12 @@
 package admincommands;
 
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.state.CreatureSeeState;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.state.CreatureSeeState;
+import gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
 /**
 * @author kecimis

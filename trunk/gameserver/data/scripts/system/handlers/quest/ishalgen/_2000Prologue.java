@@ -16,16 +16,15 @@
  */
 package quest.ishalgen;
 
-
-import ru.aionknight.gameserver.model.Race;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
+import gameserver.model.Race;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.QuestService;
+import gameserver.utils.PacketSendUtility;
 
 
 /**
@@ -77,6 +76,7 @@ public class _2000Prologue extends QuestHandler
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if(qs == null || qs.getStatus() != QuestStatus.START)
 			return false;
+		defaultQuestMovie(env, 70);
 		qs.setStatus(QuestStatus.REWARD);
 		QuestService.questFinish(env);
 		return true;

@@ -18,6 +18,6 @@
 	<classpathentry kind="lib" path="lib/javolution-5.5.1.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/geoEngine-0.1.jar"/>
-	<classpathentry kind="lib" path="lib/open-aion-commons.jar"/>
+	<classpathentry kind="lib" path="lib/ak-commons.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

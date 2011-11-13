@@ -1060,9 +1060,9 @@
 		<object x="1355.826" y="390.9307" h="94" z="249.25447"/>
 	</spawn>    
 	<!-- Ahbana the Wicked (Monster Hero lvl:55) -->
-	<spawn map="300170000" interval="295" npcid="216239" pool="1" rw="5">
-		<object x="1356.57" y="147.764" h="30" z="246.274"/>
-	</spawn>
+   	<spawn map="300170000" npcid="216158" pool="1" interval="44200">
+        	<object  x="1356.57" y="147.764" z="246.2737" h="0" />
+    	</spawn>
     <!-- Taros Lifebane (Monster Hero lvl:55) -->
 	<spawn map="300170000" interval="295" npcid="216248" pool="1" rw="20">
 		<object x="1400.43" y="1284.99" h="0" z="302.75"/>

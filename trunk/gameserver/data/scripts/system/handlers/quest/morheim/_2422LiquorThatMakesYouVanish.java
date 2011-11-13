@@ -1,39 +1,37 @@
-/*
- *  This file is part of Zetta-Core Engine <http://www.zetta-core.org>.
+/**
+ * This file is part of Zetta-Core Engine <http://www.zetta-core.org>.
  *
- *  Zetta-Core is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published
- *  by the Free Software Foundation, either version 3 of the License,
- *  or (at your option) any later version.
+ * Zetta-Core is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
  *
- *  Zetta-Core is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Zetta-Core is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Zetta-Core.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a  copy  of the GNU General Public License
+ * along with Zetta-Core. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package quest.morheim;
 
-
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-
-
+import gameserver.model.gameobjects.player.Player;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.TeleportService;
 
 /**
- * @author XRONOS
- *
+ * @author XRONOS remod By Xmen
  */
 
 public class _2422LiquorThatMakesYouVanish extends QuestHandler
 {
-	private final static int	questId	= 2422;
-	private final static int[]	npcs = {204326, 204327, 204375};
+	private final static int questId	= 2422;
+	private final static int[] npcs = {204326, 204327, 204375};
 	
 	public _2422LiquorThatMakesYouVanish()
 	{
@@ -83,8 +81,9 @@ public class _2422LiquorThatMakesYouVanish extends QuestHandler
 							if(var == 1)
 								return sendQuestDialog(env, 1352);
 						case 10001:
-							return defaultCloseDialog(env, 1, 2, true, false);
-					}
+							
+							TeleportService.teleportTo(player, 210020000, 1, 565, 2516, 329, (byte)90, 0);
+								return defaultCloseDialog(env, 1, 2, true, false);					}
 					break;
 			}
 		}

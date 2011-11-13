@@ -3,21 +3,21 @@ package quest.eltnen;
 import java.util.Collections;
 
 
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.quest.QuestItems;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.ItemService;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.quest.QuestItems;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.ItemService;
+import gameserver.services.QuestService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
 
 
 /**

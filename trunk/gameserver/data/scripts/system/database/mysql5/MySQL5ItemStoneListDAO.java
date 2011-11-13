@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-emu <aion-emu.com>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-emu is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-emu is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-emu.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package mysql5;
 
@@ -24,20 +24,20 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.ItemStoneListDAO;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.PersistentState;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.items.FusionStone;
-import ru.aionknight.gameserver.model.items.GodStone;
-import ru.aionknight.gameserver.model.items.ManaStone;
-import ru.aionknight.gameserver.model.items.ItemStone.ItemStoneType;
+import gameserver.dao.ItemStoneListDAO;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.PersistentState;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.items.FusionStone;
+import gameserver.model.items.GodStone;
+import gameserver.model.items.ManaStone;
+import gameserver.model.items.ItemStone.ItemStoneType;
 
 
 /**
- * @author ATracer
+
  *
  */
 public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
@@ -233,8 +233,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 
 	/**
-	 *  Adds new item stone to item
-	 *  
+	 * Adds new item stone to item
+	 * 
 	 * @param itemObjId
 	 * @param itemId
 	 * @param statEnum
@@ -265,8 +265,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 	
 	/**
-	 *  Adds new fusion item stone to item
-	 *  
+	 * Adds new fusion item stone to item
+	 * 
 	 * @param itemObjId
 	 * @param itemId
 	 * @param statEnum
@@ -353,8 +353,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 
 	/**
-	 *  Deleted item stone from selected item
-	 *  
+	 * Deleted item stone from selected item
+	 * 
 	 * @param itemObjId
 	 * @param slot
 	 */
@@ -381,8 +381,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 	
 	/**
-	 *  Deleted item stone from selected item
-	 *  
+	 * Deleted item stone from selected item
+	 * 
 	 * @param itemObjId
 	 * @param slot
 	 */

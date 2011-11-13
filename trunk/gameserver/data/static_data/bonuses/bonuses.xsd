@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+
+<!--
+
+	Назначение файла	:
+	Ревизия				: 1.0.1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="bonuses">
     <xs:complexType>

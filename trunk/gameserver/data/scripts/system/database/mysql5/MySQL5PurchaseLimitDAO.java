@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import java.util.LinkedHashMap;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.PurchaseLimitDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.player.PurchaseLimit;
+import gameserver.dao.PurchaseLimitDAO;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.player.PurchaseLimit;
 
 
 /**

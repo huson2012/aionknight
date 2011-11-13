@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : 
+	ID локации		 : 
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Poeta
-	@author Atomix
-	@author_fix Youli (based on retail Eu spawn)
-	@author_fix Kellogz (based on retail Eu spawn 01/08/2010)
  -->
+
 <spawns>
 	<!-- Adult Sparkie (Monster Normal lvl:6)-->
 	<spawn map="210010000" npcid="210119" pool="30" interval="120" rw="10">
@@ -1000,7 +988,7 @@
 		<object x="649.0" y="1069.0" z="100.6875" h="104"/>
 	</spawn>
 	<!-- Training Dummy (Monster Normal lvl:5)-->
-	<spawn map="210010000" npcid="700574" pool="1" interval="120">
+	<spawn map="210010000" npcid="700573" pool="1" interval="120">
 		<object x="843.85156" y="1214.3412" z="118.98795" h="28"/>
 	</spawn>
 	<!-- Training Dummy (Monster Normal lvl:5)-->

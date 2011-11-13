@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	
+	Название файла	: 'tribe_relations.xml'
+	Версия файла	: RC1 (Beta)
+	Версия клиента	: 2.5 (Иннова)
+	
+	Назначение 		: Отношения между фракциями (NPC, Часть AI)
+	
+-->
+
 <tribe_relations>
 	<tribe name="PC">
 		<friend>
@@ -2627,16 +2638,6 @@
 			<to>IDCATACOMBS_DRAKE</to>
 		</aggro>
 	</tribe>
-	<tribe base="MONSTER" name="DUMMY">
-		<hostile>
-			<to>GUARD</to>
-			<to>GENERAL_DARK</to>
-			<to>GUARD_DARK</to>
-			<to>GENERAL_DRAGON</to>
-			<to>GUARD_DRAGON</to>
-			<to>MONSTER</to>
-		</hostile>
-	</tribe>
 	<tribe base="MONSTER" name="HOSTILE_ALL">
 		<hostile>
 			<to>PC</to>
@@ -2771,6 +2772,17 @@
 			<to>GUARD_DARK</to>
 		</aggro>
 	</tribe>
+	<tribe base="MONSTER" name="DUMMY">
+		<hostile>
+			<to>GUARD</to>
+			<to>GENERAL_DARK</to>
+			<to>GUARD_DARK</to>
+			<to>GENERAL_DRAGON</to>
+			<to>GUARD_DRAGON</to>
+			<to>MONSTER</to>
+			<to>DUMMY_DGUARD</to>
+		</hostile>
+	</tribe>
 	<tribe base="MONSTER" name="DUMMY2">
 		<hostile>
 			<to>GUARD</to>
@@ -2779,6 +2791,7 @@
 			<to>GENERAL_DRAGON</to>
 			<to>GUARD_DRAGON</to>
 			<to>MONSTER</to>
+			<to>DUMMY2_DGUARD</to>
 		</hostile>
 	</tribe>
 	<tribe base="GUARD_DARK" name="DUMMY_DGUARD">
@@ -2820,11 +2833,27 @@
 	<tribe base="GUARD" name="DUMMY_LGUARD">
 		<aggro>
 			<to>DUMMY</to>
+			<to>MONSTER</to>
+			<to>BROWNIE</to>
+			<to>UNDEAD</to>
+			<to>DEMIHUMANOID</to>
+			<to>RATMAN</to>
+			<to>MAGICALMONSTER</to>
+			<to>BEAST</to>
+			<to>LIZARDMAN</to>
 		</aggro>
 	</tribe>
 	<tribe base="GUARD" name="DUMMY2_LGUARD">
 		<aggro>
 			<to>DUMMY2</to>
+			<to>MONSTER</to>
+			<to>BROWNIE</to>
+			<to>UNDEAD</to>
+			<to>DEMIHUMANOID</to>
+			<to>RATMAN</to>
+			<to>MAGICALMONSTER</to>
+			<to>BEAST</to>
+			<to>LIZARDMAN</to>
 		</aggro>
 	</tribe>
 	<tribe base="USEALL" name="HOSTILEONLYMONSTER">

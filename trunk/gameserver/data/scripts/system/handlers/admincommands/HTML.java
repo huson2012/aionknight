@@ -1,33 +1,29 @@
-/*
- * This file is part of aion-lightning <aion-lightning.com>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://www.aion-knight.ru]
  *
- *  aion-lightning is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-lightning is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-lightning.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
+import gameserver.cache.HTMLCache;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.services.HTMLService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
-import ru.aionknight.gameserver.cache.HTMLCache;
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.services.HTMLService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-
-/**
- * @author lord_rex
- * 
- */
 public class HTML extends AdminCommand
 {
 	public HTML()

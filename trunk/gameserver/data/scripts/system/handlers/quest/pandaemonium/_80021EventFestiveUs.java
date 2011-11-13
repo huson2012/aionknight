@@ -1,18 +1,18 @@
-/*
- *  This file is part of Zetta-Core Engine <http://www.zetta-core.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://www.aion-knight.ru]
  *
- *  Zetta-Core is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published
- *  by the Free Software Foundation, either version 3 of the License,
- *  or (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
  *
- *  Zetta-Core is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Zetta-Core.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a  copy  of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package quest.pandaemonium;
 
@@ -20,19 +20,19 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.QuestTemplate;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
-import ru.aionknight.gameserver.quest.QuestEngine;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
+import gameserver.dataholders.DataManager;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.QuestTemplate;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
+import gameserver.quest.QuestEngine;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.QuestService;
+import gameserver.utils.PacketSendUtility;
 
 
 /**

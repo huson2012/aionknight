@@ -1,12 +1,12 @@
 package admincommands;
 
-import org.openaion.commons.database.dao.DAOManager;
+import commons.database.dao.DAOManager;
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dao.PlayerDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dao.PlayerDAO;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
 
 /**

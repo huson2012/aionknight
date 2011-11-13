@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : 
+	ID локации		 : 
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+ -->
 
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Reshanta
-	TODO: Split Sieges Mobs in another file, don't delete same coord mobs! Dredgion Is added from his starting point but need build his AI and fix his Hight in npc_template.xml
--->
 <spawns>
 	<!-- Acetlar (NPC Normal lvl:50)-->
 	<spawn map="400010000" npcid="271052" pool="1" interval="210">
@@ -34,6 +24,11 @@
 		<object x="2011.9" y="2076.66" z="2249.259" h="6"/>
 		<object x="2104.23" y="2069.6" z="2265.8833" h="114"/>
 		<object x="1943.6" y="1993.44" z="2232.958" h="44"/>
+	</spawn>
+	<!-- Aion's Rebuke Artifact Core (Monster Elite lvl:40)-->
+	<spawn map="400010000" npcid="276006" pool="2" interval="390">
+		<object x="2811.2" y="819.44" z="2869.9075" h="56"/>
+		<object x="2804.74" y="818.77" z="2869.9075" h="36"/>
 	</spawn>
 	<!-- Ancient Balaur (Monster Normal lvl:38) -->
 	<spawn map="400010000" npcid="256200" pool="11" interval="295">
@@ -1377,9 +1372,27 @@
 		<object x="2522.75" y="2186.75" z="2996.5278" h="100"/>
 		<object x="2637.0" y="2111.25" z="3001.627" h="74"/>
 	</spawn>
+	<!-- Healing Aura Artifact Core (Monster Elite lvl:10) -->
+	<spawn map="400010000" npcid="275421" pool="3" interval="300">
+		<object x="1364.4" y="1249.05" z="1512.2489" h="89"/>
+		<object x="1366.18" y="1252.99" z="1511.9551" h="12"/>
+		<object x="1433.45" y="1150.16" z="1512.9406" h="52"/>
+	</spawn>
 	<!-- Henchman Ladun (Named Mob Hero lvl:41) -->
 	<spawn map="400010000" npcid="255705" pool="1" interval="14400">
 		<object x="2145.64" y="2486.65" z="2891.3315" h="0"/>
+	</spawn>
+	<!-- Herat (Monster Normal lvl:50)-->
+	<spawn map="400010000" npcid="266554" pool="1" interval="10800">
+		<object x="2705.621" y="797.0386" z="2865.1409" h="29"/>
+	</spawn>
+	<!-- Herder (Monster Normal lvl:50)-->
+	<spawn map="400010000" npcid="270166" pool="1" interval="210">
+		<object x="1817.465" y="2321.328" z="2931.5413" h="31"/>
+	</spawn>
+	<!-- Hespheria (Monster Normal lvl:5)-->
+	<spawn map="400010000" npcid="268016" pool="1" interval="210">
+		<object x="1996.37" y="1259.09" z="2945.788" h="106"/>
 	</spawn>
 	<!-- Highmage Nobris (Named Mob Normal lvl:26) -->
 	<spawn map="400010000" npcid="253011" pool="1" interval="1800">
@@ -1432,6 +1445,10 @@
 	<!-- Hildebrant (Monster Normal lvl:50)-->
 	<spawn map="400010000" npcid="268052" pool="1" interval="210">
 		<object x="2057.733" y="1245.032" z="2956.286" h="120"/>
+	</spawn>
+	<!-- Himir (Monster Normal lvl:50)-->
+	<spawn map="400010000" npcid="271018" pool="1" interval="210">
+		<object x="740.64" y="2952.3" z="2884.2969" h="50"/>
 	</spawn>
 	<!-- Horrid Ancient Mage (Monster Normal lvl:27) -->
 	<spawn map="400010000" npcid="252552" pool="9" interval="295">
@@ -1696,6 +1713,13 @@
 	<spawn map="400010000" npcid="252549" pool="1" interval="1800">
 		<object x="3080.0" y="3146.0" z="1402.6622" h="34"/>
 		<object x="3295.0" y="2985.0" z="1440.9368" h="32"/>
+	</spawn>
+	<!-- Kerubic Metamorphosis Artifact Core (Monster Elite lvl:40) -->
+	<spawn map="400010000" npcid="275800" pool="4" interval="300">
+		<object x="1320.39" y="1245.34" z="1512.0118" h="111"/>
+		<object x="1325.69" y="1250.85" z="1511.5917" h="114"/>
+		<object x="1317.75" y="1253.74" z="1512.8203" h="72"/>
+		<object x="1324.08" y="1258.89" z="1512.0542" h="14"/>
 	</spawn>
 	<!-- Klaw Combat Prime (Monster Normal lvl:40) -->
 	<spawn map="400010000" npcid="255154" pool="1" interval="295">
@@ -2004,6 +2028,10 @@
 		<object x="3208.339" y="3286.198" z="1536.7424" h="24"/>
 		<object x="3049.79" y="3419.489" z="1522.5997" h="56"/>
 		<object x="3237.842" y="3282.055" z="1540.443" h="62"/>
+	</spawn>
+	<!-- Lifton (Monster Normal lvl:50)-->
+	<spawn map="400010000" npcid="268081" pool="1" interval="210">
+		<object x="2008.964" y="1252.901" z="2945.4092" h="34"/>
 	</spawn>
 	<!-- Light's Defender (Monster Normal lvl:50)-->
 	<spawn map="400010000" npcid="251033" pool="6" interval="210">
@@ -2675,6 +2703,17 @@
 		<object x="1870.555" y="2295.853" z="2945.3086" h="101"/>
 		<object x="1855.241" y="2189.403" z="2943.096" h="49"/>
 	</spawn>
+	<!-- Reshanta's Eye Guard Tower (NPC Elite lvl:14)-->
+	<spawn map="400010000" npcid="275050" pool="8" interval="210">
+		<object x="2069.296" y="2004.503" z="2313.4944" h="97"/>
+		<object x="2089.465" y="1824.326" z="2309.5574" h="119"/>
+		<object x="2185.313" y="2037.642" z="2309.777" h="31"/>
+		<object x="2204.732" y="1856.097" z="2308.3057" h="21"/>
+		<object x="2075.672" y="1849.025" z="2308.9092" h="84"/>
+		<object x="2186.768" y="1826.048" z="2308.5237" h="2"/>
+		<object x="2089.681" y="2038.135" z="2311.9153" h="41"/>
+		<object x="2209.826" y="1998.743" z="2311.511" h="83"/>
+	</spawn>
 	<!-- Restless Skeleton (Monster Normal lvl:34) -->
 	<spawn map="400010000" npcid="256669" pool="20" interval="295">
 		<object x="1257.7" y="2043.49" z="2880.6409" h="13"/>
@@ -2793,13 +2832,6 @@
 		<object x="827.375" y="687.625" z="1681.6713" h="49"/>
 		<object x="831.5" y="697.625" z="1680.434" h="61"/>
 	</spawn>
-	<!-- Seal Sentinel (Monster Normal lvl:30) -->
-	<spawn map="400010000" npcid="253703" pool="4" interval="295">
-		<object x="9445.00793" y="944.7129" z="1666.8243" h="47"/>
-		<object x="945.9524" y="926.7332" z="1667.3406" h="97"/>
-		<object x="961.07733" y="927.4745" z="1668.422" h="109"/>
-		<object x="959.4338" y="942.94885" z="1668.4172" h="20"/>
-	</spawn>
 	<!-- Secret Laboratory Instructor (Monster Normal lvl:40) -->
 	<spawn map="400010000" npcid="256676" pool="20" interval="295">
 		<object x="476.8751" y="2760.896" z="2617.141" h="96"/>
@@ -2840,25 +2872,25 @@
 	<!-- Skeletal Miscreant (Monster Normal lvl:30) -->
 	<spawn map="400010000" npcid="254558" pool="55" interval="295">
 		<object x="2885.54" y="514.52" z="2887.2812" h="63"/>
-		<object x="3008.803" y="530.9875" z="2882.5642" h="16"/>
+		<object x="2976.95" y="585.35" z="2879.2715" h="16"/>
 		<object x="2986.07" y="576.44" z="2879.1694" h="108"/>
-		<object x="2883.6633" y="494.6452" z="2891.379" h="3"/>
-		<object x="2962.2158" y="606.60706" z="2877.686" h="95"/>
+		<object x="2887.47" y="506.08" z="2887.886" h="3"/>
+		<object x="2975.27" y="591.03" z="2878.9763" h="95"/>
 		<object x="2882.82" y="508.32" z="2889.3403" h="87"/>
 		<object x="2979.31" y="592.26" z="2878.62" h="29"/>
-		<object x="2928.7488" y="597.178" z="2884.25" h="114"/>
+		<object x="2973.27" y="589.8" z="2879.2517" h="114"/>
 		<object x="2886.93" y="507.38" z="2887.7976" h="56"/>
-		<object x="2871.6292" y="504.3062" z="2891.5789" h="87"/>
-		<object x="2907.7122" y="500.50308" z="2888.0874" h="48"/>
-		<object x="2970.119" y="534.36926" z="2881.96" h="28"/>
-		<object x="2878.49" y="553.7615" z="2885.93" h="72"/>
+		<object x="2882.62" y="507.74" z="2889.531" h="87"/>
+		<object x="2889.56" y="507.96" z="2887.7017" h="48"/>
+		<object x="2977.01" y="588.59" z="2879.0422" h="28"/>
+		<object x="2886.39" y="509.61" z="2887.6384" h="72"/>
 		<object x="2981.28" y="586.36" z="2878.867" h="66"/>
-		<object x="2905.8713" y="524.2804" z="2887.068" h="55"/>
-		<object x="2858.09" y="539.08716" z="2886.6277" h="78"/>
-		<object x="2973.3381" y="527.54065" z="2883.123" h="92"/>
+		<object x="2887.85" y="511.12" z="2887.4946" h="55"/>
+		<object x="2885.44" y="512.41" z="2887.4592" h="78"/>
+		<object x="2980.51" y="585.94" z="2878.9539" h="92"/>
 		<object x="2886.39" y="506.39" z="2888.1006" h="7"/>
 		<object x="2975.65" y="588.23" z="2879.1777" h="19"/>
-		<object x="2895.8855" y="558.4525" z="2886.9285" h="12"/>
+		<object x="2885.47" y="508.88" z="2888.0686" h="12"/>
 		<object x="3085.222" y="926.6865" z="2844.7568" h="6"/>
 		<object x="2985.171" y="1051.198" z="2822.289" h="66"/>
 		<object x="2867.378" y="1127.275" z="2827.5195" h="115"/>
@@ -3382,15 +3414,5 @@
 	<spawn map="400010000" npcid="296119" pool="2" interval="295">
 		<object x="0.053969588" y="21.763186" z="22.219158" h="0" staticid="363"/>
 		<object x="0.053969588" y="21.763186" z="22.219158" h="0" staticid="1336"/>
-	</spawn>
-	<!-- 216850 and 216851 has to be a group, if someone knows how to make it please change -->
-	<!-- Captain Mituna (Top abyss miragent/fenris quest) -->
-	<spawn map="400010000" npcid="216850" pool="1" interval="28800">
-		<object x="1565.19" y="1944.87" z="2894.09" h="0" w="464"/>
-	</spawn>
-	<!-- Makarah Adjutant (Guards for Captain Mituna Top abyss miragent/fenris quest) -->
-	<spawn map="400010000" npcid="216851" pool="2" interval="28800">
-		<object x="1568.16" y="1942.69" z="2893.87" h="0" w="464"/>
-		<object x="1569.11" y="1947.05" z="2893.80" h="0" w="464"/>
 	</spawn>
 </spawns>

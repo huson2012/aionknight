@@ -1,43 +1,38 @@
 /**
- * This file is part of Aion X Emu <aionxemu.com>
+ * This file is part of Aion-Knight Dev. Team [http://www.aion-knight.ru]
  *
- *  This is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Lesser Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
  *
- *  This software is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Lesser Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU Lesser Public License
- *  along with this software.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a  copy  of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 
 package usercommands;
 
 import java.util.Iterator;
 import java.util.List;
+import gameserver.model.Race;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.StatEnum;
+import gameserver.model.group.PlayerGroup;
+import gameserver.model.legion.Legion;
+import gameserver.network.aion.serverpackets.SM_QUESTIONNAIRE;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.Util;
+import gameserver.utils.chathandlers.UserCommand;
+import gameserver.utils.idfactory.IDFactory;
+import gameserver.world.World;
 
-
-import ru.aionknight.gameserver.model.Race;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.StatEnum;
-import ru.aionknight.gameserver.model.group.PlayerGroup;
-import ru.aionknight.gameserver.model.legion.Legion;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_QUESTIONNAIRE;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.Util;
-import ru.aionknight.gameserver.utils.chathandlers.UserCommand;
-import ru.aionknight.gameserver.utils.idfactory.IDFactory;
-import ru.aionknight.gameserver.world.World;
-
-/**
- *
- *
- */
 public class PlayerInfo extends UserCommand {
     public PlayerInfo() {
         super("playerinfo");
@@ -326,20 +321,5 @@ public class PlayerInfo extends UserCommand {
                 }
             }
         }
-		
-		
-		/*//if (!CustomConfig.PLAYER_EXPERIENCE_CONTROL) {
-            PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_DISABLED));
-            return;
-        }
-
-        if (!player.isNoExperienceGain()) {
-            player.setNoExperienceGain(true);
-            PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_XP_DISABLED));
-        } else {
-            PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_XP_ALREADY_DISABLED));
-        }//*/
     }
-
-
 }

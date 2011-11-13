@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package mysql5;
 
@@ -27,22 +27,22 @@ import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.commons.database.dao.DAOManager;
+import commons.database.DatabaseFactory;
+import commons.database.dao.DAOManager;
 
-import ru.aionknight.gameserver.dao.ItemStoneListDAO;
-import ru.aionknight.gameserver.dao.MailDAO;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.Letter;
-import ru.aionknight.gameserver.model.gameobjects.PersistentState;
-import ru.aionknight.gameserver.model.gameobjects.player.Mailbox;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.player.PlayerCommonData;
-import ru.aionknight.gameserver.model.gameobjects.player.StorageType;
+import gameserver.dao.ItemStoneListDAO;
+import gameserver.dao.MailDAO;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.Letter;
+import gameserver.model.gameobjects.PersistentState;
+import gameserver.model.gameobjects.player.Mailbox;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.player.PlayerCommonData;
+import gameserver.model.gameobjects.player.StorageType;
 
 
 /**
- * @author kosyachok
+
  *
  */
 public class MySQL5MailDAO extends MailDAO
@@ -177,7 +177,7 @@ public class MySQL5MailDAO extends MailDAO
 			case UPDATE_REQUIRED:
 				result = updateLetter(time, letter);
 				break;
-			/*	
+			/**	
 			case DELETED:
 				return deleteLetter(letter);*/
 		}

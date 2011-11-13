@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../licenses/Aion-Unique.css" title="License" alternate="no"?>
+
+<!--
+
+	Назначение файла	: Расположение городских телепортов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
 	<!-- Normal Teleport-->
 	<!-- ELYOS -->

@@ -1,47 +1,43 @@
 /**
  * This file is part of Aion X Emu <aionxemu.com>
  *
- *  This is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Lesser Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * This is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  This software is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Lesser Public License for more details.
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser Public License for more details.
  *
- *  You should have received a copy of the GNU Lesser Public License
- *  along with this software.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU Lesser Public License
+ * along with this software. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.lang.reflect.Field;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dataholders.DataManager;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.PersistentState;
+import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.listeners.ItemEquipmentListener;
+import gameserver.model.items.ManaStone;
+import gameserver.model.templates.item.GodstoneInfo;
+import gameserver.model.templates.item.ItemTemplate;
+import gameserver.model.templates.item.ItemType;
+import gameserver.network.aion.serverpackets.SM_STATS_INFO;
+import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
+import gameserver.services.EnchantService;
+import gameserver.services.ItemService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.Util;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.PersistentState;
-import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.listeners.ItemEquipmentListener;
-import ru.aionknight.gameserver.model.items.ManaStone;
-import ru.aionknight.gameserver.model.templates.item.GodstoneInfo;
-import ru.aionknight.gameserver.model.templates.item.ItemTemplate;
-import ru.aionknight.gameserver.model.templates.item.ItemType;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_STATS_INFO;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
-import ru.aionknight.gameserver.services.EnchantService;
-import ru.aionknight.gameserver.services.ItemService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.Util;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.world.World;
-
-/**
- * @author Tago
- * modified by Wakizashi, modified by Dallas
- */
 public class Equip extends AdminCommand
 {
 
@@ -311,15 +307,15 @@ public class Equip extends AdminCommand
 		if(item.getItemTemplate().isArmor())
 		{
 			int at = item.getItemTemplate().getItemSlot();
-			if(	at == 1 ||		/* Main Hand */
-				at == 2 ||		/* Sub Hand */
-				at == 8 ||		/* Jacket */
-				at == 16 || 	/* Gloves */
-				at == 32 ||		/* Boots */
-				at == 2048 ||	/* Shoulder */
-				at == 4096 ||	/* Pants */
-				at == 131072 ||	/* Main Off Hand */
-				at == 262144) 	/* Sub Off Hand */
+			if(	at == 1 ||		/** Main Hand */
+				at == 2 ||		/** Sub Hand */
+				at == 8 ||		/** Jacket */
+				at == 16 || 	/** Gloves */
+				at == 32 ||		/** Boots */
+				at == 2048 ||	/** Shoulder */
+				at == 4096 ||	/** Pants */
+				at == 131072 ||	/** Main Off Hand */
+				at == 262144) 	/** Sub Off Hand */
 				return true;
 		}
 		return false;

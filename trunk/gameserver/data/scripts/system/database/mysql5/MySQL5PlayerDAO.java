@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-emu <aion-emu.com>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- * aion-emu is free software: you can redistribute it and/or modify
+ * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * aion-emu is distributed in the hope that it will be useful,
+ * Aion-Knight is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with aion-emu.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 
 package mysql5;
@@ -28,27 +28,27 @@ import java.util.List;
 import javolution.util.FastMap;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.configs.main.GSConfig;
-import ru.aionknight.gameserver.dao.PlayerDAO;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.dataholders.PlayerInitialData;
-import ru.aionknight.gameserver.dataholders.PlayerInitialData.LocationData;
-import ru.aionknight.gameserver.model.Gender;
-import ru.aionknight.gameserver.model.PlayerClass;
-import ru.aionknight.gameserver.model.Race;
-import ru.aionknight.gameserver.model.account.PlayerAccountData;
-import ru.aionknight.gameserver.model.gameobjects.player.Mailbox;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.player.PlayerCommonData;
-import ru.aionknight.gameserver.world.World;
-import ru.aionknight.gameserver.world.WorldPosition;
+import gameserver.configs.main.GSConfig;
+import gameserver.dao.PlayerDAO;
+import gameserver.dataholders.DataManager;
+import gameserver.dataholders.PlayerInitialData;
+import gameserver.dataholders.PlayerInitialData.LocationData;
+import gameserver.model.Gender;
+import gameserver.model.PlayerClass;
+import gameserver.model.Race;
+import gameserver.model.account.PlayerAccountData;
+import gameserver.model.gameobjects.player.Mailbox;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.player.PlayerCommonData;
+import gameserver.world.World;
+import gameserver.world.WorldPosition;
 
 import com.mysql.jdbc.exceptions.MySQLDataException;
 
 /**
- * Class that that is responsible for loading/storing {@link ru.aionknight.gameserver.model.gameobjects.player.Player}
+ * Class that that is responsible for loading/storing {@link gameserver.model.gameobjects.player.Player}
  * object from MySQL 5.
  * 
  * @author SoulKeeper, Saelya

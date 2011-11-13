@@ -1,16 +1,16 @@
 package quest.pandaemonium;
 
 
-import ru.aionknight.gameserver.model.flyring.FlyRing;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.flyring.FlyRingTemplate;
-import ru.aionknight.gameserver.quest.HandlerResult;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.world.WorldMapType;
+import gameserver.model.flyring.FlyRing;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.flyring.FlyRingTemplate;
+import gameserver.quest.HandlerResult;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.QuestService;
+import gameserver.world.WorldMapType;
 
 
 /**

@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Альтгард (Асмодея)
+	ID локации		 : 220030000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Altgard
-	@author Atomix
  -->
+
 <spawns>
-	<!-- Discarded Odium Piece -->
+	<!--  -->
 	<spawn map="220030000" npcid="730306" pool="1" interval="295">
 		<object staticid="1387" x="2789" y="1582" z="248.84663" h="0"/>
 	</spawn>
 	<!-- Discarded Odium Pile -->
 	<spawn map="220030000" npcid="730307" pool="1" interval="295">
 		<object staticid="1389" x="2878" y="1535" z="250.39764" h="0"/>
-	</spawn>
-	<!-- Abandoned Relic Site -->
-	<spawn map="220030000" npcid="206151" pool="1" interval="295">
-		<object x="2902.34" y="1479.19" z="252.694" h="0"/>
 	</spawn>
 	<!-- Haramel Secret Entrance -->
 	<spawn map="220030000" npcid="730319" pool="1" interval="295">
@@ -264,7 +250,7 @@
 	</spawn>
 	<!-- Eida (NPC Normal lvl:10)-->
 	<spawn map="220030000" npcid="203583" pool="1" interval="295">
-		<object x="1559.54680" y="1861.68500" z="272.60373" h="22"/>
+		<object x="1559.54680" y="1861.68500" z="272.60373" h="22" w="257"/>
 	</spawn>
 	<!-- Elk (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203623" pool="1" interval="295">
@@ -462,7 +448,7 @@
 	</spawn>
 	<!-- Lamir (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203620" pool="1" interval="295">
-		<object x="1844.46690" y="728.40930" z="258.25000" h="65"/>
+		<object x="1844.46690" y="728.40930" z="258.25000" h="65" w="285"/>
 	</spawn>
 	<!-- Lanakin (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203626" pool="1" interval="295">
@@ -603,34 +589,28 @@
 	<spawn map="220030000" npcid="203592" pool="1" interval="295">
 		<object x="1703.95580" y="1792.58390" z="205.09349" h="101"/>
 	</spawn>
-	<!-- Obelisk Altgard Fortress(Object Normal lvl:3)-->
-	<spawn map="220030000" npcid="700065" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220030000" npcid="700231" pool="1" interval="295">
 		<object x="1658.27050" y="1814.99160" z="254.09915" h="7"/>
 	</spawn>
-	<!-- Obelisk Basfelt Village(Object Normal lvl:3)-->
-	<spawn map="220030000" npcid="700066" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220030000" npcid="700232" pool="1" interval="295">
 		<object x="1800.19590" y="711.43225" z="262.62534" h="3"/>
 	</spawn>
-	<!-- Obelisk Heart Of Impetusium(Object Normal lvl:3)-->
-	<spawn map="220030000" npcid="700067" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220030000" npcid="700297" pool="1" interval="295">
 		<object staticid="238" x="2656.6917" y="1660.3958" z="324.78445" h="0"/>
 	</spawn>
-	<!-- Obelisk (NPC Altagard Observatory) -->
-	<spawn map="220030000" npcid="700822" pool="1" interval="295">
-		<object x="1461.8221" y="2553.6057" z="299.21405" h="106"/>
-	</spawn>
-	<!-- Obelisk (NPC Traders Berth) -->
-	<spawn map="220030000" npcid="700821" pool="1" interval="295">
-		<object x="2686.7495" y="1020.9011" z="312.61285" h="25"/>
-	</spawn>
 	<!-- Observatory Guard (NPC Normal lvl:20)-->
-	<spawn map="220030000" npcid="203661" pool="1" interval="295">
-		<object x="1562.67690" y="2555.93020" z="285.75436" h="20"/>
-	</spawn>
+   <spawn interval="295" map="220030000" npcid="203661" pool="2">
+      <object h="5" x="1505.7465" y="2550.141" z="294.65604" w="464"/>
+      <object h="30" x="1562.6769" y="2555.9302" z="285.75726"/>
+   </spawn>
 	<!-- Observatory Guard (NPC Normal lvl:20)-->
-	<spawn map="220030000" npcid="203662" pool="1" interval="295">
-		<object x="1573.09560" y="2560.89300" z="285.76266" h="10"/>
-	</spawn>
+   <spawn interval="295" map="220030000" npcid="203662" pool="2">
+      <object h="5" x="1505.1383" y="2551.9941" z="294.591" w="463"/>
+      <object h="2" x="1573.0992" y="2560.939" z="285.72778"/>
+   </spawn>
 	<!-- Observatory Guard (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203663" pool="1" interval="295">
 		<object x="1572.01110" y="2568.84250" z="285.50000" h="5"/>
@@ -681,7 +661,7 @@
 	</spawn>
 	<!-- Shania (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203621" pool="1" interval="295">
-		<object x="1880.07620" y="706.52210" z="260.00000" h="112"/>
+		<object x="1880.07620" y="706.52210" z="260.00000" h="112" w="286"/>
 	</spawn>
 	<!-- Shugo Laborer (NPC Normal lvl:15) (from client spawn)-->
 	<spawn map="220030000" npcid="798104" pool="1" interval="295">
@@ -769,7 +749,7 @@
 	</spawn>
 	<!-- Tulberg (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203562" pool="1" interval="295">
-		<object x="1684.44000" y="1755.51000" z="259.14210" h="120"/>
+		<object x="1684.44000" y="1755.51000" z="259.14210" h="120" w="251"/>
 	</spawn>
 	<!-- Ukin (NPC Normal lvl:40)-->
 	<spawn map="220030000" npcid="203581" pool="1" interval="295">
@@ -777,7 +757,7 @@
 	</spawn>
 	<!-- Umkata's Grave (Object Normal lvl:1)-->
 	<spawn map="220030000" npcid="700098" pool="1" interval="295">
-		<object x="2894.8237" y="1739.6812" z="254.75" h="82"/>
+		<object x="2896.16000" y="1742.63000" z="254.75" h="110"/>
 	</spawn>
 	<!-- Umkata's Jewel Box (Object Normal lvl:1)-->
 	<spawn map="220030000" npcid="700097" pool="1" interval="295">
@@ -801,7 +781,7 @@
 	</spawn>
 	<!-- Vogbadic (NPC Normal lvl:50)-->
 	<spawn map="220030000" npcid="203575" pool="1" interval="295">
-		<object x="1624.74100" y="1741.85400" z="269.36108" h="115"/>
+		<object x="1624.74100" y="1741.85400" z="269.36108" h="115" w="258"/>
 	</spawn>
 	<!-- Vovetirn (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203630" pool="1" interval="295">
@@ -843,6 +823,14 @@
 	<spawn map="220030000" npcid="799789" pool="1" interval="295">
 		<object x="1673.0" y="1798.0" z="253.0" h="116"/>
 	</spawn>
+	<!-- Obelisk (NPC Traders Berth) -->
+	<spawn map="220030000" npcid="700821" pool="1" interval="295">
+		<object x="2686.7495" y="1020.9011" z="312.61285" h="25"/>
+	</spawn>
+	<!-- Obelisk (NPC Altagard Observatory) -->
+	<spawn map="220030000" npcid="700822" pool="1" interval="295">
+		<object x="1461.8221" y="2553.6057" z="299.21405" h="106"/>
+	</spawn>
 	<!-- Pauloin (NPC Soul Healer lvl:55) -->
 	<spawn map="220030000" npcid="205274" pool="1" interval="295">
 		<object x="1462.9255" y="2555.9006" z="298.875" h="116"/>
@@ -852,40 +840,52 @@
 		<object x="2684.7668" y="1022.1772" z="312.00772" h="23"/>
 	</spawn>
 	<!-- Altgard Abyss Gate(Quest NPC lvl:14 ) -->
-	<spawn map="220030000" npcid="700141" pool="1" interval="295">
+	<spawn map="220030000" npcid="700143" pool="1" interval="295">
 		<object x="2452.26" y="2547.32" z="315.226" h="27"/>
 	</spawn>
-	<!-- Imiron -->
-	<spawn map="220030000" npcid="799919" pool="1" interval="295">
-		<object x="1711.1252" y="1826.1426" z="254.82924" h="98"/>
-	</spawn>
-	<!-- Setimner -->
-	<spawn map="220030000" npcid="799917" pool="1" interval="295">
-		<object x="1711.317" y="1827.73" z="256" h="17"/>
-	</spawn>
-	<!-- Rancier -->
-	<spawn map="220030000" npcid="799881" pool="1" interval="295">
-		<object x="1710.642" y="1831.006" z="256" h="17"/>
-	</spawn>
-	<!-- Varasgalf -->
-	<spawn map="220030000" npcid="799918" pool="1" interval="295">
-		<object x="1707.094" y="1834.22" z="256" h="17"/>
-	</spawn>
-	<!-- Ash -->
-	<spawn map="220030000" npcid="799920" pool="1" interval="295">
-		<object x="1705.976" y="1824.718" z="256" h="17"/>
-	</spawn>
-	<!-- Gallum -->
-	<spawn map="220030000" npcid="799847" pool="1" interval="295">
-		<object x="1698.493" y="1842.375" z="256" h="17"/>
-	</spawn>	
-	<!-- Isonne -->
-	<spawn map="220030000" npcid="799864" pool="1" interval="295">
-		<object x="1700.4143" y="1842.9777" z="255.0639" h="98"/>
-	</spawn>
-	<!-- Changes Joshi and FlegelDEV -->
-	<!-- Road-portal Altgard to Morheim -->
-	<spawn map="220030000" npcid="257233" pool="1" interval="295">
-		<object x="2852.1843" y="1360.8065" z="248.5" h="100"/>
-	</spawn>
+   <spawn interval="295" map="220030000" npcid="799864" pool="1">
+      <object h="93" x="1700.6743" y="1842.373" z="255.59895"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799847" pool="1">
+      <object h="80" x="1698.4932" y="1842.3754" z="255.19571"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799881" pool="1">
+      <object h="3" x="1710.6417" y="1831.0056" z="254.875"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799917" pool="1">
+      <object h="116" x="1711.3169" y="1827.7301" z="254.86925"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799918" pool="1">
+      <object h="30" x="1707.0945" y="1834.2202" z="254.81413"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799919" pool="1">
+      <object h="113" x="1711.322" y="1825.6368" z="255.42325"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799920" pool="1">
+      <object h="90" x="1705.9761" y="1824.7184" z="254.5391"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="205295" pool="1">
+      <object h="42" x="1693.8286" y="1789.8772" z="251.625" w="252"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799731" pool="1">
+      <object h="43" x="1692.3765" y="1788.1769" z="251.625" w="253"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799746" pool="1">
+      <object h="43" x="1695.5289" y="1788.425" z="251.625" w="254"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799736" pool="1">
+      <object h="44" x="1695.3873" y="1786.1936" z="251.625"  w="255"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="799737" pool="1">
+      <object h="45" x="1696.5565" y="1783.4308" z="251.53479" w="256"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="203637" pool="1">
+      <object h="95" x="1954.628" y="726.4576" z="265.57678" w="287"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="203636" pool="1">
+      <object h="100" x="1955.6508" y="725.48926" z="265.65692" w="288"/>
+   </spawn>
+   <spawn interval="295" map="220030000" npcid="203584" pool="1">
+      <object h="89" x="1953.6869" y="724.4393" z="265.70297" w="289"/>
+   </spawn>
 </spawns>

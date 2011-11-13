@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Бертрон (Элисея)
+	ID локации		 : 210030000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Verteron
-	@author Atomix
  -->
+
 <spawns>
 	<!-- Suspicious Odium Pile -->
-	<spawn map="210030000" npcid="730305" pool="1" interval="105">
+	<spawn map="210030000" npcid="730304" pool="1" interval="105">
 		<object staticid="631" x="2490.0713" y="864.44049" z="100.73459" h="0"/>
 	</spawn>
 	<!-- Suspicious Odium Piece -->
 	<spawn map="210030000" npcid="730304" pool="1" interval="105">
 		<object staticid="630" x="2457.0952" y="872.57697" z="103.08709" h="0"/>
-	</spawn>
-	<!-- Suspicious relic site -->
-	<spawn map="210030000" npcid="206150" pool="1" interval="105">
-		<object x="2457.0952" y="872.57697" z="103.08709" h="0"/>
 	</spawn>
 	<!-- Haramel Secret Entrance -->
 	<spawn map="210030000" npcid="730318" pool="1" interval="105">
@@ -202,7 +188,7 @@
 	</spawn>
 	<!-- Despoina(NPC Normal lvl:20)-->
 	<spawn map="210030000" npcid="203114" pool="1" interval="295">
-		<object x="1602.461" y="1547.799" z="116.749146" h="46" w="108"/>
+		<object x="1602.461" y="1547.799" z="116.749146" h="46" rw="249"/>
 	</spawn>
 	<!-- Drasia (NPC Normal lvl:10)-->
 	<spawn map="210030000" npcid="203094" pool="1" interval="295">
@@ -348,7 +334,7 @@
 	<spawn map="210030000" npcid="700123" pool="1" interval="295">
 		<object x="1738.0" y="2554.0" z="152.30351" h="78"/>
 	</spawn>
-	<!-- Verteron Abyss Gate (Object Normal lvl:3)-->
+	<!-- Indratu Fortress Abyss Gate (Object Normal lvl:3)-->
 	<spawn map="210030000" npcid="700141" pool="1" interval="1">
 		<object staticid="802" x="2691.4753" y="1068.0687" z="200.63638" h="4"/>
 	</spawn>
@@ -494,18 +480,9 @@
 	<spawn map="210030000" npcid="790000" pool="1" interval="295">
 		<object x="1655.8699" y="1520.2257" z="118.91135" h="90"/>
 	</spawn>
-	<!-- Map of Eyvindr (Object Normal lvl:1)-->
-	<spawn map="210030000" npcid="700139" pool="2" interval="295">
-		<object staticid="486" x="1155.7095" y="1856.869" z="105.54306" h="49"/>
-		<object staticid="485" x="2125.9268" y="690.8397" z="100.43777" h="73"/>
-	</spawn>
 	<!-- Meliodas (NPC Normal lvl:20)-->
 	<spawn map="210030000" npcid="203156" pool="1" interval="295">
 		<object x="1720.2235" y="2755.0159" z="270.875" h="3"/>
-	</spawn>
-	<!-- Mesarion (NPC Normal lvl:20)-->
-	<spawn map="210030000" npcid="203116" pool="1" interval="295">
-		<object x="2066.888" y="2417.4448" z="274.23608" h="56" w="109"/>
 	</spawn>
 	<!-- Meteina (NPC Normal lvl:17)-->
 	<spawn map="210030000" npcid="203147" pool="1" interval="295">
@@ -621,10 +598,6 @@
 	<!-- Palaemon (NPC Elite lvl:45)-->
 	<spawn map="210030000" npcid="203105" pool="1" interval="295">
 		<object x="1691.1555" y="1477.5161" z="121.44807" h="46"/>
-	</spawn>
-	<!-- Pamis (NPC Elite lvl:20)-->
-	<spawn map="210030000" npcid="203115" pool="1" interval="295">
-		<object x="2214.1362" y="2064.6382" z="151.97763" h="17"/>
 	</spawn>
 	<!-- Parine (NPC Normal lvl:10)-->
 	<spawn map="210030000" npcid="203092" pool="1" interval="295">
@@ -914,7 +887,7 @@
 	</spawn>
 	<!-- Jiyol -->
 	<spawn map="210030000" npcid="799904" pool="1" interval="295">
-		<object x="1710.3351" y="1507.0757" z="121.4261" h="61"/>
+		<object x="1710.3351" y="1507.0757" z="121.4261" h="61" w="222"/>
 	</spawn>
 	<!-- Markos -->
 	<spawn map="210030000" npcid="799835" pool="1" interval="295">
@@ -924,21 +897,16 @@
 	<spawn map="210030000" npcid="799813" pool="1" interval="295">
 		<object x="1661.6986" y="1476.2032" z="120.98267" h="34"/>
 	</spawn>
-	<!-- Legionary 1 -->
-	<spawn map="210030000" npcid="205018" pool="1" interval="295">
-		<object x="1626.0945" y="1482.7241" z="143.53172" h="0" fly="1" rw="185"/>
-	</spawn>
-	<!-- Legionary 2 -->
-	<spawn map="210030000" npcid="205019" pool="1" interval="295">
-		<object x="1626.0945" y="1482.7241" z="143.53172" h="0" fly="1" rw="186"/>
-	</spawn>
+	<!-- Фамис -->
+   <spawn interval="295" map="210030000" npcid="203115" pool="1">
+      <object h="4" x="1718.4532" y="1511.4587" z="132.1" fly="1" rw="249"/>
+   </spawn>
+	<!-- Месарион -->
+   <spawn interval="295" map="210030000" npcid="203116" pool="1">
+      <object h="16" x="1717.8304" y="1513.3593" z="132.1" fly="1" rw="250"/>
+   </spawn>
 	<!-- Hilara -->
 	<spawn map="210030000" npcid="798395" pool="1" interval="295">
 		<object x="2324.02" y="1807.74" z="194.651" h="75"/>
-	</spawn>
-	<!-- Changes Joshi and FlegelDEV -->
-	<!-- Road-portal Verteron to Eltnen -->
-	<spawn map="210030000" npcid="258135" pool="1" interval="295">
-		<object x="2692.27" y="1822.28" z="141.656" h="119"/>
 	</spawn>
 </spawns>

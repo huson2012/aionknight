@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cube_expander xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cube_expander.xsd">
-	<!-- Instructions 
-		min_level and max_level reflects current cube expansion level. By default it is 0 (not yet expanded)
-		price01 - is the price to expand to level 1 from level 0
-		..
-		price09 - is the price to expand to level 9 from level 8
-		
-		The difference (max_level - min_level + 1) should be equal to number of prices specified
-	-->
+
+<!--
+
+	Назначение файла	:
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 	<!-- Poeta -->
 	<cube_npc id="798008" name="Baevrunerk">
 		<expand level="1" price="1000"/>

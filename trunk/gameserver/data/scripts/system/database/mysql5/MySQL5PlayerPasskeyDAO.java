@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.PlayerPasskeyDAO;
+import gameserver.dao.PlayerPasskeyDAO;
 
 
 /**
@@ -24,9 +24,9 @@ public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 	public static final String  CHECK_QUERY		= "SELECT COUNT(*) cnt FROM `player_passkey` WHERE `account_id`=? AND `passkey`=?";
 	public static final String  EXIST_CHECK_QUERY	= "SELECT COUNT(*) cnt FROM `player_passkey` WHERE `account_id`=?";
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerPasskeyDAO#insertPlayerPasskey(int, java.lang.String)
+	 * @see gameserver.dao.PlayerPasskeyDAO#insertPlayerPasskey(int, java.lang.String)
 	 */
 	@Override
 	public void insertPlayerPasskey(int accountId, String passkey)
@@ -54,9 +54,9 @@ public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 		}
 	}
 
-	/*
+	/**
 	* (non-Javadoc)
-	* @see org.openaion.gameserver.dao.PlayerPasskeyDAO#updatePlayerPasskey(int, java.lang.String, java.lang.String)
+	* @see gameserver.dao.PlayerPasskeyDAO#updatePlayerPasskey(int, java.lang.String, java.lang.String)
 	*/
 	@Override
 	public boolean updatePlayerPasskey(int accountId, String oldPasskey, String newPasskey)
@@ -89,9 +89,9 @@ public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 	    return result;
 	}
 
-	/*
+	/**
 	* (non-Javadoc)
-	* @see org.openaion.gameserver.dao.PlayerPasskeyDAO#updateForcePlayerPasskey(int, java.lang.String)
+	* @see gameserver.dao.PlayerPasskeyDAO#updateForcePlayerPasskey(int, java.lang.String)
 	*/
 	@Override
 	public boolean updateForcePlayerPasskey(int accountId, String newPasskey)
@@ -123,9 +123,9 @@ public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 	    return result;
 	}
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerPasskeyDAO#checkPlayerPasskey(int, java.lang.String)
+	 * @see gameserver.dao.PlayerPasskeyDAO#checkPlayerPasskey(int, java.lang.String)
 	 */
 	@Override
 	public boolean checkPlayerPasskey(int accountId, String passkey)
@@ -164,9 +164,9 @@ public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 		return passkeyChecked;
 	}
 
-	/*
+	/**
 	* (non-Javadoc)
-	* @see org.openaion.gameserver.dao.PlayerPasskeyDAO#existCheckPlayerPasskey(int)
+	* @see gameserver.dao.PlayerPasskeyDAO#existCheckPlayerPasskey(int)
 	*/
 	@Override
 	public boolean existCheckPlayerPasskey(int accountId)
@@ -204,9 +204,9 @@ public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 	    return existPasskeyChecked;
 	}
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * @see org.openaion.commons.database.dao.DAO#supports(java.lang.String, int, int)
+	 * @see commons.database.dao.DAO#supports(java.lang.String, int, int)
 	 */
 	@Override
 	public boolean supports(String databaseName, int majorVersion, int minorVersion)

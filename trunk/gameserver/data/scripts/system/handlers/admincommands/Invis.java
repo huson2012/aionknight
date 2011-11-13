@@ -1,34 +1,29 @@
-/* 
-* This file is part of aion unique <aion-unique.org>.
-*
-*  aion unique is free software: you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation, either version 3 of the License, or
-*  (at your option) any later version.
-*
-*  aion-emu is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  You should have received a copy of the GNU General Public License
-*  along with aion unique.  If not, see <http://www.gnu.org/licenses/>.
-*/
+/** 
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ *
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with aion unique. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package admincommands;
 
-
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.state.CreatureVisualState;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
-import ru.aionknight.gameserver.skill.effect.EffectId;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-
-/**
-* @author Divinity
-*
-*/
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.state.CreatureVisualState;
+import gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
+import gameserver.skill.effect.EffectId;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
 public class Invis extends AdminCommand
 {

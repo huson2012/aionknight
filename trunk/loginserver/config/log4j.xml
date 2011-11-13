@@ -9,11 +9,11 @@
         <layout class="org.apache.log4j.EnhancedPatternLayout">
             <param name="ConversionPattern" value="[%p] %d{yyyy-MM-dd HH:mm:ss} - %m%n"/>
         </layout>
-		<filter class="org.openaion.commons.log4j.filters.ConsoleFilter"/>
+		<filter class="commons.log4j.filters.ConsoleFilter"/>
     </appender>
 
     <!-- This appender prints all that is shown in console to file -->
-    <appender name="CONSOLE_TO_FILE" class="org.openaion.commons.log4j.appenders.TruncateToZipFileAppender">
+    <appender name="CONSOLE_TO_FILE" class="commons.log4j.appenders.TruncateToZipFileAppender">
         <param name="file" value="log/console.log"/>
         <param name="append" value="false"/>
         <param name="backupDir" value="log/backup"/>
@@ -23,11 +23,11 @@
         <layout class="org.apache.log4j.EnhancedPatternLayout">
             <param name="ConversionPattern" value="[%p] %d{yyyy-MM-dd HH:mm:ss} - %c:%L - %m%n"/>
         </layout>
-	  <filter class="org.openaion.commons.log4j.filters.ConsoleFilter"/>
+	  <filter class="commons.log4j.filters.ConsoleFilter"/>
     </appender>
 
     <!-- This appender accepts only messages with exceptions and logs them to separate file -->
-    <appender name="ERROR_APPENDER" class="org.openaion.commons.log4j.appenders.TruncateToZipFileAppender">
+    <appender name="ERROR_APPENDER" class="commons.log4j.appenders.TruncateToZipFileAppender">
         <param name="file" value="log/errors.log"/>
         <param name="append" value="false"/>
         <param name="backupDir" value="log/backup"/>
@@ -37,7 +37,7 @@
         <layout class="org.apache.log4j.EnhancedPatternLayout">
             <param name="ConversionPattern" value="[%p %d{yyyy-MM-dd HH:mm:ss}] %c:%L - %m%n"/>
         </layout>
-        <filter class="org.openaion.commons.log4j.filters.ThrowablePresentFilter"/>
+        <filter class="commons.log4j.filters.ThrowablePresentFilter"/>
     </appender>
 
     <!-- Root Logger -->
@@ -95,6 +95,6 @@
         }
 
     -->
-    <categoryFactory class="org.openaion.commons.log4j.ThrowableAsMessageAwareFactory"/>
+    <categoryFactory class="commons.log4j.ThrowableAsMessageAwareFactory"/>
 
 </log4j:configuration>

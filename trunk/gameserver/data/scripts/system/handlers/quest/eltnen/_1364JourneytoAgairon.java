@@ -1,31 +1,31 @@
-/*
- *  This file is part of Aion-Core Extreme <http://www.aion-core.net>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  Aion-Core is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published
- *  by the Free Software Foundation, either version 3 of the License,
- *  or (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
  *
- *  Aion-Core is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Aion-Core Extreme.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a  copy  of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package quest.eltnen;
 
 
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.utils.MathUtil;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.utils.MathUtil;
+import gameserver.utils.PacketSendUtility;
 
 /**
  * @author Orpheo

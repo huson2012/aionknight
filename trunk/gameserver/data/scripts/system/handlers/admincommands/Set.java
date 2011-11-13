@@ -3,19 +3,19 @@ package admincommands;
 import java.util.Arrays;
 
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.PlayerClass;
-import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_TITLE_SET;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_TITLE_UPDATE;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.PlayerClass;
+import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_TITLE_SET;
+import gameserver.network.aion.serverpackets.SM_TITLE_UPDATE;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
 
 /**
  * @author Nemiroff, ATracer, IceReaper
- *         Date: 11.12.2009
+ *        Date: 11.12.2009
  * @author Sarynth - Added AP
  */
 public class Set extends AdminCommand {

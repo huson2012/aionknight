@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.PlayerMotionDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import gameserver.dao.PlayerMotionDAO;
+import gameserver.model.gameobjects.player.Player;
 
 
 /**
@@ -23,9 +23,9 @@ public class MySQL5PlayerMotionDAO extends PlayerMotionDAO
 	public static final String  UPDATE_QUERY	= "UPDATE `player_motion` SET `learn_ninja`=?,  `learn_hober`=?,  `waiting_motion`=?,  `running_motion`=?,  `jumping_motion`=?,  `rest_motion`=? WHERE `player_id`=?";
 	public static final String  SELECT_QUERY	= "SELECT * FROM `player_motion` WHERE `player_id`=?";
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerMotionDAO#insertPlayerMotion(int)
+	 * @see gameserver.dao.PlayerMotionDAO#insertPlayerMotion(int)
 	 */
 	@Override
 	public void insertPlayerMotion(int playerId)
@@ -52,18 +52,18 @@ public class MySQL5PlayerMotionDAO extends PlayerMotionDAO
 		}
 	}
 
-	/*
+	/**
 	* (non-Javadoc)
-	* @see org.openaion.gameserver.dao.PlayerMotionDAO#updatePlayerMotion(int, int, int)
+	* @see gameserver.dao.PlayerMotionDAO#updatePlayerMotion(int, int, int)
 	*/
 	@Override
 	public void updatePlayerMotion(int learnNinja, int learnHober, Player player)
 	{
 		updatePlayerMotion(learnNinja, learnHober, 0, 0, 0, 0, player);
 	}
-	/*
+	/**
 	* (non-Javadoc)
-	* @see org.openaion.gameserver.dao.PlayerMotionDAO#updatePlayerMotion(int, int, int, int, int, int, int)
+	* @see gameserver.dao.PlayerMotionDAO#updatePlayerMotion(int, int, int, int, int, int, int)
 	*/
 	@Override
 	public boolean updatePlayerMotion(int learnNinja, int learnHober, int waitingMotion, int runningMotion, int jumpingMotion, int restMotion, Player player)
@@ -100,9 +100,9 @@ public class MySQL5PlayerMotionDAO extends PlayerMotionDAO
 	    return result;
 	}
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerMotionDAO#selectPlayerMotion(int)
+	 * @see gameserver.dao.PlayerMotionDAO#selectPlayerMotion(int)
 	 */
 	@Override
 	public void loadPlayerMotion(Player player)
@@ -142,9 +142,9 @@ public class MySQL5PlayerMotionDAO extends PlayerMotionDAO
 		}
 	}
 
-	/*
+	/**
 	 * (non-Javadoc)
-	 * @see org.openaion.commons.database.dao.DAO#supports(java.lang.String, int, int)
+	 * @see commons.database.dao.DAO#supports(java.lang.String, int, int)
 	 */
 	@Override
 	public boolean supports(String databaseName, int majorVersion, int minorVersion)

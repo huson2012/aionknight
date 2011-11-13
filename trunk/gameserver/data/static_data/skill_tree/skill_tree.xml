@@ -1,99 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	: Умения (Скилы)
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <skill_tree>
 
 	<!-- WARRIOR -->
 	
-   <skill skillId="1" name="Basic Sword Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="3" name="Basic Mace Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="4" name="Basic Clothing Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="5" name="Basic Leather Armor Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="6" name="Basic Mail Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="7" name="Basic Shield Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="67" name="Basic Cloth Armor Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 
-	 <skill skillId="122" name="Boost Physical Attack I" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="121" name="Boost HP I" minLevel="5" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="120" name="Boost Parry I" minLevel="9" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
-	 <skill skillId="111" name="Boost Block I" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	
-	 <skill skillId="358" name="Boost Physical Attack II" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>	
-	
-	 <skill skillId="361" name="Boost Physical Attack III" minLevel="19" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	
-	 <skill skillId="138" name="Boost Physical Attack IV" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 <skill skillId="359" name="Boost HP II" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 <skill skillId="104" name="Boost Knockdown I" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	
-	
-	 <skill skillId="367" name="Boost Physical Attack V" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 <skill skillId="496" name="Boost HP III" minLevel="49" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 <skill skillId="131" name="Boost Accuracy II" minLevel="51" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 <skill skillId="132" name="Boost Accuracy III" minLevel="55" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 <skill skillId="129" name="Boost Critical Hit Chance I" minLevel="55" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	
-   <skill skillId="169" name="Ferocious Strike I" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="2" autolearn="true" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="3" autolearn="true" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="4" autolearn="true" skillLevel="4" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="5" autolearn="true" skillLevel="5" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="6" autolearn="true" skillLevel="6" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="7" autolearn="true" skillLevel="7" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="8" autolearn="true" skillLevel="8" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="169" name="Ferocious Strike I" minLevel="9" autolearn="true" skillLevel="9" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-	
-   <skill skillId="165" name="Robust Blow I" minLevel="3" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="4" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="5" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="6" skillLevel="4" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="7" skillLevel="5" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="8" skillLevel="6" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="9" skillLevel="7" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-	
-   <skill skillId="165" name="Robust Blow I" minLevel="10" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="11" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
-   <skill skillId="165" name="Robust Blow I" minLevel="10" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-   <skill skillId="165" name="Robust Blow I" minLevel="11" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
-    <skill skillId="173" name="Shield Defense I" minLevel="3" skillLevel="1" race="ALL" classId="WARRIOR" type="TOGGLE"/>
-	
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="5" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>      
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="6" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="7" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="8" skillLevel="4" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="9" skillLevel="5" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-	
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="10" skillLevel="6" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="1" name="Basic Sword Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="3" name="Basic Mace Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="4" name="Basic Clothing Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="5" name="Basic Leather Armor Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="6" name="Basic Mail Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="7" name="Basic Shield Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="67" name="Basic Cloth Armor Proficiency" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="122" name="Boost Physical Attack I" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="121" name="Boost HP I" minLevel="5" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="120" name="Boost Parry I" minLevel="9" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
+	<skill skillId="111" name="Boost Block I" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="358" name="Boost Physical Attack II" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>	
+	<skill skillId="361" name="Boost Physical Attack III" minLevel="19" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="138" name="Boost Physical Attack IV" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="359" name="Boost HP II" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="104" name="Boost Knockdown I" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="367" name="Boost Physical Attack V" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="496" name="Boost HP III" minLevel="49" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="131" name="Boost Accuracy II" minLevel="51" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="132" name="Boost Accuracy III" minLevel="55" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="129" name="Boost Critical Hit Chance I" minLevel="55" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="2" autolearn="true" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="3" autolearn="true" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="4" autolearn="true" skillLevel="4" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="5" autolearn="true" skillLevel="5" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="6" autolearn="true" skillLevel="6" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="7" autolearn="true" skillLevel="7" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="8" autolearn="true" skillLevel="8" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="169" name="Ferocious Strike I" minLevel="9" autolearn="true" skillLevel="9" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="3" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="4" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="5" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="6" skillLevel="4" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="7" skillLevel="5" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="8" skillLevel="6" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="9" skillLevel="7" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="10" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="11" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="10" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
+	<skill skillId="165" name="Robust Blow I" minLevel="11" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
+	<skill skillId="173" name="Shield Defense I" minLevel="3" skillLevel="1" race="ALL" classId="WARRIOR" type="TOGGLE"/>
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="5" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>      
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="6" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="7" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="8" skillLevel="4" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="9" skillLevel="5" race="ALL" classId="WARRIOR" type="ACTIVE"/>
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="10" skillLevel="6" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="151" name="Weakening Severe Blow I" minLevel="11" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="151" name="Weakening Severe Blow I" minLevel="12" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="151" name="Weakening Severe Blow I" minLevel="13" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
-    <skill skillId="151" name="Weakening Severe Blow I" minLevel="10" skillLevel="6" race="ALL" classId="KNIGHT" type="ACTIVE"/>
+	<skill skillId="151" name="Weakening Severe Blow I" minLevel="10" skillLevel="6" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="151" name="Weakening Severe Blow I" minLevel="11" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="151" name="Weakening Severe Blow I" minLevel="12" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="151" name="Weakening Severe Blow I" minLevel="13" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-		   
     <skill skillId="161" name="Rage I" minLevel="7" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="8" skillLevel="2" race="ALL" classId="WARRIOR" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="9" skillLevel="3" race="ALL" classId="WARRIOR" type="ACTIVE"/>
-	
-	  <skill skillId="161" name="Rage I" minLevel="10" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="161" name="Rage I" minLevel="10" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="11" skillLevel="5" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="12" skillLevel="6" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="13" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="14" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="15" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="161" name="Rage I" minLevel="10" skillLevel="4" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="11" skillLevel="5" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="12" skillLevel="6" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="13" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="14" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="161" name="Rage I" minLevel="15" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
-   <skill skillId="154" name="Shield Counter I" minLevel="9" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/> 
-	
-    <skill skillId="154" name="Shield Counter I" minLevel="10" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="154" name="Shield Counter I" minLevel="9" skillLevel="1" race="ALL" classId="WARRIOR" type="ACTIVE"/> 
+	<skill skillId="154" name="Shield Counter I" minLevel="10" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="11" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="12" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="13" skillLevel="5" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -101,7 +91,6 @@
     <skill skillId="154" name="Shield Counter I" minLevel="15" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="16" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="17" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="154" name="Shield Counter I" minLevel="10" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="11" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="12" skillLevel="4" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -110,57 +99,44 @@
     <skill skillId="154" name="Shield Counter I" minLevel="15" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="16" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="17" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
 	<!-- FIGHTER -->
     <skill skillId="8" name="Advanced Sword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="9" name="Advanced Dagger Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="10" name="Advanced Mace Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="15" name="Advanced Greatsword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="16" name="Advanced Polearm Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="17" name="Advanced Archery Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="12" name="Advanced Leather Armor Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="13" name="Advanced Mail Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="14" name="Advanced Shield Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="18" name="Advanced Plate Armor Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="19" name="Advanced Dual-Wielding I" minLevel="20" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE" stigma="true"/>
-	  
-	  <skill skillId="336" name="Advanced Sword Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="337" name="Advanced Dagger Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="338" name="Advanced Mace Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="339" name="Advanced Greatsword Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="340" name="Advanced Polearm Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="341" name="Advanced Archery Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="360" name="Advanced Dual-Wielding II" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE" stigma="true"/>
-	  
+	<skill skillId="9" name="Advanced Dagger Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="10" name="Advanced Mace Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="15" name="Advanced Greatsword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="16" name="Advanced Polearm Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="17" name="Advanced Archery Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="12" name="Advanced Leather Armor Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="13" name="Advanced Mail Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="14" name="Advanced Shield Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="18" name="Advanced Plate Armor Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="19" name="Advanced Dual-Wielding I" minLevel="20" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE" stigma="true"/>
+	<skill skillId="336" name="Advanced Sword Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="337" name="Advanced Dagger Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="338" name="Advanced Mace Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="339" name="Advanced Greatsword Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="340" name="Advanced Polearm Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="341" name="Advanced Archery Training II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="360" name="Advanced Dual-Wielding II" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE" stigma="true"/>
     <skill skillId="343" name="Advanced Dagger Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="344" name="Advanced Mace Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="345" name="Advanced Greatsword Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="346" name="Advanced Polearm Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="347" name="Advanced Archery Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="342" name="Advanced Sword Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	
-	 
-	  <skill skillId="369" name="Advanced Dagger Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="370" name="Advanced Mace Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="371" name="Advanced Greatsword Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="372" name="Advanced Polearm Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="373" name="Advanced Archery Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="368" name="Advanced Sword Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 
-	  <skill skillId="326" name="Winged Strength I" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="102" name="Aggravation I" minLevel="13" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="344" name="Advanced Mace Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="345" name="Advanced Greatsword Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="346" name="Advanced Polearm Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="347" name="Advanced Archery Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="342" name="Advanced Sword Training III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="369" name="Advanced Dagger Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="370" name="Advanced Mace Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="371" name="Advanced Greatsword Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="372" name="Advanced Polearm Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="373" name="Advanced Archery Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="368" name="Advanced Sword Training IV" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="326" name="Winged Strength I" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="102" name="Aggravation I" minLevel="13" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
     <skill skillId="124" name="Determination I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 
-	  
-	  <skill skillId="333" name="Winged Rage" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	 
-	  
-	  <skill skillId="113" name="Boost Accuracy I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	  <skill skillId="366" name="Aggravation II" minLevel="41" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
-	
-	  
-	 
-	  <skill skillId="170" name="Ferocious Strike II" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="333" name="Winged Rage" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="113" name="Boost Accuracy I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="366" name="Aggravation II" minLevel="41" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+	<skill skillId="170" name="Ferocious Strike II" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="11" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="12" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="13" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -169,8 +145,7 @@
     <skill skillId="170" name="Ferocious Strike II" minLevel="16" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="17" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="18" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	  
-	  <skill skillId="284" name="Seismic Wave I" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="284" name="Seismic Wave I" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="284" name="Seismic Wave I" minLevel="11" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="284" name="Seismic Wave I" minLevel="12" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="284" name="Seismic Wave I" minLevel="13" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -179,8 +154,7 @@
     <skill skillId="284" name="Seismic Wave I" minLevel="16" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="284" name="Seismic Wave I" minLevel="17" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="284" name="Seismic Wave I" minLevel="18" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	  
-	  <skill skillId="158" name="Taunt I" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="158" name="Taunt I" minLevel="10" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="11" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="12" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="13" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -189,8 +163,7 @@
     <skill skillId="158" name="Taunt I" minLevel="16" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="17" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="18" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
-    <skill skillId="348" name="Seething Explosion I" minLevel="10" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="348" name="Seething Explosion I" minLevel="10" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="348" name="Seething Explosion I" minLevel="11" skillLevel="2" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="348" name="Seething Explosion I" minLevel="12" skillLevel="3" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="348" name="Seething Explosion I" minLevel="13" skillLevel="4" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
@@ -199,7 +172,6 @@
     <skill skillId="348" name="Seething Explosion I" minLevel="16" skillLevel="7" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="348" name="Seething Explosion I" minLevel="17" skillLevel="8" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="348" name="Seething Explosion I" minLevel="18" skillLevel="9" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="362" name="Explosion of Rage I" minLevel="10" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="362" name="Explosion of Rage I" minLevel="11" skillLevel="2" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="362" name="Explosion of Rage I" minLevel="12" skillLevel="3" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
@@ -209,7 +181,6 @@
     <skill skillId="362" name="Explosion of Rage I" minLevel="16" skillLevel="7" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="362" name="Explosion of Rage I" minLevel="17" skillLevel="8" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="362" name="Explosion of Rage I" minLevel="18" skillLevel="9" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="166" name="Robust Blow II" minLevel="13" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="14" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="15" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -219,7 +190,6 @@
     <skill skillId="166" name="Robust Blow II" minLevel="19" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="20" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="21" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="273" name="Wrathful Strike I" minLevel="13" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="273" name="Wrathful Strike I" minLevel="14" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="273" name="Wrathful Strike I" minLevel="15" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -229,8 +199,7 @@
     <skill skillId="273" name="Wrathful Strike I" minLevel="19" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="273" name="Wrathful Strike I" minLevel="20" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="273" name="Wrathful Strike I" minLevel="21" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		  
-	  <skill skillId="274" name="Wrathful Strike II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="274" name="Wrathful Strike II" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="274" name="Wrathful Strike II" minLevel="26" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="274" name="Wrathful Strike II" minLevel="27" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="274" name="Wrathful Strike II" minLevel="28" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -239,11 +208,7 @@
     <skill skillId="274" name="Wrathful Strike II" minLevel="31" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="274" name="Wrathful Strike II" minLevel="32" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="274" name="Wrathful Strike II" minLevel="33" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>  
-		  
-		  
-		   
     <skill skillId="251" name="Aion's Strength I" minLevel="13" skillLevel="1" race="ALL" classId="FIGHTER" type="TOGGLE"/>
-		   
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="16" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="17" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="18" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -253,7 +218,6 @@
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="22" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="23" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="24" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="162" name="Rage II" minLevel="16" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="17" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="18" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -263,7 +227,6 @@
     <skill skillId="162" name="Rage II" minLevel="22" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="23" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="24" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="278" name="Rupture I" minLevel="16" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="278" name="Rupture I" minLevel="17" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="278" name="Rupture I" minLevel="18" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -273,7 +236,6 @@
     <skill skillId="278" name="Rupture I" minLevel="22" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="278" name="Rupture I" minLevel="23" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="278" name="Rupture I" minLevel="24" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-        
     <skill skillId="279" name="Rupture II" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="279" name="Rupture II" minLevel="29" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="279" name="Rupture II" minLevel="30" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -283,9 +245,7 @@
     <skill skillId="279" name="Rupture II" minLevel="34" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="279" name="Rupture II" minLevel="35" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="279" name="Rupture II" minLevel="36" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-    
     <skill skillId="182" name="Charge I" minLevel="16" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="155" name="Shield Counter II" minLevel="19" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="20" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="21" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -295,7 +255,6 @@
     <skill skillId="155" name="Shield Counter II" minLevel="25" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="26" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="27" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="291" name="Cleave I" minLevel="19" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="291" name="Cleave I" minLevel="20" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="291" name="Cleave I" minLevel="21" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -305,9 +264,7 @@
     <skill skillId="291" name="Cleave I" minLevel="25" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="291" name="Cleave I" minLevel="26" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="291" name="Cleave I" minLevel="27" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="269" name="Improved Stamina I" minLevel="20" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="171" name="Ferocious Strike III" minLevel="22" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="23" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="24" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -317,7 +274,6 @@
     <skill skillId="171" name="Ferocious Strike III" minLevel="28" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="29" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="30" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="285" name="Seismic Wave II" minLevel="22" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="285" name="Seismic Wave II" minLevel="23" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="285" name="Seismic Wave II" minLevel="24" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -327,7 +283,6 @@
     <skill skillId="285" name="Seismic Wave II" minLevel="28" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="285" name="Seismic Wave II" minLevel="29" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="285" name="Seismic Wave II" minLevel="30" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="159" name="Taunt II" minLevel="22" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="23" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="24" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -337,7 +292,6 @@
     <skill skillId="159" name="Taunt II" minLevel="28" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="29" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="30" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="349" name="Seething Explosion II" minLevel="22" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="349" name="Seething Explosion II" minLevel="23" skillLevel="2" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="349" name="Seething Explosion II" minLevel="24" skillLevel="3" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
@@ -347,7 +301,6 @@
     <skill skillId="349" name="Seething Explosion II" minLevel="28" skillLevel="7" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="349" name="Seething Explosion II" minLevel="29" skillLevel="8" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="349" name="Seething Explosion II" minLevel="30" skillLevel="9" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="363" name="Explosion of Rage II" minLevel="22" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="363" name="Explosion of Rage II" minLevel="23" skillLevel="2" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="363" name="Explosion of Rage II" minLevel="24" skillLevel="3" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
@@ -357,7 +310,6 @@
     <skill skillId="363" name="Explosion of Rage II" minLevel="28" skillLevel="7" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="363" name="Explosion of Rage II" minLevel="29" skillLevel="8" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="363" name="Explosion of Rage II" minLevel="30" skillLevel="9" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="271" name="Aerial Lockdown I" minLevel="22" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="271" name="Aerial Lockdown I" minLevel="23" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="271" name="Aerial Lockdown I" minLevel="24" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -367,7 +319,6 @@
     <skill skillId="271" name="Aerial Lockdown I" minLevel="28" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="271" name="Aerial Lockdown I" minLevel="29" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="271" name="Aerial Lockdown I" minLevel="30" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="351" name="Body Smash I" minLevel="22" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="351" name="Body Smash I" minLevel="23" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="351" name="Body Smash I" minLevel="24" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -377,7 +328,6 @@
     <skill skillId="351" name="Body Smash I" minLevel="28" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="351" name="Body Smash I" minLevel="29" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="351" name="Body Smash I" minLevel="30" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-    
   	<skill skillId="167" name="Robust Blow III" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="26" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="27" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -387,7 +337,6 @@
     <skill skillId="167" name="Robust Blow III" minLevel="31" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="32" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="33" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		 		   
     <skill skillId="261" name="Crashing Blow I" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="261" name="Crashing Blow I" minLevel="26" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="261" name="Crashing Blow I" minLevel="27" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -397,11 +346,8 @@
     <skill skillId="261" name="Crashing Blow I" minLevel="31" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="261" name="Crashing Blow I" minLevel="32" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="261" name="Crashing Blow I" minLevel="33" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="258" name="Defense Preparation I" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="TOGGLE"/>
-		   
     <skill skillId="236" name="Severe Weakening Blow I" minLevel="25" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="29" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="30" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -411,7 +357,6 @@
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="34" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="35" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="36" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="163" name="Rage III" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="29" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="30" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -421,8 +366,6 @@
     <skill skillId="163" name="Rage III" minLevel="34" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="35" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="36" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
-    
     <skill skillId="353" name="Shock Wave I" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="353" name="Shock Wave I" minLevel="29" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="353" name="Shock Wave I" minLevel="30" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -432,7 +375,6 @@
     <skill skillId="353" name="Shock Wave I" minLevel="34" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="353" name="Shock Wave I" minLevel="35" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="353" name="Shock Wave I" minLevel="36" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-    
 	<skill skillId="282" name="Seismic Billow I" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="282" name="Seismic Billow I" minLevel="29" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="282" name="Seismic Billow I" minLevel="30" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -442,11 +384,8 @@
     <skill skillId="282" name="Seismic Billow I" minLevel="34" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="282" name="Seismic Billow I" minLevel="35" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="282" name="Seismic Billow I" minLevel="36" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="322" name="Ankle Snare I" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="392" name="Vengeful Strike I" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="156" name="Shield Counter III" minLevel="31" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="32" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="33" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -456,7 +395,6 @@
     <skill skillId="156" name="Shield Counter III" minLevel="37" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="38" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="39" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="292" name="Cleave II" minLevel="31" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="292" name="Cleave II" minLevel="32" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="292" name="Cleave II" minLevel="33" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -466,7 +404,6 @@
     <skill skillId="292" name="Cleave II" minLevel="37" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="292" name="Cleave II" minLevel="38" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="292" name="Cleave II" minLevel="39" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-    
 	<skill skillId="276" name="Reckless Strike I" minLevel="31" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="276" name="Reckless Strike I" minLevel="32" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="276" name="Reckless Strike I" minLevel="33" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -476,13 +413,9 @@
     <skill skillId="276" name="Reckless Strike I" minLevel="37" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="276" name="Reckless Strike I" minLevel="38" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="276" name="Reckless Strike I" minLevel="39" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="272" name="Daevic Fury I" minLevel="31" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="237" name="Severe Weakening Blow II" minLevel="31" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="267" name="Lockdown I" minLevel="31" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="172" name="Ferocious Strike IV" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="35" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="36" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -492,7 +425,6 @@
     <skill skillId="172" name="Ferocious Strike IV" minLevel="40" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="41" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="42" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="286" name="Seismic Wave III" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="286" name="Seismic Wave III" minLevel="35" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="286" name="Seismic Wave III" minLevel="36" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -502,7 +434,6 @@
     <skill skillId="286" name="Seismic Wave III" minLevel="40" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="286" name="Seismic Wave III" minLevel="41" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="286" name="Seismic Wave III" minLevel="42" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="160" name="Taunt III" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="35" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="36" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -512,7 +443,6 @@
     <skill skillId="160" name="Taunt III" minLevel="40" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="41" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="42" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="350" name="Seething Explosion III" minLevel="34" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="350" name="Seething Explosion III" minLevel="35" skillLevel="2" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="350" name="Seething Explosion III" minLevel="36" skillLevel="3" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
@@ -522,7 +452,6 @@
     <skill skillId="350" name="Seething Explosion III" minLevel="40" skillLevel="7" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="350" name="Seething Explosion III" minLevel="41" skillLevel="8" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="350" name="Seething Explosion III" minLevel="42" skillLevel="9" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="364" name="Explosion of Rage III" minLevel="34" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="364" name="Explosion of Rage III" minLevel="35" skillLevel="2" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="364" name="Explosion of Rage III" minLevel="36" skillLevel="3" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
@@ -532,19 +461,12 @@
     <skill skillId="364" name="Explosion of Rage III" minLevel="40" skillLevel="7" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="364" name="Explosion of Rage III" minLevel="41" skillLevel="8" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="364" name="Explosion of Rage III" minLevel="42" skillLevel="9" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="255" name="Crippling Cut I" minLevel="22" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-
 	<skill skillId="256" name="Crippling Cut II" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="257" name="Crippling Cut III" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
 	<skill skillId="310" name="Crippling Cut IV" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
 	<skill skillId="379" name="Crippling Cut V" minLevel="46" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
 	<skill skillId="2025" name="Crippling Cut VI" minLevel="52" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="308" name="Aerial Lockdown II" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="308" name="Aerial Lockdown II" minLevel="35" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="308" name="Aerial Lockdown II" minLevel="36" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -554,7 +476,6 @@
     <skill skillId="308" name="Aerial Lockdown II" minLevel="40" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="308" name="Aerial Lockdown II" minLevel="41" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="308" name="Aerial Lockdown II" minLevel="42" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="352" name="Body Smash II" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="352" name="Body Smash II" minLevel="35" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="352" name="Body Smash II" minLevel="36" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -564,11 +485,8 @@
     <skill skillId="352" name="Body Smash II" minLevel="40" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="352" name="Body Smash II" minLevel="41" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="352" name="Body Smash II" minLevel="42" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="393" name="Vengeful Strike II" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="264" name="Howl I" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="290" name="Stamina Recovery I" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="290" name="Stamina Recovery I" minLevel="35" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="290" name="Stamina Recovery I" minLevel="36" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -578,9 +496,7 @@
     <skill skillId="290" name="Stamina Recovery I" minLevel="40" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="290" name="Stamina Recovery I" minLevel="41" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="290" name="Stamina Recovery I" minLevel="42" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="241" name="Dauntless Spirit I" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="168" name="Robust Blow IV" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="38" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="39" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -590,7 +506,6 @@
     <skill skillId="168" name="Robust Blow IV" minLevel="43" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="44" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="45" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="275" name="Wrathful Strike III" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="275" name="Wrathful Strike III" minLevel="38" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="275" name="Wrathful Strike III" minLevel="39" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -600,8 +515,7 @@
     <skill skillId="275" name="Wrathful Strike III" minLevel="43" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="275" name="Wrathful Strike III" minLevel="44" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="275" name="Wrathful Strike III" minLevel="45" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
-   <skill skillId="365" name="Wrathful Wave I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
+	<skill skillId="365" name="Wrathful Wave I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="365" name="Wrathful Wave I" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="365" name="Wrathful Wave I" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="365" name="Wrathful Wave I" minLevel="43" skillLevel="4" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -610,9 +524,6 @@
     <skill skillId="365" name="Wrathful Wave I" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="365" name="Wrathful Wave I" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="365" name="Wrathful Wave I" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-  
-  
-  
     <skill skillId="309" name="Crashing Blow II" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="309" name="Crashing Blow II" minLevel="38" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="309" name="Crashing Blow II" minLevel="39" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -622,11 +533,8 @@
     <skill skillId="309" name="Crashing Blow II" minLevel="43" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="309" name="Crashing Blow II" minLevel="44" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="309" name="Crashing Blow II" minLevel="45" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="238" name="Severe Weakening Blow III" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="296" name="Lockdown II" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="355" name="Pressure Wave I" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="355" name="Pressure Wave I" minLevel="38" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="355" name="Pressure Wave I" minLevel="39" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -636,11 +544,8 @@
     <skill skillId="355" name="Pressure Wave I" minLevel="43" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="355" name="Pressure Wave I" minLevel="44" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="355" name="Pressure Wave I" minLevel="45" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="287" name="Unwavering Devotion I" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="250" name="Wall of Steel I" minLevel="37" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="178" name="Weakening Severe Blow IV" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="178" name="Weakening Severe Blow IV" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="178" name="Weakening Severe Blow IV" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -650,7 +555,6 @@
     <skill skillId="178" name="Weakening Severe Blow IV" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="178" name="Weakening Severe Blow IV" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="178" name="Weakening Severe Blow IV" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="164" name="Rage IV" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="164" name="Rage IV" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="164" name="Rage IV" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -660,7 +564,6 @@
     <skill skillId="164" name="Rage IV" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="164" name="Rage IV" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="164" name="Rage IV" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="280" name="Rupture III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="280" name="Rupture III" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="280" name="Rupture III" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -670,7 +573,6 @@
     <skill skillId="280" name="Rupture III" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="280" name="Rupture III" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="280" name="Rupture III" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="354" name="Shock Wave II" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="354" name="Shock Wave II" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="354" name="Shock Wave II" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -680,7 +582,6 @@
     <skill skillId="354" name="Shock Wave II" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="354" name="Shock Wave II" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="354" name="Shock Wave II" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="283" name="Seismic Billow II" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="283" name="Seismic Billow II" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="283" name="Seismic Billow II" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -690,11 +591,8 @@
     <skill skillId="283" name="Seismic Billow II" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="283" name="Seismic Billow II" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="283" name="Seismic Billow II" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="394" name="Vengeful Strike III" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="242" name="Dauntless Spirit II" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="356" name="Great Cleave I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="356" name="Great Cleave I" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="356" name="Great Cleave I" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -704,7 +602,6 @@
     <skill skillId="356" name="Great Cleave I" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="356" name="Great Cleave I" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="356" name="Great Cleave I" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-   
     <skill skillId="357" name="Righteous Cleave I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="357" name="Righteous Cleave I" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="357" name="Righteous Cleave I" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -714,11 +611,7 @@
     <skill skillId="357" name="Righteous Cleave I" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="357" name="Righteous Cleave I" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="357" name="Righteous Cleave I" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="183" name="Siegebreaker I" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
-   
-		   
     <skill skillId="157" name="Shield Counter IV" minLevel="41" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="157" name="Shield Counter IV" minLevel="42" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="157" name="Shield Counter IV" minLevel="43" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -728,7 +621,6 @@
     <skill skillId="157" name="Shield Counter IV" minLevel="47" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="157" name="Shield Counter IV" minLevel="48" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="157" name="Shield Counter IV" minLevel="49" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="293" name="Cleave III" minLevel="42" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="293" name="Cleave III" minLevel="43" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="293" name="Cleave III" minLevel="44" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -738,7 +630,6 @@
     <skill skillId="293" name="Cleave III" minLevel="48" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="293" name="Cleave III" minLevel="49" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="293" name="Cleave III" minLevel="50" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="312" name="Force Cleave I" minLevel="42" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="312" name="Force Cleave I" minLevel="43" skillLevel="2" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="312" name="Force Cleave I" minLevel="44" skillLevel="3" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
@@ -748,7 +639,6 @@
     <skill skillId="312" name="Force Cleave I" minLevel="48" skillLevel="7" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="312" name="Force Cleave I" minLevel="49" skillLevel="8" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="312" name="Force Cleave I" minLevel="50" skillLevel="9" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="374" name="Agile Cleave I" minLevel="42" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="374" name="Agile Cleave I" minLevel="43" skillLevel="2" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="374" name="Agile Cleave I" minLevel="44" skillLevel="3" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
@@ -758,7 +648,6 @@
     <skill skillId="374" name="Agile Cleave I" minLevel="48" skillLevel="7" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="374" name="Agile Cleave I" minLevel="49" skillLevel="8" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="374" name="Agile Cleave I" minLevel="50" skillLevel="9" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="277" name="Reckless Strike II" minLevel="43" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="277" name="Reckless Strike II" minLevel="44" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="277" name="Reckless Strike II" minLevel="45" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -768,11 +657,8 @@
     <skill skillId="277" name="Reckless Strike II" minLevel="49" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="277" name="Reckless Strike II" minLevel="50" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="277" name="Reckless Strike II" minLevel="51" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="239" name="Severe Weakening Blow IV" minLevel="43" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="375" name="Lockdown III" minLevel="43" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="177" name="Ferocious Strike V" minLevel="44" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="177" name="Ferocious Strike V" minLevel="45" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="177" name="Ferocious Strike V" minLevel="46" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -782,9 +668,7 @@
     <skill skillId="177" name="Ferocious Strike V" minLevel="50" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="177" name="Ferocious Strike V" minLevel="51" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="177" name="Ferocious Strike V" minLevel="52" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="376" name="Earthquake Wave I" minLevel="44" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="303" name="Seismic Wave IV" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="303" name="Seismic Wave IV" minLevel="46" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="303" name="Seismic Wave IV" minLevel="47" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -794,7 +678,6 @@
     <skill skillId="303" name="Seismic Wave IV" minLevel="51" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="303" name="Seismic Wave IV" minLevel="52" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="303" name="Seismic Wave IV" minLevel="53" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="176" name="Taunt IV" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="176" name="Taunt IV" minLevel="46" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="176" name="Taunt IV" minLevel="47" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -804,7 +687,6 @@
     <skill skillId="176" name="Taunt IV" minLevel="51" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="176" name="Taunt IV" minLevel="52" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="176" name="Taunt IV" minLevel="53" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-    
 	<skill skillId="377" name="Seething Explosion IV" minLevel="45" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="377" name="Seething Explosion IV" minLevel="46" skillLevel="2" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="377" name="Seething Explosion IV" minLevel="47" skillLevel="3" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
@@ -814,7 +696,6 @@
     <skill skillId="377" name="Seething Explosion IV" minLevel="51" skillLevel="7" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="377" name="Seething Explosion IV" minLevel="52" skillLevel="8" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="377" name="Seething Explosion IV" minLevel="53" skillLevel="9" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="378" name="Explosion of Rage IV" minLevel="45" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="378" name="Explosion of Rage IV" minLevel="46" skillLevel="2" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="378" name="Explosion of Rage IV" minLevel="47" skillLevel="3" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
@@ -824,21 +705,13 @@
     <skill skillId="378" name="Explosion of Rage IV" minLevel="51" skillLevel="7" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="378" name="Explosion of Rage IV" minLevel="52" skillLevel="8" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="378" name="Explosion of Rage IV" minLevel="53" skillLevel="9" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-		   
     <skill skillId="396" name="Ancestral Force Blast I" minLevel="45" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="397" name="Ancestral Piercing Wave I" minLevel="45" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-		   
     <skill skillId="398" name="Draining Blow I" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="244" name="Precision Cut I" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
-    <skill skillId="245" name="Berserking I" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
+	<skill skillId="245" name="Berserking I" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
     <skill skillId="246" name="Spite Strike I" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="247" name="Sharp Strike I" minLevel="45" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-    
     <skill skillId="380" name="Aerial Lockdown III" minLevel="46" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="380" name="Aerial Lockdown III" minLevel="47" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="380" name="Aerial Lockdown III" minLevel="48" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -848,7 +721,6 @@
     <skill skillId="380" name="Aerial Lockdown III" minLevel="52" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="380" name="Aerial Lockdown III" minLevel="53" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="380" name="Aerial Lockdown III" minLevel="54" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="381" name="Body Smash III" minLevel="46" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="381" name="Body Smash III" minLevel="47" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="381" name="Body Smash III" minLevel="48" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -858,11 +730,8 @@
     <skill skillId="381" name="Body Smash III" minLevel="52" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="381" name="Body Smash III" minLevel="53" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="381" name="Body Smash III" minLevel="54" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="382" name="Siegebreaker II" minLevel="46" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="383" name="Strengthen Wings I" minLevel="46" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="180" name="Robust Blow V" minLevel="47" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="180" name="Robust Blow V" minLevel="48" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="180" name="Robust Blow V" minLevel="49" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -872,7 +741,6 @@
     <skill skillId="180" name="Robust Blow V" minLevel="53" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="180" name="Robust Blow V" minLevel="54" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="180" name="Robust Blow V" minLevel="55" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="304" name="Wrathful Strike IV" minLevel="47" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="304" name="Wrathful Strike IV" minLevel="48" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="304" name="Wrathful Strike IV" minLevel="49" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -882,11 +750,8 @@
     <skill skillId="304" name="Wrathful Strike IV" minLevel="53" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="304" name="Wrathful Strike IV" minLevel="54" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="304" name="Wrathful Strike IV" minLevel="55" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="395" name="Vengeful Strike IV" minLevel="47" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="243" name="Dauntless Spirit III" minLevel="47" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="384" name="Crashing Blow III" minLevel="48" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="384" name="Crashing Blow III" minLevel="49" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="384" name="Crashing Blow III" minLevel="50" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -896,13 +761,9 @@
     <skill skillId="384" name="Crashing Blow III" minLevel="54" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="384" name="Crashing Blow III" minLevel="55" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="384" name="Crashing Blow III" minLevel="56" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="385" name="Slaughter I" minLevel="48" skillLevel="1" race="ALL" classId="FIGHTER" type="TOGGLE" stigma="true"/>
-	
     <skill skillId="240" name="Severe Weakening Blow V" minLevel="49" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="386" name="Lockdown IV" minLevel="49" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="387" name="Pressure Wave II" minLevel="49" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="387" name="Pressure Wave II" minLevel="50" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="387" name="Pressure Wave II" minLevel="51" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -912,7 +773,6 @@
     <skill skillId="387" name="Pressure Wave II" minLevel="55" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="387" name="Pressure Wave II" minLevel="56" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="387" name="Pressure Wave II" minLevel="57" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="388" name="Weakening Severe Blow V" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="388" name="Weakening Severe Blow V" minLevel="51" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="388" name="Weakening Severe Blow V" minLevel="52" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -922,7 +782,6 @@
     <skill skillId="388" name="Weakening Severe Blow V" minLevel="56" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="388" name="Weakening Severe Blow V" minLevel="57" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="388" name="Weakening Severe Blow V" minLevel="58" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="179" name="Rage V" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="179" name="Rage V" minLevel="51" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="179" name="Rage V" minLevel="52" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -932,9 +791,7 @@
     <skill skillId="179" name="Rage V" minLevel="56" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="179" name="Rage V" minLevel="57" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="179" name="Rage V" minLevel="58" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="389" name="Earthquake Wave II" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="320" name="Force Blast I" minLevel="50" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="320" name="Force Blast I" minLevel="51" skillLevel="2" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="320" name="Force Blast I" minLevel="52" skillLevel="3" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
@@ -944,7 +801,6 @@
     <skill skillId="320" name="Force Blast I" minLevel="56" skillLevel="7" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="320" name="Force Blast I" minLevel="57" skillLevel="8" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="320" name="Force Blast I" minLevel="58" skillLevel="9" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="321" name="Piercing Wave I" minLevel="50" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="321" name="Piercing Wave I" minLevel="51" skillLevel="2" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="321" name="Piercing Wave I" minLevel="52" skillLevel="3" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
@@ -954,93 +810,49 @@
     <skill skillId="321" name="Piercing Wave I" minLevel="56" skillLevel="7" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="321" name="Piercing Wave I" minLevel="57" skillLevel="8" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="321" name="Piercing Wave I" minLevel="58" skillLevel="9" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="390" name="Blessing of Nezekan I" minLevel="50" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="391" name="Zikel's Threat I" minLevel="50" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE"/>
-	
     <skill skillId="399" name="Shattering Wave I" minLevel="50" skillLevel="1" race="PC_LIGHT" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="400" name="Piercing Rupture I" minLevel="50" skillLevel="1" race="PC_DARK" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="248" name="Severe Precision Cut I" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="249" name="Vicious Blow I" minLevel="50" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
 	<!-- KNIGHT -->
-	
     <skill skillId="8" name="Advanced Sword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="10" name="Advanced Mace Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="15" name="Advanced Greatsword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="12" name="Advanced Leather Armor Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="13" name="Advanced Mail Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="14" name="Advanced Shield Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="18" name="Advanced Plate Armor Proficiency I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="480" name="Winged Defense I" minLevel="10" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="102" name="Aggravation I" minLevel="13" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="359" name="Boost HP II" minLevel="13" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="111" name="Boost Block I" minLevel="16" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="123" name="Boost Element Defense I" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="336" name="Advanced Sword Training II" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="338" name="Advanced Mace Training II" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="339" name="Advanced Greatsword Training II" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="358" name="Boost Physical Attack II" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="496" name="Boost HP III" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="487" name="Winged Guardian" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="497" name="Boost Block II" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="548" name="Seal of Protection I" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="342" name="Advanced Sword Training III" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="344" name="Advanced Mace Training III" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="345" name="Advanced Greatsword Training III" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="498" name="Boost Element Defense II" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="499" name="Boost HP IV" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
 	<skill skillId="113" name="Boost Accuracy I" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="361" name="Boost Physical Attack III" minLevel="41" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="366" name="Aggravation II" minLevel="45" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-
     <skill skillId="526" name="Boost HP V" minLevel="47" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="368" name="Advanced Sword Training IV" minLevel="50" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="370" name="Advanced Mace Training IV" minLevel="50" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="371" name="Advanced Greatsword Training IV" minLevel="50" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="143" name="Aggravation III" minLevel="50" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="131" name="Boost Accuracy II" minLevel="51" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="138" name="Boost Physical Attack IV" minLevel="51" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="132" name="Boost Accuracy III" minLevel="55" skillLevel="1" race="ALL" classId="KNIGHT" type="PASSIVE"/>
-	
     <skill skillId="170" name="Ferocious Strike II" minLevel="10" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="11" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="12" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1050,7 +862,6 @@
     <skill skillId="170" name="Ferocious Strike II" minLevel="16" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="17" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="170" name="Ferocious Strike II" minLevel="18" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="158" name="Taunt I" minLevel="10" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="11" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="12" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1060,7 +871,6 @@
     <skill skillId="158" name="Taunt I" minLevel="16" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="17" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="158" name="Taunt I" minLevel="18" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-    
 	<skill skillId="441" name="Shield Bash I" minLevel="10" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="441" name="Shield Bash I" minLevel="11" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="441" name="Shield Bash I" minLevel="12" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1070,7 +880,6 @@
     <skill skillId="441" name="Shield Bash I" minLevel="16" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="441" name="Shield Bash I" minLevel="17" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="441" name="Shield Bash I" minLevel="18" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="500" name="Divine Chastisement I" minLevel="10" skillLevel="1" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="500" name="Divine Chastisement I" minLevel="11" skillLevel="2" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="500" name="Divine Chastisement I" minLevel="12" skillLevel="3" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
@@ -1080,7 +889,6 @@
     <skill skillId="500" name="Divine Chastisement I" minLevel="16" skillLevel="7" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="500" name="Divine Chastisement I" minLevel="17" skillLevel="8" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="500" name="Divine Chastisement I" minLevel="18" skillLevel="9" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="520" name="Chastisement of Darkness I" minLevel="10" skillLevel="1" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="520" name="Chastisement of Darkness I" minLevel="11" skillLevel="2" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="520" name="Chastisement of Darkness I" minLevel="12" skillLevel="3" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
@@ -1090,7 +898,6 @@
     <skill skillId="520" name="Chastisement of Darkness I" minLevel="16" skillLevel="7" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="520" name="Chastisement of Darkness I" minLevel="17" skillLevel="8" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="520" name="Chastisement of Darkness I" minLevel="18" skillLevel="9" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="166" name="Robust Blow II" minLevel="13" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="14" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="15" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1100,7 +907,6 @@
     <skill skillId="166" name="Robust Blow II" minLevel="19" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="20" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="166" name="Robust Blow II" minLevel="21" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="507" name="Provoking Shield Counter I" minLevel="13" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="507" name="Provoking Shield Counter I" minLevel="14" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="507" name="Provoking Shield Counter I" minLevel="15" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1110,9 +916,7 @@
     <skill skillId="507" name="Provoking Shield Counter I" minLevel="19" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="507" name="Provoking Shield Counter I" minLevel="20" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="507" name="Provoking Shield Counter I" minLevel="21" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="506" name="Empyrean Armor I" minLevel="13" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="16" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="17" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="18" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1122,7 +926,6 @@
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="22" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="23" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="152" name="Weakening Severe Blow II" minLevel="24" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="162" name="Rage II" minLevel="16" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="17" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="18" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1132,7 +935,6 @@
     <skill skillId="162" name="Rage II" minLevel="22" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="23" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="162" name="Rage II" minLevel="24" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="503" name="Provoking Severe Blow I" minLevel="16" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="503" name="Provoking Severe Blow I" minLevel="17" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="503" name="Provoking Severe Blow I" minLevel="18" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1142,7 +944,6 @@
     <skill skillId="503" name="Provoking Severe Blow I" minLevel="22" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="503" name="Provoking Severe Blow I" minLevel="23" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="503" name="Provoking Severe Blow I" minLevel="24" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="445" name="Shining Slash I" minLevel="16" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="445" name="Shining Slash I" minLevel="17" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="445" name="Shining Slash I" minLevel="18" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1152,7 +953,6 @@
     <skill skillId="445" name="Shining Slash I" minLevel="22" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="445" name="Shining Slash I" minLevel="23" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="445" name="Shining Slash I" minLevel="24" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="155" name="Shield Counter II" minLevel="19" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="20" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="21" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1162,7 +962,6 @@
     <skill skillId="155" name="Shield Counter II" minLevel="25" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="26" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="155" name="Shield Counter II" minLevel="27" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="511" name="Wrath Strike I" minLevel="19" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="511" name="Wrath Strike I" minLevel="20" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="511" name="Wrath Strike I" minLevel="21" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1172,11 +971,8 @@
     <skill skillId="511" name="Wrath Strike I" minLevel="25" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="511" name="Wrath Strike I" minLevel="26" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="511" name="Wrath Strike I" minLevel="27" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="424" name="Holy Shield I" minLevel="20" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="513" name="Divine Fury I" minLevel="20" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="171" name="Ferocious Strike III" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="23" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="24" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1186,7 +982,6 @@
     <skill skillId="171" name="Ferocious Strike III" minLevel="28" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="29" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="171" name="Ferocious Strike III" minLevel="30" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="159" name="Taunt II" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="23" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="24" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1196,7 +991,6 @@
     <skill skillId="159" name="Taunt II" minLevel="28" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="29" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="159" name="Taunt II" minLevel="30" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="442" name="Shield Bash II" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="442" name="Shield Bash II" minLevel="23" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="442" name="Shield Bash II" minLevel="24" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1206,7 +1000,6 @@
     <skill skillId="442" name="Shield Bash II" minLevel="28" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="442" name="Shield Bash II" minLevel="29" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="442" name="Shield Bash II" minLevel="30" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="501" name="Divine Chastisement II" minLevel="22" skillLevel="1" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="501" name="Divine Chastisement II" minLevel="23" skillLevel="2" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="501" name="Divine Chastisement II" minLevel="24" skillLevel="3" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
@@ -1216,7 +1009,6 @@
     <skill skillId="501" name="Divine Chastisement II" minLevel="28" skillLevel="7" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="501" name="Divine Chastisement II" minLevel="29" skillLevel="8" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="501" name="Divine Chastisement II" minLevel="30" skillLevel="9" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="521" name="Chastisement of Darkness II" minLevel="22" skillLevel="1" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="521" name="Chastisement of Darkness II" minLevel="23" skillLevel="2" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="521" name="Chastisement of Darkness II" minLevel="24" skillLevel="3" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
@@ -1226,7 +1018,6 @@
     <skill skillId="521" name="Chastisement of Darkness II" minLevel="28" skillLevel="7" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="521" name="Chastisement of Darkness II" minLevel="29" skillLevel="8" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="521" name="Chastisement of Darkness II" minLevel="30" skillLevel="9" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="403" name="Avenging Blow I" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="403" name="Avenging Blow I" minLevel="23" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="403" name="Avenging Blow I" minLevel="24" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1236,11 +1027,8 @@
     <skill skillId="403" name="Avenging Blow I" minLevel="28" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="403" name="Avenging Blow I" minLevel="29" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="403" name="Avenging Blow I" minLevel="30" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="523" name="Inescapable Judgment I" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="524" name="Steel Wall Defense I" minLevel="22" skillLevel="1" race="ALL" classId="KNIGHT" type="TOGGLE"/>
-	
     <skill skillId="167" name="Robust Blow III" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="26" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="27" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1250,7 +1038,6 @@
     <skill skillId="167" name="Robust Blow III" minLevel="31" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="32" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="167" name="Robust Blow III" minLevel="33" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="508" name="Provoking Shield Counter II" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="508" name="Provoking Shield Counter II" minLevel="26" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="508" name="Provoking Shield Counter II" minLevel="27" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1260,7 +1047,6 @@
     <skill skillId="508" name="Provoking Shield Counter II" minLevel="31" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="508" name="Provoking Shield Counter II" minLevel="32" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="508" name="Provoking Shield Counter II" minLevel="33" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="514" name="Divine Blow I" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="514" name="Divine Blow I" minLevel="26" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="514" name="Divine Blow I" minLevel="27" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1270,11 +1056,8 @@
     <skill skillId="514" name="Divine Blow I" minLevel="31" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="514" name="Divine Blow I" minLevel="32" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="514" name="Divine Blow I" minLevel="33" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="431" name="Provoking Roar I" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="182" name="Charge I" minLevel="25" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="29" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="30" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1284,7 +1067,6 @@
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="34" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="35" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="153" name="Weakening Severe Blow III" minLevel="36" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="163" name="Rage III" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="29" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="30" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1294,7 +1076,6 @@
     <skill skillId="163" name="Rage III" minLevel="34" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="35" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="163" name="Rage III" minLevel="36" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="504" name="Provoking Severe Blow II" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="504" name="Provoking Severe Blow II" minLevel="29" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="504" name="Provoking Severe Blow II" minLevel="30" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1304,7 +1085,6 @@
     <skill skillId="504" name="Provoking Severe Blow II" minLevel="34" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="504" name="Provoking Severe Blow II" minLevel="35" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="504" name="Provoking Severe Blow II" minLevel="36" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="458" name="Shining Slash II" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="458" name="Shining Slash II" minLevel="29" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="458" name="Shining Slash II" minLevel="30" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1314,7 +1094,6 @@
     <skill skillId="458" name="Shining Slash II" minLevel="34" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="458" name="Shining Slash II" minLevel="35" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="458" name="Shining Slash II" minLevel="36" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="517" name="Dazing Severe Blow I" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="517" name="Dazing Severe Blow I" minLevel="29" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="517" name="Dazing Severe Blow I" minLevel="30" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1324,11 +1103,8 @@
     <skill skillId="517" name="Dazing Severe Blow I" minLevel="34" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="517" name="Dazing Severe Blow I" minLevel="35" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="517" name="Dazing Severe Blow I" minLevel="36" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="414" name="Punishment I" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="402" name="Incite Rage I" minLevel="28" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="156" name="Shield Counter III" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="32" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="33" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1338,7 +1114,6 @@
     <skill skillId="156" name="Shield Counter III" minLevel="37" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="38" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="156" name="Shield Counter III" minLevel="39" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="512" name="Wrath Strike II" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="512" name="Wrath Strike II" minLevel="32" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="512" name="Wrath Strike II" minLevel="33" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1348,11 +1123,8 @@
     <skill skillId="512" name="Wrath Strike II" minLevel="37" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="512" name="Wrath Strike II" minLevel="38" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="512" name="Wrath Strike II" minLevel="39" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="425" name="Holy Shield II" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="432" name="Provoking Roar II" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="444" name="Face Smash I" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="444" name="Face Smash I" minLevel="32" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="444" name="Face Smash I" minLevel="33" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1362,9 +1134,7 @@
     <skill skillId="444" name="Face Smash I" minLevel="37" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="444" name="Face Smash I" minLevel="38" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="444" name="Face Smash I" minLevel="39" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="516" name="Hand of Healing I" minLevel="31" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="172" name="Ferocious Strike IV" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="35" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="36" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1374,7 +1144,6 @@
     <skill skillId="172" name="Ferocious Strike IV" minLevel="40" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="41" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="172" name="Ferocious Strike IV" minLevel="42" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="160" name="Taunt III" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="35" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="36" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1384,7 +1153,6 @@
     <skill skillId="160" name="Taunt III" minLevel="40" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="41" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="160" name="Taunt III" minLevel="42" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="443" name="Shield Bash III" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="443" name="Shield Bash III" minLevel="35" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="443" name="Shield Bash III" minLevel="36" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1394,7 +1162,6 @@
     <skill skillId="443" name="Shield Bash III" minLevel="40" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="443" name="Shield Bash III" minLevel="41" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="443" name="Shield Bash III" minLevel="42" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="502" name="Divine Chastisement III" minLevel="34" skillLevel="1" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="502" name="Divine Chastisement III" minLevel="35" skillLevel="2" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="502" name="Divine Chastisement III" minLevel="36" skillLevel="3" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
@@ -1404,7 +1171,6 @@
     <skill skillId="502" name="Divine Chastisement III" minLevel="40" skillLevel="7" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="502" name="Divine Chastisement III" minLevel="41" skillLevel="8" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="502" name="Divine Chastisement III" minLevel="42" skillLevel="9" race="PC_LIGHT" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="522" name="Chastisement of Darkness III" minLevel="34" skillLevel="1" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="522" name="Chastisement of Darkness III" minLevel="35" skillLevel="2" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="522" name="Chastisement of Darkness III" minLevel="36" skillLevel="3" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
@@ -1414,7 +1180,6 @@
     <skill skillId="522" name="Chastisement of Darkness III" minLevel="40" skillLevel="7" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="522" name="Chastisement of Darkness III" minLevel="41" skillLevel="8" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="522" name="Chastisement of Darkness III" minLevel="42" skillLevel="9" race="PC_DARK" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="404" name="Avenging Blow II" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="404" name="Avenging Blow II" minLevel="35" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="404" name="Avenging Blow II" minLevel="36" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1424,11 +1189,8 @@
     <skill skillId="404" name="Avenging Blow II" minLevel="40" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="404" name="Avenging Blow II" minLevel="41" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="404" name="Avenging Blow II" minLevel="42" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="415" name="Punishment II" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="406" name="Incite Rage II" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="519" name="Blunting Severe Blow I" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="519" name="Blunting Severe Blow I" minLevel="35" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="519" name="Blunting Severe Blow I" minLevel="36" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1440,9 +1202,7 @@
     <skill skillId="519" name="Blunting Severe Blow I" minLevel="42" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
 	
     <skill skillId="410" name="Break Power I" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="287" name="Unwavering Devotion I" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="168" name="Robust Blow IV" minLevel="37" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="38" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="39" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1452,7 +1212,6 @@
     <skill skillId="168" name="Robust Blow IV" minLevel="43" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="44" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="168" name="Robust Blow IV" minLevel="45" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="509" name="Provoking Shield Counter III" minLevel="37" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="509" name="Provoking Shield Counter III" minLevel="38" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="509" name="Provoking Shield Counter III" minLevel="39" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1462,7 +1221,6 @@
     <skill skillId="509" name="Provoking Shield Counter III" minLevel="43" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="509" name="Provoking Shield Counter III" minLevel="44" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="509" name="Provoking Shield Counter III" minLevel="45" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="515" name="Divine Blow II" minLevel="37" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="515" name="Divine Blow II" minLevel="38" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="515" name="Divine Blow II" minLevel="39" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -1472,9 +1230,7 @@
     <skill skillId="515" name="Divine Blow II" minLevel="43" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="515" name="Divine Blow II" minLevel="44" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="515" name="Divine Blow II" minLevel="45" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
     <skill skillId="451" name="Provoking Roar III" minLevel="37" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="427" name="Judgment I" minLevel="37" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="427" name="Judgment I" minLevel="38" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="427" name="Judgment I" minLevel="39" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -7884,9 +7640,7 @@
     <skill skillId="2123" name="Apply Lethal Venom IV" minLevel="54" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
 	
     <skill skillId="2124" name="Lightning Slash IV" minLevel="54" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1987" name="Venemous Strike I" minLevel="54" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2125" name="Assassination III" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2125" name="Assassination III" minLevel="56" skillLevel="2" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2125" name="Assassination III" minLevel="57" skillLevel="3" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
@@ -7896,27 +7650,16 @@
     <skill skillId="2125" name="Assassination III" minLevel="61" skillLevel="7" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2125" name="Assassination III" minLevel="62" skillLevel="8" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2125" name="Assassination III" minLevel="63" skillLevel="9" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
-	
     <skill skillId="2126" name="Ambush VI" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1983" name="Explosive Burst II" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1988" name="Deadly Focus I" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
-	
     <skill skillId="1989" name="Signet Silence I" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1990" name="Quickening Doom I" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1968" name="Remove Shock I" minLevel="40" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2127" name="Splendor of Rebirth II" minLevel="48" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2128" name="Shatter Memory II" minLevel="48" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2129" name="Chain of Suffering II" minLevel="48" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1021" name="Impervious Veil I" minLevel="48" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2131" name="Healing Grace IV" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2131" name="Healing Grace IV" minLevel="52" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2131" name="Healing Grace IV" minLevel="53" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -7926,7 +7669,6 @@
     <skill skillId="2131" name="Healing Grace IV" minLevel="57" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2131" name="Healing Grace IV" minLevel="58" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2131" name="Healing Grace IV" minLevel="59" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="1132" name="Summon Holy Servant IV" minLevel="51" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1132" name="Summon Holy Servant IV" minLevel="52" skillLevel="2" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1132" name="Summon Holy Servant IV" minLevel="53" skillLevel="3" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
@@ -7936,7 +7678,6 @@
     <skill skillId="1132" name="Summon Holy Servant IV" minLevel="57" skillLevel="7" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1132" name="Summon Holy Servant IV" minLevel="58" skillLevel="8" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1132" name="Summon Holy Servant IV" minLevel="59" skillLevel="9" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="1131" name="Summon Holy Servant IV" minLevel="51" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1131" name="Summon Holy Servant IV" minLevel="52" skillLevel="2" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1131" name="Summon Holy Servant IV" minLevel="53" skillLevel="3" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
@@ -7946,7 +7687,6 @@
     <skill skillId="1131" name="Summon Holy Servant IV" minLevel="57" skillLevel="7" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1131" name="Summon Holy Servant IV" minLevel="58" skillLevel="8" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1131" name="Summon Holy Servant IV" minLevel="59" skillLevel="9" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2132" name="Tranquility IV" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2132" name="Tranquility IV" minLevel="52" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2132" name="Tranquility IV" minLevel="53" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -7956,7 +7696,6 @@
     <skill skillId="2132" name="Tranquility IV" minLevel="57" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2132" name="Tranquility IV" minLevel="58" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2132" name="Tranquility IV" minLevel="59" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2133" name="Thorny Skin III" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2133" name="Thorny Skin III" minLevel="52" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2133" name="Thorny Skin III" minLevel="53" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -7966,27 +7705,16 @@
     <skill skillId="2133" name="Thorny Skin III" minLevel="57" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2133" name="Thorny Skin III" minLevel="58" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2133" name="Thorny Skin III" minLevel="59" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2134" name="Splendor of Rebirth III" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2135" name="Shatter Memory III" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2136" name="Chain of Suffering III" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2138" name="Stabilize II" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1022" name="Devotion I" minLevel="51" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2140" name="Earth's Wrath V" minLevel="52" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2141" name="Splendor of Recovery III" minLevel="52" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1023" name="Summon Healing Servant I" minLevel="52" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1024" name="Summon Healing Servant I" minLevel="52" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1027" name="Enfeebling Burst I" minLevel="52" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2142" name="Hallowed Strike V" minLevel="53" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="54" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="55" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -7996,13 +7724,9 @@
     <skill skillId="2142" name="Hallowed Strike V" minLevel="59" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="60" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="61" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2143" name="Ripple of Purification II" minLevel="53" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2144" name="Summon Noble Energy II" minLevel="53" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2145" name="Summon Noble Energy II" minLevel="53" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1029" name="Storm of Vengeance I" minLevel="53" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1029" name="Storm of Vengeance I" minLevel="54" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1029" name="Storm of Vengeance I" minLevel="55" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8012,7 +7736,6 @@
     <skill skillId="1029" name="Storm of Vengeance I" minLevel="59" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1029" name="Storm of Vengeance I" minLevel="60" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="1029" name="Storm of Vengeance I" minLevel="61" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2146" name="Penance IV" minLevel="54" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2146" name="Penance IV" minLevel="55" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2146" name="Penance IV" minLevel="56" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8022,7 +7745,6 @@
     <skill skillId="2146" name="Penance IV" minLevel="60" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2146" name="Penance IV" minLevel="61" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2146" name="Penance IV" minLevel="62" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2147" name="Punishing Wind II" minLevel="54" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2147" name="Punishing Wind II" minLevel="55" skillLevel="2" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2147" name="Punishing Wind II" minLevel="56" skillLevel="3" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
@@ -8032,7 +7754,6 @@
     <skill skillId="2147" name="Punishing Wind II" minLevel="60" skillLevel="7" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2147" name="Punishing Wind II" minLevel="61" skillLevel="8" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2147" name="Punishing Wind II" minLevel="62" skillLevel="9" race="PC_DARK" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2148" name="Slashing Wind II" minLevel="54" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2148" name="Slashing Wind II" minLevel="55" skillLevel="2" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2148" name="Slashing Wind II" minLevel="56" skillLevel="3" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
@@ -8042,17 +7763,11 @@
     <skill skillId="2148" name="Slashing Wind II" minLevel="60" skillLevel="7" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2148" name="Slashing Wind II" minLevel="61" skillLevel="8" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2148" name="Slashing Wind II" minLevel="62" skillLevel="9" race="PC_LIGHT" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2149" name="Sympathetic Heal II" minLevel="54" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2150" name="Splendor of Rebirth IV" minLevel="54" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2151" name="Shatter Memory IV" minLevel="54" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2152" name="Chain of Suffering IV" minLevel="54" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1030" name="Punishing Earth I" minLevel="54" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2154" name="Light of Recovery III" minLevel="55" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2154" name="Light of Recovery III" minLevel="56" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2154" name="Light of Recovery III" minLevel="57" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8062,29 +7777,17 @@
     <skill skillId="2154" name="Light of Recovery III" minLevel="61" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2154" name="Light of Recovery III" minLevel="62" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
     <skill skillId="2154" name="Light of Recovery III" minLevel="63" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="2155" name="Flash of Recovery VI" minLevel="55" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1025" name="Summon Healing Servant II" minLevel="55" skillLevel="1" race="PC_LIGHT" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1026" name="Summon Healing Servant II" minLevel="55" skillLevel="1" race="PC_DARK" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1028" name="Enfeebling Burst II" minLevel="55" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1031" name="Immortal Shroud I" minLevel="55" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
     <skill skillId="1032" name="Benevolence I" minLevel="55" skillLevel="1" race="ALL" classId="PRIEST" type="TOGGLE" stigma="true"/>
-	
     <skill skillId="1033" name="Call Lightning I" minLevel="55" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1968" name="Remove Shock I" minLevel="40" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2156" name="Stamina Restoration II" minLevel="48" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2157" name="Blessing of Wind II" minLevel="48" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2158" name="Magic Recovery II" minLevel="48" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1991" name="Retribution I" minLevel="48" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1991" name="Retribution I" minLevel="49" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1991" name="Retribution I" minLevel="50" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8094,9 +7797,7 @@
     <skill skillId="1991" name="Retribution I" minLevel="54" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1991" name="Retribution I" minLevel="55" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1991" name="Retribution I" minLevel="56" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2160" name="Magic Mantra IV " minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="TOGGLE"/>
-	
     <skill skillId="1267" name="Promise of Earth IV" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1267" name="Promise of Earth IV" minLevel="52" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1267" name="Promise of Earth IV" minLevel="53" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8106,7 +7807,6 @@
     <skill skillId="1267" name="Promise of Earth IV" minLevel="57" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1267" name="Promise of Earth IV" minLevel="58" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1267" name="Promise of Earth IV" minLevel="59" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2161" name="Pentacle Shock III" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2161" name="Pentacle Shock III" minLevel="52" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2161" name="Pentacle Shock III" minLevel="53" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8116,29 +7816,17 @@
     <skill skillId="2161" name="Pentacle Shock III" minLevel="57" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2161" name="Pentacle Shock III" minLevel="58" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2161" name="Pentacle Shock III" minLevel="59" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2162" name="Stamina Restoration III" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2163" name="Blessing of Wind III" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2164" name="Magic Recovery III" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2166" name="Recovery Spell II" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1992" name="Confident Defense I" minLevel="51" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2167" name="Tremor II" minLevel="52" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2168" name="Word of Life IV" minLevel="52" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2169" name="Protective Ward VI" minLevel="52" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2170" name="Splash Swing III" minLevel="52" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1993" name="Disorienting Blow I" minLevel="52" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1995" name="Healing Burst I" minLevel="52" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2142" name="Hallowed Strike V" minLevel="53" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="54" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="55" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8148,9 +7836,7 @@
     <skill skillId="2142" name="Hallowed Strike V" minLevel="59" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="60" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2142" name="Hallowed Strike V" minLevel="61" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2171" name="Mountain Crash II" minLevel="53" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1997" name="Backshock I" minLevel="53" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1997" name="Backshock I" minLevel="54" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1997" name="Backshock I" minLevel="55" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8160,7 +7846,6 @@
     <skill skillId="1997" name="Backshock I" minLevel="59" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1997" name="Backshock I" minLevel="60" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1997" name="Backshock I" minLevel="61" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="1276" name="Incandescent Blow IV" minLevel="54" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1276" name="Incandescent Blow IV" minLevel="55" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1276" name="Incandescent Blow IV" minLevel="56" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8170,7 +7855,6 @@
     <skill skillId="1276" name="Incandescent Blow IV" minLevel="60" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1276" name="Incandescent Blow IV" minLevel="61" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1276" name="Incandescent Blow IV" minLevel="62" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="54" skillLevel="1" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="55" skillLevel="2" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="56" skillLevel="3" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
@@ -8179,9 +7863,7 @@
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="59" skillLevel="6" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="60" skillLevel="7" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="61" skillLevel="8" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2173" name="Inescapable Judgment II" minLevel="62" skillLevel="9" race="PC_LIGHT" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2174" name="Soul Strike II" minLevel="54" skillLevel="1" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2174" name="Soul Strike II" minLevel="55" skillLevel="2" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2174" name="Soul Strike II" minLevel="56" skillLevel="3" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
@@ -8190,21 +7872,13 @@
     <skill skillId="2174" name="Soul Strike II" minLevel="59" skillLevel="6" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2174" name="Soul Strike II" minLevel="60" skillLevel="7" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2174" name="Soul Strike II" minLevel="61" skillLevel="8" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2174" name="Soul Strike II" minLevel="62" skillLevel="9" race="PC_DARK" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2175" name="Stamina Restoration IV" minLevel="54" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2176" name="Blessing of Wind IV" minLevel="54" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2177" name="Magical Power Battle Morale IV" minLevel="54" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2179" name="Soul Crush II" minLevel="54" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1998" name="Hit Mantra I" minLevel="54" skillLevel="1" race="ALL" classId="CHANTER" type="TOGGLE" stigma="true"/>
-	
     <skill skillId="2180" name="Intensity Mantra III" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="TOGGLE"/>
-	
     <skill skillId="2181" name="Promise of Wind V" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2181" name="Promise of Wind V" minLevel="56" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2181" name="Promise of Wind V" minLevel="57" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8214,7 +7888,6 @@
     <skill skillId="2181" name="Promise of Wind V" minLevel="61" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2181" name="Promise of Wind V" minLevel="62" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2181" name="Promise of Wind V" minLevel="63" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="1255" name="Booming Assault III" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1255" name="Booming Assault III" minLevel="56" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1255" name="Booming Assault III" minLevel="57" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8224,15 +7897,10 @@
     <skill skillId="1255" name="Booming Assault III" minLevel="61" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1255" name="Booming Assault III" minLevel="62" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="1255" name="Booming Assault III" minLevel="63" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="2182" name="Healing Conduit VII" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2183" name="Promise of Aether IV" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1994" name="Disorienting Blow II" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1996" name="Healing Burst II" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2000" name="Seismic Crash I" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2000" name="Seismic Crash I" minLevel="56" skillLevel="2" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2000" name="Seismic Crash I" minLevel="57" skillLevel="3" race="ALL" classId="CHANTER" type="ACTIVE"/>
@@ -8242,19 +7910,12 @@
     <skill skillId="2000" name="Seismic Crash I" minLevel="61" skillLevel="7" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2000" name="Seismic Crash I" minLevel="62" skillLevel="8" race="ALL" classId="CHANTER" type="ACTIVE"/>
     <skill skillId="2000" name="Seismic Crash I" minLevel="63" skillLevel="9" race="ALL" classId="CHANTER" type="ACTIVE"/>
-	
     <skill skillId="1999" name="Numbing Blow I" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2001" name="Spell of Impregnable Fortress I" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1968" name="Remove Shock I" minLevel="40" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
-
     <skill skillId="2184" name="Illusion Storm II" minLevel="48" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2186" name="Summon Rock II" minLevel="48" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1424" name="Time and Space Jump I" minLevel="48" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1388" name="Ice Chain V" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1388" name="Ice Chain V" minLevel="52" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1388" name="Ice Chain V" minLevel="53" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8264,7 +7925,6 @@
     <skill skillId="1388" name="Ice Chain V" minLevel="57" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1388" name="Ice Chain V" minLevel="58" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1388" name="Ice Chain V" minLevel="59" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1527" name="Flame Cage IV" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1527" name="Flame Cage IV" minLevel="52" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1527" name="Flame Cage IV" minLevel="53" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8274,7 +7934,6 @@
     <skill skillId="1527" name="Flame Cage IV" minLevel="57" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1527" name="Flame Cage IV" minLevel="58" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1527" name="Flame Cage IV" minLevel="59" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1520" name="Winter Binding IV" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1520" name="Winter Binding IV" minLevel="52" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1520" name="Winter Binding IV" minLevel="53" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8284,7 +7943,6 @@
     <skill skillId="1520" name="Winter Binding IV" minLevel="57" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1520" name="Winter Binding IV" minLevel="58" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1520" name="Winter Binding IV" minLevel="59" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1506" name="Aether's Hold III" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1506" name="Aether's Hold III" minLevel="52" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1506" name="Aether's Hold III" minLevel="53" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8294,13 +7952,9 @@
     <skill skillId="1506" name="Aether's Hold III" minLevel="57" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1506" name="Aether's Hold III" minLevel="58" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1506" name="Aether's Hold III" minLevel="59" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2188" name="Illusion Storm III" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2190" name="Summon Rock III" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2192" name="Ice Harpoon II" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1425" name="Refracting Shard I" minLevel="51" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1425" name="Refracting Shard I" minLevel="52" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1425" name="Refracting Shard I" minLevel="53" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8310,11 +7964,8 @@
     <skill skillId="1425" name="Refracting Shard I" minLevel="57" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1425" name="Refracting Shard I" minLevel="58" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1425" name="Refracting Shard I" minLevel="59" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2193" name="Lightburst II" minLevel="52" skillLevel="1" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2194" name="Shadowburst II" minLevel="52" skillLevel="1" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1524" name="Soul Freeze II" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1524" name="Soul Freeze II" minLevel="53" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1524" name="Soul Freeze II" minLevel="54" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8324,7 +7975,6 @@
     <skill skillId="1524" name="Soul Freeze II" minLevel="58" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1524" name="Soul Freeze II" minLevel="59" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1524" name="Soul Freeze II" minLevel="60" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2195" name="Flaming Meteor II" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2195" name="Flaming Meteor II" minLevel="53" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2195" name="Flaming Meteor II" minLevel="54" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8334,15 +7984,10 @@
     <skill skillId="2195" name="Flaming Meteor II" minLevel="58" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2195" name="Flaming Meteor II" minLevel="59" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2195" name="Flaming Meteor II" minLevel="60" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1486" name="Fire Burst III" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2196" name="Curse of Weakness III" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1426" name="Elemental Ward I" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1428" name="Arcane Thunderbolt I" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2197" name="Frozen Shock V" minLevel="53" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2197" name="Frozen Shock V" minLevel="54" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2197" name="Frozen Shock V" minLevel="55" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8352,7 +7997,6 @@
     <skill skillId="2197" name="Frozen Shock V" minLevel="59" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2197" name="Frozen Shock V" minLevel="60" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2197" name="Frozen Shock V" minLevel="61" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="1390" name="Stone Skin V" minLevel="53" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1390" name="Stone Skin V" minLevel="54" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1390" name="Stone Skin V" minLevel="55" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8362,11 +8006,8 @@
     <skill skillId="1390" name="Stone Skin V" minLevel="59" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1390" name="Stone Skin V" minLevel="60" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="1390" name="Stone Skin V" minLevel="61" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2199" name="Flame Spray II" minLevel="53" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1430" name="Curse of Old Roots I" minLevel="53" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2200" name="Delayed Blast IV" minLevel="54" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2200" name="Delayed Blast IV" minLevel="55" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2200" name="Delayed Blast IV" minLevel="56" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8376,7 +8017,6 @@
     <skill skillId="2200" name="Delayed Blast IV" minLevel="60" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2200" name="Delayed Blast IV" minLevel="61" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2200" name="Delayed Blast IV" minLevel="62" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2201" name="Inferno III" minLevel="54" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2201" name="Inferno III" minLevel="55" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2201" name="Inferno III" minLevel="56" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8386,7 +8026,6 @@
     <skill skillId="2201" name="Inferno III" minLevel="60" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2201" name="Inferno III" minLevel="61" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2201" name="Inferno III" minLevel="62" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2202" name="Frost II" minLevel="54" skillLevel="1" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2202" name="Frost II" minLevel="55" skillLevel="2" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2202" name="Frost II" minLevel="56" skillLevel="3" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
@@ -8396,7 +8035,6 @@
     <skill skillId="2202" name="Frost II" minLevel="60" skillLevel="7" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2202" name="Frost II" minLevel="61" skillLevel="8" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2202" name="Frost II" minLevel="62" skillLevel="9" race="PC_LIGHT" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2203" name="Frostbite II" minLevel="54" skillLevel="1" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2203" name="Frostbite II" minLevel="55" skillLevel="2" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2203" name="Frostbite II" minLevel="56" skillLevel="3" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
@@ -8406,13 +8044,9 @@
     <skill skillId="2203" name="Frostbite II" minLevel="60" skillLevel="7" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2203" name="Frostbite II" minLevel="61" skillLevel="8" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2203" name="Frostbite II" minLevel="62" skillLevel="9" race="PC_DARK" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2205" name="Illusion Storm IV" minLevel="54" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2207" name="Summon Rock IV" minLevel="54" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1431" name="Exchange Vitality I" minLevel="54" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2209" name="Aether Flame III" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2209" name="Aether Flame III" minLevel="56" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2209" name="Aether Flame III" minLevel="57" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8422,7 +8056,6 @@
     <skill skillId="2209" name="Aether Flame III" minLevel="61" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2209" name="Aether Flame III" minLevel="62" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2209" name="Aether Flame III" minLevel="63" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2210" name="Robe of Cold III" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2210" name="Robe of Cold III" minLevel="56" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2210" name="Robe of Cold III" minLevel="57" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8432,29 +8065,17 @@
     <skill skillId="2210" name="Robe of Cold III" minLevel="61" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2210" name="Robe of Cold III" minLevel="62" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
     <skill skillId="2210" name="Robe of Cold III" minLevel="63" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
     <skill skillId="2211" name="Ice Sheet IV" minLevel="55" skillLevel="1" race="PC_LIGHT" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2212" name="Ice Sheet IV" minLevel="55" skillLevel="1" race="PC_DARK" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2213" name="Wind Cut Down V" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1429" name="Arcane Thunderbolt II" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1432" name="Magic Boost I" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
-
     <skill skillId="1433" name="Wintry Armor I" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1434" name="Glacial Shard I" minLevel="55" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="1968" name="Remove Shock I" minLevel="40" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2214" name="Summon Cyclone Servant II" minLevel="48" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2215" name="Summon Cyclone Servant II" minLevel="48" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2218" name="Magic Implosion II" minLevel="48" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2002" name="Vengeful Backdraft I" minLevel="48" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2002" name="Vengeful Backdraft I" minLevel="49" skillLevel="2" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2002" name="Vengeful Backdraft I" minLevel="50" skillLevel="3" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8464,7 +8085,6 @@
     <skill skillId="2002" name="Vengeful Backdraft I" minLevel="54" skillLevel="7" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2002" name="Vengeful Backdraft I" minLevel="55" skillLevel="8" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2002" name="Vengeful Backdraft I" minLevel="56" skillLevel="9" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="1713" name="Summon Earth Spirit IV" minLevel="51" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1713" name="Summon Earth Spirit IV" minLevel="52" skillLevel="2" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1713" name="Summon Earth Spirit IV" minLevel="53" skillLevel="3" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8474,7 +8094,6 @@
     <skill skillId="1713" name="Summon Earth Spirit IV" minLevel="57" skillLevel="7" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1713" name="Summon Earth Spirit IV" minLevel="58" skillLevel="8" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1713" name="Summon Earth Spirit IV" minLevel="59" skillLevel="9" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="1714" name="Summon Earth Spirit IV" minLevel="51" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1714" name="Summon Earth Spirit IV" minLevel="52" skillLevel="2" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1714" name="Summon Earth Spirit IV" minLevel="53" skillLevel="3" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8484,7 +8103,6 @@
     <skill skillId="1714" name="Summon Earth Spirit IV" minLevel="57" skillLevel="7" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1714" name="Summon Earth Spirit IV" minLevel="58" skillLevel="8" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1714" name="Summon Earth Spirit IV" minLevel="59" skillLevel="9" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="1705" name="Replenish Element IV" minLevel="51" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1705" name="Replenish Element IV" minLevel="52" skillLevel="2" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1705" name="Replenish Element IV" minLevel="53" skillLevel="3" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8494,15 +8112,10 @@
     <skill skillId="1705" name="Replenish Element IV" minLevel="57" skillLevel="7" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1705" name="Replenish Element IV" minLevel="58" skillLevel="8" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1705" name="Replenish Element IV" minLevel="59" skillLevel="9" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2219" name="Cyclone of Wrath II" minLevel="51" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2220" name="Summon Cyclone Servant III" minLevel="51" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2221" name="Summon Cyclone Servant III" minLevel="51" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2224" name="Magic Implosion III" minLevel="51" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2003" name="Backdraft I" minLevel="51" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2003" name="Backdraft I" minLevel="52" skillLevel="2" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2003" name="Backdraft I" minLevel="53" skillLevel="3" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8512,15 +8125,10 @@
     <skill skillId="2003" name="Backdraft I" minLevel="57" skillLevel="7" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2003" name="Backdraft I" minLevel="58" skillLevel="8" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2003" name="Backdraft I" minLevel="59" skillLevel="9" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2225" name="Cursecloud II" minLevel="52" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2226" name="Weaken Spirit IV" minLevel="52" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2004" name="Healing Spirit I" minLevel="52" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2006" name="Hand of Torpor I" minLevel="52" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2227" name="Summon Water Spirit IV" minLevel="53" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2227" name="Summon Water Spirit IV" minLevel="54" skillLevel="2" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2227" name="Summon Water Spirit IV" minLevel="55" skillLevel="3" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8530,7 +8138,6 @@
     <skill skillId="2227" name="Summon Water Spirit IV" minLevel="59" skillLevel="7" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2227" name="Summon Water Spirit IV" minLevel="60" skillLevel="8" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2227" name="Summon Water Spirit IV" minLevel="61" skillLevel="9" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2228" name="Summon Water Spirit IV" minLevel="53" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2228" name="Summon Water Spirit IV" minLevel="54" skillLevel="2" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2228" name="Summon Water Spirit IV" minLevel="55" skillLevel="3" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8540,13 +8147,9 @@
     <skill skillId="2228" name="Summon Water Spirit IV" minLevel="59" skillLevel="7" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2228" name="Summon Water Spirit IV" minLevel="60" skillLevel="8" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2228" name="Summon Water Spirit IV" minLevel="61" skillLevel="9" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2229" name="Absorb Vitality VII" minLevel="53" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2230" name="Infernal Pain II" minLevel="53" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2008" name="Flames of Anguish I" minLevel="53" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="1706" name="Summon Wind Servant IV" minLevel="54" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1706" name="Summon Wind Servant IV" minLevel="55" skillLevel="2" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1706" name="Summon Wind Servant IV" minLevel="56" skillLevel="3" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8556,7 +8159,6 @@
     <skill skillId="1706" name="Summon Wind Servant IV" minLevel="60" skillLevel="7" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1706" name="Summon Wind Servant IV" minLevel="61" skillLevel="8" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1706" name="Summon Wind Servant IV" minLevel="62" skillLevel="9" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="1707" name="Summon Wind Servant IV" minLevel="54" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1707" name="Summon Wind Servant IV" minLevel="55" skillLevel="2" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1707" name="Summon Wind Servant IV" minLevel="56" skillLevel="3" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8566,17 +8168,11 @@
     <skill skillId="1707" name="Summon Wind Servant IV" minLevel="60" skillLevel="7" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1707" name="Summon Wind Servant IV" minLevel="61" skillLevel="8" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="1707" name="Summon Wind Servant IV" minLevel="62" skillLevel="9" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2233" name="Ignite Aether VI" minLevel="54" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2234" name="Summon Cyclone Servant IV" minLevel="54" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2235" name="Summon Cyclone Servant IV" minLevel="54" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2238" name="Magic Implosion IV" minLevel="54" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2009" name="Withering Gloom I" minLevel="54" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2239" name="Summon Water Energy III" minLevel="55" skillLevel="1" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2239" name="Summon Water Energy III" minLevel="56" skillLevel="2" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2239" name="Summon Water Energy III" minLevel="57" skillLevel="3" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8586,7 +8182,6 @@
     <skill skillId="2239" name="Summon Water Energy III" minLevel="61" skillLevel="7" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2239" name="Summon Water Energy III" minLevel="62" skillLevel="8" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2239" name="Summon Water Energy III" minLevel="63" skillLevel="9" race="PC_LIGHT" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2240" name="Summon Water Energy III" minLevel="55" skillLevel="1" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2240" name="Summon Water Energy III" minLevel="56" skillLevel="2" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2240" name="Summon Water Energy III" minLevel="57" skillLevel="3" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8596,17 +8191,10 @@
     <skill skillId="2240" name="Summon Water Energy III" minLevel="61" skillLevel="7" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2240" name="Summon Water Energy III" minLevel="62" skillLevel="8" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
     <skill skillId="2240" name="Summon Water Energy III" minLevel="63" skillLevel="9" race="PC_DARK" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2241" name="Blessing of Fire V" minLevel="55" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2010" name="Spirit Preserve I" minLevel="55" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
     <skill skillId="2011" name="Spirit Hypnosis I" minLevel="55" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
     <skill skillId="2012" name="Infernal Blight I" minLevel="55" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
-	<!-- Skills Aion 2.5 -->
-	
 	<!-- ASSASSIN -->
 	<skill skillId="2279" name="Incisor Of Beat I" minLevel="43" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
 	<skill skillId="2279" name="Incisor Of Beat I" minLevel="44" skillLevel="2" race="ALL" classId="ASSASSIN" type="ACTIVE"/>	   
@@ -8617,7 +8205,6 @@
     <skill skillId="2279" name="Incisor Of Beat I" minLevel="49" skillLevel="7" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2279" name="Incisor Of Beat I" minLevel="50" skillLevel="8" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2279" name="Incisor Of Beat I" minLevel="51" skillLevel="9" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
-	
     <skill skillId="2280" name="Incisor Of Beat II" minLevel="55" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2280" name="Incisor Of Beat II" minLevel="56" skillLevel="2" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
     <skill skillId="2280" name="Incisor Of Beat II" minLevel="57" skillLevel="3" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
@@ -8629,7 +8216,6 @@
     <skill skillId="2280" name="Incisor Of Beat II" minLevel="63" skillLevel="9" race="ALL" classId="ASSASSIN" type="ACTIVE"/>
 	<!-- Stigma -->
 	<skill skillId="2278" name="Shadow Illusion I" minLevel="40" skillLevel="1" race="ALL" classId="ASSASSIN" type="ACTIVE" stigma="true"/>
-
 	<!-- GLADIATOR -->
 	<skill skillId="2264" name="Leap Spike I" minLevel="28" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="2264" name="Leap Spike I" minLevel="29" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -8640,7 +8226,6 @@
 	<skill skillId="2264" name="Leap Spike I" minLevel="34" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="2264" name="Leap Spike I" minLevel="35" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="2264" name="Leap Spike I" minLevel="36" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
 	<skill skillId="2265" name="Leap Spike II" minLevel="40" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="2265" name="Leap Spike II" minLevel="41" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="2265" name="Leap Spike II" minLevel="42" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -8650,7 +8235,6 @@
 	<skill skillId="2265" name="Leap Spike II" minLevel="46" skillLevel="7" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="2265" name="Leap Spike II" minLevel="47" skillLevel="8" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="2265" name="Leap Spike II" minLevel="48" skillLevel="9" race="ALL" classId="FIGHTER" type="ACTIVE"/>
-	
 	<skill skillId="2266" name="Leap Spike III" minLevel="52" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE"/>
     <skill skillId="2266" name="Leap Spike III" minLevel="53" skillLevel="2" race="ALL" classId="FIGHTER" type="ACTIVE"/>
 	<skill skillId="2266" name="Leap Spike III" minLevel="54" skillLevel="3" race="ALL" classId="FIGHTER" type="ACTIVE"/>
@@ -8663,7 +8247,6 @@
 	<!-- Stigma -->
 	<skill skillId="2267" name="Vampiric Wave I" minLevel="34" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
     <skill skillId="2268" name="Vampiric Wave II" minLevel="46" skillLevel="1" race="ALL" classId="FIGHTER" type="ACTIVE" stigma="true"/>
-	
 	<!-- TEMPLAR -->
 	<skill skillId="2269" name="Crying Insult I" minLevel="34" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
 	<skill skillId="2269" name="Crying Insult I" minLevel="35" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -8674,7 +8257,6 @@
 	<skill skillId="2269" name="Crying Insult I" minLevel="40" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
 	<skill skillId="2269" name="Crying Insult I" minLevel="41" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
 	<skill skillId="2269" name="Crying Insult I" minLevel="42" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
-	
 	<skill skillId="2270" name="Crying Insult II" minLevel="46" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE"/>
 	<skill skillId="2270" name="Crying Insult II" minLevel="47" skillLevel="2" race="ALL" classId="KNIGHT" type="ACTIVE"/>
 	<skill skillId="2270" name="Crying Insult II" minLevel="48" skillLevel="3" race="ALL" classId="KNIGHT" type="ACTIVE"/>
@@ -8687,7 +8269,6 @@
 	<!-- Stigma -->
 	<skill skillId="2271" name="Thunder Slash I" minLevel="40" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
 	<skill skillId="2272" name="Thunder Slash II" minLevel="52" skillLevel="1" race="ALL" classId="KNIGHT" type="ACTIVE" stigma="true"/>
-	
 	<!-- RANGER -->
     <skill skillId="2273" name="Aimed Arrow I" minLevel="13" skillLevel="1" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2273" name="Aimed Arrow I" minLevel="14" skillLevel="2" race="ALL" classId="RANGER" type="ACTIVE"/>
@@ -8698,7 +8279,6 @@
 	<skill skillId="2273" name="Aimed Arrow I" minLevel="19" skillLevel="7" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2273" name="Aimed Arrow I" minLevel="20" skillLevel="8" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2273" name="Aimed Arrow I" minLevel="21" skillLevel="9" race="ALL" classId="RANGER" type="ACTIVE"/>
-	
 	<skill skillId="2274" name="Aimed Arrow II" minLevel="25" skillLevel="1" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2274" name="Aimed Arrow II" minLevel="26" skillLevel="2" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2274" name="Aimed Arrow II" minLevel="27" skillLevel="3" race="ALL" classId="RANGER" type="ACTIVE"/>
@@ -8708,7 +8288,6 @@
 	<skill skillId="2274" name="Aimed Arrow II" minLevel="31" skillLevel="7" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2274" name="Aimed Arrow II" minLevel="32" skillLevel="8" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2274" name="Aimed Arrow II" minLevel="33" skillLevel="9" race="ALL" classId="RANGER" type="ACTIVE"/>
-	
 	<skill skillId="2275" name="Aimed Arrow III" minLevel="37" skillLevel="1" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2275" name="Aimed Arrow III" minLevel="38" skillLevel="2" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2275" name="Aimed Arrow III" minLevel="39" skillLevel="3" race="ALL" classId="RANGER" type="ACTIVE"/>
@@ -8718,7 +8297,6 @@
 	<skill skillId="2275" name="Aimed Arrow III" minLevel="43" skillLevel="7" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2275" name="Aimed Arrow III" minLevel="44" skillLevel="8" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2275" name="Aimed Arrow III" minLevel="45" skillLevel="9" race="ALL" classId="RANGER" type="ACTIVE"/>
-	
 	<skill skillId="2276" name="Aimed Arrow IV" minLevel="48" skillLevel="1" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2276" name="Aimed Arrow IV" minLevel="49" skillLevel="2" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<skill skillId="2276" name="Aimed Arrow IV" minLevel="50" skillLevel="3" race="ALL" classId="RANGER" type="ACTIVE"/>
@@ -8730,7 +8308,6 @@
 	<skill skillId="2276" name="Aimed Arrow IV" minLevel="56" skillLevel="9" race="ALL" classId="RANGER" type="ACTIVE"/>
 	<!-- Stigma -->
 	<skill skillId="2277" name="Absorption I" minLevel="48" skillLevel="1" race="ALL" classId="RANGER" type="ACTIVE" stigma="true"/>
-		   
 	<!-- SORCERER -->
     <skill skillId="2289" name="Vigour Absorption I" minLevel="40" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
 	<skill skillId="2289" name="Vigour Absorption I" minLevel="41" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8741,7 +8318,6 @@
 	<skill skillId="2289" name="Vigour Absorption I" minLevel="46" skillLevel="7" race="ALL" classId="WIZARD" type="ACTIVE"/>
 	<skill skillId="2289" name="Vigour Absorption I" minLevel="47" skillLevel="8" race="ALL" classId="WIZARD" type="ACTIVE"/>
 	<skill skillId="2289" name="Vigour Absorption I" minLevel="48" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
-	
 	<skill skillId="2290" name="Vigour Absorption II" minLevel="52" skillLevel="1" race="ALL" classId="WIZARD" type="ACTIVE"/>
 	<skill skillId="2290" name="Vigour Absorption II" minLevel="53" skillLevel="2" race="ALL" classId="WIZARD" type="ACTIVE"/>
 	<skill skillId="2290" name="Vigour Absorption II" minLevel="54" skillLevel="3" race="ALL" classId="WIZARD" type="ACTIVE"/>
@@ -8753,13 +8329,9 @@
 	<skill skillId="2290" name="Vigour Absorption II" minLevel="60" skillLevel="9" race="ALL" classId="WIZARD" type="ACTIVE"/>
 	<!-- Stigma -->	
 	<skill skillId="2291" name="Typhon I" minLevel="43" skillLevel="1" race="PC_LIGHT" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
 	<skill skillId="2293" name="Typhon II" minLevel="55" skillLevel="1" race="PC_LIGHT" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
 	<skill skillId="2292" name="Typhon I" minLevel="43" skillLevel="1" race="PC_DARK" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
 	<skill skillId="2294" name="Typhon II" minLevel="55" skillLevel="1" race="PC_DARK" classId="WIZARD" type="ACTIVE" stigma="true"/>
-	
 	<!-- ELEMENTALLIST -->
 	<skill skillId="2295" name="Vacuum Explosion I" minLevel="22" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2295" name="Vacuum Explosion I" minLevel="23" skillLevel="2" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8770,7 +8342,6 @@
 	<skill skillId="2295" name="Vacuum Explosion I" minLevel="28" skillLevel="7" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2295" name="Vacuum Explosion I" minLevel="29" skillLevel="8" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2295" name="Vacuum Explosion I" minLevel="30" skillLevel="9" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
 	<skill skillId="2296" name="Vacuum Explosion II" minLevel="34" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2296" name="Vacuum Explosion II" minLevel="35" skillLevel="2" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2296" name="Vacuum Explosion II" minLevel="36" skillLevel="3" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8780,7 +8351,6 @@
 	<skill skillId="2296" name="Vacuum Explosion II" minLevel="40" skillLevel="7" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2296" name="Vacuum Explosion II" minLevel="41" skillLevel="8" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2296" name="Vacuum Explosion II" minLevel="42" skillLevel="9" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
-	
 	<skill skillId="2297" name="Vacuum Explosion III" minLevel="46" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2297" name="Vacuum Explosion III" minLevel="47" skillLevel="2" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
 	<skill skillId="2297" name="Vacuum Explosion III" minLevel="48" skillLevel="3" race="ALL" classId="ELEMENTALLIST" type="ACTIVE"/>
@@ -8793,7 +8363,6 @@
 	<!-- Stigma -->
 	<skill skillId="2298" name="Elemental Transfer I" minLevel="40" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
 	<skill skillId="2299" name="Elemental Transfer II" minLevel="52" skillLevel="1" race="ALL" classId="ELEMENTALLIST" type="ACTIVE" stigma="true"/>
-	
 	<!-- PRIEST -->
     <skill skillId="2281" name="Thunder Of Judgement I" minLevel="16" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2281" name="Thunder Of Judgement I" minLevel="17" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8804,7 +8373,6 @@
 	<skill skillId="2281" name="Thunder Of Judgement I" minLevel="22" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2281" name="Thunder Of Judgement I" minLevel="23" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2281" name="Thunder Of Judgement I" minLevel="24" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
 	<skill skillId="2282" name="Thunder Of Judgement II" minLevel="28" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2282" name="Thunder Of Judgement II" minLevel="29" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2282" name="Thunder Of Judgement II" minLevel="30" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8814,7 +8382,6 @@
 	<skill skillId="2282" name="Thunder Of Judgement II" minLevel="34" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2282" name="Thunder Of Judgement II" minLevel="35" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2282" name="Thunder Of Judgement II" minLevel="36" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
 	<skill skillId="2283" name="Thunder Of Judgement III" minLevel="40" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2283" name="Thunder Of Judgement III" minLevel="41" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2283" name="Thunder Of Judgement III" minLevel="42" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8824,7 +8391,6 @@
 	<skill skillId="2283" name="Thunder Of Judgement III" minLevel="46" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2283" name="Thunder Of Judgement III" minLevel="47" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2283" name="Thunder Of Judgement III" minLevel="48" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
-	
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="52" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="53" skillLevel="2" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="54" skillLevel="3" race="ALL" classId="PRIEST" type="ACTIVE"/>
@@ -8836,7 +8402,6 @@
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="60" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<!-- Stigma -->
 	<skill skillId="2285" name="Blessing Of Healing I" minLevel="45" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
-	
 	<!-- CHANTER -->
     <skill skillId="2288" name="Cross Defense I" minLevel="45" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
 	<!-- Stigma -->	

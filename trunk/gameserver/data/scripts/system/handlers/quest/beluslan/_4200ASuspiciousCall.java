@@ -1,59 +1,43 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- * aion-unique is free software: you can redistribute it and/or modify
+ * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * aion-unique is distributed in the hope that it will be useful,
+ * Aion-Knight is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package quest.beluslan;
 
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
+import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import gameserver.quest.HandlerResult;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.InstanceService;
+import gameserver.services.TeleportService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.WorldMapInstance;
 
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import ru.aionknight.gameserver.quest.HandlerResult;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.InstanceService;
-import ru.aionknight.gameserver.services.TeleportService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.WorldMapInstance;
-
-
-/**
- * @author kecimis
- * 
- */
 public class _4200ASuspiciousCall extends QuestHandler
 {
-	
 	private final static int	questId	= 4200;
 	private final static int[]	npc_ids	= { 204839, 798332, 700522, 279006, 204286 };
-  /*
-   * 204839 - Uikinerk
-   * 798332 - Haorunerk
-   * 700522 - Haorunerks Bag
-   * 279006 - Garkbinerk
-   * 204286 - Payrinrinerk          
-   */         
-    
-  
-  
 	
   public _4200ASuspiciousCall()
 	{
@@ -82,7 +66,7 @@ public class _4200ASuspiciousCall extends QuestHandler
 
 		if(qs == null || qs.getStatus() == QuestStatus.NONE) 
 		{
-			if(targetId == 204839)//Uikinerk
+			if(targetId == 204839)
 			{
 				if(env.getDialogId() == 26)
 					return sendQuestDialog(env, 4762);
@@ -109,27 +93,24 @@ public class _4200ASuspiciousCall extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-     if(targetId == 204839)//Uikinerk
+     if(targetId == 204839)
 		{
       switch(env.getDialogId())
-					{
-					case 26:
-					 return sendQuestDialog(env, 1003);
-          case 1011:
-           return sendQuestDialog(env, 1011);
-          case 10000:
-				  // Create instance
-				  WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(300100000);
-				  InstanceService.registerPlayerWithInstance(newInstance, player);
-				  //teleport to cell in steel rake: 300100000 403.55 508.11 885.77 0
-          TeleportService.teleportTo(player, 300100000, newInstance.getInstanceId(), 403.55f, 508.11f, 885.77f, 0);
-				  qs.setQuestVarById(0, var + 1);
-				  updateQuestStatus(env);
-          return true;
-          }
-						
+			{
+			case 26:
+				return sendQuestDialog(env, 1003);
+			case 1011:
+				return sendQuestDialog(env, 1011);
+			case 10000:
+				WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(300100000);
+				InstanceService.registerPlayerWithInstance(newInstance, player);
+				TeleportService.teleportTo(player, 300100000, newInstance.getInstanceId(), 403.55f, 508.11f, 885.77f, 0);
+				qs.setQuestVarById(0, var + 1);
+				updateQuestStatus(env);
+			return true;
+			}
     }
-    else if (targetId == 798332 && var == 1)//Haorunerk
+    else if (targetId == 798332 && var == 1)
       {
        switch(env.getDialogId())
 					{
@@ -192,7 +173,6 @@ public class _4200ASuspiciousCall extends QuestHandler
 			{
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
 				player.getInventory().removeFromBagByItemId(182209097, 1);
-				//teleport location(BlackCloudIsland): 400010000 3419.16 2445.43 2766.54 57
 				TeleportService.teleportTo(player, 400010000, 3419.16f, 2445.43f, 2766.54f, 57);
 				qs.setQuestVarById(0, qs.getQuestVarById(0)+ 1);
 				updateQuestStatus(env);

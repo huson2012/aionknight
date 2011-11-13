@@ -23,7 +23,6 @@
 	<monster_hunt id="18205" start_npc_id="205309">
 		<monster_infos var_id="0" max_kill="1" npc_id="217609"/>
 	</monster_hunt>
-
 	<!-- Entering the Crucible -->
 	<report_to id="28200" start_npc_id="798804" end_npc_id="799428"/>
 	<!-- Through the Wind and Fire -->
