@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://www.aion-knight.ru]
+ * This file is part of Aion-Knight [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
+
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
@@ -29,6 +29,12 @@ import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 import gameserver.world.World;
+
+
+/**
+ * @author Antivirus
+ *
+ */
 
 public class AddSet extends AdminCommand
 {

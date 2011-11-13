@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
+
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
@@ -23,6 +23,10 @@ import gameserver.network.loginserver.LoginServer;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author Watson
+ * 
+ */
 public class BanIP extends AdminCommand
 {
 	public BanIP()

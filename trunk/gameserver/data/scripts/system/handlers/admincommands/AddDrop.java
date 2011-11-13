@@ -14,13 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 import commons.database.DB;
 import commons.database.IUStH;
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.drop.DropList;
 import gameserver.model.drop.DropTemplate;
@@ -31,6 +32,11 @@ import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 
+/**
+ * 
+
+ *
+ */
 public class AddDrop extends AdminCommand
 {
 

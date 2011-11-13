@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	Назначение файла	: 
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <summon_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
 	<summon_stats npc_id_light="201022" npc_id_dark="201023" level="10">
 		<stats_template maxHp="724" pdefense="285" mresist="252" main_hand_attack="82" run_speed="8.0"/>

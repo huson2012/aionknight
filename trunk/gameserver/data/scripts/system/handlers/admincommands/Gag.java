@@ -14,10 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
 
 import java.util.concurrent.Future;
+
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.TaskId;
 import gameserver.model.gameobjects.player.Player;
@@ -27,6 +28,11 @@ import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
 
+
+/**
+ * @author Watson
+ * 
+ */
 public class Gag extends AdminCommand
 {
 	public Gag()

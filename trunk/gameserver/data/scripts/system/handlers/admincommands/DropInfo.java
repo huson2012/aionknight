@@ -14,10 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
 
 import java.util.Set;
+
+
 import gameserver.model.drop.DropItem;
 import gameserver.model.drop.DropList;
 import gameserver.model.drop.DropTemplate;
@@ -28,6 +29,9 @@ import gameserver.services.DropService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author Oliver
+ */
 public class DropInfo extends AdminCommand {
 
 	private DropList dropList;
@@ -60,5 +64,7 @@ public class DropInfo extends AdminCommand {
 				}
 			}
 		}
+
 	}
+
 }

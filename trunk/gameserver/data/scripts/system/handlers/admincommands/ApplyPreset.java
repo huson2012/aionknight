@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://www.aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -14,10 +14,10 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
 
 import commons.database.dao.DAOManager;
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.PlayerAppearanceDAO;
 import gameserver.dataholders.DataManager;
@@ -29,6 +29,11 @@ import gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 
+
+/**
+ * @author Rolandas
+ *
+ */
 public class ApplyPreset extends AdminCommand
 {
 	public ApplyPreset()
@@ -110,5 +115,6 @@ public class ApplyPreset extends AdminCommand
 		int blue = (rgb >> 0) & 0xFF;
 		int bgr = (blue << 16) | (green << 8) | (red << 0);
 		return bgr;
-	}	
+	}
+	
 }
