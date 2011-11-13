@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	@modif Xtranger
+
+	Назначение файла	: 
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
  -->
+
 <windstreams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="windstreams.xsd">
+	<!-- Ингисон -->
 	<windstream mapid="210050000">
 		<locations>
 			<location id="100" boost="0" bidirectional="0"/>
@@ -30,6 +37,7 @@
 			<location id="154" boost="1" bidirectional="1"/>
 		</locations>
 	</windstream>
+	<!-- Келькмарос -->
 	<windstream mapid="220070000">
 		<locations>
 			<location id="1" boost="0" bidirectional="2"/>
@@ -52,16 +60,18 @@
 			<location id="157" boost="1" bidirectional="1"/>
 		</locations>
 	</windstream>
+	<!-- IDTest_Dungeon -->
 	<windstream mapid="300020000">
 		<locations>
 			<location id="158" boost="0" bidirectional="2"/>
 		</locations>
-	</windstream>	
+	</windstream>
+	<!-- Арака -->
 	<windstream mapid="300250000">
 		<locations>
 			<location id="159" boost="1" bidirectional="1"/>
 			<location id="160" boost="1" bidirectional="1"/>
-			<!--location id="161" boost="1" bidirectional="1"/-->
+			<location id="161" boost="1" bidirectional="1"/>
 			<location id="162" boost="1" bidirectional="1"/>
 			<location id="1" boost="1" bidirectional="1"/>
 			<location id="2" boost="1" bidirectional="1"/>

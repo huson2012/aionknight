@@ -1,5 +1,5 @@
 /*
- Source Server         : Aion-Knight [Beta]
+ Source Server         : Aion-Knight RC1 [Beta]
  Source Server Type    : MySQL
  Source Server Version : 50045
  Source Host           : 192.168.0.1
@@ -603,7 +603,7 @@ CREATE TABLE `player_motion` (
 DROP TABLE IF EXISTS `player_passkey`;
 CREATE TABLE `player_passkey` (
   `account_id` int(11) NOT NULL,
-  `passkey` varchar(8) NOT NULL DEFAULT '',
+  `passkey` varchar(30) NOT NULL DEFAULT '',
   PRIMARY KEY (`account_id`,`passkey`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

@@ -17,6 +17,7 @@
 
 package admincommands;
 
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.services.TeleportService;
@@ -24,11 +25,19 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.WorldMapType;
 
+/**
+ * Admin moveto command
+ * 
+ * @author KID
+ */
+
 public class MoveTo extends AdminCommand
 {
+
 	/**
 	 * Constructor.
 	 */
+
 	public MoveTo()
 	{
 		super("moveto");

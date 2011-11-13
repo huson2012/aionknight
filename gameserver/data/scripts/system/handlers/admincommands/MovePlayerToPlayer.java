@@ -17,6 +17,7 @@
 
 package admincommands;
 
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.services.TeleportService;
@@ -24,6 +25,12 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+/**
+ * Admin moveplayertoplayer command.
+ *
+ * @author Tanelorn
+ */
 
 public class MovePlayerToPlayer extends AdminCommand
 {

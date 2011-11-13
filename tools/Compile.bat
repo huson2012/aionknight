@@ -5,7 +5,7 @@ title [ Aion-Knight Dev. Team ]
 color FC
 CLS
 ECHO.
-ECHO        =[v1.0.1]==================================================[2.5]=
+ECHO        =[ RC1 ]===================================================[2.5]=
 ECHO.
 ECHO               Компилятор исходных кодов The Aion-Knight Dev. Team
 ECHO                             (http://aion-knight.ru)

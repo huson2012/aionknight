@@ -17,6 +17,7 @@
 
 package admincommands;
 
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.alliance.PlayerAllianceMember;
 import gameserver.model.gameobjects.player.Player;
@@ -26,6 +27,12 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+/**
+ * Admin movetome command.
+ *
+ * @author Cyrakuse
+ */
 
 public class MoveToMe extends AdminCommand
 {
@@ -143,5 +150,6 @@ public class MoveToMe extends AdminCommand
 		TeleportService.teleportTo(playerToMove, admin.getWorldId(), admin.getInstanceId(), admin.getX(), admin.getY(), admin.getZ(), admin.getHeading(), 0);
 		PacketSendUtility.sendMessage(admin, "Teleported player " + playerToMove.getName() + " to your location.");
 		PacketSendUtility.sendMessage(playerToMove, "You have been teleported by " + admin.getName() + ".");
-	}	
+	}
+	
 }

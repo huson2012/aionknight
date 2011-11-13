@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package admincommands;
 
 import java.sql.Connection;
@@ -22,11 +21,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 import commons.database.DB;
 import commons.database.DatabaseFactory;
 import commons.database.IUStH;
 import commons.database.ParamReadStH;
+
 import gameserver.ShutdownHook;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
@@ -34,6 +35,20 @@ import gameserver.services.TeleportService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 
+
+/**
+ * 
+ * @author Mrakobes
+ * 
+ */
+
+/**
+ * Class for Bookmark, whitch represents: 
+ * name - name of bookmark 
+ * x,y,z - coordinates 
+ * world_id - world_id for teleport
+ * 
+ */
 class Bookmark
 {
 	private String	name;

@@ -17,6 +17,7 @@
 
 package admincommands;
 
+
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_QUIT_RESPONSE;
@@ -24,6 +25,11 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+/**
+ * @author Elusive
+ *
+ */
 
 public class Kick extends AdminCommand
 {
