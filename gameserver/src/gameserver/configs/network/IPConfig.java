@@ -33,7 +33,7 @@ import org.xml.sax.helpers.DefaultHandler;
 public class IPConfig
 {
 	private static final Logger	log = Logger.getLogger(IPConfig.class);
-	private static final String CONFIG_FILE	= "./config/ipconfig.xml";
+	private static final String CONFIG_FILE	= "./config/ipconfig.ini";
 	private static final List<IPRange> ranges = new ArrayList<IPRange>();
 	private static byte[] defaultAddress;
 	public static void load()
