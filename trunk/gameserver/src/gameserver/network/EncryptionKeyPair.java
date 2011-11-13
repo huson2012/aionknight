@@ -14,121 +14,126 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package gameserver.network;
 
 import java.nio.ByteBuffer;
 import java.util.Calendar;
 import java.util.Date;
-import gameserver.configs.main.GSConfig;
 
-public class EncryptionKeyPair
-{
+public class EncryptionKeyPair {
 	/**
-	 * Шифрование ключей для доступа к серверу
+	 * keys index to access SERVER encryption key
+	 * 
 	 * @see EncryptionKeyPair.keys
 	 */
 	private static final int SERVER = 0;
+
 	/**
-	 * Индекс ключей для доступа к серверу
+	 * keys index to access CLIENT encryption key
+	 * 
 	 * @see EncryptionKeyPair.keys
 	 */
 	private static final int CLIENT = 1;
+
 	/**
-	 * Статический 'XOR' ключ
+	 * Static xor key
 	 */
-	private final static byte[]	staticKey = "nKO/WctQ0AVLbpzfBkS6NevDYT8ourG5CRlmdjyJ72aswx4EPq1UgZhFMXH?3iI9".getBytes();
-    /**
-     * Каждый второй байт пакета должен быть равен этому
-     */
-	private static byte	staticClientPacketCode	= 0x55;
+	private final static byte[] staticKey = "nKO/WctQ0AVLbpzfBkS6NevDYT8ourG5CRlmdjyJ72aswx4EPq1UgZhFMXH?3iI9".getBytes();
+
 	/**
-	 * Срок действия пары ключей в секундах
+	 * Second byte of client packet must be equal to this
+	 */
+	private static byte staticClientPacketCode = 0x57; // 2.7
+
+	/**
+	 * Validity of the key pair in seconds
 	 */
 	private static final long KEY_VALIDITY = 600;
+
 	/**
-	 * Базовый ключ, используемый для создания клиент/сервер ключей
+	 * Base key used to generate client/server keys
 	 */
 	private int baseKey = 0;
+
 	/**
-	 * Ключи шифрования
+	 * Encryption keys
 	 */
 	private byte[][] keys = null;
+
 	/**
-	 * Дата последнего использования ключа
+	 * Date of last key use
 	 */
 	private Date lastUpdate = null;
+
 	/**
-	 * Инициализация ключей 'клиент/сервер' на основе 'baseKey'
-	 * @param baseKey random integer
+	 * Initializes client/server encryption keys based on baseKey
+	 * 
+	 * @param baseKey
+	 *            random integer
 	 */
-	public EncryptionKeyPair (int baseKey) 
-	{
+	public EncryptionKeyPair(int baseKey) {
 		this.baseKey = baseKey;
 		this.keys = new byte[2][];
-		this.keys[SERVER] = new byte[] {
-			(byte) (baseKey & 0xff),
-			(byte) ((baseKey >> 8) & 0xff),
-			(byte) ((baseKey >> 16) & 0xff),
-			(byte) ((baseKey >> 24) & 0xff),
-			(byte) 0xa1,
-			(byte) 0x6c,
-			(byte) 0x54,
-			(byte) 0x87
-		};
+		this.keys[SERVER] = new byte[] { (byte) (baseKey & 0xff), (byte) ((baseKey >> 8) & 0xff), (byte) ((baseKey >> 16) & 0xff), (byte) ((baseKey >> 24) & 0xff), (byte) 0xa1, (byte) 0x6c, (byte) 0x54, (byte) 0x87 };
 		this.keys[CLIENT] = new byte[this.keys[SERVER].length];
 		System.arraycopy(this.keys[SERVER], 0, this.keys[CLIENT], 0, this.keys[SERVER].length);
 		this.lastUpdate = Calendar.getInstance().getTime();
 	}
+
 	/**
-	 * @return в 'baseKey' используется для генерации пары ключей
+	 * @return the baseKey used to generate the key pair
 	 */
-	public int getBaseKey ()
-	{
+	public int getBaseKey() {
 		return baseKey;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
-	public String toString ()
-	{
+	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("{c:0x");
-		for (int i=0; i<keys[CLIENT].length;i++)
-		{
-			sb.append(Integer.toHexString(keys[CLIENT][i]&0xff));
+		for (int i = 0; i < keys[CLIENT].length; i++) {
+			sb.append(Integer.toHexString(keys[CLIENT][i] & 0xff));
 		}
 		sb.append(",s:0x");
-		for (int i=0; i<keys[SERVER].length;i++)
-		{
-			sb.append(Integer.toHexString(keys[SERVER][i]&0xff));
+		for (int i = 0; i < keys[SERVER].length; i++) {
+			sb.append(Integer.toHexString(keys[SERVER][i] & 0xff));
 		}
 		sb.append(",baseKey:0x");
 		sb.append(Integer.toHexString(baseKey));
-		sb.append(",updated:"+lastUpdate+"}");
+		sb.append(",updated:" + lastUpdate + "}");
 		return sb.toString();
 	}
+
 	/**
-	 * Проверка на кодирование/декодирование ключей пакетов
+	 * Check if packet was correctly decoded, also check if packet was correctly
+	 * coded by aion client
 	 */
-	private final boolean validateClientPacket(ByteBuffer buf)
-	{
-		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
-		staticClientPacketCode = 0x57;
+	private final boolean validateClientPacket(ByteBuffer buf) {
 		boolean valid = false;
-		byte buf0 = buf.get(0);
-		byte buf1 = buf.get(1);
-		byte buf2 = buf.get(2);
-		valid = buf0 == ~buf2;
-		valid = valid && buf1 == staticClientPacketCode;
+		
+		byte[] checksum = new byte[5];
+		checksum[0] = buf.get(0);
+		checksum[1] = buf.get(1);
+		checksum[2] = buf.get(2);
+		checksum[3] = buf.get(3);
+		checksum[4] = buf.get(4);
+		
+		valid = (checksum[0] == ~checksum[3]);
+		valid = (valid && checksum[1] == ~checksum[4]);
+		valid = (valid && checksum[2] == staticClientPacketCode);
 		return valid;
 	}
+
 	/**
-	 * Decrypt client packet from this ByteBuffer
-	 * If decryption is successful, update client key 
+	 * Decrypt client packet from this ByteBuffer If decryption is successful,
+	 * update client key
+	 * 
 	 * @return true if decryption was successful
 	 */
-	public boolean decrypt (ByteBuffer buf)
-	{
+	public boolean decrypt(ByteBuffer buf) {
 		final byte[] data = buf.array();
 		final int size = buf.remaining();
 		byte[] clientPacketKey = keys[CLIENT];
@@ -143,24 +148,19 @@ public class EncryptionKeyPair
 		data[arrayIndex++] ^= (clientPacketKey[0] & 0xff);
 
 		/** decrypt loop */
-		for(int i = 1; i < size; i++, arrayIndex++)
-		{
+		for (int i = 1; i < size; i++, arrayIndex++) {
 			int curr = data[arrayIndex] & 0xff;
 			data[arrayIndex] ^= (staticKey[i & 63] & 0xff) ^ (clientPacketKey[i & 7] & 0xff) ^ prev;
 			prev = curr;
 		}
-		
+
 		/** oldKey value as long */
-		long oldKey = (((long) clientPacketKey[0] & 0xff) << 0) | (((long) clientPacketKey[1] & 0xff) << 8)
-		| (((long) clientPacketKey[2] & 0xff) << 16) | (((long) clientPacketKey[3] & 0xff) << 24)
-		| (((long) clientPacketKey[4] & 0xff) << 32) | (((long) clientPacketKey[5] & 0xff) << 40)
-		| (((long) clientPacketKey[6] & 0xff) << 48) | (((long) clientPacketKey[7] & 0xff) << 56);
+		long oldKey = (((long) clientPacketKey[0] & 0xff) << 0) | (((long) clientPacketKey[1] & 0xff) << 8) | (((long) clientPacketKey[2] & 0xff) << 16) | (((long) clientPacketKey[3] & 0xff) << 24) | (((long) clientPacketKey[4] & 0xff) << 32) | (((long) clientPacketKey[5] & 0xff) << 40) | (((long) clientPacketKey[6] & 0xff) << 48) | (((long) clientPacketKey[7] & 0xff) << 56);
 
 		/** change key */
 		oldKey += size;
 
-		if (validateClientPacket(buf))
-		{
+		if (validateClientPacket(buf)) {
 			/** set key new value */
 			clientPacketKey[0] = (byte) (oldKey >> 0 & 0xff);
 			clientPacketKey[1] = (byte) (oldKey >> 8 & 0xff);
@@ -174,12 +174,11 @@ public class EncryptionKeyPair
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Encrypt server packet from this ByteBuffer
 	 */
-	public void encrypt (ByteBuffer buf)
-	{
+	public void encrypt(ByteBuffer buf) {
 		final byte[] data = buf.array();
 		final int size = buf.remaining();
 		byte[] serverPacketKey = keys[SERVER];
@@ -194,22 +193,18 @@ public class EncryptionKeyPair
 		int prev = data[arrayIndex++];
 
 		/** encrypt loop */
-		for(int i = 1; i < size; i++, arrayIndex++)
-		{
+		for (int i = 1; i < size; i++, arrayIndex++) {
 			data[arrayIndex] ^= (staticKey[i & 63] & 0xff) ^ (serverPacketKey[i & 7] & 0xff) ^ prev;
 			prev = data[arrayIndex];
 		}
 
 		/** oldKey value as long */
-		long oldKey = (((long) serverPacketKey[0] & 0xff) << 0) | (((long) serverPacketKey[1] & 0xff) << 8)
-			| (((long) serverPacketKey[2] & 0xff) << 16) | (((long) serverPacketKey[3] & 0xff) << 24)
-			| (((long) serverPacketKey[4] & 0xff) << 32) | (((long) serverPacketKey[5] & 0xff) << 40)
-			| (((long) serverPacketKey[6] & 0xff) << 48) | (((long) serverPacketKey[7] & 0xff) << 56);
+		long oldKey = (((long) serverPacketKey[0] & 0xff) << 0) | (((long) serverPacketKey[1] & 0xff) << 8) | (((long) serverPacketKey[2] & 0xff) << 16) | (((long) serverPacketKey[3] & 0xff) << 24) | (((long) serverPacketKey[4] & 0xff) << 32) | (((long) serverPacketKey[5] & 0xff) << 40) | (((long) serverPacketKey[6] & 0xff) << 48) | (((long) serverPacketKey[7] & 0xff) << 56);
 
-		/** Смена ключа */
+		/** change key */
 		oldKey += size;
 
-		/** Установка нового значение ключа */
+		/** set key new value */
 		serverPacketKey[0] = (byte) (oldKey >> 0 & 0xff);
 		serverPacketKey[1] = (byte) (oldKey >> 8 & 0xff);
 		serverPacketKey[2] = (byte) (oldKey >> 16 & 0xff);
@@ -219,18 +214,18 @@ public class EncryptionKeyPair
 		serverPacketKey[6] = (byte) (oldKey >> 48 & 0xff);
 		serverPacketKey[7] = (byte) (oldKey >> 56 & 0xff);
 	}
+
 	/**
-	 * @return true, если ключ истек
+	 * @return true if key pair has expired
 	 */
-	public boolean isExpired ()
-	{
-		return ((Calendar.getInstance().getTimeInMillis()-lastUpdate.getTime())>=(KEY_VALIDITY*1000));
+	public boolean isExpired() {
+		return ((Calendar.getInstance().getTimeInMillis() - lastUpdate.getTime()) >= (KEY_VALIDITY * 1000));
 	}
+
 	/**
-	 * Установка дата последнего обновления
+	 * set last update date to current
 	 */
-	public void update ()
-	{
+	public void update() {
 		lastUpdate = Calendar.getInstance().getTime();
 	}
 }

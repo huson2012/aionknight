@@ -17,11 +17,11 @@
 
 package admincommands;
 
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.services.PvPZoneService;
-import ru.aionknight.gameserver.services.PvpService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.services.PvPZoneService;
+import gameserver.services.PvpService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
 
 public class PvP extends AdminCommand 
 {
