@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.Map.Entry;
 
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.modifiers.Executor;
-import ru.aionknight.gameserver.model.items.ItemCooldown;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_SKILL_COOLDOWN;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.world.World;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.modifiers.Executor;
+import gameserver.model.items.ItemCooldown;
+import gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
+import gameserver.network.aion.serverpackets.SM_SKILL_COOLDOWN;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
 
 
 /**

@@ -1,40 +1,40 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- * aion-unique is free software: you can redistribute it and/or modify
+ * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * aion-unique is distributed in the hope that it will be useful,
+ * Aion-Knight is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package quest.brusthonin;
 
 import java.util.Collections;
 
 
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.quest.QuestItems;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.ItemService;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.quest.QuestItems;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.ItemService;
+import gameserver.services.QuestService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
 
  
 

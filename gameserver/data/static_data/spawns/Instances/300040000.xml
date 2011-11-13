@@ -1,41 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Фоэта тьмы (Данж)
+	ID локации		 : 300040000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Dark Poeta
-	
  -->
+
 <spawns>
-	<!-- Anuhart Aionbane (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="214892" pool="3" interval="300">
 		<object x="190.12329" y="430.33914" z="109.82701" h="60"/>
 		<object x="189.79279" y="441.3815" z="121.0618" h="10"/>
 		<object x="274.14868" y="292.94745" z="127.68188" h="118"/>
 	</spawn>
-	<!-- Anuhart Ambusher (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="214833" pool="2" interval="300">
 		<object x="875.88873" y="544.4341" z="119.0" h="22"/>
 		<object x="854.76575" y="557.57715" z="118.79786" h="73"/>
 	</spawn>
-	<!-- Anuhart Arcus (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="215256" pool="2" interval="300">
 		<object x="231.51099" y="1190.8541" z="169.83395" h="67"/>
 		<object x="201.96835" y="1090.0566" z="144.1329" h="29"/>
 	</spawn>
-	<!-- Anuhart Biteblade (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="214853" pool="5" interval="300">
 		<object x="549.07214" y="725.8335" z="111.79024" h="83"/>
 		<object x="671.71173" y="798.2651" z="124.711395" h="101"/>
@@ -43,7 +33,7 @@
 		<object x="587.59607" y="730.8826" z="112.14435" h="95"/>
 		<object x="567.50146" y="687.5589" z="119.0723" h="41"/>
 	</spawn>
-	<!-- Anuhart Bloodbinder (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="214830" pool="13" interval="300">
 		<object x="1000.9333" y="459.29114" z="110.15126" h="39"/>
 		<object x="1023.864" y="286.21323" z="129.37602" h="117"/>
@@ -59,18 +49,18 @@
 		<object x="1193.9329" y="475.8072" z="137.47116" h="64"/>
 		<object x="997.3286" y="313.94638" z="123.83885" h="92"/>
 	</spawn>
-	<!-- Anuhart Bloodboss (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="214872" pool="2" interval="300">
 		<object x="389.0122" y="1362.2968" z="155.60492" h="51"/>
 		<object x="239.57088" y="1215.6288" z="168.44823" h="120"/>
 	</spawn>
-	<!-- Anuhart Bowmaster (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="215234" pool="3" interval="300">
 		<object x="599.6635" y="759.9632" z="115.69874" h="107"/>
 		<object x="555.157" y="658.9044" z="120.49189" h="35"/>
 		<object x="656.781" y="783.4859" z="120.41905" h="40"/>
 	</spawn>
-	<!-- Anuhart Captain (Monster Elite lvl:50)-->
+	<!--  -->
 	<spawn map="300040000" npcid="215248" pool="2" interval="300">
 		<object x="477.18762" y="1008.5991" z="119.73601" h="53"/>
 		<object x="615.1342" y="1026.5353" z="137.87607" h="20"/>
@@ -1063,7 +1053,7 @@
 	<spawn map="300040000" npcid="730148" pool="1" interval="295">
 		<object staticid="146" x="140.28009" y="409.0543" z="135.81497" h="98"/>
 	</spawn>
-		<!-- Balaur Supply Box (Object Normal lvl:1)-->
+	<!-- Balaur Supply Box (Object Normal lvl:1)-->
 	<spawn map="300040000" npcid="700510" pool="1" interval="295">
 		<object x="210.72366" y="1217.948" z="171.6548" h="4"/>
 	</spawn>

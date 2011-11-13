@@ -4,12 +4,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.log4j.Logger;
-import org.openaion.commons.database.DB;
-import org.openaion.commons.database.IUStH;
+import loginserver.dao.AccountTimeDAO;
+import loginserver.model.AccountTime;
 
-import ru.aionknight.loginserver.dao.AccountTimeDAO;
-import ru.aionknight.loginserver.model.AccountTime;
+import org.apache.log4j.Logger;
+import commons.database.DB;
+import commons.database.IUStH;
 
 
 /**

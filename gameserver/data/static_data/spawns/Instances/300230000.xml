@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by Nephis (Nephis) -->
+
 <!--
-	This file is part of Zetta Core.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Кошмар (Данж)
+	ID локации		 : 300230000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	Zetta Core is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Kromede's Trial From client spawn
-	@author Nephis
  -->
-<!-- MAP: Cromede - ZONE: 300230000 -->
+
 <spawns>
 	<!-- Troll Lookout lvl:38 -->
 	<spawn map="300230000" npcid="216961" pool="4" interval="295">

@@ -1,15 +1,15 @@
 package mysql5;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DB;
-import org.openaion.commons.database.IUStH;
-
-import ru.aionknight.loginserver.dao.AccountDAO;
-import ru.aionknight.loginserver.model.Account;
+import commons.database.DB;
+import commons.database.IUStH;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import loginserver.dao.AccountDAO;
+import loginserver.model.Account;
 
 /**
  * MySQL5 Account DAO implementation

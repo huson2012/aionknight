@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+<!--
+
+	Назначение файла	:
+	Ревизия				: 1.0.1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--  -->
 	<xs:include schemaLocation="items/item_templates.xsd"/>
 	<xs:include schemaLocation="global_types.xsd"/>
-
+	<!--  -->
 	<xs:element name="player_initial_data">
 		<xs:complexType>
 			<xs:sequence>
@@ -15,7 +24,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-
+	<!--  -->
 	<xs:complexType name="playerDataType">
 		<xs:sequence>
 			<xs:element name="items" minOccurs="1" maxOccurs="1">
@@ -31,11 +40,10 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<!--<xs:element name="shortcuts" minOccurs="1" maxOccurs="1"/>-->
 		</xs:sequence>
 		<xs:attribute name="class" type="startingPlayerClass"/>
 	</xs:complexType>
-
+	<!--  -->
 	<xs:complexType name="spawnLocationType">
 		<!-- TODO: remove map_id -->
 		<xs:attribute name="map_id" type="xs:int" use="required"/>
@@ -45,4 +53,3 @@
 		<xs:attribute name="heading" type="xs:byte" use="required"/>
 	</xs:complexType>
 </xs:schema>
-

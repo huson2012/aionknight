@@ -14,6 +14,6 @@
 	<classpathentry kind="lib" path="lib/junit-4.6.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
-	<classpathentry kind="lib" path="lib/open-aion-commons.jar"/>
+	<classpathentry kind="lib" path="lib/ak-commons.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

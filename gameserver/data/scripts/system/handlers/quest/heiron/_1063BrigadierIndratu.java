@@ -1,31 +1,42 @@
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ *
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package quest.heiron;
 
+import gameserver.controllers.PortalController;
+import gameserver.dataholders.DataManager;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.WorldMapTemplate;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.InstanceService;
+import gameserver.services.TeleportService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.WorldMapInstance;
 
-import ru.aionknight.gameserver.controllers.PortalController;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.WorldMapTemplate;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.InstanceService;
-import ru.aionknight.gameserver.services.TeleportService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.WorldMapInstance;
-
-
-/**
- * @author Bio
- * TODO: More retail like quest
- */
 public class _1063BrigadierIndratu extends QuestHandler
 {
 	private final static int	questId	= 1063;

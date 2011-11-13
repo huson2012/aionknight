@@ -3,12 +3,12 @@ package admincommands;
 import java.util.Collection;
 
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.Race;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.world.World;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.Race;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
 
 
 /**

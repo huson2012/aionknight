@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : 
+	ID локации		 : 
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Beluslan
-	@author Atomix
-	@author_fix Kellogz (based on retail Eu spawn 01/08/2010)
  -->
+
 <spawns>
 	<!-- Aarien the Seacaller (Named Mob Hero lvl:43)-->
 	<spawn map="220040000" npcid="213738" pool="1" interval="14400">
@@ -5923,8 +5912,25 @@
 		<object x="118.5516" y="1507.413" z="317.33875" h="20"/>
 	</spawn>
 	<!-- Snowfur Youngling (Monster Normal lvl:33)-->
-	<spawn map="220040000" npcid="213707" pool="1" interval="255">
+	<spawn map="220040000" npcid="213707" pool="18" interval="255">
+		<object x="239.0" y="1351.0" z="268.25" h="41"/>
+		<object x="232.16" y="1362.49" z="269.42624" h="95"/>
+		<object x="238.81" y="1339.75" z="268.33188" h="4"/>
+		<object x="175.98" y="1108.01" z="273.87936" h="48"/>
+		<object x="235.46" y="1362.61" z="269.27313" h="95"/>
+		<object x="243.79" y="1361.91" z="268.97" h="53"/>
 		<object x="247.69" y="1342.41" z="268.34937" h="102"/>
+		<object x="237.4" y="1347.84" z="268.405" h="65"/>
+		<object x="177.18" y="1113.1" z="273.17377" h="22"/>
+		<object x="243.31" y="1352.7" z="268.0" h="9"/>
+		<object x="238.09" y="1345.93" z="268.73563" h="57"/>
+		<object x="233.58" y="1339.53" z="266.9994" h="109"/>
+		<object x="231.01" y="1345.08" z="268.26123" h="51"/>
+		<object x="169.02" y="1094.44" z="274.0125" h="83"/>
+		<object x="227.16" y="1346.42" z="268.27625" h="22"/>
+		<object x="232.69" y="1343.93" z="268.29312" h="104"/>
+		<object x="235.49" y="1355.42" z="268.49564" h="47"/>
+		<object x="227.97" y="1354.58" z="268.915" h="94"/>
 	</spawn>
 	<!-- Snowfury (Monster Normal lvl:43)-->
 	<spawn map="220040000" npcid="213791" pool="1" interval="255">
@@ -7438,19 +7444,5 @@
 	<!--  Raid Team Leader Maku (Monster Normal lvl:43)-->
 	<spawn map="220040000" npcid="216896" pool="1" interval="255">
 		<object x="2250.096" y="2491.506" z="602"/>
-	</spawn>
-	<!-- Seafoam Spirit (Monster Elite lvl:45) -->
-	<spawn map="220040000" npcid="213360" pool="11" interval="295">
-		<object x="642.62006" y="2960.985" z="225.1426" h="92"/>
-		<object x="626.4793" y="2993.5957" z="225.29597" h="103"/>
-		<object x="601.50946" y="2870.639" z="213.0568" h="81"/>
-		<object x="606.0419" y="2854.6814" z="213.37196" h="34"/>
-		<object x="614.97" y="2829.8613" z="215.78548" h="85"/>
-		<object x="541.8959" y="2825.6116" z="193.95415" h="0"/>
-		<object x="582.61536" y="2870.3674" z="289.31424" h="32"/>
-		<object x="652.65063" y="2882.3887" z="295.49683" h="1"/>
-		<object x="646.5807" y="2913.5583" z="297.11923" h="37"/>
-		<object x="616.16766" y="2891.253" z="296.6925" h="78"/>
-		<object x="631.7996" y="2884.9006" z="295.19598" h="15"/>
 	</spawn>
 </spawns>

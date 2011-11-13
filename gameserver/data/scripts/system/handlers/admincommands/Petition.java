@@ -1,35 +1,35 @@
-/* 
- * This file is part of aion-emu <aion-emu.com>.
+/** 
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-emu is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-emu is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-emu.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package admincommands;
 
 import java.util.Collection;
 
-import org.openaion.commons.database.dao.DAOManager;
+import commons.database.dao.DAOManager;
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dao.PetitionDAO;
-import ru.aionknight.gameserver.dao.PlayerDAO;
-import ru.aionknight.gameserver.model.PetitionType;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.services.MailService;
-import ru.aionknight.gameserver.services.PetitionService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.world.World;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dao.PetitionDAO;
+import gameserver.dao.PlayerDAO;
+import gameserver.model.PetitionType;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.services.MailService;
+import gameserver.services.PetitionService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
 
 
 /**
@@ -60,10 +60,10 @@ public class Petition extends AdminCommand
 		// Send ticket general info
 		if (params == null || params.length == 0)
 		{
-			Collection<ru.aionknight.gameserver.model.Petition> petitions = PetitionService.getInstance().getRegisteredPetitions();
+			Collection<gameserver.model.Petition> petitions = PetitionService.getInstance().getRegisteredPetitions();
 			synchronized (petitions)
 			{
-				ru.aionknight.gameserver.model.Petition[] petitionsArray = petitions.toArray(new ru.aionknight.gameserver.model.Petition[0]);
+				gameserver.model.Petition[] petitionsArray = petitions.toArray(new gameserver.model.Petition[0]);
 				PacketSendUtility.sendMessage(admin, petitionsArray.length + " unprocessed petitions.");
 				if (petitionsArray.length < 5)
 				{
@@ -97,7 +97,7 @@ public class Petition extends AdminCommand
 			return;
 		}
 
-		ru.aionknight.gameserver.model.Petition petition = DAOManager.getDAO(PetitionDAO.class).getPetitionById(petitionId);
+		gameserver.model.Petition petition = DAOManager.getDAO(PetitionDAO.class).getPetitionById(petitionId);
 
 		if (petition == null)
 		{

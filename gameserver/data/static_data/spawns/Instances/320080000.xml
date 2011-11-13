@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Пещера Драубнир (Данж)
+	ID локации		 : 320080000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Draupnir Cave
-	@author aionchs-Wylovech
-	
  -->
+
 <spawns>
-	<!--Bakarma scaleguard -->
+	<!-- Bakarma scaleguard -->
 	<spawn map="320080000" npcid="213376" pool="2" interval="1200">
 		<object x="395.90402" y="606.67664" z="597.9613" h="88"/>
 		<object x="398.85376" y="577.7569" z="599.8154" h="29"/>
 	</spawn>
-	<!-- Bakarma scaleguard-->
+	<!-- Bakarma scaleguard -->
 	<spawn map="320080000" npcid="213377" pool="4" interval="1200">
 		<object x="491.20874" y="401.75433" z="614.5058" h="102"/>
 		<object x="471.84668" y="405.82108" z="614.57306" h="6"/>
 		<object x="499.91214" y="421.3018" z="617.47375" h="77"/>
 		<object x="374.4023" y="713.8165" z="590.4289" h="113"/>
 	</spawn>
-	<!-- Bakarma scalewatch-->
+	<!-- Bakarma scalewatch -->
 	<spawn map="320080000" npcid="213378" pool="2" interval="1200">
 		<object x="555.9266" y="621.6363" z="578.26483" h="71"/>
 		<object x="558.21844" y="618.9637" z="578.4327" h="93"/>
 	</spawn>
-	<!--Bakarma scaleblade -->
+	<!-- Bakarma scaleblade -->
 	<spawn map="320080000" npcid="213379" pool="3" interval="1200">
 		<object x="454.0893" y="506.75742" z="615.34393" h="108"/>
 		<object x="458.54614" y="514.12024" z="615.84357" h="103"/>

@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	:
+	Ревизия				: 1.0.1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+	<!--  -->
 	<xs:include schemaLocation="../import.xsd"/>
 	<xs:element name="goodslists">
 		<xs:complexType>
@@ -9,6 +19,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<!--  -->
 	<xs:complexType name="GoodsList">
 		<xs:sequence>
 			<xs:element name="item" minOccurs="0" maxOccurs="unbounded">

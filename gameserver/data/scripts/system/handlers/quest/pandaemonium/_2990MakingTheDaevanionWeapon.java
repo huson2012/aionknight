@@ -1,5 +1,5 @@
-/*
- * This file is part of Aion X EMU <aionxemu.com>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * This is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -8,24 +8,24 @@
  *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this software.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this software. If not, see <http://www.gnu.org/licenses/>.
  */
 package quest.pandaemonium;
 
 
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.QuestService;
+import gameserver.utils.PacketSendUtility;
 
 /**
  * @author kecimis
@@ -34,7 +34,7 @@ public class _2990MakingTheDaevanionWeapon extends QuestHandler {
     private final static int questId = 2990;
     private final static int[] npc_ids = {204146};
 
-    /*
+    /**
       * 204146 - Kanensa
       */
 

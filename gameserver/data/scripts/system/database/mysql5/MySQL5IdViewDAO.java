@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.IdViewDAO;
+import gameserver.dao.IdViewDAO;
 
 
 public class MySQL5IdViewDAO extends IdViewDAO

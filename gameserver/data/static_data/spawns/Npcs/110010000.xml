@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Элизиум (Элисея)
+	ID локации		 : 110010000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Sanctum
-	@author Atomix
-	@author_fix Youli (based on retail Eu spawn)
  -->
+
 <spawns>
 	<!-- Letia -->
 	<spawn map="110010000" npcid="798440" pool="1" interval="295">
 		<object x="1551.1426" y="1457.9706" z="572.87195" h="100"/>
+	</spawn>
+	<spawn map="110010000" npcid="798430" pool="1" interval="295">
+		<object x="1945.314" y="1492.108" z="590.3636" h="90"/>
+	</spawn>
+	<spawn map="110010000" npcid="798431" pool="1" interval="295">
+		<object x="1943.505" y="1548.667" z="590.3635" h="90"/>
 	</spawn>
 	<!-- A History of Legions (Object Normal lvl:1)-->
 	<spawn map="110010000" npcid="730100" pool="1" interval="295">
@@ -90,7 +85,7 @@
 	</spawn>
 	<!-- Andreas (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="798303" pool="1" interval="295">
-		<object x="1809.8864" y="2133.4707" z="527.92975" h="34"/>
+		<object x="1810.69760" y="2133.33000" z="527.92970" h="70"/>
 	</spawn>
 	<!-- Andu (NPC Normal lvl:3)-->
 	<spawn map="110010000" npcid="798391" pool="1" interval="295">
@@ -113,9 +108,8 @@
 		<object x="1954.87130" y="1569.41000" z="590.36470" h="60"/>
 	</spawn>
 	<!-- Arenzes (NPC Normal lvl:10)-->
-	<spawn map="110010000" npcid="798309" pool="2" interval="295">
+	<spawn map="110010000" npcid="798309" pool="1" interval="295">
 		<object x="1366.43270" y="1373.21240" z="573.38635" h="4"/>
-		<object x="1853.4939" y="1510.3104" z="590.0696" h="4" w="463"/>
 	</spawn>
 	<!-- Arion (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203871" pool="1" interval="295">
@@ -151,7 +145,7 @@
 	</spawn>
 	<!-- Bella (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203860" pool="1" interval="295">
-		<object x="1811.9161" y="2123.8008" z="529.0868" h="25"/>
+		<object x="1810.18930" y="2131.40940" z="530.00000" h="33"/>
 	</spawn>
 	<!-- Bellasia (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203766" pool="1" interval="295">
@@ -436,7 +430,7 @@
 	</spawn>
 	<!-- Hether (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203869" pool="1" interval="295">
-		<object x="1918.91770" y="1511.57150" z="590.01090" h="60"/>
+		<object x="1918.91770" y="1511.57150" z="590.01090" h="60" w="327"/>
 	</spawn>
 	<!-- Hikarunerk (NPC Normal lvl:45)-->
 	<spawn map="110010000" npcid="798378" pool="1" interval="295">
@@ -490,13 +484,17 @@
 	<spawn map="110010000" npcid="203818" pool="1" interval="295">
 		<object x="1905.00000" y="1630.00000" z="590.35895" h="104"/>
 	</spawn>
+	<!-- Jaichinerk (sells rented items) -->
+	<spawn map="110010000" npcid="798471" pool="1" interval="105">
+		<object x="1945.2653" y="1547.3644" z="590.3637" h="89"/>
+	</spawn>
 	<!-- Jairinerk (sells rented items) -->
-	<spawn map="110010000" npcid="798431" pool="1" interval="105">
+	<spawn map="110010000" npcid="798470" pool="1" interval="105">
 		<object x="1943.4313" y="1547.2537" z="590.3635" h="89"/>
 	</spawn>
 	<!-- Jairunerk (sells rented items) -->
-	<spawn map="110010000" npcid="798430" pool="1" interval="105">
-		<object x="1945.5717" y="1458.3883" z="590.4085" h="90"/>
+	<spawn map="110010000" npcid="798469" pool="1" interval="105">
+		<object x="1945.3032" y="1490.7712" z="590.36365" h="89"/>
 	</spawn>
 	<!-- Jhaelas (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203782" pool="1" interval="295">
@@ -600,7 +598,7 @@
 	</spawn>
 	<!-- Lamid (NPC Junk lvl:20)-->
 	<spawn map="110010000" npcid="203895" pool="1" interval="295">
-		<object x="2030.99120" y="1474.15860" z="592.22534" h="0"/>
+		<object x="2030.99120" y="1474.15860" z="592.22534" h="83"/>
 	</spawn>
 	<!-- Lampard -->
 	<spawn map="110010000" npcid="798397" pool="1" interval="105">
@@ -612,7 +610,7 @@
 	</spawn>
 	<!-- Lapis (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203858" pool="1" interval="295">
-		<object x="1816.038" y="2127.8591" z="529.1316" h="75"/>
+		<object x="1806.10220" y="2134.84060" z="527.92990" h="110"/>
 	</spawn>
 	<!-- Latri (NPC Junk lvl:20)-->
 	<spawn map="110010000" npcid="203894" pool="1" interval="295">
@@ -732,7 +730,7 @@
 	</spawn>
 	<!-- Mara (NPC Normal lvl:10)-->
 	<spawn map="110010000" npcid="203861" pool="1" interval="295">
-		<object x="1817.2274" y="2126.0208" z="529.1336" h="69"/>
+		<object x="1808.45780" y="2135.86990" z="529.00000" h="96"/>
 	</spawn>
 	<!-- Margela (sells costumes) -->
 	<spawn map="110010000" npcid="798411" pool="1" interval="105">
@@ -832,7 +830,7 @@
 	</spawn>
 	<!-- Mustapino (NPC Normal lvl:10)-->
 	<spawn map="110010000" npcid="203859" pool="1" interval="295">
-		<object x="1809.7601" y="2129.77" z="529.0881" h="98"/>
+		<object x="1811.06840" y="2136.04800" z="529.00000" h="100"/>
 	</spawn>
 	<!-- Myrtil (NPC Normal lvl:40)-->
 	<spawn map="110010000" npcid="203849" pool="1" interval="295">
@@ -864,7 +862,7 @@
 	</spawn>
 	<!-- Nidia (NPC Normal lvl:10)-->
 	<spawn map="110010000" npcid="203872" pool="1" interval="295">
-		<object x="1988.17330" y="1726.25500" z="577.85034" h="60"/>
+		<object x="1988.17330" y="1726.25500" z="577.85034" h="60" w="331"/>
 	</spawn>
 	<!-- Nitato (NPC Normal lvl:50)-->
 	<spawn map="110010000" npcid="203774" pool="1" interval="295">
@@ -879,7 +877,7 @@
 		<object x="1872.79540" y="1428.69890" z="590.00840" h="90"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="110010000" npcid="700018" pool="1" interval="295">
+	<spawn map="110010000" npcid="700012" pool="1" interval="295">
 		<object x="1473.69260" y="1597.96460" z="573.55860" h="105"/>
 	</spawn>
 	<!-- Ocarino (NPC Normal lvl:40)-->
@@ -1068,7 +1066,7 @@
 	</spawn>
 	<!-- Tacitus (NPC Normal lvl:55)-->
 	<spawn map="110010000" npcid="798436" interval="295">
-		<object x="1888.1498" y="1499.0139" z="590.15826" h="62" />
+		<object x="1887.0488" y="1503.3496" z="591" h="59" />
 	</spawn>
 	<!-- Taraerinerk (NPC Normal lvl:15)-->
 	<spawn map="110010000" npcid="798009" pool="1" interval="295">
@@ -1237,8 +1235,7 @@
 	<spawn map="110010000" npcid="798026" pool="1" interval="295">
 		<object x="1973.9308" y="1767.8472" z="576.7586" h="63"/>
 	</spawn>
-	<!-- Underground Arena Entrance -->
-	<spawn map="110010000" npcid="700368" pool="1" interval="295">
-		<object x="1459.1881" y="1319.7432" z="554.13904" h="23" staticid="26"/>
-	</spawn>
+   <spawn interval="295" map="110010000" npcid="205455" pool="1">
+      <object h="60" x="1620.0828" y="1493.3599" z="573.34674"/>
+   </spawn>
 </spawns>

@@ -6,10 +6,10 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.PlayerInstanceCDDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import gameserver.dao.PlayerInstanceCDDAO;
+import gameserver.model.gameobjects.player.Player;
 
 
 

@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package admincommands;
 
@@ -21,19 +21,19 @@ import java.util.Iterator;
 import java.util.List;
 
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.model.account.PlayerAccountData;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.player.SkillListEntry;
-import ru.aionknight.gameserver.model.group.PlayerGroup;
-import ru.aionknight.gameserver.model.legion.Legion;
-import ru.aionknight.gameserver.model.legion.LegionMemberEx;
-import ru.aionknight.gameserver.services.LegionService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.Util;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.world.World;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.model.account.PlayerAccountData;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.player.SkillListEntry;
+import gameserver.model.group.PlayerGroup;
+import gameserver.model.legion.Legion;
+import gameserver.model.legion.LegionMemberEx;
+import gameserver.services.LegionService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.Util;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
 
 
 /**
@@ -50,8 +50,8 @@ public class PlayerInfo extends AdminCommand
 		super("playerinfo");
 	}
 
-	/* (non-Javadoc)
-	 * @see org.openaion.gameserver.utils.chathandlers.AdminCommand#executeCommand(org.openaion.gameserver.model.gameobjects.player.Player, java.lang.String[])
+	/** (non-Javadoc)
+	 * @see gameserver.utils.chathandlers.AdminCommand#executeCommand(gameserver.model.gameobjects.player.Player, java.lang.String[])
 	 */
 	@Override
 	public void executeCommand(Player admin, String[] params)

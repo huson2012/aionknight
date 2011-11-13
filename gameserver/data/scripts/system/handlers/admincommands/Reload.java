@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- * aion-unique is free software: you can redistribute it and/or modify
+ * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * aion-unique is distributed in the hope that it will be useful,
+ * Aion-Knight is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package admincommands;
 
@@ -39,28 +39,28 @@ import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
 
-import ru.aionknight.gameserver.GameServerError;
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dataholders.DataManager;
-import ru.aionknight.gameserver.dataholders.NpcData;
-import ru.aionknight.gameserver.dataholders.PortalData;
-import ru.aionknight.gameserver.dataholders.QuestScriptsData;
-import ru.aionknight.gameserver.dataholders.QuestsData;
-import ru.aionknight.gameserver.dataholders.SkillData;
-import ru.aionknight.gameserver.dataholders.SpawnsData;
-import ru.aionknight.gameserver.dataholders.StaticData;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.modifiers.Executor;
-import ru.aionknight.gameserver.model.templates.NpcTemplate;
-import ru.aionknight.gameserver.model.templates.portal.PortalTemplate;
-import ru.aionknight.gameserver.model.templates.spawn.SpawnGroup;
-import ru.aionknight.gameserver.quest.QuestEngine;
-import ru.aionknight.gameserver.skill.model.SkillTemplate;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.utils.chathandlers.ChatHandlers;
-import ru.aionknight.gameserver.world.World;
+import gameserver.GameServerError;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dataholders.DataManager;
+import gameserver.dataholders.NpcData;
+import gameserver.dataholders.PortalData;
+import gameserver.dataholders.QuestScriptsData;
+import gameserver.dataholders.QuestsData;
+import gameserver.dataholders.SkillData;
+import gameserver.dataholders.SpawnsData;
+import gameserver.dataholders.StaticData;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.modifiers.Executor;
+import gameserver.model.templates.NpcTemplate;
+import gameserver.model.templates.portal.PortalTemplate;
+import gameserver.model.templates.spawn.SpawnGroup;
+import gameserver.quest.QuestEngine;
+import gameserver.skill.model.SkillTemplate;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.utils.chathandlers.ChatHandlers;
+import gameserver.world.World;
 
 
 /**

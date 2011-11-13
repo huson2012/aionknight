@@ -2,25 +2,25 @@ package quest.eltnen;
 import java.util.Collection;
 
 
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.Creature;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_EMOTION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.InstanceService;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.services.TeleportService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.WorldMapInstance;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.Creature;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
+import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
+import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.InstanceService;
+import gameserver.services.QuestService;
+import gameserver.services.TeleportService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.WorldMapInstance;
 
 
 /**

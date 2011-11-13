@@ -1,26 +1,26 @@
-/*
+/**
  * This file is part of Aion Mythology <www.aionmythology.com>.
  */
  
- /*
+ /**
   * Created by Orpheo
  */
  
 package quest.sanctum;
 
 
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.Npc;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.templates.quest.QuestItems;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.ItemService;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.Npc;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.quest.QuestItems;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.ItemService;
+import gameserver.services.QuestService;
+import gameserver.utils.PacketSendUtility;
 
 import java.util.Collections;
 

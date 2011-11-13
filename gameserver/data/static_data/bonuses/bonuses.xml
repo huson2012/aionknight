@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	:
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <bonuses>
 	<bonus_info questId="1005">
 		<movie movieId="171"/>

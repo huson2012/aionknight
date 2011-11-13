@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Название локации : Внутри храма Арканис (Данж)
+	ID локации		 : 320050000
+	Версия Клиента	 : 2.5 (Иннова)
+
+ -->
+
 <spawns>
 	<!-- Waterdrop Spirit -->
 	<spawn map="320050000" npcid="212761" pool="16" interval="295">

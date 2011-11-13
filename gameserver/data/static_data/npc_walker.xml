@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--
+
+	Назначение файла	: Настройка маршрутов передвигающихся NPC
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">
-	<!--Unknow-->
+	<!--  -->
 	<walker_template route_id="1">
 		<routes>
 			<routestep step="1" loc_x="1755.2654" loc_y="1401.5167" loc_z="575.83844" rest_time="0"/>
@@ -15,7 +24,7 @@
 			<routestep step="10" loc_x="1743.2365" loc_y="1407.4434" loc_z="572.85254" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!--Unknow-->
+	<!--  -->
 	<walker_template route_id="2">
 		<routes>
 			<routestep step="1" loc_x="387.10675" loc_y="1868.1742" loc_z="146.33006" rest_time="0"/>
@@ -27,7 +36,7 @@
 			<routestep step="7" loc_x="381.40176" loc_y="1878.9325" loc_z="147.38745" rest_time="2"/>
 		</routes>
 	</walker_template>
-	<!--Unknow-->
+	<!--  -->
 	<walker_template route_id="3">
 		<routes>
 			<routestep step="1" loc_x="1193.0087" loc_y="1087.0784" loc_z="137.55869" rest_time="0"/>
@@ -36,7 +45,7 @@
 			<routestep step="4" loc_x="1190.5154" loc_y="1080.7032" loc_z="137.30267" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!--Unknow-->
+	<!--  -->
 	<walker_template route_id="4">
 		<routes>
 			<routestep step="1" loc_x="1210.5848" loc_y="1083.4032" loc_z="138.75" rest_time="0"/>
@@ -45,28 +54,28 @@
 			<routestep step="4" loc_x="1214.0228" loc_y="1073.7064" loc_z="138.875" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Blue Gem Kalgolem (Fire Temple)-->
+	<!-- Blue Gem Kalgolem (Fire Temple) -->
 	<walker_template route_id="5">
 		<routes>
 			<routestep step="1" loc_x="157.81361" loc_y="325.04657" loc_z="121.938736" rest_time="0"/>
 			<routestep step="2" loc_x="150.90173" loc_y="312.77682" loc_z="122.56312" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Blue Gem Kalgolem (Fire Temple)-->
+	<!-- Blue Gem Kalgolem (Fire Temple) -->
 	<walker_template route_id="6">
 		<routes>
 			<routestep step="1" loc_x="176.12648" loc_y="281.0444" loc_z="124.43186" rest_time="0"/>
 			<routestep step="2" loc_x="164.75258" loc_y="288.57532" loc_z="124.38446" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Merciless Fire Spirit (Fire Temple)-->
+	<!-- Merciless Fire Spirit (Fire Temple) -->
 	<walker_template route_id="7">
 		<routes>
 			<routestep step="1" loc_x="154.2884" loc_y="441.20123" loc_z="140.4" rest_time="0"/>
 			<routestep step="2" loc_x="166.10286" loc_y="415.80978" loc_z="139.7" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Merciless Fire Spirit (Fire Temple)-->
+	<!-- Merciless Fire Spirit (Fire Temple) -->
 	<walker_template route_id="8">
 		<routes>
 			<routestep step="1" loc_x="179.2198" loc_y="378.4973" loc_z="144.1" rest_time="0"/>
@@ -74,7 +83,7 @@
 			<routestep step="3" loc_x="174.966" loc_y="388.654" loc_z="144.1" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Merciless Fire Spirit (Fire Temple)-->
+	<!-- Merciless Fire Spirit (Fire Temple) -->
 	<walker_template route_id="9">
 		<routes>
 			<routestep step="1" loc_x="207.08524" loc_y="310.05295" loc_z="137.67357" rest_time="0"/>
@@ -82,7 +91,7 @@
 			<routestep step="3" loc_x="198.94485" loc_y="333.553" loc_z="144.32677" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Merciless Fire Spirit (Fire Temple)-->
+	<!-- Merciless Fire Spirit (Fire Temple) -->
 	<walker_template route_id="10">
 		<routes>
 			<routestep step="1" loc_x="221.43166" loc_y="277.81894" loc_z="125.087" rest_time="0"/>
@@ -91,7 +100,7 @@
 			<routestep step="4" loc_x="212.78696" loc_y="257.12015" loc_z="119.735275" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Blue Gem Kalgolem (Fire Temple)-->
+	<!-- Blue Gem Kalgolem (Fire Temple) -->
 	<walker_template route_id="11">
 		<routes>
 			<routestep step="1" loc_x="195.12996" loc_y="223.16008" loc_z="111.07573" rest_time="0"/>
@@ -101,7 +110,7 @@
 			<routestep step="5" loc_x="200.5981" loc_y="202.55867" loc_z="108.60568" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Bloodfist Gargoyle (Fire Temple)-->
+	<!-- Bloodfist Gargoyle (Fire Temple) -->
 	<walker_template route_id="12">
 		<routes>
 			<routestep step="1" loc_x="227.43016" loc_y="179.00151" loc_z="110.3" rest_time="0"/>
@@ -109,7 +118,7 @@
 			<routestep step="3" loc_x="224.38875" loc_y="190.98651" loc_z="114.4" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Silver Blade Rotan (Fire Temple)-->
+	<!-- Silver Blade Rotan (Fire Temple) -->
 	<walker_template route_id="13">
 		<routes>
 			<routestep step="1" loc_x="272.46545" loc_y="201.89696" loc_z="119.234886" rest_time="0"/>
@@ -126,7 +135,7 @@
 			<routestep step="12" loc_x="221.43166" loc_y="277.81894" loc_z="125.087" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Bloodfist Gargoyle (Fire Temple)-->
+	<!-- Bloodfist Gargoyle (Fire Temple) -->
 	<walker_template route_id="14">
 		<routes>
 			<routestep step="1" loc_x="329.0482" loc_y="141.81827" loc_z="125.376915" rest_time="0"/>
@@ -134,7 +143,7 @@
 			<routestep step="3" loc_x="308.08008" loc_y="157.1121" loc_z="126.7866" rest_time="0"/>
 		</routes>
 	</walker_template>
-		<!-- Lurking Bloodfist (Fire Temple)-->
+		<!-- Lurking Bloodfist (Fire Temple) -->
 	<walker_template route_id="15">
 		<routes>
 			<routestep step="1" loc_x="410.95706" loc_y="103.03791" loc_z="116.10972" rest_time="0"/>
@@ -142,7 +151,7 @@
 			<routestep step="3" loc_x="379.7129" loc_y="117.554436" loc_z="116.110085" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Lurker Gargoyle (Fire Temple)-->
+	<!-- Lurker Gargoyle (Fire Temple) -->
 	<walker_template route_id="16">
 		<routes>
 			<routestep step="1" loc_x="398.77063" loc_y="78.767975" loc_z="117.19401" rest_time="0"/>
@@ -603,7 +612,7 @@
 			<routestep step="11" loc_x="1811.9" loc_y="1414.1" loc_z="579.1" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Rebert (Pandaemonuim)-->
+	<!-- Rebert (Pandaemonuim) -->
 	<walker_template route_id="35">
 		<routes>
 			<routestep step="1" loc_x="949.9" loc_y="1420.4" loc_z="213" rest_time="0"/>
@@ -624,7 +633,7 @@
 			<routestep step="16" loc_x="973.9" loc_y="1424.6" loc_z="213.5" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Sehamm Lasesbini Kenikin(Pandaemonuim)-->
+	<!-- Sehamm Lasesbini Kenikin(Pandaemonuim) -->
 	<walker_template route_id="36">
 		<routes>
 			<routestep step="1" loc_x="1229" loc_y="1411" loc_z="208.1" rest_time="0"/>
@@ -649,7 +658,7 @@
 			<routestep step="20" loc_x="1331.5" loc_y="1408.7" loc_z="208" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Lusena (Pandaemonuim)-->
+	<!-- Lusena (Pandaemonuim) -->
 	<walker_template route_id="37">
 		<routes>
 			<routestep step="1" loc_x="1224" loc_y="1287.1" loc_z="208.5" rest_time="0"/>
@@ -667,7 +676,7 @@
 			<routestep step="13" loc_x="1216.7" loc_y="1384.7" loc_z="208.1" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Argat (Pandaemonuim)-->
+	<!-- Argat (Pandaemonuim) -->
 	<walker_template route_id="38">
 		<routes>
 			<routestep step="1" loc_x="1046.3" loc_y="1488" loc_z="213.3" rest_time="0"/>
@@ -682,7 +691,7 @@
 			<routestep step="10" loc_x="1052.4" loc_y="1483.3" loc_z="213.5" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Hebennjot (Pandaemonuim)-->
+	<!-- Hebennjot (Pandaemonuim) -->
 	<walker_template route_id="39">
 		<routes>
 			<routestep step="1" loc_x="1583.9" loc_y="1401.4" loc_z="193.1" rest_time="0"/>
@@ -699,7 +708,7 @@
 			<routestep step="12" loc_x="1584.7" loc_y="1401.4" loc_z="193.1" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Amjuturan (Pandaemonuim)-->
+	<!-- Amjuturan (Pandaemonuim) -->
 	<walker_template route_id="40">
 		<routes>
 			<routestep step="1" loc_x="1150.8" loc_y="1425.2" loc_z="208.6" rest_time="0"/>
@@ -734,7 +743,7 @@
 			<routestep step="31" loc_x="1114.2" loc_y="1452.7" loc_z="208.5" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Kadisa (Pandaemonuim)-->
+	<!-- Kadisa (Pandaemonuim) -->
 	<walker_template route_id="41">
 		<routes>
 			<routestep step="1" loc_x="989.1" loc_y="1423.2" loc_z="213.5" rest_time="0"/>
@@ -766,7 +775,7 @@
 			<routestep step="27" loc_x="973.2" loc_y="1410.1" loc_z="213.5" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Valensti (Pandaemonuim)-->
+	<!-- Valensti (Pandaemonuim) -->
 	<walker_template route_id="42">
 		<routes>
 			<routestep step="1" loc_x="1200.8" loc_y="1209.1" loc_z="208" rest_time="0"/>
@@ -818,7 +827,7 @@
 			<routestep step="45" loc_x="1201.1" loc_y="1210.6" loc_z="208" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Niberan (Pandaemonuim)-->
+	<!-- Niberan (Pandaemonuim) -->
 	<walker_template route_id="43">
 		<routes>
 			<routestep step="1" loc_x="925.5" loc_y="1438.3" loc_z="212.8" rest_time="0"/>
@@ -841,7 +850,7 @@
 			<routestep step="18" loc_x="934.5" loc_y="1425.8" loc_z="212.8" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Teo (Pandaemonuim)-->
+	<!-- Teo (Pandaemonuim) -->
 	<walker_template route_id="44">
 		<routes>
 			<routestep step="1" loc_x="1211.3" loc_y="1142.5" loc_z="208.9" rest_time="0"/>
@@ -865,7 +874,7 @@
 			<routestep step="19" loc_x="1213.1" loc_y="1145.4" loc_z="208" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Selod (Pandaemonuim)-->
+	<!-- Selod (Pandaemonuim) -->
 	<walker_template route_id="45">
 		<routes>
 			<routestep step="1" loc_x="1164.3" loc_y="1183.5" loc_z="208.6" rest_time="5"/>
@@ -892,7 +901,7 @@
 			<routestep step="22" loc_x="1094.5" loc_y="1177.6" loc_z="208" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Aur (Pandaemonuim)-->
+	<!-- Aur (Pandaemonuim) -->
 	<walker_template route_id="46">
 		<routes>
 			<routestep step="1" loc_x="1030.6" loc_y="1207.7" loc_z="201.5" rest_time="0"/>
@@ -911,7 +920,7 @@
 			<routestep step="14" loc_x="1046.3" loc_y="1203.1" loc_z="201.5" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Feden (Pandaemonuim)-->
+	<!-- Feden (Pandaemonuim) -->
 	<walker_template route_id="47">
 		<routes>
 			<routestep step="1" loc_x="1034.4" loc_y="1218.6" loc_z="201.5" rest_time="5"/>
@@ -993,7 +1002,7 @@
 			<routestep step="18" loc_x="1100.9" loc_y="1012.4" loc_z="126.5" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!--Alto, Porgus 1 (Verteron)-->
+	<!--Alto, Porgus 1 (Verteron) -->
 	<walker_template route_id="52">
 		<routes>
 			<routestep step="1" loc_x="1283.3763" loc_y="2100.7202" loc_z="137.16397" rest_time="5"/>
@@ -1023,7 +1032,7 @@
 			<routestep step="25" loc_x="1283.3763" loc_y="2100.7202" loc_z="137.16397" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!--Porgus 2 (Verteron)-->
+	<!--Porgus 2 (Verteron) -->
 	<walker_template route_id="53">
 		<routes>
 			<routestep step="1" loc_x="1284.987" loc_y="2100.124" loc_z="137.125" rest_time="5"/>
@@ -1053,7 +1062,7 @@
 			<routestep step="25" loc_x="1284.987" loc_y="2100.124" loc_z="137.125" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Porgus 3 (Verteron)-->
+	<!-- Porgus 3 (Verteron) -->
 	<walker_template route_id="54">
 		<routes>
 			<routestep step="1" loc_x="1282.9573" loc_y="2099.357" loc_z="137.29553" rest_time="5"/>
@@ -1083,7 +1092,7 @@
 			<routestep step="25" loc_x="1282.9573" loc_y="2099.357" loc_z="137.29553" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Beris (Verteron)-->
+	<!-- Beris (Verteron) -->
 	<walker_template route_id="55">
 		<routes>
 			<routestep step="1" loc_x="1329.0956" loc_y="2183.046" loc_z="143.5" rest_time="0"/>
@@ -1093,7 +1102,7 @@
 			<routestep step="5" loc_x="1329.0956" loc_y="2183.046" loc_z="143.5" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Naia (Verteron)-->
+	<!-- Naia (Verteron) -->
 	<walker_template route_id="56">
 		<routes>
 			<routestep step="1" loc_x="1279.3477" loc_y="2236.2747" loc_z="143.04077" rest_time="0"/>
@@ -1105,7 +1114,7 @@
 			<routestep step="7" loc_x="1279.3477" loc_y="2236.2747" loc_z="143.04077" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Lusis (Verteron)-->
+	<!-- Lusis (Verteron) -->
 	<walker_template route_id="57">
 		<routes>
 			<routestep step="1" loc_x="1247.2599" loc_y="2272.1125" loc_z="142.91452" rest_time="0"/>
@@ -1115,7 +1124,7 @@
 			<routestep step="5" loc_x="1247.2599" loc_y="2272.1125" loc_z="142.91452" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Spiro (Verteron)-->
+	<!-- Spiro (Verteron) -->
 	<walker_template route_id="58">
 		<routes>
 			<routestep step="1" loc_x="1687.6349" loc_y="1483.3033" loc_z="121.5868" rest_time="20"/>
@@ -1132,7 +1141,7 @@
 			<routestep step="12" loc_x="1687.6349" loc_y="1483.3033" loc_z="121.5868" rest_time="20"/>
 		</routes>
 	</walker_template>
-	<!-- Aremine (Verteron)-->
+	<!-- Aremine (Verteron) -->
 	<walker_template route_id="59">
 		<routes>
 			<routestep step="1" loc_x="1664.4967" loc_y="1499.9943" loc_z="118.875" rest_time="5"/>
@@ -1146,7 +1155,7 @@
 			<routestep step="9" loc_x="1664.4967" loc_y="1499.9943" loc_z="118.875" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Malonimus (Eltnen)-->
+	<!-- Malonimus (Eltnen) -->
 	<walker_template route_id="61">
 		<routes>
 			<routestep step="1" loc_x="289.56946" loc_y="2748.8223" loc_z="263.49844" rest_time="5"/>
@@ -1166,7 +1175,7 @@
 			<routestep step="15" loc_x="289.56946" loc_y="2748.8223" loc_z="263.49844" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Hegemene (Eltnen)-->
+	<!-- Hegemene (Eltnen) -->
 	<walker_template route_id="62">
 		<routes>
 			<routestep step="1" loc_x="290.5698" loc_y="2747.9036" loc_z="263.49844" rest_time="0"/>
@@ -1188,7 +1197,7 @@
 			<routestep step="17" loc_x="290.5698" loc_y="2747.9036" loc_z="263.49844" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Pallas (Eltnen)-->
+	<!-- Pallas (Eltnen) -->
 	<walker_template route_id="63">
 		<routes>
 			<routestep step="1" loc_x="311.05518" loc_y="2763.1216" loc_z="263.49844" rest_time="5"/>
@@ -1202,7 +1211,7 @@
 			<routestep step="9" loc_x="311.05518" loc_y="2763.1216" loc_z="263.49844" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Defense Commander (Eltnen)-->
+	<!-- Defense Commander (Eltnen) -->
 	<walker_template route_id="64">
 		<routes>
 			<routestep step="1" loc_x="264.92972" loc_y="2793.0671" loc_z="272.47702" rest_time="0"/>
@@ -1214,7 +1223,7 @@
 			<routestep step="7" loc_x="264.92972" loc_y="2793.0671" loc_z="272.47702" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Defense Commander 2 (Eltnen)-->
+	<!-- Defense Commander 2 (Eltnen) -->
 	<walker_template route_id="65">
 		<routes>
 			<routestep step="1" loc_x="264.17838" loc_y="2733.7107" loc_z="270.3994" rest_time="0"/>
@@ -1226,7 +1235,7 @@
 			<routestep step="7" loc_x="264.17838" loc_y="2733.7107" loc_z="270.3994" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Support Leader (Eltnen)-->
+	<!-- Support Leader (Eltnen) -->
 	<walker_template route_id="66">
 		<routes>
 			<routestep step="1" loc_x="287.2106" loc_y="2770.7307" loc_z="272.4496" rest_time="0"/>
@@ -1242,7 +1251,7 @@
 			<routestep step="11" loc_x="287.2106" loc_y="2770.7307" loc_z="272.4496" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier (Eltnen)-->
+	<!-- Senior Soldier (Eltnen) -->
 	<walker_template route_id="67">
 		<routes>
 			<routestep step="1" loc_x="341.04532" loc_y="2740.0295" loc_z="263.8076" rest_time="0"/>
@@ -1258,7 +1267,7 @@
 			<routestep step="11" loc_x="341.04532" loc_y="2740.0295" loc_z="263.8076" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier 2 (Eltnen)-->
+	<!-- Senior Soldier 2 (Eltnen) -->
 	<walker_template route_id="68">
 		<routes>
 			<routestep step="1" loc_x="325.12247" loc_y="2722.5842" loc_z="263.85086" rest_time="0"/>
@@ -1272,7 +1281,7 @@
 			<routestep step="9" loc_x="325.12247" loc_y="2722.5842" loc_z="263.85086" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier 3 (Eltnen)-->
+	<!-- Senior Soldier 3 (Eltnen) -->
 	<walker_template route_id="69">
 		<routes>
 			<routestep step="1" loc_x="281.77597" loc_y="2778.4128" loc_z="185.90001" rest_time="0"/>
@@ -1300,7 +1309,7 @@
 			<routestep step="23" loc_x="281.77597" loc_y="2778.4128" loc_z="185.90001" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Scout Leader (Eltnen)-->
+	<!-- Scout Leader (Eltnen) -->
 	<walker_template route_id="70">
 		<routes>
 			<routestep step="1" loc_x="295.5073" loc_y="2766.468" loc_z="185.89886" rest_time="0"/>
@@ -1324,7 +1333,7 @@
 			<routestep step="19" loc_x="295.5073" loc_y="2766.468" loc_z="185.89886" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Garrison Patrol, Garrison Patrol 2 (Eltnen)-->
+	<!-- Garrison Patrol, Garrison Patrol 2 (Eltnen) -->
 	<walker_template route_id="71">
 		<routes>
 			<routestep step="1" loc_x="439.17996" loc_y="2567.6106" loc_z="158.0955" rest_time="0"/>
@@ -1352,7 +1361,7 @@
 			<routestep step="23" loc_x="439.17996" loc_y="2567.6106" loc_z="158.0955" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Elias (Eltnen)-->
+	<!-- Elias (Eltnen) -->
 	<walker_template route_id="72">
 		<routes>
 			<routestep step="1" loc_x="1854.1865" loc_y="2000.6853" loc_z="351.699" rest_time="5"/>
@@ -1368,7 +1377,7 @@
 			<routestep step="11" loc_x="1854.1865" loc_y="2000.6853" loc_z="351.699" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Tenemi, Senior Soldier 4, Senior Soldier 5 (Eltnen)-->
+	<!-- Tenemi, Senior Soldier 4, Senior Soldier 5 (Eltnen) -->
 	<walker_template route_id="73">
 		<routes>
 			<routestep step="1" loc_x="1951.8983" loc_y="2018.4343" loc_z="361.6377" rest_time="5"/>
@@ -1382,7 +1391,7 @@
 			<routestep step="9" loc_x="1951.8983" loc_y="2018.4343" loc_z="361.6377" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier 6 (Eltnen)-->
+	<!-- Senior Soldier 6 (Eltnen) -->
 	<walker_template route_id="74">
 		<routes>
 			<routestep step="1" loc_x="1951.5024" loc_y="1948.4879" loc_z="349.7811" rest_time="0"/>
@@ -1406,7 +1415,7 @@
 			<routestep step="19" loc_x="1951.5024" loc_y="1948.4879" loc_z="349.7811" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Sentinel Leader (Eltnen)-->
+	<!-- Sentinel Leader (Eltnen) -->
 	<walker_template route_id="75">
 		<routes>
 			<routestep step="1" loc_x="1947.106" loc_y="1947.4446" loc_z="350.13324" rest_time="0"/>
@@ -1430,7 +1439,7 @@
 			<routestep step="19" loc_x="1947.106" loc_y="1947.4446" loc_z="350.13324" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Sentinel Leader 2, Senior Soldier 7, Senior Soldier 8 (Eltnen)-->
+	<!-- Sentinel Leader 2, Senior Soldier 7, Senior Soldier 8 (Eltnen) -->
 	<walker_template route_id="76">
 		<routes>
 			<routestep step="1" loc_x="1931.3821" loc_y="1968.1628" loc_z="349.875" rest_time="0"/>
@@ -1446,7 +1455,7 @@
 			<routestep step="11" loc_x="1931.3821" loc_y="1968.1628" loc_z="349.875" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Legionary (Eltnen)-->
+	<!-- Legionary (Eltnen) -->
 	<walker_template route_id="77">
 		<routes>
 			<routestep step="1" loc_x="623.7322" loc_y="466.63797" loc_z="329.19977" rest_time="0"/>
@@ -1476,7 +1485,7 @@
 			<routestep step="25" loc_x="623.7322" loc_y="466.63797" loc_z="329.19977" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Garrison Patrol 3 (Eltnen)-->
+	<!-- Garrison Patrol 3 (Eltnen) -->
 	<walker_template route_id="78">
 		<routes>
 			<routestep step="1" loc_x="554.82324" loc_y="447.57974" loc_z="306.93265" rest_time="0"/>
@@ -1516,7 +1525,7 @@
 			<routestep step="35" loc_x="554.82324" loc_y="447.57974" loc_z="306.93265" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Garrison Patrol 4, Garrison Patrol 5 (Eltnen)-->
+	<!-- Garrison Patrol 4, Garrison Patrol 5 (Eltnen) -->
 	<walker_template route_id="79">
 		<routes>
 			<routestep step="1" loc_x="636.2292" loc_y="481.77405" loc_z="331.8607" rest_time="0"/>
@@ -1539,7 +1548,7 @@
 			<routestep step="18" loc_x="636.2292" loc_y="481.77405" loc_z="331.8607" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Garrison Patrol 6, Garrison Patrol 7 (Eltnen)-->
+	<!-- Garrison Patrol 6, Garrison Patrol 7 (Eltnen) -->
 	<walker_template route_id="80">
 		<routes>
 			<routestep step="1" loc_x="748.56445" loc_y="445.95532" loc_z="329.49164" rest_time="0"/>
@@ -1569,7 +1578,7 @@
 			<routestep step="24" loc_x="748.56445" loc_y="445.95532" loc_z="329.49164" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Garrison Patrol 8 (Eltnen)-->
+	<!-- Garrison Patrol 8 (Eltnen) -->
 	<walker_template route_id="81">
 		<routes>
 			<routestep step="1" loc_x="1063.7828" loc_y="345.276" loc_z="306.69458" rest_time="0"/>
@@ -1583,7 +1592,7 @@
 			<routestep step="9" loc_x="1063.7828" loc_y="345.276" loc_z="306.69458" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Kalitrates (Eltnen)-->
+	<!-- Kalitrates (Eltnen) -->
 	<walker_template route_id="82">
 		<routes>
 			<routestep step="1" loc_x="763.3444" loc_y="989.78253" loc_z="282.66806" rest_time="5"/>
@@ -1593,7 +1602,7 @@
 			<routestep step="5" loc_x="763.3444" loc_y="989.78253" loc_z="282.66806" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!--Makarion (Eltnen)-->
+	<!--Makarion (Eltnen) -->
 	<walker_template route_id="83">
 		<routes>
 			<routestep step="1" loc_x="755.4216" loc_y="985.8871" loc_z="282.46384" rest_time="5"/>
@@ -1607,7 +1616,7 @@
 			<routestep step="9" loc_x="755.4216" loc_y="985.8871" loc_z="282.46384" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Acaste (Eltnen)-->
+	<!-- Acaste (Eltnen) -->
 	<walker_template route_id="84">
 		<routes>
 			<routestep step="1" loc_x="757.55115" loc_y="979.99176" loc_z="282.72195" rest_time="5"/>
@@ -1629,7 +1638,7 @@
 			<routestep step="17" loc_x="757.55115" loc_y="979.99176" loc_z="282.72195" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!--Garrison Patrol 9 (Eltnen)-->
+	<!--Garrison Patrol 9 (Eltnen) -->
 	<walker_template route_id="85">
 		<routes>
 			<routestep step="1" loc_x="1394.0155" loc_y="630.03864" loc_z="352.08768" rest_time="0"/>
@@ -1659,7 +1668,7 @@
 			<routestep step="25" loc_x="1394.0155" loc_y="630.03864" loc_z="352.08768" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Garrison Patrol 10 (Eltnen)-->
+	<!-- Garrison Patrol 10 (Eltnen) -->
 	<walker_template route_id="86">
 		<routes>
 			<routestep step="1" loc_x="1768.6484" loc_y="881.23016" loc_z="421.1867" rest_time="0"/>
@@ -1681,7 +1690,7 @@
 			<routestep step="17" loc_x="1768.6484" loc_y="881.23016" loc_z="421.1867" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!--Garrison Patrol 11 (Eltnen)-->
+	<!--Garrison Patrol 11 (Eltnen) -->
 	<walker_template route_id="87">
 		<routes>
 			<routestep step="1" loc_x="1799.1023" loc_y="920.38605" loc_z="422.125" rest_time="0"/>
@@ -1705,7 +1714,7 @@
 			<routestep step="19" loc_x="1799.1023" loc_y="920.38605" loc_z="422.125" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Trader's Bodyguard, Trader's Bodyguard 2 (Theobomos)-->
+	<!-- Trader's Bodyguard, Trader's Bodyguard 2 (Theobomos) -->
 	<walker_template route_id="88">
 		<routes>
 			<routestep step="1" loc_x="1468.216" loc_y="1535.2245" loc_z="29.95951" rest_time="5"/>
@@ -1731,7 +1740,7 @@
 			<routestep step="21" loc_x="1468.216" loc_y="1535.2245" loc_z="29.95951" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!--Trader's Bodyguard 3 (Theobomos)-->
+	<!--Trader's Bodyguard 3 (Theobomos) -->
 	<walker_template route_id="89">
 		<routes>
 			<routestep step="1" loc_x="1385.2885" loc_y="1543.8969" loc_z="31.300919" rest_time="5"/>
@@ -1754,7 +1763,7 @@
 			<routestep step="18" loc_x="1385.2885" loc_y="1543.8969" loc_z="31.300919" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Trader's Bodyguard 4 (Theobomos)-->
+	<!-- Trader's Bodyguard 4 (Theobomos) -->
 	<walker_template route_id="90">
 		<routes>
 			<routestep step="1" loc_x="1395.446" loc_y="1541.3717" loc_z="31.215378" rest_time="5"/>
@@ -1776,7 +1785,7 @@
 			<routestep step="17" loc_x="1395.446" loc_y="1541.3717" loc_z="31.215378" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Inn Worker Jamanok 2 (Theobomos)-->
+	<!-- Inn Worker Jamanok 2 (Theobomos) -->
 	<walker_template route_id="91">
 		<routes>
 			<routestep step="1" loc_x="399.35925" loc_y="1232.7662" loc_z="134.589" rest_time="5"/>
@@ -1806,7 +1815,7 @@
 			<routestep step="25" loc_x="399.35925" loc_y="1232.7662" loc_z="134.589" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Jamanok Inn Guard, Jamanok Inn Scout (Theobomos)-->
+	<!-- Jamanok Inn Guard, Jamanok Inn Scout (Theobomos) -->
 	<walker_template route_id="92">
 		<routes>
 			<routestep step="1" loc_x="455.4262" loc_y="1244.8145" loc_z="126.5" rest_time="5"/>
@@ -1854,7 +1863,7 @@
 			<routestep step="43" loc_x="455.4262" loc_y="1244.8145" loc_z="126.5" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Jamanok Inn Guard 2, Jamanok Inn Scout 2 (Theobomos)-->
+	<!-- Jamanok Inn Guard 2, Jamanok Inn Scout 2 (Theobomos) -->
 	<walker_template route_id="93">
 		<routes>
 			<routestep step="1" loc_x="591.261" loc_y="1259.819" loc_z="89.625" rest_time="5"/>
@@ -1878,7 +1887,7 @@
 			<routestep step="19" loc_x="591.261" loc_y="1259.819" loc_z="89.625" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Observatory Protector (Theobomos)-->
+	<!-- Observatory Protector (Theobomos) -->
 	<walker_template route_id="94">
 		<routes>
 			<routestep step="1" loc_x="2271.0176" loc_y="2218.24" loc_z="57.424393" rest_time="5"/>
@@ -1904,7 +1913,7 @@
 			<routestep step="21" loc_x="2271.0176" loc_y="2218.24" loc_z="57.424393" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Observatory Protector 2 (Theobomos)-->
+	<!-- Observatory Protector 2 (Theobomos) -->
 	<walker_template route_id="95">
 		<routes>
 			<routestep step="1" loc_x="2267.6328" loc_y="2208.554" loc_z="54.692825" rest_time="5"/>
@@ -1932,7 +1941,7 @@
 			<routestep step="23" loc_x="2267.6328" loc_y="2208.554" loc_z="54.692825" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Shugo Porter (Theobomos)-->
+	<!-- Shugo Porter (Theobomos) -->
 	<walker_template route_id="96">
 		<routes>
 			<routestep step="1" loc_x="2684.8489" loc_y="814.7683" loc_z="138.36707" rest_time="5"/>
@@ -1946,7 +1955,7 @@
 			<routestep step="9" loc_x="2684.8489" loc_y="814.7683" loc_z="138.36707" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Defense Commander, Senior Soldier, Senior Soldier 2 (Heiron)-->
+	<!-- Defense Commander, Senior Soldier, Senior Soldier 2 (Heiron) -->
 	<walker_template route_id="97">
 		<routes>
 			<routestep step="1" loc_x="2604.3928" loc_y="413.65408" loc_z="399.6365" rest_time="5"/>
@@ -1968,7 +1977,7 @@
 			<routestep step="17" loc_x="2604.3928" loc_y="413.65408" loc_z="399.6365" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier 1 (Beluslan)-->
+	<!-- Senior Soldier 1 (Beluslan) -->
 	<walker_template route_id="98">
 		<routes>
 			<routestep step="1" loc_x="376.02" loc_y="416.02" loc_z="222.11" rest_time="3"/>
@@ -1979,7 +1988,7 @@
 			<routestep step="6" loc_x="373.65" loc_y="411.79" loc_z="222.11" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier 2 (Beluslan)-->
+	<!-- Senior Soldier 2 (Beluslan) -->
 	<walker_template route_id="99">
 		<routes>
 			<routestep step="1" loc_x="385.76" loc_y="410.07" loc_z="222.11" rest_time="3"/>
@@ -1990,7 +1999,7 @@
 			<routestep step="6" loc_x="383.66" loc_y="406.43" loc_z="222.11" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Defense commander (Beluslan)-->
+	<!-- Defense commander (Beluslan) -->
 	<walker_template route_id="100">
 		<routes>
 			<routestep step="1" loc_x="322.78055" loc_y="308.08377" loc_z="231.04185" rest_time="15"/>
@@ -2022,7 +2031,7 @@
 	
 	
 	
-	<!-- Scout Commander (Beluslan)-->
+	<!-- Scout Commander (Beluslan) -->
 	<walker_template route_id="101">
 		<routes>
 			<routestep step="1" loc_x="305.04" loc_y="342.84" loc_z="232.14" rest_time="20"/>
@@ -2049,7 +2058,7 @@
 			<routestep step="22" loc_x="301.81" loc_y="340.04" loc_z="232.14" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Senior soldier 3(Beluslan)-->
+	<!-- Senior soldier 3(Beluslan) -->
 	<walker_template route_id="102">
 		<routes>
 			<routestep step="1" loc_x="259.91" loc_y="400.94" loc_z="237.78" rest_time="15"/>
@@ -2078,7 +2087,7 @@
 			<routestep step="24" loc_x="266.05" loc_y="393.72" loc_z="237.79" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Support Leader (Heiron)-->
+	<!-- Support Leader (Heiron) -->
 	<walker_template route_id="103">
 		<routes>
 			<routestep step="1" loc_x="2525.9233" loc_y="353.29373" loc_z="411.29468" rest_time="5"/>
@@ -2100,7 +2109,7 @@
 			<routestep step="17" loc_x="2525.9233" loc_y="353.29373" loc_z="411.29468" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Medic Leader (Heiron)-->
+	<!-- Medic Leader (Heiron) -->
 	<walker_template route_id="104">
 		<routes>
 			<routestep step="1" loc_x="2509.2073" loc_y="402.44232" loc_z="408.6365" rest_time="5"/>
@@ -2118,7 +2127,7 @@
 			<routestep step="13" loc_x="2509.2073" loc_y="402.44232" loc_z="408.6365" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Mato (Heiron)-->
+	<!-- Mato (Heiron) -->
 	<walker_template route_id="105">
 		<routes>
 			<routestep step="1" loc_x="2515.9016" loc_y="379.5252" loc_z="408.36884" rest_time="5"/>
@@ -2132,7 +2141,7 @@
 			<routestep step="9" loc_x="2515.9016" loc_y="379.5252" loc_z="408.36884" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Scout Leader (Heiron)-->
+	<!-- Scout Leader (Heiron) -->
 	<walker_template route_id="106">
 		<routes>
 			<routestep step="1" loc_x="2503.3047" loc_y="354.79092" loc_z="408.77612" rest_time="5"/>
@@ -2170,7 +2179,7 @@
 			<routestep step="33" loc_x="2503.3047" loc_y="354.79092" loc_z="408.77612" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier (Heiron)-->
+	<!-- Senior Soldier (Heiron) -->
 	<walker_template route_id="107">
 		<routes>
 			<routestep step="1" loc_x="1446.7576" loc_y="1323.122" loc_z="174.52277" rest_time="5"/>
@@ -2190,7 +2199,7 @@
 			<routestep step="15" loc_x="1446.7576" loc_y="1323.122" loc_z="174.52277" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Crisius, Despoina, Efrosini (Verteron)-->
+	<!-- Crisius, Despoina, Efrosini (Verteron) -->
 	<walker_template route_id="108">
 		<routes>
 			<routestep step="1" loc_x="1601.4259" loc_y="1548.8326" loc_z="116.36124" rest_time="5"/>
@@ -2220,7 +2229,7 @@
 			<routestep step="25" loc_x="1601.4259" loc_y="1548.8326" loc_z="116.36124" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Mesarion (Verteron)-->
+	<!-- Mesarion (Verteron) -->
 	<walker_template route_id="109">
 		<routes>
 			<routestep step="1" loc_x="2065.0476" loc_y="2417.766" loc_z="274.17584" rest_time="5"/>
@@ -2238,7 +2247,7 @@
 			<routestep step="13" loc_x="2065.0476" loc_y="2417.766" loc_z="274.17584" rest_time="5"/>
 		</routes>
 	</walker_template>
-	<!-- Ursuras (Verteron)-->
+	<!-- Ursuras (Verteron) -->
 	<walker_template route_id="110">
 		<routes>
 			<routestep step="1" loc_x="1368.8868" loc_y="1855.1455" loc_z="123.52021" rest_time="5"/>
@@ -2258,7 +2267,6 @@
 			<routestep step="15" loc_x="1368.8868" loc_y="1855.1455" loc_z="123.52021" rest_time="5"/>
 		</routes>
 	</walker_template>
-	
 	<!-- Toleo / 203066 -->
 	<walker_template route_id="111">
 		<routes>
@@ -2271,51 +2279,7 @@
 			<routestep step="7" loc_x="814.7258" loc_y="1217.3505" loc_z="117.126656" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Nier / 203077 -->
-	<walker_template route_id="112">
-		<routes>
-			<routestep step="1" loc_x="563.46" loc_y="1396.6" loc_z="114.28" rest_time="0"/>
-			<routestep step="2" loc_x="562.27" loc_y="1405.39" loc_z="112.45" rest_time="0"/>
-			<routestep step="3" loc_x="573.75" loc_y="1473.75" loc_z="113.28" rest_time="0"/>
-			<routestep step="4" loc_x="573.24" loc_y="1434.2" loc_z="111.64" rest_time="0"/>
-			<routestep step="5" loc_x="579.75" loc_y="1455.75" loc_z="111.06" rest_time="0"/>
-			<routestep step="6" loc_x="579.75" loc_y="1457.75" loc_z="111.33" rest_time="0"/>
-			<routestep step="7" loc_x="579.24" loc_y="1487.71" loc_z="114.28" rest_time="0"/>
-			<routestep step="8" loc_x="592.67" loc_y="1512.75" loc_z="114.85" rest_time="0"/>
-			<routestep step="9" loc_x="597.25" loc_y="1511.75" loc_z="114.62" rest_time="0"/>
-			<routestep step="10" loc_x="600.25" loc_y="1521.75" loc_z="114.78" rest_time="0"/>
-			<routestep step="11" loc_x="615.25" loc_y="1545.75" loc_z="115.92" rest_time="0"/>
-			<routestep step="12" loc_x="615.46" loc_y="1557.05" loc_z="116.16" rest_time="0"/>
-			<routestep step="13" loc_x="627.26" loc_y="1573.66" loc_z="118.37" rest_time="0"/>
-			<routestep step="14" loc_x="628.91" loc_y="1386.52" loc_z="117.82" rest_time="0"/>
-			<routestep step="15" loc_x="625.45" loc_y="1594.89" loc_z="117.62" rest_time="0"/>
-			<routestep step="16" loc_x="623.25" loc_y="1600.25" loc_z="117.57" rest_time="0"/>
-			<routestep step="17" loc_x="616.25" loc_y="1604.75" loc_z="117.29" rest_time="0"/>
-			<routestep step="18" loc_x="575.91" loc_y="1616.75" loc_z="115.36" rest_time="0"/>
-			<routestep step="19" loc_x="565.52" loc_y="1621.03" loc_z="115.11" rest_time="0"/>
-			<routestep step="20" loc_x="559.52" loc_y="1625.48" loc_z="115" rest_time="0"/>
-			<routestep step="21" loc_x="565.52" loc_y="1621.03" loc_z="115.11" rest_time="0"/>
-			<routestep step="22" loc_x="575.91" loc_y="1616.75" loc_z="115.36" rest_time="0"/>
-			<routestep step="23" loc_x="616.25" loc_y="1604.75" loc_z="117.29" rest_time="0"/>
-			<routestep step="24" loc_x="623.25" loc_y="1600.25" loc_z="117.57" rest_time="0"/>
-			<routestep step="25" loc_x="625.45" loc_y="1594.89" loc_z="117.62" rest_time="0"/>
-			<routestep step="26" loc_x="628.91" loc_y="1386.52" loc_z="117.82" rest_time="0"/>
-			<routestep step="27" loc_x="627.26" loc_y="1573.66" loc_z="118.37" rest_time="0"/>
-			<routestep step="28" loc_x="615.46" loc_y="1557.05" loc_z="116.16" rest_time="0"/>
-			<routestep step="29" loc_x="615.25" loc_y="1545.75" loc_z="115.92" rest_time="0"/>
-			<routestep step="30" loc_x="600.25" loc_y="1521.75" loc_z="114.78" rest_time="0"/>
-			<routestep step="31" loc_x="597.25" loc_y="1511.75" loc_z="114.62" rest_time="0"/>
-			<routestep step="32" loc_x="592.67" loc_y="1512.75" loc_z="114.85" rest_time="0"/>
-			<routestep step="33" loc_x="579.24" loc_y="1487.71" loc_z="114.28" rest_time="0"/>
-			<routestep step="34" loc_x="579.75" loc_y="1457.75" loc_z="111.33" rest_time="0"/>
-			<routestep step="35" loc_x="579.75" loc_y="1455.75" loc_z="111.06" rest_time="0"/>
-			<routestep step="36" loc_x="573.24" loc_y="1434.2" loc_z="111.64" rest_time="0"/>
-			<routestep step="37" loc_x="573.75" loc_y="1473.75" loc_z="113.28" rest_time="0"/>
-			<routestep step="38" loc_x="562.27" loc_y="1405.39" loc_z="112.45" rest_time="0"/>
-			<routestep step="39" loc_x="563.46" loc_y="1396.6" loc_z="114.28" rest_time="0"/>
-		</routes>
-	</walker_template>
-		<!-- Auxilary chief (Beluslan)-->	
+	<!-- Auxilary chief (Beluslan) -->	
 	<walker_template route_id="113">
 		<routes>
 			<routestep step="1" loc_x="349.5" loc_y="406.95" loc_z="231.93" rest_time="15"/>
@@ -2335,7 +2299,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="114">
-	<!-- Defense Commander (Beluslan)-->
+	<!-- Defense Commander (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="448.32" loc_y="339.86" loc_z="233.83" rest_time="10"/>
 			<routestep step="2" loc_x="440.47" loc_y="336.78" loc_z="233.83" rest_time="0"/>
@@ -2361,7 +2325,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="115">
-	<!-- Suteken (Beluslan)-->
+	<!-- Suteken (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="417.07" loc_y="375.34" loc_z="231.13" rest_time="0"/>
 			<routestep step="2" loc_x="417.60" loc_y="364.05" loc_z="231.16" rest_time="0"/>
@@ -2387,7 +2351,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="116">
-	<!-- Nornen (Beluslan)-->
+	<!-- Nornen (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="342.07" loc_y="415.07" loc_z="231.93" rest_time="0"/>
 			<routestep step="2" loc_x="333.17" loc_y="411.4" loc_z="231.75" rest_time="0"/>
@@ -2416,7 +2380,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="117">
-	<!-- Paeru (Beluslan)-->
+	<!-- Paeru (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="384.18" loc_y="287.26" loc_z="234.43" rest_time="0"/>
 			<routestep step="2" loc_x="371.78" loc_y="295.02" loc_z="234.43" rest_time="0"/>
@@ -2443,7 +2407,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="118">
-	<!-- Morwena (Beluslan)-->
+	<!-- Morwena (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="404.83" loc_y="460.0" loc_z="222.77" rest_time="0"/>
 			<routestep step="2" loc_x="390.95" loc_y="431.34" loc_z="222.12" rest_time="0"/>
@@ -2463,7 +2427,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="119">
-	<!-- Defense commander entrance 1 (Beluslan)-->
+	<!-- Defense commander entrance 1 (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="400.30" loc_y="456.45" loc_z="222.74" rest_time="100"/>
 			<routestep step="2" loc_x="387.601" loc_y="432.97" loc_z="222.12" rest_time="0"/>
@@ -2472,7 +2436,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="120">
-	<!-- Defense commander entrance 2 (Beluslan)-->
+	<!-- Defense commander entrance 2 (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="395.42" loc_y="430.99" loc_z="222.12" rest_time="0"/>
 			<routestep step="2" loc_x="389.28" loc_y="417.02" loc_z="222.12" rest_time="5"/>
@@ -2481,7 +2445,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="121">
-	<!-- Senior soldier (Beluslan)-->
+	<!-- Senior soldier (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="408.99" loc_y="354.41" loc_z="232.065" rest_time="20"/>
 			<routestep step="2" loc_x="406.888" loc_y="356.224" loc_z="232.13" rest_time="0"/>
@@ -2509,7 +2473,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="122">
-	<!-- Senior soldier (Beluslan)-->
+	<!-- Senior soldier (Beluslan) -->
 		<routes>
 			<routestep step="1" loc_x="345.23" loc_y="273.36" loc_z="234.43" rest_time="0"/>
 			<routestep step="2" loc_x="362.95" loc_y="276.04" loc_z="234.43" rest_time="0"/>
@@ -2522,7 +2486,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="123">
-	<!-- Eida (Altgard)-->
+	<!-- Eida (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1559.25" loc_y="1861.44" loc_z="272.61" rest_time="5"/>
 			<routestep step="2" loc_x="1574.93" loc_y="1861.98" loc_z="272.68" rest_time="0"/>
@@ -2553,7 +2517,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="124">
-	<!-- Tulberg (Altgard)-->
+	<!-- Tulberg (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1736.82" loc_y="1835.26" loc_z="255.86" rest_time="0"/>
 			<routestep step="2" loc_x="1733.88" loc_y="1834.53" loc_z="255.86" rest_time="0"/>
@@ -2576,7 +2540,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="125">
-	<!-- Rion (Altgard)-->
+	<!-- Rion (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1724.26" loc_y="1676.58" loc_z="254.3" rest_time="0"/>
 			<routestep step="2" loc_x="1733.56" loc_y="1652.6" loc_z="249.56" rest_time="0"/>
@@ -2587,7 +2551,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="126">
-	<!-- Arekedil (Altgard)-->
+	<!-- Arekedil (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1607.37" loc_y="1719.5" loc_z="252.15" rest_time="0"/>
 			<routestep step="2" loc_x="1614.76" loc_y="1715.01" loc_z="252.99" rest_time="0"/>
@@ -2616,7 +2580,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="127">
-	<!-- Vogbadic (Altgard)-->
+	<!-- Vogbadic (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1624.75" loc_y="1741.80" loc_z="269.36" rest_time="0"/>
 			<routestep step="2" loc_x="1611.79" loc_y="1756.3" loc_z="270.27" rest_time="0"/>
@@ -2637,7 +2601,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="128">
-	<!-- Donjon guard (Altgard)-->
+	<!-- Donjon guard (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1715.34" loc_y="1777.61" loc_z="203.62" rest_time="0"/>
 			<routestep step="2" loc_x="1719.84" loc_y="1768.06" loc_z="203.96" rest_time="0"/>
@@ -2673,7 +2637,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="129">
-	<!-- Donjon guard (Altgard)-->
+	<!-- Donjon guard (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1719.84" loc_y="1768.06" loc_z="203.96" rest_time="0"/>
 			<routestep step="2" loc_x="1706.67" loc_y="1786.49" loc_z="204.29" rest_time="300"/>
@@ -2709,7 +2673,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="130">
-	<!-- Donjon Guard (Altgard)-->
+	<!-- Donjon Guard (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1716.77" loc_y="1805.82" loc_z="201.49" rest_time="5"/>
 			<routestep step="2" loc_x="1713.75" loc_y="1804.7" loc_z="202.57" rest_time="0"/>
@@ -2722,7 +2686,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="131">
-	<!-- Donjon Guard (Altgard)-->
+	<!-- Donjon Guard (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1715.03" loc_y="1812.78" loc_z="201.1" rest_time="5"/>
 			<routestep step="2" loc_x="1710.92" loc_y="1812.17" loc_z="202.41" rest_time="0"/>
@@ -2735,7 +2699,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="132">
-	<!-- Donjon guard (Altgard)-->
+	<!-- Donjon guard (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1680.90" loc_y="1778.32" loc_z="202.87" rest_time="5"/>
 			<routestep step="2" loc_x="1683.67" loc_y="1781.05" loc_z="203.27" rest_time="0"/>
@@ -2754,7 +2718,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="133">
-	<!-- Donjon Guard (Altgard)-->
+	<!-- Donjon Guard (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1677.8" loc_y="1782.52" loc_z="202.82" rest_time="5"/>
 			<routestep step="2" loc_x="1680.2" loc_y="1786.22" loc_z="203.34" rest_time="0"/>
@@ -2771,7 +2735,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="134">
-	<!-- Rungnir (Altgard)-->
+	<!-- Rungnir (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1744.99" loc_y="2018.31" loc_z="249.02" rest_time="10"/>
 			<routestep step="2" loc_x="1746.42" loc_y="2026.30" loc_z="249.08" rest_time="0"/>
@@ -2779,7 +2743,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="135">
-	<!-- Atir (Altgard)-->
+	<!-- Atir (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1753.38" loc_y="2017.76" loc_z="248.29" rest_time="10"/>
 			<routestep step="2" loc_x="1753.87" loc_y="2027.75" loc_z="248.39" rest_time="0"/>
@@ -2787,7 +2751,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="136">
-	<!-- Tiril pets (Altgard)-->
+	<!-- Tiril pets (Altgard) -->
 	<!-- TODO : Route unused until core allow walker to follow an other walker -->
 		<routes>
 			<routestep step="1" loc_x="1719.55" loc_y="1741.56" loc_z="252.67" rest_time="0"/>
@@ -2803,7 +2767,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="137">
-	<!-- Kaindal (Ishalgen)-->
+	<!-- Kaindal (Ishalgen) -->
 		<routes>
 			<routestep step="1" loc_x="592.8" loc_y="2480.12" loc_z="278.75" rest_time="0"/>
 			<routestep step="2" loc_x="593.45" loc_y="2469.03" loc_z="278.75" rest_time="0"/>
@@ -2824,7 +2788,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="138">
-	<!-- Glifko (Ishalgen)-->
+	<!-- Glifko (Ishalgen) -->
 		<routes>
 			<routestep step="1" loc_x="573.13" loc_y="2459.43" loc_z="278.54" rest_time="0"/>
 			<routestep step="2" loc_x="567.11" loc_y="2450.66" loc_z="277.98" rest_time="0"/>
@@ -2846,7 +2810,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="139">
-	<!-- Senior soldier (Morheim)-->
+	<!-- Senior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="305.81" loc_y="2277.698" loc_z="448.76" rest_time="15"/>
 			<routestep step="2" loc_x="309.6" loc_y="2286.64" loc_z="448.63" rest_time="0"/>
@@ -2861,7 +2825,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="140">
-	<!-- Defense commander (Morheim)-->
+	<!-- Defense commander (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="291.66" loc_y="2289.78" loc_z="448.92" rest_time="15"/>
 			<routestep step="2" loc_x="291.91" loc_y="2295.54" loc_z="448.92" rest_time="0"/>
@@ -2872,7 +2836,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="141">
-	<!-- Defense commander (Morheim)-->
+	<!-- Defense commander (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="304.1" loc_y="2289.42" loc_z="448.92" rest_time="15"/>
 			<routestep step="2" loc_x="304.19" loc_y="2294.6" loc_z="448.92" rest_time="0"/>
@@ -2883,7 +2847,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="142">
-	<!-- Morian (Morheim)-->
+	<!-- Morian (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="276.9" loc_y="2292.94" loc_z="449.74" rest_time="15"/>
 			<routestep step="2" loc_x="263.9" loc_y="2291.72" loc_z="450.35" rest_time="0"/>
@@ -2900,7 +2864,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="143">
-	<!-- Unar (Morheim)-->
+	<!-- Unar (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="176.94" loc_y="2329.52" loc_z="456.25" rest_time="20"/>
 			<routestep step="2" loc_x="181.55" loc_y="2317.11" loc_z="456.33" rest_time="0"/>
@@ -2929,7 +2893,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="144">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="174.95" loc_y="2335.44" loc_z="456.55" rest_time="0"/>
 			<routestep step="2" loc_x="175.90463" loc_y="2332.9958" loc_z="456.21152" rest_time="100"/>
@@ -2940,7 +2904,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="145">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="345.9" loc_y="2245.43" loc_z="452.67" rest_time="15"/>
 			<routestep step="2" loc_x="343.58" loc_y="2248.58" loc_z="451.88" rest_time="0"/>
@@ -2953,7 +2917,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="146">
-	<!-- Scout Leader (Morheim)-->
+	<!-- Scout Leader (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="265.14" loc_y="2366.17" loc_z="445.123" rest_time="30"/>
 			<routestep step="2" loc_x="257.3" loc_y="2354.37" loc_z="445.123" rest_time="0"/>
@@ -2966,7 +2930,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="147">
-	<!-- Medic Leader (Morheim)-->
+	<!-- Medic Leader (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="270" loc_y="2323.27" loc_z="444.23" rest_time="20"/>
 			<routestep step="2" loc_x="263.85" loc_y="2318.68" loc_z="445.123" rest_time="0"/>
@@ -2986,14 +2950,14 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="148">
-	<!-- Defense Commander (Morheim)-->
+	<!-- Defense Commander (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="251.16" loc_y="2334.25" loc_z="446.155" rest_time="35"/>
 			<routestep step="2" loc_x="220.9" loc_y="2326.521" loc_z="446.056" rest_time="15"/>
 		</routes>
 	</walker_template>
 	<walker_template route_id="149">
-	<!-- Thurnberg (Morheim)-->
+	<!-- Thurnberg (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="298" loc_y="2292.19" loc_z="448.913" rest_time="0"/>
 			<routestep step="2" loc_x="298.39" loc_y="2315.19" loc_z="443.203" rest_time="0"/>
@@ -3022,14 +2986,14 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="150">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="337.27557" loc_y="2362.77" loc_z="447.9443" rest_time="15"/>
 			<routestep step="2" loc_x="358.71762" loc_y="2368.69" loc_z="447.9443" rest_time="15"/>
 		</routes>
 	</walker_template>
 	<walker_template route_id="151">
-	<!-- Senior soldier (Morheim)-->
+	<!-- Senior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="362.98" loc_y="2430.68" loc_z="452.186" rest_time="15"/>
 			<routestep step="2" loc_x="356.47" loc_y="2425.35" loc_z="452.251" rest_time="0"/>
@@ -3048,7 +3012,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="152">
-	<!-- Bragi (Morheim)-->
+	<!-- Bragi (Morheim) -->
 	<!-- TODO A tamed work should follaw him but they don't have the same walk speed so I waiting a core fonction which allow a walker to follow an other walker-->
 		<routes>
 			<routestep step="1" loc_x="349.18" loc_y="2395.92" loc_z="451.296" rest_time="20"/>
@@ -3072,7 +3036,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="153">
-	<!-- Senior soldier (Morheim)-->
+	<!-- Senior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="366.74" loc_y="2359.64" loc_z="451.58" rest_time="20"/>
 			<routestep step="2" loc_x="363.92" loc_y="2353.26" loc_z="451.59" rest_time="0"/>
@@ -3089,7 +3053,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="154">
-	<!-- Halfdan (Morheim)-->
+	<!-- Halfdan (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="320.64" loc_y="2304.49" loc_z="453.2" rest_time="15"/>
 			<routestep step="2" loc_x="321.95" loc_y="2308.69" loc_z="453.19" rest_time="0"/>
@@ -3106,7 +3070,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="155">
-	<!-- Senior soldier (Morheim)-->
+	<!-- Senior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="331.44" loc_y="2374.52" loc_z="447.724" rest_time="15"/>
 			<routestep step="2" loc_x="332.71" loc_y="2377.78" loc_z="447.6151" rest_time="0"/>
@@ -3119,7 +3083,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="156">
-	<!-- Senior soldier (Morheim)-->
+	<!-- Senior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="287.14" loc_y="2437.809" loc_z="455.033" rest_time="20"/>
 			<routestep step="2" loc_x="283.566" loc_y="2429.75" loc_z="455.007" rest_time="0"/>
@@ -3140,7 +3104,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="157">
-	<!-- Urakon (Morheim)-->
+	<!-- Urakon (Morheim) -->
 	<!-- TODO A tamed work should follaw him but they don't have the same walk speed so I waiting a core fonction which allow a walker to follow an other walker-->
 		<routes>
 			<routestep step="1" loc_x="298.10266" loc_y="2284.874" loc_z="448.773" rest_time="0"/>
@@ -3159,7 +3123,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="158">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="184.5595" loc_y="2397.004" loc_z="443.23407" rest_time="0"/>
 			<routestep step="2" loc_x="187.22" loc_y="2396.855" loc_z="442.8969" rest_time="100"/>
@@ -3173,7 +3137,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="159">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="283.51" loc_y="2495.23" loc_z="456.16" rest_time="0"/>
 			<routestep step="2" loc_x="284.41" loc_y="2490.67" loc_z="455.66" rest_time="0"/>
@@ -3200,7 +3164,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="160">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="410.34" loc_y="2438.65" loc_z="457.0439" rest_time="0"/>
 			<routestep step="2" loc_x="407.53" loc_y="2437.79" loc_z="456.6266" rest_time="100"/>
@@ -3214,7 +3178,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="161">
-	<!-- Junior soldier (Morheim)-->
+	<!-- Junior soldier (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="393.42" loc_y="2284.34" loc_z="449.17" rest_time="0"/>
 			<routestep step="2" loc_x="390.78" loc_y="2285.75" loc_z="448.661" rest_time="100"/>
@@ -3225,7 +3189,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="162">
-	<!-- Sveinn (Morheim)-->
+	<!-- Sveinn (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="338.104" loc_y="2265.92" loc_z="453.306" rest_time="0"/>
 			<routestep step="2" loc_x="345.52" loc_y="2268.65" loc_z="453.5552" rest_time="0"/>
@@ -3244,7 +3208,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="163">
-	<!-- Falkor (Morheim)-->
+	<!-- Falkor (Morheim) -->
 		<routes>
 			<routestep step="1" loc_x="238.38" loc_y="2369.09" loc_z="447.733" rest_time="0"/>
 			<routestep step="2" loc_x="244.48" loc_y="2369.05" loc_z="447.44" rest_time="0"/>
@@ -3266,7 +3230,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="164">
-	<!-- Gwendag (Pandaemonium)-->
+	<!-- Gwendag (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1589.9" loc_y="1406.74" loc_z="193.091" rest_time="0"/>
 			<routestep step="2" loc_x="1586.65" loc_y="1436.06" loc_z="189.25" rest_time="0"/>
@@ -3279,7 +3243,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="165">
-	<!-- Hiyask (Pandaemonium)-->
+	<!-- Hiyask (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1586.685" loc_y="1386.16" loc_z="193.13" rest_time="0"/>
 			<routestep step="2" loc_x="1586.6555" loc_y="1366.62" loc_z="189.263" rest_time="0"/>
@@ -3292,7 +3256,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="166">
-	<!-- Meirana (Pandaemonium)-->
+	<!-- Meirana (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1500.85" loc_y="1372.76" loc_z="176.93" rest_time="0"/>
 			<routestep step="2" loc_x="1494.63" loc_y="1372.68" loc_z="176.93" rest_time="15"/>
@@ -3303,7 +3267,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="167">
-	<!-- Dengard (Pandaemonium)-->
+	<!-- Dengard (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1467.173" loc_y="1377.61" loc_z="177.07" rest_time="15"/>
 			<routestep step="2" loc_x="1467.05" loc_y="1381.98" loc_z="177.54" rest_time="0"/>
@@ -3318,7 +3282,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="168">
-	<!-- Deyla (Pandaemonium)-->
+	<!-- Deyla (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1191.623" loc_y="1561.8925" loc_z="213.84" rest_time="0"/>
 			<routestep step="2" loc_x="1206.56" loc_y="1521.18" loc_z="213.84" rest_time="0"/>
@@ -3327,7 +3291,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="169">
-	<!-- Latatusk (Pandaemonium)-->
+	<!-- Latatusk (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1254.4663" loc_y="1538.2992" loc_z="214.136" rest_time="0"/>
 			<routestep step="2" loc_x="1250.03" loc_y="1536.6672" loc_z="214.19" rest_time="30"/>
@@ -3338,7 +3302,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="170">
-	<!-- Ustarn (Pandaemonium)-->
+	<!-- Ustarn (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1257.76" loc_y="1511.36" loc_z="214.136" rest_time="0"/>
 			<routestep step="2" loc_x="1260.726" loc_y="1516.95" loc_z="214.222" rest_time="0"/>
@@ -3352,7 +3316,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="171">
-	<!-- Neusa (Pandaemonium)-->
+	<!-- Neusa (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1378.94" loc_y="1065.79" loc_z="206.07" rest_time="10"/>
 			<routestep step="2" loc_x="1385.09" loc_y="1057.85" loc_z="206.07" rest_time="0"/>
@@ -3368,7 +3332,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="172">
-	<!-- Oridana (Pandaemonium)-->
+	<!-- Oridana (Pandaemonium) -->
 		<routes>
 			<routestep step="1" loc_x="1340.17" loc_y="1175.466" loc_z="208.38" rest_time="0"/>
 			<routestep step="2" loc_x="1338.196" loc_y="1209.099" loc_z="208.38" rest_time="0"/>
@@ -3444,7 +3408,7 @@
 	
 	<!-- Iana / 203862 -->
 	<walker_template route_id="175">
-	<!-- Iana (Sanctum)-->
+	<!-- Iana (Sanctum) -->
 		<routes>
 			<routestep step="1" loc_x="1810.225" loc_y="2072.9854" loc_z="527.92944" rest_time="0"/>
 			<routestep step="2" loc_x="1813.91" loc_y="2085.53" loc_z="527.9295" rest_time="0"/>
@@ -3483,7 +3447,7 @@
 	</walker_template>
 	
 	
-	<!-- Nidia (Sanctum)-->	
+	<!-- Nidia (Sanctum) -->	
 		<walker_template route_id="177">
 		<routes>
 			<routestep step="1" loc_x="1994.91" loc_y="1725.77" loc_z="576.7586" rest_time="0"/>
@@ -3567,7 +3531,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="180">
-	<!-- Idle Shugo Courier (Verteron)-->
+	<!-- Idle Shugo Courier (Verteron) -->
 		<routes>
 			<routestep step="1" loc_x="1664.276" loc_y="1369.4517" loc_z="109.19894" rest_time="0"/>
 			<routestep step="2" loc_x="1684.276" loc_y="1370.4920" loc_z="111.909" rest_time="3"/>
@@ -3578,7 +3542,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="181">
-	<!-- Red Nose Granker (Altgard)-->
+	<!-- Red Nose Granker (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1605.25" loc_y="1360.82" loc_z="264.468" rest_time="0"/>
 			<routestep step="2" loc_x="1597.47" loc_y="1346.44" loc_z="264.553" rest_time="0"/>
@@ -3607,7 +3571,7 @@
 		</routes>
 	</walker_template>
 	<walker_template route_id="182">
-	<!-- Red Nose Granker (Altgard)-->
+	<!-- Red Nose Granker (Altgard) -->
 		<routes>
 			<routestep step="1" loc_x="1735.77" loc_y="1382.12" loc_z="277.089" rest_time="0"/>
 			<routestep step="2" loc_x="1685.82" loc_y="1436.72" loc_z="263.184" rest_time="0"/>
@@ -4224,7 +4188,7 @@
 			<routestep step="7" loc_x="920.056" loc_y="1663.444" loc_z="360.0404" rest_time="0" />
 		</routes>
 	</walker_template>
-	<!-- Senior Soldier (Heiron)-->
+	<!-- Senior Soldier (Heiron) -->
 	<walker_template route_id="202">
 		<routes>
 			<routestep step="1" loc_x="2606.9602" loc_y="416.31357" loc_z="399.0" rest_time="5"/>
@@ -4245,51 +4209,6 @@
 			<routestep step="16" loc_x="2591.7678" loc_y="406.71512" loc_z="407.39914" rest_time="0"/>
 			<routestep step="17" loc_x="2598.7651" loc_y="410.27917" loc_z="403.4124" rest_time="0"/>
 			<routestep step="18" loc_x="2605.3928" loc_y="413.65408" loc_z="399.6365" rest_time="5"/>
-		</routes>
-	</walker_template>
-	<!-- Fredge / 203078 -->
-	<walker_template route_id="201">
-		<routes>
-			<routestep step="1" loc_x="563.46" loc_y="1396.6" loc_z="114.28" rest_time="0"/>
-			<routestep step="2" loc_x="564.46" loc_y="1396.6" loc_z="114.28" rest_time="0"/>
-			<routestep step="3" loc_x="563.27" loc_y="1405.39" loc_z="112.45" rest_time="0"/>
-			<routestep step="4" loc_x="574.75" loc_y="1473.75" loc_z="113.28" rest_time="0"/>
-			<routestep step="5" loc_x="574.24" loc_y="1434.2" loc_z="111.64" rest_time="0"/>
-			<routestep step="6" loc_x="580.75" loc_y="1455.75" loc_z="111.06" rest_time="0"/>
-			<routestep step="7" loc_x="580.75" loc_y="1457.75" loc_z="111.33" rest_time="0"/>
-			<routestep step="8" loc_x="580.24" loc_y="1487.71" loc_z="114.28" rest_time="0"/>
-			<routestep step="9" loc_x="593.67" loc_y="1512.75" loc_z="114.85" rest_time="0"/>
-			<routestep step="10" loc_x="598.25" loc_y="1511.75" loc_z="114.62" rest_time="0"/>
-			<routestep step="11" loc_x="601.25" loc_y="1521.75" loc_z="114.78" rest_time="0"/>
-			<routestep step="12" loc_x="616.25" loc_y="1545.75" loc_z="115.92" rest_time="0"/>
-			<routestep step="13" loc_x="616.46" loc_y="1557.05" loc_z="116.16" rest_time="0"/>
-			<routestep step="14" loc_x="628.26" loc_y="1573.66" loc_z="118.37" rest_time="0"/>
-			<routestep step="15" loc_x="629.91" loc_y="1386.52" loc_z="117.82" rest_time="0"/>
-			<routestep step="16" loc_x="626.45" loc_y="1594.89" loc_z="117.62" rest_time="0"/>
-			<routestep step="17" loc_x="624.25" loc_y="1600.25" loc_z="117.57" rest_time="0"/>
-			<routestep step="18" loc_x="617.25" loc_y="1604.75" loc_z="117.29" rest_time="0"/>
-			<routestep step="19" loc_x="576.91" loc_y="1616.75" loc_z="115.36" rest_time="0"/>
-			<routestep step="20" loc_x="566.52" loc_y="1621.03" loc_z="115.11" rest_time="0"/>
-			<routestep step="21" loc_x="560.52" loc_y="1625.48" loc_z="115" rest_time="0"/>
-			<routestep step="22" loc_x="566.52" loc_y="1621.03" loc_z="115.11" rest_time="0"/>
-			<routestep step="23" loc_x="576.91" loc_y="1616.75" loc_z="115.36" rest_time="0"/>
-			<routestep step="24" loc_x="617.25" loc_y="1604.75" loc_z="117.29" rest_time="0"/>
-			<routestep step="25" loc_x="624.25" loc_y="1600.25" loc_z="117.57" rest_time="0"/>
-			<routestep step="26" loc_x="626.45" loc_y="1594.89" loc_z="117.62" rest_time="0"/>
-			<routestep step="27" loc_x="629.91" loc_y="1386.52" loc_z="117.82" rest_time="0"/>
-			<routestep step="28" loc_x="628.26" loc_y="1573.66" loc_z="118.37" rest_time="0"/>
-			<routestep step="29" loc_x="616.46" loc_y="1557.05" loc_z="116.16" rest_time="0"/>
-			<routestep step="30" loc_x="616.25" loc_y="1545.75" loc_z="115.92" rest_time="0"/>
-			<routestep step="31" loc_x="601.25" loc_y="1521.75" loc_z="114.78" rest_time="0"/>
-			<routestep step="32" loc_x="598.25" loc_y="1511.75" loc_z="114.62" rest_time="0"/>
-			<routestep step="33" loc_x="593.67" loc_y="1512.75" loc_z="114.85" rest_time="0"/>
-			<routestep step="34" loc_x="580.24" loc_y="1487.71" loc_z="114.28" rest_time="0"/>
-			<routestep step="35" loc_x="580.75" loc_y="1457.75" loc_z="111.33" rest_time="0"/>
-			<routestep step="36" loc_x="580.75" loc_y="1455.75" loc_z="111.06" rest_time="0"/>
-			<routestep step="37" loc_x="574.24" loc_y="1434.2" loc_z="111.64" rest_time="0"/>
-			<routestep step="38" loc_x="574.75" loc_y="1473.75" loc_z="113.28" rest_time="0"/>
-			<routestep step="39" loc_x="563.27" loc_y="1405.39" loc_z="112.45" rest_time="0"/>
-			<routestep step="40" loc_x="564.46" loc_y="1396.6" loc_z="114.28" rest_time="0"/>
 		</routes>
 	</walker_template>
 	<!-- Laborer / 203508 -->
@@ -4403,7 +4322,7 @@
 			<routestep step="6" loc_x="1653.1414" loc_y="1482.3169" loc_z="119.375" rest_time="0" />
 		</routes>
 	</walker_template>
-	<!-- Admeta (Eltnen)-->
+	<!-- Admeta (Eltnen) -->
 	<walker_template route_id="228">
 		<routes>
 			<routestep step="1" loc_x="312.98328" loc_y="2789.23" loc_z="270.5051" rest_time="12" />
@@ -4482,7 +4401,7 @@
 			<routestep step="8" loc_x="1113.2899" loc_y="475.7505" loc_z="267.2656" rest_time="0"/>
 		</routes>
 	</walker_template>
-	 <!-- Robots (Araka)-->
+	 <!-- Robots (Araka) -->
    <walker_template route_id="234">
       <routes>
          <routestep step="1" loc_x="954.79926" loc_y="496.19214" loc_z="232.97406" rest_time="3" />
@@ -4504,7 +4423,7 @@
    	<!-- Dallas Break -->
 	<walker_template route_id="236">
 		<routes>
-		<!-- NpcID: 799735 -->
+		<!-- NPC ID: 799735 -->
 			<routestep step="1" loc_x="1802.6403" loc_y="2845.2048" loc_z="536.20544" rest_time="0"/>
 			<routestep step="2" loc_x="1811.201" loc_y="2849.4866" loc_z="536.2055" rest_time="0"/>
 			<routestep step="3" loc_x="1819.627" loc_y="2852.3413" loc_z="536.2054" rest_time="0"/>
@@ -4541,7 +4460,7 @@
 	</walker_template>
 	<walker_template route_id="237">
 		<routes>
-		<!-- NpcID: 799731 -->
+		<!-- NPC ID: 799731 -->
 			<routestep step="1" loc_x="1803.9999" loc_y="2846.98" loc_z="536.20544" rest_time="0"/>
 			<routestep step="2" loc_x="1812.6034" loc_y="2851.228" loc_z="536.20544" rest_time="0"/>
 			<routestep step="3" loc_x="1820.5813" loc_y="2854.3635" loc_z="536.2054" rest_time="0"/>
@@ -4578,7 +4497,7 @@
 	</walker_template>
 	<walker_template route_id="238">
 		<routes>
-		<!-- NpcID: 209214 -->
+		<!-- NPC ID: 209214 -->
 			<routestep step="1" loc_x="1773.5178" loc_y="2735.9978" loc_z="536.1276" rest_time="0"/>
 			<routestep step="2" loc_x="1782.5513" loc_y="2741.2532" loc_z="535.36365" rest_time="0"/>
 			<routestep step="3" loc_x="1790.3185" loc_y="2747.2393" loc_z="532.9971" rest_time="0"/>
@@ -4594,7 +4513,7 @@
 	</walker_template>
 	<walker_template route_id="239">
 		<routes>
-		<!-- NpcID: 209214 -->
+		<!-- NPC ID: 209214 -->
 			<routestep step="1" loc_x="1762.3999" loc_y="2721.214" loc_z="534.7768" rest_time="0"/>
 			<routestep step="2" loc_x="1775.5859" loc_y="2732.6135" loc_z="536.06683" rest_time="0"/>
 			<routestep step="3" loc_x="1784.8855" loc_y="2738.1333" loc_z="535.44495" rest_time="0"/>
@@ -4611,7 +4530,7 @@
 	</walker_template>
 	<walker_template route_id="240">
 		<routes>
-		<!-- NpcID: 209208 -->
+		<!-- NPC ID: 209208 -->
 			<routestep step="1" loc_x="1762.6556" loc_y="2724.021" loc_z="534.777" rest_time="0"/>
 			<routestep step="2" loc_x="1776.244" loc_y="2735.3396" loc_z="536.25696" rest_time="0"/>
 			<routestep step="3" loc_x="1785.2784" loc_y="2740.8604" loc_z="534.8697" rest_time="0"/>
@@ -4628,7 +4547,7 @@
 	</walker_template>
 	<walker_template route_id="241">
 		<routes>
-		<!-- NpcID: 209208 -->
+		<!-- NPC ID: 209208 -->
 			<routestep step="1" loc_x="1925.1581" loc_y="2802.9543" loc_z="534.9432" rest_time="0"/>
 			<routestep step="2" loc_x="1936.3317" loc_y="2805.5615" loc_z="536.25775" rest_time="0"/>
 			<routestep step="3" loc_x="1925.1693" loc_y="2802.8513" loc_z="534.93933" rest_time="0"/>
@@ -4644,7 +4563,7 @@
 	</walker_template>
 	<walker_template route_id="242">
 		<routes>
-		<!-- NpcID: 209234 -->
+		<!-- NPC ID: 209234 -->
 			<routestep step="1" loc_x="1923.6873" loc_y="2800.5596" loc_z="534.4442" rest_time="0"/>
 			<routestep step="2" loc_x="1934.9396" loc_y="2803.2285" loc_z="536.3861" rest_time="0"/>
 			<routestep step="3" loc_x="1937.7937" loc_y="2807.9612" loc_z="536.1235" rest_time="0"/>
@@ -4661,7 +4580,7 @@
 	</walker_template>
 	<walker_template route_id="243">
 		<routes>
-		<!-- NpcID: 209234 -->
+		<!-- NPC ID: 209234 -->
 			<routestep step="1" loc_x="1922.7633" loc_y="2804.4253" loc_z="534.4724" rest_time="0"/>
 			<routestep step="2" loc_x="1933.9806" loc_y="2807.0908" loc_z="536.4148" rest_time="0"/>
 			<routestep step="3" loc_x="1938.7313" loc_y="2804.0994" loc_z="536.08746" rest_time="0"/>
@@ -4678,7 +4597,7 @@
 	</walker_template>
 	<walker_template route_id="244">
 		<routes>
-		<!-- NpcID: 278534 -->
+		<!-- NPC ID: 278534 -->
 			<routestep step="1" loc_x="2901.9285" loc_y="993.4407" loc_z="1529.2617" rest_time="0"/>
 			<routestep step="2" loc_x="2897.9202" loc_y="997.88116" loc_z="1527.997" rest_time="0"/>
 			<routestep step="3" loc_x="2932.4243" loc_y="958.9185" loc_z="1538.1676" rest_time="0"/>
@@ -4754,7 +4673,7 @@
 	</walker_template>
 	<walker_template route_id="245">
 		<routes>
-		<!-- NpcID: 278552 -->
+		<!-- NPC ID: 278552 -->
 			<routestep step="1" loc_x="2909.3965" loc_y="1026.7599" loc_z="1528.201" rest_time="0"/>
 			<routestep step="2" loc_x="2902.2842" loc_y="1025.561" loc_z="1527.9966" rest_time="0"/>
 			<routestep step="3" loc_x="2900.4688" loc_y="1025.4321" loc_z="1527.9966" rest_time="0"/>
@@ -4797,7 +4716,7 @@
 	</walker_template>
 	<walker_template route_id="246">
 		<routes>
-		<!-- NpcID: 278546 -->
+		<!-- NPC ID: 278546 -->
 			<routestep step="1" loc_x="2943.4238" loc_y="972.8925" loc_z="1539.6614" rest_time="0"/>
 			<routestep step="2" loc_x="2948.1914" loc_y="975.4797" loc_z="1539.6613" rest_time="0"/>
 			<routestep step="3" loc_x="2953.5884" loc_y="975.8008" loc_z="1539.6613" rest_time="0"/>
@@ -5044,7 +4963,7 @@
 	</walker_template>
 	<walker_template route_id="247">
 		<routes>
-		<!-- NpcID: 278545 -->
+		<!-- NPC ID: 278545 -->
 			<routestep step="1" loc_x="2915.4158" loc_y="936.70197" loc_z="1539.6613" rest_time="0"/>
 			<routestep step="2" loc_x="2916.2803" loc_y="940.31964" loc_z="1539.6614" rest_time="0"/>
 			<routestep step="3" loc_x="2917.1125" loc_y="943.90533" loc_z="1539.6615" rest_time="0"/>
@@ -5338,7 +5257,7 @@
 	</walker_template>
 	<walker_template route_id="248">
 		<routes>
-		<!-- NpcID: 278551 -->
+		<!-- NPC ID: 278551 -->
 			<routestep step="1" loc_x="2864.3967" loc_y="973.16797" loc_z="1532.8839" rest_time="0"/>
 			<routestep step="2" loc_x="2865.1423" loc_y="979.37915" loc_z="1531.3395" rest_time="0"/>
 			<routestep step="3" loc_x="2865.6816" loc_y="985.44794" loc_z="1529.8342" rest_time="0"/>
@@ -5376,7 +5295,7 @@
 	</walker_template>
 	<walker_template route_id="249">
 		<routes>
-		<!-- NpcID: 203115 -->
+		<!-- NPC ID: 203115 -->
 			<routestep step="1" loc_x="1718.4532" loc_y="1511.4587" loc_z="132.1" rest_time="0"/>
 			<routestep step="2" loc_x="1689.4476" loc_y="1497.1963" loc_z="134.26523" rest_time="0"/>
 			<routestep step="3" loc_x="1681.7933" loc_y="1485.0443" loc_z="136.3121" rest_time="0"/>
@@ -5401,7 +5320,7 @@
 	</walker_template>
 	<walker_template route_id="250">
 		<routes>
-		<!-- NpcID: 203116 -->
+		<!-- NPC ID: 203116 -->
 			<routestep step="1" loc_x="1717.8304" loc_y="1513.3593" loc_z="132.1" rest_time="0"/>
 			<routestep step="2" loc_x="1707.789" loc_y="1510.0153" loc_z="132.1" rest_time="0"/>
 			<routestep step="3" loc_x="1687.7723" loc_y="1498.2516" loc_z="134.26523" rest_time="0"/>
@@ -5431,7 +5350,7 @@
 	</walker_template>
 	<walker_template route_id="251">
 		<routes>
-		<!-- NpcID: 203562 -->
+		<!-- NPC ID: 203562 -->
 			<routestep step="1" loc_x="1728.4756" loc_y="1821.9832" loc_z="254.74919" rest_time="0"/>
 			<routestep step="2" loc_x="1731.2024" loc_y="1831.0154" loc_z="255.84952" rest_time="0"/>
 			<routestep step="3" loc_x="1733.9594" loc_y="1834.9021" loc_z="255.85326" rest_time="0"/>
@@ -5621,7 +5540,7 @@
 	</walker_template>
 	<walker_template route_id="252">
 		<routes>
-		<!-- NpcID: 205295 -->
+		<!-- NPC ID: 205295 -->
 			<routestep step="1" loc_x="1693.8286" loc_y="1789.8772" loc_z="251.625" rest_time="0"/>
 			<routestep step="2" loc_x="1687.9486" loc_y="1803.7726" loc_z="251.75" rest_time="0"/>
 			<routestep step="3" loc_x="1688.3768" loc_y="1819.8445" loc_z="251.75" rest_time="0"/>
@@ -5669,7 +5588,7 @@
 	</walker_template>
 	<walker_template route_id="253">
 		<routes>
-		<!-- NpcID: 799731 -->
+		<!-- NPC ID: 799731 -->
 			<routestep step="1" loc_x="1692.3765" loc_y="1788.1769" loc_z="251.625" rest_time="0"/>
 			<routestep step="2" loc_x="1685.9231" loc_y="1802.8252" loc_z="251.75" rest_time="0"/>
 			<routestep step="3" loc_x="1685.9231" loc_y="1802.8252" loc_z="251.75" rest_time="0"/>
@@ -5721,7 +5640,7 @@
 	</walker_template>
 	<walker_template route_id="254">
 		<routes>
-		<!-- NpcID: 799746 -->
+		<!-- NPC ID: 799746 -->
 			<routestep step="1" loc_x="1695.5289" loc_y="1788.425" loc_z="251.625" rest_time="0"/>
 			<routestep step="2" loc_x="1688.895" loc_y="1801.7467" loc_z="251.75" rest_time="0"/>
 			<routestep step="3" loc_x="1690.0123" loc_y="1818.32" loc_z="251.75" rest_time="0"/>
@@ -5769,7 +5688,7 @@
 	</walker_template>
 	<walker_template route_id="255">
 		<routes>
-		<!-- NpcID: 799736 -->
+		<!-- NPC ID: 799736 -->
 			<routestep step="1" loc_x="1695.3873" loc_y="1786.1936" loc_z="251.625" rest_time="0"/>
 			<routestep step="2" loc_x="1687.842" loc_y="1799.774" loc_z="251.737" rest_time="0"/>
 			<routestep step="3" loc_x="1689.774" loc_y="1816.0968" loc_z="251.75" rest_time="0"/>
@@ -5817,7 +5736,7 @@
 	</walker_template>
 	<walker_template route_id="256">
 		<routes>
-		<!-- NpcID: 799737 -->
+		<!-- NPC ID: 799737 -->
 			<routestep step="1" loc_x="1696.5565" loc_y="1783.4308" loc_z="251.53479" rest_time="0"/>
 			<routestep step="2" loc_x="1687.7622" loc_y="1796.775" loc_z="251.70732" rest_time="0"/>
 			<routestep step="3" loc_x="1690.8219" loc_y="1813.286" loc_z="251.75" rest_time="0"/>
@@ -5865,7 +5784,7 @@
 	</walker_template>
 	<walker_template route_id="257">
 		<routes>
-		<!-- NpcID: 203583 -->
+		<!-- NPC ID: 203583 -->
 			<routestep step="1" loc_x="1679.7186" loc_y="1891.7539" loc_z="254.75003" rest_time="0"/>
 			<routestep step="2" loc_x="1687.6213" loc_y="1891.0577" loc_z="255.11385" rest_time="0"/>
 			<routestep step="3" loc_x="1693.2048" loc_y="1886.7249" loc_z="255.375" rest_time="0"/>
@@ -5964,7 +5883,7 @@
 	</walker_template>
 	<walker_template route_id="258">
 		<routes>
-		<!-- NpcID: 203575 -->
+		<!-- NPC ID: 203575 -->
 			<routestep step="1" loc_x="1585.5775" loc_y="1807.9164" loc_z="270.65668" rest_time="0"/>
 			<routestep step="2" loc_x="1587.944" loc_y="1803.747" loc_z="270.75397" rest_time="0"/>
 			<routestep step="3" loc_x="1588.4006" loc_y="1800.503" loc_z="270.9184" rest_time="0"/>
@@ -6030,7 +5949,7 @@
 	</walker_template>
 	<walker_template route_id="259">
 		<routes>
-		<!-- NpcID: 204315 -->
+		<!-- NPC ID: 204315 -->
 			<routestep step="1" loc_x="331.85022" loc_y="2330.92" loc_z="450.80103" rest_time="0"/>
 			<routestep step="2" loc_x="327.04492" loc_y="2326.0574" loc_z="450.84756" rest_time="0"/>
 			<routestep step="3" loc_x="324.76025" loc_y="2320.7324" loc_z="451.41586" rest_time="0"/>
@@ -6130,7 +6049,7 @@
 	</walker_template>
 	<walker_template route_id="260">
 		<routes>
-		<!-- NpcID: 204327 -->
+		<!-- NPC ID: 204327 -->
 			<routestep step="1" loc_x="344.70395" loc_y="2267.8682" loc_z="453.55508" rest_time="0"/>
 			<routestep step="2" loc_x="348.8971" loc_y="2272.6357" loc_z="453.5555" rest_time="0"/>
 			<routestep step="3" loc_x="352.67532" loc_y="2280.8225" loc_z="453.54913" rest_time="0"/>
@@ -6212,7 +6131,7 @@
 	</walker_template>
 	<walker_template route_id="261">
 		<routes>
-		<!-- NpcID: 204312 -->
+		<!-- NPC ID: 204312 -->
 			<routestep step="1" loc_x="298.6543" loc_y="2307.6494" loc_z="445.25516" rest_time="0"/>
 			<routestep step="2" loc_x="298.76715" loc_y="2315.2349" loc_z="443.20242" rest_time="0"/>
 			<routestep step="3" loc_x="296.14108" loc_y="2322.5796" loc_z="443.20242" rest_time="0"/>
@@ -6289,7 +6208,7 @@
 	</walker_template>
 	<walker_template route_id="262">
 		<routes>
-		<!-- NpcID: 204371 -->
+		<!-- NPC ID: 204371 -->
 			<routestep step="1" loc_x="214.48273" loc_y="2298.2888" loc_z="450.6272" rest_time="0"/>
 			<routestep step="2" loc_x="223.48439" loc_y="2295.7812" loc_z="450.53238" rest_time="0"/>
 			<routestep step="3" loc_x="232.902" loc_y="2294.7026" loc_z="450.5333" rest_time="0"/>
@@ -6340,7 +6259,7 @@
 	</walker_template>
 	<walker_template route_id="263">
 		<routes>
-		<!-- NpcID: 204391 -->
+		<!-- NPC ID: 204391 -->
 			<routestep step="1" loc_x="296.8103" loc_y="2273.039" loc_z="448.59036" rest_time="0"/>
 			<routestep step="2" loc_x="297.02737" loc_y="2281.5884" loc_z="448.67108" rest_time="0"/>
 			<routestep step="3" loc_x="297.17706" loc_y="2285.1638" loc_z="448.787" rest_time="0"/>
@@ -6357,7 +6276,7 @@
 	</walker_template>
 	<walker_template route_id="264">
 		<routes>
-		<!-- NpcID: 203358 -->
+		<!-- NPC ID: 203358 -->
 			<routestep step="1" loc_x="295.02988" loc_y="2179.2314" loc_z="455.69214" rest_time="0"/>
 			<routestep step="2" loc_x="297.80994" loc_y="2273.0137" loc_z="448.58636" rest_time="0"/>
 			<routestep step="3" loc_x="298.02597" loc_y="2281.5466" loc_z="448.647" rest_time="0"/>
@@ -6375,7 +6294,7 @@
 	</walker_template>
 	<walker_template route_id="265">
 		<routes>
-		<!-- NpcID: 203358 -->
+		<!-- NPC ID: 203358 -->
 			<routestep step="1" loc_x="339.70172" loc_y="2428.2234" loc_z="450.42993" rest_time="0"/>
 			<routestep step="2" loc_x="338.3854" loc_y="2421.3843" loc_z="450.02075" rest_time="0"/>
 			<routestep step="3" loc_x="336.17264" loc_y="2411.7783" loc_z="449.7755" rest_time="0"/>
@@ -6394,7 +6313,7 @@
 	</walker_template>
 	<walker_template route_id="266">
 		<routes>
-		<!-- NpcID: 204302 -->
+		<!-- NPC ID: 204302 -->
 			<routestep step="1" loc_x="340.68262" loc_y="2428.0347" loc_z="450.46362" rest_time="0"/>
 			<routestep step="2" loc_x="339.35947" loc_y="2421.1597" loc_z="450.13327" rest_time="0"/>
 			<routestep step="3" loc_x="337.1608" loc_y="2411.6294" loc_z="449.87613" rest_time="0"/>
@@ -6413,7 +6332,7 @@
 	</walker_template>
 	<walker_template route_id="267">
 		<routes>
-		<!-- NpcID: 799927 -->
+		<!-- NPC ID: 799927 -->
 			<routestep step="1" loc_x="380.4013" loc_y="361.11575" loc_z="229.17743" rest_time="0"/>
 			<routestep step="2" loc_x="383.21722" loc_y="358.04968" loc_z="229.17975" rest_time="0"/>
 			<routestep step="3" loc_x="380.1734" loc_y="350.416" loc_z="229.18143" rest_time="0"/>
@@ -6440,7 +6359,7 @@
 	</walker_template>
 	<walker_template route_id="268">
 		<routes>
-		<!-- NpcID: 204711 -->
+		<!-- NPC ID: 204711 -->
 			<routestep step="1" loc_x="403.1175" loc_y="457.38394" loc_z="222.54721" rest_time="0"/>
 			<routestep step="2" loc_x="400.9125" loc_y="452.44522" loc_z="222.19473" rest_time="0"/>
 			<routestep step="3" loc_x="396.89706" loc_y="443.6424" loc_z="221.99567" rest_time="0"/>
@@ -6559,7 +6478,7 @@
 	</walker_template>
 	<walker_template route_id="269">
 		<routes>
-		<!-- NpcID: 204713 -->
+		<!-- NPC ID: 204713 -->
 			<routestep step="1" loc_x="300.62808" loc_y="386.6075" loc_z="236.00635" rest_time="0"/>
 			<routestep step="2" loc_x="302.37177" loc_y="394.71307" loc_z="236.0033" rest_time="0"/>
 			<routestep step="3" loc_x="307.95602" loc_y="402.44785" loc_z="233.28342" rest_time="0"/>
@@ -6682,7 +6601,7 @@
 	</walker_template>
 	<walker_template route_id="270">
 		<routes>
-		<!-- NpcID: 204714 -->
+		<!-- NPC ID: 204714 -->
 			<routestep step="1" loc_x="368.61105" loc_y="305.67056" loc_z="231.31863" rest_time="0"/>
 			<routestep step="2" loc_x="368.18182" loc_y="275.20264" loc_z="234.57712" rest_time="0"/>
 			<routestep step="3" loc_x="373.10312" loc_y="272.676" loc_z="234.75711" rest_time="0"/>
@@ -6861,7 +6780,7 @@
 	</walker_template>
 	<walker_template route_id="271">
 		<routes>
-		<!-- NpcID: 204749 -->
+		<!-- NPC ID: 204749 -->
 			<routestep step="1" loc_x="315.05994" loc_y="346.10574" loc_z="229.35425" rest_time="0"/>
 			<routestep step="2" loc_x="323.70593" loc_y="343.31836" loc_z="229.18327" rest_time="0"/>
 			<routestep step="3" loc_x="329.1094" loc_y="337.1509" loc_z="229.1855" rest_time="0"/>
@@ -6986,7 +6905,7 @@
 	</walker_template>
 	<walker_template route_id="272">
 		<routes>
-		<!-- NpcID: 203359 -->
+		<!-- NPC ID: 203359 -->
 			<routestep step="1" loc_x="2912.25" loc_y="2435.25" loc_z="15.759766" rest_time="0"/>
 			<routestep step="2" loc_x="2911.3926" loc_y="2435.036" loc_z="15.787964" rest_time="0"/>
 			<routestep step="3" loc_x="2907.1013" loc_y="2440.4631" loc_z="16.15722" rest_time="0"/>
@@ -7010,7 +6929,7 @@
 	</walker_template>
 	<walker_template route_id="273">
 		<routes>
-		<!-- NpcID: 205130 -->
+		<!-- NPC ID: 205130 -->
 			<routestep step="1" loc_x="2912.959" loc_y="2436.2754" loc_z="15.827148" rest_time="0"/>
 			<routestep step="2" loc_x="2908.7153" loc_y="2441.6392" loc_z="16.168253" rest_time="0"/>
 			<routestep step="3" loc_x="2903.1545" loc_y="2449.271" loc_z="16.677841" rest_time="0"/>
@@ -7032,7 +6951,7 @@
 	</walker_template>
 	<walker_template route_id="274">
 		<routes>
-		<!-- NpcID: 212363 -->
+		<!-- NPC ID: 212363 -->
 			<routestep step="1" loc_x="2927.038" loc_y="2425.1265" loc_z="15.294146" rest_time="0"/>
 			<routestep step="2" loc_x="2922.107" loc_y="2427.4248" loc_z="15.396913" rest_time="0"/>
 			<routestep step="3" loc_x="2922.107" loc_y="2427.4248" loc_z="15.396913" rest_time="0"/>
@@ -7090,7 +7009,7 @@
 	</walker_template>
 	<walker_template route_id="275">
 		<routes>
-		<!-- NpcID: 212363 -->
+		<!-- NPC ID: 212363 -->
 			<routestep step="1" loc_x="2933.006" loc_y="2400.7878" loc_z="15.0" rest_time="0"/>
 			<routestep step="2" loc_x="2934.2576" loc_y="2406.724" loc_z="15.005829" rest_time="0"/>
 			<routestep step="3" loc_x="2934.2576" loc_y="2406.724" loc_z="15.005829" rest_time="0"/>
@@ -7133,7 +7052,7 @@
 	</walker_template>
 	<walker_template route_id="276">
 		<routes>
-		<!-- NpcID: 278051 -->
+		<!-- NPC ID: 278051 -->
 			<routestep step="1" loc_x="1005.9808" loc_y="2840.8564" loc_z="1641.1785" rest_time="0"/>
 			<routestep step="2" loc_x="1020.8508" loc_y="2843.0146" loc_z="1639.4342" rest_time="0"/>
 			<routestep step="3" loc_x="1038.1434" loc_y="2845.6567" loc_z="1635.905" rest_time="0"/>
@@ -7178,7 +7097,7 @@
 	</walker_template>
 	<walker_template route_id="277">
 		<routes>
-		<!-- NpcID: 278052 -->
+		<!-- NPC ID: 278052 -->
 			<routestep step="1" loc_x="1018.5627" loc_y="2903.8472" loc_z="1641.2391" rest_time="0"/>
 			<routestep step="2" loc_x="1032.1638" loc_y="2889.1575" loc_z="1637.9407" rest_time="0"/>
 			<routestep step="3" loc_x="1054.5447" loc_y="2862.9692" loc_z="1636.1416" rest_time="0"/>
@@ -7221,7 +7140,7 @@
 	</walker_template>
 	<walker_template route_id="278">
 		<routes>
-		<!-- NpcID: 278053 -->
+		<!-- NPC ID: 278053 -->
 			<routestep step="1" loc_x="1087.9281" loc_y="2870.6824" loc_z="1635.9108" rest_time="0"/>
 			<routestep step="2" loc_x="1087.959" loc_y="2855.3354" loc_z="1635.907" rest_time="0"/>
 			<routestep step="3" loc_x="1083.2505" loc_y="2845.636" loc_z="1635.907" rest_time="0"/>
@@ -7259,7 +7178,7 @@
 	</walker_template>
 	<walker_template route_id="279">
 		<routes>
-		<!-- NpcID: 278045 -->
+		<!-- NPC ID: 278045 -->
 			<routestep step="1" loc_x="981.2486" loc_y="2923.4019" loc_z="1642.3328" rest_time="0"/>
 			<routestep step="2" loc_x="866.5638" loc_y="2921.857" loc_z="1642.3473" rest_time="0"/>
 			<routestep step="3" loc_x="868.10144" loc_y="2923.3945" loc_z="1642.3473" rest_time="0"/>
@@ -7284,7 +7203,7 @@
 	</walker_template>
 	<walker_template route_id="280">
 		<routes>
-		<!-- NpcID: 278046 -->
+		<!-- NPC ID: 278046 -->
 			<routestep step="1" loc_x="1012.2742" loc_y="2951.9473" loc_z="1642.3442" rest_time="0"/>
 			<routestep step="2" loc_x="1002.7926" loc_y="2940.841" loc_z="1642.3376" rest_time="0"/>
 			<routestep step="3" loc_x="1020.23474" loc_y="2989.2493" loc_z="1642.347" rest_time="0"/>
@@ -7311,7 +7230,7 @@
 	</walker_template>
 	<walker_template route_id="281">
 		<routes>
-		<!-- NpcID: 278032 -->
+		<!-- NPC ID: 278032 -->
 			<routestep step="1" loc_x="930.8901" loc_y="2986.1165" loc_z="1646.3982" rest_time="0"/>
 			<routestep step="2" loc_x="932.9783" loc_y="2983.654" loc_z="1646.3982" rest_time="0"/>
 			<routestep step="3" loc_x="935.7198" loc_y="2980.997" loc_z="1646.3982" rest_time="0"/>
@@ -7438,7 +7357,7 @@
 	</walker_template>
 	<walker_template route_id="282">
 		<routes>
-		<!-- NpcID: 278033 -->
+		<!-- NPC ID: 278033 -->
 			<routestep step="1" loc_x="938.7421" loc_y="3005.054" loc_z="1646.3984" rest_time="0"/>
 			<routestep step="2" loc_x="936.1929" loc_y="3002.4102" loc_z="1646.3984" rest_time="0"/>
 			<routestep step="3" loc_x="937.9512" loc_y="3000.6245" loc_z="1646.3984" rest_time="0"/>
@@ -7594,7 +7513,7 @@
 	</walker_template>
 	<walker_template route_id="283">
 		<routes>
-		<!-- NpcID: 278034 -->
+		<!-- NPC ID: 278034 -->
 			<routestep step="1" loc_x="994.41455" loc_y="2933.237" loc_z="1642.3363" rest_time="0"/>
 			<routestep step="2" loc_x="999.64905" loc_y="2927.97" loc_z="1642.332" rest_time="0"/>
 			<routestep step="3" loc_x="1002.9442" loc_y="2924.0042" loc_z="1642.5563" rest_time="0"/>
@@ -7659,7 +7578,7 @@
 	</walker_template>
 	<walker_template route_id="284">
 		<routes>
-		<!-- NpcID: 277067 -->
+		<!-- NPC ID: 277067 -->
 			<routestep step="1" loc_x="1147.75" loc_y="2927.25" loc_z="1630.19" rest_time="0"/>
 			<routestep step="2" loc_x="1147.75" loc_y="2926.75" loc_z="1630.21" rest_time="0"/>
 			<routestep step="3" loc_x="1147.75" loc_y="2926.25" loc_z="1630.23" rest_time="0"/>
@@ -7673,7 +7592,7 @@
 	</walker_template>
 	<walker_template route_id="285">
 		<routes>
-		<!-- NpcID: 203620 -->
+		<!-- NPC ID: 203620 -->
 			<routestep step="1" loc_x="1802.9038" loc_y="704.9294" loc_z="263.4203" rest_time="0"/>
 			<routestep step="2" loc_x="1806.0746" loc_y="706.20953" loc_z="262.3327" rest_time="0"/>
 			<routestep step="3" loc_x="1811.0623" loc_y="708.18005" loc_z="260.67233" rest_time="0"/>
@@ -7720,7 +7639,7 @@
 	</walker_template>
 	<walker_template route_id="286">
 		<routes>
-		<!-- NpcID: 203621 -->
+		<!-- NPC ID: 203621 -->
 			<routestep step="1" loc_x="1883.8333" loc_y="706.68427" loc_z="258.05322" rest_time="0"/>
 			<routestep step="2" loc_x="1890.2303" loc_y="710.43646" loc_z="258.125" rest_time="0"/>
 			<routestep step="3" loc_x="1893.5891" loc_y="717.154" loc_z="258.23914" rest_time="0"/>
@@ -7811,7 +7730,7 @@
 	</walker_template>
 	<walker_template route_id="287">
 		<routes>
-		<!-- NpcID: 203637 -->
+		<!-- NPC ID: 203637 -->
 			<routestep step="1" loc_x="1954.628" loc_y="726.4576" loc_z="265.57678" rest_time="0"/>
 			<routestep step="2" loc_x="1954.5596" loc_y="728.9633" loc_z="265.34976" rest_time="0"/>
 			<routestep step="3" loc_x="1954.341" loc_y="731.19354" loc_z="265.13483" rest_time="0"/>
@@ -7872,7 +7791,7 @@
 	</walker_template>
 	<walker_template route_id="288">
 		<routes>
-		<!-- NpcID: 203636 -->
+		<!-- NPC ID: 203636 -->
 			<routestep step="1" loc_x="1955.6508" loc_y="725.48926" loc_z="265.65692" rest_time="0"/>
 			<routestep step="2" loc_x="1955.6473" loc_y="728.06976" loc_z="265.4736" rest_time="0"/>
 			<routestep step="3" loc_x="1955.6205" loc_y="730.60406" loc_z="265.30634" rest_time="0"/>
@@ -7936,7 +7855,7 @@
 	</walker_template>
 	<walker_template route_id="289">
 		<routes>
-		<!-- NpcID: 203584 -->
+		<!-- NPC ID: 203584 -->
 			<routestep step="1" loc_x="1953.6869" loc_y="724.4393" loc_z="265.70297" rest_time="0"/>
 			<routestep step="2" loc_x="1953.7631" loc_y="726.8848" loc_z="265.49957" rest_time="0"/>
 			<routestep step="3" loc_x="1954.0964" loc_y="728.97943" loc_z="265.31982" rest_time="0"/>
@@ -8000,7 +7919,7 @@
 	</walker_template>
 	<walker_template route_id="290">
 		<routes>
-		<!-- NpcID: 207789 -->
+		<!-- NPC ID: 207789 -->
 			<routestep step="1" loc_x="648.43915" loc_y="900.3764" loc_z="362.15906" rest_time="0"/>
 			<routestep step="2" loc_x="646.2704" loc_y="906.803" loc_z="360.83493" rest_time="0"/>
 			<routestep step="3" loc_x="643.4513" loc_y="911.74756" loc_z="360.625" rest_time="0"/>
@@ -8016,7 +7935,7 @@
 	</walker_template>
 	<walker_template route_id="291">
 		<routes>
-		<!-- NpcID: 207796 -->
+		<!-- NPC ID: 207796 -->
 			<routestep step="1" loc_x="649.9761" loc_y="901.9192" loc_z="362.14066" rest_time="0"/>
 			<routestep step="2" loc_x="647.51135" loc_y="908.66003" loc_z="360.67758" rest_time="0"/>
 			<routestep step="3" loc_x="644.6667" loc_y="913.6227" loc_z="360.4819" rest_time="0"/>
@@ -8032,7 +7951,7 @@
 	</walker_template>
 	<walker_template route_id="292">
 		<routes>
-		<!-- NpcID: 204333 -->
+		<!-- NPC ID: 204333 -->
 			<routestep step="1" loc_x="644.1607" loc_y="906.8412" loc_z="360.7558" rest_time="0"/>
 			<routestep step="2" loc_x="643.89276" loc_y="906.01654" loc_z="360.75" rest_time="0"/>
 			<routestep step="3" loc_x="644.3263" loc_y="906.76746" loc_z="360.76257" rest_time="0"/>
@@ -8040,7 +7959,7 @@
 	</walker_template>
 	<walker_template route_id="293">
 		<routes>
-		<!-- NpcID: 204343 -->
+		<!-- NPC ID: 204343 -->
 			<routestep step="1" loc_x="2451.4119" loc_y="1782.4321" loc_z="92.625" rest_time="0"/>
 			<routestep step="2" loc_x="2451.5684" loc_y="1775.7382" loc_z="92.5" rest_time="0"/>
 			<routestep step="3" loc_x="2453.496" loc_y="1770.092" loc_z="91.94949" rest_time="0"/>
@@ -8082,7 +8001,7 @@
 	</walker_template>
 	<walker_template route_id="294">
 		<routes>
-		<!-- NpcID: 204344 -->
+		<!-- NPC ID: 204344 -->
 			<routestep step="1" loc_x="2512.5728" loc_y="1736.6345" loc_z="88.5" rest_time="0"/>
 			<routestep step="2" loc_x="2506.5652" loc_y="1738.5891" loc_z="88.5" rest_time="0"/>
 			<routestep step="3" loc_x="2500.7961" loc_y="1743.3165" loc_z="88.57524" rest_time="0"/>
@@ -8118,7 +8037,7 @@
 	</walker_template>
 	<walker_template route_id="295">
 		<routes>
-		<!-- NpcID: 204421 -->
+		<!-- NPC ID: 204421 -->
 			<routestep step="1" loc_x="2477.8494" loc_y="1797.2933" loc_z="95.64526" rest_time="0"/>
 			<routestep step="2" loc_x="2477.262" loc_y="1791.047" loc_z="95.63472" rest_time="0"/>
 			<routestep step="3" loc_x="2477.1174" loc_y="1788.9546" loc_z="95.63473" rest_time="0"/>
@@ -8154,7 +8073,7 @@
 	</walker_template>
 	<walker_template route_id="296">
 		<routes>
-		<!-- NpcID: 204422 -->
+		<!-- NPC ID: 204422 -->
 			<routestep step="1" loc_x="2398.888" loc_y="1807.8057" loc_z="101.5" rest_time="0"/>
 			<routestep step="2" loc_x="2398.874" loc_y="1807.9666" loc_z="101.5" rest_time="0"/>
 			<routestep step="3" loc_x="2400.9827" loc_y="1805.7031" loc_z="101.64107" rest_time="0"/>
@@ -8203,7 +8122,7 @@
 	</walker_template>
 	<walker_template route_id="297">
 		<routes>
-		<!-- NpcID: 207862 -->
+		<!-- NPC ID: 207862 -->
 			<routestep step="1" loc_x="2413.5933" loc_y="1878.4858" loc_z="90.81427" rest_time="0"/>
 			<routestep step="2" loc_x="2416.966" loc_y="1838.7783" loc_z="94.2216" rest_time="0"/>
 			<routestep step="3" loc_x="2406.0872" loc_y="1842.7405" loc_z="97.39606" rest_time="0"/>
@@ -8220,7 +8139,7 @@
 	</walker_template>
 	<walker_template route_id="298">
 		<routes>
-		<!-- NpcID: 207874 -->
+		<!-- NPC ID: 207874 -->
 			<routestep step="1" loc_x="2389.0112" loc_y="1769.8187" loc_z="101.875" rest_time="0"/>
 			<routestep step="2" loc_x="2388.9028" loc_y="1760.3484" loc_z="101.875" rest_time="0"/>
 			<routestep step="3" loc_x="2392.852" loc_y="1751.6895" loc_z="102.08618" rest_time="0"/>
@@ -8246,7 +8165,7 @@
 	</walker_template>
 	<walker_template route_id="299">
 		<routes>
-		<!-- NpcID: 207873 -->
+		<!-- NPC ID: 207873 -->
 			<routestep step="1" loc_x="2533.2273" loc_y="1801.8573" loc_z="96.042816" rest_time="0"/>
 			<routestep step="2" loc_x="2534.9739" loc_y="1808.9463" loc_z="96.123276" rest_time="0"/>
 			<routestep step="3" loc_x="2536.2454" loc_y="1816.4116" loc_z="96.53699" rest_time="0"/>
@@ -8268,7 +8187,7 @@
 	</walker_template>
 	<walker_template route_id="300">
 		<routes>
-		<!-- NpcID: 207870 -->
+		<!-- NPC ID: 207870 -->
 			<routestep step="1" loc_x="2415.6355" loc_y="1877.5925" loc_z="90.90047" rest_time="0"/>
 			<routestep step="2" loc_x="2423.1042" loc_y="1839.2927" loc_z="93.180984" rest_time="0"/>
 			<routestep step="3" loc_x="2417.2122" loc_y="1836.636" loc_z="94.08762" rest_time="0"/>
@@ -8286,7 +8205,7 @@
 	</walker_template>
 	<walker_template route_id="301">
 		<routes>
-		<!-- NpcID: 207604 -->
+		<!-- NPC ID: 207604 -->
 			<routestep step="1" loc_x="559.50684" loc_y="1929.7595" loc_z="260.45786" rest_time="0"/>
 			<routestep step="2" loc_x="552.6776" loc_y="1934.4165" loc_z="260.30957" rest_time="0"/>
 			<routestep step="3" loc_x="545.2688" loc_y="1935.4972" loc_z="260.9322" rest_time="0"/>
@@ -8318,7 +8237,7 @@
 	</walker_template>
 	<walker_template route_id="302">
 		<routes>
-		<!-- NpcID: 207602 -->
+		<!-- NPC ID: 207602 -->
 			<routestep step="1" loc_x="557.61664" loc_y="1928.5656" loc_z="260.3854" rest_time="0"/>
 			<routestep step="2" loc_x="551.5416" loc_y="1932.5028" loc_z="260.40088" rest_time="0"/>
 			<routestep step="3" loc_x="545.35864" loc_y="1933.2632" loc_z="261.0325" rest_time="0"/>
@@ -8350,7 +8269,7 @@
 	</walker_template>
 	<walker_template route_id="303">
 		<routes>
-		<!-- NpcID: 207599 -->
+		<!-- NPC ID: 207599 -->
 			<routestep step="1" loc_x="557.79553" loc_y="1930.7942" loc_z="260.41187" rest_time="0"/>
 			<routestep step="2" loc_x="550.69226" loc_y="1934.5598" loc_z="260.4027" rest_time="0"/>
 			<routestep step="3" loc_x="543.5176" loc_y="1934.5316" loc_z="261.12192" rest_time="0"/>
@@ -8382,7 +8301,7 @@
 	</walker_template>
 	<walker_template route_id="304">
 		<routes>
-		<!-- NpcID: 207610 -->
+		<!-- NPC ID: 207610 -->
 			<routestep step="1" loc_x="552.08405" loc_y="1897.6626" loc_z="261.375" rest_time="0"/>
 			<routestep step="2" loc_x="551.3566" loc_y="1890.3326" loc_z="261.375" rest_time="0"/>
 			<routestep step="3" loc_x="545.78656" loc_y="1885.24" loc_z="261.375" rest_time="0"/>
@@ -8417,7 +8336,7 @@
 	</walker_template>
 	<walker_template route_id="305">
 		<routes>
-		<!-- NpcID: 207602 -->
+		<!-- NPC ID: 207602 -->
 			<routestep step="1" loc_x="553.9755" loc_y="1896.47" loc_z="261.375" rest_time="0"/>
 			<routestep step="2" loc_x="551.96814" loc_y="1888.1818" loc_z="261.375" rest_time="0"/>
 			<routestep step="3" loc_x="547.15234" loc_y="1883.4695" loc_z="261.375" rest_time="0"/>
@@ -8452,7 +8371,7 @@
 	</walker_template>
 	<walker_template route_id="306">
 		<routes>
-		<!-- NpcID: 207608 -->
+		<!-- NPC ID: 207608 -->
 			<routestep step="1" loc_x="554.17303" loc_y="1898.4602" loc_z="261.3667" rest_time="0"/>
 			<routestep step="2" loc_x="553.4442" loc_y="1889.5314" loc_z="261.375" rest_time="0"/>
 			<routestep step="3" loc_x="548.0224" loc_y="1885.2703" loc_z="261.375" rest_time="0"/>
@@ -8487,7 +8406,7 @@
 	</walker_template>
 	<walker_template route_id="307">
 		<routes>
-		<!-- NpcID: 207840 -->
+		<!-- NPC ID: 207840 -->
 			<routestep step="1" loc_x="2373.9954" loc_y="1264.101" loc_z="467.62527" rest_time="0"/>
 			<routestep step="2" loc_x="2377.5688" loc_y="1265.7601" loc_z="467.42868" rest_time="0"/>
 			<routestep step="3" loc_x="2380.9934" loc_y="1267.384" loc_z="467.077" rest_time="0"/>
@@ -8518,7 +8437,7 @@
 	</walker_template>
 	<walker_template route_id="308">
 		<routes>
-		<!-- NpcID: 207841 -->
+		<!-- NPC ID: 207841 -->
 			<routestep step="1" loc_x="2370.75" loc_y="1263.75" loc_z="467.8125" rest_time="0"/>
 			<routestep step="2" loc_x="2372.25" loc_y="1265.25" loc_z="467.66602" rest_time="0"/>
 			<routestep step="3" loc_x="2372.2542" loc_y="1265.501" loc_z="467.65222" rest_time="0"/>
@@ -8553,7 +8472,7 @@
 	</walker_template>
 	<walker_template route_id="309">
 		<routes>
-		<!-- NpcID: 207840 -->
+		<!-- NPC ID: 207840 -->
 			<routestep step="1" loc_x="2372.179" loc_y="1263.268" loc_z="467.69714" rest_time="0"/>
 			<routestep step="2" loc_x="2375.776" loc_y="1264.8971" loc_z="467.57523" rest_time="0"/>
 			<routestep step="3" loc_x="2379.1726" loc_y="1266.5574" loc_z="467.24646" rest_time="0"/>
@@ -8584,7 +8503,7 @@
 	</walker_template>
 	<walker_template route_id="310">
 		<routes>
-		<!-- NpcID: 204247 -->
+		<!-- NPC ID: 204247 -->
 			<routestep step="1" loc_x="1467.0151" loc_y="1391.6221" loc_z="177.53757" rest_time="0"/>
 			<routestep step="2" loc_x="1467.0043" loc_y="1396.6064" loc_z="177.53757" rest_time="0"/>
 			<routestep step="3" loc_x="1466.8986" loc_y="1401.359" loc_z="177.53757" rest_time="0"/>
@@ -8610,7 +8529,7 @@
 	</walker_template>
 	<walker_template route_id="311">
 		<routes>
-		<!-- NpcID: 204248 -->
+		<!-- NPC ID: 204248 -->
 			<routestep step="1" loc_x="1432.7015" loc_y="1374.0208" loc_z="176.9295" rest_time="0"/>
 			<routestep step="2" loc_x="1437.329" loc_y="1373.9987" loc_z="176.9295" rest_time="0"/>
 			<routestep step="3" loc_x="1442.3563" loc_y="1374.0524" loc_z="176.9295" rest_time="0"/>
@@ -8641,7 +8560,7 @@
 	</walker_template>
 	<walker_template route_id="312">
 		<routes>
-		<!-- NpcID: 204178 -->
+		<!-- NPC ID: 204178 -->
 			<routestep step="1" loc_x="1547.664" loc_y="1436.0541" loc_z="187.18057" rest_time="0"/>
 			<routestep step="2" loc_x="1543.5688" loc_y="1435.9241" loc_z="186.16698" rest_time="0"/>
 			<routestep step="3" loc_x="1540.2537" loc_y="1435.9891" loc_z="185.3464" rest_time="0"/>
@@ -8690,7 +8609,7 @@
 	</walker_template>
 	<walker_template route_id="313">
 		<routes>
-		<!-- NpcID: 204141 -->
+		<!-- NPC ID: 204141 -->
 			<routestep step="1" loc_x="1216.6053" loc_y="1486.9114" loc_z="213.83617" rest_time="0"/>
 			<routestep step="2" loc_x="1220.0139" loc_y="1477.3412" loc_z="213.83617" rest_time="0"/>
 			<routestep step="3" loc_x="1222.8325" loc_y="1474.457" loc_z="213.83617" rest_time="0"/>
@@ -8710,7 +8629,7 @@
 	</walker_template>
 	<walker_template route_id="314">
 		<routes>
-		<!-- NpcID: 204171 -->
+		<!-- NPC ID: 204171 -->
 			<routestep step="1" loc_x="979.23157" loc_y="1132.2368" loc_z="201.3929" rest_time="0"/>
 			<routestep step="2" loc_x="984.6832" loc_y="1133.8135" loc_z="201.40416" rest_time="0"/>
 			<routestep step="3" loc_x="989.6982" loc_y="1134.987" loc_z="202.89429" rest_time="0"/>
@@ -8729,7 +8648,7 @@
 	</walker_template>
 	<walker_template route_id="315">
 		<routes>
-		<!-- NpcID: 204168 -->
+		<!-- NPC ID: 204168 -->
 			<routestep step="1" loc_x="1066.9977" loc_y="1087.8022" loc_z="201.52081" rest_time="0"/>
 			<routestep step="2" loc_x="1060.4246" loc_y="1086.4778" loc_z="201.48059" rest_time="0"/>
 			<routestep step="3" loc_x="1054.7788" loc_y="1085.0869" loc_z="200.17606" rest_time="0"/>
@@ -8770,7 +8689,7 @@
 	</walker_template>
 	<walker_template route_id="316">
 		<routes>
-		<!-- NpcID: 798449 -->
+		<!-- NPC ID: 798449 -->
 			<routestep step="1" loc_x="843.09863" loc_y="1428.7352" loc_z="219.42696" rest_time="0"/>
 			<routestep step="2" loc_x="855.5943" loc_y="1416.1837" loc_z="219.42696" rest_time="0"/>
 			<routestep step="3" loc_x="856.81934" loc_y="1417.412" loc_z="219.44727" rest_time="0"/>
@@ -8818,7 +8737,7 @@
 	</walker_template>
 	<walker_template route_id="317">
 		<routes>
-		<!-- NpcID: 204180 -->
+		<!-- NPC ID: 204180 -->
 			<routestep step="1" loc_x="1531.177" loc_y="1365.551" loc_z="183.10938" rest_time="0"/>
 			<routestep step="2" loc_x="1531.079" loc_y="1364.5707" loc_z="183.08488" rest_time="0"/>
 			<routestep step="3" loc_x="1536.2751" loc_y="1364.9629" loc_z="184.38234" rest_time="0"/>
@@ -8859,7 +8778,7 @@
 	</walker_template>
 	<walker_template route_id="318">
 		<routes>
-		<!-- NpcID: 204145 -->
+		<!-- NPC ID: 204145 -->
 			<routestep step="1" loc_x="892.2815" loc_y="1430.5742" loc_z="212.80733" rest_time="0"/>
 			<routestep step="2" loc_x="896.0474" loc_y="1425.7413" loc_z="212.83789" rest_time="0"/>
 			<routestep step="3" loc_x="900.56805" loc_y="1421.984" loc_z="212.86366" rest_time="0"/>
@@ -8881,7 +8800,7 @@
 	</walker_template>
 	<walker_template route_id="319">
 		<routes>
-		<!-- NpcID: 204137 -->
+		<!-- NPC ID: 204137 -->
 			<routestep step="1" loc_x="982.26746" loc_y="1415.4122" loc_z="213.47319" rest_time="0"/>
 			<routestep step="2" loc_x="976.59357" loc_y="1411.7404" loc_z="213.46481" rest_time="0"/>
 			<routestep step="3" loc_x="971.59424" loc_y="1409.646" loc_z="213.0162" rest_time="0"/>
@@ -8906,7 +8825,7 @@
 	</walker_template>
 	<walker_template route_id="320">
 		<routes>
-		<!-- NpcID: 799736 -->
+		<!-- NPC ID: 799736 -->
 			<routestep step="1" loc_x="1779.3129" loc_y="2869.4734" loc_z="545.7431" rest_time="0"/>
 			<routestep step="2" loc_x="1785.0087" loc_y="2861.1143" loc_z="542.20984" rest_time="0"/>
 			<routestep step="3" loc_x="1787.3153" loc_y="2850.1619" loc_z="538.39496" rest_time="0"/>
@@ -8942,7 +8861,7 @@
 	</walker_template>
 	<walker_template route_id="321">
 		<routes>
-		<!-- NpcID: 799731 -->
+		<!-- NPC ID: 799731 -->
 			<routestep step="1" loc_x="1780.0627" loc_y="2866.808" loc_z="544.61" rest_time="0"/>
 			<routestep step="2" loc_x="1785.992" loc_y="2857.373" loc_z="540.86035" rest_time="0"/>
 			<routestep step="3" loc_x="1790.3062" loc_y="2847.3237" loc_z="536.8385" rest_time="0"/>
@@ -8978,7 +8897,7 @@
 	</walker_template>
 	<walker_template route_id="322">
 		<routes>
-		<!-- NpcID: 799735 -->
+		<!-- NPC ID: 799735 -->
 			<routestep step="1" loc_x="1778.2554" loc_y="2867.9277" loc_z="545.49005" rest_time="0"/>
 			<routestep step="2" loc_x="1784.2666" loc_y="2858.5664" loc_z="541.6258" rest_time="0"/>
 			<routestep step="3" loc_x="1788.0729" loc_y="2847.4368" loc_z="537.4176" rest_time="0"/>
@@ -9014,7 +8933,7 @@
 	</walker_template>
 	<walker_template route_id="323">
 		<routes>
-		<!-- NpcID: 799413 -->
+		<!-- NPC ID: 799413 -->
 			<routestep step="1" loc_x="900.1867" loc_y="1696.6085" loc_z="357.82962" rest_time="0"/>
 			<routestep step="2" loc_x="894.04706" loc_y="1699.3586" loc_z="357.50296" rest_time="0"/>
 			<routestep step="3" loc_x="886.8809" loc_y="1702.191" loc_z="357.36832" rest_time="0"/>
@@ -9046,7 +8965,7 @@
 	</walker_template>
 	<walker_template route_id="324">
 		<routes>
-		<!-- NpcID: 209268 -->
+		<!-- NPC ID: 209268 -->
 			<routestep step="1" loc_x="809.86816" loc_y="1713.8478" loc_z="356.53296" rest_time="0"/>
 			<routestep step="2" loc_x="806.19135" loc_y="1696.0139" loc_z="357.32626" rest_time="0"/>
 			<routestep step="3" loc_x="800.2553" loc_y="1688.7809" loc_z="360.41473" rest_time="0"/>
@@ -9063,7 +8982,7 @@
 	</walker_template>
 	<walker_template route_id="325">
 		<routes>
-		<!-- NpcID: 209272 -->
+		<!-- NPC ID: 209272 -->
 			<routestep step="1" loc_x="891.9655" loc_y="1677.7821" loc_z="358.15225" rest_time="0"/>
 			<routestep step="2" loc_x="886.8195" loc_y="1672.1261" loc_z="358.85922" rest_time="0"/>
 			<routestep step="3" loc_x="875.6836" loc_y="1687.0476" loc_z="357.4345" rest_time="0"/>
@@ -9081,7 +9000,7 @@
 	</walker_template>
 	<walker_template route_id="326">
 		<routes>
-		<!-- NpcID: 209262 -->
+		<!-- NPC ID: 209262 -->
 			<routestep step="1" loc_x="921.3308" loc_y="1662.904" loc_z="360.22687" rest_time="0"/>
 			<routestep step="2" loc_x="931.1917" loc_y="1669.3604" loc_z="363.13293" rest_time="0"/>
 			<routestep step="3" loc_x="921.48004" loc_y="1665.557" loc_z="360.2522" rest_time="0"/>
@@ -9102,7 +9021,7 @@
 	</walker_template>
 	<walker_template route_id="327">
 		<routes>
-		<!-- NpcID: 203869 -->
+		<!-- NPC ID: 203869 -->
 			<routestep step="1" loc_x="1915.4286" loc_y="1592.8585" loc_z="590.0154" rest_time="0"/>
 			<routestep step="2" loc_x="1917.808" loc_y="1589.8235" loc_z="590.0167" rest_time="0"/>
 			<routestep step="3" loc_x="1919.3364" loc_y="1587.5409" loc_z="590.01776" rest_time="0"/>
@@ -9127,7 +9046,7 @@
 	</walker_template>
 	<walker_template route_id="328">
 		<routes>
-		<!-- NpcID: 730030 -->
+		<!-- NPC ID: 730030 -->
 			<routestep step="1" loc_x="146.54922" loc_y="1612.8315" loc_z="121.39505" rest_time="0"/>
 			<routestep step="2" loc_x="142.08372" loc_y="1611.7247" loc_z="121.25523" rest_time="0"/>
 			<routestep step="3" loc_x="139.53474" loc_y="1612.1539" loc_z="121.24038" rest_time="0"/>
@@ -9205,7 +9124,7 @@
 	</walker_template>
 	<walker_template route_id="329">
 		<routes>
-		<!-- NpcID: 790018 -->
+		<!-- NPC ID: 790018 -->
 			<routestep step="1" loc_x="1690.4617" loc_y="2725.865" loc_z="108.75136" rest_time="0"/>
 			<routestep step="2" loc_x="1680.3381" loc_y="2717.8403" loc_z="113.09322" rest_time="0"/>
 			<routestep step="3" loc_x="1665.7859" loc_y="2712.8152" loc_z="115.25" rest_time="0"/>
@@ -9220,7 +9139,7 @@
 	</walker_template>
  	<walker_template route_id="330">
 		<routes>
-		<!-- NpcID: 204540 -->
+		<!-- NPC ID: 204540 -->
 			<routestep step="1" loc_x="1577.9727" loc_y="2667.3167" loc_z="114.07916" rest_time="0"/>
 			<routestep step="2" loc_x="1577.8627" loc_y="2660.3057" loc_z="111.88179" rest_time="0"/>
 			<routestep step="3" loc_x="1578.7021" loc_y="2654.4607" loc_z="110.0814" rest_time="0"/>
@@ -9280,7 +9199,7 @@
 	</walker_template>
 	<walker_template route_id="331">
 		<routes>
-		<!-- NpcID: 203872 -->
+		<!-- NPC ID: 203872 -->
 			<routestep step="1" loc_x="1814.5336" loc_y="1648.1912" loc_z="579.0613" rest_time="0"/>
 			<routestep step="2" loc_x="1807.6815" loc_y="1633.0698" loc_z="579.0611" rest_time="0"/>
 			<routestep step="3" loc_x="1804.9917" loc_y="1602.1818" loc_z="579.0617" rest_time="0"/>
@@ -9356,7 +9275,7 @@
 	</walker_template>
 	<walker_template route_id="332">
 		<routes>
-		<!-- NpcID: 217648 -->
+		<!-- NPC ID: 217648 -->
 			<routestep step="1" loc_x="1061.9935" loc_y="901.42474" loc_z="325.94653" rest_time="0"/>
 			<routestep step="2" loc_x="1059.9899" loc_y="893.6773" loc_z="326.12372" rest_time="0"/>
 			<routestep step="3" loc_x="1067.1398" loc_y="890.0797" loc_z="326.13745" rest_time="0"/>
@@ -9375,7 +9294,7 @@
 	</walker_template>
 	<walker_template route_id="333">
 		<routes>
-		<!-- NpcID: 217648 -->
+		<!-- NPC ID: 217648 -->
 			<routestep step="1" loc_x="1180.0223" loc_y="902.1259" loc_z="325.62112" rest_time="0"/>
 			<routestep step="2" loc_x="1183.1919" loc_y="894.77625" loc_z="325.62112" rest_time="0"/>
 			<routestep step="3" loc_x="1186.3615" loc_y="887.4266" loc_z="325.62115" rest_time="0"/>
@@ -9383,7 +9302,7 @@
 	</walker_template>
 	<walker_template route_id="334">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="992.90784" loc_y="915.49664" loc_z="326.26538" rest_time="0"/>
 			<routestep step="2" loc_x="990.0401" loc_y="893.7142" loc_z="326.26535" rest_time="0"/>
 			<routestep step="3" loc_x="989.84735" loc_y="885.97266" loc_z="326.26532" rest_time="0"/>
@@ -9445,7 +9364,7 @@
 	</walker_template>
 	<walker_template route_id="335">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="828.13983" loc_y="873.6939" loc_z="347.74127" rest_time="0"/>
 			<routestep step="2" loc_x="818.4894" loc_y="875.13824" loc_z="348.46942" rest_time="0"/>
 			<routestep step="3" loc_x="811.0552" loc_y="876.86633" loc_z="348.75" rest_time="0"/>
@@ -9500,7 +9419,7 @@
 	</walker_template>
 	<walker_template route_id="336">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1272.0936" loc_y="806.0939" loc_z="258.25" rest_time="0"/>
 			<routestep step="2" loc_x="1274.3969" loc_y="805.67426" loc_z="258.25" rest_time="0"/>
 			<routestep step="3" loc_x="1273.244" loc_y="806.53644" loc_z="258.25" rest_time="0"/>
@@ -9514,7 +9433,7 @@
 	</walker_template>
 	<walker_template route_id="337">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1192.3419" loc_y="897.51807" loc_z="325.65866" rest_time="0"/>
 			<routestep step="2" loc_x="1192.203" loc_y="876.66534" loc_z="325.6599" rest_time="0"/>
 			<routestep step="3" loc_x="1171.9843" loc_y="850.0689" loc_z="324.9763" rest_time="0"/>
@@ -9551,14 +9470,14 @@
 	</walker_template>
 	<walker_template route_id="338">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1278.4536" loc_y="886.354" loc_z="318.875" rest_time="0"/>
 			<routestep step="2" loc_x="1277.9526" loc_y="894.3331" loc_z="318.97443" rest_time="0"/>
 		</routes>
 	</walker_template>
 	<walker_template route_id="339">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1119.3564" loc_y="975.0957" loc_z="322.49286" rest_time="0"/>
 			<routestep step="2" loc_x="1124.6476" loc_y="974.13116" loc_z="322.49063" rest_time="0"/>
 			<routestep step="3" loc_x="1127.7885" loc_y="972.4209" loc_z="322.4643" rest_time="0"/>
@@ -9713,7 +9632,7 @@
 	</walker_template>
 	<walker_template route_id="340">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1080.2246" loc_y="885.4919" loc_z="325.94653" rest_time="0"/>
 			<routestep step="2" loc_x="1080.391" loc_y="884.709" loc_z="325.94653" rest_time="0"/>
 			<routestep step="3" loc_x="1079.9908" loc_y="885.40216" loc_z="325.94653" rest_time="0"/>
@@ -9754,7 +9673,7 @@
 	</walker_template>
 	<walker_template route_id="341">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1075.3966" loc_y="875.822" loc_z="326.09906" rest_time="0"/>
 			<routestep step="2" loc_x="1075.1714" loc_y="895.6146" loc_z="326.09842" rest_time="0"/>
 			<routestep step="3" loc_x="1075.2443" loc_y="911.276" loc_z="326.1004" rest_time="0"/>
@@ -9821,7 +9740,7 @@
 	</walker_template>
 	<walker_template route_id="342">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1011.5964" loc_y="970.1932" loc_z="323.93338" rest_time="0"/>
 			<routestep step="2" loc_x="1019.5163" loc_y="970.19745" loc_z="325.91074" rest_time="0"/>
 			<routestep step="3" loc_x="1026.3055" loc_y="970.1699" loc_z="327.351" rest_time="0"/>
@@ -9871,7 +9790,7 @@
 	</walker_template>
 	<walker_template route_id="343">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1271.6538" loc_y="861.3745" loc_z="255.77925" rest_time="0"/>
 			<routestep step="2" loc_x="1271.7935" loc_y="858.472" loc_z="256.75464" rest_time="0"/>
 			<routestep step="3" loc_x="1271.8035" loc_y="855.0857" loc_z="257.97073" rest_time="0"/>
@@ -9889,7 +9808,7 @@
 	</walker_template>
 	<walker_template route_id="344">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1223.332" loc_y="932.6512" loc_z="326.86456" rest_time="0"/>
 			<routestep step="2" loc_x="1223.4049" loc_y="948.31256" loc_z="326.98682" rest_time="0"/>
 			<routestep step="3" loc_x="1223.292" loc_y="963.3092" loc_z="327.01343" rest_time="0"/>
@@ -9914,7 +9833,7 @@
 	</walker_template>
 	<walker_template route_id="345">
 		<routes>
-		<!-- NpcID: 217186 -->
+		<!-- NPC ID: 217186 -->
 			<routestep step="1" loc_x="1138.6754" loc_y="893.3085" loc_z="316.55252" rest_time="0"/>
 			<routestep step="2" loc_x="1144.8975" loc_y="894.4745" loc_z="316.55258" rest_time="0"/>
 			<routestep step="3" loc_x="1151.4563" loc_y="898.4676" loc_z="316.55258" rest_time="0"/>
@@ -9959,7 +9878,7 @@
 	</walker_template>
 	<walker_template route_id="346">
 		<routes>
-		<!-- NpcID: 217190 -->
+		<!-- NPC ID: 217190 -->
 			<routestep step="1" loc_x="1200.7664" loc_y="928.9876" loc_z="325.62115" rest_time="0"/>
 			<routestep step="2" loc_x="1199.6979" loc_y="923.75964" loc_z="325.6212" rest_time="0"/>
 			<routestep step="3" loc_x="1198.6295" loc_y="918.5317" loc_z="325.6212" rest_time="0"/>
@@ -10013,7 +9932,7 @@
 	</walker_template>
 	<walker_template route_id="347">
 		<routes>
-		<!-- NpcID: 217190 -->
+		<!-- NPC ID: 217190 -->
 			<routestep step="1" loc_x="1095.706" loc_y="902.0055" loc_z="318.30444" rest_time="0"/>
 			<routestep step="2" loc_x="1101.0198" loc_y="902.16876" loc_z="316.52975" rest_time="0"/>
 			<routestep step="3" loc_x="1101.0198" loc_y="902.16876" loc_z="316.52975" rest_time="0"/>
@@ -10021,14 +9940,14 @@
 	</walker_template>
 	<walker_template route_id="348">
 		<routes>
-		<!-- NpcID: 217190 -->
+		<!-- NPC ID: 217190 -->
 			<routestep step="1" loc_x="1229.1039" loc_y="935.0666" loc_z="326.86456" rest_time="0"/>
 			<routestep step="2" loc_x="1228.482" loc_y="929.7903" loc_z="326.86456" rest_time="0"/>
 		</routes>
 	</walker_template>
 	<walker_template route_id="349">
 		<routes>
-		<!-- NpcID: 217200 -->
+		<!-- NPC ID: 217200 -->
 			<routestep step="1" loc_x="1301.2886" loc_y="1096.1779" loc_z="191.9259" rest_time="0"/>
 			<routestep step="2" loc_x="1298.839" loc_y="1096.2725" loc_z="191.97134" rest_time="0"/>
 			<routestep step="3" loc_x="1291.1194" loc_y="1096.703" loc_z="192.10696" rest_time="0"/>
@@ -10053,7 +9972,7 @@
 	</walker_template>
 	<walker_template route_id="350">
 		<routes>
-		<!-- NpcID: 217200 -->
+		<!-- NPC ID: 217200 -->
 			<routestep step="1" loc_x="1333.261" loc_y="1096.7052" loc_z="191.96887" rest_time="0"/>
 			<routestep step="2" loc_x="1324.3179" loc_y="1095.8907" loc_z="191.91774" rest_time="0"/>
 			<routestep step="3" loc_x="1321.0978" loc_y="1095.6102" loc_z="191.9349" rest_time="0"/>
@@ -10094,7 +10013,7 @@
 	</walker_template>
 	<walker_template route_id="351">
 		<routes>
-		<!-- NpcID: 217200 -->
+		<!-- NPC ID: 217200 -->
 			<routestep step="1" loc_x="1391.9402" loc_y="1158.0815" loc_z="192.10992" rest_time="0"/>
 			<routestep step="2" loc_x="1390.1487" loc_y="1152.0289" loc_z="192.06918" rest_time="0"/>
 			<routestep step="3" loc_x="1390.1487" loc_y="1152.0289" loc_z="192.06918" rest_time="0"/>
@@ -10125,7 +10044,7 @@
 	</walker_template>
 	<walker_template route_id="352">
 		<routes>
-		<!-- NpcID: 217200 -->
+		<!-- NPC ID: 217200 -->
 			<routestep step="1" loc_x="1392.7378" loc_y="1182.7087" loc_z="192.16554" rest_time="0"/>
 			<routestep step="2" loc_x="1393.9441" loc_y="1177.227" loc_z="192.17464" rest_time="0"/>
 			<routestep step="3" loc_x="1394.7389" loc_y="1173.3646" loc_z="192.1781" rest_time="0"/>
@@ -10147,7 +10066,7 @@
 	</walker_template>
 	<walker_template route_id="353">
 		<routes>
-		<!-- NpcID: 217228 -->
+		<!-- NPC ID: 217228 -->
 			<routestep step="1" loc_x="1239.0281" loc_y="1149.4882" loc_z="192.19954" rest_time="0"/>
 			<routestep step="2" loc_x="1237.0895" loc_y="1161.0735" loc_z="192.18797" rest_time="0"/>
 			<routestep step="3" loc_x="1237.2306" loc_y="1177.9177" loc_z="192.17754" rest_time="0"/>
@@ -10205,7 +10124,7 @@
 	</walker_template>
 	<walker_template route_id="354">
 		<routes>
-		<!-- NpcID: 217228 -->
+		<!-- NPC ID: 217228 -->
 			<routestep step="1" loc_x="1355.868" loc_y="1208.5543" loc_z="188.32455" rest_time="0"/>
 			<routestep step="2" loc_x="1349.2073" loc_y="1213.9586" loc_z="188.32458" rest_time="0"/>
 			<routestep step="3" loc_x="1340.9753" loc_y="1219.2167" loc_z="188.32457" rest_time="0"/>
@@ -10232,7 +10151,7 @@
 	</walker_template>
 	<walker_template route_id="355">
 		<routes>
-		<!-- NpcID: 217228 -->
+		<!-- NPC ID: 217228 -->
 			<routestep step="1" loc_x="1319.1053" loc_y="1086.0988" loc_z="193.23074" rest_time="0"/>
 			<routestep step="2" loc_x="1317.5643" loc_y="1091.1083" loc_z="192.64964" rest_time="0"/>
 			<routestep step="3" loc_x="1315.5503" loc_y="1095.981" loc_z="192.12137" rest_time="0"/>
@@ -10243,7 +10162,7 @@
 	</walker_template>
 	<walker_template route_id="356">
 		<routes>
-		<!-- NpcID: 217228 -->
+		<!-- NPC ID: 217228 -->
 			<routestep step="1" loc_x="1311.2733" loc_y="1086.0535" loc_z="193.23146" rest_time="0"/>
 			<routestep step="2" loc_x="1311.7896" loc_y="1091.3309" loc_z="192.65172" rest_time="0"/>
 			<routestep step="3" loc_x="1312.3058" loc_y="1096.6082" loc_z="191.87616" rest_time="0"/>
@@ -10253,7 +10172,7 @@
 	</walker_template>
 	<walker_template route_id="357">
 		<routes>
-		<!-- NpcID: 217201 -->
+		<!-- NPC ID: 217201 -->
 			<routestep step="1" loc_x="1358.3837" loc_y="1211.6642" loc_z="188.32457" rest_time="0"/>
 			<routestep step="2" loc_x="1342.7246" loc_y="1222.8138" loc_z="188.32457" rest_time="0"/>
 			<routestep step="3" loc_x="1333.3228" loc_y="1227.2692" loc_z="188.32457" rest_time="0"/>
@@ -10279,7 +10198,7 @@
 	</walker_template>
 	<walker_template route_id="358">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1369.8341" loc_y="1142.3824" loc_z="188.32458" rest_time="0"/>
 			<routestep step="2" loc_x="1365.4978" loc_y="1135.0485" loc_z="188.3246" rest_time="0"/>
 			<routestep step="3" loc_x="1355.1997" loc_y="1125.0234" loc_z="188.32455" rest_time="0"/>
@@ -10331,7 +10250,7 @@
 	</walker_template>
 	<walker_template route_id="359">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1171.0939" loc_y="1089.284" loc_z="194.18518" rest_time="0"/>
 			<routestep step="2" loc_x="1171.716" loc_y="1089.7877" loc_z="194.19125" rest_time="0"/>
 			<routestep step="3" loc_x="1171.3904" loc_y="1089.0565" loc_z="194.19075" rest_time="0"/>
@@ -10343,7 +10262,7 @@
 	</walker_template>
 	<walker_template route_id="360">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1139.707" loc_y="1104.6411" loc_z="194.58775" rest_time="0"/>
 			<routestep step="2" loc_x="1131.886" loc_y="1103.3977" loc_z="193.81224" rest_time="0"/>
 			<routestep step="3" loc_x="1123.9452" loc_y="1103.7991" loc_z="191.61722" rest_time="0"/>
@@ -10355,7 +10274,7 @@
 	</walker_template>
 	<walker_template route_id="361">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1137.2589" loc_y="1093.0543" loc_z="194.60495" rest_time="0"/>
 			<routestep step="2" loc_x="1129.5502" loc_y="1094.9924" loc_z="193.69696" rest_time="0"/>
 			<routestep step="3" loc_x="1121.8555" loc_y="1096.9912" loc_z="191.47969" rest_time="0"/>
@@ -10371,7 +10290,7 @@
 	</walker_template>
 	<walker_template route_id="362">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1315.6157" loc_y="1102.246" loc_z="189.54889" rest_time="0"/>
 			<routestep step="2" loc_x="1315.5656" loc_y="1092.182" loc_z="192.65138" rest_time="0"/>
 			<routestep step="3" loc_x="1315.5912" loc_y="1102.3403" loc_z="189.49725" rest_time="0"/>
@@ -10391,7 +10310,7 @@
 	</walker_template>
 	<walker_template route_id="363">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1258.8873" loc_y="1181.3049" loc_z="188.32458" rest_time="0"/>
 			<routestep step="2" loc_x="1256.9902" loc_y="1168.4885" loc_z="188.32457" rest_time="0"/>
 			<routestep step="3" loc_x="1259.116" loc_y="1156.6093" loc_z="188.32455" rest_time="0"/>
@@ -10432,7 +10351,7 @@
 	</walker_template>
 	<walker_template route_id="364">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1254.4209" loc_y="1181.8817" loc_z="188.32458" rest_time="0"/>
 			<routestep step="2" loc_x="1252.7411" loc_y="1168.5845" loc_z="188.32457" rest_time="0"/>
 			<routestep step="3" loc_x="1254.9213" loc_y="1155.5022" loc_z="188.32455" rest_time="0"/>
@@ -10473,7 +10392,7 @@
 	</walker_template>
 	<walker_template route_id="365">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1261.2833" loc_y="1099.3384" loc_z="192.51189" rest_time="0"/>
 			<routestep step="2" loc_x="1257.5801" loc_y="1100.1718" loc_z="192.38629" rest_time="0"/>
 			<routestep step="3" loc_x="1250.9766" loc_y="1095.823" loc_z="191.3582" rest_time="0"/>
@@ -10486,7 +10405,7 @@
 	</walker_template>
 	<walker_template route_id="366">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1343.4478" loc_y="1114.7095" loc_z="188.32455" rest_time="0"/>
 			<routestep step="2" loc_x="1332.2849" loc_y="1111.0037" loc_z="188.32455" rest_time="0"/>
 			<routestep step="3" loc_x="1343.4714" loc_y="1114.7584" loc_z="188.32455" rest_time="0"/>
@@ -10534,7 +10453,7 @@
 	</walker_template>
 	<walker_template route_id="367">
 		<routes>
-		<!-- NpcID: 217196 -->
+		<!-- NPC ID: 217196 -->
 			<routestep step="1" loc_x="1340.5281" loc_y="1119.6343" loc_z="188.32455" rest_time="0"/>
 			<routestep step="2" loc_x="1329.591" loc_y="1116.1934" loc_z="188.32455" rest_time="0"/>
 			<routestep step="3" loc_x="1340.5625" loc_y="1119.8055" loc_z="188.32455" rest_time="0"/>
@@ -10585,7 +10504,7 @@
 	</walker_template>
 	<walker_template route_id="368">
 		<routes>
-		<!-- NpcID: 217202 -->
+		<!-- NPC ID: 217202 -->
 			<routestep step="1" loc_x="1375.5264" loc_y="1119.7925" loc_z="192.08934" rest_time="0"/>
 			<routestep step="2" loc_x="1374.0981" loc_y="1118.2329" loc_z="192.09894" rest_time="0"/>
 			<routestep step="3" loc_x="1368.8976" loc_y="1113.3629" loc_z="192.10927" rest_time="0"/>
@@ -10651,7 +10570,7 @@
 	</walker_template>
 	<walker_template route_id="369">
 		<routes>
-		<!-- NpcID: 217202 -->
+		<!-- NPC ID: 217202 -->
 			<routestep step="1" loc_x="1320.6115" loc_y="1139.7212" loc_z="188.44995" rest_time="0"/>
 			<routestep step="2" loc_x="1320.056" loc_y="1134.4142" loc_z="188.44415" rest_time="0"/>
 			<routestep step="3" loc_x="1316.1302" loc_y="1130.8002" loc_z="188.4148" rest_time="0"/>
@@ -10664,7 +10583,7 @@
 	</walker_template>
 	<walker_template route_id="370">
 		<routes>
-		<!-- NpcID: 217202 -->
+		<!-- NPC ID: 217202 -->
 			<routestep step="1" loc_x="1310.3094" loc_y="1140.0234" loc_z="188.44025" rest_time="0"/>
 			<routestep step="2" loc_x="1314.9462" loc_y="1137.3827" loc_z="188.42038" rest_time="0"/>
 			<routestep step="3" loc_x="1316.358" loc_y="1135.6624" loc_z="188.4148" rest_time="0"/>
@@ -10673,7 +10592,7 @@
 	</walker_template>
 	<walker_template route_id="371">
 		<routes>
-		<!-- NpcID: 217189 -->
+		<!-- NPC ID: 217189 -->
 			<routestep step="1" loc_x="1005.6853" loc_y="915.732" loc_z="326.26535" rest_time="0"/>
 			<routestep step="2" loc_x="1005.0494" loc_y="916.056" loc_z="326.26535" rest_time="0"/>
 			<routestep step="3" loc_x="1004.3396" loc_y="916.1306" loc_z="326.26535" rest_time="0"/>
@@ -10714,7 +10633,7 @@
 	</walker_template>
 	<walker_template route_id="372">
 		<routes>
-		<!-- NpcID: 217189 -->
+		<!-- NPC ID: 217189 -->
 			<routestep step="1" loc_x="1037.4669" loc_y="947.1841" loc_z="327.35095" rest_time="0"/>
 			<routestep step="2" loc_x="1037.8427" loc_y="941.8713" loc_z="327.35095" rest_time="0"/>
 			<routestep step="3" loc_x="1038.2181" loc_y="936.56244" loc_z="327.54065" rest_time="0"/>
@@ -10772,7 +10691,7 @@
 	</walker_template>
 	<walker_template route_id="373">
 		<routes>
-		<!-- NpcID: 217189 -->
+		<!-- NPC ID: 217189 -->
 			<routestep step="1" loc_x="1028.9429" loc_y="949.0468" loc_z="327.35095" rest_time="0"/>
 			<routestep step="2" loc_x="1027.4994" loc_y="951.568" loc_z="327.35098" rest_time="0"/>
 			<routestep step="3" loc_x="1025.0057" loc_y="951.93616" loc_z="327.35098" rest_time="0"/>
@@ -10896,7 +10815,7 @@
 	</walker_template>
 	<walker_template route_id="374">
 		<routes>
-		<!-- NpcID: 217194 -->
+		<!-- NPC ID: 217194 -->
 			<routestep step="1" loc_x="1177.6724" loc_y="868.6252" loc_z="326.54095" rest_time="0"/>
 			<routestep step="2" loc_x="1176.4941" loc_y="863.43414" loc_z="325.6212" rest_time="0"/>
 			<routestep step="3" loc_x="1177.6724" loc_y="868.6252" loc_z="326.54095" rest_time="0"/>
@@ -10931,7 +10850,7 @@
 	</walker_template>
 	<walker_template route_id="375">
 		<routes>
-		<!-- NpcID: 217194 -->
+		<!-- NPC ID: 217194 -->
 			<routestep step="1" loc_x="1181.8411" loc_y="926.5074" loc_z="326.53958" rest_time="0"/>
 			<routestep step="2" loc_x="1183.6742" loc_y="921.50586" loc_z="326.54263" rest_time="0"/>
 			<routestep step="3" loc_x="1185.5033" loc_y="916.51544" loc_z="325.89905" rest_time="0"/>
@@ -10984,7 +10903,7 @@
 	</walker_template>
 	<walker_template route_id="376">
 		<routes>
-		<!-- NpcID: 217188 -->
+		<!-- NPC ID: 217188 -->
 			<routestep step="1" loc_x="1038.6302" loc_y="942.3568" loc_z="327.35095" rest_time="0"/>
 			<routestep step="2" loc_x="1039.3628" loc_y="937.08734" loc_z="327.37885" rest_time="0"/>
 			<routestep step="3" loc_x="1040.0942" loc_y="931.8259" loc_z="329.0007" rest_time="0"/>
@@ -11047,7 +10966,7 @@
 	</walker_template>
 	<walker_template route_id="377">
 		<routes>
-		<!-- NpcID: 217188 -->
+		<!-- NPC ID: 217188 -->
 			<routestep step="1" loc_x="1165.1191" loc_y="961.1743" loc_z="316.52975" rest_time="0"/>
 			<routestep step="2" loc_x="1164.9344" loc_y="960.4849" loc_z="316.52975" rest_time="0"/>
 			<routestep step="3" loc_x="1164.7139" loc_y="959.80615" loc_z="316.52975" rest_time="0"/>
@@ -11105,7 +11024,7 @@
 	</walker_template>
 	<walker_template route_id="378">
 		<routes>
-		<!-- NpcID: 217188 -->
+		<!-- NPC ID: 217188 -->
 			<routestep step="1" loc_x="1168.2954" loc_y="976.2757" loc_z="326.86462" rest_time="0"/>
 			<routestep step="2" loc_x="1171.1162" loc_y="972.2596" loc_z="326.9794" rest_time="0"/>
 			<routestep step="3" loc_x="1172.3429" loc_y="970.51306" loc_z="326.99518" rest_time="0"/>
@@ -11128,7 +11047,7 @@
 	</walker_template>
 	<walker_template route_id="379">
 		<routes>
-		<!-- NpcID: 217187 -->
+		<!-- NPC ID: 217187 -->
 			<routestep step="1" loc_x="1178.662" loc_y="879.50073" loc_z="326.5407" rest_time="0"/>
 			<routestep step="2" loc_x="1179.6884" loc_y="874.26874" loc_z="326.31592" rest_time="0"/>
 			<routestep step="3" loc_x="1181.7466" loc_y="869.3531" loc_z="326.54" rest_time="0"/>
@@ -11190,7 +11109,7 @@
 	</walker_template>
 	<walker_template route_id="380">
 		<routes>
-		<!-- NpcID: 217187 -->
+		<!-- NPC ID: 217187 -->
 			<routestep step="1" loc_x="1025.8417" loc_y="925.8643" loc_z="329.4151" rest_time="0"/>
 			<routestep step="2" loc_x="1028.8663" loc_y="921.4683" loc_z="329.4151" rest_time="0"/>
 			<routestep step="3" loc_x="1031.9761" loc_y="917.13214" loc_z="329.41507" rest_time="0"/>
@@ -11235,7 +11154,7 @@
 	</walker_template>
 	<walker_template route_id="381">
 		<routes>
-		<!-- NpcID: 217193 -->
+		<!-- NPC ID: 217193 -->
 			<routestep step="1" loc_x="1177.0713" loc_y="929.16626" loc_z="326.5372" rest_time="0"/>
 			<routestep step="2" loc_x="1178.5402" loc_y="924.0372" loc_z="327.15" rest_time="0"/>
 			<routestep step="3" loc_x="1179.9672" loc_y="918.8983" loc_z="326.53906" rest_time="0"/>
@@ -11287,7 +11206,7 @@
 	</walker_template>
 	<walker_template route_id="382">
 		<routes>
-		<!-- NpcID: 217193 -->
+		<!-- NPC ID: 217193 -->
 			<routestep step="1" loc_x="787.4947" loc_y="1084.7249" loc_z="362.88342" rest_time="0"/>
 			<routestep step="2" loc_x="788.78687" loc_y="1078.8398" loc_z="362.88342" rest_time="0"/>
 			<routestep step="3" loc_x="788.90375" loc_y="1076.7086" loc_z="362.88342" rest_time="0"/>
@@ -11299,7 +11218,7 @@
 	</walker_template>
 	<walker_template route_id="383">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="957.48267" loc_y="603.83374" loc_z="245.0412" rest_time="0"/>
 			<routestep step="2" loc_x="957.22314" loc_y="605.04016" loc_z="245.26688" rest_time="0"/>
 			<routestep step="3" loc_x="957.22314" loc_y="605.04016" loc_z="245.26688" rest_time="0"/>
@@ -11334,7 +11253,7 @@
 	</walker_template>
 	<walker_template route_id="384">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="870.93207" loc_y="573.05133" loc_z="185.99255" rest_time="0"/>
 			<routestep step="2" loc_x="869.5457" loc_y="564.2447" loc_z="186.48431" rest_time="0"/>
 			<routestep step="3" loc_x="869.5457" loc_y="564.2447" loc_z="186.48431" rest_time="0"/>
@@ -11363,7 +11282,7 @@
 	</walker_template>
 	<walker_template route_id="385">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="942.0172" loc_y="546.3575" loc_z="241.02167" rest_time="0"/>
 			<routestep step="2" loc_x="942.0172" loc_y="546.3575" loc_z="241.02167" rest_time="0"/>
 			<routestep step="3" loc_x="948.13043" loc_y="542.38293" loc_z="240.78868" rest_time="0"/>
@@ -11416,7 +11335,7 @@
 	</walker_template>
 	<walker_template route_id="386">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="965.79" loc_y="532.76526" loc_z="240.10068" rest_time="0"/>
 			<routestep step="2" loc_x="965.79" loc_y="532.76526" loc_z="240.10068" rest_time="0"/>
 			<routestep step="3" loc_x="963.90857" loc_y="525.7178" loc_z="238.97093" rest_time="0"/>
@@ -11478,7 +11397,7 @@
 	</walker_template>
 	<walker_template route_id="387">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="978.7122" loc_y="523.96423" loc_z="237.79004" rest_time="0"/>
 			<routestep step="2" loc_x="975.5138" loc_y="535.9856" loc_z="239.12479" rest_time="0"/>
 			<routestep step="3" loc_x="976.85406" loc_y="548.338" loc_z="240.01498" rest_time="0"/>
@@ -11509,7 +11428,7 @@
 	</walker_template>
 	<walker_template route_id="388">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="985.58545" loc_y="497.9526" loc_z="233.33725" rest_time="0"/>
 			<routestep step="2" loc_x="990.2281" loc_y="477.65137" loc_z="229.43463" rest_time="0"/>
 			<routestep step="3" loc_x="985.5427" loc_y="497.9702" loc_z="233.33897" rest_time="0"/>
@@ -11532,7 +11451,7 @@
 	</walker_template>
 	<walker_template route_id="389">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="1035.9202" loc_y="490.42392" loc_z="245.40543" rest_time="0"/>
 			<routestep step="2" loc_x="1022.8502" loc_y="524.3578" loc_z="244.78076" rest_time="0"/>
 			<routestep step="3" loc_x="1019.3782" loc_y="552.32556" loc_z="243.57797" rest_time="0"/>
@@ -11545,7 +11464,7 @@
 	</walker_template>
 	<walker_template route_id="400">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="1031.8943" loc_y="476.41376" loc_z="245.46092" rest_time="0"/>
 			<routestep step="2" loc_x="1031.8943" loc_y="476.41376" loc_z="245.46092" rest_time="0"/>
 			<routestep step="3" loc_x="1023.96844" loc_y="474.76352" loc_z="245.71414" rest_time="0"/>
@@ -11564,7 +11483,7 @@
 	</walker_template>
 	<walker_template route_id="401">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="1042.8419" loc_y="476.65802" loc_z="245.08725" rest_time="0"/>
 			<routestep step="2" loc_x="1050.9393" loc_y="462.50833" loc_z="244.125" rest_time="0"/>
 			<routestep step="3" loc_x="1042.788" loc_y="476.70963" loc_z="245.0842" rest_time="0"/>
@@ -11593,7 +11512,7 @@
 	</walker_template>
 	<walker_template route_id="402">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="1064.4563" loc_y="439.00037" loc_z="243.15897" rest_time="0"/>
 			<routestep step="2" loc_x="1064.4563" loc_y="439.00037" loc_z="243.15897" rest_time="0"/>
 			<routestep step="3" loc_x="1064.4547" loc_y="431.70767" loc_z="243.03578" rest_time="0"/>
@@ -11627,7 +11546,7 @@
 	</walker_template>
 	<walker_template route_id="403">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="1085.9011" loc_y="536.19934" loc_z="268.39294" rest_time="0"/>
 			<routestep step="2" loc_x="1085.9011" loc_y="536.19934" loc_z="268.39294" rest_time="0"/>
 			<routestep step="3" loc_x="1078.8566" loc_y="538.0941" loc_z="268.80103" rest_time="0"/>
@@ -11675,7 +11594,7 @@
 	</walker_template>
 	<walker_template route_id="404">
 		<routes>
-		<!-- NpcID: 217184 -->
+		<!-- NPC ID: 217184 -->
 			<routestep step="1" loc_x="1028.212" loc_y="561.82324" loc_z="242.99677" rest_time="0"/>
 			<routestep step="2" loc_x="1028.212" loc_y="561.82324" loc_z="242.99677" rest_time="0"/>
 			<routestep step="3" loc_x="1027.5994" loc_y="562.3194" loc_z="242.98004" rest_time="0"/>
@@ -11707,7 +11626,7 @@
 	</walker_template>
 	<walker_template route_id="405">
 		<routes>
-		<!-- NpcID: 799577 -->
+		<!-- NPC ID: 799577 -->
 			<routestep step="1" loc_x="1204.1428" loc_y="909.46075" loc_z="325.62112" rest_time="0"/>
 			<routestep step="2" loc_x="1203.954" loc_y="903.6387" loc_z="325.62112" rest_time="0"/>
 			<routestep step="3" loc_x="1203.5966" loc_y="898.143" loc_z="325.62112" rest_time="0"/>
@@ -12091,7 +12010,7 @@
 	</walker_template>
 	<walker_template route_id="406">
 		<routes>
-		<!-- NpcID: 799577 -->
+		<!-- NPC ID: 799577 -->
 			<routestep step="1" loc_x="1219.2251" loc_y="940.9306" loc_z="326.8646" rest_time="0"/>
 			<routestep step="2" loc_x="1219.4216" loc_y="935.42914" loc_z="326.86456" rest_time="0"/>
 			<routestep step="3" loc_x="1219.5824" loc_y="928.8801" loc_z="326.86456" rest_time="0"/>
@@ -12442,7 +12361,7 @@
 	</walker_template>
 	<walker_template route_id="407">
 		<routes>
-		<!-- NpcID: 799577 -->
+		<!-- NPC ID: 799577 -->
 			<routestep step="1" loc_x="1230.792" loc_y="975.2381" loc_z="326.86453" rest_time="0"/>
 			<routestep step="2" loc_x="1230.923" loc_y="970.7618" loc_z="326.86453" rest_time="0"/>
 			<routestep step="3" loc_x="1231.0153" loc_y="965.7822" loc_z="326.86453" rest_time="0"/>
@@ -12712,7 +12631,7 @@
 	</walker_template>
 	<walker_template route_id="408">
 		<routes>
-		<!-- NpcID: 799577 -->
+		<!-- NPC ID: 799577 -->
 			<routestep step="1" loc_x="1189.1123" loc_y="894.636" loc_z="325.62115" rest_time="0"/>
 			<routestep step="2" loc_x="1188.3253" loc_y="890.9121" loc_z="325.62115" rest_time="0"/>
 			<routestep step="3" loc_x="1186.6737" loc_y="888.5162" loc_z="325.62115" rest_time="0"/>
@@ -13100,7 +13019,7 @@
 	</walker_template>
 	<walker_template route_id="409">
 		<routes>
-		<!-- NpcID: 799577 -->
+		<!-- NPC ID: 799577 -->
 			<routestep step="1" loc_x="1158.0743" loc_y="911.4327" loc_z="316.52972" rest_time="0"/>
 			<routestep step="2" loc_x="1156.5929" loc_y="905.1642" loc_z="316.52975" rest_time="0"/>
 			<routestep step="3" loc_x="1153.8651" loc_y="900.1978" loc_z="316.55258" rest_time="0"/>
@@ -13530,7 +13449,7 @@
 	</walker_template>
 	<walker_template route_id="410">
 		<routes>
-		<!-- NpcID: 799577 -->
+		<!-- NPC ID: 799577 -->
 			<routestep step="1" loc_x="1153.7617" loc_y="936.498" loc_z="316.52972" rest_time="0"/>
 			<routestep step="2" loc_x="1156.1096" loc_y="932.56885" loc_z="316.52972" rest_time="0"/>
 			<routestep step="3" loc_x="1157.323" loc_y="927.69086" loc_z="316.52972" rest_time="0"/>
@@ -13940,7 +13859,7 @@
 	</walker_template>
 	<walker_template route_id="411">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="506.34668" loc_y="396.47232" loc_z="327.21832" rest_time="0"/>
 			<routestep step="2" loc_x="504.09354" loc_y="392.34805" loc_z="327.19073" rest_time="0"/>
 			<routestep step="3" loc_x="501.3519" loc_y="387.51395" loc_z="327.15714" rest_time="0"/>
@@ -13968,7 +13887,7 @@
 	</walker_template>
 	<walker_template route_id="412">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="481.61813" loc_y="385.65512" loc_z="327.0619" rest_time="0"/>
 			<routestep step="2" loc_x="484.6296" loc_y="391.20126" loc_z="327.06122" rest_time="0"/>
 			<routestep step="3" loc_x="487.73212" loc_y="396.65344" loc_z="327.07788" rest_time="0"/>
@@ -13985,7 +13904,7 @@
 	</walker_template>
 	<walker_template route_id="413">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="506.8307" loc_y="410.79642" loc_z="327.38297" rest_time="0"/>
 			<routestep step="2" loc_x="511.6125" loc_y="407.8133" loc_z="327.38293" rest_time="0"/>
 			<routestep step="3" loc_x="514.0876" loc_y="406.36813" loc_z="327.38293" rest_time="0"/>
@@ -14011,7 +13930,7 @@
 	</walker_template>
 	<walker_template route_id="414">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="542.1093" loc_y="321.15326" loc_z="299.66272" rest_time="0"/>
 			<routestep step="2" loc_x="538.29944" loc_y="322.7374" loc_z="299.896" rest_time="0"/>
 			<routestep step="3" loc_x="542.1093" loc_y="321.15326" loc_z="299.66272" rest_time="0"/>
@@ -14035,7 +13954,7 @@
 	</walker_template>
 	<walker_template route_id="415">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="540.1316" loc_y="321.4044" loc_z="299.89246" rest_time="0"/>
 			<routestep step="2" loc_x="540.2908" loc_y="322.658" loc_z="299.79132" rest_time="0"/>
 			<routestep step="3" loc_x="540.1316" loc_y="321.4044" loc_z="299.89246" rest_time="0"/>
@@ -14074,7 +13993,7 @@
 	</walker_template>
 	<walker_template route_id="416">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="573.1371" loc_y="326.3729" loc_z="302.32745" rest_time="0"/>
 			<routestep step="2" loc_x="563.704" loc_y="327.23337" loc_z="301.3636" rest_time="0"/>
 			<routestep step="3" loc_x="554.8835" loc_y="329.49368" loc_z="300.8921" rest_time="0"/>
@@ -14095,7 +14014,7 @@
 	</walker_template>
 	<walker_template route_id="417">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="572.9515" loc_y="324.39474" loc_z="302.51013" rest_time="0"/>
 			<routestep step="2" loc_x="563.14526" loc_y="325.31473" loc_z="301.375" rest_time="0"/>
 			<routestep step="3" loc_x="555.34863" loc_y="327.58527" loc_z="301.04358" rest_time="0"/>
@@ -14116,7 +14035,7 @@
 	</walker_template>
 	<walker_template route_id="418">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="434.14615" loc_y="251.5402" loc_z="313.3777" rest_time="0"/>
 			<routestep step="2" loc_x="422.32642" loc_y="247.92596" loc_z="317.3527" rest_time="0"/>
 			<routestep step="3" loc_x="428.33456" loc_y="248.32332" loc_z="315.95984" rest_time="0"/>
@@ -14157,7 +14076,7 @@
 	</walker_template>
 	<walker_template route_id="419">
 		<routes>
-		<!-- NpcID: 209051 -->
+		<!-- NPC ID: 209051 -->
 			<routestep step="1" loc_x="434.00467" loc_y="249.65627" loc_z="313.66623" rest_time="0"/>
 			<routestep step="2" loc_x="422.22232" loc_y="249.87367" loc_z="316.9959" rest_time="0"/>
 			<routestep step="3" loc_x="428.46872" loc_y="250.20747" loc_z="315.57758" rest_time="0"/>
@@ -14197,7 +14116,7 @@
 	</walker_template>
 	<walker_template route_id="420">
 		<routes>
-		<!-- NpcID: 216367 -->
+		<!-- NPC ID: 216367 -->
 			<routestep step="1" loc_x="367.5412" loc_y="491.57373" loc_z="305.03824" rest_time="0"/>
 			<routestep step="2" loc_x="367.5462" loc_y="473.39505" loc_z="305.03824" rest_time="0"/>
 			<routestep step="3" loc_x="367.5869" loc_y="453.94324" loc_z="304.76096" rest_time="0"/>
@@ -14216,7 +14135,7 @@
 	</walker_template>
 	<walker_template route_id="421">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1245.3135" loc_y="809.5697" loc_z="300.39905" rest_time="0"/>
 			<routestep step="2" loc_x="1239.4968" loc_y="800.6896" loc_z="300.3991" rest_time="0"/>
 			<routestep step="3" loc_x="1234.7843" loc_y="794.96606" loc_z="300.39825" rest_time="0"/>
@@ -14240,7 +14159,7 @@
 	</walker_template>
 	<walker_template route_id="422">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1260.7346" loc_y="881.26434" loc_z="301.43713" rest_time="0"/>
 			<routestep step="2" loc_x="1251.4565" loc_y="881.1252" loc_z="301.43707" rest_time="0"/>
 			<routestep step="3" loc_x="1242.0509" loc_y="881.17615" loc_z="301.43707" rest_time="0"/>
@@ -14257,7 +14176,7 @@
 	</walker_template>
 	<walker_template route_id="423">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1292.0178" loc_y="869.623" loc_z="301.95892" rest_time="0"/>
 			<routestep step="2" loc_x="1291.9668" loc_y="855.90674" loc_z="301.95892" rest_time="0"/>
 			<routestep step="3" loc_x="1291.9668" loc_y="843.3224" loc_z="301.95892" rest_time="0"/>
@@ -14271,7 +14190,7 @@
 	</walker_template>
 	<walker_template route_id="424">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1199.8744" loc_y="763.09546" loc_z="300.7208" rest_time="0"/>
 			<routestep step="2" loc_x="1209.3145" loc_y="763.03864" loc_z="300.7208" rest_time="0"/>
 			<routestep step="3" loc_x="1220.1733" loc_y="763.0445" loc_z="300.7208" rest_time="0"/>
@@ -14289,7 +14208,7 @@
 	</walker_template>
 	<walker_template route_id="425">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1268.5946" loc_y="692.2499" loc_z="300.41788" rest_time="0"/>
 			<routestep step="2" loc_x="1262.5277" loc_y="700.775" loc_z="300.41693" rest_time="0"/>
 			<routestep step="3" loc_x="1256.558" loc_y="709.2382" loc_z="300.41687" rest_time="0"/>
@@ -14302,7 +14221,7 @@
 	</walker_template>
 	<walker_template route_id="426">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1227.1882" loc_y="655.11536" loc_z="301.43677" rest_time="0"/>
 			<routestep step="2" loc_x="1220.1295" loc_y="655.1744" loc_z="301.43677" rest_time="0"/>
 			<routestep step="3" loc_x="1217.8424" loc_y="654.6578" loc_z="301.43692" rest_time="0"/>
@@ -14317,7 +14236,7 @@
 	</walker_template>
 	<walker_template route_id="427">
 		<routes>
-		<!-- NpcID: 216375 -->
+		<!-- NPC ID: 216375 -->
 			<routestep step="1" loc_x="1289.3666" loc_y="665.38007" loc_z="301.95822" rest_time="0"/>
 			<routestep step="2" loc_x="1289.3666" loc_y="656.49036" loc_z="301.95822" rest_time="0"/>
 			<routestep step="3" loc_x="1289.7192" loc_y="656.4906" loc_z="301.9583" rest_time="0"/>
@@ -14328,7 +14247,7 @@
 	</walker_template>
 	<walker_template route_id="428">
 		<routes>
-		<!-- NpcID: 216372 -->
+		<!-- NPC ID: 216372 -->
 			<routestep step="1" loc_x="1251.7186" loc_y="755.55347" loc_z="302.8411" rest_time="0"/>
 			<routestep step="2" loc_x="1259.3596" loc_y="755.61096" loc_z="302.8411" rest_time="0"/>
 			<routestep step="3" loc_x="1259.3291" loc_y="754.81854" loc_z="302.8411" rest_time="0"/>
@@ -14348,7 +14267,7 @@
 	</walker_template>
 	<walker_template route_id="429">
 		<routes>
-		<!-- NpcID: 216372 -->
+		<!-- NPC ID: 216372 -->
 			<routestep step="1" loc_x="1240.6954" loc_y="779.7773" loc_z="300.8121" rest_time="0"/>
 			<routestep step="2" loc_x="1230.3387" loc_y="779.74146" loc_z="300.8121" rest_time="0"/>
 			<routestep step="3" loc_x="1219.8787" loc_y="779.72754" loc_z="300.8121" rest_time="0"/>
@@ -14368,7 +14287,7 @@
 	</walker_template>
 	<walker_template route_id="430">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="499.51407" loc_y="1146.979" loc_z="332.73047" rest_time="0"/>
 			<routestep step="2" loc_x="499.82037" loc_y="1139.6833" loc_z="332.73047" rest_time="0"/>
 			<routestep step="3" loc_x="498.04776" loc_y="1133.5802" loc_z="332.7305" rest_time="0"/>
@@ -14388,7 +14307,7 @@
 	</walker_template>
 	<walker_template route_id="431">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="530.4086" loc_y="1223.6672" loc_z="303.25" rest_time="0"/>
 			<routestep step="2" loc_x="530.729" loc_y="1213.9773" loc_z="303.25" rest_time="0"/>
 			<routestep step="3" loc_x="536.9753" loc_y="1211.5625" loc_z="303.1953" rest_time="0"/>
@@ -14400,7 +14319,7 @@
 	</walker_template>
 	<walker_template route_id="432">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="532.4086" loc_y="1223.6698" loc_z="303.25" rest_time="0"/>
 			<routestep step="2" loc_x="532.4199" loc_y="1215.043" loc_z="303.25" rest_time="0"/>
 			<routestep step="3" loc_x="535.3145" loc_y="1210.4503" loc_z="303.05627" rest_time="0"/>
@@ -14412,7 +14331,7 @@
 	</walker_template>
 	<walker_template route_id="433">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="535.53125" loc_y="1146.2239" loc_z="332.5204" rest_time="0"/>
 			<routestep step="2" loc_x="538.8889" loc_y="1146.0603" loc_z="332.50195" rest_time="0"/>
 			<routestep step="3" loc_x="535.57697" loc_y="1146.0449" loc_z="332.52637" rest_time="0"/>
@@ -14432,7 +14351,7 @@
 	</walker_template>
 	<walker_template route_id="434">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="531.2152" loc_y="1129.5215" loc_z="332.40817" rest_time="0"/>
 			<routestep step="2" loc_x="535.23834" loc_y="1129.5573" loc_z="332.4108" rest_time="0"/>
 			<routestep step="3" loc_x="538.596" loc_y="1129.3937" loc_z="332.4179" rest_time="0"/>
@@ -14452,7 +14371,7 @@
 	</walker_template>
 	<walker_template route_id="435">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="573.42535" loc_y="1212.3384" loc_z="303.125" rest_time="0"/>
 			<routestep step="2" loc_x="563.09753" loc_y="1211.6017" loc_z="303.19507" rest_time="0"/>
 			<routestep step="3" loc_x="554.98724" loc_y="1211.3132" loc_z="303.125" rest_time="0"/>
@@ -14467,7 +14386,7 @@
 	</walker_template>
 	<walker_template route_id="436">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="573.2831" loc_y="1214.3333" loc_z="303.125" rest_time="0"/>
 			<routestep step="2" loc_x="563.0264" loc_y="1213.6003" loc_z="303.13715" rest_time="0"/>
 			<routestep step="3" loc_x="555.35516" loc_y="1213.2788" loc_z="303.125" rest_time="0"/>
@@ -14482,7 +14401,7 @@
 	</walker_template>
 	<walker_template route_id="437">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="693.22156" loc_y="1114.5914" loc_z="319.1274" rest_time="0"/>
 			<routestep step="2" loc_x="685.191" loc_y="1114.1875" loc_z="319.1274" rest_time="0"/>
 			<routestep step="3" loc_x="678.64453" loc_y="1112.5205" loc_z="319.1274" rest_time="0"/>
@@ -14500,7 +14419,7 @@
 	</walker_template>
 	<walker_template route_id="438">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="693.1211" loc_y="1116.5889" loc_z="319.1274" rest_time="0"/>
 			<routestep step="2" loc_x="684.69745" loc_y="1116.1256" loc_z="319.1274" rest_time="0"/>
 			<routestep step="3" loc_x="676.6816" loc_y="1112.9038" loc_z="319.1274" rest_time="0"/>
@@ -14518,7 +14437,7 @@
 	</walker_template>
 	<walker_template route_id="439">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="619.9816" loc_y="1067.167" loc_z="325.18863" rest_time="0"/>
 			<routestep step="2" loc_x="627.68176" loc_y="1067.0485" loc_z="323.33862" rest_time="0"/>
 			<routestep step="3" loc_x="636.1419" loc_y="1067.0409" loc_z="321.306" rest_time="0"/>
@@ -14543,7 +14462,7 @@
 	</walker_template>
 	<walker_template route_id="440">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="620.0116" loc_y="1069.1115" loc_z="325.18686" rest_time="0"/>
 			<routestep step="2" loc_x="627.68195" loc_y="1068.9932" loc_z="323.34384" rest_time="0"/>
 			<routestep step="3" loc_x="636.10815" loc_y="1068.9923" loc_z="321.3194" rest_time="0"/>
@@ -14563,7 +14482,7 @@
 	</walker_template>
 	<walker_template route_id="441">
 		<routes>
-		<!-- NpcID: 209251 -->
+		<!-- NPC ID: 209251 -->
 			<routestep step="1" loc_x="620.04156" loc_y="1071.0559" loc_z="325.18506" rest_time="0"/>
 			<routestep step="2" loc_x="627.6821" loc_y="1070.9379" loc_z="323.34906" rest_time="0"/>
 			<routestep step="3" loc_x="636.0744" loc_y="1070.9437" loc_z="321.3328" rest_time="0"/>
@@ -14583,7 +14502,7 @@
 	</walker_template>
 	<walker_template route_id="442">
 		<routes>
-		<!-- NpcID: 216354 -->
+		<!-- NPC ID: 216354 -->
 			<routestep step="1" loc_x="794.50616" loc_y="1041.9307" loc_z="324.62704" rest_time="0"/>
 			<routestep step="2" loc_x="794.75" loc_y="1041.25" loc_z="324.63" rest_time="0"/>
 			<routestep step="3" loc_x="794.75" loc_y="1040.75" loc_z="324.64" rest_time="0"/>
@@ -14775,7 +14694,7 @@
 	</walker_template>
 	<walker_template route_id="443">
 		<routes>
-		<!-- NpcID: 216357 -->
+		<!-- NPC ID: 216357 -->
 			<routestep step="1" loc_x="883.09924" loc_y="1062.3765" loc_z="324.8952" rest_time="0"/>
 			<routestep step="2" loc_x="882.9622" loc_y="1052.2448" loc_z="325.07846" rest_time="0"/>
 			<routestep step="3" loc_x="882.74304" loc_y="1045.7518" loc_z="325.07846" rest_time="0"/>
@@ -14796,7 +14715,7 @@
 	</walker_template>
 	<walker_template route_id="444">
 		<routes>
-		<!-- NpcID: 216357 -->
+		<!-- NPC ID: 216357 -->
 			<routestep step="1" loc_x="772.75" loc_y="1057.25" loc_z="324.67" rest_time="0"/>
 			<routestep step="2" loc_x="767.75" loc_y="1062.25" loc_z="324.74" rest_time="0"/>
 			<routestep step="3" loc_x="759.0829" loc_y="1080.7445" loc_z="324.4079" rest_time="0"/>
@@ -14884,7 +14803,7 @@
 	</walker_template>
 	<walker_template route_id="445">
 		<routes>
-		<!-- NpcID: 216357 -->
+		<!-- NPC ID: 216357 -->
 			<routestep step="1" loc_x="870.75" loc_y="992.75" loc_z="322.64" rest_time="0"/>
 			<routestep step="2" loc_x="869.25" loc_y="992.75" loc_z="322.57" rest_time="0"/>
 			<routestep step="3" loc_x="861.95496" loc_y="987.74066" loc_z="322.48846" rest_time="0"/>
@@ -14908,7 +14827,7 @@
 	</walker_template>
 	<walker_template route_id="446">
 		<routes>
-		<!-- NpcID: 216355 -->
+		<!-- NPC ID: 216355 -->
 			<routestep step="1" loc_x="911.57916" loc_y="1096.1562" loc_z="316.36234" rest_time="0"/>
 			<routestep step="2" loc_x="903.2174" loc_y="1096.1562" loc_z="316.36234" rest_time="0"/>
 			<routestep step="3" loc_x="895.092" loc_y="1096.261" loc_z="316.36234" rest_time="0"/>
@@ -14926,7 +14845,7 @@
 	</walker_template>
 	<walker_template route_id="447">
 		<routes>
-		<!-- NpcID: 216355 -->
+		<!-- NPC ID: 216355 -->
 			<routestep step="1" loc_x="870.75" loc_y="992.75" loc_z="322.64" rest_time="0"/>
 			<routestep step="2" loc_x="869.25" loc_y="992.75" loc_z="322.57" rest_time="0"/>
 			<routestep step="3" loc_x="861.9572" loc_y="989.74066" loc_z="322.48846" rest_time="0"/>
@@ -14948,7 +14867,7 @@
 	</walker_template>
 	<walker_template route_id="448">
 		<routes>
-		<!-- NpcID: 216355 -->
+		<!-- NPC ID: 216355 -->
 			<routestep step="1" loc_x="881.09973" loc_y="1062.4036" loc_z="324.88275" rest_time="0"/>
 			<routestep step="2" loc_x="880.9634" loc_y="1052.3123" loc_z="325.07846" rest_time="0"/>
 			<routestep step="3" loc_x="880.7642" loc_y="1045.4617" loc_z="325.07846" rest_time="0"/>
@@ -14966,7 +14885,7 @@
 	</walker_template>
 	<walker_template route_id="449">
 		<routes>
-		<!-- NpcID: 216356 -->
+		<!-- NPC ID: 216356 -->
 			<routestep step="1" loc_x="911.57916" loc_y="1094.1562" loc_z="316.36234" rest_time="0"/>
 			<routestep step="2" loc_x="903.19135" loc_y="1094.1564" loc_z="316.36234" rest_time="0"/>
 			<routestep step="3" loc_x="895.1346" loc_y="1094.2615" loc_z="316.36234" rest_time="0"/>
@@ -14984,7 +14903,7 @@
 	</walker_template>
 	<walker_template route_id="450">
 		<routes>
-		<!-- NpcID: 216381 -->
+		<!-- NPC ID: 216381 -->
 			<routestep step="1" loc_x="802.6159" loc_y="1044.9275" loc_z="324.52145" rest_time="0"/>
 			<routestep step="2" loc_x="830.5507" loc_y="1044.988" loc_z="325.03326" rest_time="0"/>
 			<routestep step="3" loc_x="821.41675" loc_y="1044.715" loc_z="325.03326" rest_time="0"/>
@@ -15010,7 +14929,7 @@
 	</walker_template>
 	<walker_template route_id="451">
 		<routes>
-		<!-- NpcID: 216383 -->
+		<!-- NPC ID: 216383 -->
 			<routestep step="1" loc_x="802.59454" loc_y="1046.9274" loc_z="324.4866" rest_time="0"/>
 			<routestep step="2" loc_x="830.49097" loc_y="1046.9872" loc_z="325.03326" rest_time="0"/>
 			<routestep step="3" loc_x="821.38763" loc_y="1046.712" loc_z="325.03326" rest_time="0"/>
@@ -15036,7 +14955,7 @@
 	</walker_template>
 	<walker_template route_id="452">
 		<routes>
-		<!-- NpcID: 216389 -->
+		<!-- NPC ID: 216389 -->
 			<routestep step="1" loc_x="1118.75" loc_y="1045.75" loc_z="305.98" rest_time="0"/>
 			<routestep step="2" loc_x="1118.75" loc_y="1046.25" loc_z="305.98" rest_time="0"/>
 			<routestep step="3" loc_x="1118.25" loc_y="1046.75" loc_z="305.98" rest_time="0"/>
@@ -15145,7 +15064,7 @@
 	</walker_template>
 	<walker_template route_id="453">
 		<routes>
-		<!-- NpcID: 216390 -->
+		<!-- NPC ID: 216390 -->
 			<routestep step="1" loc_x="1108.1892" loc_y="1074.0822" loc_z="305.98486" rest_time="0"/>
 			<routestep step="2" loc_x="1103.36" loc_y="1073.8464" loc_z="305.98486" rest_time="0"/>
 			<routestep step="3" loc_x="1108.1903" loc_y="1073.8848" loc_z="305.98486" rest_time="0"/>
@@ -15159,7 +15078,7 @@
 	</walker_template>
 	<walker_template route_id="454">
 		<routes>
-		<!-- NpcID: 216378 -->
+		<!-- NPC ID: 216378 -->
 			<routestep step="1" loc_x="987.16656" loc_y="1111.6743" loc_z="314.64868" rest_time="0"/>
 			<routestep step="2" loc_x="983.9595" loc_y="1111.7032" loc_z="314.64868" rest_time="0"/>
 			<routestep step="3" loc_x="981.83307" loc_y="1110.8339" loc_z="314.76138" rest_time="0"/>
@@ -15175,7 +15094,7 @@
 	</walker_template>
 	<walker_template route_id="455">
 		<routes>
-		<!-- NpcID: 216379 -->
+		<!-- NPC ID: 216379 -->
 			<routestep step="1" loc_x="1052.0516" loc_y="1094.9711" loc_z="310.3836" rest_time="0"/>
 			<routestep step="2" loc_x="1052.1127" loc_y="1100.6091" loc_z="310.3836" rest_time="0"/>
 			<routestep step="3" loc_x="1052.1432" loc_y="1106.3604" loc_z="310.3836" rest_time="0"/>
@@ -15192,7 +15111,7 @@
 	</walker_template>
 	<walker_template route_id="456">
 		<routes>
-		<!-- NpcID: 216383 -->
+		<!-- NPC ID: 216383 -->
 			<routestep step="1" loc_x="1119.75" loc_y="1047.75" loc_z="305.98" rest_time="0"/>
 			<routestep step="2" loc_x="1119.75" loc_y="1048.25" loc_z="305.98" rest_time="0"/>
 			<routestep step="3" loc_x="1119.25" loc_y="1048.75" loc_z="305.98" rest_time="0"/>
@@ -15296,7 +15215,7 @@
 	</walker_template>
 	<walker_template route_id="457">
 		<routes>
-		<!-- NpcID: 216387 -->
+		<!-- NPC ID: 216387 -->
 			<routestep step="1" loc_x="1128.8759" loc_y="1121.4728" loc_z="306.3309" rest_time="0"/>
 			<routestep step="2" loc_x="1128.8759" loc_y="1121.4728" loc_z="306.3309" rest_time="0"/>
 			<routestep step="3" loc_x="1122.0857" loc_y="1126.9825" loc_z="306.81458" rest_time="0"/>
@@ -15304,14 +15223,14 @@
 	</walker_template>
 	<walker_template route_id="458">
 		<routes>
-		<!-- NpcID: 216435 -->
+		<!-- NPC ID: 216435 -->
 			<routestep step="1" loc_x="1798.7479" loc_y="1350.8745" loc_z="319.4317" rest_time="0"/>
 			<routestep step="2" loc_x="1823.1195" loc_y="1339.3348" loc_z="318.31848" rest_time="0"/>
 		</routes>
 	</walker_template>
 	<walker_template route_id="459">
 		<routes>
-		<!-- NpcID: 216433 -->
+		<!-- NPC ID: 216433 -->
 			<routestep step="1" loc_x="1796.134" loc_y="1354.4982" loc_z="319.8413" rest_time="0"/>
 			<routestep step="2" loc_x="1819.6381" loc_y="1342.0986" loc_z="318.53268" rest_time="0"/>
 			<routestep step="3" loc_x="1878.3717" loc_y="1276.7147" loc_z="314.34277" rest_time="0"/>
@@ -15322,7 +15241,7 @@
 	</walker_template>
 	<walker_template route_id="460">
 		<routes>
-		<!-- NpcID: 207776 -->
+		<!-- NPC ID: 207776 -->
 			<routestep step="1" loc_x="2010.5503" loc_y="1403.7637" loc_z="118.21561" rest_time="0"/>
 			<routestep step="2" loc_x="2011.6335" loc_y="1401.7683" loc_z="118.1479" rest_time="0"/>
 			<routestep step="3" loc_x="2014.0192" loc_y="1400.2133" loc_z="118.12513" rest_time="0"/>
@@ -15359,7 +15278,7 @@
 	</walker_template>
 	<walker_template route_id="461">
 		<routes>
-		<!-- NpcID: 207747 -->
+		<!-- NPC ID: 207747 -->
 			<routestep step="1" loc_x="2008.8386" loc_y="1402.7312" loc_z="118.322586" rest_time="0"/>
 			<routestep step="2" loc_x="2010.5552" loc_y="1400.0842" loc_z="118.2153" rest_time="0"/>
 			<routestep step="3" loc_x="2013.3282" loc_y="1398.3363" loc_z="118.125" rest_time="0"/>
@@ -15396,7 +15315,7 @@
 	</walker_template>
 	<walker_template route_id="462">
 		<routes>
-		<!-- NpcID: 207754 -->
+		<!-- NPC ID: 207754 -->
 			<routestep step="1" loc_x="2013.412" loc_y="1390.8813" loc_z="118.125" rest_time="0"/>
 			<routestep step="2" loc_x="2017.5396" loc_y="1392.0853" loc_z="118.125" rest_time="0"/>
 			<routestep step="3" loc_x="2023.6663" loc_y="1394.2928" loc_z="118.125" rest_time="0"/>
@@ -15440,7 +15359,7 @@
 			<routestep step="41" loc_x="2007.0411" loc_y="1415.6105" loc_z="118.298256" rest_time="0"/>
 		</routes>
 	</walker_template>
-	<!-- Arenzes (Sanctum Artisans Hall)-->
+	<!-- Arenzes (Sanctum Artisans Hall) -->
 	<walker_template route_id="463">
 		<routes>
 			<routestep step="1" loc_x="1853.4939" loc_y="1510.3104" loc_z="590.0696" rest_time="12" />
@@ -15455,7 +15374,7 @@
 			<routestep step="10" loc_x="1853.5543" loc_y="1506.6027" loc_z="590.0696" rest_time="0" />
 		</routes>
 	</walker_template>
-	<!-- Captain Mituna (Top abyss miragent/fenris quest)-->
+	<!-- Captain Mituna (Top abyss miragent/fenris quest) -->
 	<walker_template route_id="464">
 		<routes>
 			<routestep step="1" loc_x="1565.19" loc_y="1944.87" loc_z="2898.90" rest_time="0" />
@@ -15497,7 +15416,7 @@
 	</walker_template>
 	<walker_template route_id="465">
 		<routes>
-		<!-- NpcID: Gyrr / 205445 -->
+		<!-- NPC ID: 205445 -->
 			<routestep step="1" loc_x="1404.0992" loc_y="312.37982" loc_z="589.58154" rest_time="0"/>
 			<routestep step="2" loc_x="1394.476" loc_y="296.0293" loc_z="589.2817" rest_time="0"/>
 			<routestep step="3" loc_x="1375.2302" loc_y="288.71033" loc_z="588.75" rest_time="0"/>
@@ -15548,5 +15467,45 @@
 			<routestep step="48" loc_x="1346.6492" loc_y="298.265" loc_z="588.625" rest_time="0"/>
 			<routestep step="49" loc_x="1354.6823" loc_y="289.37274" loc_z="588.625" rest_time="0"/>
 		</routes>
-	</walker_template>	
+	</walker_template>
+	<!--  -->
+	<walker_template route_id="466">
+		<routes>	
+			<routestep step="1" loc_x="2165.9014" loc_y="1606.1564" loc_z="1212.0769" rest_time="0"/>
+			<routestep step="2" loc_x="2167.585" loc_y="1613.8917" loc_z="1212.0771" rest_time="0"/>
+			<routestep step="3" loc_x="2167.2644" loc_y="1612.3689" loc_z="1212.0771" rest_time="0"/>
+			<routestep step="4" loc_x="2165.9014" loc_y="1606.1564" loc_z="1212.0769" rest_time="0"/>
+			<routestep step="5" loc_x="2167.585" loc_y="1613.8917" loc_z="1212.0771" rest_time="0"/>
+		</routes>
+	</walker_template>
+	<!-- Ниер / 203077 (Фоета) -->
+	<walker_template route_id="467">
+		<routes>	
+			<routestep step="1" loc_x="577.2396" loc_y="1470.0391" loc_z="112.48487" rest_time="5"/>
+			<routestep step="2" loc_x="583.0563" loc_y="1492.3168" loc_z="114.46081" rest_time="0"/>
+			<routestep step="3" loc_x="596.20306" loc_y="1512.3417" loc_z="114.625" rest_time="0"/>
+			<routestep step="4" loc_x="602.2514" loc_y="1528.8065" loc_z="115.14072" rest_time="0"/>
+			<routestep step="5" loc_x="616.98846" loc_y="1542.5826" loc_z="115.875" rest_time="0"/>
+			<routestep step="6" loc_x="618.53394" loc_y="1559.5082" loc_z="116.22452" rest_time="0"/>
+			<routestep step="7" loc_x="630.2739" loc_y="1574.7266" loc_z="118.375" rest_time="5"/>
+			<routestep step="8" loc_x="618.53394" loc_y="1559.5082" loc_z="116.22452" rest_time="0"/>
+			<routestep step="9" loc_x="616.98846" loc_y="1542.5826" loc_z="115.875" rest_time="0"/>
+			<routestep step="10" loc_x="602.2514" loc_y="1528.8065" loc_z="115.14072" rest_time="0"/>
+			<routestep step="11" loc_x="596.20306" loc_y="1512.3417" loc_z="114.625" rest_time="0"/>
+			<routestep step="12" loc_x="583.0563" loc_y="1492.3168" loc_z="114.46081" rest_time="0"/>
+		</routes>
+	</walker_template>
+	<!-- Фотис / 203078 (Фоета) -->
+	<walker_template route_id="468">
+		<routes>	
+			<routestep step="1" loc_x="561.5438" loc_y="1388.1227" loc_z="117.97484" rest_time="5"/>
+			<routestep step="2" loc_x="563.4343" loc_y="1404.1836" loc_z="112.66781" rest_time="0"/>
+			<routestep step="3" loc_x="571.73083" loc_y="1423.2504" loc_z="113.42185" rest_time="0"/>
+			<routestep step="4" loc_x="578.1289" loc_y="1450.2762" loc_z="110.16759" rest_time="0"/>
+			<routestep step="5" loc_x="576.76526" loc_y="1466.6475" loc_z="112.11766" rest_time="5"/>			
+			<routestep step="6" loc_x="578.1289" loc_y="1450.2762" loc_z="110.16759" rest_time="0"/>
+			<routestep step="7" loc_x="571.73083" loc_y="1423.2504" loc_z="113.42185" rest_time="0"/>
+			<routestep step="8" loc_x="563.4343" loc_y="1404.1836" loc_z="112.66781" rest_time="0"/>
+		</routes>
+	</walker_template>
 </npc_walker>

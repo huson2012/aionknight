@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Морхейм (Асмодея)
+	ID локации		 : 220020000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Morheim
-	@author Atomix
  -->
+
 <spawns>
 	<!-- Orlan -->
 	<spawn map="220020000" npcid="790021" pool="1" interval="105">
@@ -49,7 +39,7 @@
 	</spawn>
 	<!-- Adhis (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204344" pool="1" interval="295">
-		<object x="2457.038" y="1767.0385" z="92.0" h="110"/>
+		<object x="2457.038" y="1767.0385" z="92.0" h="110" w="294"/>
 	</spawn>
 	<!-- Aegir (NPC Legendary lvl:45)-->
 	<spawn map="220020000" npcid="204301" pool="1" interval="295">
@@ -191,7 +181,7 @@
 	</spawn>
 	<!-- Bragi (NPC Hero lvl:50)-->
 	<spawn map="220020000" npcid="204302" pool="1" interval="295">
-		<object x="340.4106" y="2393.543" z="450.3184" h="69"/>
+		<object x="340.4106" y="2393.543" z="450.3184" h="69" w="266"/>
 	</spawn>
 	<!-- Bruike (NPC Normal lvl:3)-->
 	<spawn map="220020000" npcid="790014" pool="1" interval="295">
@@ -203,7 +193,7 @@
 	</spawn>
 	<!-- BuBu Pat (NPC Normal lvl:30)-->
 	<spawn map="220020000" npcid="204401" pool="1" interval="295">
-		<object x="2251.0322" y="1452.038" z="127.125" h="30"/>
+		<object x="2354.2927" y="1467.6642" z="120.268295" h="85"/>
 	</spawn>
 	<!-- Bulagan (NPC Normal lvl:41)-->
 	<spawn map="220020000" npcid="204408" pool="1" interval="295">
@@ -260,18 +250,17 @@
 		<object x="465.13" y="200.52" z="483.5" h="10"/>
 	</spawn>
 	<!-- Defense Commander (NPC Hero lvl:45)-->
-	<spawn map="220020000" npcid="207584" pool="11" interval="295">
+	<spawn map="220020000" npcid="207584" pool="10" interval="295">
 		<object x="291.72" y="2293.22" z="448.9124" h="30"/>
 		<object x="231.1213" y="2329.045" z="446.056" h="4"/>
 		<object x="278.7759" y="2341.627" z="443.31723" h="112"/>
 		<object x="395.2899" y="449.883" z="475.25" h="62"/>
 		<object x="432.5786" y="333.6079" z="456.37747" h="54"/>
-		<object x="649.08264" y="916.6266" z="360.08585" h="27"/>
+		<object x="304.376" y="275.5032" z="467.13095" h="94"/>
 		<object x="390.9987" y="422.6926" z="475.00034" h="97"/>
-		<object x="2425.3984" y="1173.1401" z="128.14902" h="86"/>
+		<object x="2320.232" y="1124.442" z="129.66711" h="45"/>
 		<object x="2379.483" y="1342.34" z="112.93964" h="87"/>
 		<object x="2323.871" y="1166.125" z="124.46045" h="83"/>
-		<object x="2804.3804" y="1096.5897" z="171.611191" h="66"/>
 	</spawn>
 	<!-- Demirin (NPC Elite lvl:14)-->
 	<spawn map="220020000" npcid="204306" pool="1" interval="295">
@@ -369,7 +358,7 @@
 		<object x="2662.1362" y="799.7624" z="248.27118" h="25"/>
 	</spawn>
 	<!-- Garrison Patrol (NPC Elite lvl:40)-->
-	<spawn map="220020000" npcid="207777" pool="46" interval="295">
+	<spawn map="220020000" npcid="207777" pool="42" interval="295">
 		<object x="1062.99" y="2282.604" z="218.7005" h="119"/>
 		<object x="1079.324" y="2502.796" z="238.77727" h="118"/>
 		<object x="1312.621" y="1832.764" z="229.52094" h="113"/>
@@ -412,10 +401,6 @@
 		<object x="2298.287" y="1221.388" z="110.0" h="38"/>
 		<object x="1965.622" y="494.3129" z="278.32495" h="45"/>
 		<object x="2853.111" y="1448.387" z="148.71863" h="96"/>
-		<object x="2789.4192" y="1077.2603" z="167.53493" h="103"/>
-		<object x="2783.2769" y="1072.6447" z="167.4654" h="104"/>
-		<object x="2761.4302" y="1133.4913" z="162.09467" h="20"/>
-		<object x="2770.3667" y="1129.0483" z="161.26843" h="21"/>
 	</spawn>
 	<!-- Garurunerk (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="798125" pool="1" interval="295">
@@ -486,11 +471,11 @@
 	</spawn>
 	<!-- Hakon (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204333" pool="1" interval="295">
-		<object x="644.43896" y="906.6485" z="362.0" h="50"/>
+		<object x="644.43896" y="906.6485" z="362.0" h="50" w="292"/>
 	</spawn>
 	<!-- Halfdan (NPC Hero lvl:50)-->
 	<spawn map="220020000" npcid="204315" pool="1" interval="295">
-		<object x="320.58093" y="2304.4917" z="453.21286" h="75"/>
+		<object x="320.58093" y="2304.4917" z="453.21286" h="75" w="259"/>
 	</spawn>
 	<!-- Hapenill (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="204326" pool="1" interval="295">
@@ -560,7 +545,7 @@
 	</spawn>
 	<!-- Kamer (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204343" pool="1" interval="295">
-		<object x="2421.0" y="1837.0" z="93.3125" h="115"/>
+		<object x="2421.0" y="1837.0" z="93.3125" h="115" w="293"/>
 	</spawn>
 	<!-- Karina (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="204341" pool="1" interval="295">
@@ -663,7 +648,7 @@
 		<object x="2208.305" y="1477.587" z="134.60594" h="44"/>
 		<object x="2277.2" y="1487.426" z="119.40326" h="105"/>
 		<object x="2223.897" y="1432.243" z="126.27163" h="27"/>
-		<object x="2271.0742" y="1489.9126" z="119.86954" h="103"/>
+		<object x="2331.408" y="1135.339" z="126.54025" h="117"/>
 		<object x="2373.1062" y="1267.7886" z="115.77938" h="117"/>
 	</spawn>
 	<!-- Mau Warrior (NPC Elite lvl:45)-->
@@ -706,7 +691,7 @@
 	</spawn>
 	<!-- Morian (NPC Elite lvl:50)-->
 	<spawn map="220020000" npcid="204371" pool="1" interval="295">
-		<object x="204.0" y="2305.0" z="450.55573" h="115"/>
+		<object x="204.0" y="2305.0" z="450.55573" h="115" w="262"/>
 	</spawn>
 	<!-- Mothir (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204381" pool="1" interval="295">
@@ -714,7 +699,7 @@
 	</spawn>
 	<!-- Muir (NPC Normal lvl:5)-->
 	<spawn map="220020000" npcid="204422" pool="1" interval="295">
-		<object x="2401.8518" y="1802.3339" z="102.0" h="55"/>
+		<object x="2401.8518" y="1802.3339" z="102.0" h="55" w="296"/>
 	</spawn>
 	<!-- Muorinerk (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="798085" pool="1" interval="295">
@@ -740,32 +725,32 @@
 	<spawn map="220020000" npcid="204360" pool="1" interval="295">
 		<object x="224.0129" y="2320.1252" z="446.31628" h="19"/>
 	</spawn>
-	<!-- Obelisk Desert Garrison(Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700213" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220020000" npcid="700065" pool="1" interval="295">
 		<object x="626.35565" y="907.8696" z="360.8784" h="3"/>
 	</spawn>
-	<!-- Obelisk Halabana Outpost(Object Normal lvl:3)-->
+	<!-- Obelisk (Object Normal lvl:3)-->
 	<spawn map="220020000" npcid="700261" pool="1" interval="295">
 		<object x="2347.3225" y="2224.931" z="128.23569" h="120"/>
 	</spawn>
-	<!-- Obelisk Kellans Cabin(Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700258" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220020000" npcid="700213" pool="1" interval="295">
 		<object x="1095.8608" y="2482.1711" z="240.43764" h="45"/>
 	</spawn>
-	<!-- Obelisk Morheim Observatory(Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700260" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220020000" npcid="700068" pool="1" interval="295">
 		<object x="2803.048" y="1101.1567" z="171.84885" h="65"/>
 	</spawn>
-	<!-- Obelisk Slag Bulwark(Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700259" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220020000" npcid="700067" pool="1" interval="295">
 		<object x="1782.7863" y="1669.5" z="199.17012" h="75"/>
 	</spawn>
-	<!-- Obelisk Alsig Village(Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700232" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220020000" npcid="700066" pool="1" interval="295">
 		<object x="2384.385" y="1750.1564" z="102.37332" h="5"/>
 	</spawn>
-	<!-- Obelisk Morheim Ice Fortress(Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700231" pool="1" interval="295">
+	<!-- Obelisk (Object Normal lvl:3)-->
+	<spawn map="220020000" npcid="700064" pool="1" interval="295">
 		<object x="268.0237" y="2338.6914" z="444.12332" h="3"/>
 	</spawn>
 	<!-- Odella Rope (Object Normal lvl:1)-->
@@ -912,7 +897,7 @@
 	</spawn>
 	<!-- Ripclaw (NPC Elite lvl:47) (Urakon's Pet) -->
 	<spawn map="220020000" npcid="203358" pool="1" interval="295">
-		<object x="297.57227" y="2267.176" z="448.83276" h="28"/>
+		<object x="297.57227" y="2267.176" z="448.83276" h="28" w="264"/>
 	</spawn>
 	<!-- Sarinerk (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="798080" pool="1" interval="295">
@@ -923,10 +908,9 @@
 		<object x="2420.0" y="1739.0" z="102.0" h="120"/>
 	</spawn>
 	<!-- Scout Leader (NPC Hero lvl:45)-->
-	<spawn map="220020000" npcid="207590" pool="3" interval="295">
+	<spawn map="220020000" npcid="207590" pool="2" interval="295">
 		<object x="297.58334" y="2370.6875" z="443.20242" h="32"/>
 		<object x="260.5686" y="2355.552" z="445.12222" h="118"/>
-		<object x="2793.2903" y="1124.3367" z="171.41708" h="76"/>
 	</spawn>
 	<!-- Securis (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204353" pool="1" interval="295">
@@ -935,7 +919,7 @@
 	<!-- Senior Soldier (NPC Elite lvl:41)-->
 	<spawn map="220020000" npcid="207583" pool="44" interval="295">
 		<object x="291.4401" y="2237.626" z="454.45563" h="3"/>
-		<object x="356.10965" y="2400.4832" z="452.3992" h="67"/>
+		<object x="349.0824" y="2408.464" z="451.29623" h="116"/>
 		<object x="297.3169" y="2196.89" z="450.07114" h="110"/>
 		<object x="299.0301" y="2237.399" z="454.44833" h="3"/>
 		<object x="345.7477" y="2365.589" z="447.9443" h="21"/>
@@ -959,7 +943,7 @@
 		<object x="335.3694" y="2365.489" z="447.9443" h="78"/>
 		<object x="271.9622" y="2323.469" z="444.22977" h="72"/>
 		<object x="200.082" y="2349.571" z="449.36316" h="51"/>
-		<object x="357.32983" y="2395.8167" z="452.3992" h="64"/>
+		<object x="363.5531" y="2396.078" z="452.39307" h="68"/>
 		<object x="281.0533" y="2423.52" z="454.44617" h="25"/>
 		<object x="222.8096" y="2368.971" z="460.41818" h="33"/>
 		<object x="2399.768" y="1832.995" z="100.31344" h="59"/>
@@ -980,18 +964,17 @@
 		<object x="2536.109" y="1815.609" z="96.48237" h="9"/>
 	</spawn>
 	<!-- Sentinel Leader (NPC Hero lvl:45)-->
-	<spawn map="220020000" npcid="207587" pool="7" interval="295">
+	<spawn map="220020000" npcid="207587" pool="6" interval="295">
 		<object x="320.865" y="2343.208" z="443.20242" h="0"/>
 		<object x="293.5142" y="2334.119" z="443.31723" h="7"/>
 		<object x="303.992" y="2293.257" z="448.91205" h="38"/>
 		<object x="311.9722" y="2370.547" z="443.1814" h="53"/>
 		<object x="284.4654" y="2361.205" z="443.31726" h="97"/>
 		<object x="2382.09" y="1746.113" z="102.23874" h="20"/>
-		<object x="2781.6206" y="1106.874" z="170.15591" h="56"/>
 	</spawn>
 	<!-- Sepor (NPC Normal lvl:5)-->
 	<spawn map="220020000" npcid="204421" pool="1" interval="295">
-		<object x="2503.3875" y="1804.1805" z="97.0" h="10"/>
+		<object x="2503.3875" y="1804.1805" z="97.0" h="10" w="295"/>
 	</spawn>
 	<!-- Seqilund (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204331" pool="1" interval="295">
@@ -1017,7 +1000,7 @@
 	</spawn>
 	<!-- Skataon (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="204426" pool="1" interval="295">
-		<object x="658.29504" y="899.8188" z="364.26843" h="18"/>
+		<object x="658.29504" y="899.8188" z="364.26843" h="108"/>
 	</spawn>
 	<!-- Sora (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204382" pool="1" interval="295">
@@ -1034,7 +1017,6 @@
 	<!-- Statue of Mau Hero Out(Object Normal lvl:1)-->
 	<spawn map="220020000" npcid="730053" pool="1" interval="295">
 		<object staticid="951" x="1255.1949" y="254.724" z="534.15826" h="0"/>
-		<object staticid="951" x="1244.7097" y="272.92764" z="531.61945" h="111"/>
 	</spawn>
 	<!-- Stigma Stone (Monster Normal lvl:1)-->
 	<spawn map="220020000" npcid="700242" pool="1" interval="295">
@@ -1101,7 +1083,7 @@
 	</spawn>
 	<!-- Sveinn (NPC Normal lvl:45)-->
 	<spawn map="220020000" npcid="204327" pool="1" interval="295">
-		<object x="338.24628" y="2265.8994" z="454.0" h="90"/>
+		<object x="338.24628" y="2265.8994" z="454.0" h="90" w="260"/>
 	</spawn>
 	<!-- Symbol of Mau Hero (Object Normal lvl:1)-->
 	<spawn map="220020000" npcid="730049" pool="1" interval="295">
@@ -1125,7 +1107,7 @@
 	</spawn>
 	<!-- Thurnberg (NPC Hero lvl:50)-->
 	<spawn map="220020000" npcid="204312" pool="1" interval="295">
-		<object x="298.1249" y="2292.872" z="450.0" h="33"/>
+		<object x="298.1249" y="2292.872" z="450.0" h="33" w="261"/>
 	</spawn>
 	<!-- Tofa (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204329" pool="1" interval="295">
@@ -1170,7 +1152,7 @@
 	</spawn>
 	<!-- Urakon (NPC Elite lvl:47)-->
 	<spawn map="220020000" npcid="204391" pool="1" interval="295">
-		<object x="296.60132" y="2267.2756" z="448.8334" h="27"/>
+		<object x="296.60132" y="2267.2756" z="448.8334" h="27" w="263"/>
 	</spawn>
 	<!-- Utgar (NPC Elite lvl:45)-->
 	<spawn map="220020000" npcid="204338" pool="1" interval="295">
@@ -1293,7 +1275,7 @@
 	</spawn>
 	<!-- Tamed Worg (NPC lvl:43) -->
 	<spawn map="220020000" npcid="203358" pool="1" interval="295">
-		<object x="2402.4238" y="1720.9386" z="102.0" h="6"/>
+      <object h="89" x="339.70172" y="2428.2234" z="450.42993" w="264"/>
 	</spawn>
 	<!-- Hjalmberi (NPC Material Merchant lvl:45) -->
 	<spawn map="220020000" npcid="205286" pool="1" interval="295">
@@ -1327,17 +1309,41 @@
 	<spawn map="220020000" npcid="799796" interval="295">
 		<object x="261.67685" y="2369.4736" z="446" h="100" />
 	</spawn>
-	<!-- Changes Joshi and FlegelDEV -->
-	<!-- Road-portal Morheim to Altgard -->
-	<spawn map="220020000" npcid="257234" interval="295">
-		<object x="401.47552" y="2959.4053" z="325" h="45" />
-	</spawn>
-	<!-- Road-portal Morheim to Beluslan -->
-	<spawn map="220020000" npcid="257235" interval="295" >
-		<object x="2047.1138" y="3000.418" z="249.34573" h="17" />
-	</spawn>
-	<!-- Support Leader (NPC Hero lvl:50)-->
-	<spawn map="220020000" npcid="207608" pool="1" interval="295">
-		<object x="2780.5552" y="1100.6023" z="169.51674" h="63"/>
-	</spawn>
+   <spawn interval="295" map="220020000" npcid="799872" pool="1">
+      <object h="30" x="264.82794" y="2313.8333" z="445.56284"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="799921" pool="1">
+      <object h="13" x="252.74718" y="2315.4783" z="445.12222"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="799922" pool="1">
+      <object h="23" x="257.71017" y="2314.2805" z="445.12222"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="799923" pool="1">
+      <object h="0" x="250.95634" y="2318.0981" z="445.1222"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="799924" pool="1">
+      <object h="13" x="250.39781" y="2319.2617" z="445.12222"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="799925" pool="1">
+      <object h="30" x="255.60512" y="2313.5012" z="445.5628"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="207789" pool="1">
+      <object h="29" x="648.43915" y="900.3764" z="362.15906" w="290"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="207796" pool="2">
+      <object h="15" x="648.42816" y="916.74133" z="360.06876" w="291"/>
+      <object h="31" x="649.9761" y="901.9192" z="362.14066" w="291"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="207862" pool="1">
+      <object h="32" x="2413.5933" y="1878.4858" z="90.81427" w="297"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="207874" pool="1">
+      <object h="86" x="2389.0112" y="1769.8187" z="101.875" w="298"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="207873" pool="1">
+      <object h="27" x="2533.2273" y="1801.8573" z="96.042816" w="299"/>
+   </spawn>
+   <spawn interval="295" map="220020000" npcid="207870" pool="1">
+      <object h="27" x="2415.6355" y="1877.5925" z="90.90047" w="300"/>
+   </spawn>
 </spawns>

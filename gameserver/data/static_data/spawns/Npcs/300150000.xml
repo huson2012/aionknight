@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by Nephis (Nephis) -->
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Заброшенный храм Удас
+	ID локации		 : 300150000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Udas Temple Up From Client spawn
-	@author Nephis
  -->
+
 <spawns>
+	<!-- Выход из комнаты рождения -->
 	<spawn map="300150000" interval="105" npcid="700706" pool="1">
 		<object staticid="213" x="561.85376" y="180.284549" h="0" z="136.30591"/>
 	</spawn>
-	<!--Udas Temple Exit-->
+	<!-- Выход из храма Удас #1 -->
 	<spawn map="300150000" interval="105" npcid="730255" pool="1">
 		<object x="508.361" y="362.717" h="0" z="135.889"/>
 	</spawn>
-	<!-- Udas Temple Exit -->
+	<!-- Выход из храма Удас #2 -->
 	<spawn interval="295" map="300150000" npcid="730272" pool="1">
 		<object h="0" staticid="158" x="636.6904" y="658.74976" z="133.69518"/>
 	</spawn>
-	<!-- Poison Bottle -->
+	<!-- Бутылка с ядом -->
 	<spawn interval="295" map="300150000" npcid="700567" pool="32">
 		<object h="23" staticid="151" x="467.35858" y="585.81464" z="128.59558"/>
 		<object h="23" staticid="153" x="470.34946" y="618.60034" z="129.41692"/>
@@ -66,27 +56,27 @@
 		<object h="23" staticid="163" x="749.66394" y="407.0775" z="133.4429"/>
 		<object h="23" staticid="165" x="770.93896" y="393.65125" z="131.53433"/>
 	</spawn>
-	<!--Ancient Dragonbound Document-->
+	<!-- Древний манускрипт фанатиков -->
 	<spawn interval="295" map="300150000" npcid="700750" pool="1">
 		<object h="23" staticid="425" x="774.84924" y="485.6979" z="135.04178"/>
 	</spawn>
-	<!--Balaur's Order-->
+	<!-- Приказ балауров -->
 	<spawn interval="295" map="300150000" npcid="730217" pool="1">
 		<object h="23" staticid="117" x="638.72473" y="441.301" z="138.58661"/>
 	</spawn>
-	<!--Brainwashed Reian-->
+	<!-- Зомбированный юн #1 -->
 	<spawn map="300150000" interval="105" npcid="799513" pool="1">
 		<object x="541.184" y="221.229" h="0" z="134.349"/>
 	</spawn>
-	<!--Brainwashed Reian-->
+	<!-- Зомбированный юн #2 -->
 	<spawn map="300150000" interval="105" npcid="799514" pool="1">
 		<object x="541.271" y="214.645" h="0" z="134.349"/>
 	</spawn>
-	<!--Brainwashed Reian-->
+	<!-- Зомбированный юн #3 -->
 	<spawn map="300150000" interval="105" npcid="799515" pool="1">
 		<object x="584.471" y="221.35" h="0" z="134.349"/>
 	</spawn>
-	<!--Brainwashed Reian-->
+	<!-- Зомбированный юн #4 -->
 	<spawn map="300150000" interval="105" npcid="799516" pool="1">
 		<object x="584.466" y="215.052" h="0" z="134.349"/>
 	</spawn>

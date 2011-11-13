@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--
+
+	Назначение файла	: Начальные данные персонажей
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <player_initial_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="player_initial_data.xsd">
+	<!-- НАЧАЛЬНАЯ ТОЧКА СПАВНА ДЛЯ АСМОДИАН -->
 	<asmodian_spawn_location map_id="220010000" heading="32" x="571.0388" y="2787.3420" z="299.8750"/>
+	<!-- НАЧАЛЬНАЯ ТОЧКА СПАВНА ДЛЯ ЭЛИЙЦЕВ -->
 	<elyos_spawn_location map_id="210010000" heading="32" x="1212.9423" y="1044.8516" z="140.75568"/>
+	<!-- ВОИН -->
 	<player_data class="WARRIOR">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -12,6 +24,7 @@
 			<item id="169300002" count="20"/>
 		</items>
 	</player_data>
+	<!-- МАГ -->
 	<player_data class="MAGE">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -22,6 +35,7 @@
 			<item id="169300002" count="20"/>
 		</items>
 	</player_data>
+	<!--  -->
 	<player_data class="PRIEST">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -32,6 +46,7 @@
 			<item id="169300002" count="20"/>
 		</items>
 	</player_data>
+	<!--  -->
 	<player_data class="SCOUT">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -43,4 +58,3 @@
 		</items>
 	</player_data>
 </player_initial_data>
-

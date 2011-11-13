@@ -1,37 +1,31 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
+import gameserver.dao.PlayerLifeStatsDAO;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.PlayerLifeStats;
 
-import ru.aionknight.gameserver.dao.PlayerLifeStatsDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.PlayerLifeStats;
-
-
-/**
- * @author Mr. Poke
- *
- */
 public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 {
 
@@ -43,8 +37,8 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 	public static final String SELECT_QUERY = "SELECT `hp`, `mp`, `fp` FROM `player_life_stats` WHERE `player_id`=?";
 	public static final String UPDATE_QUERY = "UPDATE player_life_stats set `hp`=?, `mp`=?, `fp`=? WHERE `player_id`=?";
 
-	/* (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerLifeStatsDAO#loadPlayerLifeStat(org.openaion.gameserver.model.gameobjects.player.Player)
+	/** (non-Javadoc)
+	 * @see gameserver.dao.PlayerLifeStatsDAO#loadPlayerLifeStat(gameserver.model.gameobjects.player.Player)
 	 */
 	@Override
 	public void loadPlayerLifeStat(final Player player)
@@ -78,8 +72,8 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerLifeStatsDAO#storePlayerLifeStat(org.openaion.gameserver.model.gameobjects.player.Player)
+	/** (non-Javadoc)
+	 * @see gameserver.dao.PlayerLifeStatsDAO#storePlayerLifeStat(gameserver.model.gameobjects.player.Player)
 	 */
 	@Override
 	public void insertPlayerLifeStat(final Player player)
@@ -107,8 +101,8 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 	}
 
 
-	/* (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerLifeStatsDAO#deletePlayerLifeStat(org.openaion.gameserver.model.gameobjects.player.Player)
+	/** (non-Javadoc)
+	 * @see gameserver.dao.PlayerLifeStatsDAO#deletePlayerLifeStat(gameserver.model.gameobjects.player.Player)
 	 */
 	@Override
 	public void deletePlayerLifeStat(final int playerId)
@@ -132,8 +126,8 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see org.openaion.gameserver.dao.PlayerLifeStatsDAO#updatePlayerLifeStat(org.openaion.gameserver.model.gameobjects.player.Player)
+	/** (non-Javadoc)
+	 * @see gameserver.dao.PlayerLifeStatsDAO#updatePlayerLifeStat(gameserver.model.gameobjects.player.Player)
 	 */
 	@Override
 	public void updatePlayerLifeStat(final Player player)
@@ -160,8 +154,8 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see org.openaion.commons.database.dao.DAO#supports(java.lang.String, int, int)
+	/** (non-Javadoc)
+	 * @see commons.database.dao.DAO#supports(java.lang.String, int, int)
 	 */
 	@Override
 	public boolean supports(String databaseName, int majorVersion, int minorVersion)

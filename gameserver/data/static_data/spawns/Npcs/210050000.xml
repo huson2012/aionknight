@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
 
-	This file is part of Aion-Knight Dev. Team <http://aion-knight.ru>.
-
-	Aion-Knight is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-
-	Aion-Knight is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
-	
-	World Map: Inggison
+	Название локации : Ингисон (Элисея)
+	ID локации		 : 210050000
+	Версия Клиента	 : 2.5 (Иннова)
 
  -->
+
 <spawns>
-	<!-- Inggison Coin Fountain -->
-	<spawn map="210050000" npcid="730241" pool="1" interval="295">
-		<object staticid="268" x="1355.5326" y="332.65009" h="0" z="588.12"/>
-	</spawn>
 	<!-- Lord Skyrose -->
 	<spawn map="210050000" npcid="296488" pool="1" interval="295">
 		<object x="557.632" y="733.041" h="18" z="479.19"/>
+	</spawn>
+	<!-- Dramata shield -->
+	<spawn map="210050000" npcid="282123" pool="3" interval="295">
+		<object staticid="1463" x="120.99795" y="2119.0068" z="441" h="93"/>
+		<object staticid="1464" x="142.35001" y="2110.25" z="441" h="93"/>
+		<object staticid="1757" x="161.46001" y="2119.23" z="441" h="93"/>
 	</spawn>
 	<!-- Lady Pasiphae -->
 	<spawn map="210050000" npcid="296491" pool="1" interval="295">
@@ -292,10 +283,6 @@
 	<spawn map="210050000" npcid="798985" pool="1" interval="295">
 		<object x="1867.22" y="1041.4" h="13" z="394.151"/>
 	</spawn>
-	<!-- Noratha -->
-	<spawn map="210050000" npcid="205314" pool="1" interval="295">
-		<object x="1289.87" y="200.028" h="47" z="595.813"/>
-	</spawn>
 	<!-- Mitilene -->
 	<spawn map="210050000" npcid="799083" pool="1" interval="295">
 		<object x="2748.92" y="1482.77" h="73" z="384.75"/>
@@ -371,6 +358,13 @@
 	<!-- Aeronef A Ether 3 -->
 	<spawn map="210050000" npcid="799057" pool="1" interval="295">
 		<object staticid="202" x="398.93082" y="949.9519" z="460.34537" h="0"/>
+	</spawn>
+	<!-- Inggison Coin Fountain -->
+	<spawn map="210050000" npcid="730241" pool="1" interval="295">
+		<object staticid="268" x="1355.5326" y="332.65009" h="0" z="588.12"/>
+	</spawn>
+	<spawn map="210050000" npcid="700917" pool="1" interval="295">
+		<object h="0" staticid="2387" x="1160.1594" y="1630.1019" z="235.65338"/>
 	</spawn>
 	<!-- Aerolink to Sanctum -->
 	<spawn map="210050000" npcid="730220" pool="1" interval="295">
@@ -450,6 +444,9 @@
 	<spawn map="210050000" npcid="700611" pool="1" interval="295">
 		<object h="0" staticid="528" x="2825.6272" y="480.87314" z="350.00967"/>
 	</spawn>
+	<spawn map="210050000" npcid="700623" pool="1" interval="295">
+		<object h="0" staticid="614" x="487.19287" y="1607.9493" z="290.48383"/>
+	</spawn>
 	<!-- Thick Silk Pouch -->
 	<spawn map="210050000" npcid="700609" pool="30" interval="295">
 		<object h="0" staticid="523" x="1085.2103" y="587.356" z="512.27924"/>
@@ -487,6 +484,9 @@
 	<spawn map="210050000" npcid="730256" pool="1" interval="295">
 		<object staticid="1200" x="1362.5106" y="2304.2227" h="0" z="304.92197"/>
 	</spawn>
+	<spawn map="210050000" npcid="206155" pool="1" interval="295">
+		<object staticid="604" h="0" x="1782.7194" y="1417.7476" z="179.01659"/>
+	</spawn>
 	<!-- Guardian in Training -->
 	<spawn map="210050000" npcid="799625" pool="5" interval="295">
 		<object x="1367.83" y="448.284" h="17" z="548.454"/>
@@ -518,32 +518,29 @@
 		<object x="1306.32" y="401.02" h="97" z="549"/>
 	</spawn>
 	<!-- Detachment Commander -->
-	<spawn map="210050000" npcid="209028" pool="11" interval="295">
-		<object x="1336.35" y="461.337" z="542.801" h="43"/>
-		<object x="1347.51" y="468.91" z="542.487" h="36"/>
-		<object x="1382.24" y="394.895" z="553.429" h="30"/>
-		<object x="1392.28" y="355.993" z="557.959" h="17"/>
-		<object x="1313.92" y="335.901" z="590.029" h="9"/>
-		<object x="1510.09" y="328.22" z="546.818" h="10"/>
-		<object x="1377.38" y="270.753" z="589.856" h="33"/>
-		<object x="1364.09" y="271.439" z="589.362" h="27"/>
-		<object x="1271.47" y="244.685" z="599.85" h="45"/>
-		<object x="1317.12" y="201.608" z="599.285" h="110"/>
-		<object x="1350.55" y="201.523" z="599.923" h="32"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209028" pool="9">
+      <object h="106" x="1317.117" y="201.6084" z="599.2861"/>
+      <object h="33" x="1350.5513" y="201.5233" z="599.5255"/>
+      <object h="46" x="1271.4695" y="244.68513" z="599.2854"/>
+      <object h="23" x="1364.0919" y="271.43887" z="588.625"/>
+      <object h="33" x="1377.3779" y="270.75253" z="588.75006"/>
+      <object h="10" x="1313.9172" y="335.90073" z="589.5804"/>
+      <object h="16" x="1392.2758" y="355.99255" z="557.9588"/>
+      <object h="30" x="1382.238" y="394.89532" z="552.7156" w="218"/>
+      <object h="17" x="1388.12" y="435.64243" z="552.911"/>
+   </spawn>
 	<!-- Detachment Commander -->
-	<spawn map="210050000" npcid="209008" pool="10" interval="295">
-		<object x="1332.63" y="456.494" z="544.409" h="47"/>
-		<object x="1350.49" y="469.617" z="544.382" h="34"/>
-		<object x="1414.88" y="387.603" z="553.31" h="17"/>
-		<object x="1399.07" y="350.578" z="557.959" h="16"/>
-		<object x="1507.99" y="325.494" z="546.694" h="9"/>
-		<object x="1514.21" y="345.683" z="547.962" h="17"/>
-		<object x="1394.01" y="215.068" z="598.35" h="48"/>
-		<object x="1302.38" y="276.819" z="589.787" h="0"/>
-		<object x="1353.29" y="245.596" z="589.79" h="32"/>
-		<object x="1262.6" y="273.261" z="599.853" h="1"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209008" pool="9">
+      <object h="43" x="1394.0068" y="215.06786" z="597.9345"/>
+      <object h="33" x="1353.2861" y="245.59644" z="589.79095"/>
+      <object h="24" x="1407.8619" y="257.05933" z="593.2439" w="209"/>
+      <object h="1" x="1262.603" y="273.26144" z="599.5783"/>
+      <object h="1" x="1302.379" y="276.81873" z="589.7868"/>
+      <object h="10" x="1309.7397" y="345.05035" z="589.56683" w="196"/>
+      <object h="16" x="1399.0751" y="350.57806" z="557.95874"/>
+      <object h="16" x="1414.8759" y="387.60297" z="552.3482"/>
+      <object h="60" x="1478.1127" y="336.39883" z="548.39856" w="216"/>
+   </spawn>
 	<!-- Training Dummy -->
 	<spawn map="210050000" npcid="700591" pool="3" interval="295">
 		<object x="1371.63" y="448.873" h="79" z="548.235"/>
@@ -630,10 +627,10 @@
 	</spawn>
 	<!-- Resource Transporter -->
 	<spawn map="210050000" npcid="799602" pool="4" interval="295">
-		<object x="1439.62" y="317.134" h="50" z="549.375"/>
-		<object x="1415.01" y="346.62" h="55" z="558.125"/>
-		<object x="1363.52" y="349.78" h="115" z="558.0366"/>
-		<object x="1331.6" y="396.643" h="30" z="548.79"/>
+		<object x="1439.62" y="317.134" h="50" z="549.375" w="211"/>
+		<object x="1415.01" y="346.62" h="55" z="558.125" w="217"/>
+		<object x="1363.52" y="349.78" h="115" z="558.0366" w="213"/>
+		<object x="1331.6" y="396.643" h="30" z="548.79" w="212"/>
 	</spawn>
 	<!-- Juris Po -->
 	<spawn map="210050000" npcid="799840" pool="1" interval="295">
@@ -648,18 +645,25 @@
 		<object x="1391.48" y="373.804" h="115" z="589.576"/>
 	</spawn>
 	<!-- Detachment Commander -->
-	<spawn map="210050000" npcid="209048" pool="7" interval="295">
-		<object x="1365.95" y="300.397" z="588.3554" h="0"/>
-		<object x="1261.45" y="285.49" z="599.226" h="0"/>
-		<object x="1366.53" y="364.533" z="557.875" h="0"/>
-		<object x="1316.62" y="234.455" z="595.633" h="0"/>
-		<object x="1423.75" y="380.424" z="552.14276" h="0"/>
-		<object x="1320.53" y="315.096" z="588.625" h="0"/>
-		<object x="1399.32" y="269.841" z="589.58" h="0"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209048" pool="8">
+      <object h="16" x="1316.6243" y="234.4551" z="595.6334"/>
+      <object h="0" x="1261.45" y="285.49" z="599.5783"/>
+      <object h="23" x="1399.3153" y="269.84116" z="589.57947"/>
+      <object h="0" x="1320.5295" y="315.0959" z="588.75006"/>
+      <object h="46" x="1365.9457" y="300.39722" z="588.80505"/>
+      <object h="106" x="1366.5278" y="364.53345" z="589.576"/>
+      <object h="16" x="1423.747" y="380.42352" z="552.3302"/>
+      <object h="4" x="1390.172" y="432.24826" z="553.125" w="220"/>
+   </spawn>
 	<!-- Rima -->
 	<spawn map="210050000" npcid="799837" pool="1" interval="295">
 		<object x="1362.6" y="356.806" h="107" z="558.037"/>
+	</spawn>
+	<spawn map="210050000" npcid="730299" pool="1" interval="295">
+		<object h="73" staticid="16" x="541.4251" y="712.28784" z="484.0491"/>
+	</spawn>
+	<spawn map="210050000" npcid="730298" pool="1" interval="295">
+		<object h="73" staticid="203" x="537.9485" y="707.7729" z="484.0491"/>
 	</spawn>
 	<!-- Detachment Centurion -->
 	<spawn map="210050000" npcid="209029" pool="2" interval="295">
@@ -735,7 +739,7 @@
 	</spawn>
 	<!-- Agelastos -->
 	<spawn map="210050000" npcid="798935" pool="1" interval="295">
-		<object x="1366.8" y="354.856" h="18" z="589.576"/>
+		<object x="1366.8" y="354.856" h="18" z="589.576" w="203"/>
 	</spawn>
 	<!-- Detachment Soldier -->
 	<spawn map="210050000" npcid="209034" pool="1" interval="295">
@@ -781,6 +785,9 @@
 	<spawn map="210050000" npcid="798903" pool="1" interval="295">
 		<object x="1276.3" y="323.737" h="110" z="590.084"/>
 	</spawn>
+	<spawn map="210050000" npcid="799710" pool="1" interval="295">
+		<object h="47" x="1361.3392" y="341.91028" z="589.5897"/>
+	</spawn>
 	<!-- Lesarius -->
 	<spawn map="210050000" npcid="799827" pool="1" interval="295">
 		<object x="1314.85" y="323.446" h="110" z="589.766"/>
@@ -806,18 +813,20 @@
 		<object x="1287.15" y="288.796" h="10" z="589.787"/>
 	</spawn>
 	<!-- Detachment Commander -->
-	<spawn map="210050000" npcid="209018" pool="10" interval="295">
-		<object x="1420.38" y="337.395" z="558.08954" h="0"/>
-		<object x="1351.66" y="311.31" z="588.27783" h="0"/>
-		<object x="1335.04" y="299.62" z="588.625" h="0"/>
-		<object x="1300.64" y="247.24" z="595.633" h="0"/>
-		<object x="1362.99" y="203.73" z="599.225" h="0"/>
-		<object x="1433.82" y="363.56" z="553.4118" h="0"/>
-		<object x="1418.77" y="343.645" z="558.125" h="0"/>
-		<object x="1417.3" y="350.426" z="557.7854" h="0"/>
-		<object x="1358.49" y="280.79" z="588.625" h="0"/>
-		<object x="1344.52" y="243.84" z="589.787" h="0"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209018" pool="12">
+      <object h="33" x="1362.99" y="203.73" z="599.52563"/>
+      <object h="15" x="1300.64" y="247.24" z="595.6334"/>
+      <object h="33" x="1344.52" y="243.84" z="589.7868"/>
+      <object h="33" x="1358.49" y="280.79" z="588.625"/>
+      <object h="3" x="1335.04" y="299.62" z="588.625" w="199"/>
+      <object h="78" x="1351.4606" y="296.8811" z="588.7794"/>
+      <object h="106" x="1351.66" y="311.31" z="588.8001"/>
+      <object h="3" x="1420.375" y="337.3953" z="589.576"/>
+      <object h="3" x="1418.7745" y="343.6451" z="589.576"/>
+      <object h="3" x="1417.3035" y="350.4255" z="589.6107"/>
+      <object h="0" x="1433.82" y="363.56" z="553.45496"/>
+      <object h="61" x="1479.9469" y="339.9241" z="548.8593" w="215"/>
+   </spawn>
 	<!-- Secundila -->
 	<spawn map="210050000" npcid="798932" pool="1" interval="295">
 		<object x="1412.79" y="343.152" h="13" z="558.125"/>
@@ -863,16 +872,18 @@
 		<object x="1442.9382" y="268.83334" h="110" z="549.33759"/>
 	</spawn>
 	<!-- Detachment Soldier -->
-	<spawn map="210050000" npcid="209024" pool="1" interval="295">
-		<object x="1391.34" y="299.649" h="0" z="588.625"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209024" pool="3">
+      <object h="24" x="1409.239" y="254.83417" z="593.9301" w="208"/>
+      <object h="24" x="1405.6368" y="255.6823" z="594.54944" w="205"/>
+      <object h="60" x="1391.3363" y="299.64917" z="588.625"/>
+   </spawn>
 	<!-- Matias -->
 	<spawn map="210050000" npcid="798900" pool="1" interval="295">
 		<object x="1385.61" y="306.593" h="68" z="588.871"/>
 	</spawn>
 	<!-- Mischievous Manduri -->
 	<spawn map="210050000" npcid="799749" pool="1" interval="295">
-		<object x="1393.64" y="277.737" h="0" z="589.562"/>
+		<object x="1393.64" y="277.737" h="0" z="589.562" w="191"/>
 	</spawn>
 	<!-- Concussed Daeva -->
 	<spawn map="210050000" npcid="799073" pool="1" interval="295">
@@ -888,7 +899,7 @@
 	</spawn>
 	<!-- Hungry Porgus -->
 	<spawn map="210050000" npcid="799735" pool="1" interval="295">
-		<object x="1391.85" y="265.829" h="0" z="589.69"/>
+		<object x="1391.85" y="265.829" h="0" z="589.69" w="192"/>
 	</spawn>
 	<!-- Acute Shugo -->
 	<spawn map="210050000" npcid="799747" pool="1" interval="295">
@@ -904,7 +915,7 @@
 	</spawn>
 	<!-- Goldentail Dorion -->
 	<spawn map="210050000" npcid="799731" pool="1" interval="295">
-		<object x="1388.55" y="270.958" h="3" z="589.723"/>
+		<object x="1388.55" y="270.958" h="3" z="589.723" w="193"/>
 	</spawn>
 	<!-- Ermona -->
 	<spawn map="210050000" npcid="205291" pool="1" interval="295">
@@ -915,9 +926,11 @@
 		<object x="1386.31" y="277.822" h="63" z="589.635"/>
 	</spawn>
 	<!-- Detachment Soldier -->
-	<spawn map="210050000" npcid="209044" pool="1" interval="295">
-		<object x="1386.62" y="287.026" h="51" z="588.625"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209044" pool="3">
+      <object h="46" x="1386.6228" y="287.0257" z="588.625"/>
+      <object h="5" x="1314.01" y="345.18658" z="589.5636" w="198"/>
+      <object h="4" x="1312.3291" y="344.27805" z="589.566" w="200"/>
+   </spawn>
 	<!-- Laestrygos -->
 	<spawn map="210050000" npcid="799038" pool="1" interval="295">
 		<object x="1375.05" y="248.769" h="47" z="589.844"/>
@@ -956,9 +969,10 @@
 		<object x="1325.39" y="262.775" h="77" z="591.363"/>
 	</spawn>
 	<!-- Detachment Centurion -->
-	<spawn map="210050000" npcid="209009" pool="1" interval="295">
-		<object x="1321.69" y="257.665" h="0" z="591.315"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209009" pool="2">
+      <object h="75" x="1321.6919" y="257.66492" z="591.31476"/>
+      <object h="11" x="1387.449" y="432.91934" z="552.9153" w="219"/>
+   </spawn>
 	<!-- Inggison Recruit -->
 	<spawn map="210050000" npcid="799608" pool="6" interval="295">
 		<object x="1323.57" y="260.23" h="77" z="591.357"/>
@@ -989,9 +1003,10 @@
 		<object x="1264.9" y="281.44" h="2" z="599.439"/>
 	</spawn>
 	<!-- Detachment Centurion -->
-	<spawn map="210050000" npcid="209049" pool="1" interval="295">
-		<object x="1294.2" y="235.011" h="0" z="595.633"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209049" pool="2">
+      <object h="16" x="1294.1962" y="235.01096" z="595.6335"/>
+      <object h="59" x="1477.2671" y="339.07858" z="548.83655" w="214"/>
+   </spawn>
 	<!-- Caceus -->
 	<spawn map="210050000" npcid="798938" pool="1" interval="295">
 		<object x="1295.96" y="229.635" h="18" z="595.633"/>
@@ -1002,12 +1017,20 @@
 	</spawn>
 	<!-- Detachment Centurion -->
 	<spawn map="210050000" npcid="209039" pool="1" interval="295">
-		<object x="1305.86" y="226.13" h="0" z="595.633"/>
+		<object h="16" x="1305.8624" y="226.13028" z="595.63336"/>
 	</spawn>
 	<!-- Detachment Soldier -->
-	<spawn interval="295" map="210050000" npcid="209014" pool="1">
-		<object h="11" x="1334.23" y="200.917" z="599.199"/>
-	</spawn>
+   <spawn interval="295" map="210050000" npcid="209014" pool="9">
+      <object h="24" x="1408.815" y="253.03308" z="594.926" w="207"/>
+      <object h="23" x="1405.2128" y="253.88121" z="595.33167" w="206"/>
+      <object h="89" x="1369.684" y="263.87823" z="589.7941" w="190"/>
+      <object h="84" x="1351.707" y="294.06345" z="588.7177" w="197"/>
+      <object h="72" x="1348.643" y="296.63464" z="588.71796" w="195"/>
+      <object h="16" x="1310.5073" y="347.63458" z="589.5644" w="201"/>
+      <object h="14" x="1312.1929" y="348.54828" z="589.5656" w="202"/>
+      <object h="109" x="1392.8574" y="353.9098" z="590.7035" w="210"/>
+      <object h="109" x="1391.6029" y="352.35263" z="590.706" w="194"/>
+   </spawn>
 	<!-- Teressa -->
 	<spawn map="210050000" npcid="798934" pool="1" interval="295">
 		<object x="1358.31" y="205.165" h="33" z="599.438"/>
@@ -1084,6 +1107,24 @@
 	<spawn map="210050000" npcid="700610" pool="1" interval="295">
 		<object staticid="529" x="370" y="558" z="459.64133" h="0"/>
 	</spawn>
+	<spawn map="210050000" npcid="700911" pool="1" interval="295">
+		<object h="0" staticid="2390" x="712.82715" y="1866.3936" z="322.125"/>
+	</spawn>
+	<spawn map="210050000" npcid="700912" pool="1" interval="295">
+		<object h="0" staticid="2391" x="775.9929" y="1797.2437" z="322.125"/>
+	</spawn>
+	<spawn map="210050000" npcid="700913" pool="1" interval="295">
+		<object h="0" staticid="2392" x="915.10657" y="1729.1151" z="329.59494"/>
+	</spawn>
+	<spawn map="210050000" npcid="700914" pool="1" interval="295">
+		<object h="0" staticid="2393" x="947.9281" y="1814.0986" z="326.25"/>
+	</spawn>
+	<spawn map="210050000" npcid="700915" pool="1" interval="295">
+		<object h="0" staticid="2385" x="963.45135" y="1563.2386" z="315.0337"/>
+	</spawn>
+	<spawn map="210050000" npcid="700916" pool="1" interval="295">
+		<object h="0" staticid="2386" x="1059.9415" y="1729.9016" z="246.46027"/>
+	</spawn>
 	<!-- Chenshurunerk -->
 	<spawn map="210050000" npcid="799063" pool="1" interval="295">
 		<object x="2257.137" y="2371.3088" z="146.6548" h="100"/>
@@ -1157,6 +1198,10 @@
 	<spawn map="210050000" npcid="799007" pool="1" interval="295">
 		<object x="714.551" y="1518.8" h="90" z="361.591"/>
 	</spawn>
+	<!-- Andreas -->
+	<spawn map="210050000" npcid="798303" pool="1" interval="295">
+		<object x="1280.51" y="329.085" h="0" z="590.084"/>
+	</spawn>
 	<!-- Gate -->
 	<spawn map="210050000" npcid="730297" pool="1" interval="295">
 		<object h="73" staticid="1425" x="2512.5479" y="818.45026" z="415.8327"/>
@@ -1165,19 +1210,19 @@
 	<spawn map="210050000" npcid="730296" pool="1" interval="295">
 		<object h="73" staticid="1500" x="2509.3806" y="814.07776" z="415.8327"/>
 	</spawn>
-	<!-- Obelisk Hanarkand Observation Post -->
+	<!-- Obelisk -->
 	<spawn map="210050000" npcid="730282" pool="1" interval="295">
 		<object x="1889.78" y="1748.8871" h="118" z="328.40555" staticid="1308"/>
 	</spawn>
-	<!-- Obelisk Undirborg Observation Post -->
+	<!-- Obelisk -->
 	<spawn map="210050000" npcid="730281" pool="1" interval="295">
 		<object x="379.24786" y="952.2534" h="113" z="461.52512" staticid="46"/>
 	</spawn>
-	<!-- Obelisk Soteria Sanctuary -->
+	<!-- Obelisk -->
 	<spawn map="210050000" npcid="730236" pool="1" interval="295">
 		<object x="2714.7803" y="1482.3342" h="86" z="384.63666" staticid="552"/>
 	</spawn>
-	<!-- Obelisk Inggison Illusion Fortress -->
+	<!-- Obelisk -->
 	<spawn map="210050000" npcid="730235" pool="1" interval="295">
 		<object x="1386.2589" y="308.98108" h="72" z="589.4792" staticid="458"/>
 	</spawn>
@@ -1204,6 +1249,9 @@
 	<!-- Stopped Obelisk -->
 	<spawn map="210050000" npcid="730223" pool="1" interval="295">
 		<object h="0" staticid="168" x="884.48" y="295.33" z="535.77045"/>
+	</spawn>
+	<spawn map="210050000" npcid="700909" pool="1" interval="295">
+		<object h="0" staticid="2359" x="1473.9398" y="1360.486" z="392.3428"/>
 	</spawn>
 	<!-- Taloc's Root Herb -->
 	<spawn map="210050000" npcid="700908" pool="16" interval="295">
@@ -1275,39 +1323,39 @@
 	</spawn>
 	<!-- Dimaia Waterfall -->
 	<spawn map="210050000" npcid="206107" pool="1" interval="295">
-		<object x="292.6" y="487.89" h="0" z="574.344"/>
+		<object x="292.6" y="487.89" h="118" z="574.344"/>
 	</spawn>
 	<!-- Hanarkand Prison Entrance -->
 	<spawn map="210050000" npcid="206127" pool="1" interval="295">
-		<object x="2346.54" y="1951.31" h="0" z="260.382"/>
+		<object x="2346.54" y="1951.31" h="44" z="260.382"/>
 	</spawn>
 	<!-- Rokoros Village Entrance -->
 	<spawn map="210050000" npcid="206132" pool="1" interval="295">
-		<object x="274.49" y="259.97" h="0" z="582.287"/>
+		<object x="274.49" y="259.97" h="91" z="582.287"/>
 	</spawn>
 	<!-- Undirborg Loot Storage -->
 	<spawn map="210050000" npcid="206134" pool="1" interval="295">
-		<object x="230.75" y="1251.01" h="0" z="313.594"/>
+		<object x="230.75" y="1251.01" h="8" z="313.594"/>
 	</spawn>
 	<!-- Forest of Antiquity Relics -->
 	<spawn map="210050000" npcid="206136" pool="1" interval="295">
-		<object x="243.78" y="1868.41" h="0" z="326.519"/>
+		<object x="243.78" y="1868.41" h="110" z="326.519"/>
 	</spawn>
 	<!-- Supraklaw Lure -->
 	<spawn map="210050000" npcid="206158" pool="1" interval="295">
-		<object x="1096.54" y="1129.34" h="0" z="440.342"/>
+		<object x="1096.54" y="1129.34" h="46" z="440.342"/>
 	</spawn>
 	<!-- Rock Geyser -->
 	<spawn map="210050000" npcid="206157" pool="1" interval="295">
-		<object x="1109.1493" y="1688.0824" h="0" z="196"/>
+		<object x="1109.1493" y="1688.0824" h="28" z="185.95"/>
 	</spawn>
 	<!-- Pool Geyser -->
 	<spawn map="210050000" npcid="206156" pool="1" interval="295">
-		<object x="1010.85" y="1681.88" h="0" z="182.423"/>
+		<object x="1010.85" y="1681.88" h="107" z="182.423"/>
 	</spawn>
 	<!-- Defender Lieutenant -->
 	<spawn map="210050000" npcid="209069" pool="1" interval="295">
-		<object x="2511.49" y="1378.49" h="0" z="335.527"/>
+		<object h="23" x="2723.03" y="1439.22" z="384.81915"/>
 	</spawn>
 	<!-- Detachment Commander -->
 	<spawn map="210050000" npcid="209037" pool="1" interval="295">
@@ -1331,11 +1379,18 @@
 	</spawn>
 	<!-- Royal Combat Mage -->
 	<spawn map="210050000" npcid="296452" pool="1" interval="295">
-		<object x="545.289" y="737.258" h="0" z="493.481"/>
+		<object h="18" x="545.28937" y="737.25836" z="493.48108"/>
 	</spawn>
 	<!-- Defender Sentinel -->
-	<spawn map="210050000" npcid="209065" pool="1" interval="295">
-		<object x="1051.7" y="584.44" h="0" z="513.25"/>
+	<spawn map="210050000" npcid="209065" pool="8" interval="295">
+		<object h="60" x="1355.75" y="662.75" z="492.74414"/>
+		<object h="45" x="1354.75" y="662.25" z="492.80273"/>
+		<object h="115" x="848.2967" y="363.14667" z="526.5"/>
+		<object h="30" x="597.75" y="351.16226" z="497.917"/>
+		<object h="60" x="2445.75" y="331.25" z="491.84766"/>
+		<object h="30" x="2879.92" y="445.43" z="327.5"/>
+		<object h="60" x="2881.76" y="396.4" z="308.1633"/>
+		<object h="33" x="2882.375" y="359.97842" z="298.62106"/>
 	</spawn>
 	<!-- BLDF4_DramataMessageControl_n -->
 	<spawn map="210050000" npcid="282135" pool="1" interval="295">
@@ -1347,19 +1402,19 @@
 	</spawn>
 	<!-- Suspicious Zombie -->
 	<spawn map="210050000" npcid="281822" pool="1" interval="295">
-		<object x="151.314" y="2133.11" h="0" z="440.207"/>
+		<object x="151.314" y="2133.11" h="89" z="440.207"/>
 	</spawn>
 	<!-- BLDF4_EmpyreanLord'sServantArtifactASignal_n -->
 	<spawn map="210050000" npcid="281446" pool="1" interval="295">
-		<object x="1045.28" y="1491.65" h="0" z="404.874"/>
+		<object x="1045.28" y="1491.65" h="44" z="404.874"/>
 	</spawn>
 	<!-- LDF4_Fortress_InvisibleNPC -->
 	<spawn map="210050000" npcid="258260" pool="1" interval="295">
-		<object x="1345.31" y="288.576" h="0" z="589.367"/>
+		<object x="1345.31" y="288.576" h="69" z="589.367"/>
 	</spawn>
 	<!-- BLDF4_EmpyreanLord'sServantArtifactBSignal_n -->
 	<spawn map="210050000" npcid="281448" pool="1" interval="295">
-		<object x="1113.84" y="1491.49" h="0" z="404.874"/>
+		<object x="1113.84" y="1491.49" h="44" z="404.874"/>
 	</spawn>
 	<!-- Detachment Soldier -->
 	<spawn map="210050000" npcid="209003" pool="2" interval="295">
@@ -1373,7 +1428,7 @@
 	</spawn>
 	<!-- Underground Passage Entrance -->
 	<spawn map="210050000" npcid="206104" pool="1" interval="295">
-		<object x="334.114" y="1351.62" h="0" z="263.492"/>
+		<object x="334.114" y="1351.62" h="64" z="263.492"/>
 	</spawn>
 	<!-- Training Dummy -->
 	<spawn map="210050000" npcid="700574" pool="4" interval="295">
@@ -1399,13 +1454,13 @@
 		<object x="2735.8401" y="1489.59" z="386" h="80" />
 	</spawn>
 	<!-- Defender Captain -->
-	<spawn map="210050000" npcid="209072" pool="2" interval="295">
+	<spawn map="210050000" npcid="209072" pool="3" interval="295">
 		<object x="586.32751" y="1583.3862" z="300" h="100" />
 		<object x="1896.1362" y="1738.4052" z="327.625" h="0" />
+        <object h="34" x="378.81757" y="962.29083" z="461.13437" w="189"/>
 	</spawn>
-	<!-- Defender Centurion -->
-	<spawn map="210050000" npcid="209147" pool="1" interval="295">
-		<object x="1890.53" y="1746.3816" z="327.625" h="0" />
+	<spawn map="210050000" npcid="209073" pool="1" interval="295">
+		<object h="43" x="2691.709" y="1411.163" z="370.3826"/>
 	</spawn>
 	<!-- Defender Centurion -->
 	<spawn map="210050000" npcid="209153" pool="2" interval="295">
@@ -1428,8 +1483,7 @@
 	<!-- Defender Elite -->
 	<spawn map="210050000" npcid="209142" pool="2" interval="295">
 		<object x="2871.9099" y="386.66" z="304.6076" h="3" />
-		<object x="2887.6174" y="431.54208" z="325.88104" h="27" />
-		<object x="2887.6174" y="431.54208" z="325.88104" h="27" />
+		<object x="2893.4692" y="361.58197" z="357.459" h="41" />
 	</spawn>
 	<!-- Defender Elite -->
 	<spawn map="210050000" npcid="209144" pool="3" interval="295">
@@ -1451,15 +1505,23 @@
 	<spawn map="210050000" npcid="209101" pool="1" interval="295">
 		<object x="2652.26" y="341.01001" z="511" h="31" />
 	</spawn>
+	<spawn map="210050000" npcid="209107" pool="1" interval="295">
+		<object h="41" x="1053.4979" y="595.7055" z="511.6234"/>
+	</spawn>
+	<spawn map="210050000" npcid="209108" pool="2" interval="295">
+		<object h="58" x="583.95996" y="456.113" z="459.0"/>
+		<object h="80" x="2635.63" y="357.88" z="517.6782"/>
+	</spawn>
 	<!-- Detachment Elite -->
 	<spawn map="210050000" npcid="209119" pool="1" interval="295">
 		<object x="1076.3927" y="587.4527" z="513" h="16" />
 	</spawn>
+	<spawn map="210050000" npcid="209121" pool="1" interval="295">
+		<object h="80" x="2735.84" y="1489.59" z="384.63498"/>
+	</spawn>
 	<!-- Detachment Elite -->
-	<spawn map="210050000" npcid="209124" pool="3" interval="295">
+	<spawn map="210050000" npcid="209124" pool="1" interval="295">
 		<object x="2652.4368" y="329.66113" z="511" h="31" />
-		<object x="2881.37" y="391.234" z="306.208" h="33" />
-		<object x="2880.78" y="431.866" z="325.618" h="31" />
 	</spawn>
 	<!-- Detachment Elite -->
 	<spawn map="210050000" npcid="209125" pool="1" interval="295">
@@ -1500,65 +1562,111 @@
 	<spawn map="210050000" npcid="206170" interval="295" pool="1">
 		<object x="2529.0056" y="180.72392" z="445" h="0" />
 	</spawn>
-    <!-- Wild Phanoe Ginseng -->
+   <spawn interval="295" map="210050000" npcid="209066" pool="3">
+      <object h="71" x="2718.8938" y="1469.319" z="381.45743" w="181"/>
+      <object h="33" x="2709.1826" y="1456.6366" z="381.5106"/>
+      <object h="80" x="2614.8943" y="1401.235" z="336.53748"/>
+   </spawn>
+   <spawn interval="295" map="210050000" npcid="209062" pool="2">
+      <object h="74" x="2717.1511" y="1468.3389" z="381.3872" w="182"/>
+      <object h="38" x="376.96613" y="961.5368" z="461.19217" w="188"/>
+   </spawn>
+   <spawn interval="295" map="210050000" npcid="209052" pool="1">
+      <object h="12" x="2663.3577" y="1451.9166" z="367.69357" w="183"/>
+   </spawn>
+   <spawn interval="295" map="210050000" npcid="209071" pool="3">
+      <object h="50" x="2679.68" y="1412.41" z="370.78247"/>
+      <object h="12" x="2662.5205" y="1453.6042" z="368.05453" w="184"/>
+      <object h="70" x="2756.27" y="1472.22" z="384.765"/>
+   </spawn>
+   <spawn interval="295" map="210050000" npcid="209056" pool="2">
+      <object h="39" x="369.2456" y="946.94214" z="460.81686" w="187"/>
+      <object h="30" x="394.75" y="960.25" z="460.53" w="186"/>
+   </spawn>
+   <spawn interval="295" map="210050000" npcid="205445" pool="1">
+      <object h="21" x="1404.0992" y="312.37982" z="589.58154" w="204"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799945" pool="1">
+      <object h="109" x="1340.6661" y="352.63742" z="589.682"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799946" pool="1">
+      <object h="106" x="1338.1923" y="350.0311" z="589.62897"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799947" pool="1">
+      <object h="96" x="1342.3726" y="355.2144" z="589.6345"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799948" pool="1">
+      <object h="93" x="1344.6764" y="357.12436" z="589.58386"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799953" pool="1">
+      <object h="86" x="1348.8248" y="358.80966" z="589.58124"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799954" pool="1">
+      <object h="83" x="1351.8829" y="358.49036" z="589.5801"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799955" pool="1">
+      <object h="80" x="1354.7262" y="358.02042" z="589.57904"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="799956" pool="1">
+      <object h="76" x="1357.7352" y="357.4615" z="589.5779"/>
+   </spawn>
+   <!--  -->
+   <spawn interval="295" map="210050000" npcid="209008" pool="7">
+      <object h="70" x="1347.5134" y="468.9102" z="542.4881"/>
+      <object h="26" x="1336.3542" y="461.3366" z="542.6931"/>
+      <object h="18" x="1332.627" y="456.49408" z="543.74316"/>
+      <object h="69" x="1350.4955" y="469.61685" z="543.08984"/>
+      <object h="97" x="1514.207" y="345.68338" z="547.06836"/>
+      <object h="8" x="1510.0906" y="328.21945" z="545.1304"/>
+      <object h="10" x="1507.993" y="325.49365" z="545.2822"/>
+   </spawn>
+    <!--  -->
 	<spawn map="210050000" npcid="700768" pool="1" interval="390">
         <object x="2487.3777" y="231.50584" z="414.0466" h="81"/>
     </spawn>
-  <!-- Dimensional Rift -->
-   <spawn map="210050000" npcid="730409" pool="1" interval="295">
-   <object x="930.49" y="1904.88" z="338.01" h="0"/>
-  </spawn>
-    <!-- Temporary location till the corect is found -->
-    <!-- Eare -->
-	<spawn map="210050000" npcid="799953" pool="1" interval="390">
-        <object x="1399.3173" y="222.0445" z="597.85114" h="48"/>
-    </spawn>
-    <!-- Raria -->
-	<spawn map="210050000" npcid="799954" pool="1" interval="390">
-        <object x="1400.5485" y="224.09685" z="597.85114" h="48"/>
-    </spawn>
-    <!-- Rissoneus -->
-	<spawn map="210050000" npcid="799955" pool="1" interval="390">
-        <object x="1401.4471" y="225.90201" z="597.85114" h="48"/>
-    </spawn>
-    <!-- Othrys -->
-	<spawn map="210050000" npcid="799956" pool="1" interval="390">
-        <object h="48" x="1402.1682" y="227.35036" z="597.85114" />
-    </spawn>
-	<!-- Gyrr -->
-	<spawn map="210050000" npcid="205445" pool="1" interval="295">
-		<object h="21" x="1404.0992" y="312.37982" z="589.58154"/>
-    </spawn>
-	<!-- Daneh -->
-    <spawn map="210050000" npcid="205446" pool="1" interval="295">
-		<object h="16" x="1304.3077" y="229.49538" z="595.63336"/>
-    </spawn>
-	<!-- Fillia -->
-    <spawn map="210050000" npcid="799945" pool="1" interval="295">
-		<object h="109" x="1340.6661" y="352.63742" z="589.682"/>
-    </spawn>
-	<!-- Elrin -->
-    <spawn map="210050000" npcid="799946" pool="1" interval="295">
-		<object h="106" x="1338.1923" y="350.0311" z="589.62897"/>
-    </spawn>
-	<!-- Gioni -->
-    <spawn map="210050000" npcid="799947" pool="1" interval="295">
-		<object h="96" x="1342.3726" y="355.2144" z="589.6345"/>
-    </spawn>
-	<!-- Serooth -->
-    <spawn map="210050000" npcid="799948" pool="1" interval="295">
-		<object h="93" x="1344.6764" y="357.12436" z="589.58386"/>
-    </spawn>
-	<!-- Uminosus -->
-    <spawn map="210050000" npcid="205453" pool="1" interval="295">
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="799553" pool="1">
+		<object h="30" x="1087.9384" y="1561.1361" z="407.90622"/>
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="799586" pool="1">
+		<object h="30" x="1071.5428" y="1561.0547" z="407.90622"/>
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="730409" pool="2">
+		<object h="53" x="932.95135" y="1906.0013" z="338.0153"/>
+		<object h="71" x="1813.3993" y="2210.5579" z="325.5908"/>
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="205453" pool="1">
 		<object h="10" x="1281.68" y="316.8" z="590.08435"/>
-    </spawn>
-	<!-- Tillen -->
-    <spawn map="210050000" npcid="799552" pool="1" interval="295">
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="205314" pool="1">
+		<object h="46" x="1290.2552" y="200.38097" z="595.81323"/>
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="799088" pool="1">
+		<object h="46" x="1284.0985" y="202.27536" z="595.81323"/>
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="799552" pool="1">
 		<object h="106" x="1276.7909" y="208.16243" z="595.81323"/>
-    </spawn>
-	<!-- Daidra -->
-	<spawn map="210050000" npcid="799553" pool="1" interval="295">
-		<object h="14" x="1084.58" y="1614.62" z="409.939" />
+	</spawn>
+	<!--  -->
+	<spawn interval="295" map="210050000" npcid="205446" pool="1">
+		<object h="16" x="1304.3077" y="229.49538" z="595.63336"/>
+	</spawn>
+	<!-- Artifact Light-->
+	<spawn map="210050000" npcid="700956" pool="1" interval="295">
+		<object staticid="2253" h="0" x="101.95615" y="2240.2744" z="473.82977"/>
 	</spawn>
 </spawns>

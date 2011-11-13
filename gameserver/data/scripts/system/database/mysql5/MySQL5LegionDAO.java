@@ -1,18 +1,18 @@
-/*
- * This file is part of aion-unique <aion-unique.org>.
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
- *  aion-unique is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  aion-unique is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package mysql5;
 
@@ -26,21 +26,21 @@ import java.util.HashMap;
 import java.util.TreeMap;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.LegionDAO;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.PersistentState;
-import ru.aionknight.gameserver.model.gameobjects.player.StorageType;
-import ru.aionknight.gameserver.model.legion.Legion;
-import ru.aionknight.gameserver.model.legion.LegionEmblem;
-import ru.aionknight.gameserver.model.legion.LegionHistory;
-import ru.aionknight.gameserver.model.legion.LegionHistoryType;
-import ru.aionknight.gameserver.model.legion.LegionWarehouse;
+import gameserver.dao.LegionDAO;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.PersistentState;
+import gameserver.model.gameobjects.player.StorageType;
+import gameserver.model.legion.Legion;
+import gameserver.model.legion.LegionEmblem;
+import gameserver.model.legion.LegionHistory;
+import gameserver.model.legion.LegionHistoryType;
+import gameserver.model.legion.LegionWarehouse;
 
 
 /**
- * Class that that is responsible for loading/storing {@link ru.aionknight.gameserver.model.legion.Legion} object from
+ * Class that that is responsible for loading/storing {@link gameserver.model.legion.Legion} object from
  * MySQL 5.
  * 
  * @author Simple

@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : 
+	ID локации		 : 
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Eltnen
-	@author Atomix
-	@author_fix Kellogz (based on retail Eu spawn 01/08/2010)
  -->
+
 <spawns>
 	<!-- Acheron Drake (Monster Normal lvl:26)-->
 	<spawn map="210020000" npcid="210799" pool="7" interval="150">
@@ -4671,7 +4660,7 @@
 	</spawn>
 	<!-- Shaman Kalabar (Monster Elite lvl:39)-->
 	<spawn map="210020000" npcid="217090" interval="295">
-		<object x="1834.6296" y="1083.6174" z="432.75696" h="14"/>
+		<object x="1832.8577" y="1081.3947" z="445" h="75"/>
 	</spawn>
 	<!-- Shielded Skyray (Monster Elite lvl:32)-->
 	<spawn map="210020000" npcid="211785" pool="19" interval="390">
@@ -6146,9 +6135,5 @@
 		<object x="2262.87" y="1096.31" z="389.22757" h="37"/>
 		<object x="2198.74" y="936.11" z="418.56686" h="8"/>
 		<object x="2058.3044" y="969.1917" z="401.625" h="32"/>		
-	</spawn>
-	<!-- king consierd (Monster Hero lvl:38-->
-	<spawn map="220020000" npcid="212648" interval="14400">
-		<object x="898.71936" y="1246.9089" z="277.125" h="100" />
 	</spawn>
 </spawns>

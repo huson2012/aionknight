@@ -1,14 +1,14 @@
 package quest.reshanta;
 
 
-import ru.aionknight.gameserver.model.EmotionType;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.services.TeleportService;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.zone.ZoneName;
+import gameserver.model.EmotionType;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.services.TeleportService;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.zone.ZoneName;
 
 
 public class _2076TheShadowSummons extends QuestHandler

@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : 
+	ID локации		 : 
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Theobomos
-	@author Atomix
-	@author_fix Kellogz (based on retail Eu spawn 01/08/2010)
  -->
+
 <spawns>
 	<!-- Sentinel Clorint (Named Monster lvl:49)-->
 	<spawn map="210060000" npcid="214563" pool="1" interval="10800">
@@ -3656,7 +3645,7 @@
 		<object x="2481.911" y="734.1722" z="192.7281" h="76"/>
 		<object x="2613.5857" y="842.9311" z="155.01938" h="87"/>
 		<object x="2507.4285" y="724.1496" z="192.75" h="34"/>
-		<object x="2695.654" y="865.0377" z="120.64114" h="0"/>
+		<object x="2687.6018" y="850.6185" z="139.46497" h="37"/>
 		<object x="2805.7224" y="861.78235" z="120.51783" h="99"/>
 		<object x="2709.2957" y="870.6783" z="124.65815" h="87"/>
 		<object x="2460.9197" y="804.7667" z="199.38423" h="72"/>

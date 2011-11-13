@@ -10,11 +10,11 @@ import java.util.Map.Entry;
 import javolution.util.FastMap;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.SpawnDAO;
-import ru.aionknight.gameserver.model.templates.spawn.SpawnGroup;
-import ru.aionknight.gameserver.model.templates.spawn.SpawnTemplate;
+import gameserver.dao.SpawnDAO;
+import gameserver.model.templates.spawn.SpawnGroup;
+import gameserver.model.templates.spawn.SpawnTemplate;
 
 
 /**

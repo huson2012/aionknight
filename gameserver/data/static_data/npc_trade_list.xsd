@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	:
+	Ревизия				: 1.0.1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--  -->
 	<xs:element name="npc_trade_list">
 		<xs:complexType>
 			<xs:sequence>
@@ -8,7 +18,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-
+	<!--  -->
 	<xs:complexType name="TradelistTemplate">
 		<xs:sequence>
 			<xs:element name="tradelist" minOccurs="0" maxOccurs="unbounded" >
@@ -23,11 +33,10 @@
 		<xs:attribute name="count" type="xs:int" />
 		<xs:attribute name="buy_rate" type="xs:float" default="1" />
 		<xs:attribute name="sell_price_rate" type="xs:int"/>
-
 		<xs:attribute name="sell_rate" type="xs:float" default="1" />
 		<xs:attribute name="type" type="TradeListType" default="KINAH" />
 	</xs:complexType>
-	
+	<!--  -->
 	<xs:simpleType name="TradeListType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="KINAH" />
@@ -36,6 +45,4 @@
 			<xs:enumeration value="EXTRA" />
 		</xs:restriction>
 	</xs:simpleType>
-
 </xs:schema>
-

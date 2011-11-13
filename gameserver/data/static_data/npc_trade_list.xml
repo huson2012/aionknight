@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+	Назначение файла	: Настройка торговых листов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<tradelist_template npc_id="203060" name="mune" count="4" sell_rate="1" buy_rate="0.2">
 		<tradelist id="129"/>

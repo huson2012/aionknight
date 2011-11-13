@@ -7,13 +7,13 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.openaion.commons.database.DB;
-import org.openaion.commons.database.DatabaseFactory;
-import org.openaion.commons.database.ReadStH;
+import loginserver.GameServerInfo;
+import loginserver.dao.GameServersDAO;
 
-import ru.aionknight.loginserver.GameServerInfo;
-import ru.aionknight.loginserver.dao.GameServersDAO;
+import org.apache.log4j.Logger;
+import commons.database.DB;
+import commons.database.DatabaseFactory;
+import commons.database.ReadStH;
 
 
 /**

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="../licenses/Aion-Unique.css" title="License Aion-Unique" alternate="no"?>
-<?xml-stylesheet type="text/css" href="../authors/Magenik.css"?>
-<npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
+
+<!--
+
+	Назначение файла	: Настройка телепортов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
+<npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
 	<!-- ASMODIANS -->
 	<!-- Pandaemonium -->
 	<teleporter_template npc_id="204191" name="Doman" teleportId="50" type="REGULAR">

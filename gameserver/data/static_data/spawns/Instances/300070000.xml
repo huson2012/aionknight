@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of aion-unique <aion-unique.org>.
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+	Название локации : Подземная крепость Ру (Данж)
+	ID локации		 : 300070000
+	Версия Клиента	 : 2.5 (Иннова)
 
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Chamber of Roah by Salvator team: sielaion
-	
  -->
+
 <spawns>
-	<!-- Dakaer Ranger -->
+	<!-- Драконид-страж 33-го отряда -->
 	<spawn map="300070000" npcid="215447" pool="46" interval="105">
 		<object x="528.34955" y="484.0283" z="87.182144" h="60"/>
 		<object x="479.04074" y="483.70682" z="87.18748" h="0"/>
@@ -68,7 +58,7 @@
 		<object x="621.4696" y="472.3846" z="102.655754" h="55"/>
 		<object x="611.9369" y="452.49957" z="102.64065" h="54"/>
 	</spawn>
-	<!--  Dakaer Sentinel -->
+	<!-- Драконид-сторож 33-го отряда -->
 	<spawn map="300070000" npcid="214777" pool="16" interval="105">
 		<object x="513.40045" y="425.06668" z="91.34131" h="44"/>
 		<object x="495.52353" y="425.095" z="91.31033" h="15"/>
@@ -87,7 +77,7 @@
 		<object x="504.6163" y="468.5158" z="86.70171" h="31"/>
 		<object x="511.63092" y="460.55847" z="86.80122" h="2"/>
 	</spawn>
-	<!-- Dakaer Scout -->
+	<!-- Драконид-разведчик 33-го отряда -->
 	<spawn map="300070000" npcid="214773" pool="7" interval="105">
 		<object x="504.01617" y="481.0924" z="87.2719" h="95"/>
 		<object x="511.7357" y="488.25058" z="87.241684" h="115"/>
@@ -97,24 +87,24 @@
 		<object x="495.8331" y="499.29544" z="88.92186" h="74"/>
 		<object x="493.08926" y="504.961" z="89.02424" h="74"/>
 	</spawn>
-	<!--  Dakaer Bloodmender -->
+	<!-- Нага-целитель 33-го отряда -->
 	<spawn map="300070000" npcid="214781" pool="2" interval="105">
 		<object x="379.89838" y="510.64047" z="102.618126" h="112"/>
 		<object x="625.3813" y="457.43445" z="102.63329" h="54"/>
 	</spawn>
-	<!-- Dakaer Physician -->
+	<!-- Дракан-врач 33-го отряда -->
 	<spawn map="300070000" npcid="214784" pool="1" interval="105">
 		<object x="503.8599" y="631.2544" z="104.548805" h="91"/>
 	</spawn>
-	<!-- Golden Fortress Crate -->
+	<!-- Золотой сундук подземной крепости -->
 	<spawn map="300070000" npcid="700472" pool="1" interval="105">
 		<object x="380.31073" y="516.80597" z="102.618126" h="47"/>
 	</spawn>
-	<!-- Magic Fortress Crate -->
+	<!-- Волшебный сундук подземной крепости -->
 	<spawn map="300070000" npcid="700474" pool="1" interval="105">
 		<object x="630.1139" y="451.67737" z="102.63267" h="107"/>
 	</spawn>
-	<!-- Jeweled Fortress Crate -->
+	<!-- Сундук подземной крепости с драгоценными камнями -->
 	<spawn map="300070000" npcid="700473" pool="1" interval="105">
 		<object x="514.3094" y="632.51044" z="103.69621" h="88"/>
 	</spawn>

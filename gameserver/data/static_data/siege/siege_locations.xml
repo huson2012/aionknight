@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	Назначение файла	: Расположение крепостей
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <siege_locations>
 	<siege_location id="0" type="UNDERPASS" world="210050000"/>
 	<siege_location id="0" type="UNDERPASS" world="220070000"/>

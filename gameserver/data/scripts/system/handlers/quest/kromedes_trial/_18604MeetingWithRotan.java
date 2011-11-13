@@ -1,26 +1,26 @@
 package quest.kromedes_trial;
 
 
-import ru.aionknight.gameserver.model.gameobjects.Creature;
-import ru.aionknight.gameserver.model.gameobjects.Item;
-import ru.aionknight.gameserver.model.gameobjects.VisibleObject;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import ru.aionknight.gameserver.quest.HandlerResult;
-import ru.aionknight.gameserver.quest.handlers.QuestHandler;
-import ru.aionknight.gameserver.quest.model.QuestCookie;
-import ru.aionknight.gameserver.quest.model.QuestState;
-import ru.aionknight.gameserver.quest.model.QuestStatus;
-import ru.aionknight.gameserver.services.QuestService;
-import ru.aionknight.gameserver.skill.SkillEngine;
-import ru.aionknight.gameserver.skill.model.Effect;
-import ru.aionknight.gameserver.skill.model.Skill;
-import ru.aionknight.gameserver.skill.model.SkillTemplate;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.ThreadPoolManager;
-import ru.aionknight.gameserver.world.zone.ZoneName;
+import gameserver.model.gameobjects.Creature;
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
+import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.quest.HandlerResult;
+import gameserver.quest.handlers.QuestHandler;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+import gameserver.quest.model.QuestStatus;
+import gameserver.services.QuestService;
+import gameserver.skill.SkillEngine;
+import gameserver.skill.model.Effect;
+import gameserver.skill.model.Skill;
+import gameserver.skill.model.SkillTemplate;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.ThreadPoolManager;
+import gameserver.world.zone.ZoneName;
 
 
 public class _18604MeetingWithRotan extends QuestHandler

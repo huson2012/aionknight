@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <!--
-	This file is part of Zetta Core
 
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
-	
-	Karamatis Q1099
-	@Author Nephis From Client Spawn
+	Название локации : Карамматис
+	ID локации		 : 310120000
+	Версия Клиента	 : 2.5 (Иннова)
 
  -->
+
 <spawns>
+	<!-- Налетчик драконидов -->
 	<spawn map="310120000" interval="105" npcid="215396" pool="45">
 		<object x="269.862" y="286.781" h="0" z="208.027"/>
 		<object x="307.061" y="263.551" h="0" z="205.228"/>
@@ -67,6 +57,7 @@
 		<object x="267.136" y="307.381" h="0" z="206.01"/>
 		<object x="250.315" y="233.008" h="0" z="205.934"/>
 	</spawn>
+	<!-- Драконид-легионер -->
 	<spawn map="310120000" interval="105" npcid="215397" pool="34">
 		<object x="248.11" y="235.112" h="0" z="206.133"/>
 		<object x="247.43" y="287.759" h="0" z="207.85"/>
@@ -103,6 +94,7 @@
 		<object x="282.227" y="273.413" h="0" z="209.131"/>
 		<object x="267.657" y="288.884" h="0" z="206.983"/>
 	</spawn>
+	<!-- Драконид-лучник -->
 	<spawn map="310120000" interval="105" npcid="215398" pool="35">
 		<object x="240.461" y="296.689" h="0" z="206.295"/>
 		<object x="250.571" y="211.239" h="0" z="206.063"/>
@@ -140,6 +132,7 @@
 		<object x="269.474" y="304.894" h="0" z="206.356"/>
 		<object x="287.729" y="298.636" h="0" z="207.058"/>
 	</spawn>
+	<!-- Целитель драконидов -->
 	<spawn map="310120000" interval="105" npcid="215399" pool="25">
 		<object x="270.173" y="217.175" h="0" z="207.158"/>
 		<object x="222.266" y="285.996" h="0" z="206.971"/>
@@ -167,11 +160,11 @@
 		<object x="234.718" y="271.7" h="0" z="206.664"/>
 		<object x="267.485" y="285.411" h="0" z="208.952"/>
 	</spawn>
-	<!-- Hermione -->
+	<!-- Гермион -->
 	<spawn map="310120000" interval="215" npcid="205119" pool="1">
 		<object x="85.0" y="192.0" h="95" z="231.65344"/>
 	</spawn>
-	<!-- Artifact of Memory -->
+	<!-- Артефакт воспоминаний -->
 	<spawn map="310120000" interval="215" npcid="700552" pool="1">
 		<object staticid="82" x="305.58514" y="293.97534" h="0" z="206.45227"/>
 	</spawn>

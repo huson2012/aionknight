@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="AE-Chat" default="dist" basedir=".">
+<project name="chatserver" default="dist" basedir=".">
+	
 	<description>
-      This file is part of Aion-Knight  Emulator [www.aion-knight.ru]
+    		
+		This file is part of Aion-Knight Dev. Team [www.aion-knight.ru]
 
-         This is free software: you can redistribute it and/or modify
-        it under the terms of the GNU Lesser Public License as published by
+		This is free software: you can redistribute it and / or modify
+		it under the terms of the GNU Lesser Public License as published by
 		the Free Software Foundation, either version 3 of the License, or
 		(at your option) any later version.
-
+		
 		This software is distributed in the hope that it will be useful,
 		but WITHOUT ANY WARRANTY; without even the implied warranty of
-		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 		GNU Lesser Public License for more details.
 		
 		You should have received a copy of the GNU Lesser Public License
-		along with this software.  If not, see http://www.gnu.org/licenses.
-	</description>
+		along with this software. If not, see http://www.gnu.org/licenses/.
+    
+    </description>
+	
 	<property name="jre" location="${java.home}/lib"/>
 	<property name="src" location="src"/>
 	<property name="config" location="config"/>
 	<property name="lib" location="lib"/>
-	<property name="build" location="build"/>
+	<property name="build" location="../tools/Compiled/ChatServer"/>
 	<property name="build.classes" location="${build}/classes"/>
 	<property name="build.dist" location="${build}/dist"/>
 	<property name="build.dist.chat" location="${build.dist}/chatserver"/>
-	<path id="bootclasspath">
-		<fileset dir="${lib}">
-			<include name="jsr166.jar"/>
-		</fileset>
-		<fileset dir="${jre}">
-			<include name="rt.jar"/>
-			<include name="jce.jar"/>
-		</fileset>
-	</path>
+
 	<path id="classpath">
 		<fileset dir="${lib}">
 			<include name="*.jar"/>
@@ -48,15 +44,14 @@
 	<target name="compile" depends="init" description="Compile the source.">
 		<javac destdir="${build.classes}" optimize="on" debug="on" nowarn="off" source="1.6" target="1.6" includeantruntime="false">
 			<src path="${src}"/>
-			<bootclasspath refid="bootclasspath"/>
 			<classpath refid="classpath"/>
 		</javac>
 	</target>
 	<target name="jar" depends="compile" description="Create the jar file">
-		<jar destfile="${build}/aion-knight_chat.jar">
+		<jar destfile="${build}/JAR/ak-chat.jar">
 			<fileset dir="${build.classes}"/>
 			<manifest>
-				<attribute name="Main-Class" value="ru.aionknight.chatserver.ChatServer"/>
+				<attribute name="Main-Class" value="chatserver.ChatServer"/>
 			</manifest>
 		</jar>
 	</target>
@@ -67,7 +62,7 @@
 		<mkdir dir="${build.dist.chat}/libs"/>
 		<copy todir="${build.dist.chat}">
 			<fileset dir="${build}">
-				<include name="aion-knight_chat.jar"/>
+				<include name="ak-chat.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="${build.dist.chat}/libs">
@@ -85,6 +80,6 @@
 				<include name="*.*"/>
 			</fileset>
 		</copy>
-		<zip destfile="${build}/aion-knight_chat.zip" basedir="${build.dist}"/>
+		<zip destfile="${build}/ak-chat.zip" basedir="${build.dist}"/>
 	</target>
 </project>

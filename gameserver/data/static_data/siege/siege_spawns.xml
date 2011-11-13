@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Malkav version 
-Forteresses et Artefacts Abyssaux-->
+
+<!--
+
+	Назначение файла	: 
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <siege_spawns>
 	<siege_spawn location_id="1132">
 		<guards>
-			<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
-			<!-- Spawned when Fortress is under Siege -->
-			<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
 			<!-- Egill / Stenoleus, Guerisseur d'ame, Elite, level 45-->
 			<siege_guard npcid_dr="263521" npcid_da="263520" npcid_li="263519">
 				<loc x="2585.4" y="2882.3" z="1506.5" h="102"/>

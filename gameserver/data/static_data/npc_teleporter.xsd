@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	:
+	Ревизия				: 1.0.1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+	<!--  -->
 	<xs:include schemaLocation="import.xsd"/>
-
+	<!--  -->
 	<xs:element name="npc_teleporter" type="Data"/>
-
+	<!--  -->
 	<xs:complexType name="Data">
 		<xs:sequence>
 			<xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
@@ -12,7 +21,7 @@
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-
+	<!--  -->
 	<xs:complexType name="Template">
 		<xs:sequence>
 			<xs:element name="locations" type="Locations" minOccurs="0" maxOccurs="unbounded"/>
@@ -22,25 +31,25 @@
 		<xs:attribute name="teleportId" type="xs:int" use="required"/>
 		<xs:attribute name="type" type="TeleportType" use="required"/>
 	</xs:complexType>
-
+	<!--  -->
 	<xs:simpleType name="TeleportType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="FLIGHT"/>
 			<xs:enumeration value="REGULAR"/>
 		</xs:restriction>
 	</xs:simpleType>
-
+	<!--  -->
 	<xs:complexType name="Locations">
 		<xs:sequence>
 			<xs:element name="telelocation" type="TeleportLocation" minOccurs="0"
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-
+	<!--  -->
 	<xs:complexType name="TeleportLocation">
 		<xs:attribute name="loc_id" type="xs:int" use="required"/>
 		<xs:attribute name="teleportid" type="xs:int"/>
 		<xs:attribute name="price" type="xs:int"/>
 	</xs:complexType>
-
+	<!--  -->
 </xs:schema>

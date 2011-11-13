@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="GameServer" default="dist" basedir=".">
+<project name="gameserver" default="dist" basedir=".">
 	
-    <description>
-		This file is part of Aion-Knight [www.aion-knight.ru]
+	<description>
+    		
+		This file is part of Aion-Knight Dev. Team [www.aion-knight.ru]
 
-		This is free software: you can redistribute it and/or modify
+		This is free software: you can redistribute it and / or modify
 		it under the terms of the GNU Lesser Public License as published by
 		the Free Software Foundation, either version 3 of the License, or
 		(at your option) any later version.
 		
 		This software is distributed in the hope that it will be useful,
 		but WITHOUT ANY WARRANTY; without even the implied warranty of
-		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 		GNU Lesser Public License for more details.
 		
 		You should have received a copy of the GNU Lesser Public License
-		along with this software.  If not, see http://www.gnu.org/licenses/.
+		along with this software. If not, see http://www.gnu.org/licenses/.
+    
     </description>
 	
 	<property name="jre" location="${java.home}/lib"/>
     <property name="src" location="src"/>
 	<property name="config" location="config"/>
     <property name="lib" location="lib"/>
-    <property name="build" location="build"/>
-    <property name="build.classes" location="${build}/classes"/>
-    <property name="build.dist" location="${build}/dist"/>
-	<property name="build.dist.gs" location="${build.dist}/gameserver"/>
+    <property name="build" location="../tools/Compiled/GameServer"/>
+    <property name="build.classes" location="${build}/Classes"/>
+    <property name="build.dist" location="${build}/Dist"/>
+	<property name="build.dist.gs" location="${build.dist}/GameServer"/>
     
-	<path id="bootclasspath">
-        <fileset dir="${lib}">
-        	<include name="jsr166.jar"/>
-        </fileset>
-		<fileset dir="${jre}">
-			<include name="rt.jar"/>
-			<include name="jce.jar"/>
-		</fileset>
-    </path>
-	
     <path id="classpath">
         <fileset dir="${lib}">
             <include name="*.jar"/>
@@ -53,7 +45,6 @@
 	<target name="compile" depends="init" description="Compile the source.">
 		<javac destdir="${build.classes}" optimize="on" debug="on" nowarn="off" source="1.6" target="1.6" includeantruntime="false">
 			<src path="${src}"/>
-			<bootclasspath refid="bootclasspath"/>
 			<classpath refid="classpath"/>
 		</javac>
     </target>
@@ -68,10 +59,10 @@
 			<format property="date" pattern="yyyy-MM-dd-HH:mm" />
 		</tstamp>
 
-        <jar destfile="${build}/aion-knight_game.jar">
+        <jar destfile="${build}/JAR/ak-server.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
-                <attribute name="Main-Class" value="ru.aionknight.gameserver.GameServer"/>
+                <attribute name="Main-Class" value="gameserver.GameServer"/>
             	<attribute name="Revision" value="${revision}"/>
             	<attribute name="Date" value="${date}"/>
             </manifest>
@@ -89,7 +80,7 @@
     	
     	<copy todir="${build.dist.gs}">
             <fileset dir="${build}">
-                <include name="aion-knight_game.jar"/>
+                <include name="ak-server.jar"/>
 			</fileset>
         </copy>
     	
@@ -123,8 +114,7 @@
             </fileset>
         </copy>
 
-        <zip destfile="${build}/aion-knight_gameserver.zip"
+        <zip destfile="${build}/ak-gameserver.zip"
              basedir="${build.dist}" />
     </target>   
-
 </project>

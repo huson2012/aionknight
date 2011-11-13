@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
-<!-- Shilds Templates file. Modify by Aion Knight Team -->
+<!--
+
+	Назначение файла	: Щиты крепостей
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 25 (Иннова)
+
+ -->
 
 <shields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shields.xsd">
 	<shield name="TEMINON_SHIELD" race="ELYOS" x="3002.9207" y="903.2752" z="1520.0913" radius="313.5392" skill="8314" map="400010000"/>

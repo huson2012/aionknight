@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 
 import org.apache.log4j.Logger;
-import org.openaion.commons.database.DatabaseFactory;
+import commons.database.DatabaseFactory;
 
-import ru.aionknight.gameserver.dao.PlayerEmotionListDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Emotion;
-import ru.aionknight.gameserver.model.gameobjects.player.EmotionList;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
+import gameserver.dao.PlayerEmotionListDAO;
+import gameserver.model.gameobjects.player.Emotion;
+import gameserver.model.gameobjects.player.EmotionList;
+import gameserver.model.gameobjects.player.Player;
 
 
 /**

@@ -2,21 +2,21 @@ package admincommands;
 
 import java.util.Iterator;
 
-import org.openaion.commons.database.dao.DAOManager;
+import commons.database.dao.DAOManager;
 
-import ru.aionknight.gameserver.configs.administration.AdminConfig;
-import ru.aionknight.gameserver.dao.PlayerDAO;
-import ru.aionknight.gameserver.model.gameobjects.player.Friend;
-import ru.aionknight.gameserver.model.gameobjects.player.Player;
-import ru.aionknight.gameserver.model.gameobjects.stats.modifiers.Executor;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_MEMBER;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
-import ru.aionknight.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import ru.aionknight.gameserver.services.PlayerService;
-import ru.aionknight.gameserver.utils.PacketSendUtility;
-import ru.aionknight.gameserver.utils.Util;
-import ru.aionknight.gameserver.utils.chathandlers.AdminCommand;
-import ru.aionknight.gameserver.world.World;
+import gameserver.configs.administration.AdminConfig;
+import gameserver.dao.PlayerDAO;
+import gameserver.model.gameobjects.player.Friend;
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.gameobjects.stats.modifiers.Executor;
+import gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_MEMBER;
+import gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
+import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.services.PlayerService;
+import gameserver.utils.PacketSendUtility;
+import gameserver.utils.Util;
+import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
 
 
 /**

@@ -8,13 +8,13 @@ import java.sql.Types;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.openaion.commons.database.DB;
-import org.openaion.commons.database.IUStH;
-import org.openaion.commons.database.ParamReadStH;
-import org.openaion.commons.database.ReadStH;
+import loginserver.dao.BannedIpDAO;
+import loginserver.model.BannedIP;
 
-import ru.aionknight.loginserver.dao.BannedIpDAO;
-import ru.aionknight.loginserver.model.BannedIP;
+import commons.database.DB;
+import commons.database.IUStH;
+import commons.database.ParamReadStH;
+import commons.database.ReadStH;
 
 
 /**
