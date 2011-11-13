@@ -15,15 +15,10 @@
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package gameserver.model.gameobjects.player;
-import java.sql.Timestamp;
 
+import java.sql.Timestamp;
 import gameserver.model.gameobjects.PersistentState;
 
-
-/**
- * @author HellBoy
- *
- */
 public class Guild
 {
 	private int guildId;

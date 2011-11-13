@@ -14,19 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Comparator;
-
 import gameserver.model.broker.BrokerRace;
 
-
-/**
-
- *
- */
 public class BrokerItem implements Comparable<BrokerItem>
 {
 	private Item item;

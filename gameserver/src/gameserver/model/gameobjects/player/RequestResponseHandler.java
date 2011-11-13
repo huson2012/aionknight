@@ -14,17 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import gameserver.model.gameobjects.Creature;
 
-/**
- * Implemented by handlers of <tt>CM_QUESTION_RESPONSE</tt> responses
- * 
- * @author Ben
- * @modified Lyahim
- *
- */
 public abstract class RequestResponseHandler
 {
 	private Creature requester;
@@ -61,5 +55,4 @@ public abstract class RequestResponseHandler
 	 * @param responder Player whom responded to this request
 	 */
 	public abstract void denyRequest(Creature requester, Player responder);
-
 }

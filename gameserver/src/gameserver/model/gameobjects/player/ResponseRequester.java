@@ -14,23 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import org.apache.log4j.Logger;
-
 import gameserver.network.aion.AionServerPacket;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * Manages the asking of and responding to <tt>SM_QUESTION_WINDOW</tt>
- * 
- * @author Ben
- * @author Jego
- */
 public class ResponseRequester
 {
 	private Player										player;

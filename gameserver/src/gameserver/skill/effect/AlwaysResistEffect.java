@@ -14,21 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAttribute;
-
-
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.controllers.movement.AttackCalcObserver;
 import gameserver.controllers.movement.AttackStatusObserver;
 import gameserver.skill.model.Effect;
 
-
-/**
-
- *
- */
 public class AlwaysResistEffect extends EffectTemplate
 {
 	@XmlAttribute

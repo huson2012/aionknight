@@ -21,8 +21,8 @@ import java.awt.Point;
 
 public abstract class AbstractArea implements Area
 {
-	private final int	minZ;
-	private final int	maxZ;
+	private final int minZ;
+	private final int maxZ;
 	protected AbstractArea(int minZ, int maxZ)
 	{
 		if(minZ > maxZ)

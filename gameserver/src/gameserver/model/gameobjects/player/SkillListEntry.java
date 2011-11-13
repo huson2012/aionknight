@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,22 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.player;
 
+package gameserver.model.gameobjects.player;
 
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.PersistentState;
 
-/**
-, HellBoy
- *
- */
 public class SkillListEntry
 {
 	private int skillId;
-	
 	private int skillLvl;
-	
 	private boolean isStigma;
 	
 	/**
@@ -178,6 +172,5 @@ public class SkillListEntry
 			default:
 				this.persistentState = persistentState;
 		}
-	}
-	
+	}	
 }

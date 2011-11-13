@@ -14,14 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.StatEnum;
@@ -29,13 +28,6 @@ import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.HealType;
 
-
-
-/**
-
- * @rework kecimis
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbstractHealEffect")
 public abstract class AbstractHealEffect extends EffectTemplate
@@ -157,5 +149,4 @@ public abstract class AbstractHealEffect extends EffectTemplate
 	{
 		return effect.getEffected().getLifeStats().getMaxHp();
 	}
-
 }

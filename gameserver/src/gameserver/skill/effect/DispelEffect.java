@@ -14,24 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-
 import gameserver.skill.model.DispelType;
 import gameserver.skill.model.Effect;
 
-
-/**
-
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DispelEffect")
 public class DispelEffect extends EffectTemplate

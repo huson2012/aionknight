@@ -14,19 +14,14 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.stats.modifiers;
 
+package gameserver.model.gameobjects.stats.modifiers;
 
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.shield.Shield;
 import gameserver.utils.MathUtil;
 import gameserver.world.KnownList;
 
-
-/**
- * @author blakawk
- *
- */
 public class ShieldKnownList extends KnownList
 {
 	public ShieldKnownList(Shield owner)
@@ -40,5 +35,4 @@ public class ShieldKnownList extends KnownList
 		
 		return MathUtil.isIn3dRange(owner, newObject, ((Shield)owner).getTemplate().getRadius());
 	}
-
 }

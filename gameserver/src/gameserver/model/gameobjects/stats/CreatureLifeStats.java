@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight <Aion-Knight.smfnew.com>.
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.locks.ReentrantLock;
-
 import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.Creature;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
@@ -28,11 +27,6 @@ import gameserver.services.LifeStatsRestoreService;
 import gameserver.skill.effect.EffectId;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
-
- *
- */
 public abstract class CreatureLifeStats<T extends Creature>
 {
 	private static final Logger log = Logger.getLogger(CreatureLifeStats.class);
@@ -529,6 +523,5 @@ public abstract class CreatureLifeStats<T extends Creature>
 	public void triggerRestoreOnRevive()
 	{
 		this.triggerRestoreTask();
-	}
-	
+	}	
 }

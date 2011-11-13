@@ -14,32 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.controllers.VisibleObjectController;
 import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.world.*;
 
-/**
- * This class is representing visible objects. It's a base class for all in-game objects that can be spawned in the
- * world at some particular position (such as players, npcs).<br>
- * <br>
- * Objects of this class, as can be spawned in game, can be seen by other visible objects. To keep track of which
- * objects are already "known" by this visible object and which are not, VisibleObject is containing {@link KnownList}
- * which is responsible for holding this information.
- * 
- * @author -Nemesiss-
- * 
- */
 public abstract class VisibleObject extends AionObject
 {
 	protected VisibleObjectTemplate objectTemplate;
 	
 	/**
 	 * Constructor.
-	 * 
 	 * @param objId
 	 * @param objectTemplate 
 	 */

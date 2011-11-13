@@ -14,25 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillSubType;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
-
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BoostSkillCastingTimeEffect")
 public class BoostSkillCastingTimeEffect extends BufEffect
@@ -69,5 +63,4 @@ public class BoostSkillCastingTimeEffect extends BufEffect
 		if (type == SkillSubType.NONE && effect.getEffected() instanceof Player)
 			PacketSendUtility.sendPacket((Player)effect.getEffected(), new SM_STATS_INFO((Player)effect.getEffected()));
 	}
-
 }

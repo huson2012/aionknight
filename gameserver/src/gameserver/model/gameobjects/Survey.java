@@ -14,6 +14,7 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,17 +23,10 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.Race;
 import gameserver.model.templates.item.ItemRace;
 import gameserver.model.templates.survey.SurveyItem;
 
-
-/**
- *
- * @author ginho1
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SurveyTemplate", propOrder = { "title", "message", "select_text", "item" })
 public class Survey

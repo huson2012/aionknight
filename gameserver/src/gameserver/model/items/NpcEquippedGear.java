@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import java.util.Iterator;
@@ -21,19 +22,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.Map.Entry;
-
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-
-
 import gameserver.dataholders.loadingutils.adapters.NpcEquipmentList;
 import gameserver.dataholders.loadingutils.adapters.NpcEquippedGearAdapter;
 import gameserver.model.templates.item.ItemTemplate;
 
-
-/**
- * @author Luno
- * 
- */
 @XmlJavaTypeAdapter(NpcEquippedGearAdapter.class)
 public class NpcEquippedGear implements Iterable<Entry<ItemSlot,ItemTemplate>>
 {
@@ -99,6 +92,5 @@ public class NpcEquippedGear implements Iterable<Entry<ItemSlot,ItemTemplate>>
 	public ItemTemplate getItem(ItemSlot itemSlot)
 	{
 		return items != null ? items.get(itemSlot) : null;
-	}
-	
+	}	
 }

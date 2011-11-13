@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,19 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-
 import org.apache.log4j.Logger;
 import commons.utils.Rnd;
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.SkillElement;
 import gameserver.model.gameobjects.Npc;
@@ -44,15 +42,8 @@ import gameserver.skill.model.SkillTemplate;
 import gameserver.skill.model.SkillType;
 import gameserver.skill.model.SpellStatus;
 import gameserver.utils.stats.StatFunctions;
-
 import javolution.util.FastList;
 
-
-/**
-
- * @edit kecimis
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Effect")
 public abstract class EffectTemplate 

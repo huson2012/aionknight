@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.ai.npcai.AggressiveAi;
 import gameserver.ai.npcai.MonsterAi;
@@ -27,7 +27,6 @@ import gameserver.model.templates.spawn.SpawnTemplate;
 public class Monster extends Npc
 {	
 	/**
-	 * 
 	 * @param objId
 	 * @param controller
 	 * @param spawn

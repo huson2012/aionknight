@@ -14,19 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.task;
 
 import commons.utils.Rnd;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 
-
-/**
-, HellBoy
- *
- */
 public abstract class AbstractCraftTask extends AbstractInteractionTask
 {
 	protected int maxValue = 100;

@@ -14,26 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
 import commons.utils.Rnd;
-
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.controllers.movement.AttackCalcObserver;
 import gameserver.controllers.movement.AttackStatusObserver;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.skill.model.Effect;
- 
 
-/**
-
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BlindEffect")
 public class BlindEffect extends EffectTemplate
@@ -79,5 +73,4 @@ public class BlindEffect extends EffectTemplate
 		if (acObserver != null)
 			effect.getEffected().getObserveController().removeAttackCalcObserver(acObserver);
 	}
-
 }

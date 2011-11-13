@@ -14,21 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import java.util.TreeSet;
-
-
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.stats.modifiers.StatModifier;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.services.ItemService;
 
-
-/**
-
- *
- */
 public class FusionStone extends ItemStone
 {
 	
@@ -56,6 +50,5 @@ public class FusionStone extends ItemStone
 	public StatModifier getFirstModifier()
 	{
 		return modifiers != null ? modifiers.first() : null;
-	}
-	
+	}	
 }

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.player;
 
+package gameserver.model.gameobjects.player;
 
 import gameserver.GameServer;
 import gameserver.configs.main.PricesConfig;
@@ -23,20 +23,8 @@ import gameserver.configs.main.SiegeConfig;
 import gameserver.model.Race;
 import gameserver.model.siege.Influence;
 
-/**
- * @author Sarynth
- *
- * Used to get prices for the player.
- * - Packets: SM_PRICES, SM_TRADELIST, SM_SELL_ITEM
- * - Services: Godstone socket, teleporter, other fees.
- * TODO: Add Player owner; value and check for PremiumRates or faction price influence.
- */
 public class Prices
 {
-	
-	/**
-	 * 
-	 */
 	public Prices()
 	{
 		

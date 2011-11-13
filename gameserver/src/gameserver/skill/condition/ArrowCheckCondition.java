@@ -14,23 +14,17 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.condition;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.skill.model.Skill;
 import gameserver.utils.PacketSendUtility;
 
-
-
-/**
- * @author kecimis
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ArrowCheckCondition")
 public class ArrowCheckCondition

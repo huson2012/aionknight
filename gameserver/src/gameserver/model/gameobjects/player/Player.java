@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import commons.database.dao.DAOManager;
 import gnu.trove.TIntObjectHashMap;
-
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -29,10 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
-
 import org.apache.log4j.Logger;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.CustomConfig;
 import gameserver.configs.main.DropConfig;
@@ -99,161 +96,112 @@ import gameserver.utils.rates.RegularRates;
 import gameserver.world.World;
 import gameserver.world.zone.ZoneInstance;
 
-/**
- * This class is representing Player object, it contains all needed data.
- *
- *
- * @author -Nemesiss-
- * @author SoulKeeper
- * @author alexa026
- * @author Mugen
- * 
- */
 public class Player extends Creature
 {
-        public static final int                                                CHAT_NOT_FIXED        = 0;
-        public static final int                                                CHAT_FIXED_ON_WORLD = 1;
-        public static final int                                                CHAT_FIXED_ON_ELYOS = 2;
-        public static final int                                                CHAT_FIXED_ON_ASMOS = 4;
-		public static final int CHAT_FIXED_ON_ADMIN = 5;
-        public static final int                                                CHAT_FIXED_ON_BOTH = CHAT_FIXED_ON_ELYOS | CHAT_FIXED_ON_ASMOS;
-
-        private static final Logger                                        log = Logger.getLogger(Player.class);
-
-        private PlayerAppearance                                        playerAppearance;
-        private PlayerCommonData                                        playerCommonData;
-        private Account                                                        playerAccount;
-        private LegionMember                                                legionMember;
-        private MacroList                                                macroList;
-        private SkillList                                                skillList;
-        private FriendList                                                friendList;
-        private BlockList                                                blockList;
-        private ResponseRequester                                        requester;
-        private boolean                                                        lookingForGroup        = false;
-        private Storage                                                        inventory;
-        private Repurchase                                                repurchase;
-        private PurchaseLimit                                                purchaseLimit;
-        private Storage                                                        regularWarehouse;
-        private Storage                                                        accountWarehouse;
-        private Storage[]                                                petBag        = new Storage[4];
-        private Equipment                                                equipment;
-        private Mailbox                                                        mailbox;
-        private PrivateStore                                                store;
-        private PlayerStatsTemplate                                        playerStatsTemplate;
-        private TitleList                                                titleList;
-        private EmotionList                                                emotionList;
-        private PlayerSettings                                                playerSettings;
-        private QuestStateList                                                questStateList;
-        private QuestCookie                                                questCookie;
-        private List<Integer>                                                nearbyQuestList        = new ArrayList<Integer>();
-        private ZoneInstance                                                zoneInstance;
-        private PlayerGroup                                                playerGroup;
-        private AbyssRank                                                abyssRank;
-        private Guild                                                        guild;
-        private Rates                                                        rates;
-        private RecipeList                                                recipeList;
-        private int                                                        flyState = 0;
-        private boolean                                                        isTrading;
-        private long                                                        prisonTimer = 0;
-        private long                                                        startPrison;
-        private boolean                                                        invul;
-        private FlyController                                                flyController;
-        private ReviveController                                        reviveController;
-        private CraftingTask                                                craftingTask;
-        private int                                                        flightTeleportId;
-        private int                                                        flightDistance;
-        private Summon                                                        summon;
-        private Kisk                                                        kisk;
-        private Prices                                                        prices;
-        private boolean                                                        isGagged = false;
-        private boolean                                                        isAdminNeutral = false;
-        private boolean                                                        isWhisperable = true;
-        private long                                                        lastZephyrInvokationSeconds = 0;
-        private int                                                        zephyrObjectId = 0;
-        private ToyPet                                                        toyPet;
-        private boolean                                                        edit_mode = false;
-        private boolean                                                        in_arena = false;
-        private int                                                        xpBoost        = 0;
-        private boolean                                                        in_darkpoeta = false;
-        private boolean                                                        in_dredgion = false;
-		private boolean															in_empyrean = false;
-        private int                                                        instancePVPKills = 0;
-        private int                                                        instanceBalaurKills = 0;
-        private int                                                        instanceCaptured = 0;
-        private int                                                        instancePlayerScore = 0;
-        private int                                                        instancePlayerAP = 0;
-        private boolean                                                        questTimerOn = false;
-        private boolean                                                        receive_entry = false;
-
-        private Map<Integer, ItemCooldown>                                itemCoolDowns;
-        private TIntObjectHashMap<InstanceCD>                                InstanceCDs = new TIntObjectHashMap<InstanceCD>();
-
-        public int                                                        CHAT_FIX_WORLD_CHANNEL        = CHAT_NOT_FIXED;
-        private boolean                                                        bannedFromWorld        = false;
-        private String                                                        bannedFromWorldBy = "";
-        private long                                                        bannedFromWorldDuring = 0;
-        private Date                                                        bannedFromWorldDate = null;
-        private String                                                        bannedFromWorldReason = "";
-        private ScheduledFuture<?>                                        taskToUnbanFromWorld = null;
-
-        private LastUsedCache<Integer, NpcDropStat>                        lastNpcDrops;
-
-        private long                                                        lastMessageTime;
-
-        /**
-         * For 2.5 Motion
-         */
-    	private int							learnNinja;
-    	private int							learnHober;
-    	private int							waitingMotion;
-    	private int							runningMotion;
-    	private int							jumpingMotion;
-    	private int							restMotion;
-    	
-        /**
-         * Test Value for ingame shop currency
-         */
-        public int                                                        shopMoney = 0;
-
-        /**
-         * Windstream variable for handshake.
-         */
-        private int                                                        enterWindstream = 0;
-
-        /**
-         * Static information for players
-         */
-        private static final int                                        CUBE_SPACE = 9;
-        private static final int                                        WAREHOUSE_SPACE = 8;
-
-        /**
-         * Connection of this Player.
-         */
-        private AionConnection                                        clientConnection;
-
-        /**
-         * This variable used to check if players sends fake CM_LEVEL_READY packet
-         */
-        private int                                                         oldWorldId;
-
-        // debug
-        private static int                                                counter = 0;
-
-	private LocationTemplate lastLoc;
-
-        /**
-         * Quest time counter, to avoid from sending fake quest reward packet.
-         */
+        public static final int                             CHAT_NOT_FIXED = 0;
+        public static final int                             CHAT_FIXED_ON_WORLD = 1;
+        public static final int                             CHAT_FIXED_ON_ELYOS = 2;
+        public static final int                             CHAT_FIXED_ON_ASMOS = 4;
+		public static final int 							CHAT_FIXED_ON_ADMIN = 5;
+        public static final int                             CHAT_FIXED_ON_BOTH = CHAT_FIXED_ON_ELYOS | CHAT_FIXED_ON_ASMOS;
+        private static final Logger                         log = Logger.getLogger(Player.class);
+        private PlayerAppearance                            playerAppearance;
+        private PlayerCommonData                            playerCommonData;
+        private Account                                     playerAccount;
+        private LegionMember                                legionMember;
+        private MacroList                                   macroList;
+        private SkillList                                   skillList;
+        private FriendList                                  friendList;
+        private BlockList                                   blockList;
+        private ResponseRequester                           requester;
+        private boolean                                     lookingForGroup = false;
+        private Storage                                     inventory;
+        private Repurchase                                  repurchase;
+        private PurchaseLimit                               purchaseLimit;
+        private Storage                                     regularWarehouse;
+        private Storage                                     accountWarehouse;
+        private Storage[]                                   petBag = new Storage[4];
+        private Equipment                                   equipment;
+        private Mailbox                                     mailbox;
+        private PrivateStore                                store;
+        private PlayerStatsTemplate                         playerStatsTemplate;
+        private TitleList                                   titleList;
+        private EmotionList                                 emotionList;
+        private PlayerSettings                              playerSettings;
+        private QuestStateList                              questStateList;
+        private QuestCookie                                 questCookie;
+        private List<Integer>                               nearbyQuestList = new ArrayList<Integer>();
+        private ZoneInstance                                zoneInstance;
+        private PlayerGroup                                 playerGroup;
+        private AbyssRank                                   abyssRank;
+        private Guild                                       guild;
+        private Rates                                       rates;
+        private RecipeList                                  recipeList;
+        private int                                         flyState = 0;
+        private boolean                                     isTrading;
+        private long                                        prisonTimer = 0;
+        private long                                        startPrison;
+        private boolean                                     invul;
+        private FlyController                               flyController;
+        private ReviveController                            reviveController;
+        private CraftingTask                                craftingTask;
+        private int                                         flightTeleportId;
+        private int                                         flightDistance;
+        private Summon                                      summon;
+        private Kisk                                        kisk;
+        private Prices                                      prices;
+        private boolean                                     isGagged = false;
+        private boolean                                     isAdminNeutral = false;
+        private boolean                                     isWhisperable = true;
+        private long                                        lastZephyrInvokationSeconds = 0;
+        private int                                         zephyrObjectId = 0;
+        private ToyPet                                      toyPet;
+        private boolean                                     edit_mode = false;
+        private boolean                                     in_arena = false;
+        private int                                         xpBoost = 0;
+        private boolean                                     in_darkpoeta = false;
+        private boolean                                     in_dredgion = false;
+		private boolean										in_empyrean = false;
+        private int                                         instancePVPKills = 0;
+        private int                                         instanceBalaurKills = 0;
+        private int                                         instanceCaptured = 0;
+        private int                                         instancePlayerScore = 0;
+        private int                                         instancePlayerAP = 0;
+        private boolean                                     questTimerOn = false;
+        private boolean                                     receive_entry = false;
+        private Map<Integer, ItemCooldown>                  itemCoolDowns;
+        private TIntObjectHashMap<InstanceCD>               InstanceCDs = new TIntObjectHashMap<InstanceCD>();
+        public int                                          CHAT_FIX_WORLD_CHANNEL = CHAT_NOT_FIXED;
+        private boolean                                     bannedFromWorld = false;
+        private String                                      bannedFromWorldBy = "";
+        private long                                        bannedFromWorldDuring = 0;
+        private Date                                        bannedFromWorldDate = null;
+        private String                                      bannedFromWorldReason = "";
+        private ScheduledFuture<?>                          taskToUnbanFromWorld = null;
+        private LastUsedCache<Integer, NpcDropStat>         lastNpcDrops;
+        private long                                        lastMessageTime;
+    	private int											learnNinja;
+    	private int											learnHober;
+    	private int											waitingMotion;
+    	private int											runningMotion;
+    	private int											jumpingMotion;
+    	private int											restMotion;
+        public int                                          shopMoney = 0;
+        private int                                         enterWindstream = 0;
+        private static final int                            CUBE_SPACE = 9;
+        private static final int                            WAREHOUSE_SPACE = 8;
+        private AionConnection                              clientConnection;
+        private int                                         oldWorldId;
+        private static int                                  counter = 0;
+		private LocationTemplate 							lastLoc;
         @SuppressWarnings("unused")
-        private long                                                        lastCompletedQuestTime = 0;
-        public List<Integer> spyedLegions = new ArrayList<Integer>();
-        public List<Integer> spyedGroups = new ArrayList<Integer>();
-
+        private long                                        lastCompletedQuestTime = 0;
+        public List<Integer> 								spyedLegions = new ArrayList<Integer>();
+        public List<Integer> 								spyedGroups = new ArrayList<Integer>();
         public Player(PlayerController controller, PlayerCommonData plCommonData, PlayerAppearance appereance,
                 Account account)
         {
                 super(plCommonData.getPlayerObjId(), controller, null, null, plCommonData.getPosition());
-                // TODO may be pcd->visibleObjectTemplate ?
                 this.playerCommonData = plCommonData;
                 this.playerAppearance = appereance;
                 this.playerAccount = account;

@@ -14,22 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.Creature;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillType;
 
-
-/**
-
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BindEffect")
 public class BindEffect extends EffectTemplate

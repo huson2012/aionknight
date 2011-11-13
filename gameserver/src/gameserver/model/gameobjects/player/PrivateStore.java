@@ -14,16 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.LinkedHashMap;
-
 import gameserver.model.trade.TradePSItem;
 
-
-/**
- * @author Xav Modified by Simple
- */
 public class PrivateStore
 {
 	private Player								owner;

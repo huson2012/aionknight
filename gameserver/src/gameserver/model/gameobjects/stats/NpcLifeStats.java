@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,17 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects.stats;
 
+package gameserver.model.gameobjects.stats;
 
 import gameserver.model.gameobjects.Npc;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.services.LifeStatsRestoreService;
 
-/**
-
- *
- */
 public class NpcLifeStats extends CreatureLifeStats<Npc>
 {
 	/**

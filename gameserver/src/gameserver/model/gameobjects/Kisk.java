@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 import gameserver.controllers.NpcController;
 import gameserver.model.Race;
 import gameserver.model.alliance.PlayerAllianceMember;
@@ -33,11 +32,6 @@ import gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author Sarynth
- *
- */
 public class Kisk extends Npc
 {
 	private String				ownerName;
@@ -359,5 +353,4 @@ public class Kisk extends Npc
 	{
 		return this.ownerObjectId;
 	}
-
 }

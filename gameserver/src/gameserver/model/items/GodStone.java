@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import org.apache.log4j.Logger;
 import commons.utils.Rnd;
-
 import gameserver.controllers.movement.ActionObserver;
 import gameserver.controllers.movement.ActionObserver.ObserverType;
 import gameserver.model.DescriptionId;
@@ -35,11 +35,6 @@ import gameserver.skill.model.Effect;
 import gameserver.skill.model.Skill;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
-
- * 
- */
 public class GodStone extends ItemStone
 {
 	private static final Logger	log	= Logger.getLogger(GodStone.class);

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.ai.npcai.ServantAi;
 import gameserver.controllers.NpcController;
@@ -23,14 +23,9 @@ import gameserver.controllers.NpcWithCreatorController;
 import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
 
-/**
-
- *
- */
 public class Servant extends NpcWithCreator
 {
 	/**
-	 * 
 	 * @param objId
 	 * @param controller
 	 * @param spawnTemplate

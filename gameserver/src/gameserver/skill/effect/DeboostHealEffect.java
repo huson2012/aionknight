@@ -14,20 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
 import gameserver.skill.model.Effect;
 
-
-/**
- * @author ViAl
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DeboostHealEffect")
 public class DeboostHealEffect extends EffectTemplate

@@ -14,23 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
 import gameserver.network.aion.serverpackets.SM_FRIEND_NOTIFY;
 import gameserver.network.aion.serverpackets.SM_FRIEND_UPDATE;
 
-
-/**
- * Represents a player's Friend list
- * 
- * @author Ben
- *
- */
 public class FriendList implements Iterable<Friend>
 {
 	public static final int 		MAX_FRIENDS 		= 10;

@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.controllers.GatherableController;
 import gameserver.model.templates.GatherableTemplate;
@@ -23,10 +23,6 @@ import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.world.WorldPosition;
 
-/**
-
- *
- */
 public class Gatherable extends VisibleObject
 {
 	

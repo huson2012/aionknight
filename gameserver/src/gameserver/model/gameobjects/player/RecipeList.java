@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.PlayerRecipesDAO;
 import gameserver.dataholders.DataManager;
 import gameserver.model.DescriptionId;
@@ -30,11 +29,6 @@ import gameserver.network.aion.serverpackets.SM_RECIPE_DELETE;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author MrPoke
- *
- */
 public class RecipeList
 {
 	private Set<Integer>		recipeList = new HashSet<Integer>();

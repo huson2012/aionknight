@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,23 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-
-
 import gameserver.model.gameobjects.Item;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.services.TemporaryObjectsService;
 
-
-/**
-
- * reimplemented by RotO
- */
 public class ItemStorage
 {
 	public static final int FIRST_AVAILABLE_SLOT = 65535;

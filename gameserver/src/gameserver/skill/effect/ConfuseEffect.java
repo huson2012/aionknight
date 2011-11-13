@@ -14,21 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.skill.model.Effect;
 
-
-/**
-
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConfuseEffect")
 public class ConfuseEffect extends EffectTemplate
@@ -45,5 +39,4 @@ public class ConfuseEffect extends EffectTemplate
 	{
 		super.calculate(effect, StatEnum.CONFUSE_RESISTANCE, null);
 	}
-
 }

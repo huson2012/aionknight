@@ -14,19 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.player;
 
 import java.util.Calendar;
-
-
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.utils.stats.AbyssRankEnum;
 
-
-/**
-, Divinity
- *
- */
 public class AbyssRank
 {
 	private int				dailyAP;
@@ -320,7 +314,5 @@ public class AbyssRank
 		
 		if (needUpdate)
 			setPersistentState(PersistentState.UPDATE_REQUIRED);
-	}
-	
+	}	
 }
-

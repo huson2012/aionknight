@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.skill;
 
+package gameserver.skill;
 
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.Creature;
@@ -26,10 +26,6 @@ import gameserver.skill.model.ActivationAttribute;
 import gameserver.skill.model.Skill;
 import gameserver.skill.model.SkillTemplate;
 
-/**
-
- *
- */
 public class SkillEngine
 {	
 	public static final SkillEngine skillEngine = new SkillEngine();

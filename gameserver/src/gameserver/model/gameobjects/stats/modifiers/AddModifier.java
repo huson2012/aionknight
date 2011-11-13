@@ -14,15 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats.modifiers;
 
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.model.gameobjects.stats.StatModifierPriority;
 
-/**
- * @author blakawk
- * 
- */
 public class AddModifier extends SimpleModifier
 {
 	@Override

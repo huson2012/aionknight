@@ -14,25 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects;
 
-/**
-
- *
- */
 public enum NpcObjectType
 {
-	NORMAL(1),
-	SUMMON(2),
-	HOMING(16),
-	TRAP(32),
-	SKILLAREANPC(64),
-	TOTEM(128),
-	GROUPGATE(256),
-	//512 missing	
-	SERVANT(1024),
-	PET(2048);
-
+	NORMAL(1), SUMMON(2), HOMING(16), TRAP(32),
+	SKILLAREANPC(64), TOTEM(128), GROUPGATE(256),
+	SERVANT(1024), PET(2048);
 	
 	private NpcObjectType(int id)
 	{

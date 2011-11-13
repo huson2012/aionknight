@@ -14,14 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats.id;
 
 import gameserver.model.gameobjects.stats.StatEffectType;
 
-/**
- * @author blakawk
- *
- */
 public class StatEffectId implements Comparable<StatEffectId>
 {
 	protected int id;
@@ -77,7 +74,7 @@ public class StatEffectId implements Comparable<StatEffectId>
 	@Override
 	public String toString()
 	{
-		final String str = "id:"+id+",type:"+type;
+		final String str = "id: "+id+", type: "+type;
 		return str;
 	}
 	

@@ -14,20 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.gameobjects.stats;
 
-/**
- * @author blakawk
- *
- */
 public enum StatEffectType
 {
-	ITEM_EFFECT(1),
-	ENCHANT_EFFECT(2),
-	STONE_EFFECT(3),
-	ITEM_SET_EFFECT(4),
-	TITLE_EFFECT(5),
-	SKILL_EFFECT(6);
+	ITEM_EFFECT(1), ENCHANT_EFFECT(2), STONE_EFFECT(3),
+	ITEM_SET_EFFECT(4), TITLE_EFFECT(5), SKILL_EFFECT(6);
 	
 	private int value;
 	

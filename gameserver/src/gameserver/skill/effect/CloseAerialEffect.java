@@ -14,20 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SpellStatus;
 
-
-/**
-
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CloseAerialEffect")
 public class CloseAerialEffect extends EffectTemplate
@@ -44,5 +39,4 @@ public class CloseAerialEffect extends EffectTemplate
 	{
 		super.calculate(effect, null, SpellStatus.CLOSEAERIAL);
 	}
-
 }

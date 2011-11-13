@@ -14,14 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.controllers.attack.AttackUtil;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
@@ -29,11 +28,6 @@ import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Effect;
 import gameserver.utils.ThreadPoolManager;
 
-
-/**
-
- * @edit kecimis
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DelayDamageEffect")
 public class DelayDamageEffect extends EffectTemplate

@@ -14,18 +14,14 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.model.gameobjects;
 
+package gameserver.model.gameobjects;
 
 import gameserver.controllers.NpcController;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
 
-/**
- * @author kecimis
- *
- */
 public class NpcWithCreator extends Npc
 {
 	/**
@@ -132,6 +128,4 @@ public class NpcWithCreator extends Npc
 	{
 		return this.creator.isEnemySummon(summon);
 	}
-
-
 }

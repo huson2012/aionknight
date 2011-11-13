@@ -14,16 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import java.util.concurrent.Future;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.alliance.PlayerAllianceMember;
 import gameserver.model.gameobjects.player.Player;
@@ -34,11 +32,6 @@ import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 
-
-/**
-
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AuraEffect")
 public class AuraEffect extends EffectTemplate
@@ -118,5 +111,4 @@ public class AuraEffect extends EffectTemplate
 	{
 		// nothing todo
 	}
-
 }

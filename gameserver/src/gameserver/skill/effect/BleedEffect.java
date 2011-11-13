@@ -14,24 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.effect;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.controllers.attack.AttackUtil;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.skill.model.Effect;
 
-
-/**
-
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BleedEffect")
 public class BleedEffect extends AbstractOverTimeEffect
@@ -69,5 +63,4 @@ public class BleedEffect extends AbstractOverTimeEffect
 	{
 		super.startEffect(effect,EffectId.BLEED);
 	}
-
 }

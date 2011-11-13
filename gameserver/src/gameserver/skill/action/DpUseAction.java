@@ -14,23 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.skill.action;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.model.Skill;
 
-
-/**
-
- * 
- * Effector: Player only
- *
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DpUseAction")
 public class DpUseAction extends Action

@@ -14,29 +14,21 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.model.items;
 
 import gnu.trove.TIntIntHashMap;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-
 import commons.utils.Rnd;
-
 import gameserver.model.templates.item.ItemRace;
 
-
-/**
- * @author rolandas
- *
- */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "WrapperItem")
 public class WrapperItem
@@ -206,6 +198,5 @@ public class WrapperItem
 		}
 		
 		return currentTotal;
-	}
-	
+	}	
 }

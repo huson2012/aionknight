@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  *    Aion-Knight is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by

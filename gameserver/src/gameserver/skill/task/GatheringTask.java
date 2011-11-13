@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.skill.task;
 
+package gameserver.skill.task;
 
 import gameserver.model.DescriptionId;
 import gameserver.model.gameobjects.Gatherable;
@@ -28,10 +28,6 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
 
-/**
-, HellBoy
- *
- */
 public class GatheringTask extends AbstractCraftTask
 {
 	private GatherableTemplate template;
