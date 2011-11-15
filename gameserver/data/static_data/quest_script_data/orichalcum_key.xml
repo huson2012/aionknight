@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
 <quest_scripts>
 	<!-- 37000:   [Daily] Toxic Instruction -->
 	<item_collecting id="37000" start_npc_id="799813" end_npc_id="799835" action_item_id="700967"/>

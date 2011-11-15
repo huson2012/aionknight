@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Настройка маршрутов передвигающихся NPC
@@ -7,7 +6,6 @@
 	Версия клиента		: 2.5 (Иннова)
 
  -->
-
 <npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">
 	<!--  -->
 	<walker_template route_id="1">

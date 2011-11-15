@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 1000: Prologue (lvl 1) handled by script -->
-	<!-- 1001: The Kerubim Threat (lvl 1) handled by script -->
-	<!-- 1002: Request of the Elim (lvl 1) handled by script -->
-	<!-- 1003: Illegal Logging (lvl 3) handled by script -->
-	<!-- 1004: Neutralizing Odium (lvl 4) handled by script -->
-	<!-- 1005: Barring the Gate (lvl 4) handled by script -->
-	<!-- 1100: Kalio's Call (lvl 1) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 1000: Prologue (lvl 1) -->
+	<!-- 1001: The Kerubim Threat (lvl 1) -->
+	<!-- 1002: Request of the Elim (lvl 1) -->
+	<!-- 1003: Illegal Logging (lvl 3) -->
+	<!-- 1004: Neutralizing Odium (lvl 4) -->
+	<!-- 1005: Barring the Gate (lvl 4) -->
+	<!-- 1100: Kalio's Call (lvl 1) -->
 	<!-- Sleeping on the Job -->
 	<report_to id="1101" start_npc_id="203049" end_npc_id="203057"/>
 	<!-- Kerubar Hunt -->
@@ -40,14 +30,14 @@
 	<item_collecting id="1105" start_npc_id="203050"/>
 	<!-- Helping Kales -->
 	<report_to id="1106" start_npc_id="203050" end_npc_id="203061" item_id="182200203"/>
-	<!-- 1107: The Lost Axe (lvl 3) handled by script -->
+	<!-- 1107: The Lost Axe (lvl 3) -->
 	<!-- Uno's Ingredients -->
 	<item_collecting id="1108" start_npc_id="203061"/>
 	<!-- Abandoned Goods -->
 	<item_collecting id="1109" start_npc_id="798007" action_item_id="700106"/>
 	<!-- A Book for Namus -->
 	<report_to id="1110" start_npc_id="203065" end_npc_id="203075" item_id="182200206"/>
-	<!-- 1111: Insomnia Medicine (lvl 3) handled by script -->
+	<!-- 1111: Insomnia Medicine (lvl 3) -->
 	<!-- To Fish in Peace -->
 	<monster_hunt id="1112" start_npc_id="203072">
 		<monster_infos var_id="0" max_kill="5" npc_id="210259"/>
@@ -61,8 +51,8 @@
 		<monster_infos var_id="0" max_kill="8" npc_id="210262"/>
 		<monster_infos var_id="0" max_kill="8" npc_id="210675"/>
 	</monster_hunt>
-	<!-- 1114: The Nymph's Gown (lvl 4) handled by script -->
-	<!-- 1115: The Elim's Message (lvl 4) handled by script -->
+	<!-- 1114: The Nymph's Gown (lvl 4) -->
+	<!-- 1115: The Elim's Message (lvl 4) -->
 	<!-- Pernos's Robe -->
 	<item_collecting id="1116" start_npc_id="203060"/>
 	<!-- Light up the Night -->
@@ -78,19 +68,19 @@
 	</monster_hunt>
 	<!-- Oz's Prayer Beads -->
 	<item_collecting id="1121" start_npc_id="203081"/>
-	<!-- 1122: Delivering Pernos's Robe (lvl 7) handled by script -->
-	<!-- 1123: Where's Tutty? (lvl 7) handled by script -->
+	<!-- 1122: Delivering Pernos's Robe (lvl 7) -->
+	<!-- 1123: Where's Tutty? (lvl 7) -->
 	<!-- Avenging Tutty -->
 	<item_collecting id="1124" start_npc_id="790001"/>
 	<!-- Suspicious Ore -->
 	<item_collecting id="1125" start_npc_id="203085" action_item_id="700107"/>
 	<!-- Mushroom Research -->
 	<item_collecting id="1126" start_npc_id="203079"/>
-	<!-- 1127: Ancient Cube (lvl 6) handled by script -->
+	<!-- 1127: Ancient Cube (lvl 6) -->
 	<!-- 1128: TODO: The Amazing Escape (lvl 99) -->
 	<!-- Scouting Timolia Mine -->
 	<item_collecting id="1129" start_npc_id="203085"/>
-	<!-- 1205: A New Skill (lvl 3) handled by script -->
+	<!-- 1205: A New Skill (lvl 3) -->
 	<!-- Collecting Aria -->
 	<item_collecting id="1206" start_npc_id="203059"/>
 	<!-- Tula's Music Box -->

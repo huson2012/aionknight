@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 2051: Saving Beluslan Fortress (lvl 30) handled by script -->
-	<!-- 2052: An Undead Occupation (lvl 30) handled by script -->
-	<!-- 2053: A Missing Father (lvl 31) handled by script -->
-	<!-- 2054: Light up the Lighthouse (lvl 35) handled by script -->
-	<!-- 2055: The Seiren's Treasure (lvl 38) handled by script -->
-	<!-- 2056: Thawing Kurngalfberg (lvl 32) handled by script -->
-	<!-- 2057: Glaciont the Hardy (lvl 38) handled by script -->
-	<!-- 2058: A Spy Among the Lepharists (lvl 40) handled by script -->
-	<!-- 2059: A Peace Offering (lvl 38) handled by script -->
-	<!-- 2060: Restoring Beluslan Observatory (lvl 39) handled by script -->
-	<!-- 2061: Suppressing the Bakarma Legion (lvl 39) handled by script -->
-	<!-- 2500: Orders From Nerita (lvl 30) handled by script -->
-	<!-- 2501: Falling Fragments (lvl 30) handled by script -->
+	Назначение файла	: Описание квестов (Белуслан)
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 2051: Saving Beluslan Fortress (lvl 30) -->
+	<!-- 2052: An Undead Occupation (lvl 30) -->
+	<!-- 2053: A Missing Father (lvl 31) -->
+	<!-- 2054: Light up the Lighthouse (lvl 35) -->
+	<!-- 2055: The Seiren's Treasure (lvl 38) -->
+	<!-- 2056: Thawing Kurngalfberg (lvl 32) -->
+	<!-- 2057: Glaciont the Hardy (lvl 38) -->
+	<!-- 2058: A Spy Among the Lepharists (lvl 40) -->
+	<!-- 2059: A Peace Offering (lvl 38) -->
+	<!-- 2060: Restoring Beluslan Observatory (lvl 39) -->
+	<!-- 2061: Suppressing the Bakarma Legion (lvl 39) -->
+	<!-- 2500: Orders From Nerita (lvl 30) -->
+	<!-- 2501: Falling Fragments (lvl 30) -->
 	<!-- Monitor Glue -->
 	<item_collecting id="2502" start_npc_id="204701"/>
 	<!-- The Fragment Hazard -->
 	<item_collecting id="2503" start_npc_id="204733" action_item_id="700327"/>
 	<!-- Only for Her -->
 	<item_collecting id="2504" start_npc_id="204720"/>
-	<!-- 2505: Let Cooking Experts Cook (lvl 30) handled by script -->
+	<!-- 2505: Let Cooking Experts Cook (lvl 30) -->
 	<!-- The Outlaw of Black Plains -->
 	<monster_hunt id="2506" start_npc_id="204702">
 		<monster_infos var_id="0" max_kill="10" npc_id="213017"/>
@@ -55,10 +45,10 @@
 	<!-- 2510: TODO: Vanished Quest (lvl 99) -->
 	<!-- Ambitions for Success -->
 	<item_collecting id="2511" start_npc_id="204711"/>
-	<!-- 2512: Food for Remote Places (lvl 35) handled by script -->
+	<!-- 2512: Food for Remote Places (lvl 35) -->
 	<!-- 2513: TODO: The Strange Cottage (lvl 36) -->
-	<!-- 2514: The Red Mane Report (lvl 36) handled by script -->
-	<!-- 2515: Leanor's Errand (lvl 31) handled by script -->
+	<!-- 2514: The Red Mane Report (lvl 36) -->
+	<!-- 2515: Leanor's Errand (lvl 31) -->
 	<!-- [Daily/Coin] Beluslan Pest Hunt -->
 	<monster_hunt id="2516" start_npc_id="204781">
 		<monster_infos var_id="0" max_kill="24" npc_id="213007"/>
@@ -85,7 +75,7 @@
 		<monster_infos var_id="0" max_kill="15" npc_id="213065"/>
 		<monster_infos var_id="1" max_kill="3" npc_id="213246"/>
 	</monster_hunt>
-	<!-- 2523: Grass for the Grave Robbers (lvl 32) handled by script -->
+	<!-- 2523: Grass for the Grave Robbers (lvl 32) -->
 	<!-- The Mosbear Frenzy -->
 	<monster_hunt id="2524" start_npc_id="204803">
 		<monster_infos var_id="0" max_kill="15" npc_id="213022"/>
@@ -137,7 +127,7 @@
 		<monster_infos var_id="2" max_kill="4" npc_id="213541"/>
 	</monster_hunt>
 	<!-- 2538: TODO: Curse of the Were-Ribbit (lvl 36) -->
-	<!-- 2539: Tryst of the Shadow (lvl 36) handled by script -->
+	<!-- 2539: Tryst of the Shadow (lvl 36) -->
 	<!-- Granker for Gark -->
 	<item_collecting id="2540" start_npc_id="204811"/>
 	<!-- Ore-Eating Wriggots -->
@@ -182,7 +172,7 @@
 		<monster_infos var_id="1" max_kill="10" npc_id="213278"/>
 		<monster_infos var_id="1" max_kill="10" npc_id="213279"/>
 	</monster_hunt>
-	<!-- 2553: The Brigade General's Call (lvl 35) handled by script -->
+	<!-- 2553: The Brigade General's Call (lvl 35) -->
 	<!-- Malek Nuggets -->
 	<item_collecting id="2554" start_npc_id="798119" action_item_id="700330"/>
 	<!-- [Group] Supervisor Yotunmork -->
@@ -219,7 +209,7 @@
 	<item_collecting id="2562" start_npc_id="204786"/>
 	<!-- The Frozen Orb -->
 	<item_collecting id="2563" start_npc_id="295178"/>
-	<!-- 2564: With the Power of Flame (lvl 37) handled by script -->
+	<!-- 2564: With the Power of Flame (lvl 37) -->
 	<!-- Good for Frostbite -->
 	<item_collecting id="2565" start_npc_id="798094"/>
 	<!-- The Roar of the Ettins -->
@@ -235,7 +225,7 @@
 	</monster_hunt>
 	<!-- Misdirected Letter -->
 	<report_to id="2568" start_npc_id="204755" end_npc_id="204763" item_id="182204446"/>
-	<!-- 2569: Tafi's Flame Scroll (lvl 38) handled by script -->
+	<!-- 2569: Tafi's Flame Scroll (lvl 38) -->
 	<!-- Malek Drakes and Drakies -->
 	<item_collecting id="2570" start_npc_id="798119"/>
 	<!-- Delivering Medical Supplies -->
@@ -268,7 +258,7 @@
 		<monster_infos var_id="0" max_kill="13" npc_id="213170"/>
 		<monster_infos var_id="0" max_kill="13" npc_id="213171"/>
 	</monster_hunt>
-	<!-- 2578: A Ring for Luck (lvl 37) handled by script -->
+	<!-- 2578: A Ring for Luck (lvl 37) -->
 	<!-- When I Seafood, I Eat It -->
 	<item_collecting id="2579" start_npc_id="790017"/>
 	<!-- The Lighthouse Ghost -->
@@ -281,7 +271,7 @@
 		<monster_infos var_id="1" max_kill="10" npc_id="213202"/>
 		<monster_infos var_id="1" max_kill="10" npc_id="213203"/>
 	</monster_hunt>
-	<!-- 2583: A Polite Request (lvl 33) handled by script -->
+	<!-- 2583: A Polite Request (lvl 33) -->
 	<!-- 2584: TODO: The Starturtle and the Sprigg (lvl 99) -->
 	<!-- Priceless Coral -->
 	<item_collecting id="2585" start_npc_id="204739" action_item_id="700331"/>
@@ -327,7 +317,7 @@
 	<item_collecting id="2597" start_npc_id="204735"/>
 	<!-- A Preventive Measure -->
 	<item_collecting id="2599" start_npc_id="204725"/>
-	<!-- 2600: Humongous Malek (lvl 35) handled by script -->
+	<!-- 2600: Humongous Malek (lvl 35) -->
 	<!-- [Group] Pollution in the Palace -->
 	<monster_hunt id="2601" start_npc_id="204808">
 		<monster_infos var_id="0" max_kill="20" npc_id="213356"/>
@@ -347,7 +337,7 @@
 		<monster_infos var_id="0" max_kill="6" npc_id="213034"/>
 		<monster_infos var_id="1" max_kill="10" npc_id="213033"/>
 	</monster_hunt>
-	<!-- 2611: Consulting the Leaders (lvl 38) handled by script -->
+	<!-- 2611: Consulting the Leaders (lvl 38) -->
 	<!-- A Tonic for Nargatal -->
 	<item_collecting id="2612" start_npc_id="204790"/>
 	<!-- Devoted Husband Akagitan -->
@@ -376,7 +366,7 @@
 	</monster_hunt>
 	<!-- Hoarfrost Diplomacy -->
 	<report_to id="2619" start_npc_id="204700" end_npc_id="204817" item_id="182204502"/>
-	<!-- 2620: Summoning Phagrasul (lvl 41) handled by script -->
+	<!-- 2620: Summoning Phagrasul (lvl 41) -->
 	<!-- A Family Letter -->
 	<report_to id="2621" start_npc_id="204763" end_npc_id="204059" item_id="182204468"/>
 	<!-- Hunting the Hunters -->
@@ -409,7 +399,7 @@
 		<monster_infos var_id="0" max_kill="10" npc_id="213123"/>
 		<monster_infos var_id="1" max_kill="7" npc_id="213124"/>
 	</monster_hunt>
-	<!-- 2630: The Dutiful Spy (lvl 40) handled by script -->
+	<!-- 2630: The Dutiful Spy (lvl 40) -->
 	<!-- [Group] Jaadis's Bioweapon -->
 	<item_collecting id="2631" start_npc_id="204784"/>
 	<!-- [Group] Get 'Em Young -->
@@ -440,7 +430,7 @@
 	</monster_hunt>
 	<!-- I'm a Skurv- -Get Me Out of Here! -->
 	<item_collecting id="2640" start_npc_id="204792"/>
-	<!-- 2641: Powwow With the Mau (lvl 41) handled by script -->
+	<!-- 2641: Powwow With the Mau (lvl 41) -->
 	<!-- Supplies for the Survivors -->
 	<item_collecting id="2642" start_npc_id="204796"/>
 	<!-- Mau's Lament -->
@@ -454,7 +444,7 @@
 	</monster_hunt>
 	<!-- Hoarfrost Tribe's Symbol -->
 	<item_collecting id="2645" start_npc_id="204795" action_item_id="700336"/>
-	<!-- 2646: The Inscrutable Stranger (lvl 42) handled by script -->
+	<!-- 2646: The Inscrutable Stranger (lvl 42) -->
 	<!-- Belated Regret -->
 	<report_to id="2647" start_npc_id="204775" end_npc_id="204785"/>
 	<!-- [Group] Drakes and Their Breeders -->
@@ -475,11 +465,11 @@
 		<monster_infos var_id="2" max_kill="10" npc_id="213304"/>
 		<monster_infos var_id="2" max_kill="10" npc_id="213305"/>
 	</monster_hunt>
-	<!-- 2651: [Spy] A Friend's Whereabouts (lvl 43) handled by script -->
+	<!-- 2651: [Spy] A Friend's Whereabouts (lvl 43) -->
 	<!-- [Spy] Medicine for Nesteto -->
 	<item_collecting id="2652" start_npc_id="204650"/>
-	<!-- 2653: [Spy] Finding Bollvig (lvl 43) handled by script -->
-	<!-- 2654: [Spy] The Last Persuasion (lvl 43) handled by script -->
+	<!-- 2653: [Spy] Finding Bollvig (lvl 43) -->
+	<!-- 2654: [Spy] The Last Persuasion (lvl 43) -->
 	<!-- [Spy] Reaper Squad Squish -->
 	<monster_hunt id="2655" start_npc_id="204655">
 		<monster_infos var_id="0" max_kill="7" npc_id="204649"/>
@@ -513,8 +503,8 @@
 		<monster_infos var_id="2" max_kill="7" npc_id="213332"/>
 		<monster_infos var_id="2" max_kill="7" npc_id="213333"/>
 	</monster_hunt>
-	<!-- 2663: Acquiring an Antidote (lvl 42) handled by script -->
-	<!-- 2664: An Antidote to the Lepharists (lvl 42) handled by script -->
+	<!-- 2663: Acquiring an Antidote (lvl 42) -->
+	<!-- 2664: An Antidote to the Lepharists (lvl 42) -->
 	<!-- [Group] Closing the Gate -->
 	<monster_hunt id="2665" start_npc_id="204777">
 		<monster_infos var_id="0" max_kill="1" npc_id="700345"/>
@@ -531,7 +521,7 @@
 		<monster_infos var_id="1" max_kill="6" npc_id="213948"/>
 	</monster_hunt>
 	<!-- 2669: TODO: [Group] Atla's Escape (lvl 43) -->
-	<!-- 2670: The Ancient Book (lvl 43) handled by script -->
+	<!-- 2670: The Ancient Book (lvl 43) -->
 	<!-- [Group] Decimating Bakarma Legion -->
 	<monster_hunt id="2671" start_npc_id="204785">
 		<monster_infos var_id="0" max_kill="9" npc_id="213624"/>
@@ -592,9 +582,9 @@
 	<item_collecting id="2689" start_npc_id="204795"/>
 	<!-- [Spy] Reliable Report -->
 	<report_to id="2690" start_npc_id="204763" end_npc_id="204777"/>
-	<!-- 2691: [Spy] A Spy's Advice (lvl 40) handled by script -->
-	<!-- 2692: Broken Music Box (lvl 40) handled by script -->
-	<!-- 2693: [Spy] [Group] Krall Gone Mad (lvl 39) handled by script -->
+	<!-- 2691: [Spy] A Spy's Advice (lvl 40) -->
+	<!-- 2692: Broken Music Box (lvl 40) -->
+	<!-- 2693: [Spy] [Group] Krall Gone Mad (lvl 39) -->
 	<!-- [Spy] Looking for Strange Aether -->
 	<item_collecting id="2694" start_npc_id="204702"/>
 	<!-- Atla Rescue Report -->
@@ -610,12 +600,12 @@
 	<item_collecting id="2698" start_npc_id="204814"/>
 	<!-- [Group] A Mysterious Book -->
 	<item_collecting id="2699" start_npc_id="204774"/>
-	<!-- 4200: A Suspicious Call (lvl 40) handled by script -->
+	<!-- 4200: A Suspicious Call (lvl 40) -->
 	<!-- The Shugo from Pandaemonium -->
 	<report_to id="4221" start_npc_id="204710" end_npc_id="204839"/>
 	<!-- [Spy/Group] For the Good of All -->
 	<item_collecting id="4500" start_npc_id="204652"/>
-	<!-- 4501: Delayed Order (lvl 31) handled by script -->
+	<!-- 4501: Delayed Order (lvl 31) -->
 	<!-- 4502: TODO: [Group] Essence of Fate (lvl 50) -->
 	<!-- [Group] The Road to Dark Poeta -->
 	<item_collecting id="4503" start_npc_id="204837"/>
@@ -710,10 +700,10 @@
 	<monster_hunt id="4528" start_npc_id="204781">
 		<monster_infos var_id="0" max_kill="1" npc_id="212211"/>
 	</monster_hunt>
-	<!-- 28600: Suspicious Errand (lvl 37) handled by script -->
+	<!-- 28600: Suspicious Errand (lvl 37) -->
 	<!-- Nightmares and Dreamscapes -->
 	<report_to id="28601" start_npc_id="204702" end_npc_id="205234" item_id="182213006"/>
-	<!-- 28602: Into the Unknown (lvl 37) handled by script -->
+	<!-- 28602: Into the Unknown (lvl 37) -->
 	<!-- 28605 Seeking Slumber --> 
 	<monster_hunt id="28605" start_npc_id="205235"> 
 		<monster_infos npc_id="216971" var_id="0" max_kill="8"/> 

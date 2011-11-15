@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
 <quest_scripts>
-	<!-- 10020: Proving Yourself to Outremus (lvl 50) handled by script -->
-	<!-- 10021: Friends for Life (lvl 51) handled by script -->
-	<!-- 10022: Support the Inggison Outpost (lvl 51) handled by script -->
-	<!-- 10023: Sulla's Startling Discovery (lvl 52) handled by script -->
-	<!-- 10024: Will the Aether Rain? (lvl 53) handled by script -->
-	<!-- 10025: It's Better! It's an Obelisk! (lvl 55) handled by script -->
-	<!-- 10026: Secret of Inggison (lvl 50) handled by script -->
+	<!-- 10020: Proving Yourself to Outremus (lvl 50) -->
+	<!-- 10021: Friends for Life (lvl 51) -->
+	<!-- 10022: Support the Inggison Outpost (lvl 51) -->
+	<!-- 10023: Sulla's Startling Discovery (lvl 52) -->
+	<!-- 10024: Will the Aether Rain? (lvl 53) -->
+	<!-- 10025: It's Better! It's an Obelisk! (lvl 55) -->
+	<!-- 10026: Secret of Inggison (lvl 50) -->
 	<!-- 10027: TODO: Unable to Pick up in ?? State 2 (lvl 99) -->
 	<!-- 10028: TODO: Unable to Pick up in ?? State 3 (lvl 99) -->
 	<!-- 10029: TODO: Unable to Pick up in ?? State 4 (lvl 99) -->
 	<!-- 10030: TODO: Unable to Pick up in ?? State 5 (lvl 99) -->
-	<!-- 11000: Wisplight Chat Tour (lvl 50) handled by script -->
-	<!-- 11001: Kind Meiria (lvl 50) handled by script -->
+	<!-- 11000: Wisplight Chat Tour (lvl 50) -->
+	<!-- 11001: Kind Meiria (lvl 50) -->
 	<!-- Oppressed! All Right, Ignored. -->
 	<monster_hunt id="11002" start_npc_id="798939">
 		<monster_infos var_id="0" max_kill="15" npc_id="215780"/>
@@ -24,15 +31,15 @@
 	<item_collecting id="11003" start_npc_id="798933" end_npc_id="798942"/>
 	<!-- Alchemical Solution -->
 	<item_collecting id="11004" start_npc_id="798933" action_item_id="700609"/>
-	<!-- 11005: The Limits of Genius (lvl 50) handled by script -->
+	<!-- 11005: The Limits of Genius (lvl 50) -->
 	<!-- 11006: TODO: Testing the Waters (lvl 51) -->
 	<!-- 11007: TODO: Finding Lephar (lvl 99) -->
-	<!-- 11008: Letter of Encouragement (lvl 53) handled by script -->
-	<!-- 11009: Meiria's Friendly Suggestion (lvl 54) handled by script -->
-	<!-- 11010: Angel to the Wounded (lvl 50) handled by script -->
+	<!-- 11008: Letter of Encouragement (lvl 53) -->
+	<!-- 11009: Meiria's Friendly Suggestion (lvl 54) -->
+	<!-- 11010: Angel to the Wounded (lvl 50) -->
 	<!-- Healing Elixir -->
 	<item_collecting id="11011" start_npc_id="799071"/>
-	<!-- 11012: Practical Nursing (lvl 51) handled by script -->
+	<!-- 11012: Practical Nursing (lvl 51) -->
 	<!-- 11013: TODO: [Spy/Alliance] Kill Them Twice (lvl 99) -->
 	<!-- 11014: TODO: [Spy/Alliance] A Fool Such As I (lvl 99) -->
 	<!-- [Manastone Exchange] For Ribbits -->
@@ -57,7 +64,7 @@
 	<item_collecting id="11024" start_npc_id="798950"/>
 	<!-- Do Bocos Tell Bawk-bawk Jokes? -->
 	<item_collecting id="11025" start_npc_id="798950"/>
-	<!-- 11026: Solid Evidence (lvl 50) handled by script -->
+	<!-- 11026: Solid Evidence (lvl 50) -->
 	<!-- Sampling Life -->
 	<monster_hunt id="11027" start_npc_id="798951">
 		<monster_infos var_id="0" max_kill="7" npc_id="215517"/>
@@ -82,9 +89,9 @@
 	<monster_hunt id="11030" start_npc_id="798960">
 		<monster_infos var_id="0" max_kill="1" npc_id="216486"/>
 	</monster_hunt>
-	<!-- 11031: Can I Eat It? (lvl 50) handled by script -->
-	<!-- 11032: Everything's Better With Tentacles (lvl 50) handled by script -->
-	<!-- 11033: You Make Me Sick (lvl 50) handled by script -->
+	<!-- 11031: Can I Eat It? (lvl 50) -->
+	<!-- 11032: Everything's Better With Tentacles (lvl 50) -->
+	<!-- 11033: You Make Me Sick (lvl 50) -->
 	<!-- Stelvia's Sanctum Support Structure -->
 	<monster_hunt id="11034" start_npc_id="798957">
 		<monster_infos var_id="0" max_kill="12" npc_id="215576"/>
@@ -146,11 +153,11 @@
 	<monster_hunt id="11045" start_npc_id="798952">
 		<monster_infos var_id="0" max_kill="22" npc_id="215525"/>
 	</monster_hunt>
-	<!-- 11046: That Pretty Box (lvl 51) handled by script -->
+	<!-- 11046: That Pretty Box (lvl 51) -->
 	<!-- [Daily/Coin] What's up, Brohum? -->
 	<item_collecting id="11047" start_npc_id="798952"/>
 	<!-- 11048: TODO: [Coin] Taloc Rebirth Operation (lvl 99) -->
-	<!-- 11050: Inggison Coin Fountain (lvl 99) handled by script -->
+	<!-- 11050: Inggison Coin Fountain (lvl 99) -->
 	<!-- 11056: TODO: [Spy/Alliance] Elimination Order (lvl 54) -->
 	<!-- 11057: TODO: [Spy/Alliance] Stanis's Secret Order (lvl 54) -->
 	<!-- 11058: TODO: [Spy/Alliance] Temenos's Secret Order (lvl 54) -->
@@ -167,8 +174,8 @@
 	<item_collecting id="11066" start_npc_id="799049"/>
 	<!-- [Spy/Daily] Temenos's Request -->
 	<item_collecting id="11067" start_npc_id="799049"/>
-	<!-- 11068: A Mysterious Wind (lvl 52) handled by script -->
-	<!-- 11069: Mookie Travel Tips (lvl 51) handled by script -->
+	<!-- 11068: A Mysterious Wind (lvl 52) -->
+	<!-- 11069: Mookie Travel Tips (lvl 51) -->
 	<!-- 11070: TODO: Crafty Messenger (lvl 50) -->
 	<!-- Fish with Feet -->
 	<monster_hunt id="11071" start_npc_id="798943">

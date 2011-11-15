@@ -27,7 +27,7 @@
 	<property name="build" location="../tools/Compiled/ChatServer"/>
 	<property name="build.classes" location="${build}/classes"/>
 	<property name="build.dist" location="${build}/dist"/>
-	<property name="build.dist.chat" location="${build.dist}/chatserver"/>
+	<property name="build.dist.chat" location="${build.dist}"/>
 
 	<path id="classpath">
 		<fileset dir="${lib}">
@@ -48,7 +48,7 @@
 		</javac>
 	</target>
 	<target name="jar" depends="compile" description="Create the jar file">
-		<jar destfile="${build}/JAR/ak-chat.jar">
+		<jar destfile="${build}/dist/ak-chat.jar">
 			<fileset dir="${build.classes}"/>
 			<manifest>
 				<attribute name="Main-Class" value="chatserver.ChatServer"/>

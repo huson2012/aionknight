@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 20020: Crash of the Dredgion (lvl 50) handled by script -->
-	<!-- 20021: The Aether Must Flow (lvl 51) handled by script -->
-	<!-- 20022: Spreading Asmodae's Reach (lvl 51) handled by script -->
-	<!-- 20023: Kumbanda's Whereabouts (lvl 52) handled by script -->
-	<!-- 20024: Battles at Vorgaltem (lvl 53) handled by script -->
-	<!-- 20025: Quest for Siel's Relics (lvl 55) handled by script -->
-	<!-- 20026: Way to Inggison (lvl 50) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 20020: Crash of the Dredgion (lvl 50) -->
+	<!-- 20021: The Aether Must Flow (lvl 51) -->
+	<!-- 20022: Spreading Asmodae's Reach (lvl 51) -->
+	<!-- 20023: Kumbanda's Whereabouts (lvl 52) -->
+	<!-- 20024: Battles at Vorgaltem (lvl 53) -->
+	<!-- 20025: Quest for Siel's Relics (lvl 55) -->
+	<!-- 20026: Way to Inggison (lvl 50) -->
 	<!-- 20027: TODO: ???? (lvl 99) -->
 	<!-- 20028: TODO: ???? (lvl 99) -->
 	<!-- 20029: TODO: ???? (lvl 99) -->
@@ -40,7 +30,7 @@
 		<monster_infos var_id="1" max_kill="10" npc_id="216097"/>
 	</monster_hunt>
 	<!-- 21003: TODO: Childish Revenge (lvl 99) -->
-	<!-- 21004: Village Status Report (lvl 52) handled by script -->
+	<!-- 21004: Village Status Report (lvl 52) -->
 	<!-- Distract the Balaur -->
 	<monster_hunt id="21005" start_npc_id="799228">
 		<monster_infos var_id="0" max_kill="10" npc_id="216092"/>
@@ -98,7 +88,7 @@
 		<monster_infos var_id="1" max_kill="20" npc_id="215932"/>
 		<monster_infos var_id="1" max_kill="20" npc_id="216443"/>
 	</monster_hunt>
-	<!-- 21027: [Group] Fearless Kantele (lvl 51) handled by script -->
+	<!-- 21027: [Group] Fearless Kantele (lvl 51) -->
 	<!-- [Group] Fierce Strigik -->
 	<item_collecting id="21028" start_npc_id="799254"/>
 	<!-- [Group] Bring Down the Chieftain -->
@@ -111,7 +101,7 @@
 	<item_collecting id="21031" start_npc_id="799256" action_item_id="700724"/>
 	<!-- Concentrated Antimoni -->
 	<item_collecting id="21032" start_npc_id="799256"/>
-	<!-- 21033: Exorcising Infisto (lvl 50) handled by script -->
+	<!-- 21033: Exorcising Infisto (lvl 50) -->
 	<!-- Fearsome Gryphu -->
 	<monster_hunt id="21034" start_npc_id="799256">
 		<monster_infos var_id="0" max_kill="20" npc_id="215885"/>
@@ -120,7 +110,7 @@
 	</monster_hunt>
 	<!-- Mystery of the Aether -->
 	<item_collecting id="21035" start_npc_id="799258"/>
-	<!-- 21036: Delivery of Aether Sample (lvl 51) handled by script -->
+	<!-- 21036: Delivery of Aether Sample (lvl 51) -->
 	<!-- [Manastone Exchange] Stone Swap -->
 	<item_collecting id="21037" start_npc_id="799209"/>
 	<!-- [Manastone Exchange] Stone Deal -->
@@ -144,7 +134,7 @@
 	<!-- 21046: TODO: [Mithril Coin Reward] Level 51 Scout Class (lvl 99) -->
 	<!-- 21047: TODO: [Mithril Coin Reward] Level 51 Priest Class (lvl 99) -->
 	<!-- 21048: TODO: Bonarunerk's Offer (lvl 99) -->
-	<!-- 21050: Gelkmaros Coin Fountain (lvl 99) handled by script -->
+	<!-- 21050: Gelkmaros Coin Fountain (lvl 99) -->
 	<!-- 21056: TODO: [Spy/Alliance] Fundin's Orders (lvl 54) -->
 	<!-- 21057: TODO: [Spy/Alliance] Fundin's Old Grudge (lvl 54) -->
 	<!-- 21058: TODO: [Spy/Alliance] Kirhua's Special Order (lvl 54) -->
@@ -165,10 +155,10 @@
 	<!-- Crime Scene Investigation -->
 	<item_collecting id="21069" start_npc_id="799406"/>
 	<!-- 21070: TODO: The Summation (lvl 50) -->
-	<!-- 21071: Missing Bard (lvl 50) handled by script -->
+	<!-- 21071: Missing Bard (lvl 50) -->
 	<!-- Where's Svasuth? -->
 	<item_collecting id="21072" start_npc_id="799407" action_item_id="700931"/>
-	<!-- 21073: Listen to My Song, Strigiks (lvl 51) handled by script -->
+	<!-- 21073: Listen to My Song, Strigiks (lvl 51) -->
 	<!-- Fated Love -->
 	<monster_hunt id="21074" start_npc_id="799409">
 		<monster_infos var_id="0" max_kill="10" npc_id="215891"/>
@@ -296,7 +286,7 @@
 	<!-- 21132: TODO: To Stand Against the Elyos (lvl 51) -->
 	<!-- 21133: TODO: To Stand Against the Elyos (lvl 51) -->
 	<!-- 21134: TODO: To Stand Against the Elyos (lvl 51) -->
-	<!-- 21135: Vellun's Request (lvl 52) handled by script -->
+	<!-- 21135: Vellun's Request (lvl 52) -->
 	<!-- 21136: TODO: In Search of a Witness (lvl 52) -->
 	<!-- 21137: TODO: Berokin's Image Marble (lvl 52) -->
 	<!-- 21138: TODO: Odd Strigik (lvl 52) -->

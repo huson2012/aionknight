@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  18500: Handle By Script Big Kinah
--->
 
-	<!-- 18500: Big Kinah (lvl 18) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 18500: Big Kinah (lvl 18) -->
 	<!-- 18501: TODO: Shugo Indemnity (lvl 18) -->
 	<!-- 18502: TODO: Every Shugo Has A Price (lvl 99) -->
 	<!-- The Maltese Odium -->
@@ -52,11 +55,11 @@
 		<monster_infos var_id="1" max_kill="3" npc_id="216901"/>
 		<monster_infos var_id="2" max_kill="3" npc_id="216902"/>
 	</monster_hunt>
-	<!-- 18509: This Shugo for Hire (lvl 18) handled by script -->
-	<!-- 18510: Murder, My Shugo (lvl 18) handled by script -->
-	<!-- 18511: Out of the Past (lvl 18) handled by script -->
-	<!-- 28500: Odella, Odella, Where Art Thou? (lvl 18) handled by script -->
-	<!-- 28501: The Price of Loyalty (lvl 18) handled by script -->
+	<!-- 18509: This Shugo for Hire (lvl 18) -->
+	<!-- 18510: Murder, My Shugo (lvl 18) -->
+	<!-- 18511: Out of the Past (lvl 18) -->
+	<!-- 28500: Odella, Odella, Where Art Thou? (lvl 18) -->
+	<!-- 28501: The Price of Loyalty (lvl 18) -->
 	<!-- 28502: TODO: One Who Rules Haramel (lvl 99) -->
 	<!-- Odella for Chauminerk -->
 	<item_collecting id="28503" start_npc_id="799523" end_npc_id="798029" action_item_id="700834"/>
@@ -103,7 +106,7 @@
 		<monster_infos var_id="1" max_kill="3" npc_id="216901"/>
 		<monster_infos var_id="2" max_kill="3" npc_id="216902"/>
 	</monster_hunt>
-	<!-- 28509: What is Inside the Box? (lvl 18) handled by script -->
-	<!-- 28510: Destroy the Haramel Facilities (lvl 18) handled by script -->
-	<!-- 28511: The Soup? Nutsy! (lvl 18) handled by script -->
+	<!-- 28509: What is Inside the Box? (lvl 18) -->
+	<!-- 28510: Destroy the Haramel Facilities (lvl 18) -->
+	<!-- 28511: The Soup? Nutsy! (lvl 18) -->
 </quest_scripts>

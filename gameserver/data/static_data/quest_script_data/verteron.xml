@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 1011: Danger From Above (lvl 10) handled by script -->
-	<!-- 1012: Masked Loiterers (lvl 10) handled by script -->
-	<!-- 1013: Hunting Lepharist Revolutionaries (lvl 10) handled by script -->
-	<!-- 1014: Odium in the Dukaki Settlement (lvl 10) handled by script -->
-	<!-- 1015: Frillneck Hunt (lvl 10) handled by script -->
-	<!-- 1016: Source of the Pollution (lvl 12) handled by script -->
-	<!-- 1017: Held Sacred (lvl 13) handled by script -->
-	<!-- 1018: Mark of Vengeance (lvl 13) handled by script -->
-	<!-- 1019: Flying Reconnaissance (lvl 14) handled by script -->
-	<!-- 1020: Sealing the Abyss Gate (lvl 15) handled by script -->
-	<!-- 1021: Trandila's Eggs (lvl 11) handled by script -->
-	<!-- 1022: Krall Desecration (lvl 14) handled by script -->
-	<!-- 1023: A Nest of Lepharists (lvl 15) handled by script -->
-	<!-- 1130: Summons to the Citadel (lvl 10) handled by script -->
-	<!-- 1131: Undelivered Armor (lvl 10) handled by script -->
+	Назначение файла	: Описание квестов (Бертрон)
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 1011: Danger From Above (lvl 10) -->
+	<!-- 1012: Masked Loiterers (lvl 10) -->
+	<!-- 1013: Hunting Lepharist Revolutionaries (lvl 10) -->
+	<!-- 1014: Odium in the Dukaki Settlement (lvl 10) -->
+	<!-- 1015: Frillneck Hunt (lvl 10) -->
+	<!-- 1016: Source of the Pollution (lvl 12) -->
+	<!-- 1017: Held Sacred (lvl 13) -->
+	<!-- 1018: Mark of Vengeance (lvl 13) -->
+	<!-- 1019: Flying Reconnaissance (lvl 14) -->
+	<!-- 1020: Sealing the Abyss Gate (lvl 15) -->
+	<!-- 1021: Trandila's Eggs (lvl 11) -->
+	<!-- 1022: Krall Desecration (lvl 14) -->
+	<!-- 1023: A Nest of Lepharists (lvl 15) -->
+	<!-- 1130: Summons to the Citadel (lvl 10) -->
+	<!-- 1131: Undelivered Armor (lvl 10) -->
 	<!-- An Honest Merchant -->
 	<item_collecting id="1132" start_npc_id="203101" end_npc_id="203097"/>
 	<!-- Lobnite Hunt -->
@@ -66,7 +56,7 @@
 	</monster_hunt>
 	<!-- Abandoned Scarecrow -->
 	<report_to id="1140" start_npc_id="203123" end_npc_id="730001"/>
-	<!-- 1141: Belbua's Treasure (lvl 11) handled by script -->
+	<!-- 1141: Belbua's Treasure (lvl 11) -->
 	<!-- An Unwanted Dagger -->
 	<report_to id="1142" start_npc_id="203133" end_npc_id="203100" item_id="182203101"/>
 	<!-- Nola's Request -->
@@ -78,34 +68,34 @@
 	<item_collecting id="1144" start_npc_id="730001" end_npc_id="203130" action_item_id="700109"/>
 	<!-- Collecting Kukuru -->
 	<item_collecting id="1145" start_npc_id="203124"/>
-	<!-- 1146: Delicate Mandrake (lvl 12) handled by script -->
+	<!-- 1146: Delicate Mandrake (lvl 12) -->
 	<!-- Supplies for the Watch -->
 	<report_to id="1147" start_npc_id="203096" end_npc_id="203126" item_id="182200520"/>
 	<!-- Lostes the Braggart -->
 	<item_collecting id="1148" start_npc_id="203154"/>
-	<!-- 1149: Missing Poppy (lvl 14) handled by script -->
+	<!-- 1149: Missing Poppy (lvl 14) -->
 	<!-- A Father's Letter -->
 	<report_to id="1150" start_npc_id="790000" end_npc_id="203125" item_id="182200523"/>
 	<!-- Belbua is Missing -->
 	<item_collecting id="1151" start_npc_id="203125"/>
-	<!-- 1152: Odella Recipe (lvl 12) handled by script -->
+	<!-- 1152: Odella Recipe (lvl 12) -->
 	<!-- Feeding Hianu -->
 	<report_to id="1153" start_npc_id="203130" end_npc_id="203150" item_id="182200527"/>
 	<!-- A Special Omelette -->
 	<item_collecting id="1154" start_npc_id="203150" end_npc_id="203130" action_item_id="700031"/>
 	<!-- Retrieving Supplies -->
 	<item_collecting id="1155" start_npc_id="203126" action_item_id="700117"/>
-	<!-- 1156: Stolen Village Seal (lvl 14) handled by script -->
-	<!-- 1157: Gaphyrk's Love (lvl 14) handled by script -->
-	<!-- 1158: Village Seal Found (lvl 14) handled by script -->
+	<!-- 1156: Stolen Village Seal (lvl 14) -->
+	<!-- 1157: Gaphyrk's Love (lvl 14) -->
+	<!-- 1158: Village Seal Found (lvl 14) -->
 	<!-- Collecting Poison Sacs -->
 	<item_collecting id="1159" start_npc_id="203151"/>
 	<!-- Stolen Jewelry -->
 	<item_collecting id="1160" start_npc_id="203127"/>
 	<!-- [Manastone] New Manastones for Old -->
 	<item_collecting id="1161" start_npc_id="203332"/>
-	<!-- 1162: Alteno's Wedding Ring (lvl 15) handled by script -->
-	<!-- 1163: Arachna Antidote (lvl 15) handled by script -->
+	<!-- 1162: Alteno's Wedding Ring (lvl 15) -->
+	<!-- 1163: Arachna Antidote (lvl 15) -->
 	<!-- The Potion Maker's Mistake -->
 	<report_to id="1164" start_npc_id="203131" end_npc_id="203149" item_id="182200536"/>
 	<!-- Gift to a Pilgrim -->
@@ -120,7 +110,7 @@
 	<monster_hunt id="1169" start_npc_id="203126">
 		<monster_infos var_id="0" max_kill="1" npc_id="210317"/>
 	</monster_hunt>
-	<!-- 1170: Headless Stone Statue (lvl 15) handled by script -->
+	<!-- 1170: Headless Stone Statue (lvl 15) -->
 	<!-- An Antidote for Roseino -->
 	<report_to id="1171" start_npc_id="203103" end_npc_id="203155" item_id="182200542"/>
 	<!-- A Foolish Gamble -->
@@ -159,8 +149,8 @@
 		<monster_infos var_id="0" max_kill="10" npc_id="210176"/>
 		<monster_infos var_id="1" max_kill="10" npc_id="210166"/>
 	</monster_hunt>
-	<!-- 1182: Ancient Stone Fragment (lvl 18) handled by script -->
-	<!-- 1183: Spirit Of Nature (lvl 18) handled by script -->
+	<!-- 1182: Ancient Stone Fragment (lvl 18) -->
+	<!-- 1183: Spirit Of Nature (lvl 18) -->
 	<!-- Investigating Wind Spirits -->
 	<report_to id="1184" start_npc_id="203165" end_npc_id="203097"/>
 	<!-- Unquiet Spirits -->
@@ -179,10 +169,10 @@
 	<item_collecting id="1190" start_npc_id="203183"/>
 	<!-- An Urgent Letter -->
 	<report_to id="1191" start_npc_id="203099" end_npc_id="203183" item_id="182200555"/>
-	<!-- 1192: Verteron Reinforcements (lvl 19) handled by script -->
+	<!-- 1192: Verteron Reinforcements (lvl 19) -->
 	<!-- [Group] Krall Conspiracy -->
 	<item_collecting id="1193" start_npc_id="203098"/>
-	<!-- 1194: [Group] Reducing Tursin Strength (lvl 19) handled by script -->
+	<!-- 1194: [Group] Reducing Tursin Strength (lvl 19) -->
 	<!-- [Group] Tursin Assassination -->
 	<monster_hunt id="1195" start_npc_id="203098">
 		<monster_infos var_id="0" max_kill="1" npc_id="210187"/>
@@ -192,8 +182,8 @@
 		<monster_infos var_id="0" max_kill="14" npc_id="210086"/>
 		<monster_infos var_id="1" max_kill="8" npc_id="210711"/>
 	</monster_hunt>
-	<!-- 1197: Krall Book (lvl 14) handled by script -->
-	<!-- 1198: The Writing on the Wall (lvl 14) handled by script -->
+	<!-- 1197: Krall Book (lvl 14) -->
+	<!-- 1198: The Writing on the Wall (lvl 14) -->
 	<!-- Eninte's Request -->
 	<report_to id="1199" start_npc_id="203161" end_npc_id="203893" item_id="182200560"/>
 	<!-- Eninte -->
@@ -237,10 +227,10 @@
 		<monster_infos var_id="0" max_kill="12" npc_id="210085"/>
 		<monster_infos var_id="0" max_kill="12" npc_id="210197"/>
 	</monster_hunt>
-	<!-- 1218: Numonerk's Demand Note (lvl 19) handled by script -->
+	<!-- 1218: Numonerk's Demand Note (lvl 19) -->
 	<!-- Lepharist Treasure Box -->
 	<item_collecting id="1219" start_npc_id="203172" action_item_id="700283"/>
-	<!-- 1220: A Secret Delivery (lvl 19) handled by script -->
+	<!-- 1220: A Secret Delivery (lvl 19) -->
 	<!-- Brainwashed Tursin Krall -->
 	<monster_hunt id="1221" start_npc_id="203097">
 		<monster_infos var_id="0" max_kill="3" npc_id="216913"/>

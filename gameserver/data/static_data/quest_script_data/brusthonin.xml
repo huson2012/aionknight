@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 2091: Meet the Reapers (lvl 45) handled by script -->
-	<!-- 2092: Graves of the Red Sky Legion (lvl 45) handled by script -->
-	<!-- 2093: The Secret Passage (lvl 46) handled by script -->
-	<!-- 2094: The Secret of Adma Stronghold (lvl 46) handled by script -->
-	<!-- 4001: Check on the Settlers (lvl 20) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 2091: Meet the Reapers (lvl 45) -->
+	<!-- 2092: Graves of the Red Sky Legion (lvl 45) -->
+	<!-- 2093: The Secret Passage (lvl 46) -->
+	<!-- 2094: The Secret of Adma Stronghold (lvl 46) -->
+	<!-- 4001: Check on the Settlers (lvl 20) -->
 	<!-- Samples for Study -->
 	<item_collecting id="4002" start_npc_id="205126"/>
 	<!-- The Fields are Infested -->
@@ -31,7 +21,7 @@
 		<monster_infos var_id="1" max_kill="5" npc_id="213853"/>
 		<monster_infos var_id="1" max_kill="5" npc_id="213896"/>
 	</monster_hunt>
-	<!-- 4004: The Seeds of Hope (lvl 21) handled by script -->
+	<!-- 4004: The Seeds of Hope (lvl 21) -->
 	<!-- Scarecrow's Request -->
 	<monster_hunt id="4005" start_npc_id="730103">
 		<monster_infos var_id="0" max_kill="10" npc_id="213847"/>
@@ -56,7 +46,7 @@
 	<!-- If I Only Had a Master -->
 	<report_to id="4010" start_npc_id="730104" end_npc_id="205142"/>
 	<!-- 4011: TODO: An Old Settler's Letter (lvl 23) -->
-	<!-- 4012: Troublesome Promise (lvl 22) handled by script -->
+	<!-- 4012: Troublesome Promise (lvl 22) -->
 	<!-- Obstacle to Cultivation -->
 	<monster_hunt id="4013" start_npc_id="205123">
 		<monster_infos var_id="0" max_kill="5" npc_id="213879"/>
@@ -70,7 +60,7 @@
 	<monster_hunt id="4014" start_npc_id="205128">
 		<monster_infos var_id="0" max_kill="1" npc_id="213930"/>
 	</monster_hunt>
-	<!-- 4015: The Missing Laborers (lvl 24) handled by script -->
+	<!-- 4015: The Missing Laborers (lvl 24) -->
 	<!-- The Elyos of Brusthonin -->
 	<item_collecting id="4016" start_npc_id="205130"/>
 	<!-- The Ikelus Manhunt -->
@@ -86,7 +76,7 @@
 	</monster_hunt>
 	<!-- Everyone Has a Secret -->
 	<item_collecting id="4019" start_npc_id="205127"/>
-	<!-- 4020: Parica's Special Order (lvl 24) handled by script -->
+	<!-- 4020: Parica's Special Order (lvl 24) -->
 	<!-- Carnivores Run Amok -->
 	<monster_hunt id="4031" start_npc_id="205151">
 		<monster_infos var_id="0" max_kill="20" npc_id="214365"/>
@@ -101,15 +91,15 @@
 		<monster_infos var_id="1" max_kill="20" npc_id="214378"/>
 		<monster_infos var_id="1" max_kill="20" npc_id="214379"/>
 	</monster_hunt>
-	<!-- 4033: A Bloom in Brusthonin (lvl 45) handled by script -->
+	<!-- 4033: A Bloom in Brusthonin (lvl 45) -->
 	<!-- Baltasar's Wish -->
 	<item_collecting id="4034" start_npc_id="205156"/>
 	<!-- [Repeat] Forest Decon -->
 	<item_collecting id="4035" start_npc_id="205151" action_item_id="700383"/>
-	<!-- 4036: Heirnir Wants to Rest (lvl 46) handled by script -->
+	<!-- 4036: Heirnir Wants to Rest (lvl 46) -->
 	<!-- Something For Heirnir -->
 	<item_collecting id="4037" start_npc_id="205190" end_npc_id="205187"/>
-	<!-- 4038: Alas, Poor Groznak (lvl 46) handled by script -->
+	<!-- 4038: Alas, Poor Groznak (lvl 46) -->
 	<!-- Elim's Goodwill -->
 	<monster_hunt id="4039" start_npc_id="205193">
 		<monster_infos var_id="0" max_kill="30" npc_id="214413"/>
@@ -122,7 +112,7 @@
 	</monster_hunt>
 	<!-- Retrieving the Contaminated Seeds -->
 	<item_collecting id="4041" start_npc_id="205193"/>
-	<!-- 4042: Message in a Bottle (lvl 46) handled by script -->
+	<!-- 4042: Message in a Bottle (lvl 46) -->
 	<!-- Wrath of Sahnu -->
 	<monster_hunt id="4043" start_npc_id="205192">
 		<monster_infos var_id="0" max_kill="20" npc_id="214435"/>
@@ -157,9 +147,9 @@
 	</monster_hunt>
 	<!-- Brohum's Ornamental Bow -->
 	<item_collecting id="4050" start_npc_id="205166" end_npc_id="205172"/>
-	<!-- 4051: Bukmir's Worry (lvl 48) handled by script -->
-	<!-- 4052: Bukmir's Old Friend (lvl 48) handled by script -->
-	<!-- 4053: Glossy Hoe (lvl 48) handled by script -->
+	<!-- 4051: Bukmir's Worry (lvl 48) -->
+	<!-- 4052: Bukmir's Old Friend (lvl 48) -->
+	<!-- 4053: Glossy Hoe (lvl 48) -->
 	<!-- Horn of Purification -->
 	<item_collecting id="4054" start_npc_id="205193"/>
 	<!-- Jackdaw's Request -->
@@ -180,7 +170,7 @@
 	</monster_hunt>
 	<!-- Contamination Sample -->
 	<item_collecting id="4059" start_npc_id="205204"/>
-	<!-- 4060: The Zombie's Descendant (lvl 48) handled by script -->
+	<!-- 4060: The Zombie's Descendant (lvl 48) -->
 	<!-- [Daily/Coin] Purification of Soul -->
 	<item_collecting id="4061" start_npc_id="205160"/>
 	<!-- [Daily/Coin] For the Future Settlers -->
@@ -199,13 +189,13 @@
 	<item_collecting id="4072" start_npc_id="205148"/>
 	<!-- [Manastone] Manastone Recycling -->
 	<item_collecting id="4073" start_npc_id="205148"/>
-	<!-- 4074: [Spend Coin] Gain or Lose (lvl 45) handled by script -->
+	<!-- 4074: [Spend Coin] Gain or Lose (lvl 45) -->
 	<!-- Southern Region Status Report -->
 	<report_to id="4075" start_npc_id="205128" end_npc_id="205151"/>
 	<!-- Plant for Filling -->
 	<item_collecting id="4076" start_npc_id="205158"/>
-	<!-- 4077: Porgus Roundup (lvl 46) handled by script -->
-	<!-- 4078: A Light Through the Trees (lvl 46) handled by script -->
+	<!-- 4077: Porgus Roundup (lvl 46) -->
+	<!-- 4078: A Light Through the Trees (lvl 46) -->
 	<!-- Unforgivable Balaur -->
 	<monster_hunt id="4079" start_npc_id="205156">
 		<monster_infos var_id="0" max_kill="20" npc_id="214404"/>
@@ -217,7 +207,7 @@
 	<item_collecting id="4080" start_npc_id="205156"/>
 	<!-- Unusual Ingredients -->
 	<item_collecting id="4081" start_npc_id="205190"/>
-	<!-- 4082: Gathering the Herb Pouches (lvl 46) handled by script -->
+	<!-- 4082: Gathering the Herb Pouches (lvl 46) -->
 	<!-- Those Pesky Mosks -->
 	<monster_hunt id="4083" start_npc_id="205195">
 		<monster_infos var_id="0" max_kill="23" npc_id="214411"/>
@@ -229,7 +219,7 @@
 	<item_collecting id="4085" start_npc_id="205170" end_npc_id="205164"/>
 	<!-- The Bribed Chieftain -->
 	<report_to id="4086" start_npc_id="205164" end_npc_id="205170" item_id="182209045"/>
-	<!-- 4087: No Ordinary Branch (lvl 48) handled by script -->
+	<!-- 4087: No Ordinary Branch (lvl 48) -->
 	<!-- Jackdaw's Liquor -->
 	<report_to id="4088" start_npc_id="798063" end_npc_id="205203" item_id="182209047"/>
 	<!-- Lobnites on the Half-Shell -->
@@ -261,7 +251,7 @@
 	<item_collecting id="4099" start_npc_id="205149" action_item_id="700451"/>
 	<!-- Warehouse Keeper's Greed -->
 	<item_collecting id="4100" start_npc_id="205149"/>
-	<!-- 4101: Elim of Brusthonin (lvl 46) handled by script -->
+	<!-- 4101: Elim of Brusthonin (lvl 46) -->
 	<!-- Incessant Pain -->
 	<monster_hunt id="4102" start_npc_id="205193">
 		<monster_infos var_id="0" max_kill="23" npc_id="214416"/>

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	Назначение файла	: Описание квестов (Священная Арена)
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
 <quest_scripts>
 	<!-- The Crucible -->
 	<report_to id="18200" start_npc_id="798604" end_npc_id="799088"/>

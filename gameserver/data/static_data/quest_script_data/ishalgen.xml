@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 2000: Prologue (lvl 1) handled by script -->
-	<!-- 2001: Thinking Ahead (lvl 1) handled by script -->
-	<!-- 2002: Where's Rae? (lvl 1) handled by script -->
-	<!-- 2003: Treasure of the Deceased (lvl 2) handled by script -->
-	<!-- 2004: A Charmed Cube (lvl 3) handled by script -->
-	<!-- 2005: Teaching a Lesson (lvl 4) handled by script -->
-	<!-- 2006: Hit Them Where it Hurts (lvl 4) handled by script -->
-	<!-- 2007: Where's Rae This Time? (lvl 4) handled by script -->
-	<!-- 2100: Order of the Captain (lvl 1) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 2000: Prologue (lvl 1) -->
+	<!-- 2001: Thinking Ahead (lvl 1) -->
+	<!-- 2002: Where's Rae? (lvl 1) -->
+	<!-- 2003: Treasure of the Deceased (lvl 2) -->
+	<!-- 2004: A Charmed Cube (lvl 3) -->
+	<!-- 2005: Teaching a Lesson (lvl 4) -->
+	<!-- 2006: Hit Them Where it Hurts (lvl 4) -->
+	<!-- 2007: Where's Rae This Time? (lvl 4) -->
+	<!-- 2100: Order of the Captain (lvl 1) -->
 	<!-- On Your Feet! -->
 	<report_to id="2101" start_npc_id="203500" end_npc_id="203504"/>
 	<!-- A Bloody Task -->
@@ -41,7 +31,7 @@
 	<item_collecting id="2105" start_npc_id="203502"/>
 	<!-- Vanar's Flattery -->
 	<report_to id="2106" start_npc_id="203502" end_npc_id="203517" item_id="182203106"/>
-	<!-- 2107: Return to Sender (lvl 3) handled by script -->
+	<!-- 2107: Return to Sender (lvl 3) -->
 	<!-- The Shinier the Better -->
 	<item_collecting id="2108" start_npc_id="798037"/>
 	<!-- Love in Bloom -->
@@ -53,7 +43,7 @@
 	<item_collecting id="2112" start_npc_id="790003"/>
 	<!-- Token of a Lost Love -->
 	<item_collecting id="2113" start_npc_id="203534"/>
-	<!-- 2114: The Insect Problem (lvl 4) handled by script -->
+	<!-- 2114: The Insect Problem (lvl 4) -->
 	<!-- Sap for Leather -->
 	<report_to id="2115" start_npc_id="203534" end_npc_id="203515" item_id="182203114"/>
 	<!-- A Treasure Map -->
@@ -71,11 +61,11 @@
 	<item_collecting id="2120" start_npc_id="203542"/>
 	<!-- Checking on a Friend -->
 	<report_to id="2121" start_npc_id="203540" end_npc_id="203547" item_id="182203119"/>
-	<!-- 2122: Ashes to Ashes (lvl 5) handled by script -->
-	<!-- 2123: The Imprisoned Gourmet (lvl 7) handled by script -->
+	<!-- 2122: Ashes to Ashes (lvl 5) -->
+	<!-- 2123: The Imprisoned Gourmet (lvl 7) -->
 	<!-- The Captain's Secret -->
 	<item_collecting id="2124" start_npc_id="203548"/>
-	<!-- 2125: The Robbery Plot (lvl 8) handled by script -->
+	<!-- 2125: The Robbery Plot (lvl 8) -->
 	<!-- As Much as You Can Carry -->
 	<item_collecting id="2126" start_npc_id="203544" action_item_id="700129"/>
 	<!-- Pearls Before Swine -->
@@ -90,13 +80,13 @@
 	<!-- 2130: TODO: Call to Duty (lvl 99) -->
 	<!-- A Delivery of Leather -->
 	<report_to id="2131" start_npc_id="203515" end_npc_id="203542" item_id="182203129"/>
-	<!-- 2132: A New Skill (lvl 3) handled by script -->
+	<!-- 2132: A New Skill (lvl 3) -->
 	<!-- Azpha For Health And Well-being -->
 	<item_collecting id="2133" start_npc_id="203519"/>
 	<!-- Alfrigh's Request -->
 	<item_collecting id="2134" start_npc_id="203543"/>
-	<!-- 2135: For Love of Negi (lvl 3) handled by script -->
-	<!-- 2136: The Lost Axe (lvl 5) handled by script -->
+	<!-- 2135: For Love of Negi (lvl 3) -->
+	<!-- 2136: The Lost Axe (lvl 5) -->
 	<!-- A Cursed Opal -->
 	<report_to id="2137" start_npc_id="203539" end_npc_id="203541"/>
 </quest_scripts>

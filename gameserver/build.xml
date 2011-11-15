@@ -27,7 +27,7 @@
     <property name="build" location="../tools/Compiled/GameServer"/>
     <property name="build.classes" location="${build}/Classes"/>
     <property name="build.dist" location="${build}/Dist"/>
-	<property name="build.dist.gs" location="${build.dist}/GameServer"/>
+	<property name="build.dist.gs" location="${build.dist}"/>
     
     <path id="classpath">
         <fileset dir="${lib}">
@@ -49,17 +49,17 @@
 		</javac>
     </target>
 	<target name="jar" depends="compile" description="Create the jar file">
-        <exec dir="." executable="svnversion.exe" outputproperty="revision" failifexecutionfails="false" osfamily="windows">
+        <exec dir="../tools" executable="svnversion.exe" outputproperty="revision" failifexecutionfails="false" osfamily="windows">
             <arg line="-n ."/>
         </exec>
-        <exec dir="." executable="svnversion" outputproperty="revision" failifexecutionfails="false" osfamily="unix">
+        <exec dir="../tools" executable="svnversion" outputproperty="revision" failifexecutionfails="false" osfamily="unix">
             <arg line="-n ."/>
         </exec>
 		<tstamp>
 			<format property="date" pattern="yyyy-MM-dd-HH:mm" />
 		</tstamp>
 
-        <jar destfile="${build}/JAR/ak-server.jar">
+        <jar destfile="${build}/Dist/ak-server.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
                 <attribute name="Main-Class" value="gameserver.GameServer"/>

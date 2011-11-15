@@ -39,9 +39,10 @@ public class NettyServer
 	private static final Logger logger = Logger.getLogger(NettyServer.class);
 	private final ChannelGroup channelGroup	= new DefaultChannelGroup(NettyServer.class.getName());
 	private final LoginToClientPipeLineFactory loginToClientPipeLineFactory;
-	private final LoginToGamePipelineFactory oginToGamePipelineFactory;
+	private final LoginToGamePipelineFactory loginToGamePipelineFactory;
 	private ChannelFactory loginToClientChannelFactory;
 	private ChannelFactory loginToGameChannelFactory;
+
 	public NettyServer()
 	{
 		this.loginToClientPipeLineFactory = new LoginToClientPipeLineFactory();
@@ -49,9 +50,6 @@ public class NettyServer
 		initialize();
 	}
 
-	/**
-	 * Initialize listening on login port
-	 */
 	public void initialize()
 	{
 		loginToClientChannelFactory = initChannelFactory();
@@ -68,24 +66,12 @@ public class NettyServer
 		logger.info("Chat Server started");
 	}
 
-	/**
-	 * 
-	 * @return NioServerSocketChannelFactory
-	 */
 	private NioServerSocketChannelFactory initChannelFactory()
 	{
 		return new NioServerSocketChannelFactory(Executors.newCachedThreadPool(), Executors.newCachedThreadPool(),
 			Runtime.getRuntime().availableProcessors() * 2 + 1);
 	}
 
-	/**
-	 * 
-	 * @param channelFactory
-	 * @param listenAddress
-	 * @param port
-	 * @param channelPipelineFactory
-	 * @return Channel
-	 */
 	private Channel initChannel(ChannelFactory channelFactory, InetSocketAddress address,
 		ChannelPipelineFactory channelPipelineFactory)
 	{
@@ -101,9 +87,6 @@ public class NettyServer
 		return bootstrap.bind(address);
 	}
 
-	/**
-	 * Shutdown server
-	 */
 	public void shutdownAll()
 	{
 		ChannelGroupFuture future = channelGroup.close();

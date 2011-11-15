@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
 <quest_scripts>
-	<!-- 18400: The Vanishings -->
+	<!-- 18400:  -->
 	<report_to start_npc_id="799552" end_npc_id="799585" id="18400"/>
-	<!-- 18401: [Group] Research and Destruction -->
+	<!-- 18401:  -->
 	<monster_hunt start_npc_id="799553" id="18401">
 		<monster_infos var_id="0" npc_id="217200" max_kill="20"/>
 		<monster_infos var_id="0" npc_id="217201" max_kill="20"/>
@@ -10,17 +17,19 @@
 		<monster_infos var_id="0" npc_id="217228" max_kill="20"/>
 		<monster_infos var_id="0" npc_id="217203" max_kill="20"/>
 	</monster_hunt>
-	<!-- 18402: [Group] Rooting Out Corruption -->
+	<!-- 18402:  -->
 	<monster_hunt start_npc_id="799590" id="18402">
 		<monster_infos var_id="0" npc_id="217185" max_kill="5"/>
 	</monster_hunt>
-	<!-- 18403: [Group] Dratamin! Foiled Again! -->
+	<!-- 18403:  -->
 	<item_collecting id="18403" start_npc_id="799586"/>
-	<!-- 18404: [Group] Surkana-in-the-Box -->
+	<!-- 18404:  -->
 	<item_collecting id="18404" start_npc_id="799586"/>
-	<!-- 18405: Memories, in the Corner of His Mind handled by script -->
-	<!-- 28406: TODO: Finder's Fee -->
-	<!-- 28410: TODO: Fortress Unsecured -->
-	<!-- 28412: TODO: Hidden Quest to Play Cut Scenes (Asmodian) -->
-	<!-- 18412: TODO: Hidden Quest to Play Cut Scenes (Elyos) -->
+	<!-- 18405:  -->
+	<!-- 28400:  -->
+	<report_to start_npc_id="799557" end_npc_id="799588" id="28400"/>
+	<!-- 28406:  -->
+	<!-- 28410:  -->
+	<!-- 28412:  -->
+	<!-- 18412:  -->
 </quest_scripts>
