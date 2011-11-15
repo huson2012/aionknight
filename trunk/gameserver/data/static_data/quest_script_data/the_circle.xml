@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
 <quest_scripts>
 	<!-- 47000:  [Daily] Altgard Orb-it -->
 	<item_collecting id="47000" start_npc_id="799847" end_npc_id="799864" action_item_id="700970"/>

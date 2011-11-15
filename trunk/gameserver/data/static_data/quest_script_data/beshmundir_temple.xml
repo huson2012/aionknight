@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
 	<!-- Supplies Party (lvl 55) -->
 	<item_collecting start_npc_id="798926" id="30201"/>
-	<!-- 30202: Suspicious Ceremony (lvl 55) handled by script -->
-	<!-- 30203: [Group] Halt the Ceremony! (lvl 55) handled by script -->
+	<!-- 30202: Suspicious Ceremony (lvl 55) -->
+	<!-- 30203: [Group] Halt the Ceremony! (lvl 55) -->
 	<!-- Pilomenes' Advice (lvl 55) -->
 	<report_to id="30204" start_npc_id="798926" end_npc_id="798941"/>
-	<!-- 30205: Handled By Script A Monument Rubbed -->
+	<!-- 30205: A Monument Rubbed -->
 	<!-- [Group] Dragonbound Diaries (lvl 55) -->
 	<item_collecting start_npc_id="798941"  action_item_id="700750" id="30206"/>
 	<!-- Soul Invocation Ceremony (lvl 55) -->
 	<item_collecting start_npc_id="798941" id="30207"/>
-	<!-- 30208: Handled By Script [Group] The Truth Hurts -->
+	<!-- 30208: [Group] The Truth Hurts -->
 	<!-- The Ancient Document -->
 	<report_to id="30209" start_npc_id="798941" end_npc_id="203837" item_id="182209611"/>
-	<!-- 30210: Handled By Script Written in Blood -->
+	<!-- 30210: Written in Blood -->
 	<!-- 30211: TODO: [Group] The Rod and the Orb (lvl 55) -->
 	<!-- The Orb and the Rod (lvl 55) -->
 	<item_collecting start_npc_id="798941" id="30212"/>
@@ -40,7 +30,7 @@
 	<item_collecting id="30214" start_npc_id="798927"/>
 	<!-- To Help a Hushblade -->
 	<item_collecting id="30215" start_npc_id="798928"/>
-	<!-- 30222: Handled By Script [Group] A Guard's Curse -->
+	<!-- 30222: [Group] A Guard's Curse -->
 	<!-- [Group] The Plaguebearer -->
 	<item_collecting id="30223" start_npc_id="799031"/>
 	<!-- [Group] Grave Robber's Lament -->
@@ -51,7 +41,7 @@
 	<item_collecting id="30225" start_npc_id="216527"/>
 	<!-- Priest Kailaus's New Nightmare -->
 	<item_collecting id="30226" start_npc_id="798946"/>
-	<!-- 30227: Handled By Script [Group] To Liberate Souls -->
+	<!-- 30227: [Group] To Liberate Souls -->
 	<!-- Teressa's Request -->
 	<item_collecting id="30228" start_npc_id="798934"/>
 	<!-- The Tricky Spirit -->
@@ -70,15 +60,15 @@
 	<monster_hunt id="30234" start_npc_id="798979">
 		<monster_infos var_id="0" max_kill="1" npc_id="216248"/>
 	</monster_hunt>
-	<!-- 30235: Handled By Script [Group] New Sword -->
-	<!-- 30236: Handled By Script [Group] New Greatsword -->
-	<!-- 30237: Handled By Script [Group] New Polearm -->
-	<!-- 30238: Handled By Script [Group] New Staff -->
-	<!-- 30239: Handled By Script [Group] New Spellbook -->
-	<!-- 30240: Handled By Script [Group] New Orb -->
-	<!-- 30241: Handled By Script [Group] New Bow -->
-	<!-- 30242: Handled By Script [Group] New Dagger -->
-	<!-- 30243: Handled By Script [Group] New Mace -->
+	<!-- 30235: [Group] New Sword -->
+	<!-- 30236: [Group] New Greatsword -->
+	<!-- 30237: [Group] New Polearm -->
+	<!-- 30238: [Group] New Staff -->
+	<!-- 30239: [Group] New Spellbook -->
+	<!-- 30240: [Group] New Orb -->
+	<!-- 30241: [Group] New Bow -->
+	<!-- 30242: [Group] New Dagger -->
+	<!-- 30243: [Group] New Mace -->
 	<!-- [Group] Cleansing the Temple -->
 	<monster_hunt id="30244" start_npc_id="798926">
 		<monster_infos var_id="0" max_kill="20" npc_id="216202"/>
@@ -92,20 +82,20 @@
 		<monster_infos var_id="0" max_kill="12" npc_id="216310"/>
 		<monster_infos var_id="0" max_kill="12" npc_id="216313"/>
 	</monster_hunt>
-	<!-- 30301: Tracking Supplies handled by script -->
-	<!-- 30302: Mysterious Motives (lvl 55) handled by script -->
-	<!-- 30303: [Group] The Fall of Isbariya (lvl 55) handled by script -->
+	<!-- 30301: Tracking Supplies -->
+	<!-- 30302: Mysterious Motives (lvl 55) -->
+	<!-- 30303: [Group] The Fall of Isbariya (lvl 55) -->
 	<!-- Herka's Advice -->
 	<report_to id="30304" start_npc_id="799225" end_npc_id="799322"/>
-	<!-- 30305: Handled By Script Aye, That's the Rubbing -->
+	<!-- 30305: Aye, That's the Rubbing -->
 	<!-- [Group] Library Legends -->
 	<item_collecting id="30306" start_npc_id="799322" action_item_id="700750"/>
 	<!-- Soul Summoning -->
 	<item_collecting id="30307" start_npc_id="799322"/>
-	<!-- 30308: Handled By Script [Group] Summon Respondent Utra -->
+	<!-- 30308: [Group] Summon Respondent Utra -->
 	<!-- A Difficult Restoration -->
 	<report_to id="30309" start_npc_id="799322" end_npc_id="204225" item_id="182209711"/>
-	<!-- 30310: Handled By Script Rank and Bile -->
+	<!-- 30310: Rank and Bile -->
 	<!-- 30311: TODO: [Group] A Quartz Is a Quartz (lvl 55) -->
 	<!-- Rooting for Power -->
 	<item_collecting id="30312" start_npc_id="799322"/>
@@ -114,7 +104,7 @@
 	<item_collecting id="30314" start_npc_id="799226"/>
 	<!-- Benefactor of Gelkmaros -->
 	<item_collecting id="30315" start_npc_id="799226"/>
-	<!-- 30322: Handled By Script [Group] Vanquishing Ahbana -->
+	<!-- 30322: [Group] Vanquishing Ahbana -->
 	<!-- [Group] Avoid like the Plaguebearer -->
 	<item_collecting id="30323" start_npc_id="799335"/>
 	<!-- [Group] Dorakiki's Demise -->
@@ -125,7 +115,7 @@
 	<item_collecting id="30325" start_npc_id="216527"/>
 	<!-- Dream a Little Dream -->
 	<item_collecting id="30326" start_npc_id="799244"/>
-	<!-- 30327: Handled By Script [Group] Mired Souls -->
+	<!-- 30327: [Group] Mired Souls -->
 	<!-- Watery Wish -->
 	<item_collecting id="30328" start_npc_id="799321"/>
 	<!-- Earthly Eagerness -->
@@ -144,15 +134,15 @@
 	<monster_hunt id="30334" start_npc_id="799278">
 		<monster_infos var_id="0" max_kill="1" npc_id="216248"/>
 	</monster_hunt>
-	<!-- 30335: Handled By Script [Group] Improved Sword -->
-	<!-- 30336: Handled By Script [Group] Improved Greatsword -->
-	<!-- 30337: Handled By Script [Group] Improved Polearm -->
-	<!-- 30338: Handled By Script [Group] Improved Staff -->
-	<!-- 30339: Handled By Script [Group] Improved Spellbook -->
-	<!-- 30340: Handled By Script [Group] Improved Orb -->
-	<!-- 30341: Handled By Script [Group] Improved Bow -->
-	<!-- 30342: Handled By Script [Group] Improved Dagger -->
-	<!-- 30343: Handled By Script [Group] Improved Mace -->
+	<!-- 30335: [Group] Improved Sword -->
+	<!-- 30336: [Group] Improved Greatsword -->
+	<!-- 30337: [Group] Improved Polearm -->
+	<!-- 30338: [Group] Improved Staff -->
+	<!-- 30339: [Group] Improved Spellbook -->
+	<!-- 30340: [Group] Improved Orb -->
+	<!-- 30341: [Group] Improved Bow -->
+	<!-- 30342: [Group] Improved Dagger -->
+	<!-- 30343: [Group] Improved Mace -->
 	<!-- [Group] Punish Beshmundir Balaur -->
 	<monster_hunt id="30344" start_npc_id="799225">
 		<monster_infos var_id="0" max_kill="20" npc_id="216202"/>

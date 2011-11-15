@@ -1,41 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  *  This file is part of Zetta-Core Engine <http://www.zetta-core.org>.
- *
- *  Zetta-Core is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published
- *  by the Free Software Foundation, either version 3 of the License,
- *  or (at your option) any later version.
- *
- *  Zetta-Core is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Zetta-Core.  If not, see <http://www.gnu.org/licenses/>.
- */
--->
 
-	<!-- 1071: Speaking Balaur (lvl 25) handled by script -->
-	<!-- 1072: Abyss Training (lvl 25) handled by script -->
-	<!-- 1073: Saving Elyos Captives (lvl 25) handled by script -->
-	<!-- 1074: Fragment of Memory (lvl 26) handled by script -->
-	<!-- 1075: New Wings (lvl 32) handled by script -->
-	<!-- 1076: Fragment of Memory 2 (lvl 35) handled by script -->
-	<!-- 1077: Fragment of Memory 3 (lvl 35) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 1071: Speaking Balaur (lvl 25) -->
+	<!-- 1072: Abyss Training (lvl 25) -->
+	<!-- 1073: Saving Elyos Captives (lvl 25) -->
+	<!-- 1074: Fragment of Memory (lvl 26) -->
+	<!-- 1075: New Wings (lvl 32) -->
+	<!-- 1076: Fragment of Memory 2 (lvl 35) -->
+	<!-- 1077: Fragment of Memory 3 (lvl 35) -->
 	<!-- 1700: TODO: [Repeat] The Second Cooperation (lvl 99) -->
-	<!-- 1701: Governor's Directive (lvl 25) handled by script -->
-	<!-- 1702: Defeat 9th Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1703: Defeat 8th Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1704: Defeat 7th Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1705: Defeat 6th Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1706: Defeat 5th Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1707: Defeat 4th Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1708: Defeat 3rd Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1709: Defeat 2nd Rank Asmodian Soldiers (lvl 25) handled by script -->
-	<!-- 1710: Defeat 1st Rank Asmodian Soldiers (lvl 25) handled by script -->
+	<!-- 1701: Governor's Directive (lvl 25) -->
+	<!-- 1702: Defeat 9th Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1703: Defeat 8th Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1704: Defeat 7th Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1705: Defeat 6th Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1706: Defeat 5th Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1707: Defeat 4th Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1708: Defeat 3rd Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1709: Defeat 2nd Rank Asmodian Soldiers (lvl 25) -->
+	<!-- 1710: Defeat 1st Rank Asmodian Soldiers (lvl 25) -->
 	<!-- 1711: TODO: [Spend Coin] Gold/Silver (Scout/Warrior) (lvl 99) -->
 	<!-- 1712: TODO: [Spend Coin] Gold/Silver (Priest/Mage) (lvl 99) -->
 	<!-- 1713: TODO: [Spend Coin] Silver (Scout/Warrior 36) (lvl 99) -->
@@ -57,17 +46,17 @@
 		<monster_infos var_id="0" max_kill="27" npc_id="255140"/>
 		<monster_infos var_id="0" max_kill="27" npc_id="255139"/>
 	</monster_hunt>
-	<!-- 1717: Silver for the Fountain (lvl 25) handled by script -->
-	<!-- 1718: Trading Down (lvl 25) handled by script -->
-	<!-- 1719: [Group] Confront Asmodian Officers (lvl 40) handled by script -->
-	<!-- 1720: [Group] Confront Asmodian Generals (lvl 40) handled by script -->
-	<!-- 1721: Meeting with the Brigade General (lvl 25) handled by script -->
-	<!-- 1722: Rastin's Homesickness (lvl 25) handled by script -->
+	<!-- 1717: Silver for the Fountain (lvl 25) -->
+	<!-- 1718: Trading Down (lvl 25) -->
+	<!-- 1719: [Group] Confront Asmodian Officers (lvl 40) -->
+	<!-- 1720: [Group] Confront Asmodian Generals (lvl 40) -->
+	<!-- 1721: Meeting with the Brigade General (lvl 25) -->
+	<!-- 1722: Rastin's Homesickness (lvl 25) -->
 	<!-- 1723: TODO: No Quest (lvl 99) -->
-	<!-- 1724: Reaper Expertise (lvl 25) handled by script -->
-	<!-- 1725: Centurion's Forgetfulness (lvl 27) handled by script -->
-	<!-- 1726: Scouting the Lake (lvl 30) handled by script -->
-	<!-- 1727: Recruits for Nezekan's Shield (lvl 31) handled by script -->
+	<!-- 1724: Reaper Expertise (lvl 25) -->
+	<!-- 1725: Centurion's Forgetfulness (lvl 27) -->
+	<!-- 1726: Scouting the Lake (lvl 30) -->
+	<!-- 1727: Recruits for Nezekan's Shield (lvl 31) -->
 	<!-- [Group] Assassin Mokkurkalfi -->
 	<monster_hunt id="1728" start_npc_id="278515" end_npc_id="278502">
 		<monster_infos var_id="1" max_kill="1" npc_id="278091"/>
@@ -215,7 +204,7 @@
 	</monster_hunt>
 	<!-- Treasure Hunter Kuenunerk -->
 	<item_collecting id="1776" start_npc_id="279019" action_item_id="700305"/>
-	<!-- 1777: Call of the Governor (lvl 33) handled by script -->
+	<!-- 1777: Call of the Governor (lvl 33) -->
 	<!-- Clearing out the Asmodian Landing -->
 	<item_collecting id="1778" start_npc_id="266553"/>
 	<!-- 1779: TODO: [Group] Decimate the Roah Garrison (lvl 45) -->
@@ -266,9 +255,9 @@
 	<item_collecting id="1796" start_npc_id="279016"/>
 	<!-- Vindachinerk's Scroll -->
 	<report_to id="1797" start_npc_id="279016" end_npc_id="798012" item_id="182202166"/>
-	<!-- 1798: Jakurerk's Shot at the Big Time (lvl 38) handled by script -->
-	<!-- 1799: Pupil's Diary (lvl 35) handled by script -->
-	<!-- 1800: Jaiorunerk's Tombstone (lvl 35) handled by script -->
+	<!-- 1798: Jakurerk's Shot at the Big Time (lvl 38) -->
+	<!-- 1799: Pupil's Diary (lvl 35) -->
+	<!-- 1800: Jaiorunerk's Tombstone (lvl 35) -->
 	<!-- [Group] Capture Siel East Fortress -->
 	<item_collecting id="1801" start_npc_id="278603"/>
 	<!-- [Group] Assault Siel East Elites -->
@@ -328,16 +317,16 @@
 	<item_collecting id="1825" start_npc_id="260235"/>
 	<!-- ...Plus Two More Great Protectors -->
 	<item_collecting id="1826" start_npc_id="260235"/>
-	<!-- 1827: [Craft] Tigraki Weaponsmithing (lvl 99) handled by script -->
-	<!-- 1828: [Craft] Tigraki Armorsmithing (lvl 99) handled by script -->
-	<!-- 1829: [Craft] Tigraki Handicrafting (lvl 99) handled by script -->
-	<!-- 1830: [Craft] Tigraki Cooking (lvl 99) handled by script -->
-	<!-- 1831: [Craft] Tigraki Alchemy (lvl 99) handled by script -->
-	<!-- 1832: [Craft] Tigraki Tailoring (lvl 99) handled by script -->
-	<!-- 1833: [Relic Reward] Ancient Icon (lvl 30) handled by script -->
-	<!-- 1834: [Relic Reward] Ancient Seal (lvl 30) handled by script -->
-	<!-- 1835: [Relic Reward] Ancient Goblet (lvl 30) handled by script -->
-	<!-- 1836: [Relic Reward] Ancient Crown (lvl 30) handled by script -->
+	<!-- 1827: [Craft] Tigraki Weaponsmithing (lvl 99) -->
+	<!-- 1828: [Craft] Tigraki Armorsmithing (lvl 99) -->
+	<!-- 1829: [Craft] Tigraki Handicrafting (lvl 99) -->
+	<!-- 1830: [Craft] Tigraki Cooking (lvl 99) -->
+	<!-- 1831: [Craft] Tigraki Alchemy (lvl 99) -->
+	<!-- 1832: [Craft] Tigraki Tailoring (lvl 99) -->
+	<!-- 1833: [Relic Reward] Ancient Icon (lvl 30) -->
+	<!-- 1834: [Relic Reward] Ancient Seal (lvl 30) -->
+	<!-- 1835: [Relic Reward] Ancient Goblet (lvl 30) -->
+	<!-- 1836: [Relic Reward] Ancient Crown (lvl 30) -->
 	<!-- Clean the Nest -->
 	<monster_hunt id="1837" start_npc_id="264797">
 		<monster_infos var_id="0" max_kill="63" npc_id="214733"/>
@@ -365,31 +354,31 @@
 	<!-- 1842: TODO: A New Battle (lvl 40) -->
 	<!-- 1843: TODO: Pain in the Fortress (lvl 40) -->
 	<!-- 1844: TODO: Target: Balaur (lvl 40) -->
-	<!-- 1845: Opening Doors (lvl 33) handled by script -->
-	<!-- 1846: Paper Trail (lvl 43) handled by script -->
-	<!-- 1847: A Strange Soul (lvl 43) handled by script -->
+	<!-- 1845: Opening Doors (lvl 33) -->
+	<!-- 1846: Paper Trail (lvl 43) -->
+	<!-- 1847: A Strange Soul (lvl 43) -->
 	<!-- Rift Stones -->
 	<item_collecting id="1848" start_npc_id="278506"/>
-	<!-- 1849: [Relic Reward] Ancient Goblet_Elyoses and Asmodians (lvl 30) handled by script -->
-	<!-- 1850: [Relic Reward] Ancient Crown_Elyoses and Asmodians (lvl 30) handled by script -->
+	<!-- 1849: [Relic Reward] Ancient Goblet_Elyoses and Asmodians (lvl 30) -->
+	<!-- 1850: [Relic Reward] Ancient Crown_Elyoses and Asmodians (lvl 30) -->
 	<!-- 1851: TODO: Uncharted Islands (lvl 29) -->
 	<!-- 1852: TODO: [Test] Rank 9 Soldier Scuffle (lvl 99) -->
-	<!-- 2071: Speaking Balaur (lvl 25) handled by script -->
-	<!-- 2072: Abyss Battle Training (lvl 25) handled by script -->
-	<!-- 2073: Captured Comrades (lvl 25) handled by script -->
-	<!-- 2074: Looking for Leibo (lvl 26) handled by script -->
-	<!-- 2075: Putting on the Speed (lvl 33) handled by script -->
-	<!-- 2076: The Shadow Summons (lvl 33) handled by script -->
-	<!-- 2701: The Governor's Summons (lvl 25) handled by script -->
-	<!-- 2702: Defeat 9th Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2703: Defeat 8th Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2704: Defeat 7th Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2705: Defeat 6th Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2706: Defeat 5th Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2707: Defeat 4th Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2708: Defeat 3rd Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2709: Defeat 2nd Rank Elyos Soldiers (lvl 25) handled by script -->
-	<!-- 2710: Defeat 1st Rank Elyos Soldiers (lvl 25) handled by script -->
+	<!-- 2071: Speaking Balaur (lvl 25) -->
+	<!-- 2072: Abyss Battle Training (lvl 25) -->
+	<!-- 2073: Captured Comrades (lvl 25) -->
+	<!-- 2074: Looking for Leibo (lvl 26) -->
+	<!-- 2075: Putting on the Speed (lvl 33) -->
+	<!-- 2076: The Shadow Summons (lvl 33) -->
+	<!-- 2701: The Governor's Summons (lvl 25) -->
+	<!-- 2702: Defeat 9th Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2703: Defeat 8th Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2704: Defeat 7th Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2705: Defeat 6th Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2706: Defeat 5th Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2707: Defeat 4th Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2708: Defeat 3rd Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2709: Defeat 2nd Rank Elyos Soldiers (lvl 25) -->
+	<!-- 2710: Defeat 1st Rank Elyos Soldiers (lvl 25) -->
 	<!-- 2711: TODO: [Spend Coin] Gold/Silver (Warrior/Scout) (lvl 99) -->
 	<!-- 2712: TODO: [Spend Coin] Gold/Silver (Mage/Priest) (lvl 99) -->
 	<!-- 2713: TODO: [Spend Coin] Silver (Warrior/Scout) (lvl 99) -->
@@ -410,16 +399,16 @@
 		<monster_infos var_id="0" max_kill="23" npc_id="255140"/>
 		<monster_infos var_id="0" max_kill="23" npc_id="255139"/>
 	</monster_hunt>
-	<!-- 2717: Silver for the Fountain (lvl 25) handled by script -->
-	<!-- 2718: Trading Down (lvl 25) handled by script -->
-	<!-- 2719: [Group] Challenge Elyos Officers (lvl 40) handled by script -->
-	<!-- 2720: [Group] Challenge Elyos Generals (lvl 40) handled by script -->
-	<!-- 2721: Meeting with the Brigade General (lvl 25) handled by script -->
-	<!-- 2722: The Comforts of Home (lvl 25) handled by script -->
-	<!-- 2724: Missing In Action (lvl 25) handled by script -->
-	<!-- 2725: Gone Native (lvl 27) handled by script -->
-	<!-- 2726: Staking a Claim (lvl 30) handled by script -->
-	<!-- 2727: Transparent Motives (lvl 31) handled by script -->
+	<!-- 2717: Silver for the Fountain (lvl 25) -->
+	<!-- 2718: Trading Down (lvl 25) -->
+	<!-- 2719: [Group] Challenge Elyos Officers (lvl 40) -->
+	<!-- 2720: [Group] Challenge Elyos Generals (lvl 40) -->
+	<!-- 2721: Meeting with the Brigade General (lvl 25) -->
+	<!-- 2722: The Comforts of Home (lvl 25) -->
+	<!-- 2724: Missing In Action (lvl 25) -->
+	<!-- 2725: Gone Native (lvl 27) -->
+	<!-- 2726: Staking a Claim (lvl 30) -->
+	<!-- 2727: Transparent Motives (lvl 31) -->
 	<!-- [Group] Killing Ladacus -->
 	<item_collecting id="2728" start_npc_id="278000"/>
 	<!-- Mokkurkalfi's Supplies -->
@@ -532,7 +521,7 @@
 	<item_collecting id="2765" start_npc_id="278108"/>
 	<!-- Buckles Under Pressure -->
 	<item_collecting id="2766" start_npc_id="278108"/>
-	<!-- 2767: A Fruitful Partnership (lvl 29) handled by script -->
+	<!-- 2767: A Fruitful Partnership (lvl 29) -->
 	<!-- Thwart the Elyos Sabotage -->
 	<monster_hunt id="2769" start_npc_id="271054">
 		<monster_infos var_id="0" max_kill="1" npc_id="278606"/>
@@ -551,7 +540,7 @@
 	</monster_hunt>
 	<!-- Treasure of the Ancient City -->
 	<item_collecting id="2772" start_npc_id="279019" action_item_id="700305"/>
-	<!-- 2773: Signed, Sealed, Delivered (lvl 31) handled by script -->
+	<!-- 2773: Signed, Sealed, Delivered (lvl 31) -->
 	<!-- Seeking the Crystals -->
 	<item_collecting id="2774" start_npc_id="278103"/>
 	<!-- Smashing the Stones -->
@@ -604,7 +593,7 @@
 	<item_collecting id="2796" start_npc_id="279028" action_item_id="700307"/>
 	<!-- Balaur Bones -->
 	<item_collecting id="2797" start_npc_id="279028" action_item_id="700308"/>
-	<!-- 2798: Sign on the Dotted Line (lvl 38) handled by script -->
+	<!-- 2798: Sign on the Dotted Line (lvl 38) -->
 	<!-- [Group] Seize Siel East Fortress -->
 	<item_collecting id="2801" start_npc_id="278101"/>
 	<!-- [Group] Attack Siel East Elites -->
@@ -664,18 +653,18 @@
 	<item_collecting id="2825" start_npc_id="260236"/>
 	<!-- Muelina's Forgetfulness -->
 	<item_collecting id="2826" start_npc_id="260236"/>
-	<!-- 2827: [Craft] Tigraki Weaponsmithing (lvl 99) handled by script -->
-	<!-- 2828: [Craft] Tigraki Armorsmithing (lvl 99) handled by script -->
-	<!-- 2829: [Craft] Tigraki Handicrafting (lvl 99) handled by script -->
-	<!-- 2830: [Craft] Tigraki Cooking (lvl 99) handled by script -->
-	<!-- 2831: [Craft] Tigraki Alchemy (lvl 99) handled by script -->
-	<!-- 2832: [Craft] Tigraki Tailoring (lvl 99) handled by script -->
+	<!-- 2827: [Craft] Tigraki Weaponsmithing (lvl 99) -->
+	<!-- 2828: [Craft] Tigraki Armorsmithing (lvl 99) -->
+	<!-- 2829: [Craft] Tigraki Handicrafting (lvl 99) -->
+	<!-- 2830: [Craft] Tigraki Cooking (lvl 99) -->
+	<!-- 2831: [Craft] Tigraki Alchemy (lvl 99) -->
+	<!-- 2832: [Craft] Tigraki Tailoring (lvl 99) -->
 	<!-- Vindachinerk's Offer -->
 	<item_collecting id="2833" start_npc_id="279016"/>
-	<!-- 2834: [Relic Reward] Ancient Icon (lvl 30) handled by script -->
-	<!-- 2835: [Relic Reward] Ancient Seal (lvl 30) handled by script -->
-	<!-- 2836: [Relic Reward] Ancient Goblet (lvl 30) handled by script -->
-	<!-- 2837: [Relic Reward] Ancient Crown (lvl 30) handled by script -->
+	<!-- 2834: [Relic Reward] Ancient Icon (lvl 30) -->
+	<!-- 2835: [Relic Reward] Ancient Seal (lvl 30) -->
+	<!-- 2836: [Relic Reward] Ancient Goblet (lvl 30) -->
+	<!-- 2837: [Relic Reward] Ancient Crown (lvl 30) -->
 	<!-- Balaur in the Sulfur Tree Nest -->
 	<monster_hunt id="2838" start_npc_id="264798">
 		<monster_infos var_id="0" max_kill="63" npc_id="214733"/>
@@ -698,18 +687,18 @@
 		<monster_infos var_id="1" max_kill="1" npc_id="215424"/>
 	</monster_hunt>
 	<!-- 2840: TODO: Right Wing Raid (lvl 30) -->
-	<!-- 2841: Cleansing the Asteria Chamber (lvl 40) handled by script -->
-	<!-- 2842: Balaur in the Undirborg (lvl 40) handled by script -->
-	<!-- 2843: Operation: Annihilate (lvl 40) handled by script -->
+	<!-- 2841: Cleansing the Asteria Chamber (lvl 40) -->
+	<!-- 2842: Balaur in the Undirborg (lvl 40) -->
+	<!-- 2843: Operation: Annihilate (lvl 40) -->
 	<!-- 2844: TODO: Simple but Difficult (lvl 40) -->
 	<!-- 2845: TODO: Take out the Trash (lvl 40) -->
-	<!-- 2846: The Red Matter (lvl 33) handled by script -->
-	<!-- 2847: It's All Balaur to Me (lvl 43) handled by script -->
-	<!-- 2848: Whispering Stigma (lvl 43) handled by script -->
+	<!-- 2846: The Red Matter (lvl 33) -->
+	<!-- 2847: It's All Balaur to Me (lvl 43) -->
+	<!-- 2848: Whispering Stigma (lvl 43) -->
 	<!-- The Balaur Enigmas -->
 	<item_collecting id="2849" start_npc_id="278006"/>
 	<!-- 3205: TODO: [Group] For the Black Cloud Traders (lvl 40) -->
-	<!-- 3701: [Group] Teach Them a Lesson (lvl 25) handled by script -->
+	<!-- 3701: [Group] Teach Them a Lesson (lvl 25) -->
 	<!-- 3702: TODO: [Group] General Destruction (lvl 25) -->
 	<!-- [Group] Cut Off the Head of the Class -->
 	<monster_hunt id="3703" start_npc_id="278517">

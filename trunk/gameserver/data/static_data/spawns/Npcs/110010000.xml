@@ -1235,7 +1235,8 @@
 	<spawn map="110010000" npcid="798026" pool="1" interval="295">
 		<object x="1973.9308" y="1767.8472" z="576.7586" h="63"/>
 	</spawn>
-   <spawn interval="295" map="110010000" npcid="205455" pool="1">
-      <object h="60" x="1620.0828" y="1493.3599" z="573.34674"/>
-   </spawn>
+	<!-- Виккон Бариус -->
+	<spawn interval="295" map="110010000" npcid="205455" pool="1">
+		<object h="64" x="1619.8947" y="1493.1991" z="573.34674"/>
+	</spawn>
 </spawns>

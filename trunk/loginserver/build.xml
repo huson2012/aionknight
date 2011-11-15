@@ -27,7 +27,7 @@
     <property name="build" location="../tools/Compiled/LoginServer"/>
     <property name="build.classes" location="${build}/Classes"/>
     <property name="build.dist" location="${build}/Dist"/>
-	<property name="build.dist.login" location="${build.dist}/LoginServer"/>
+	<property name="build.dist.login" location="${build.dist}"/>
     
 	<path id="bootclasspath">
         <fileset dir="${lib}">
@@ -73,7 +73,7 @@
             depends="compile"
             description="Create the jar file">
 
-        <jar destfile="${build}/JAR/ak-login.jar">
+        <jar destfile="${build}/Dist/ak-login.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
                 <attribute name="Main-Class" value="loginserver.LoginServer"/>

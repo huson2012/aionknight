@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 2031: Petrifying Elim (lvl 19) handled by script -->
-	<!-- 2032: Guardian Spirit (lvl 20) handled by script -->
-	<!-- 2033: Destroying the Curse (lvl 22) handled by script -->
-	<!-- 2034: The Hand Behind the Ice Claw (lvl 25) handled by script -->
-	<!-- 2035: [Group] The Three Keys (lvl 27) handled by script -->
-	<!-- 2036: A Captive Flame (lvl 29) handled by script -->
-	<!-- 2037: The Protector of Nepra (lvl 31) handled by script -->
-	<!-- 2038: A Lost Daeva (lvl 33) handled by script -->
-	<!-- 2039: Allies Among Enemies (lvl 32) handled by script -->
-	<!-- 2040: Kikananta's Loyalty (lvl 34) handled by script -->
-	<!-- 2041: [Group] Hold The Front Line (lvl 34) handled by script -->
-	<!-- 2300: Morheim Commander's Call (lvl 19) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 2031: Petrifying Elim (lvl 19) -->
+	<!-- 2032: Guardian Spirit (lvl 20) -->
+	<!-- 2033: Destroying the Curse (lvl 22) -->
+	<!-- 2034: The Hand Behind the Ice Claw (lvl 25) -->
+	<!-- 2035: [Group] The Three Keys (lvl 27) -->
+	<!-- 2036: A Captive Flame (lvl 29) -->
+	<!-- 2037: The Protector of Nepra (lvl 31) -->
+	<!-- 2038: A Lost Daeva (lvl 33) -->
+	<!-- 2039: Allies Among Enemies (lvl 32) -->
+	<!-- 2040: Kikananta's Loyalty (lvl 34) -->
+	<!-- 2041: [Group] Hold The Front Line (lvl 34) -->
+	<!-- 2300: Morheim Commander's Call (lvl 19) -->
 	<!-- Teleporter Troubles -->
 	<item_collecting id="2301" start_npc_id="204399" action_item_id="296439"/>
 	<!-- Frenai's Lost Jewelry -->
 	<item_collecting id="2302" start_npc_id="204324"/>
-	<!-- 2303: Daeva, Where's My Herb? (lvl 20) handled by script -->
+	<!-- 2303: Daeva, Where's My Herb? (lvl 20) -->
 	<!-- Active Discouragement -->
 	<monster_hunt id="2304" start_npc_id="204302">
 		<monster_infos var_id="0" max_kill="15" npc_id="211300"/>
@@ -43,7 +33,7 @@
 	<item_collecting id="2305" start_npc_id="204302"/>
 	<!-- Orders From the Fortress -->
 	<report_to id="2306" start_npc_id="204303" end_npc_id="204378"/>
-	<!-- 2307: Irresistible Soup (lvl 20) handled by script -->
+	<!-- 2307: Irresistible Soup (lvl 20) -->
 	<!-- Outfighting Arachnas -->
 	<monster_hunt id="2308" start_npc_id="204424">
 		<monster_infos var_id="0" max_kill="12" npc_id="211301"/>
@@ -70,7 +60,7 @@
 	<!-- A Seafood Feast -->
 	<item_collecting id="2314" start_npc_id="204379"/>
 	<!-- 2315: TODO: [Spend Coin] Bronze (Warrior and Scout) (lvl 99) -->
-	<!-- 2316: Vivi's Book (lvl 22) handled by script -->
+	<!-- 2316: Vivi's Book (lvl 22) -->
 	<!-- [Daily/Coin] Nip Spriggs in the Bud -->
 	<monster_hunt id="2317" start_npc_id="790020">
 		<monster_infos var_id="0" max_kill="20" npc_id="211315"/>
@@ -91,7 +81,7 @@
 	<report_to id="2319" start_npc_id="730037" end_npc_id="798105"/>
 	<!-- Reclaiming History -->
 	<item_collecting id="2320" start_npc_id="204329"/>
-	<!-- 2321: [Spy] The Spirit's Letter (lvl 26) handled by script -->
+	<!-- 2321: [Spy] The Spirit's Letter (lvl 26) -->
 	<!-- [Daily/Coin] Clearing The Way -->
 	<monster_hunt id="2322" start_npc_id="204368">
 		<monster_infos var_id="0" max_kill="21" npc_id="211368"/>
@@ -102,7 +92,7 @@
 	</monster_hunt>
 	<!-- Creepy Crawlies -->
 	<item_collecting id="2323" start_npc_id="204335"/>
-	<!-- 2324: The Spirit's Notebook (lvl 24) handled by script -->
+	<!-- 2324: The Spirit's Notebook (lvl 24) -->
 	<!-- An Unfinished Mystery -->
 	<item_collecting id="2325" start_npc_id="204373"/>
 	<!-- Wasting the Watch -->
@@ -132,7 +122,7 @@
 	<monster_hunt id="2331" start_npc_id="204332">
 		<monster_infos var_id="0" max_kill="1" npc_id="212653"/>
 	</monster_hunt>
-	<!-- 2332: Meaty Treats (lvl 24) handled by script -->
+	<!-- 2332: Meaty Treats (lvl 24) -->
 	<!-- 2333: TODO: A Ribbit out of Water (lvl 24) -->
 	<!-- A New Recipe -->
 	<item_collecting id="2334" start_npc_id="798084"/>
@@ -158,7 +148,7 @@
 		<monster_infos var_id="0" max_kill="5" npc_id="211457"/>
 		<monster_infos var_id="1" max_kill="5" npc_id="211460"/>
 	</monster_hunt>
-	<!-- 2343: Ancient Ginseng (lvl 29) handled by script -->
+	<!-- 2343: Ancient Ginseng (lvl 29) -->
 	<!-- Destroying the Mau Flag -->
 	<monster_hunt id="2344" start_npc_id="204329">
 		<monster_infos var_id="0" max_kill="5" npc_id="700250"/>
@@ -231,7 +221,7 @@
 	<monster_hunt id="2366" start_npc_id="204363">
 		<monster_infos var_id="0" max_kill="1" npc_id="212823"/>
 	</monster_hunt>
-	<!-- 2367: A Prized Possession (lvl 28) handled by script -->
+	<!-- 2367: A Prized Possession (lvl 28) -->
 	<!-- A Quota of Creatures -->
 	<monster_hunt id="2368" start_npc_id="204338">
 		<monster_infos var_id="0" max_kill="5" npc_id="212452"/>
@@ -256,7 +246,7 @@
 	</monster_hunt>
 	<!-- [Group] Kalgolem Crystals -->
 	<item_collecting id="2371" start_npc_id="798089"/>
-	<!-- 2372: Immortal Love (lvl 28) handled by script -->
+	<!-- 2372: Immortal Love (lvl 28) -->
 	<!-- [Group] An Ancient Weapon -->
 	<item_collecting id="2373" start_npc_id="204408" action_item_id="700252"/>
 	<!-- [Group] Re-sanctifying the Temple -->
@@ -329,8 +319,8 @@
 	</monster_hunt>
 	<!-- Rynoce Horn -->
 	<item_collecting id="2391" start_npc_id="204343"/>
-	<!-- 2392: Beautiful Feather (lvl 33) handled by script -->
-	<!-- 2393: The Love of a Father (lvl 36) handled by script -->
+	<!-- 2392: Beautiful Feather (lvl 33) -->
+	<!-- 2393: The Love of a Father (lvl 36) -->
 	<!-- 2394: TODO: A Dying Wish (lvl 36) -->
 	<!-- Report to the Observatory -->
 	<report_to id="2395" start_npc_id="204345" end_npc_id="204369" item_id="182204192"/>
@@ -386,7 +376,7 @@
 		<monster_infos var_id="1" max_kill="7" npc_id="211146"/>
 		<monster_infos var_id="1" max_kill="7" npc_id="211161"/>
 	</monster_hunt>
-	<!-- 2409: Propaganda (lvl 38) handled by script -->
+	<!-- 2409: Propaganda (lvl 38) -->
 	<!-- [Daily/Coin] Thinning the Ranks -->
 	<monster_hunt id="2410" start_npc_id="204380">
 		<monster_infos var_id="0" max_kill="6" npc_id="212884"/>
@@ -396,12 +386,12 @@
 		<monster_infos var_id="2" max_kill="5" npc_id="212895"/>
 		<monster_infos var_id="2" max_kill="5" npc_id="212896"/>
 	</monster_hunt>
-	<!-- 2411: Earth Spirit? Water Spirit? (lvl 34) handled by script -->
+	<!-- 2411: Earth Spirit? Water Spirit? (lvl 34) -->
 	<!-- Elemental Stone of Earth -->
 	<item_collecting id="2412" start_npc_id="204366"/>
 	<!-- Elemental Stone of Water -->
 	<item_collecting id="2413" start_npc_id="204364"/>
-	<!-- Hreidmar the Furious (lvl l35) handled by script -->
+	<!-- Hreidmar the Furious (lvl l35) -->
 	<!-- Trolls on the Path -->
 	<monster_hunt id="2415" start_npc_id="204359">
 		<monster_infos var_id="0" max_kill="11" npc_id="212535"/>
@@ -417,9 +407,9 @@
 	<report_to id="2418" start_npc_id="204369" end_npc_id="204340" item_id="182204179"/>
 	<!-- Lepharist Ointment -->
 	<item_collecting id="2419" start_npc_id="204383"/>
-	<!-- 2421: Asgeirr's Request (lvl 20) handled by script -->
-	<!-- 2422: [Spy] Liquor that Makes You Vanish (lvl 19) handled by script -->
-	<!-- 2423: [Spy] There And Back Again (lvl 21) handled by script -->
+	<!-- 2421: Asgeirr's Request (lvl 20) -->
+	<!-- 2422: [Spy] Liquor that Makes You Vanish (lvl 19) -->
+	<!-- 2423: [Spy] There And Back Again (lvl 21) -->
 	<!-- Greeting to an Alchemist -->
 	<report_to id="2424" start_npc_id="730037" end_npc_id="204433"/>
 	<!-- Restarting the Research -->
@@ -431,11 +421,11 @@
 		<monster_infos var_id="1" max_kill="3" npc_id="211328"/>
 		<monster_infos var_id="1" max_kill="3" npc_id="212375"/>
 	</monster_hunt>
-	<!-- 2427: Recovering Research Material (lvl 23) handled by script -->
-	<!-- 2428: The Absolutely Essential Book (lvl 23) handled by script -->
+	<!-- 2427: Recovering Research Material (lvl 23) -->
+	<!-- 2428: The Absolutely Essential Book (lvl 23) -->
 	<!-- Keeping Warm -->
 	<item_collecting id="2429" start_npc_id="204378"/>
-	<!-- 2430: Secret Information (lvl 20) handled by script -->
+	<!-- 2430: Secret Information (lvl 20) -->
 	<!-- Beneficial Poison -->
 	<item_collecting id="2431" start_npc_id="204387"/>
 	<!-- Chase of the Mist Mane Mau -->
@@ -462,7 +452,7 @@
 <!--		<monster_infos var_id="3" max_kill="12" npc_id="211608"/> -->
 		<monster_infos var_id="4" max_kill="9" npc_id="212729"/>
 	</monster_hunt>
-	<!-- 2435: The Blue Vine Necklace (lvl 36) handled by script -->
+	<!-- 2435: The Blue Vine Necklace (lvl 36) -->
 	<!-- 2436: TODO: Looking for BuBu Pat (lvl 36) -->
 	<!-- Father's Revenge -->
 	<monster_hunt id="2437" start_npc_id="204390">
@@ -512,7 +502,7 @@
 		<monster_infos var_id="2" max_kill="7" npc_id="212723"/>
 	</monster_hunt>
 	<!-- 2448: TODO: Chaomirk Sends for Help (lvl 37) -->
-	<!-- 2449: Extricating Chaomirk (lvl 37) handled by script -->
+	<!-- 2449: Extricating Chaomirk (lvl 37) -->
 	<!-- Titanium Tribute -->
 	<item_collecting id="2451" start_npc_id="204312"/>
 	<!-- Shoot That Poison Arrow -->
@@ -527,7 +517,7 @@
 	<item_collecting id="2456" start_npc_id="204386"/>
 	<!-- Lif's Agony -->
 	<item_collecting id="2457" start_npc_id="204378" end_npc_id="204379"/>
-	<!-- 2458: Roast Gadill for a Friend (lvl 22) handled by script -->
+	<!-- 2458: Roast Gadill for a Friend (lvl 22) -->
 	<!-- Vivi's Secret Request -->
 	<item_collecting id="2459" start_npc_id="204379"/>
 	<!-- Ravenous Philosopher -->
@@ -564,25 +554,25 @@
 	<item_collecting id="2475" start_npc_id="204390"/>
 	<!-- A Picky Eater -->
 	<item_collecting id="2476" start_npc_id="204355" end_npc_id="204355"/>
-	<!-- 2477: A Dish For Dukar (lvl 29) handled by script -->
+	<!-- 2477: A Dish For Dukar (lvl 29) -->
 	<!-- [Spy] Ingredients For Sausage -->
 	<item_collecting id="2478" start_npc_id="204355"/>
 	<!-- Reaching Out -->
 	<report_to id="2479" start_npc_id="204392" end_npc_id="730038"/>
-	<!-- 2480: [Spy] Elim of Elysea (lvl 21) handled by script -->
+	<!-- 2480: [Spy] Elim of Elysea (lvl 21) -->
 	<!-- [Spy] Curious Behavior -->
 	<item_collecting id="2481" start_npc_id="204210"/>
-	<!-- 2482: Caryatid of Abyss (lvl 25) handled by script -->
+	<!-- 2482: Caryatid of Abyss (lvl 25) -->
 	<!-- [Spy] Homecoming of the Soul -->
 	<item_collecting id="2483" start_npc_id="204344"/>
-	<!-- 2484: [Spy] Our Man in Elysea (lvl 37) handled by script -->
+	<!-- 2484: [Spy] Our Man in Elysea (lvl 37) -->
 	<!-- [Spy/Group] Killing Mabangtah -->
 	<monster_hunt id="2485" start_npc_id="203331" end_npc_id="204407">
 		<monster_infos var_id="0" max_kill="1" npc_id="204020"/>
 	</monster_hunt>
-	<!-- 2486: A Strange Creature (lvl 37) handled by script -->
+	<!-- 2486: A Strange Creature (lvl 37) -->
 	<!-- 2487: TODO: [Spy] Researching the Pretor (lvl 37) -->
-	<!-- 2488: Pretors in Beluslan (lvl 37) handled by script -->
+	<!-- 2488: Pretors in Beluslan (lvl 37) -->
 	<!-- [Group] Missssst Mane Mayhem -->
 	<monster_hunt id="2489" start_npc_id="204414">
 		<monster_infos var_id="0" max_kill="1" npc_id="212865"/>
@@ -595,15 +585,15 @@
 	<item_collecting id="2491" start_npc_id="204388"/>
 	<!-- Bolverk's Secret Request -->
 	<report_to id="2492" start_npc_id="204300" end_npc_id="204327"/>
-	<!-- 2493: Bringing up Tayga (lvl 20) handled by script -->
+	<!-- 2493: Bringing up Tayga (lvl 20) -->
 	<!-- Three Treasures -->
 	<item_collecting id="2494" start_npc_id="798125"/>
-	<!-- 2495: Sprigg Nightlights (lvl 22) handled by script -->
+	<!-- 2495: Sprigg Nightlights (lvl 22) -->
 	<!-- The Flower of Wisdom -->
 	<item_collecting id="2496" start_npc_id="204386" action_item_id="700320"/>
 	<!-- Good Tools After Bad -->
 	<item_collecting id="2497" start_npc_id="204379" action_item_id="700321"/>
-	<!-- 2498: The Sodden Scroll (lvl 22) handled by script -->
+	<!-- 2498: The Sodden Scroll (lvl 22) -->
 	<!-- Fragments of Aion's Tower -->
 	<item_collecting id="2499" start_npc_id="204300" action_item_id="700322"/>
 	<!-- News For the Settlers -->

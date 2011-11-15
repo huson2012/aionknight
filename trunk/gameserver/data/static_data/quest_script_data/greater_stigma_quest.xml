@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 3930: [Group] The Shattered Stigma (lvl 45) handled by script -->
-	<!-- 3931: [Group] How to Use Stigma (lvl 45) handled by script -->
-	<!-- 3932: [Group] Stop the Shulacks! (lvl 50) handled by script -->
-	<!-- 4934: [Group] The Shulack's Stigma (lvl 45) handled by script -->
-	<!-- 4935: [Group] A Booklet on Stigma (lvl 45) handled by script -->
-	<!-- 4936: [Group] Secret of the Greater Stigma (lvl 50) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 3930: [Group] The Shattered Stigma (lvl 45) -->
+	<!-- 3931: [Group] How to Use Stigma (lvl 45) -->
+	<!-- 3932: [Group] Stop the Shulacks! (lvl 50) -->
+	<!-- 4934: [Group] The Shulack's Stigma (lvl 45) -->
+	<!-- 4935: [Group] A Booklet on Stigma (lvl 45) -->
+	<!-- 4936: [Group] Secret of the Greater Stigma (lvl 50) -->
 	<!-- Taloc's Heart Full of Soul -->
 	<item_collecting id="11049" start_npc_id="798909"/>
 	<!-- Cracking the Stigma Threshold -->

@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 2011: Fungus Among Us (lvl 10) handled by script -->
-	<!-- 2012: Encroachers (lvl 10) handled by script -->
-	<!-- 2013: A Dangerous Crop (lvl 10) handled by script -->
-	<!-- 2014: Scout it Out (lvl 10) handled by script -->
-	<!-- 2015: Take the Initiative (lvl 10) handled by script -->
-	<!-- 2016: Fear This (lvl 10) handled by script -->
-	<!-- 2017: Trespassers at the Observatory (lvl 12) handled by script -->
-	<!-- 2018: Reconstructing Impetusium (lvl 13) handled by script -->
-	<!-- 2019: Securing the Supply Route (lvl 13) handled by script -->
-	<!-- 2020: Keeping the Black Claw Tribe in Check (lvl 14) handled by script -->
-	<!-- 2021: Know Your Enemy (lvl 12) handled by script -->
-	<!-- 2022: Crushing the Conspiracy (lvl 12) handled by script -->
-	<!-- 2200: Altgard Duties (lvl 10) handled by script -->
+	Назначение файла	: Описание квестов (Альтгард)
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+ <quest_scripts>
+	<!-- 2011: Fungus Among Us (lvl 10) -->
+	<!-- 2012: Encroachers (lvl 10) -->
+	<!-- 2013: A Dangerous Crop (lvl 10) -->
+	<!-- 2014: Scout it Out (lvl 10) -->
+	<!-- 2015: Take the Initiative (lvl 10) -->
+	<!-- 2016: Fear This (lvl 10) -->
+	<!-- 2017: Trespassers at the Observatory (lvl 12) -->
+	<!-- 2018: Reconstructing Impetusium (lvl 13) -->
+	<!-- 2019: Securing the Supply Route (lvl 13) -->
+	<!-- 2020: Keeping the Black Claw Tribe in Check (lvl 14) -->
+	<!-- 2021: Know Your Enemy (lvl 12) -->
+	<!-- 2022: Crushing the Conspiracy (lvl 12) -->
+	<!-- 2200: Altgard Duties (lvl 10) -->
 	<!-- The Crasaur Threat -->
 	<monster_hunt id="2201" start_npc_id="203563">
 		<monster_infos var_id="0" max_kill="10" npc_id="210414"/>
@@ -48,9 +38,9 @@
 	<item_collecting id="2205" start_npc_id="203582"/>
 	<!-- Slinking About -->
 	<item_collecting id="2206" start_npc_id="203562"/>
-	<!-- 2207: Conversing With a Skurv (lvl 10) handled by script -->
-	<!-- 2208: Mau in Ten Minutes a Day (lvl 10) handled by script -->
-	<!-- 2209: The Scribbler (lvl 10) handled by script -->
+	<!-- 2207: Conversing With a Skurv (lvl 10) -->
+	<!-- 2208: Mau in Ten Minutes a Day (lvl 10) -->
+	<!-- 2209: The Scribbler (lvl 10) -->
 	<!-- Retrieving the Report -->
 	<report_to id="2210" start_npc_id="203603" end_npc_id="203605"/>
 	<!-- Karnif Threat -->
@@ -60,12 +50,12 @@
 	</monster_hunt>
 	<!-- A Better Trap -->
 	<item_collecting id="2212" start_npc_id="203606"/>
-	<!-- 2213: Poison Root, Potent Fruit (lvl 11) handled by script -->
+	<!-- 2213: Poison Root, Potent Fruit (lvl 11) -->
 	<!-- No-Frills Quills -->
 	<item_collecting id="2214" start_npc_id="203605"/>
 	<!-- A Long-Lost Friend -->
 	<report_to id="2215" start_npc_id="203606" end_npc_id="203607"/>
-	<!-- 2216: Knot Your Average Message (lvl 12) handled by script -->
+	<!-- 2216: Knot Your Average Message (lvl 12) -->
 	<!-- Gleaning the Meaning -->
 	<report_to id="2217" start_npc_id="203606" end_npc_id="203616"/>
 	<!-- Frightcorn Seeds -->
@@ -78,9 +68,9 @@
 		<monster_infos var_id="0" max_kill="5" npc_id="210471"/>
 		<monster_infos var_id="0" max_kill="5" npc_id="210472"/>
 	</monster_hunt>
-	<!-- 2221: Manir's Uncle (lvl 12) handled by script -->
-	<!-- 2222: Manir's Message (lvl 12) handled by script -->
-	<!-- 2223: A Mythical Monster (lvl 13) handled by script -->
+	<!-- 2221: Manir's Uncle (lvl 12) -->
+	<!-- 2222: Manir's Message (lvl 12) -->
+	<!-- 2223: A Mythical Monster (lvl 13) -->
 	<!-- Lamir's New Clothes -->
 	<item_collecting id="2224" start_npc_id="203620"/>
 	<!-- No-Good Slime -->
@@ -91,11 +81,11 @@
 	<report_to id="2226" start_npc_id="203617" end_npc_id="203639"/>
 	<!-- A Crazy Request -->
 	<item_collecting id="2227" start_npc_id="203639"/>
-	<!-- 2228: A Thorn in Its Side (lvl 14) handled by script -->
+	<!-- 2228: A Thorn in Its Side (lvl 14) -->
 	<!-- 2229: TODO: A Questionable Carriage (lvl 99) -->
-	<!-- 2230: A Friendly Wager (lvl 14) handled by script -->
-	<!-- 2231: Sibling Rivalry (lvl 14) handled by script -->
-	<!-- 2232: The Broken Honey Jar (lvl 14) handled by script -->
+	<!-- 2230: A Friendly Wager (lvl 14) -->
+	<!-- 2231: Sibling Rivalry (lvl 14) -->
+	<!-- 2232: The Broken Honey Jar (lvl 14) -->
 	<!-- Mantigar's Request -->
 	<monster_hunt id="2233" start_npc_id="203611">
 		<monster_infos var_id="0" max_kill="3" npc_id="210587"/>
@@ -112,10 +102,10 @@
 	</monster_hunt>
 	<!-- Rarified Tastes -->
 	<item_collecting id="2236" start_npc_id="203615"/>
-	<!-- 2237: A Fertile Field (lvl 14) handled by script -->
+	<!-- 2237: A Fertile Field (lvl 14) -->
 	<!-- A Matter of Pride -->
 	<item_collecting id="2238" start_npc_id="203616"/>
-	<!-- 2239: Malodor Antidote (lvl 15) handled by script -->
+	<!-- 2239: Malodor Antidote (lvl 15) -->
 	<!-- 2240: TODO: Leinolz's Whereabouts (lvl 99) -->
 	<!-- Glowing Mushroom -->
 	<item_collecting id="2241" start_npc_id="203630"/>
@@ -134,7 +124,7 @@
 	</monster_hunt>
 	<!-- The Gerger's Insignia -->
 	<item_collecting id="2246" start_npc_id="203645" action_item_id="700147"/>
-	<!-- 2247: The Gerger's Disguise (lvl 16) handled by script -->
+	<!-- 2247: The Gerger's Disguise (lvl 16) -->
 	<!-- The Secret Letter -->
 	<report_to id="2248" start_npc_id="203643" end_npc_id="798033" item_id="182203232"/>
 	<!-- The Blue Crystals -->
@@ -143,7 +133,7 @@
 	<item_collecting id="2250" start_npc_id="203641"/>
 	<!-- Securing the Trade Route -->
 	<item_collecting id="2251" start_npc_id="798034"/>
-	<!-- 2252: Chasing the Legend (lvl 17) handled by script -->
+	<!-- 2252: Chasing the Legend (lvl 17) -->
 	<!-- Kagorinerk's Gift -->
 	<report_to id="2253" start_npc_id="798035" end_npc_id="798031" item_id="182203236"/>
 	<!-- Soul Essence -->
@@ -178,7 +168,7 @@
 	</monster_hunt>
 	<!-- A Lost Sword -->
 	<item_collecting id="2265" start_npc_id="203665"/>
-	<!-- 2266: A Trustworthy Messenger (lvl 16) handled by script -->
+	<!-- 2266: A Trustworthy Messenger (lvl 16) -->
 	<!-- A Monster in a Box -->
 	<monster_hunt id="2267" start_npc_id="203656">
 		<monster_infos var_id="0" max_kill="5" npc_id="210524"/>
@@ -193,20 +183,20 @@
 	<item_collecting id="2269" start_npc_id="203655" action_item_id="700010"/>
 	<!-- Creating a Delay -->
 	<item_collecting id="2270" start_npc_id="203655"/>
-	<!-- 2271: Aurtri's Letter (lvl 16) handled by script -->
+	<!-- 2271: Aurtri's Letter (lvl 16) -->
 	<!-- The Lost Cube -->
 	<item_collecting id="2272" start_npc_id="203669"/>
 	<!-- Emergency Rations -->
 	<item_collecting id="2273" start_npc_id="203669"/>
-	<!-- 2274: Black Claw Baton (lvl 18) handled by script -->
+	<!-- 2274: Black Claw Baton (lvl 18) -->
 	<!-- A Change of Diet -->
 	<item_collecting id="2275" start_npc_id="203693"/>
 	<!-- Branching out Further -->
 	<item_collecting id="2276" start_npc_id="203693"/>
 	<!-- [Group] A Lucrative Endeavor -->
 	<item_collecting id="2277" start_npc_id="203556"/>
-	<!-- 2278: A Secret Proposal (lvl 17) handled by script -->
-	<!-- 2279: Solid Proof (lvl 17) handled by script -->
+	<!-- 2278: A Secret Proposal (lvl 17) -->
+	<!-- 2279: Solid Proof (lvl 17) -->
 	<!-- [Group] Killing the Shamans -->
 	<monster_hunt id="2280" start_npc_id="203560">
 		<monster_infos var_id="0" max_kill="4" npc_id="210508"/>
@@ -238,9 +228,9 @@
 	<report_to id="2286" start_npc_id="203557" end_npc_id="203560" item_id="182203259"/>
 	<!-- Order to Valurion -->
 	<report_to id="2287" start_npc_id="203557" end_npc_id="203558" item_id="182203260"/>
-	<!-- 2288: Money Where Your Mouth Is (lvl 13) handled by script -->
-	<!-- 2289: Rampaging Mosbears (lvl 13) handled by script -->
-	<!-- 2290: Groken's Escape (lvl 12) handled by script -->
+	<!-- 2288: Money Where Your Mouth Is (lvl 13) -->
+	<!-- 2289: Rampaging Mosbears (lvl 13) -->
+	<!-- 2290: Groken's Escape (lvl 12) -->
 	<!-- Report to Garuntat -->
 	<report_to id="2291" start_npc_id="203639" end_npc_id="203617"/>
 	<!-- Making a New Start -->

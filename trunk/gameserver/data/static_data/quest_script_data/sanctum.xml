@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 1900: A Ring Imbued With Aether (lvl 10) handled by script -->
-	<!-- 1901: Krallic Language Potion (lvl 10) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 1900: A Ring Imbued With Aether (lvl 10) -->
+	<!-- 1901: Krallic Language Potion (lvl 10) -->
 	<!-- [Craft] Crafting Ingots -->
 	<item_collecting id="1902" start_npc_id="203788"/>
 	<!-- [Craft] Ingot Ingredients -->
@@ -32,7 +22,7 @@
 	<!-- [Craft] First Steps in Tailoring -->
 	<item_collecting id="1907" start_npc_id="203793"/>
 	<!-- 1908: TODO: Ulaguru Speaks (lvl 10) -->
-	<!-- 1909: A Song Of Praise (lvl 10) handled by script -->
+	<!-- 1909: A Song Of Praise (lvl 10) -->
 	<!-- The Seed of Evil -->
 	<item_collecting id="1910" start_npc_id="203833"/>
 	<!-- Marmeia's Krall Research -->
@@ -40,26 +30,26 @@
 	<!-- Familiar Food -->
 	<item_collecting id="1912" start_npc_id="203864"/>
 	<!-- 1917: TODO: A Lingering Mystery (lvl 10) -->
-	<!-- 1918: An Ax For Namus (lvl 10) handled by script -->
+	<!-- 1918: An Ax For Namus (lvl 10) -->
 	<!-- 1919: TODO: Manduri's Diary Restoration Project (lvl 99) -->
-	<!-- 1926: Secret Library Access (lvl 20) handled by script -->
+	<!-- 1926: Secret Library Access (lvl 20) -->
 	<!-- 1927: TODO: Sanctum Quest (lvl 99) -->
-	<!-- 1928: Chasing a Criminal (lvl 19) handled by script -->
-	<!-- 1929: A Sliver of Darkness (lvl 20) handled by script -->
+	<!-- 1928: Chasing a Criminal (lvl 19) -->
+	<!-- 1929: A Sliver of Darkness (lvl 20) -->
 	<!-- Flame Sword -->
 	<item_collecting id="1930" start_npc_id="203767"/>
 	<!-- [Group] Rules of Alchemy and Life -->
 	<item_collecting id="1931" start_npc_id="203837" action_item_id="700230"/>
-	<!-- 1932: A Matter of Reputation (lvl 38) handled by script -->
+	<!-- 1932: A Matter of Reputation (lvl 38) -->
 	<!-- A Disturbing Report -->
 	<item_collecting id="1933" start_npc_id="203833"/>
 	<!-- [Group] RM-78c -->
 	<item_collecting id="1934" start_npc_id="203833"/>
-	<!-- 1935: Tissue? I Don't Even Know You! (lvl 41) handled by script -->
+	<!-- 1935: Tissue? I Don't Even Know You! (lvl 41) -->
 	<!-- What Nerison Saw -->
 	<report_to id="1936" start_npc_id="203833" end_npc_id="204573"/>
-	<!-- 1937: A Lepharist Monstrosity (lvl 41) handled by script -->
-	<!-- 1938: Black Cloud Fakery (lvl 36) handled by script -->
+	<!-- 1937: A Lepharist Monstrosity (lvl 41) -->
+	<!-- 1938: Black Cloud Fakery (lvl 36) -->
 	<!-- [Spy] Going out of Business -->
 	<monster_hunt id="1939" start_npc_id="203703">
 		<monster_infos var_id="0" max_kill="3" npc_id="700265"/>
@@ -79,7 +69,7 @@
 	<report_to id="1946" start_npc_id="203793" end_npc_id="203700" item_id="182206014"/>
 	<!-- A Lucky Day -->
 	<report_to id="1947" start_npc_id="203795" end_npc_id="798012"/>
-	<!-- 1948: Where's Vindachinerk? (lvl 35) handled by script -->
+	<!-- 1948: Where's Vindachinerk? (lvl 35) -->
 	<!-- A Gift For Vindachinerk -->
 	<item_collecting id="1949" start_npc_id="279006" end_npc_id="279016"/>
 	<!-- [Spy] A Letter to Medea -->
@@ -102,14 +92,14 @@
 	<!-- 1960: TODO: War Supplies Delivery (lvl 99) -->
 	<!-- 1961: TODO: Spellbook Delivery (lvl 99) -->
 	<!-- 1962: TODO: Robe Delivery (lvl 99) -->
-	<!-- 1963: Delivery for the Outer Port (lvl 10) handled by script -->
-	<!-- 1964: A Souvenir For Noris (lvl 19) handled by script -->
-	<!-- 1965: A Sword Gone Astray (lvl 15) handled by script -->
-	<!-- 1966: A Helmet Gone Astray (lvl 15) handled by script -->
-	<!-- 1967: A Staff Gone Astray (lvl 15) handled by script -->
-	<!-- 1968: Combat Rations (lvl 15) handled by script -->
-	<!-- 1969: Combat Potions (lvl 15) handled by script -->
-	<!-- 1970: A Robe Gone Astray (lvl 15) handled by script -->
+	<!-- 1963: Delivery for the Outer Port (lvl 10) -->
+	<!-- 1964: A Souvenir For Noris (lvl 19) -->
+	<!-- 1965: A Sword Gone Astray (lvl 15) -->
+	<!-- 1966: A Helmet Gone Astray (lvl 15) -->
+	<!-- 1967: A Staff Gone Astray (lvl 15) -->
+	<!-- 1968: Combat Rations (lvl 15) -->
+	<!-- 1969: Combat Potions (lvl 15) -->
+	<!-- 1970: A Robe Gone Astray (lvl 15) -->
 	<!-- D'yer Ma'ker -->
 	<item_collecting id="1971" start_npc_id="203812"/>
 	<!-- [Expert] Passion for Weaponsmithing -->
@@ -140,8 +130,8 @@
 	<!-- 1985: TODO: Sanctum Quest (lvl 99) -->
 	<!-- A Costume on Consignment -->
 	<report_to id="1986" start_npc_id="798009" end_npc_id="203810"/>
-	<!-- 1987: A Bigger Warehouse (lvl 29) handled by script -->
-	<!-- 3201: [Group] Snow Blessing (lvl 40) handled by script -->
+	<!-- 1987: A Bigger Warehouse (lvl 29) -->
+	<!-- 3201: [Group] Snow Blessing (lvl 40) -->
 	<!-- [Group] A Promise to a Customer -->
 	<item_collecting id="3202" start_npc_id="203852"/>
 	<!-- [Group] The Manduri Imperative -->
@@ -186,8 +176,8 @@
 	<!-- 3910: TODO: Meaning of Life (lvl 17) -->
 	<!-- 3911: TODO: Teachings of Life (lvl 17) -->
 	<!-- 3912: TODO: Intention of Lady Yustiel (lvl 17) -->
-	<!-- 3913: A Secret Summons (lvl 50) handled by script -->
-	<!-- 3914: The Balaur Report (lvl 50) handled by script -->
+	<!-- 3913: A Secret Summons (lvl 50) -->
+	<!-- 3914: The Balaur Report (lvl 50) -->
 	<!-- [Group] Obtaining the Dragel -->
 	<item_collecting id="3915" start_npc_id="203384"/>
 	<!-- [Group] The Danger of Drana -->
@@ -201,14 +191,14 @@
 	<!-- 3920: TODO: [Group] The Secret of Surkana (lvl 50) -->
 	<!-- Shoshinerk's Reward -->
 	<report_to id="3921" start_npc_id="798357" end_npc_id="279022" item_id="182206101"/>
-	<!-- 3922: The Gladiator Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3923: The Templar Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3924: The Ranger Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3925: The Assassin Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3926: The Sorcerer Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3927: The Spiritmaster Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3928: The Cleric Preceptor's Task (lvl 34) handled by script -->
-	<!-- 3929: The Chanter Preceptor's Task (lvl 34) handled by script -->
+	<!-- 3922: The Gladiator Preceptor's Task (lvl 34) -->
+	<!-- 3923: The Templar Preceptor's Task (lvl 34) -->
+	<!-- 3924: The Ranger Preceptor's Task (lvl 34) -->
+	<!-- 3925: The Assassin Preceptor's Task (lvl 34) -->
+	<!-- 3926: The Sorcerer Preceptor's Task (lvl 34) -->
+	<!-- 3927: The Spiritmaster Preceptor's Task (lvl 34) -->
+	<!-- 3928: The Cleric Preceptor's Task (lvl 34) -->
+	<!-- 3929: The Chanter Preceptor's Task (lvl 34) -->
 	<!-- [Top Expert] Zest for Weaponsmithing -->
 	<item_collecting id="3941" start_npc_id="203788"/>
 	<!-- [Top Expert] Weaponsmith's Craft -->
@@ -248,19 +238,19 @@
 	<!-- 3959: TODO: Epilogue (lvl 50) -->
 	<!-- Goodwill of Kuruminerk -->
 	<report_to id="3960" start_npc_id="798322" end_npc_id="203711"/>
-	<!-- 3961: [Growth] Flora's First Charm (lvl 35) handled by script -->
-	<!-- 3962: [Growth] Flora's Second Charm (lvl 40) handled by script -->
-	<!-- 3963: [Growth] Flora's Third Charm (lvl 45) handled by script -->
-	<!-- 3964: [Growth] Flora's Fourth Charm (lvl 50) handled by script -->
-	<!-- 3965: To the Galleria of Grandeur (lvl 10) handled by script -->
-	<!-- 3966: Salute! A New Uniform (lvl 10) handled by script -->
-	<!-- 3967: Andu's Dye Box (lvl 10) handled by script -->
-	<!-- 3968: Palentine's Request (lvl 10) handled by script -->
-	<!-- 3969: Sexiest Man Alive (lvl 10) handled by script -->
-	<!-- 3970: Kinah-Digging Daughter (lvl 39) handled by script -->
+	<!-- 3961: [Growth] Flora's First Charm (lvl 35) -->
+	<!-- 3962: [Growth] Flora's Second Charm (lvl 40) -->
+	<!-- 3963: [Growth] Flora's Third Charm (lvl 45) -->
+	<!-- 3964: [Growth] Flora's Fourth Charm (lvl 50) -->
+	<!-- 3965: To the Galleria of Grandeur (lvl 10) -->
+	<!-- 3966: Salute! A New Uniform (lvl 10) -->
+	<!-- 3967: Andu's Dye Box (lvl 10) -->
+	<!-- 3968: Palentine's Request (lvl 10) -->
+	<!-- 3969: Sexiest Man Alive (lvl 10) -->
+	<!-- 3970: Kinah-Digging Daughter (lvl 39) -->
 	<!-- What Did You Buy Me? -->
 	<report_to id="3971" start_npc_id="798386" end_npc_id="203893" item_id="182206135"/>
-	<!-- 3972: The Go-Between (lvl 51) handled by script -->
+	<!-- 3972: The Go-Between (lvl 51) -->
 	<xml_quest start_npc_id="203893" end_npc_id="203893" id="3972">
 		<on_talk_event ids="798949">
 			<var value="0">
@@ -388,29 +378,29 @@
 	<!-- 9550: TODO: [Event] Solorius Donations (lvl 10) -->
 	<!-- 9558: TODO: [Event] Thirst for Invention! (lvl 10) -->
 	<!-- 9560: TODO: [Event] Daeva's Day Fete (lvl 99) -->
-	<!-- 19000: [Expert] Essencetapper's Test (lvl 50) handled by script -->
+	<!-- 19000: [Expert] Essencetapper's Test (lvl 50) -->
 	<!-- [Expert] Essencetapping Expert -->
 	<report_to id="19001" start_npc_id="203780" end_npc_id="798600" item_id="182206127"/>
-	<!-- 19002: [Expert] Aethertapper's Test (lvl 50) handled by script -->
+	<!-- 19002: [Expert] Aethertapper's Test (lvl 50) -->
 	<!-- [Expert] Aethertapping Expert -->
 	<report_to id="19003" start_npc_id="203782" end_npc_id="798600" item_id="182206128"/>
-	<!-- 19004: Perikles's Insight (lvl 10) handled by script -->
-	<!-- 19008: [Master] Weaponsmith's Potential (lvl 29) handled by script -->
+	<!-- 19004: Perikles's Insight (lvl 10) -->
+	<!-- 19008: [Master] Weaponsmith's Potential (lvl 29) -->
 	<!-- [Master] Weaponsmithing Master -->
 	<report_to id="19009" start_npc_id="203788" end_npc_id="798600" item_id="182206129"/>
-	<!-- 19014: [Master] Armorsmith's Potential (lvl 29) handled by script -->
+	<!-- 19014: [Master] Armorsmith's Potential (lvl 29) -->
 	<!-- [Master] Armorsmithing Master -->
 	<report_to id="19015" start_npc_id="203790" end_npc_id="798600" item_id="182206130"/>
-	<!-- 19020: [Master] Tailor's Potential (lvl 29) handled by script -->
+	<!-- 19020: [Master] Tailor's Potential (lvl 29) -->
 	<!-- [Master] Tailoring Master -->
 	<report_to id="19021" start_npc_id="203793" end_npc_id="798600" item_id="182206131"/>
-	<!-- 19026: [Master] Handicrafter's Potential (lvl 29) handled by script -->
+	<!-- 19026: [Master] Handicrafter's Potential (lvl 29) -->
 	<!-- [Master] Handicrafting Master -->
 	<report_to id="19027" start_npc_id="203792" end_npc_id="798600" item_id="182206132"/>
-	<!-- 19032: [Master] Alchemist's Potential (lvl 29) handled by script -->
+	<!-- 19032: [Master] Alchemist's Potential (lvl 29) -->
 	<!-- [Master] Alchemy Master -->
 	<report_to id="19033" start_npc_id="203786" end_npc_id="798600" item_id="182206133"/>
-	<!-- 19038: [Master] Cook's Potential (lvl 29) handled by script -->
+	<!-- 19038: [Master] Cook's Potential (lvl 29) -->
 	<!-- [Master] Cooking Master -->
 	<report_to id="19039" start_npc_id="203784" end_npc_id="798600" item_id="182206134"/>
 	<!-- 19040: TODO: Leah's Loneliness (lvl 10) -->
@@ -430,9 +420,9 @@
 	<!-- 80010: TODO: [Event] The Shulack Sugarcrooks (lvl 10) -->
 	<!-- 80011: TODO: [Event] Trick or Treat (lvl 10) -->
 	<!-- 80012: TODO: [Event] The Great Candy Hunt (lvl 10) -->
-	<!-- 80016: [Event] Sock Hop (lvl 10) handled by script -->
+	<!-- 80016: [Event] Sock Hop (lvl 10) -->
 	<!-- 80017: TODO: [Event] Dirty Laundry (lvl 10) -->
-	<!-- 80020: [Event] Solorius Joy (lvl 10) handled by script -->
+	<!-- 80020: [Event] Solorius Joy (lvl 10) -->
 	<!-- 80022: TODO: [Event] Feeding the Children (lvl 10) -->
 	<!-- 80023: TODO: [Event] Feeding the Elders (lvl 10) -->
 	<!-- 80024: TODO: [Event] Feeding the Family (lvl 10) -->

@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
 	<!-- 35000: TODO: Aetheric Field Observatory Protectors FOBJ 01 (lvl 99) -->
 	<!-- 35001: TODO: Aetheric Field Observatory Protectors FOBJ 02 (lvl 99) -->
 	<!-- 35002: TODO: Aetheric Field Observatory Protectors FOBJ 03 (lvl 99) -->
@@ -147,7 +137,7 @@
 	<!-- 35110: TODO: Alabaster Order Reward 10 (lvl 99) -->
 	<!-- 35111: TODO: Alabaster Order Reward 11 (lvl 99) -->
 	<!-- 35112: TODO: Alabaster Order Reward 12 (lvl 99) -->
-	<!-- 38000: Call of the Alabaster Order (lvl 30) handled by script -->
+	<!-- 38000: Call of the Alabaster Order (lvl 30) -->
 	<!-- 38003: TODO: Alabaster Order's Call (lvl 30) -->
 	<report_to id="38003" start_npc_id="203726" end_npc_id="799803"/>
 </quest_scripts>

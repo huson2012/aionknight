@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<quest_scripts>
 <!--
-  ~ This file is part of aion-unique.
-  ~
-  ~ aion-unique is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-unique is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
--->
 
-	<!-- 1051: The Ruins of Roah (lvl 30) handled by script -->
-	<!-- 1052: Root of the Rot (lvl 30) handled by script -->
-	<!-- 1053: The Klaw Threat (lvl 33) handled by script -->
-	<!-- 1054: Power of the Elim (lvl 31) handled by script -->
-	<!-- 1055: Eternal Rest (lvl 34) handled by script -->
-	<!-- 1056: Lepharist Poison Research (lvl 35) handled by script -->
-	<!-- 1057: Creating a Monster (lvl 37) handled by script -->
-	<!-- 1058: Aether Insanity (lvl 38) handled by script -->
-	<!-- 1059: The Archon of Storms (lvl 36) handled by script -->
-	<!-- 1062: Indratu Legion (lvl 41) handled by script -->
-	<!-- 1063: Brigadier Indratu (lvl 41) handled by script -->
-	<!-- 1500: Orders From Perento (lvl 30) handled by script -->
+	Назначение файла	: Описание квестов
+	Ревизия				: RC1 (Beta)
+	Версия клиента		: 2.5 (Иннова)
+
+ -->
+<quest_scripts>
+	<!-- 1051: The Ruins of Roah (lvl 30) -->
+	<!-- 1052: Root of the Rot (lvl 30) -->
+	<!-- 1053: The Klaw Threat (lvl 33) -->
+	<!-- 1054: Power of the Elim (lvl 31) -->
+	<!-- 1055: Eternal Rest (lvl 34) -->
+	<!-- 1056: Lepharist Poison Research (lvl 35) -->
+	<!-- 1057: Creating a Monster (lvl 37) -->
+	<!-- 1058: Aether Insanity (lvl 38) -->
+	<!-- 1059: The Archon of Storms (lvl 36) -->
+	<!-- 1062: Indratu Legion (lvl 41) -->
+	<!-- 1063: Brigadier Indratu (lvl 41) -->
+	<!-- 1500: Orders From Perento (lvl 30) -->
 	<!-- Eliminating Ettins -->
 	<monster_hunt id="1501" start_npc_id="204507">
 		<monster_infos var_id="0" max_kill="5" npc_id="211046"/>
@@ -60,7 +50,7 @@
 	<item_collecting id="1512" start_npc_id="204581"/>
 	<!-- Suspicious Spice Pot -->
 	<report_to id="1513" start_npc_id="204580" end_npc_id="204549" item_id="182201708"/>
-	<!-- 1514: The Ettin's Necklace (lvl 32) handled by script -->
+	<!-- 1514: The Ettin's Necklace (lvl 32) -->
 	<!-- Supporting Heiron Observatory -->
 	<report_to id="1515" start_npc_id="204502" end_npc_id="204549"/>
 	<!-- Going For a Curry -->
@@ -104,8 +94,8 @@
 	</monster_hunt>
 	<!-- Peel Me a Rotron -->
 	<item_collecting id="1526" start_npc_id="204555"/>
-	<!-- 1527: Rotten Rotrons (lvl 33) handled by script -->
-	<!-- 1528: Strange Leather (lvl 33) handled by script -->
+	<!-- 1527: Rotten Rotrons (lvl 33) -->
+	<!-- 1528: Strange Leather (lvl 33) -->
 	<!-- Returned Tartaron Residents -->
 	<monster_hunt id="1529" start_npc_id="204550">
 		<monster_infos var_id="0" max_kill="5" npc_id="212092"/>
@@ -124,18 +114,18 @@
 	<report_to id="1533" start_npc_id="204609" end_npc_id="203893" item_id="186000017"/>
 	<!-- Clodworm Vindicated -->
 	<item_collecting id="1534" start_npc_id="204553"/>
-	<!-- 1535: The Cold, Cold Ground (lvl 32) handled by script -->
+	<!-- 1535: The Cold, Cold Ground (lvl 32) -->
 	<!-- Stench on the Road -->
 	<monster_hunt id="1536" start_npc_id="204601">
 		<monster_infos var_id="0" max_kill="6" npc_id="211081"/>
 		<monster_infos var_id="1" max_kill="3" npc_id="211091"/>
 	</monster_hunt>
-	<!-- 1537: Fish on the Line (lvl 33) handled by script -->
+	<!-- 1537: Fish on the Line (lvl 33) -->
 	<!-- Angling Advice -->
 	<report_to id="1538" start_npc_id="204588" end_npc_id="203073"/>
 	<!-- Ben's Special Bait -->
 	<item_collecting id="1539" start_npc_id="203073" end_npc_id="204588"/>
-	<!-- 1540: Bait the Hooks (lvl 33) handled by script -->
+	<!-- 1540: Bait the Hooks (lvl 33) -->
 	<!-- Frillneck Fluid -->
 	<item_collecting id="1541" start_npc_id="204585"/>
 	<!-- Outlaw of the Jungle -->
@@ -158,7 +148,7 @@
 	</monster_hunt>
 	<!-- Contemplating Klaw Hearts -->
 	<item_collecting id="1547" start_npc_id="204583"/>
-	<!-- 1548: Klaw Control (lvl 37) handled by script -->
+	<!-- 1548: Klaw Control (lvl 37) -->
 	<!-- [Group] King Klawtan -->
 	<item_collecting id="1549" start_npc_id="204583"/>
 	<!-- [Spy] Alukina's Palace -->
@@ -172,7 +162,7 @@
 	</monster_hunt>
 	<!-- Frillneck Arrowheads -->
 	<item_collecting id="1552" start_npc_id="204585"/>
-	<!-- 1553: [Spy/Group] Mirror, Mirror (lvl 43) handled by script -->
+	<!-- 1553: [Spy/Group] Mirror, Mirror (lvl 43) -->
 	<!-- [Spy/Group] The Seiren's Fin -->
 	<item_collecting id="1554" start_npc_id="204584" end_npc_id="204596"/>
 	<!-- Delivery to Arbolu's Haven -->
@@ -197,11 +187,11 @@
 		<monster_infos var_id="2" max_kill="5" npc_id="211891"/>
 		<monster_infos var_id="2" max_kill="5" npc_id="211892"/>
 	</monster_hunt>
-	<!-- 1559: What's in the Box? (lvl 34) handled by script -->
-	<!-- 1560: A Job for Pobinerk (lvl 37) handled by script -->
-	<!-- 1561: The Miser's Map (lvl 37) handled by script -->
+	<!-- 1559: What's in the Box? (lvl 34) -->
+	<!-- 1560: A Job for Pobinerk (lvl 37) -->
+	<!-- 1561: The Miser's Map (lvl 37) -->
 	<!-- 1562: Crossed Destiny (lvl 35) -->
-	<!-- 1563: The Legend of Vindachinerk (lvl 35) handled by script -->
+	<!-- 1563: The Legend of Vindachinerk (lvl 35) -->
 	<!-- Jaiorunerk's Diary -->
 	<report_to id="1564" start_npc_id="798096" end_npc_id="798012" item_id="182201731"/>
 	<!-- Banshee Farming -->
@@ -239,7 +229,7 @@
 		<monster_infos var_id="0" max_kill="10" npc_id="211956"/>
 	</monster_hunt>
 	<!-- 1573: TODO: Some Tasty Mushrooms (lvl 34) -->
-	<!-- 1574: A Feast For a Village (lvl 34) handled by script -->
+	<!-- 1574: A Feast For a Village (lvl 34) -->
 	<!-- Deathsong Dangers -->
 	<monster_hunt id="1575" start_npc_id="730025">
 		<monster_infos var_id="0" max_kill="7" npc_id="211951"/>
@@ -259,7 +249,7 @@
 		<monster_infos var_id="3" max_kill="5" npc_id="211946" />
 		<monster_infos var_id="3" max_kill="5" npc_id="211947" />
 	</monster_hunt>
-	<!-- 1578: Where do Rotrons Come From? (lvl 35) handled by script -->
+	<!-- 1578: Where do Rotrons Come From? (lvl 35) -->
 	<!-- Discolored Bones -->
 	<item_collecting id="1579" start_npc_id="204559" action_item_id="700195"/>
 	<!-- Picking off the Undead -->
@@ -354,13 +344,13 @@
 	<!-- Researching the Lepharists -->
 	<item_collecting id="1603" start_npc_id="204576"/>
 	<!-- 1604: TODO: To Catch a Spy (lvl 38) -->
-	<!-- 1605: The Lepharist Situation (lvl 38) handled by script -->
+	<!-- 1605: The Lepharist Situation (lvl 38) -->
 	<!-- 1607: TODO: Mapping the Revolutionaries (lvl 39) -->
 	<!-- Breaking Things Up -->
 	<monster_hunt id="1608" start_npc_id="204574">
 		<monster_infos var_id="0" max_kill="6" npc_id="700197"/>
 	</monster_hunt>
-	<!-- 1609: Message to Arbolu's Haven (lvl 39) handled by script -->
+	<!-- 1609: Message to Arbolu's Haven (lvl 39) -->
 	<!-- Researching Earth Spirits -->
 	<item_collecting id="1610" start_npc_id="204577"/>
 	<!-- [Daily/Coin] Taking out the Trash -->
@@ -385,7 +375,7 @@
 	<item_collecting id="1618" start_npc_id="204832" end_npc_id="203833" action_item_id="700363"/>
 	<!-- [Group] RM-114c -->
 	<item_collecting id="1619" start_npc_id="204573" end_npc_id="203833"/>
-	<!-- 1620: Start Spreading the News (lvl 35) handled by script -->
+	<!-- 1620: Start Spreading the News (lvl 35) -->
 	<!-- The Case of the Wailing Windwisps -->
 	<monster_hunt id="1621" start_npc_id="204531">
 		<monster_infos var_id="0" max_kill="10" npc_id="211172"/>
@@ -398,12 +388,12 @@
 	<item_collecting id="1624" start_npc_id="204593"/>
 	<!-- Starturtle Oil -->
 	<item_collecting id="1625" start_npc_id="204592"/>
-	<!-- 1626: Light the Path (lvl 39) handled by script -->
+	<!-- 1626: Light the Path (lvl 39) -->
 	<!-- Specter's Wall of Sound -->
 	<monster_hunt id="1627" start_npc_id="204547">
 		<monster_infos var_id="0" max_kill="9" npc_id="212111"/>
 	</monster_hunt>
-	<!-- 1628: Meteria's Regret (lvl 43) handled by script -->
+	<!-- 1628: Meteria's Regret (lvl 43) -->
 	<!-- Give Me Some Skin -->
 	<item_collecting id="1629" start_npc_id="204544" action_item_id="182201757" />
 	<!-- Ancient Pot -->
@@ -417,17 +407,17 @@
 	<item_collecting id="1632" start_npc_id="204590"/>
 	<!-- The Stenon Bay Shipwreck -->
 	<report_to id="1633" start_npc_id="204590" end_npc_id="204547"/>
-	<!-- 1634: The Wreck of the Argos (lvl 43) handled by script -->
+	<!-- 1634: The Wreck of the Argos (lvl 43) -->
 	<!-- The Missing Fiance -->
 	<item_collecting id="1635" start_npc_id="204536"/>
-	<!-- 1636: A Flute For the Fixing (lvl 43) handled by script -->
+	<!-- 1636: A Flute For the Fixing (lvl 43) -->
 	<!-- [Daily/Coin] The Aggressive Undead -->
 	<monster_hunt id="1637" start_npc_id="204548">
 		<monster_infos var_id="0" max_kill="34" npc_id="211986"/>
 		<monster_infos var_id="0" max_kill="34" npc_id="211987"/>
 	</monster_hunt>
-	<!-- 1638: [Spend Coin] 41Lv. Warrior, Scout handled by script -->
-	<!-- 1639: [Spend Coin] 41Lv. Mage, Priest handled by script -->
+	<!-- 1638: [Spend Coin] 41Lv. Warrior, Scout -->
+	<!-- 1639: [Spend Coin] 41Lv. Mage, Priest -->
 	<!-- Teleporter Repairs -->
 	<item_collecting id="1640" start_npc_id="730033"/>
 	<!-- Namarinerk's Dream -->
@@ -435,13 +425,13 @@
 	<!-- Know Your Anubites -->
 	<item_collecting id="1642" start_npc_id="204545"/>
 	<!-- 1643: TODO: The Star of Heiron (lvl 42) -->
-	<!-- 1644: A Very Old Letter (lvl 43) handled by script -->
+	<!-- 1644: A Very Old Letter (lvl 43) -->
 	<!-- Medicinal Clodworms -->
 	<item_collecting id="1645" start_npc_id="798076"/>
 	<!-- Elemental Water Flowers -->
 	<item_collecting id="1646" start_npc_id="204546"/>
-	<!-- 1647: Dressing Up For Bollvig (lvl 42) handled by script -->
-	<!-- 1648: Undead War Alert (lvl 42) handled by script -->
+	<!-- 1647: Dressing Up For Bollvig (lvl 42) -->
+	<!-- 1648: Undead War Alert (lvl 42) -->
 	<!-- Mutant Pretors -->
 	<monster_hunt id="1651" start_npc_id="204578">
 		<monster_infos var_id="0" max_kill="30" npc_id="211918"/>
@@ -489,7 +479,7 @@
 	<monster_hunt id="1665" start_npc_id="204610">
 		<monster_infos var_id="0" max_kill="1" npc_id="212280"/>
 	</monster_hunt>
-	<!-- 1666: [Group] Taking it to the Indratu (lvl 42) handled by script -->
+	<!-- 1666: [Group] Taking it to the Indratu (lvl 42) -->
 	<!-- [Daily/Coin] Eradicating Undead -->
 	<monster_hunt id="1667" start_npc_id="204638">
 		<monster_infos var_id="0" max_kill="10" npc_id="211231"/>
@@ -546,21 +536,21 @@
 	<item_collecting id="1683" start_npc_id="204602" end_npc_id="204833"/>
 	<!-- [Spy/Group] Key to the Cave -->
 	<item_collecting id="1684" start_npc_id="204833"/>
-	<!-- 1685: [Spy/Group] The Draupnir Weapons (lvl 43) handled by script -->
+	<!-- 1685: [Spy/Group] The Draupnir Weapons (lvl 43) -->
 	<!-- A Cube for Michalis -->
 	<report_to id="1686" start_npc_id="204500" end_npc_id="278501" item_id="182201808"/>
-	<!-- 1687: [Spy/Group] The Tigraki Agreement (lvl 44) handled by script -->
+	<!-- 1687: [Spy/Group] The Tigraki Agreement (lvl 44) -->
 	<!-- [Spy/Group] The Tigraki Assignment -->
 	<item_collecting id="1688" start_npc_id="204601"/>
 	<!-- [Spy/Group] The Draconic Assignment -->
 	<item_collecting id="1689" start_npc_id="204601"/>
 	<!-- [Spy/Group] Return to Draupnir Cave -->
 	<item_collecting id="1690" start_npc_id="204601"/>
-	<!-- 1691: The Little Leather Slipper (lvl 38) handled by script -->
+	<!-- 1691: The Little Leather Slipper (lvl 38) -->
 	<!-- A Day Older and Deeper in Debt -->
 	<item_collecting id="1692" start_npc_id="798386"/>
 	<!-- 1693: TODO: Are You My Father? (lvl 38) -->
-	<!-- 3200: Price of Goodwill (lvl 40) handled by script -->
+	<!-- 3200: Price of Goodwill (lvl 40) -->
 	<!-- Suspicious Shugo -->
 	<report_to id="3221" start_npc_id="204530" end_npc_id="204658"/>
 	<!-- 3502: TODO: Nereus Needs You! (lvl 50) -->
@@ -698,10 +688,10 @@
 		<monster_infos var_id="1" max_kill="1" npc_id="280757"/>
 		<monster_infos var_id="2" max_kill="1" npc_id="280759"/>
 	</monster_hunt>
-	<!-- 18600: Scoring Some Bad Stigma (lvl 37) handled by script -->
+	<!-- 18600: Scoring Some Bad Stigma (lvl 37) -->
 	<!-- Nightmare on My Street -->
 	<report_to id="18601" start_npc_id="204500" end_npc_id="205229" item_id="182213002"/>
-	<!-- 18602: Nightmare in Shining Armor (lvl 37) handled by script -->
+	<!-- 18602: Nightmare in Shining Armor (lvl 37) -->
 	<!-- Dreams of the Dungeon -->
 	<monster_hunt id="18605" start_npc_id="205230">
 		<monster_infos var_id="0" max_kill="8" npc_id="217026"/>

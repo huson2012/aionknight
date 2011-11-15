@@ -33,13 +33,13 @@ import commons.utils.PropertiesUtils;
 
 public class DatabaseFactory
 {
-
-	private static final Logger	log	= Logger.getLogger(DatabaseFactory.class);
+	private static final Logger log	= Logger.getLogger(DatabaseFactory.class);
 	private static DataSource dataSource;
-	private static GenericObjectPool onnectionPool;
+	private static GenericObjectPool connectionPool;
 	private static String databaseName;
 	private static int databaseMajorVersion;
 	private static int databaseMinorVersion;
+	
 	public synchronized static void init()
 	{
 		init("");

@@ -27,7 +27,7 @@
     <property name="build" location="../tools/Compiled/Commons"/>
     <property name="build.classes" location="${build}/Classes"/>
     <property name="build.dist" location="${build}/Dist"/>
-    <property name="build.dist.commons" location="${build.dist}/Commons"/>
+    <property name="build.dist.commons" location="${build.dist}"/>
     <path id="classpath">
         <fileset dir="${lib}">
             <include name="*.jar"/>
@@ -48,16 +48,16 @@
         </javac>
     </target>
     <target name="jar" depends="compile" description="Create the jar file">
-        <exec dir="." executable="svnversion.exe" outputproperty="revision" failifexecutionfails="false" osfamily="windows">
+        <exec dir="../tools" executable="svnversion.exe" outputproperty="revision" failifexecutionfails="false" osfamily="windows">
             <arg line="-n ."/>
         </exec>
-        <exec dir="." executable="svnversion" outputproperty="revision" failifexecutionfails="false" osfamily="unix">
+        <exec dir="../tools" executable="svnversion" outputproperty="revision" failifexecutionfails="false" osfamily="unix">
             <arg line="-n ."/>
         </exec>
         <tstamp>
             <format property="date" pattern="yyyy-MM-dd-HH:mm"/>
         </tstamp>
-        <jar destfile="${build}/JAR/ak-commons.jar">
+        <jar destfile="${build}/dist/ak-commons.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
                 <attribute name="Premain-Class" value="commons.callbacks.JavaAgentEnhancer"/>
