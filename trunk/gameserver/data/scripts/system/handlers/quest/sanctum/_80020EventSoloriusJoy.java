@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ * This file is part of Aion-Knight Dev. Team [http://www.aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -19,8 +19,6 @@ package quest.sanctum;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.player.Player;
@@ -35,10 +33,9 @@ import gameserver.quest.model.QuestStatus;
 import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
 
-
 public class _80020EventSoloriusJoy extends QuestHandler
 {
-	private final static int	questId	= 80020;
+	private final static int questId = 80020;
 	private final static int[]	npcs = {799769, 799768, 203170, 203140};
 
 	public _80020EventSoloriusJoy()
@@ -71,7 +68,7 @@ public class _80020EventSoloriusJoy extends QuestHandler
 		{
 			if(env.getTargetId() == 799769)
 			{
-				if(env.getDialogId() == -1 || env.getDialogId() == 25)
+				if(env.getDialogId() == -1 || env.getDialogId() == 26)
 					return sendQuestDialog(env, 1011);
 				else
 					return defaultQuestNoneDialog(env, 799769, 182214012, 1);
@@ -85,7 +82,7 @@ public class _80020EventSoloriusJoy extends QuestHandler
 		{
 			if(env.getTargetId() == 799768)
 			{
-				if(env.getDialogId() == -1 || env.getDialogId() == 25)
+				if(env.getDialogId() == -1 || env.getDialogId() == 26)
 					return sendQuestDialog(env, 1352);
 				else if(env.getDialogId() == 10000)
 				{
@@ -97,7 +94,7 @@ public class _80020EventSoloriusJoy extends QuestHandler
 			}
 			else if(env.getTargetId() == 203170 && var == 1)
 			{
-				if(env.getDialogId() == -1 || env.getDialogId() == 25)
+				if(env.getDialogId() == -1 || env.getDialogId() == 26)
 					return sendQuestDialog(env, 1693);
 				else if(env.getDialogId() == 1694)
 				{
@@ -160,5 +157,4 @@ public class _80020EventSoloriusJoy extends QuestHandler
 		}
 		return false;
 	}
-
 }

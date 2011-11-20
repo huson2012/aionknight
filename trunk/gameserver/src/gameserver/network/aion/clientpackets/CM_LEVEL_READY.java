@@ -16,14 +16,18 @@
  */
 package gameserver.network.aion.clientpackets;
 
-
 import org.apache.log4j.Logger;
+import commons.database.dao.DAOManager;
+import gameserver.configs.main.CustomConfig;
+import gameserver.dao.PlayerCmotionListDAO;
+import gameserver.model.gameobjects.player.Cmotion;
 
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.windstreams.Location2D;
 import gameserver.model.templates.windstreams.WindstreamTemplate;
 import gameserver.network.aion.AionClientPacket;
+import gameserver.network.aion.serverpackets.SM_CMOTION;
 import gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.network.aion.serverpackets.SM_WINDSTREAM_LOCATIONS;
@@ -31,15 +35,9 @@ import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestCookie;
 import gameserver.services.WeatherService;
 import gameserver.spawn.RiftSpawnManager;
+import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
 
-
-/**
- * Client is saying that level[map] is ready.
- * 
- * @author -Nemesiss-
- * @author Kwazar
- */
 public class CM_LEVEL_READY extends AionClientPacket
 {
 	private static Logger	log	= Logger.getLogger(CM_LEVEL_READY.class);	
@@ -117,6 +115,53 @@ public class CM_LEVEL_READY extends AionClientPacket
 		RiftSpawnManager.sendRiftStatus(activePlayer);
 		
 		activePlayer.getEffectController().updatePlayerEffectIcons();
+		
+	      //Cmotion 
+        if(CustomConfig.RETAIL_CMOTIONS || activePlayer.getCmotionList().getCmotions() != null )
+        {
+            for (Cmotion cmotion : activePlayer.getCmotionList().getCmotions()) 
+            {   
+                int dummy = 0;
+                if(cmotion.getActive() == false)
+                    cmotion.setActive(false);
+                else
+                {
+                    cmotion.setActive(true);
+                    if(cmotion.getCmotionId() > 4)
+                        dummy = cmotion.getCmotionId() - 4;
+                    else
+                        dummy = cmotion.getCmotionId();
+                        
+                    PacketSendUtility.sendPacket(activePlayer, new SM_CMOTION(activePlayer, dummy, cmotion.getCmotionId()));
+                }
+            }
+            DAOManager.getDAO(PlayerCmotionListDAO.class).storeCmotions(activePlayer);
+        }
+        
+        if((CustomConfig.RETAIL_CMOTIONS == false ) && (CustomConfig.CMOTIONS_GETLEVEL <= activePlayer.getLevel()))
+        {
+            for (int i = 1; i < 9; i++)
+            {
+                activePlayer.getCmotionList().add(i,  false, System.currentTimeMillis(),(60  * 60L));
+            }
+            
+            for (Cmotion cmotion : activePlayer.getCmotionList().getCmotions()) 
+            {   
+                int dummy = 0;
+                if(cmotion.getActive() == false)
+                    cmotion.setActive(false);
+                else
+                {
+                    cmotion.setActive(true);
+                    if(cmotion.getCmotionId() > 4)
+                        dummy = cmotion.getCmotionId() - 4;
+                    else
+                        dummy = cmotion.getCmotionId();                 
+                    PacketSendUtility.sendPacket(activePlayer, new SM_CMOTION(activePlayer, dummy, cmotion.getCmotionId()));
+                }
+            }
+        }
+        PacketSendUtility.sendPacket(activePlayer, new SM_CMOTION(activePlayer));         
 		
 	}
 }

@@ -531,6 +531,24 @@ CREATE TABLE `player_emotions` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for player_cmotions
+-- ----------------------------
+
+CREATE TABLE `player_cmotions` (
+  `player_id` int(11) NOT NULL,
+  `cmotion_id` int(11) NOT NULL,
+  `cmotion_active` tinyint(1) NOT NULL DEFAULT '0',
+  `cmotion_expires_time` bigint(20) NOT NULL DEFAULT '0',
+  `cmotion_creation_time` timestamp NOT NULL DEFAULT '2011-01-01 00:00:01',
+  PRIMARY KEY (`player_id`,`cmotion_id`),
+  CONSTRAINT `player_cmotions_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of player_cmotions
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `player_instancecd`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_instancecd`;
@@ -573,25 +591,6 @@ CREATE TABLE `player_macrosses` (
   `macro` text NOT NULL,
   UNIQUE KEY `main` (`player_id`,`order`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of player_macrosses
--- ----------------------------
-
--- ----------------------------
--- Table structure for `player_motion`
--- ----------------------------
-DROP TABLE IF EXISTS `player_motion`;
-CREATE TABLE `player_motion` (
-  `player_id` int(11) NOT NULL,
-  `learn_ninja` tinyint(1) NOT NULL DEFAULT '0',
-  `learn_hober` tinyint(1) NOT NULL DEFAULT '0',
-  `waiting_motion` tinyint(1) NOT NULL DEFAULT '0',
-  `running_motion` tinyint(1) NOT NULL DEFAULT '0',
-  `jumping_motion` tinyint(1) NOT NULL DEFAULT '0',
-  `rest_motion` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`player_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of player_motion

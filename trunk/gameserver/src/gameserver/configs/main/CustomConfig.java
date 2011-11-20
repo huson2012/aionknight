@@ -216,6 +216,12 @@ public class CustomConfig
 	
 	@Property(key = "gameserver.dmgreduction.lvldiffpvp", defaultValue = "false")
 	public static boolean DMG_REDUCTION_LVL_DIFF_PVP;
+	
+	@Property(key = "gameserver.cmotions.retail", defaultValue = "true")
+	public static boolean       RETAIL_CMOTIONS;
+	   
+	@Property(key = "gameserver.cmotions.getlevel", defaultValue = "20")
+	public static int           CMOTIONS_GETLEVEL;
 
 	@Property(key = "gameserver.emotions.retail", defaultValue = "true")
 	public static boolean RETAIL_EMOTIONS;

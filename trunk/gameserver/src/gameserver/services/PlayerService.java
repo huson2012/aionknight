@@ -44,7 +44,6 @@ import gameserver.dao.PlayerEmotionListDAO;
 import gameserver.dao.PlayerInstanceCDDAO;
 import gameserver.dao.PlayerLifeStatsDAO;
 import gameserver.dao.PlayerMacrossesDAO;
-import gameserver.dao.PlayerMotionDAO;
 import gameserver.dao.PlayerPunishmentsDAO;
 import gameserver.dao.PlayerQuestListDAO;
 import gameserver.dao.PlayerRecipesDAO;
@@ -210,7 +209,6 @@ public class PlayerService
 		player.setTitleList(DAOManager.getDAO(PlayerTitleListDAO.class).loadTitleList(playerObjId));
 		player.setEmotionList(DAOManager.getDAO(PlayerEmotionListDAO.class).loadEmotionList(playerObjId));
 
-		DAOManager.getDAO(PlayerMotionDAO.class).loadPlayerMotion(player); // load Motion
 		DAOManager.getDAO(PlayerSettingsDAO.class).loadSettings(player);
 		DAOManager.getDAO(AbyssRankDAO.class).loadAbyssRank(player);
 		DAOManager.getDAO(GuildDAO.class).loadGuild(player);
@@ -420,11 +418,6 @@ public class PlayerService
 			if (player.getLegion().getLegionWarehouse() != null && player.getLegion().getLegionWarehouse().getUser() == player.getObjectId())
 				player.getLegion().getLegionWarehouse().setUser(0);
 		}
-
-		// update Motion DB when player log out.
-		DAOManager.getDAO(PlayerMotionDAO.class).updatePlayerMotion(
-				player.getLearnNinja(), player.getLearnHober(), player.getWaitingMotion(),
-				player.getRunningMotion(), player.getJumpingMotion(), player.getRestMotion(), player);
 
 		//store current effects
 		DAOManager.getDAO(PlayerEffectsDAO.class).storePlayerEffects(player);

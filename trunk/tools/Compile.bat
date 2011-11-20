@@ -37,17 +37,17 @@ ECHO ===========================================================================
 ECHO Выбран режим компиляции: Компилировать сборку целиком
 ECHO ============================================================================
 ECHO.
-cd ..\Commons 
-start /WAIT /B ..\Tools\Ant\bin\ant clean dist
+cd ..\Commons
+call ..\Tools\Ant\bin\ant clean dist
 
 cd ..\GameServer
-start /WAIT /B ..\Tools\Ant\bin\ant clean dist
+call ..\Tools\Ant\bin\ant clean dist
 
 cd ..\LoginServer
-start /WAIT /B ..\Tools\Ant\bin\ant clean dist
+call ..\Tools\Ant\bin\ant clean dist
 
 cd ..\ChatServer
-start /WAIT /B ..\Tools\Ant\bin\ant clean dist
+call ..\Tools\Ant\bin\ant clean dist
 
 GOTO :QUIT
 

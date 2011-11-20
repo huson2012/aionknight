@@ -18,14 +18,12 @@
 package gameserver.itemengine.actions;
 
 import commons.database.dao.DAOManager;
-import gameserver.dao.PlayerMotionDAO;
 import gameserver.model.DescriptionId;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.network.aion.serverpackets.SM_DELETE_ITEM;
 import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import gameserver.network.aion.serverpackets.SM_MOTION;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
@@ -68,27 +66,5 @@ public class ReadAction extends AbstractItemAction
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
 			}
 		}, 50);
-		
-		if (parentItem.getItemId() == 188508001 || parentItem.getItemId() == 188508002)
-		{
-			PacketSendUtility.sendPacket(player,SM_SYSTEM_MESSAGE.STR_MSG_GET_CASH_CUSTOMIZE_MOTION(new DescriptionId(ItemService.getItemTemplate(parentItem.getItemId()).getNameId())));
-			Item item = player.getInventory().getItemByObjId(parentItem.getObjectId());
-			if (player.getInventory().removeFromBag(item, true))
-				PacketSendUtility.sendPacket(player, new SM_DELETE_ITEM(parentItem.getObjectId()));
-			if (player.getLearnNinja() != 1 && player.getLearnHober() != 1)
-				DAOManager.getDAO(PlayerMotionDAO.class).insertPlayerMotion(player.getObjectId());
-			if (parentItem.getItemId() == 188508001)
-			{
-				DAOManager.getDAO(PlayerMotionDAO.class).updatePlayerMotion(1, player.getLearnHober(), player);
-				player.setLearnNinja(1);
-			}
-			else if (parentItem.getItemId() == 188508002)
-			{
-				DAOManager.getDAO(PlayerMotionDAO.class).updatePlayerMotion(player.getLearnNinja(), 1, player);
-				player.setLearnHober(1);
-			}
-
-			PacketSendUtility.sendPacket(player, new SM_MOTION(player, true));
-		}
 	}
 }
