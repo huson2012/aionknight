@@ -166,6 +166,8 @@
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="title" type="TitleAction"
 				minOccurs="0" maxOccurs="1" />
+			<xs:element name="cmotion" type="CmotionAction" 
+				minOccurs="0" maxOccurs="1"/>
 			<xs:element name="emotion" type="EmotionAction"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="cosmetic" type="CosmeticAction"
@@ -266,7 +268,16 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
+	
+	<xs:complexType name="CmotionAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="cmotionid" type="xs:string" />
+				<xs:attribute name="expire" type="xs:int" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
 	<xs:complexType name="EmotionAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">

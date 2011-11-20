@@ -43,6 +43,7 @@ public class ItemActions {
 		@XmlElement(name = "read", type = ReadAction.class),
 		@XmlElement(name = "ticket", type = TicketAction.class),
 		@XmlElement(name = "title", type = TitleAction.class),
+		@XmlElement(name = "cmotion", type = CmotionAction.class),
 		@XmlElement(name = "emotion", type = EmotionAction.class),
 		@XmlElement(name = "cosmetic", type = CosmeticAction.class)
 	})

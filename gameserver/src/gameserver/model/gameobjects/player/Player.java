@@ -127,6 +127,7 @@ public class Player extends Creature
         private PlayerStatsTemplate                         playerStatsTemplate;
         private TitleList                                   titleList;
         private EmotionList                                 emotionList;
+		private CmotionList                                 cmotionList;
         private PlayerSettings                              playerSettings;
         private QuestStateList                              questStateList;
         private QuestCookie                                 questCookie;
@@ -212,6 +213,7 @@ public class Player extends Creature
                 this.questStateList = new QuestStateList();
                 this.titleList = new TitleList();
                 this.emotionList = new EmotionList();
+				this.cmotionList = new CmotionList();
                 this.lastNpcDrops = new LastUsedCache<Integer, NpcDropStat>(DropConfig.NPC_DROP_HISTORY_COUNT);
                 this.shopMoney = CashShopManager.getInstance().getPlayerCredits(this);
                 controller.setOwner(this);
@@ -795,7 +797,18 @@ public class Player extends Creature
                 this.titleList = titleList;
                 this.titleList.setOwner(this);
         }
+        
+        public CmotionList getCmotionList()
+        {
+                return cmotionList;
+        }
 
+        public void setCmotionList(CmotionList cmotionList)
+        {
+                this.cmotionList = cmotionList;
+                this.cmotionList.setOwner(this);
+        }
+        
         public EmotionList getEmotionList()
         {
                 return emotionList;

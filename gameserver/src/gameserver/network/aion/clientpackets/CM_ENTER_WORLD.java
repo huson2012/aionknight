@@ -58,7 +58,6 @@ import gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
 import gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
 import gameserver.network.aion.serverpackets.SM_MACRO_LIST;
 import gameserver.network.aion.serverpackets.SM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_MOTION;
 import gameserver.network.aion.serverpackets.SM_PLAYER_SPAWN;
 import gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
 import gameserver.network.aion.serverpackets.SM_PRICES;
@@ -311,8 +310,6 @@ public class CM_ENTER_WORLD extends AionClientPacket
 					player.getCommonData().setRepletionState((maxRespose * currentResposePercent) / 100);
 				}
 			}
-		
-			client.sendPacket(new SM_MOTION(player, true)); // Load Motion
 			client.sendPacket(new SM_STATS_INFO(player));
 			
 			client.sendPacket(new SM_CUBE_UPDATE(player, 6, player.getCommonData().getAdvencedStigmaSlotSize()));

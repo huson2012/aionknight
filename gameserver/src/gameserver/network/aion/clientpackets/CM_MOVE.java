@@ -25,7 +25,6 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.network.aion.AionClientPacket;
-import gameserver.network.aion.serverpackets.SM_MOTION;
 import gameserver.network.aion.serverpackets.SM_MOVE;
 import gameserver.task.impl.GroupUpdater;
 import gameserver.utils.PacketSendUtility;
@@ -223,20 +222,6 @@ public class CM_MOVE extends AionClientPacket
 		if(type != MovementType.MOVEMENT_STOP && player.isProtectionActive())
 		{
 			player.getController().stopProtectionActiveTask();
-		}
-
-		// send Motion packets
-		if (player.getLearnNinja() == 1 || player.getLearnHober() == 1)
-		{
-			if (player.getWaitingMotion() != 0)
-				PacketSendUtility.sendPacket(player, new SM_MOTION(player, player.getWaitingMotion(), 1, false, true));
-			if (player.getRunningMotion() != 0)
-				PacketSendUtility.sendPacket(player, new SM_MOTION(player, player.getRunningMotion(), 2, false, true));
-			if (player.getJumpingMotion() != 0)
-				PacketSendUtility.sendPacket(player, new SM_MOTION(player, player.getJumpingMotion(), 3, false, true));
-			if (player.getRestMotion() != 0)
-				PacketSendUtility.sendPacket(player, new SM_MOTION(player, player.getRestMotion(), 4, false, true));
-			PacketSendUtility.broadcastPacket(player, new SM_MOTION(player, false, false));
 		}
 	}
 }

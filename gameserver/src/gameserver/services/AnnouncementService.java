@@ -36,7 +36,7 @@ import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 
 /**
- * Система атоматических аннонсов
+ * РЎРёСЃС‚РµРјР° Р°С‚РѕРјР°С‚РёС‡РµСЃРєРёС… Р°РЅРЅРѕРЅСЃРѕРІ
  */
  public class AnnouncementService
 {

@@ -40,7 +40,6 @@ import gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import gameserver.network.aion.serverpackets.SM_LEVEL_UPDATE;
-import gameserver.network.aion.serverpackets.SM_MOTION;
 import gameserver.network.aion.serverpackets.SM_NEARBY_QUESTS;
 import gameserver.network.aion.serverpackets.SM_NPC_INFO;
 import gameserver.network.aion.serverpackets.SM_PET;
@@ -289,17 +288,6 @@ public class PlayerController extends CreatureController<Player>
 
 	public void onEnterWorld()
 	{
-		// Check Motions and Update Player Status on Spawn
-		if (getOwner().getWaitingMotion() != 0)
-			PacketSendUtility.sendPacket(getOwner(), new SM_MOTION(getOwner(), getOwner().getWaitingMotion(), 1, false, true));
-		if (getOwner().getRunningMotion() != 0)
-			PacketSendUtility.sendPacket(getOwner(), new SM_MOTION(getOwner(), getOwner().getRunningMotion(), 2, false, true));
-		if (getOwner().getJumpingMotion() != 0)
-			PacketSendUtility.sendPacket(getOwner(), new SM_MOTION(getOwner(), getOwner().getJumpingMotion(), 3, false, true));
-		if (getOwner().getRestMotion() != 0)
-			PacketSendUtility.sendPacket(getOwner(), new SM_MOTION(getOwner(), getOwner().getRestMotion(), 4, false, true));
-		PacketSendUtility.broadcastPacket(getOwner(), new SM_MOTION(getOwner(), false, false));
-
 		// Display Dark Poeta counter when entering 300040000
 		if(getOwner().getWorldId() == 300040000 && !getOwner().getInDarkPoeta() && getOwner().getPlayerGroup() != null){
 			PacketSendUtility.sendPacket(getOwner(), new SM_INSTANCE_SCORE(getOwner().getWorldId(), (int)((getOwner().getPlayerGroup().getInstanceStartTime() + 14400000) - System.currentTimeMillis()), 2097152, getOwner().getPlayerGroup().getGroupInstancePoints(), 0, 0, 7));
