@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package admincommands;
 
+package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.CustomConfig;
@@ -24,10 +24,6 @@ import gameserver.services.TeleportService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 
-/**
- * @author Nemiroff
- *        Date: 11.01.2010
- */
 public class Unstuck extends AdminCommand
 {
 

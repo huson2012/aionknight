@@ -467,11 +467,11 @@
 		<object x="2217.52000" y="2234.56000" z="43.75501" h="68"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210060000" npcid="700255" pool="1" interval="295">
+	<spawn map="210060000" npcid="700399" pool="1" interval="295">
 		<object x="2277.92100" y="2253.41160" z="62.58725" h="75"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:1)-->
-	<spawn map="210060000" npcid="250092" pool="1" interval="295">
+	<spawn map="210060000" npcid="700400" pool="1" interval="295">
 		<object x="1426.23720" y="1570.77800" z="31.56350" h="75"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->

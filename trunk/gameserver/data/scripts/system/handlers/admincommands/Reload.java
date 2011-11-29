@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import static org.apache.commons.io.filefilter.FileFilterUtils.and;
@@ -21,24 +22,20 @@ import static org.apache.commons.io.filefilter.FileFilterUtils.makeSVNAware;
 import static org.apache.commons.io.filefilter.FileFilterUtils.notFileFilter;
 import static org.apache.commons.io.filefilter.FileFilterUtils.prefixFileFilter;
 import static org.apache.commons.io.filefilter.FileFilterUtils.suffixFileFilter;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.HiddenFileFilter;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
-
 import gameserver.GameServerError;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
@@ -62,11 +59,6 @@ import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.chathandlers.ChatHandlers;
 import gameserver.world.World;
 
-
-/**
- * @author MrPoke
- * 
- */
 public class Reload extends AdminCommand
 {
 	private static final Logger	log	= Logger.getLogger(Reload.class);

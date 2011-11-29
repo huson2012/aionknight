@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package admincommands;
 
 import commons.database.dao.DAOManager;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.PlayerDAO;
 import gameserver.model.gameobjects.player.Player;
@@ -26,11 +26,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 
-
-/**
- * @author Watson
- * 
- */
 public class Unban extends AdminCommand
 {
 	public Unban()
@@ -79,8 +74,8 @@ public class Unban extends AdminCommand
 				PacketSendUtility.sendMessage(admin, "Syntax: //unban <player name> <account | ip | full>");
 				return;
 			}
+		
 		}
-
 		LoginServer.getInstance().sendBanPacket(type, accountId, "", -1, admin.getObjectId());
 	}
 }

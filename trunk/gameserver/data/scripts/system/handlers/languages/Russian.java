@@ -14,15 +14,12 @@
  * You should have received a  copy  of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package languages;
 
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.Language;
 
-/**
- * @author Hilgert
- *
- */
 public class Russian extends Language
 {
 	public Russian()
@@ -93,6 +90,5 @@ public class Russian extends Language
 		addTranslatedMessage(CustomMessageId.COMMAND_XP_ALREADY_DISABLED, "Начисление XP отключено");
 		addTranslatedMessage(CustomMessageId.COMMAND_XP_ENABLED, "Начисление XP включено");
 		addTranslatedMessage(CustomMessageId.COMMAND_XP_ALREADY_ENABLED, "Начисление XP уже включено");
-
 	}
 }

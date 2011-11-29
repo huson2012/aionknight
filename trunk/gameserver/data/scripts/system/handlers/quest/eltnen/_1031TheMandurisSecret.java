@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package quest.eltnen;
 
+package quest.eltnen;
 
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
@@ -30,11 +30,6 @@ import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 
-
-/**
- * @author Sylar
- * 
- */
 public class _1031TheMandurisSecret extends QuestHandler
 {
 
@@ -219,8 +214,6 @@ public class _1031TheMandurisSecret extends QuestHandler
 
 			}
 		}
-
 		return false;
-
 	}
 }

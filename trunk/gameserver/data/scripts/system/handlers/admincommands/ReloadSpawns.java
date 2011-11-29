@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package admincommands;
 
+package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.AionObject;
@@ -29,12 +29,6 @@ import gameserver.spawn.SpawnEngine;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
-
-
-/**
- * @author Luno
- * 
- */
 
 public class ReloadSpawns extends AdminCommand
 {

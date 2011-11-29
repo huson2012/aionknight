@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -25,11 +26,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.ItemStoneListDAO;
 import gameserver.dao.MailDAO;
 import gameserver.model.gameobjects.Item;
@@ -40,11 +39,6 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.model.gameobjects.player.StorageType;
 
-
-/**
-
- *
- */
 public class MySQL5MailDAO extends MailDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5MailDAO.class);

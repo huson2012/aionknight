@@ -17,7 +17,6 @@
 
 package admincommands;
 
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.loginserver.LoginServer;
@@ -25,13 +24,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
-
-/**
- * Admin revoke command.
- *
- * @author Cyrakuse
- * @modified By Aionchs-Wylovech
- */
 
 public class Revoke extends AdminCommand
 {

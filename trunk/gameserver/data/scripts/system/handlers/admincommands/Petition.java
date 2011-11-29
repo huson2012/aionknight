@@ -1,4 +1,4 @@
-/** 
+/**
  * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.util.Collection;
-
 import commons.database.dao.DAOManager;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.PetitionDAO;
 import gameserver.dao.PlayerDAO;
@@ -31,10 +30,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
 
-
-/**
- * @author Sylar 
- */
 public class Petition extends AdminCommand
 {
 	public Petition()

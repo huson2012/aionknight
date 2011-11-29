@@ -1,10 +1,26 @@
+/**
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ *
+ * Aion-Knight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Aion-Knight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerCmotionListDAO;
@@ -14,16 +30,15 @@ import gameserver.model.gameobjects.player.Player;
 
 /**
  * @author jjhun
- * 
  */
 public class MySQL5PlayerCmotionListDAO extends PlayerCmotionListDAO 
 {
-    private static final String LOAD_CMOTION_QUERY   = "SELECT `cmotion_id`, `cmotion_active`, `cmotion_expires_time`, `cmotion_creation_time` FROM `player_cmotions` WHERE `player_id` = ?";
+    private static final String LOAD_CMOTION_QUERY = "SELECT `cmotion_id`, `cmotion_active`, `cmotion_expires_time`, `cmotion_creation_time` FROM `player_cmotions` WHERE `player_id` = ?";
     private static final String INSERT_CMOTION_QUERY = "INSERT INTO `player_cmotions`(`player_id`, `cmotion_id`, `cmotion_active`, `cmotion_expires_time`, `cmotion_creation_time`) VALUES (?,?,?,?,?)";
     private static final String DELETE_CMOTION_QUERY = "DELETE FROM `player_cmotions` WHERE `player_id` = ? AND `cmotion_id` = ?";
     private static final String UPDATE_CMOTION_QUERY = "UPDATE `player_cmotions` SET `cmotion_active` = ? WHERE `player_id` = ? AND `cmotion_id` = ?";
-    private static final String CHECK_CMOTION_QUERY  = "SELECT `cmotion_id` FROM `player_cmotions` WHERE `player_id`= ? AND `cmotion_id`= ?";
-    private static final Logger log                  = Logger.getLogger(MySQL5PlayerCmotionListDAO.class);
+    private static final String CHECK_CMOTION_QUERY = "SELECT `cmotion_id` FROM `player_cmotions` WHERE `player_id`= ? AND `cmotion_id`= ?";
+    private static final Logger log  = Logger.getLogger(MySQL5PlayerCmotionListDAO.class);
 
     @Override
     public CmotionList loadCmotionList(int playerId) 

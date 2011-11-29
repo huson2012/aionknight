@@ -14,21 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.io.File;
 import java.util.List;
-
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-
 import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.SpawnsData;
@@ -37,13 +35,6 @@ import gameserver.model.templates.WorldMapTemplate;
 import gameserver.model.templates.spawn.SpawnGroup;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
-
-
-/**
- * @author Luno
- (xml version)
- * 
- */
 
 public class SaveSpawnData extends AdminCommand
 {

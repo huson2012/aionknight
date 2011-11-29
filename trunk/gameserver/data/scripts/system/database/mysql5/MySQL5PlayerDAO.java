@@ -24,12 +24,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
 import javolution.util.FastMap;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.configs.main.GSConfig;
 import gameserver.dao.PlayerDAO;
 import gameserver.dataholders.DataManager;
@@ -44,22 +41,17 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.world.World;
 import gameserver.world.WorldPosition;
-
 import com.mysql.jdbc.exceptions.MySQLDataException;
 
 /**
  * Class that that is responsible for loading/storing {@link gameserver.model.gameobjects.player.Player}
  * object from MySQL 5.
- * 
- * @author SoulKeeper, Saelya
  */
 public class MySQL5PlayerDAO extends PlayerDAO
 {
-
 	/** Logger */
-	private static final Logger					log					= Logger.getLogger(MySQL5PlayerDAO.class);
-
-	private FastMap<Integer, PlayerCommonData>	playerCommonData	= new FastMap<Integer, PlayerCommonData>().shared();
+	private static final Logger	log	= Logger.getLogger(MySQL5PlayerDAO.class);
+	private FastMap<Integer, PlayerCommonData> playerCommonData	= new FastMap<Integer, PlayerCommonData>().shared();
 
 	/**
 	 * {@inheritDoc}
@@ -69,6 +61,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		Connection con = null;
 		boolean used = true;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -78,14 +71,17 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.next();
 			used = rs.getInt("cnt") > 0;
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 			used = true;
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
+		
 		}
 		return used;
 	}
@@ -97,6 +93,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void storePlayer(final Player player)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -132,10 +129,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 				stmt.execute();
 				stmt.close();
 			}
+			
 			catch (Exception e)
 			{
 				log.error("Error saving player: "+player.getObjectId()+" "+player.getName(), e);
 			}
+			
 			finally
 			{
 				DatabaseFactory.close(con);
@@ -148,6 +147,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public boolean saveNewPlayer(final PlayerCommonData pcd, final int accountId, final String accountName)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -156,7 +156,6 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			"VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?)");
 
 			log.debug("[DAO: MySQL5PlayerDAO] saving new player: "+pcd.getPlayerObjId()+" "+pcd.getName());
-
 			preparedStatement.setInt(1, pcd.getPlayerObjId());
 			preparedStatement.setString(2, pcd.getName());
 			preparedStatement.setInt(3, accountId);
@@ -176,11 +175,13 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			preparedStatement.execute();
 			preparedStatement.close();
 		}
+		
 		catch (Exception e)
 		{
 			log.error("Error saving new player: "+pcd.getPlayerObjId()+" "+pcd.getName(), e);
 			return false;
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -198,6 +199,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 		int playerObjId = 0;
 		
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -209,10 +211,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rset.close();
 			stmt.close();
 		}
+		
 		catch (Exception e)
 		{
 			log.fatal("Could not restore playerId data for player name: " + name + " from DB: "+e.getMessage(), e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -232,6 +236,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 
 		PlayerCommonData cached = playerCommonData.get(playerObjId);
+		
 		if(cached != null)
 		{
 			log.debug("[DAO: MySQL5PlayerDAO] PlayerCommonData for id: "+playerObjId+" obtained from cache");
@@ -240,6 +245,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 		final PlayerCommonData cd = new PlayerCommonData(playerObjId);
 		boolean success = false;
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -287,10 +293,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 
 				WorldPosition position = World.getInstance().createPosition(worldId, x, y, z, heading);
 				cd.setPosition(position);
+				
 				try
 				{
 					cd.setLastOnline(resultSet.getTimestamp("last_online"));
 				}
+				
 				catch(Exception e)
 				{
 					log.error(e);
@@ -302,10 +310,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			resultSet.close();
 			stmt.close();
 		}
+		
 		catch (Exception e)
 		{
 			log.fatal("Could not restore PlayerCommonData data for player: " + playerObjId + " from DB: "+e.getMessage(), e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -327,6 +337,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void deletePlayer(int playerId)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -334,10 +345,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			stmt.setInt(1, playerId);
 			stmt.execute();
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -352,6 +365,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		List<Integer> result = new ArrayList<Integer>();
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -363,11 +377,13 @@ public class MySQL5PlayerDAO extends PlayerDAO
 				result.add(resultSet.getInt("id"));
 			}
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 			result = null;
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -383,6 +399,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		Connection con = null;
 		int count = 0;
+		
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement("SELECT COUNT(*) AS rowCount FROM `players` WHERE `account_id` = ? AND `deletion_date` IS NULL");
@@ -395,12 +412,14 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			stmt.close();
 		}
+		
 		catch (MySQLDataException mde) { }
 		catch (Exception e)
 		{
 			log.warn("cannot load character count for account #"+accountId);
 			log.warn(e.getMessage());
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -416,6 +435,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -427,12 +447,14 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			acData.setDeletionDate(rset.getTimestamp("deletion_date"));
 			acData.setCreationDate(rset.getTimestamp("creation_date"));
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 			// temp hack to allow players to login with '0' value in DB
 			acData.setCreationDate(new Timestamp(System.currentTimeMillis()));
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -446,6 +468,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void updateDeletionTime(final int objectId, final Timestamp deletionDate)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -454,10 +477,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			stmt.setInt(2, objectId);
 			stmt.execute();
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -471,6 +496,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void storeCreationTime(final int objectId, final Timestamp creationDate)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -479,10 +505,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			preparedStatement.setInt(2, objectId);
 			preparedStatement.execute();
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -493,6 +521,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void storeLastOnlineTime(final int objectId, final Timestamp lastOnline)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -501,10 +530,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			preparedStatement.setInt(2, objectId);
 			preparedStatement.execute();
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -517,6 +548,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public int[] getUsedIDs()
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -533,10 +565,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			}
 			return ids;
 		}
+		
 		catch(SQLException e)
 		{
 			log.error("Can't get list of id's from players table", e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -552,6 +586,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void onlinePlayer(final Player player, final boolean online)
 	{
 		Connection con = null;
+		
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement("UPDATE players SET online=? WHERE id=?");
@@ -561,12 +596,14 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			log.debug("[DAO: MySQL5PlayerDAO] online status "+player.getObjectId()+" "+player.getName());
 			stmt.close();
 		}
+		
 		catch (MySQLDataException mde) { }
 		catch (Exception e)
 		{
 			log.warn("cannot set online status " + player.getObjectId() + " = " + online);
 			log.warn(e.getMessage());
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -580,6 +617,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	public void setPlayersOffline(final boolean online)
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -587,10 +625,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			stmt.setBoolean(1, online);
 			stmt.execute();
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -602,6 +642,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		Connection con = null;
 		String result = "";
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -613,11 +654,13 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			else
 				result = "";
 		}
+		
 		catch(Exception e)
 		{
 			log.error(e);
 			result = "";
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -633,6 +676,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		Connection con = null;
 		int accountId = 0;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -644,10 +688,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			s.close();
 		}
+		
 		catch (Exception e)
 		{
 			return 0;
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -669,6 +715,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		Connection con = null;
 		int count = 0;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -681,10 +728,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			s.close();
 		}
+		
 		catch (Exception e)
 		{
 			return 0;
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
@@ -698,6 +747,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	{
 		Connection con = null;
 		int count = 0;
+		
 		try
 		{
 			con = DatabaseFactory.getConnection();
@@ -709,10 +759,12 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			s.close();
 		}
+		
 		catch (Exception e)
 		{
 			return 0;
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);

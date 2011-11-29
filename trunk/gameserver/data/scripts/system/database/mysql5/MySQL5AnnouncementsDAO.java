@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -22,23 +23,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.AnnouncementsDAO;
 import gameserver.model.Announcement;
 
-
 /**
  * AccountTime DAO implementation for MySQL5
- * 
- * @author Divinity
- * 
  */
 public class MySQL5AnnouncementsDAO extends AnnouncementsDAO
 {
-	private static final Logger	log				= Logger.getLogger(MySQL5AnnouncementsDAO.class);
+	private static final Logger	log	= Logger.getLogger(MySQL5AnnouncementsDAO.class);
 	/**
 	 * {@inheritDoc}
 	 */

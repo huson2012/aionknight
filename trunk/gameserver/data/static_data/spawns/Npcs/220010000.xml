@@ -337,11 +337,11 @@
 		<object x="489.88107" y="2415.086" z="266.54297" h="104"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220010000" npcid="700062" pool="1" interval="295">
+	<spawn map="220010000" npcid="700063" pool="1" interval="295">
 		<object staticid="725" x="587.68817" y="2467.2467" z="278.78824" h="0"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220010000" npcid="700063" pool="1" interval="295">
+	<spawn map="220010000" npcid="700064" pool="1" interval="295">
 		<object staticid="565" x="936.88916" y="1704.7136" z="259.47565" h="0"/>
 	</spawn>
 	<!-- Osmar (NPC Normal lvl:40)-->

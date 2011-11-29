@@ -17,16 +17,10 @@
 
 package admincommands;
 
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
-
-/**
- * @author Andy
- * @author Divinity - update
- */
 
 public class Invul extends AdminCommand
 {

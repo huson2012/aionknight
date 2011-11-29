@@ -17,7 +17,6 @@
 
 package admincommands;
 
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.services.TeleportService;

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package admincommands;
 
+package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.Item;
@@ -27,11 +27,6 @@ import gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 
-
-/**
- * @author loleron
- */
- 
 public class Dye extends AdminCommand
 {
 

@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.io.File;
@@ -21,7 +22,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -30,9 +30,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import org.apache.log4j.Logger;
-
 import gameserver.GameServerError;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
@@ -43,22 +41,6 @@ import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
-
-
-/**
- * This admin command is used for sending custom packets from server to client.
- * <p/>
- * Sends packets based on xml mappings in folder "./data/packets".<br />
- * Command details: "//send [1]<br />
- * * 1 - packet mappings name.<br />
- * *   - 'demo' for file './data/packets/demo.xml'<br />
- * *   - 'test' for file './data/packets/test.xml'<br />
- * * Reciever is a targetted by admin player. If target is 'null' or not a Player - sends to admin.<br />
- * <p/> 
- * Created on: 14.07.2009 13:54:46
- *
- * @author Aquanox
- */
 
 public class AdvSendFakeServerPacket extends AdminCommand
 {

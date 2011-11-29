@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.util.List;
-
 import commons.utils.AEInfos;
-
 import gameserver.ShutdownHook;
 import gameserver.ShutdownHook.ShutdownMode;
 import gameserver.configs.administration.AdminConfig;
@@ -29,17 +28,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
 
-
-/**
- * @author lord_rex
- * 
- * //sys info - System Informations
- * //sys memory - Memory Informations
- * //sys gc - Garbage Collector
- * //sys shutdown <seconds> <announceInterval> - Call shutdown
- * //sys restart <seconds> <announceInterval> - Call restart
- * //sys threadpool - Thread pools info
- */
 public class AESystem extends AdminCommand
 {
 

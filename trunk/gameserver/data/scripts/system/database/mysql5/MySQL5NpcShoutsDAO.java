@@ -14,30 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import javolution.util.FastMap;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.NpcShoutsDAO;
 import gameserver.model.NpcShout;
 import gameserver.model.ShoutEventType;
 
-
-
-/**
- * @author Sylar, modified Rolandas
- *
- */
 public class MySQL5NpcShoutsDAO extends NpcShoutsDAO
 {
 
@@ -86,5 +77,4 @@ public class MySQL5NpcShoutsDAO extends NpcShoutsDAO
 	{
 		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
 	}
-
 }

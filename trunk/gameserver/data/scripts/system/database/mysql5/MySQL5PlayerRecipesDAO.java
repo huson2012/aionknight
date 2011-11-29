@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight <aionu-unique.org>.
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -21,18 +22,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashSet;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerRecipesDAO;
 import gameserver.model.gameobjects.player.RecipeList;
 
-
-/**
- * @author lord_rex
- *
- */
 public class MySQL5PlayerRecipesDAO extends PlayerRecipesDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5PlayerRecipesDAO.class);

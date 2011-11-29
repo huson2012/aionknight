@@ -14,33 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerTitleListDAO;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.Title;
 import gameserver.model.gameobjects.player.TitleList;
 
-
-/**
- * @author blakawk, ginho1
- *
- */
 public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 {
 	private static final String LOAD_QUERY = "SELECT `title_id`, `title_expires_time`, `title_date` FROM `player_titles` WHERE `player_id`=?";
 	private static final String INSERT_QUERY = "INSERT INTO `player_titles`(`player_id`,`title_id`, `title_expires_time`, `title_date`) VALUES (?,?,?,?)";
 	private static final String CHECK_QUERY = "SELECT `title_id` FROM `player_titles` WHERE `player_id`=? AND `title_id`=?";
 	private static final String DELETE_QUERY = "DELETE FROM `player_titles` WHERE `player_id` = ? AND `title_id` = ?";
-
 	private static final Logger log = Logger.getLogger(MySQL5PlayerTitleListDAO.class);
 	
 	@Override
@@ -156,5 +149,4 @@ public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 	{
 		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
 	}
-
 }

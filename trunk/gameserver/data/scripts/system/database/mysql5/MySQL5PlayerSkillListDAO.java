@@ -22,23 +22,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerSkillListDAO;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.SkillList;
 import gameserver.model.gameobjects.player.SkillListEntry;
 
-
-/**
- * Created on: 15.07.2009 19:33:07
- * Edited On:  13.09.2009 19:48:00
- *
- * @author IceReaper, orfeo087, Avol, AEJTester
- */
 public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5PlayerSkillListDAO.class);

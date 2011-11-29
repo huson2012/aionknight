@@ -30,7 +30,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 {
 
 	/** Logger */
-	private static final Logger					log					= Logger.getLogger(MySQL5PlayerLifeStatsDAO.class);
+	private static final Logger log = Logger.getLogger(MySQL5PlayerLifeStatsDAO.class);
 
 	public static final String INSERT_QUERY = "INSERT INTO `player_life_stats` (`player_id`, `hp`, `mp`, `fp`) VALUES (?,?,?,?)";
 	public static final String DELETE_QUERY = "DELETE FROM `player_life_stats` WHERE `player_id`=?";

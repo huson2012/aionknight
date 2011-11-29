@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -24,10 +25,8 @@ import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.TreeMap;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.LegionDAO;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.PersistentState;
@@ -38,44 +37,41 @@ import gameserver.model.legion.LegionHistory;
 import gameserver.model.legion.LegionHistoryType;
 import gameserver.model.legion.LegionWarehouse;
 
-
 /**
  * Class that that is responsible for loading/storing {@link gameserver.model.legion.Legion} object from
  * MySQL 5.
- * 
- * @author Simple
  */
 public class MySQL5LegionDAO extends LegionDAO
 {
 	/** Logger */
-	private static final Logger	log								= Logger.getLogger(MySQL5LegionDAO.class);
+	private static final Logger	log = Logger.getLogger(MySQL5LegionDAO.class);
 
 	/** Legion Queries */
-	private static final String	INSERT_LEGION_QUERY				= "INSERT INTO legions(id, `name`) VALUES (?, ?)";
-	private static final String	SELECT_LEGION_QUERY1			= "SELECT * FROM legions WHERE id=?";
-	private static final String	SELECT_LEGION_QUERY2			= "SELECT * FROM legions WHERE name=?";
-	private static final String	DELETE_LEGION_QUERY				= "DELETE FROM legions WHERE id = ?";
-	private static final String UPDATE_LEGION_QUERY             = "UPDATE legions SET name=?, level=?, contribution_points=?, legionary_permission1=?, legionary_permission2=?, centurion_permission1=?, centurion_permission2=?, deputy_permission1=?, deputy_permission2=?, volunteer_permission1=?, volunteer_permission2=?, disband_time=? WHERE id=?";
+	private static final String	INSERT_LEGION_QUERY = "INSERT INTO legions(id, `name`) VALUES (?, ?)";
+	private static final String	SELECT_LEGION_QUERY1 = "SELECT * FROM legions WHERE id=?";
+	private static final String	SELECT_LEGION_QUERY2 = "SELECT * FROM legions WHERE name=?";
+	private static final String	DELETE_LEGION_QUERY = "DELETE FROM legions WHERE id = ?";
+	private static final String UPDATE_LEGION_QUERY = "UPDATE legions SET name=?, level=?, contribution_points=?, legionary_permission1=?, legionary_permission2=?, centurion_permission1=?, centurion_permission2=?, deputy_permission1=?, deputy_permission2=?, volunteer_permission1=?, volunteer_permission2=?, disband_time=? WHERE id=?";
 
 	/** Legion Ranking Queries **/
-	private static final String	SELECT_LEGIONRANKING_QUERY		= "SELECT id, contribution_points FROM legions ORDER BY contribution_points DESC;";
+	private static final String	SELECT_LEGIONRANKING_QUERY = "SELECT id, contribution_points FROM legions ORDER BY contribution_points DESC;";
 
 	/** Announcement Queries **/
-	private static final String	INSERT_ANNOUNCEMENT_QUERY		= "INSERT INTO legion_announcement_list(`legion_id`, `announcement`, `date`) VALUES (?, ?, ?)";
-	private static final String	SELECT_ANNOUNCEMENTLIST_QUERY	= "SELECT * FROM legion_announcement_list WHERE legion_id=? ORDER BY date ASC LIMIT 0,7;";
-	private static final String	DELETE_ANNOUNCEMENT_QUERY		= "DELETE FROM legion_announcement_list WHERE legion_id = ? AND date = ?";
+	private static final String	INSERT_ANNOUNCEMENT_QUERY = "INSERT INTO legion_announcement_list(`legion_id`, `announcement`, `date`) VALUES (?, ?, ?)";
+	private static final String	SELECT_ANNOUNCEMENTLIST_QUERY = "SELECT * FROM legion_announcement_list WHERE legion_id=? ORDER BY date ASC LIMIT 0,7;";
+	private static final String	DELETE_ANNOUNCEMENT_QUERY = "DELETE FROM legion_announcement_list WHERE legion_id = ? AND date = ?";
 
 	/** Emblem Queries **/
-	private static final String	INSERT_EMBLEM_QUERY				= "INSERT INTO legion_emblems(legion_id, emblem_ver, color_r, color_g, color_b, custom, emblem_data) VALUES (?, ?, ?, ?, ?, ?, ?)";
-	private static final String	UPDATE_EMBLEM_QUERY				= "UPDATE legion_emblems SET emblem_ver=?, color_r=?, color_g=?, color_b=?, custom=?, emblem_data=? WHERE legion_id=?";
-	private static final String	SELECT_EMBLEM_QUERY				= "SELECT * FROM legion_emblems WHERE legion_id=?";
+	private static final String	INSERT_EMBLEM_QUERY = "INSERT INTO legion_emblems(legion_id, emblem_ver, color_r, color_g, color_b, custom, emblem_data) VALUES (?, ?, ?, ?, ?, ?, ?)";
+	private static final String	UPDATE_EMBLEM_QUERY = "UPDATE legion_emblems SET emblem_ver=?, color_r=?, color_g=?, color_b=?, custom=?, emblem_data=? WHERE legion_id=?";
+	private static final String	SELECT_EMBLEM_QUERY = "SELECT * FROM legion_emblems WHERE legion_id=?";
 	
 	/** Storage Queries **/
-	private static final String	SELECT_STORAGE_QUERY			= "SELECT `itemUniqueId`, `itemId`, `itemCount`, `itemOwner`, `itemColor`, `isEquiped`, `slot`, `enchant`, `itemSkin`, `fusionedItem`, `optionalSocket`, `optionalFusionSocket`, `itemCreator`, `itemCreationTime`, `itemExistTime`, `itemTradeTime` FROM `inventory` WHERE `itemOwner`=? AND `itemLocation`=? AND `isEquiped`=?";
+	private static final String	SELECT_STORAGE_QUERY = "SELECT `itemUniqueId`, `itemId`, `itemCount`, `itemOwner`, `itemColor`, `isEquiped`, `slot`, `enchant`, `itemSkin`, `fusionedItem`, `optionalSocket`, `optionalFusionSocket`, `itemCreator`, `itemCreationTime`, `itemExistTime`, `itemTradeTime` FROM `inventory` WHERE `itemOwner`=? AND `itemLocation`=? AND `isEquiped`=?";
 
 	/** History Queries **/
-	private static final String	INSERT_HISTORY_QUERY			= "INSERT INTO legion_history(`legion_id`, `date`, `history_type`, `name`) VALUES (?, ?, ?, ?)";
-	private static final String	SELECT_HISTORY_QUERY			= "SELECT * FROM `legion_history` WHERE legion_id=? ORDER BY date ASC;";
+	private static final String	INSERT_HISTORY_QUERY = "INSERT INTO legion_history(`legion_id`, `date`, `history_type`, `name`) VALUES (?, ?, ?, ?)";
+	private static final String	SELECT_HISTORY_QUERY = "SELECT * FROM `legion_history` WHERE legion_id=? ORDER BY date ASC;";
 
 	/**
 	 * {@inheritDoc}
@@ -196,12 +192,15 @@ public class MySQL5LegionDAO extends LegionDAO
 
                 legion.setLegionPermissions(
                         resultSet.getInt("legionary_permission1"), 
-                        resultSet.getInt("legionary_permission2"), 
+                        resultSet.getInt("legionary_permission2"),
+						
                         resultSet.getInt("centurion_permission1"), 
                         resultSet.getInt("centurion_permission2"),
-                        resultSet.getInt("deputy_permission1"), 
+                        
+						resultSet.getInt("deputy_permission1"), 
                         resultSet.getInt("deputy_permission2"),
-                        resultSet.getInt("volunteer_permission1"), 
+                        
+						resultSet.getInt("volunteer_permission1"), 
                         resultSet.getInt("volunteer_permission2"));
 
 				legion.setDisbandTime(resultSet.getInt("disband_time"));
@@ -247,11 +246,14 @@ public class MySQL5LegionDAO extends LegionDAO
 				legion.setLegionPermissions(
                         resultSet.getInt("legionary_permission1"), 
 				        resultSet.getInt("legionary_permission2"), 
-				        resultSet.getInt("centurion_permission1"), 
+				        
+						resultSet.getInt("centurion_permission1"), 
 				        resultSet.getInt("centurion_permission2"),
-                        resultSet.getInt("deputy_permission1"), 
+                        
+						resultSet.getInt("deputy_permission1"), 
                         resultSet.getInt("deputy_permission2"),
-                        resultSet.getInt("volunteer_permission1"), 
+                        
+						resultSet.getInt("volunteer_permission1"), 
                         resultSet.getInt("volunteer_permission2"));
 
 				legion.setDisbandTime(resultSet.getInt("disband_time"));

@@ -14,16 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerQuestListDAO;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Player;
@@ -31,11 +30,6 @@ import gameserver.model.gameobjects.player.QuestStateList;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 
-
-/**
- * @author MrPoke
- * 
- */
 public class MySQL5PlayerQuestListDAO extends PlayerQuestListDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5PlayerQuestListDAO.class);
@@ -230,5 +224,4 @@ public class MySQL5PlayerQuestListDAO extends PlayerQuestListDAO
 	{
 		return MySQL5DAOUtils.supports(s, i, i1);
 	}
-
 }

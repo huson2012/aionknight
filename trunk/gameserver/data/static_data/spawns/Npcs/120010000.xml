@@ -888,7 +888,7 @@
 		<object x="1218.7971" y="1518.7852" z="215.0" h="75"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="120010000" npcid="700257" pool="1" interval="295">
+	<spawn map="120010000" npcid="700068" pool="1" interval="295">
 		<object x="1457.07" y="1413.6259" z="178.26524" h="29" staticid="1195"/>
 	</spawn>
 	<!-- Obirunerk (NPC Normal lvl:15)-->

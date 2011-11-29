@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -21,20 +22,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Iterator;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.dao.PlayerEffectsDAO;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.model.Effect;
 
-
-/**
-
- *
- */
 public class MySQL5PlayerEffectsDAO extends PlayerEffectsDAO
 {
 	public static final String INSERT_QUERY = "INSERT INTO `player_effects` (`player_id`, `skill_id`, `delay_id`, `skill_lvl`, `current_time`, `reuse_delay`) VALUES (?,?,?,?,?,?)";
