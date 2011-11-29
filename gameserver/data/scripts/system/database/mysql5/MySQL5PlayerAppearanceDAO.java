@@ -20,18 +20,14 @@ package mysql5;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerAppearanceDAO;
 import gameserver.model.gameobjects.player.PlayerAppearance;
 
-
 /**
- * Class that is responsible for loading/storing {@link gameserver.model.gameobjects.player.PlayerAppearance} in mysql5
- * 
- * @author SoulKeeper, AEJTester, srx47
+ * Class that is responsible for loading/storing {@link gameserver.model.gameobjects.player.PlayerAppearance} 
+ * in mysql5
  */
 public class MySQL5PlayerAppearanceDAO extends PlayerAppearanceDAO
 {

@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -22,13 +23,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import commons.database.DB;
 import commons.database.DatabaseFactory;
 import commons.database.IUStH;
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.BlockListDAO;
 import gameserver.dao.PlayerDAO;
 import gameserver.model.gameobjects.player.BlockList;
@@ -36,20 +35,16 @@ import gameserver.model.gameobjects.player.BlockedPlayer;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 
-
 /**
  * MySQL5 DAO for editing the block list
- * @author Ben
- *
  */
 public class MySQL5BlockListDAO extends BlockListDAO
 {
-	public static final String 	LOAD_QUERY 			= "SELECT blocked_player, reason FROM blocks WHERE player=?";
-	public static final String	ADD_QUERY 			= "INSERT INTO blocks (player, blocked_player, reason) VALUES (?, ?, ?)";
-	public static final String 	DEL_QUERY			= "DELETE FROM blocks WHERE player=? AND blocked_player=?";
-	public static final String 	SET_REASON_QUERY	= "UPDATE blocks SET reason=? WHERE player=? AND blocked_player=?";
-	
-	private static Logger		log			= Logger.getLogger(MySQL5BlockListDAO.class);
+	public static final String LOAD_QUERY = "SELECT blocked_player, reason FROM blocks WHERE player=?";
+	public static final String ADD_QUERY = "INSERT INTO blocks (player, blocked_player, reason) VALUES (?, ?, ?)";
+	public static final String DEL_QUERY = "DELETE FROM blocks WHERE player=? AND blocked_player=?";
+	public static final String SET_REASON_QUERY = "UPDATE blocks SET reason=? WHERE player=? AND blocked_player=?";
+	private static Logger log = Logger.getLogger(MySQL5BlockListDAO.class);
 	
 	/**
 	 * {@inheritDoc}

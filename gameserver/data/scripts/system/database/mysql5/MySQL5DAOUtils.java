@@ -14,19 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 /**
  * DAO utils for MySQL5
- * 
- * @author SoulKeeper
  */
 public class MySQL5DAOUtils
 {
 	/**
 	 * Constant for MySQL name ;)
 	 */
-	public static final String	MYSQL_DB_NAME	= "MySQL";
+	public static final String MYSQL_DB_NAME = "MySQL";
 
 	/**
 	 * Returns true only if DB supports MySQL5

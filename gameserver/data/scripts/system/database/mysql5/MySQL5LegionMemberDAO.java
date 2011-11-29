@@ -21,10 +21,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.LegionMemberDAO;
 import gameserver.model.PlayerClass;
 import gameserver.model.legion.LegionMember;
@@ -32,28 +30,25 @@ import gameserver.model.legion.LegionMemberEx;
 import gameserver.model.legion.LegionRank;
 import gameserver.services.LegionService;
 
-
 /**
  * Class that that is responsible for loading/storing {@link gameserver.model.legion.LegionMember} object
  * from MySQL 5.
- * 
- * @author Simple
  */
 public class MySQL5LegionMemberDAO extends LegionMemberDAO
 {
 	/** Logger */
-	private static final Logger	log								= Logger.getLogger(MySQL5LegionMemberDAO.class);
+	private static final Logger	log	= Logger.getLogger(MySQL5LegionMemberDAO.class);
 
 	/** LegionMember Queries */
-	private static final String	INSERT_LEGIONMEMBER_QUERY		= "INSERT INTO legion_members(`legion_id`, `player_id`, `rank`) VALUES (?, ?, ?)";
-	private static final String	UPDATE_LEGIONMEMBER_QUERY		= "UPDATE legion_members SET nickname=?, rank=?, selfintro=? WHERE player_id=?";
-	private static final String	SELECT_LEGIONMEMBER_QUERY		= "SELECT * FROM legion_members WHERE player_id = ?";
-	private static final String	DELETE_LEGIONMEMBER_QUERY		= "DELETE FROM legion_members WHERE player_id = ?";
-	private static final String	SELECT_LEGIONMEMBERS_QUERY		= "SELECT player_id FROM legion_members WHERE legion_id = ?";
+	private static final String	INSERT_LEGIONMEMBER_QUERY = "INSERT INTO legion_members(`legion_id`, `player_id`, `rank`) VALUES (?, ?, ?)";
+	private static final String	UPDATE_LEGIONMEMBER_QUERY = "UPDATE legion_members SET nickname=?, rank=?, selfintro=? WHERE player_id=?";
+	private static final String	SELECT_LEGIONMEMBER_QUERY = "SELECT * FROM legion_members WHERE player_id = ?";
+	private static final String	DELETE_LEGIONMEMBER_QUERY = "DELETE FROM legion_members WHERE player_id = ?";
+	private static final String	SELECT_LEGIONMEMBERS_QUERY = "SELECT player_id FROM legion_members WHERE legion_id = ?";
 
 	/** LegionMemberEx Queries **/
-	private static final String	SELECT_LEGIONMEMBEREX_QUERY		= "SELECT players.name, players.exp, players.player_class, players.last_online, players.world_id, legion_members.* FROM players, legion_members WHERE id = ? AND players.id=legion_members.player_id";
-	private static final String	SELECT_LEGIONMEMBEREX2_QUERY	= "SELECT players.id, players.exp, players.player_class, players.last_online, players.world_id, legion_members.* FROM players, legion_members WHERE name = ? AND players.id=legion_members.player_id";
+	private static final String	SELECT_LEGIONMEMBEREX_QUERY = "SELECT players.name, players.exp, players.player_class, players.last_online, players.world_id, legion_members.* FROM players, legion_members WHERE id = ? AND players.id=legion_members.player_id";
+	private static final String	SELECT_LEGIONMEMBEREX2_QUERY = "SELECT players.id, players.exp, players.player_class, players.last_online, players.world_id, legion_members.* FROM players, legion_members WHERE name = ? AND players.id=legion_members.player_id";
 
 	/**
 	 * {@inheritDoc}

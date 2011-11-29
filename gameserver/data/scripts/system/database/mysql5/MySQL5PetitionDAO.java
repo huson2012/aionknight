@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -22,19 +23,13 @@ import java.sql.ResultSet;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PetitionDAO;
 import gameserver.model.Petition;
 import gameserver.model.PetitionStatus;
-
 import com.mysql.jdbc.exceptions.MySQLDataException;
 
-/**
- * @author Sylar
- */
 public class MySQL5PetitionDAO extends PetitionDAO
 {
 	

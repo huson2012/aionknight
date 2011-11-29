@@ -506,15 +506,15 @@
 		<object x="2920.958" y="2428.008" z="15.306137" h="42"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220050000" npcid="700258" pool="1" interval="295">
+	<spawn map="220050000" npcid="700344" pool="1" interval="295">
 		<object x="2929.0583" y="2432.0798" z="17.00346" h="70"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220050000" npcid="700260" pool="1" interval="295">
+	<spawn map="220050000" npcid="700402" pool="1" interval="295">
 		<object x="443.3006" y="853.76495" z="75.33362" h="0"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220050000" npcid="700259" pool="1" interval="295">
+	<spawn map="220050000" npcid="700401" pool="1" interval="295">
 		<object x="1387.059" y="2025.4006" z="51.843422" h="0"/>
 	</spawn>
 	<!-- Old Wooden Box (Object Normal lvl:1)-->

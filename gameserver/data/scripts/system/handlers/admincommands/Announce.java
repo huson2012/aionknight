@@ -1,4 +1,4 @@
-/** 
+/**
  * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package admincommands;
 
+package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.CustomConfig;
@@ -25,17 +25,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
 
-
-/**
- * @author Ben, Ritsu
- * 
- * Smart Matching Enabled
- * //announce a message
- * The above example will work for "anonymous" flag.
- * //announce name message
- * The above example will show "[GM] Name: message".
- * 
- */
 public class Announce extends AdminCommand
 {
 	public Announce()

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package admincommands;
 
+package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.Item;
@@ -28,9 +28,6 @@ import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
 
-/**
- * @author Phantom, ATracer
- */
 public class Remove extends AdminCommand
 {
 

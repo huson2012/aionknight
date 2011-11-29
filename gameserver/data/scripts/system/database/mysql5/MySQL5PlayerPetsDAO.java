@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -22,19 +23,13 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerPetsDAO;
 import gameserver.model.gameobjects.player.PetFeedState;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.ToyPet;
 
-
-/**
- * @author Sylar
- */
 public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 {
 	private static final Logger					log					= Logger.getLogger(MySQL5PlayerDAO.class);
@@ -235,5 +230,4 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 		}
 		return true;
 	}
-
 }

@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package admincommands;
 
+package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.EmotionType;
@@ -24,12 +24,6 @@ import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
-
-/**
- * 
-
- *
- */
 
 public class Speed extends AdminCommand
 {

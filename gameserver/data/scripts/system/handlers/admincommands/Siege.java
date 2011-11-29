@@ -18,8 +18,6 @@
 package admincommands;
 
 import java.util.Map;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.SiegeConfig;
 import gameserver.model.gameobjects.player.Player;
@@ -32,19 +30,6 @@ import gameserver.services.SiegeService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
-
-/**
- * @author Sarynth, Dallas 03/11
- * 
- * Command Syntax
- * //siege capture <location id> <race id> [legion id]
- * //siege set <location id> <current state> [next state] 
- * [not implemented] //siege timer <reset|set [time]>
- * //siege help
- * 
- * TODO: use StringBuilder
- */
-
 
 public class Siege extends AdminCommand
 {
@@ -425,10 +410,8 @@ public class Siege extends AdminCommand
          */
         private void sendHelpCapture(Player admin)
         {
-                PacketSendUtility.sendMessage(admin,
-                        "Syntax: //siege capture <location id> <race> [legion id]\n" +
-                        "Race may be: Elyos, Asmos, Balaur. (Not case sensitive.)");
+			PacketSendUtility.sendMessage(admin,
+				"Syntax: //siege capture <location id> <race> [legion id]\n" +
+				"Race may be: Elyos, Asmos, Balaur. (Not case sensitive.)");
         }
-
-
 }

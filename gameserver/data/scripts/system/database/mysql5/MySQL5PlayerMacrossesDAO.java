@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight <aionunique.smfnew.com>.
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -21,25 +22,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerMacrossesDAO;
 import gameserver.model.gameobjects.player.MacroList;
 
-
-/**
- * Created on: 13.07.2009 19:33:07
- *
- * @author Aquanox
- */
 public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 {
 	private static Logger log = Logger.getLogger(MySQL5PlayerMacrossesDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `player_macrosses` (`player_id`, `order`, `macro`) VALUES (?,?,?)";
-	public static final String	UPDATE_QUERY	= "UPDATE `player_macrosses` SET `macro`=? WHERE `player_id`=? AND `order`=?";
+	public static final String	UPDATE_QUERY = "UPDATE `player_macrosses` SET `macro`=? WHERE `player_id`=? AND `order`=?";
 	public static final String DELETE_QUERY = "DELETE FROM `player_macrosses` WHERE `player_id`=? AND `order`=?";
 	public static final String SELECT_QUERY = "SELECT `order`, `macro` FROM `player_macrosses` WHERE `player_id`=?";
 

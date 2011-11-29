@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -22,18 +23,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.SiegeDAO;
 import gameserver.model.siege.SiegeLocation;
 import gameserver.model.siege.SiegeRace;
 
-
-/**
- * @author Sarynth
- */
 public class MySQL5SiegeDAO extends SiegeDAO
 {
 	public static final String SELECT_QUERY = "SELECT `id`, `race`, `legion_id` FROM `siege_locations`";
@@ -180,6 +175,4 @@ public class MySQL5SiegeDAO extends SiegeDAO
 	
 		}
 	}
-
-
 }

@@ -14,17 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
 
 import gameserver.dao.ItemStoneListDAO;
 import gameserver.model.gameobjects.Item;
@@ -32,24 +23,25 @@ import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.items.FusionStone;
 import gameserver.model.items.GodStone;
-import gameserver.model.items.ManaStone;
 import gameserver.model.items.ItemStone.ItemStoneType;
+import gameserver.model.items.ManaStone;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import org.apache.log4j.Logger;
+import commons.database.DatabaseFactory;
 
-
-/**
-
- *
- */
 public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 {
 	private static final Logger	log	= Logger.getLogger(MySQL5ItemStoneListDAO.class);
-
 	public static final String INSERT_QUERY = "INSERT INTO `item_stones` (`itemUniqueId`, `itemId`, `slot`, `category`) VALUES (?,?,?, ?)";
 	public static final String UPDATE_QUERY = "UPDATE `item_stones` SET `itemId`=? where `itemUniqueId`=? AND `category`=?";
 	public static final String DELETE_QUERY = "DELETE FROM `item_stones` WHERE `itemUniqueId`=? AND slot=? AND category=?";
 	public static final String SELECT_QUERY = "SELECT `itemId`, `slot`, `category` FROM `item_stones` WHERE `itemUniqueId`=?";
 	
-
 	@Override
 	public void load(final List<Item> items)
 	{
@@ -233,8 +225,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 
 	/**
-	 * Adds new item stone to item
-	 * 
+	 *  Adds new item stone to item
+	 *  
 	 * @param itemObjId
 	 * @param itemId
 	 * @param statEnum
@@ -265,8 +257,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 	
 	/**
-	 * Adds new fusion item stone to item
-	 * 
+	 *  Adds new fusion item stone to item
+	 *  
 	 * @param itemObjId
 	 * @param itemId
 	 * @param statEnum
@@ -353,8 +345,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 
 	/**
-	 * Deleted item stone from selected item
-	 * 
+	 *  Deleted item stone from selected item
+	 *  
 	 * @param itemObjId
 	 * @param slot
 	 */
@@ -381,8 +373,8 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	}
 	
 	/**
-	 * Deleted item stone from selected item
-	 * 
+	 *  Deleted item stone from selected item
+	 *  
 	 * @param itemObjId
 	 * @param slot
 	 */
@@ -440,5 +432,4 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
     {
         return MySQL5DAOUtils.supports(s, i, i1);
     }
-
 }

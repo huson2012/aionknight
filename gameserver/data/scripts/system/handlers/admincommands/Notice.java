@@ -17,20 +17,12 @@
 
 package admincommands;
 
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.ChatType;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
-
-/**
- * Admin notice command
- *
- * @author Jenose
- * Updated By Darkwolf
- */
 
 public class Notice extends AdminCommand
 {

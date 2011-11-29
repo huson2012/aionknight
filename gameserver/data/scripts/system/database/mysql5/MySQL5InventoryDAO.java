@@ -1,5 +1,5 @@
 /**
- * This file is part of Aion-Knight <aionu-unique.com>.
+ * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -23,10 +24,8 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.InventoryDAO;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.PersistentState;
@@ -37,11 +36,6 @@ import gameserver.model.gameobjects.player.StorageType;
 import gameserver.services.ItemService;
 import gameserver.utils.idfactory.IDFactory;
 
-
-/**
-
- * 
- */
 public class MySQL5InventoryDAO extends InventoryDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5InventoryDAO.class);
@@ -529,5 +523,4 @@ public class MySQL5InventoryDAO extends InventoryDAO
 	{
 		return MySQL5DAOUtils.supports(s, i, i1);
 	}
-
 }

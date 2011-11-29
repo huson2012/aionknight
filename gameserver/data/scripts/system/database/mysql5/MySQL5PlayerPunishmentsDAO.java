@@ -14,23 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerPunishmentsDAO;
 import gameserver.model.gameobjects.player.Player;
 
-
-/**
- * @author lord_rex
- * 
- */
 public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 {
 	public static final String	SELECT_QUERY	= "SELECT `player_id`, `punishment_status`, `punishment_timer` FROM `player_punishments` WHERE `player_id`=?";

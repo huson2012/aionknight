@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.sql.Connection;
@@ -21,11 +22,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.FriendListDAO;
 import gameserver.dao.PlayerDAO;
 import gameserver.model.gameobjects.player.Friend;
@@ -33,19 +32,11 @@ import gameserver.model.gameobjects.player.FriendList;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 
-
-/**
- * @author Ben
- *
- */
 public class MySQL5FriendListDAO extends FriendListDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5FriendListDAO.class);
-
 	public static final String LOAD_QUERY = "SELECT * FROM `friends` WHERE `player`=?";
-	
 	public static final String ADD_QUERY = "INSERT IGNORE INTO `friends` (`player`,`friend`) VALUES (?, ?)";
-	
 	public static final String DEL_QUERY = "DELETE FROM friends WHERE player = ? AND friend = ?";
 
 	/** (non-Javadoc)

@@ -17,7 +17,6 @@
 
 package admincommands;
 
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.alliance.PlayerAllianceMember;
 import gameserver.model.gameobjects.player.Player;
@@ -27,12 +26,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
-
-/**
- * Admin movetome command.
- *
- * @author Cyrakuse
- */
 
 public class MoveToMe extends AdminCommand
 {

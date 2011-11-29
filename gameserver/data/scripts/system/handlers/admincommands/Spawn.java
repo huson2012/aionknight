@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.util.Map;
 import java.util.Map.Entry;
-
 import commons.database.dao.DAOManager;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.SpawnDAO;
 import gameserver.model.gameobjects.AionObject;
@@ -33,12 +32,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
 import gameserver.world.exceptions.AlreadySpawnedException;
-
-
-/**
- * @author Luno
- * @author blakawk
- */
 
 public class Spawn extends AdminCommand 
 {

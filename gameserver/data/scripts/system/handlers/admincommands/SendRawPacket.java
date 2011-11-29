@@ -14,29 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET;
 import gameserver.network.aion.serverpackets.SM_CUSTOM_PACKET.PacketElementType;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
-
-
-/**
- * Send packet in raw format.
- *
- * @author Luno
- * @author Aquanox
- */
 
 public class SendRawPacket extends AdminCommand
 {

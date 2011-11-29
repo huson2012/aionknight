@@ -782,27 +782,27 @@
 		<object x="951.16846" y="2211.89450" z="254.00000" h="35"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210020000" npcid="700016" pool="1" interval="295">
+	<spawn map="210020000" npcid="700022" pool="1" interval="295">
 		<object x="666.81050" y="419.83698" z="332.51290" h="25"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210020000" npcid="700017" pool="1" interval="295">
+	<spawn map="210020000" npcid="700023" pool="1" interval="295">
 		<object x="1945.23120" y="2011.32450" z="362.29565" h="25"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210020000" npcid="700018" pool="1" interval="295">
+	<spawn map="210020000" npcid="700257" pool="1" interval="295">
 		<object x="2418.48600" y="2756.52690" z="364.97110" h="25"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210020000" npcid="700019" pool="1" interval="295">
+	<spawn map="210020000" npcid="700256" pool="1" interval="295">
 		<object x="943.02625" y="2205.02760" z="253.17665" h="25"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210020000" npcid="700015" pool="1" interval="295">
+	<spawn map="210020000" npcid="700021" pool="1" interval="295">
 		<object x="283.37350" y="2748.05180" z="271.13574" h="15"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="210020000" npcid="700343" pool="1" interval="295">
+	<spawn map="210020000" npcid="700255" pool="1" interval="295">
 		<object x="1766.0062" y="894.8925" z="422.73627" h="96"/>
 	</spawn>
 	<!-- Octavia (NPC Normal lvl:45)-->

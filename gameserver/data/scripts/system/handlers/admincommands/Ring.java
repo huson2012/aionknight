@@ -2,33 +2,31 @@
  * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published
- * by the Free Software Foundation, either version 3 of the License,
- * or (at your option) any later version.
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
  * Aion-Knight is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
- * You should have received a  copy  of the GNU General Public License
+ * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.io.File;
 import java.util.Map;
-
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
-
 import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.FlyRingData;
@@ -38,14 +36,8 @@ import gameserver.model.utils3d.Point3D;
 import gameserver.services.TeleportService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
-
 import javolution.util.FastMap;
 
-
-/**
- * @author blakawk
- *
- */
 public class Ring extends AdminCommand
 {
 	private static Map<String, Map<Integer, FlyRingTemplate>> rings = new FastMap<String, Map<Integer, FlyRingTemplate>>();
@@ -246,5 +238,4 @@ public class Ring extends AdminCommand
 			i = (i + 1) % ringPositions.length;
 		}
 	}
-
 }

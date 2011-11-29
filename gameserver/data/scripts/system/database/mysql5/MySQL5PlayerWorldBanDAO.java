@@ -14,26 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package mysql5;
 
 import java.util.Date;
-
 import com.mysql.jdbc.exceptions.MySQLDataException;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.PlayerWorldBanDAO;
 import gameserver.model.gameobjects.player.Player;
 
-/**
- * @author blakawk
- *
- */
 public class MySQL5PlayerWorldBanDAO extends PlayerWorldBanDAO
 {
 	private static final Logger log = Logger.getLogger(MySQL5PlayerWorldBanDAO.class);

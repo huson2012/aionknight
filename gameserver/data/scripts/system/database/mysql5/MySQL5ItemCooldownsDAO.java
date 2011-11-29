@@ -14,25 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
-
 import gameserver.dao.ItemCooldownsDAO;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.items.ItemCooldown;
 
-
-/**
-
- *
- */
 public class MySQL5ItemCooldownsDAO extends ItemCooldownsDAO
 {
 	public static final String INSERT_QUERY = "INSERT INTO `item_cooldowns` (`player_id`, `delay_id`, `use_delay`, `reuse_time`) VALUES (?,?,?,?)";

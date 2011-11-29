@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package admincommands;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.account.PlayerAccountData;
 import gameserver.model.gameobjects.Item;
@@ -35,11 +34,6 @@ import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
 
-
-/**
- * @author lyahim
- *
- */
 public class PlayerInfo extends AdminCommand
 {
 

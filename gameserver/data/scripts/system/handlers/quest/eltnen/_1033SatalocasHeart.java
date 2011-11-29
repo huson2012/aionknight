@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package quest.eltnen;
 
+package quest.eltnen;
 
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.Storage;
@@ -27,11 +27,6 @@ import gameserver.quest.model.QuestStatus;
 import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
 
-
-/**
- * @author Sylar, Fix Dex
- * 
- */
 public class _1033SatalocasHeart extends QuestHandler
 {
 
@@ -159,5 +154,4 @@ public class _1033SatalocasHeart extends QuestHandler
         }
         return true;
 	}
-
 }
