@@ -17,13 +17,14 @@
 
 package mysql5;
 
+import commons.database.DatabaseFactory;
+import gameserver.dao.PlayerPasskeyDAO;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
-import gameserver.dao.PlayerPasskeyDAO;
 
 public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 {

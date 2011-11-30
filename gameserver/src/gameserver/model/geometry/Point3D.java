@@ -17,7 +17,7 @@
 
 package gameserver.model.geometry;
 
-import java.awt.Point;
+import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")

@@ -17,8 +17,9 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.LinkedHashMap;
 import gameserver.model.trade.TradePSItem;
+
+import java.util.LinkedHashMap;
 
 public class PrivateStore
 {

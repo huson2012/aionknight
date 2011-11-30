@@ -17,9 +17,6 @@
 
 package gameserver.world;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import gameserver.model.flyring.FlyRing;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.VisibleObject;
@@ -27,6 +24,10 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.model.gameobjects.stats.modifiers.ObjectContainer;
 import gameserver.model.shield.Shield;
 import gameserver.utils.MathUtil;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class KnownList extends ObjectContainer
 {

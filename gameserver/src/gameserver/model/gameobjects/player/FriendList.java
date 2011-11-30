@@ -17,12 +17,13 @@
 
 package gameserver.model.gameobjects.player;
 
+import gameserver.network.aion.serverpackets.SM_FRIEND_NOTIFY;
+import gameserver.network.aion.serverpackets.SM_FRIEND_UPDATE;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import gameserver.network.aion.serverpackets.SM_FRIEND_NOTIFY;
-import gameserver.network.aion.serverpackets.SM_FRIEND_UPDATE;
 
 public class FriendList implements Iterable<Friend>
 {

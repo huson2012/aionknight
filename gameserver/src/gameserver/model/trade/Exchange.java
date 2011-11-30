@@ -17,12 +17,13 @@
 
 package gameserver.model.trade;
 
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.player.Player;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import gameserver.model.gameobjects.Item;
-import gameserver.model.gameobjects.player.Player;
 
 public class Exchange
 {

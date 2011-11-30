@@ -17,9 +17,7 @@
 
 package gameserver.network.aion.clientpackets;
 
-import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
-import gameserver.services.EmpyreanCrucibleService;
 
 
 public class CM_EXIT_EC extends AionClientPacket

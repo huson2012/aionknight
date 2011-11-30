@@ -17,10 +17,6 @@
 
 package gameserver.itemengine.actions;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.dataholders.DataManager;
 import gameserver.model.PlayerClass;
 import gameserver.model.gameobjects.Item;
@@ -32,6 +28,11 @@ import gameserver.skill.model.SkillTemplate;
 import gameserver.skill.model.learn.SkillClass;
 import gameserver.skill.model.learn.SkillRace;
 import gameserver.utils.PacketSendUtility;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SkillLearnAction")

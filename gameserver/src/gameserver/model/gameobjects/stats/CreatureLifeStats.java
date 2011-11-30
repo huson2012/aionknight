@@ -17,15 +17,16 @@
 
 package gameserver.model.gameobjects.stats;
 
-import java.util.concurrent.Future;
-import java.util.concurrent.locks.ReentrantLock;
-import org.apache.log4j.Logger;
 import gameserver.model.gameobjects.Creature;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.services.LifeStatsRestoreService;
 import gameserver.skill.effect.EffectId;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.concurrent.Future;
+import java.util.concurrent.locks.ReentrantLock;
 
 public abstract class CreatureLifeStats<T extends Creature>
 {

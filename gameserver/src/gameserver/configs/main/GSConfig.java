@@ -17,8 +17,9 @@
 
 package gameserver.configs.main;
 
-import java.util.regex.Pattern;
 import commons.configuration.Property;
+
+import java.util.regex.Pattern;
 
 public class GSConfig
 {
@@ -49,7 +50,7 @@ public class GSConfig
 	/**
 	 * Server Version
 	 */
-	@Property(key = "gameserver.version", defaultValue = "1.9.0.3")
+	@Property(key = "gameserver.version", defaultValue = "2.7.0.3")
 	public static String		SERVER_VERSION;
 
 	/**

@@ -16,13 +16,12 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.player.Friend;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
 
 
 /**

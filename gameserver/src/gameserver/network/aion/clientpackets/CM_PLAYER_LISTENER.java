@@ -1,8 +1,5 @@
 package gameserver.network.aion.clientpackets;
 
-import java.util.Calendar;
-
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;

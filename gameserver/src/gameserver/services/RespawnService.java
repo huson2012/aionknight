@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import java.util.concurrent.Future;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.templates.spawn.SpawnTime;
@@ -25,6 +24,8 @@ import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.gametime.DayTime;
 import gameserver.utils.gametime.GameTimeManager;
 import gameserver.world.World;
+
+import java.util.concurrent.Future;
 
 public class RespawnService
 {

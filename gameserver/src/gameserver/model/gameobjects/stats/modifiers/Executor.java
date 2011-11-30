@@ -17,10 +17,11 @@
 
 package gameserver.model.gameobjects.stats.modifiers;
 
-import java.util.Collection;
-import org.apache.log4j.Logger;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
+
+import java.util.Collection;
 
 public abstract class Executor<T extends AionObject>
 {

@@ -17,17 +17,14 @@
 
 package gameserver.model.items;
 
+import commons.utils.Rnd;
+import gameserver.model.templates.item.ItemRace;
 import gnu.trove.TIntIntHashMap;
+
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import commons.utils.Rnd;
-import gameserver.model.templates.item.ItemRace;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "WrapperItem")

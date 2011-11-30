@@ -17,13 +17,14 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerPunishmentsDAO;
 import gameserver.model.gameobjects.player.Player;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 {

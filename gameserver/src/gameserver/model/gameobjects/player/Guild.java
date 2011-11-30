@@ -16,8 +16,9 @@
  */
 package gameserver.model.gameobjects.player;
 
-import java.sql.Timestamp;
 import gameserver.model.gameobjects.PersistentState;
+
+import java.sql.Timestamp;
 
 public class Guild
 {

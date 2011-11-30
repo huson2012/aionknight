@@ -16,9 +16,6 @@
  */
 package quest.eltnen;
 
-import java.util.Collections;
-
-
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.Npc;
@@ -37,6 +34,8 @@ import gameserver.services.ZoneService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.zone.ZoneName;
+
+import java.util.Collections;
 
 
 /**

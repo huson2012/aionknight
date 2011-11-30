@@ -1,7 +1,6 @@
 package gameserver.ai.desires.impl;
 
 import commons.utils.Rnd;
-
 import gameserver.ai.AI;
 import gameserver.ai.desires.AbstractDesire;
 import gameserver.ai.desires.MoveDesire;

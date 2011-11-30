@@ -17,12 +17,13 @@
 
 package gameserver.skill.condition;
 
+import gameserver.model.gameobjects.Servant;
+import gameserver.skill.model.Skill;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.gameobjects.Servant;
-import gameserver.skill.model.Skill;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HpCondition")

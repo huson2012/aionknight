@@ -17,15 +17,16 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerSettingsDAO;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerSettings;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class MySQL5PlayerSettingsDAO extends PlayerSettingsDAO
 {

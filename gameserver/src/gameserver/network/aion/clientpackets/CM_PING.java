@@ -16,12 +16,11 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.serverpackets.SM_PONG;
+import org.apache.log4j.Logger;
 
 
 /**

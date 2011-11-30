@@ -17,15 +17,10 @@
 
 package gameserver.itemengine.actions;
 
-import commons.database.dao.DAOManager;
-import gameserver.model.DescriptionId;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.item.ItemTemplate;
-import gameserver.network.aion.serverpackets.SM_DELETE_ITEM;
 import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 

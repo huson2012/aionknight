@@ -17,16 +17,17 @@
 
 package gameserver.network.chatserver;
 
+import commons.network.AConnection;
+import commons.network.Dispatcher;
+import gameserver.network.chatserver.serverpackets.SM_CS_AUTH;
+import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.ArrayDeque;
 import java.util.Deque;
-import org.apache.log4j.Logger;
-import commons.network.AConnection;
-import commons.network.Dispatcher;
-import gameserver.network.chatserver.serverpackets.SM_CS_AUTH;
-import gameserver.utils.ThreadPoolManager;
 
 public class ChatServerConnection extends AConnection
 {

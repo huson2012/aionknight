@@ -17,14 +17,15 @@
 
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Effect;
 import gameserver.utils.ThreadPoolManager;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DelayedFPAttackInstantEffect")

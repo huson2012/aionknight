@@ -17,18 +17,10 @@
 
 package gameserver.dataholders;
 
+import gameserver.quest.handlers.models.*;
+
+import javax.xml.bind.annotation.*;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.quest.handlers.models.ItemCollectingData;
-import gameserver.quest.handlers.models.MonsterHuntData;
-import gameserver.quest.handlers.models.QuestScriptData;
-import gameserver.quest.handlers.models.ReportToData;
-import gameserver.quest.handlers.models.WorkOrdersData;
-import gameserver.quest.handlers.models.XmlQuestData;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "quest_scripts")

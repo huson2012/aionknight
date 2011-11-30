@@ -17,15 +17,16 @@
 
 package gameserver.network.aion;
 
-import java.nio.ByteBuffer;
-import java.util.List;
-import org.apache.log4j.Logger;
 import gameserver.model.account.PlayerAccountData;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.PlayerAppearance;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.model.items.GodStone;
 import gameserver.model.items.ItemSlot;
+import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
+import java.util.List;
 
 public abstract class PlayerInfo extends AionServerPacket
 {

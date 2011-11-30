@@ -16,17 +16,15 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.model.siege.Influence;
 import gameserver.model.siege.SiegeLocation;
 import gameserver.model.siege.SiegeType;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.SiegeService;
-
 import javolution.util.FastList;
+
+import java.nio.ByteBuffer;
 
 
 /**

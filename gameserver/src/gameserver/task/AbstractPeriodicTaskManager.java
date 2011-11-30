@@ -17,12 +17,12 @@
 
 package gameserver.task;
 
-import org.apache.log4j.Logger;
 import commons.taskmanager.AbstractLockManager;
 import commons.utils.Rnd;
 import gameserver.GameServer;
 import gameserver.GameServer.StartupHook;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
 
 public abstract class AbstractPeriodicTaskManager extends AbstractLockManager implements Runnable, StartupHook
 {

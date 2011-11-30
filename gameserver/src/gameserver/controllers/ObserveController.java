@@ -16,12 +16,6 @@
  */
 package gameserver.controllers;
 
-import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
-import org.apache.commons.lang.ArrayUtils;
-
 import gameserver.controllers.attack.AttackResult;
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.controllers.movement.ActionObserver;
@@ -32,6 +26,11 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Skill;
+import org.apache.commons.lang.ArrayUtils;
+
+import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 
 /**

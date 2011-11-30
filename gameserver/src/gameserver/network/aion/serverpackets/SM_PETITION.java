@@ -16,13 +16,12 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.model.Petition;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.PetitionService;
+
+import java.nio.ByteBuffer;
 
 
 /**

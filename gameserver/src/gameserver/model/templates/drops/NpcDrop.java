@@ -16,13 +16,8 @@
  */
 package gameserver.model.templates.drops;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 /**
  * @author Sylar

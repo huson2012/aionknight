@@ -16,15 +16,14 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.Collection;
-
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.legion.LegionHistory;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_LEGION_TABS;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.Collection;
 
 
 /**

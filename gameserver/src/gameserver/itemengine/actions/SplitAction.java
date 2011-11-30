@@ -17,9 +17,6 @@
 
 package gameserver.itemengine.actions;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.model.TaskId;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
@@ -28,6 +25,10 @@ import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SplitAction")

@@ -16,8 +16,6 @@
  */
 package gameserver.controllers;
 
-import org.apache.log4j.Logger;
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.GSConfig;
 import gameserver.model.EmotionType;
@@ -33,6 +31,7 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
 import gameserver.world.zone.FlightZoneInstance;
 import gameserver.world.zone.ZoneInstance;
+import org.apache.log4j.Logger;
 
 
 /**

@@ -16,14 +16,6 @@
  */
 package gameserver.controllers.effect;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_ABNORMAL_EFFECT;
@@ -35,8 +27,10 @@ import gameserver.skill.model.SkillTargetSlot;
 import gameserver.skill.model.SkillType;
 import gameserver.task.impl.PacketBroadcaster.BroadcastMode;
 import gameserver.utils.PacketSendUtility;
-
 import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.util.*;
 
 
 /**

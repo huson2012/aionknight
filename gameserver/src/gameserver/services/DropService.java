@@ -17,20 +17,6 @@
 
 package gameserver.services;
 
-import gnu.trove.TIntArrayList;
-import gnu.trove.TIntObjectHashMap;
-import gnu.trove.TIntObjectProcedure;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.locks.ReentrantLock;
-import javolution.util.FastMap;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import commons.utils.Rnd;
 import gameserver.configs.main.CustomConfig;
@@ -57,12 +43,7 @@ import gameserver.model.templates.drops.NpcDrop;
 import gameserver.model.templates.item.ItemCategory;
 import gameserver.model.templates.item.ItemQuality;
 import gameserver.model.templates.item.ItemTemplate;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
-import gameserver.network.aion.serverpackets.SM_GROUP_LOOT;
-import gameserver.network.aion.serverpackets.SM_LOOT_ITEMLIST;
-import gameserver.network.aion.serverpackets.SM_LOOT_STATUS;
-import gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
@@ -70,6 +51,15 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.stats.DropRewardEnum;
 import gameserver.world.World;
+import gnu.trove.TIntArrayList;
+import gnu.trove.TIntObjectHashMap;
+import gnu.trove.TIntObjectProcedure;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.util.*;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class DropService
 {

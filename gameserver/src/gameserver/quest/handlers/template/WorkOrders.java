@@ -16,9 +16,6 @@
  */
 package gameserver.quest.handlers.template;
 
-import java.util.List;
-
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.player.Player;
@@ -39,6 +36,8 @@ import gameserver.quest.model.QuestStatus;
 import gameserver.services.ItemService;
 import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.List;
 
 
 /**

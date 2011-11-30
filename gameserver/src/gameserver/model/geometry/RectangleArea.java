@@ -17,9 +17,9 @@
 
 package gameserver.model.geometry;
 
-import java.awt.Point;
-import java.awt.Rectangle;
 import gameserver.utils.MathUtil;
+
+import java.awt.*;
 
 public class RectangleArea extends AbstractArea
 {

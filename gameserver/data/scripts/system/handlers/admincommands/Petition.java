@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import java.util.Collection;
 import commons.database.dao.DAOManager;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.PetitionDAO;
@@ -29,6 +28,8 @@ import gameserver.services.PetitionService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.util.Collection;
 
 public class Petition extends AdminCommand
 {

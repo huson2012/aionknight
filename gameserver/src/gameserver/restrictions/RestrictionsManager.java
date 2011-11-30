@@ -17,13 +17,14 @@
 
 package gameserver.restrictions;
 
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Comparator;
-import org.apache.commons.lang.ArrayUtils;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.model.Skill;
+import org.apache.commons.lang.ArrayUtils;
+
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public final class RestrictionsManager
 {

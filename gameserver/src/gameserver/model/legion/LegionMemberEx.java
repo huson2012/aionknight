@@ -17,11 +17,12 @@
 
 package gameserver.model.legion;
 
-import java.sql.Timestamp;
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.PlayerClass;
 import gameserver.model.gameobjects.player.Player;
+import org.apache.log4j.Logger;
+
+import java.sql.Timestamp;
 
 public class LegionMemberEx extends LegionMember
 {

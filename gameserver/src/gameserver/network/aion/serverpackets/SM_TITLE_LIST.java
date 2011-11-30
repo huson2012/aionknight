@@ -16,9 +16,6 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.configs.main.GSConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.Title;
@@ -27,6 +24,8 @@ import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.TitleService;
 import gameserver.utils.PacketSendUtility;
+
+import java.nio.ByteBuffer;
 
 
 /**

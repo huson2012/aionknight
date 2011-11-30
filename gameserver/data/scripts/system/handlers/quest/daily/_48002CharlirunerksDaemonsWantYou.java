@@ -17,7 +17,6 @@
 
 package quest.daily;
 
-import gameserver.configs.main.GSConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;

@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.SpawnDAO;
@@ -30,6 +29,7 @@ import gameserver.spawn.SpawnEngine;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
+import org.apache.log4j.Logger;
 
 public class RecallNpc extends AdminCommand
 {

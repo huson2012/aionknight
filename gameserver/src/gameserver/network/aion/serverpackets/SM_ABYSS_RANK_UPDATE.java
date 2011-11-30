@@ -17,10 +17,11 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
 
 public class SM_ABYSS_RANK_UPDATE extends AionServerPacket
 {

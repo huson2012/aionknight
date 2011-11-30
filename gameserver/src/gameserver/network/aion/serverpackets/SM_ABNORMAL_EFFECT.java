@@ -17,11 +17,12 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.Collection;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.skill.model.Effect;
+
+import java.nio.ByteBuffer;
+import java.util.Collection;
 
 public class SM_ABNORMAL_EFFECT extends AionServerPacket
 {	

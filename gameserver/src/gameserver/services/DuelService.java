@@ -17,8 +17,6 @@
 
 package gameserver.services;
 
-import javolution.util.FastMap;
-import org.apache.log4j.Logger;
 import gameserver.model.DuelResult;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
@@ -29,6 +27,8 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.skill.model.SkillTargetSlot;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
 
 public class DuelService
 {

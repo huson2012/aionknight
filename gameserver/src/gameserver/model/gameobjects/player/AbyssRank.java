@@ -17,9 +17,10 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.Calendar;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.utils.stats.AbyssRankEnum;
+
+import java.util.Calendar;
 
 public class AbyssRank
 {

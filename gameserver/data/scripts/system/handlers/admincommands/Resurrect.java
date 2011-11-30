@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import java.util.concurrent.Future;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.TaskId;
 import gameserver.model.gameobjects.VisibleObject;
@@ -26,6 +25,8 @@ import gameserver.network.aion.serverpackets.SM_RESURRECT;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
+
+import java.util.concurrent.Future;
 
 public class Resurrect extends AdminCommand
 {

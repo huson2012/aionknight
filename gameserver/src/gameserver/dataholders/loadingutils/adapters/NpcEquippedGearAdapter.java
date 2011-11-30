@@ -17,8 +17,9 @@
 
 package gameserver.dataholders.loadingutils.adapters;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
 import gameserver.model.items.NpcEquippedGear;
+
+import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public class NpcEquippedGearAdapter extends XmlAdapter<NpcEquipmentList, NpcEquippedGear>
 {

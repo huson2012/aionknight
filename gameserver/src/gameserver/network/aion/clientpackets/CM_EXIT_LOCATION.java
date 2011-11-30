@@ -20,7 +20,6 @@ package gameserver.network.aion.clientpackets;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
-import gameserver.services.EmpyreanCrucibleService;
 import gameserver.services.TeleportService;
 import gameserver.utils.PacketSendUtility;
 

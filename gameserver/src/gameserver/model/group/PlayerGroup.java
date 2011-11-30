@@ -17,24 +17,18 @@
 
 package gameserver.model.group;
 
-import java.util.Collection;
-import commons.objects.filter.ObjectFilter;
-import javolution.util.FastMap;
 import commons.objects.filter.ObjectFilter;
 import gameserver.configs.main.GroupConfig;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.network.aion.serverpackets.SM_GROUP_INFO;
-import gameserver.network.aion.serverpackets.SM_GROUP_MEMBER_INFO;
-import gameserver.network.aion.serverpackets.SM_INSTANCE_COOLDOWN;
-import gameserver.network.aion.serverpackets.SM_LEAVE_GROUP_MEMBER;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.services.DivineInstanceService;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.services.EmpyreanCrucibleService;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import javolution.util.FastMap;
+
+import java.util.Collection;
 
 public class PlayerGroup extends AionObject
 {

@@ -17,13 +17,14 @@
 
 package gameserver.model.account;
 
-import java.sql.Timestamp;
-import java.util.List;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.PlayerAppearance;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.model.legion.Legion;
 import gameserver.model.legion.LegionMember;
+
+import java.sql.Timestamp;
+import java.util.List;
 
 public class PlayerAccountData
 {

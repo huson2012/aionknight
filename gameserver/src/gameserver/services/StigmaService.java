@@ -17,12 +17,9 @@
 
 package gameserver.services;
 
-import java.util.List;
-import org.apache.log4j.Logger;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.DescriptionId;
-import gameserver.model.Race;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Player;
@@ -39,6 +36,9 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.skill.SkillEngine;
 import gameserver.skill.model.Skill;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.List;
 
 public class StigmaService
 {

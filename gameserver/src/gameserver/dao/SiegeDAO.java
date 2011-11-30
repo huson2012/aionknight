@@ -17,9 +17,10 @@
 
 package gameserver.dao;
 
-import java.util.Map;
 import commons.database.dao.DAO;
 import gameserver.model.siege.SiegeLocation;
+
+import java.util.Map;
 
 public abstract class SiegeDAO implements DAO
 {

@@ -17,14 +17,13 @@
 
 package gameserver.quest.handlers.models.xmlQuest.conditions;
 
+import gameserver.model.gameobjects.player.Player;
+import gameserver.quest.model.QuestCookie;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.model.gameobjects.player.Player;
-import gameserver.quest.model.QuestCookie;
 
 
 /**

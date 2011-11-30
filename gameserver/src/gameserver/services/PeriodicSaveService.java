@@ -17,11 +17,6 @@
 
 package gameserver.services;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.Future;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.main.PeriodicSaveConfig;
 import gameserver.dao.InventoryDAO;
@@ -31,6 +26,12 @@ import gameserver.model.items.GodStone;
 import gameserver.model.items.ManaStone;
 import gameserver.model.legion.Legion;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Future;
 
 public class PeriodicSaveService
 {

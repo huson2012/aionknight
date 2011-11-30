@@ -17,17 +17,18 @@
 
 package mysql5;
 
+import commons.database.DatabaseFactory;
+import gameserver.dao.SiegeDAO;
+import gameserver.model.siege.SiegeLocation;
+import gameserver.model.siege.SiegeRace;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
-import gameserver.dao.SiegeDAO;
-import gameserver.model.siege.SiegeLocation;
-import gameserver.model.siege.SiegeRace;
 
 public class MySQL5SiegeDAO extends SiegeDAO
 {

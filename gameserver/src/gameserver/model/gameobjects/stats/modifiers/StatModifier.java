@@ -17,12 +17,13 @@
 
 package gameserver.model.gameobjects.stats.modifiers;
 
+import gameserver.model.gameobjects.stats.StatEnum;
+import gameserver.model.gameobjects.stats.StatModifierPriority;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.gameobjects.stats.StatEnum;
-import gameserver.model.gameobjects.stats.StatModifierPriority;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Modifier")

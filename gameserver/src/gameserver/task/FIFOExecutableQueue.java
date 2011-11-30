@@ -15,8 +15,9 @@
 
 package gameserver.task;
 
-import java.util.concurrent.locks.ReentrantLock;
 import gameserver.utils.ThreadPoolManager;
+
+import java.util.concurrent.locks.ReentrantLock;
 
 public abstract class FIFOExecutableQueue implements Runnable
 {

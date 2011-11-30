@@ -17,8 +17,6 @@
 
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.configs.main.GSConfig;
 import gameserver.model.ChatType;
@@ -31,6 +29,7 @@ import gameserver.restrictions.RestrictionsManager;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 
 /**

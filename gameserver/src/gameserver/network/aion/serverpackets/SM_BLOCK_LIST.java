@@ -17,11 +17,12 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.model.gameobjects.player.BlockList;
 import gameserver.model.gameobjects.player.BlockedPlayer;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
 
 public class SM_BLOCK_LIST extends AionServerPacket
 {

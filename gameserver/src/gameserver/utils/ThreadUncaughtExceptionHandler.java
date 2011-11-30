@@ -16,9 +16,9 @@
  */
 package gameserver.utils;
 
-import java.lang.Thread.UncaughtExceptionHandler;
-
 import org.apache.log4j.Logger;
+
+import java.lang.Thread.UncaughtExceptionHandler;
 
 /**
  * @author -Nemesiss-

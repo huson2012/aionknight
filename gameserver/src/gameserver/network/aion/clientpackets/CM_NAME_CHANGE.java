@@ -16,11 +16,7 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.Iterator;
-
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.LegionDAO;
 import gameserver.dao.PlayerAppearanceDAO;
 import gameserver.dataholders.DataManager;
@@ -39,6 +35,9 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.services.LegionService;
 import gameserver.services.PlayerService;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.Iterator;
 
 
 /**

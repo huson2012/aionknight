@@ -17,9 +17,10 @@
 
 package gameserver.model.drop;
 
-import java.util.Set;
 import gameserver.configs.main.DropConfig;
 import gnu.trove.TIntObjectHashMap;
+
+import java.util.Set;
 
 public class NpcDropStat
 {

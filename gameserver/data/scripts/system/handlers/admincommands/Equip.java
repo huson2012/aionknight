@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import java.lang.reflect.Field;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.Item;
@@ -37,6 +36,8 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.lang.reflect.Field;
 
 public class Equip extends AdminCommand
 {

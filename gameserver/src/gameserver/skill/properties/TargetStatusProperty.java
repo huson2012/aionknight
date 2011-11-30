@@ -17,21 +17,13 @@
 package gameserver.skill.properties;
 
 
-
-
-import java.util.EnumSet;
-
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.gameobjects.Creature;
 import gameserver.skill.effect.EffectId;
 import gameserver.skill.model.Skill;
+
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.*;
+import java.util.EnumSet;
 
 
 /**

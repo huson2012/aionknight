@@ -17,16 +17,15 @@
 
 package gameserver.dataholders;
 
+import gameserver.model.templates.TradeListTemplate;
 import gnu.trove.TIntObjectHashMap;
-import java.util.List;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.gameobjects.Npc;
-import gameserver.model.templates.NpcTemplate;
-import gameserver.model.templates.TradeListTemplate;
+import java.util.List;
 
 @XmlRootElement(name = "npc_trade_list")
 @XmlAccessorType(XmlAccessType.FIELD)

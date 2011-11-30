@@ -19,8 +19,8 @@ package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.player.FriendList;
-import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.FriendList.Status;
+import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;

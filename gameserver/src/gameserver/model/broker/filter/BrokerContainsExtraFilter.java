@@ -17,8 +17,8 @@
 
 package gameserver.model.broker.filter;
 
-import org.apache.commons.lang.ArrayUtils;
 import gameserver.model.templates.item.ItemTemplate;
+import org.apache.commons.lang.ArrayUtils;
 
 public class BrokerContainsExtraFilter extends BrokerFilter
 {

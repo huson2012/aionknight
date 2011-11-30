@@ -17,13 +17,12 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.model.DescriptionId;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.network.aion.SystemMessageId;
+
+import java.nio.ByteBuffer;
 
 
 /**

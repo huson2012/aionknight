@@ -17,15 +17,16 @@
 
 package mysql5;
 
+import commons.database.DatabaseFactory;
+import gameserver.dao.PlayerInstanceCDDAO;
+import gameserver.model.gameobjects.player.Player;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Calendar;
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
-import gameserver.dao.PlayerInstanceCDDAO;
-import gameserver.model.gameobjects.player.Player;
 
 public class MySQL5PlayerInstanceCDDAO extends PlayerInstanceCDDAO
 {

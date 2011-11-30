@@ -17,17 +17,14 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.GuildDAO;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Guild;
 import gameserver.model.gameobjects.player.Player;
+import org.apache.log4j.Logger;
+
+import java.sql.*;
 
 public class MySQL5GuildDAO extends GuildDAO
 {

@@ -16,11 +16,10 @@
  */
 package gameserver.utils.gametime;
 
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.GameTimeDAO;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
 
 
 /**

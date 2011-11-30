@@ -17,12 +17,13 @@
 
 package gameserver.quest.handlers;
 
-import java.lang.reflect.Modifier;
-import org.apache.log4j.Logger;
 import commons.scripting.classlistener.ClassListener;
 import commons.scripting.classlistener.DefaultClassListener;
 import commons.utils.ClassUtils;
 import gameserver.quest.QuestEngine;
+import org.apache.log4j.Logger;
+
+import java.lang.reflect.Modifier;
 
 public class QuestHandlerLoader extends DefaultClassListener implements ClassListener
 {

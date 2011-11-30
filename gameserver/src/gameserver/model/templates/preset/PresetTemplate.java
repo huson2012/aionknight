@@ -16,16 +16,11 @@
  */
 package gameserver.model.templates.preset;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.Gender;
 import gameserver.model.PlayerClass;
 import gameserver.model.templates.item.ItemRace;
+
+import javax.xml.bind.annotation.*;
 
 
 /**

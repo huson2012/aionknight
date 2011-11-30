@@ -16,8 +16,6 @@
  */
 package gameserver.controllers;
 
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.ChatType;
 import gameserver.model.Race;
@@ -33,6 +31,7 @@ import gameserver.services.TeleportService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
 import gameserver.world.WorldType;
+import org.apache.log4j.Logger;
 
 
 /**

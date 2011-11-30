@@ -17,8 +17,6 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.Set;
 import gameserver.model.gameobjects.BrokerItem;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.stats.modifiers.SimpleModifier;
@@ -27,6 +25,9 @@ import gameserver.model.items.ItemStone;
 import gameserver.model.items.ManaStone;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
+import java.util.Set;
 
 public class SM_BROKER_ITEMS extends AionServerPacket
 {

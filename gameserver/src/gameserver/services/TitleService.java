@@ -17,9 +17,6 @@
 
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import commons.database.dao.DAOManager;
 import gameserver.dao.PlayerTitleListDAO;
 import gameserver.model.gameobjects.player.Player;
@@ -27,6 +24,10 @@ import gameserver.model.gameobjects.player.Title;
 import gameserver.model.gameobjects.player.TitleList;
 import gameserver.network.aion.serverpackets.SM_TITLE_LIST;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class TitleService
 {

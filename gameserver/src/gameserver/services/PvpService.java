@@ -32,9 +32,10 @@ import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.stats.AbyssRankEnum;
 import gameserver.utils.stats.StatFunctions;
+import javolution.util.FastMap;
+
 import java.util.ArrayList;
 import java.util.List;
-import javolution.util.FastMap;
 
 public class PvpService
 {

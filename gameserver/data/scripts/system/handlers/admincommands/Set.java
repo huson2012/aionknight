@@ -17,7 +17,6 @@
  
 package admincommands;
 
-import java.util.Arrays;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.PlayerClass;
 import gameserver.model.gameobjects.VisibleObject;
@@ -26,6 +25,8 @@ import gameserver.network.aion.serverpackets.SM_TITLE_SET;
 import gameserver.network.aion.serverpackets.SM_TITLE_UPDATE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
+
+import java.util.Arrays;
 
 public class Set extends AdminCommand {
 

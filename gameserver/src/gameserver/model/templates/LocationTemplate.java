@@ -16,25 +16,6 @@
  */
 package gameserver.model.templates;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlID;
-import javax.xml.bind.annotation.XmlRootElement;
-
-
-import gameserver.model.NpcType;
-import gameserver.model.Race;
-import gameserver.model.items.NpcEquippedGear;
-import gameserver.model.templates.stats.KiskStatsTemplate;
-import gameserver.model.templates.stats.NpcRank;
-import gameserver.model.templates.stats.NpcStatsTemplate;
-
-import java.util.Timer;
-import java.util.TimerTask;
-
-
 /**
  * @author Felas
  * 

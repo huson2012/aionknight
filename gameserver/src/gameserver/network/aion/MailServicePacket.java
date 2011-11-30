@@ -17,12 +17,13 @@
 
 package gameserver.network.aion;
 
-import java.nio.ByteBuffer;
-import java.util.Collection;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.Letter;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.item.ItemTemplate;
+
+import java.nio.ByteBuffer;
+import java.util.Collection;
 
 public abstract class MailServicePacket extends InventoryPacket
 {

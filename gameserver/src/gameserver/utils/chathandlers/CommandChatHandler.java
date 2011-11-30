@@ -17,12 +17,6 @@
 
 package gameserver.utils.chathandlers;
 
-import java.util.Map;
-
-import javolution.util.FastMap;
-
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.ChatType;
 import gameserver.model.gameobjects.Creature;
@@ -30,6 +24,10 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.util.Map;
 
 
 /**

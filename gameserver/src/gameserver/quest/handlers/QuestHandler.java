@@ -17,8 +17,6 @@
 
 package gameserver.quest.handlers;
 
-import java.util.Collections;
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.EmotionType;
 import gameserver.model.NpcType;
@@ -30,11 +28,7 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.QuestTemplate;
 import gameserver.model.templates.bonus.AbstractInventoryBonus;
 import gameserver.model.templates.quest.QuestItems;
-import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
-import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
-import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.quest.HandlerResult;
 import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestCookie;
@@ -46,6 +40,8 @@ import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.zone.ZoneName;
+
+import java.util.Collections;
 
 public class QuestHandler
 {

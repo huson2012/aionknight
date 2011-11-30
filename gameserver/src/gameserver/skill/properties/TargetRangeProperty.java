@@ -16,15 +16,6 @@
  */
 package gameserver.skill.properties;
 
-import java.util.TreeSet;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-import org.apache.log4j.Logger;
-
 import gameserver.geo.GeoEngine;
 import gameserver.model.alliance.PlayerAllianceMember;
 import gameserver.model.gameobjects.AionObject;
@@ -35,6 +26,13 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.skill.model.CreatureWithDistance;
 import gameserver.skill.model.Skill;
 import gameserver.utils.MathUtil;
+import org.apache.log4j.Logger;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import java.util.TreeSet;
 
 
 

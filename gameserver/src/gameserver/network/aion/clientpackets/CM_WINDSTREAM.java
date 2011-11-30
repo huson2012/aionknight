@@ -1,7 +1,5 @@
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
@@ -9,6 +7,7 @@ import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import gameserver.network.aion.serverpackets.SM_WINDSTREAM;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
 
 //import gameserver.network.aion.serverpackets.SM_EMOTION;
 

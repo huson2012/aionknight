@@ -17,8 +17,9 @@
 
 package gameserver.utils;
 
-import java.util.concurrent.FutureTask;
 import commons.utils.concurrent.ExecuteWrapper;
+
+import java.util.concurrent.FutureTask;
 
 public class InterruptableTask extends ExecuteWrapper
 {

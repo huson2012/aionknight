@@ -17,13 +17,14 @@
 
 package gameserver.skill.effect;
 
+import gameserver.skill.model.DispelCategoryType;
+import gameserver.skill.model.Effect;
+import gameserver.skill.model.SkillTargetSlot;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.skill.model.DispelCategoryType;
-import gameserver.skill.model.Effect;
-import gameserver.skill.model.SkillTargetSlot;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DispelDebuffPhysicalEffect")

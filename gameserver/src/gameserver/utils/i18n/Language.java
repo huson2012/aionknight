@@ -16,11 +16,11 @@
  */
 package gameserver.utils.i18n;
 
-import java.util.List;
-import java.util.Map;
-
 import javolution.util.FastList;
 import javolution.util.FastMap;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author blakawk

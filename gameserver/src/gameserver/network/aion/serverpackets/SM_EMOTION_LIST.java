@@ -1,8 +1,5 @@
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.gameobjects.player.Emotion;
 import gameserver.model.gameobjects.player.EmotionList;
@@ -10,6 +7,8 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.EmotionService;
+
+import java.nio.ByteBuffer;
 
 
 /**

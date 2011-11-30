@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.DataManager;
@@ -35,6 +34,7 @@ import gameserver.skill.task.CraftingTask;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 public class CraftService 
 {

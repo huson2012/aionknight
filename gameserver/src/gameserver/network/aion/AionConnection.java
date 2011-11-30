@@ -17,13 +17,6 @@
 
 package gameserver.network.aion;
 
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.channels.SocketChannel;
-import javolution.util.FastList;
-import java.util.Arrays;
-import java.util.List;
-import org.apache.log4j.Logger;
 import commons.network.AConnection;
 import commons.network.Dispatcher;
 import commons.utils.concurrent.RunnableStatsManager;
@@ -39,6 +32,14 @@ import gameserver.network.loginserver.LoginServer;
 import gameserver.services.PlayerService;
 import gameserver.task.FIFORunnableQueue;
 import gameserver.utils.ThreadPoolManager;
+import javolution.util.FastList;
+import org.apache.log4j.Logger;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.SocketChannel;
+import java.util.Arrays;
+import java.util.List;
 
 public class AionConnection extends AConnection
 {

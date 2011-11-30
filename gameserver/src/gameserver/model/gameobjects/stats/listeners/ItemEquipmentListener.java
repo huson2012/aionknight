@@ -16,11 +16,6 @@
  */
 package gameserver.model.gameobjects.stats.listeners;
 
-import java.util.Set;
-import java.util.TreeSet;
-
-import org.apache.log4j.Logger;
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
@@ -31,11 +26,7 @@ import gameserver.model.gameobjects.stats.id.FusionStatEffectId;
 import gameserver.model.gameobjects.stats.id.ItemSetStatEffectId;
 import gameserver.model.gameobjects.stats.id.ItemStatEffectId;
 import gameserver.model.gameobjects.stats.id.StoneStatEffectId;
-import gameserver.model.gameobjects.stats.modifiers.AddModifier;
-import gameserver.model.gameobjects.stats.modifiers.MeanModifier;
-import gameserver.model.gameobjects.stats.modifiers.RateModifier;
-import gameserver.model.gameobjects.stats.modifiers.SimpleModifier;
-import gameserver.model.gameobjects.stats.modifiers.StatModifier;
+import gameserver.model.gameobjects.stats.modifiers.*;
 import gameserver.model.items.FusionStone;
 import gameserver.model.items.ManaStone;
 import gameserver.model.templates.item.ArmorType;
@@ -44,6 +35,10 @@ import gameserver.model.templates.item.WeaponType;
 import gameserver.model.templates.itemset.ItemSetTemplate;
 import gameserver.model.templates.itemset.PartBonus;
 import gameserver.services.EnchantService;
+import org.apache.log4j.Logger;
+
+import java.util.Set;
+import java.util.TreeSet;
 
 
 /**

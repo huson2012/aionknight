@@ -24,7 +24,6 @@ import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
-import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
 
 /**

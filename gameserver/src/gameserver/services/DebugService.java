@@ -17,12 +17,12 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.network.aion.AionConnection;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 public class DebugService
 {

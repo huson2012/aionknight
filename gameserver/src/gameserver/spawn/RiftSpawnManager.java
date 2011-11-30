@@ -17,13 +17,6 @@
 
 package gameserver.spawn;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
 import gameserver.controllers.RiftController;
 import gameserver.controllers.effect.EffectController;
@@ -41,6 +34,14 @@ import gameserver.utils.Util;
 import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.NpcKnownList;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class RiftSpawnManager
 {

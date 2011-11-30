@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import java.util.List;
 import commons.utils.AEInfos;
 import gameserver.ShutdownHook;
 import gameserver.ShutdownHook.ShutdownMode;
@@ -27,6 +26,8 @@ import gameserver.utils.AEVersions;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
+
+import java.util.List;
 
 public class AESystem extends AdminCommand
 {

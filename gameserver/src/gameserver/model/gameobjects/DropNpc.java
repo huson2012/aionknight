@@ -17,11 +17,12 @@
 
 package gameserver.model.gameobjects;
 
+import gameserver.model.drop.DropItem;
+import gameserver.model.gameobjects.player.Player;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import gameserver.model.drop.DropItem;
-import gameserver.model.gameobjects.player.Player;
 
 public class DropNpc
 {

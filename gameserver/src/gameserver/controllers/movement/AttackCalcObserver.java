@@ -16,12 +16,11 @@
  */
 package gameserver.controllers.movement;
 
-import java.util.List;
-
-
 import gameserver.controllers.attack.AttackResult;
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.model.gameobjects.Creature;
+
+import java.util.List;
 
 
 

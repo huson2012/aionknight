@@ -16,10 +16,6 @@
  */
 package gameserver.quest.handlers.template;
 
-import javolution.util.FastMap;
-
-import org.apache.log4j.Logger;
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.NpcType;
 import gameserver.model.gameobjects.player.Player;
@@ -29,6 +25,8 @@ import gameserver.quest.handlers.models.MonsterInfo;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
 
 
 /**

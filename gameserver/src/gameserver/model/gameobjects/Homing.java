@@ -17,13 +17,14 @@
 
 package gameserver.model.gameobjects;
 
-import java.util.concurrent.Future;
 import gameserver.ai.npcai.HomingAi;
 import gameserver.controllers.HomingController;
 import gameserver.controllers.NpcController;
 import gameserver.controllers.movement.ActionObserver;
 import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
+
+import java.util.concurrent.Future;
 
 public class Homing extends NpcWithCreator
 {

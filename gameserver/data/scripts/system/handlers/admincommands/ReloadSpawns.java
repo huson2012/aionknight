@@ -18,11 +18,7 @@
 package admincommands;
 
 import gameserver.configs.administration.AdminConfig;
-import gameserver.model.gameobjects.AionObject;
-import gameserver.model.gameobjects.Gatherable;
-import gameserver.model.gameobjects.Npc;
-import gameserver.model.gameobjects.StaticObject;
-import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.*;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.spawn.SpawnEngine;

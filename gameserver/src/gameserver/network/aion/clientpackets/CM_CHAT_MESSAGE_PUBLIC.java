@@ -19,11 +19,7 @@ package gameserver.network.aion.clientpackets;
 
 //import org.apache.log4j.Logger;
 
-import javolution.util.FastList;
-
-import org.apache.log4j.Logger;
 import commons.objects.filter.ObjectFilter;
-
 import gameserver.configs.main.GSConfig;
 import gameserver.model.ChatType;
 import gameserver.model.alliance.PlayerAlliance;
@@ -39,6 +35,8 @@ import gameserver.utils.chathandlers.ChatHandler;
 import gameserver.utils.chathandlers.ChatHandlerResponse;
 import gameserver.utils.chathandlers.ChatHandlers;
 import gameserver.world.World;
+import javolution.util.FastList;
+import org.apache.log4j.Logger;
 
 
 /**

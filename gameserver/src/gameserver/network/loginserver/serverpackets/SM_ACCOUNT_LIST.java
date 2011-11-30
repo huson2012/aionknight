@@ -17,13 +17,12 @@
 
 package gameserver.network.loginserver.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.Map;
-
-
 import gameserver.network.aion.AionConnection;
 import gameserver.network.loginserver.LoginServerConnection;
 import gameserver.network.loginserver.LsServerPacket;
+
+import java.nio.ByteBuffer;
+import java.util.Map;
 
 
 /**

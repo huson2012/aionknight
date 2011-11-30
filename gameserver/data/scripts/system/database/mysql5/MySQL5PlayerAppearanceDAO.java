@@ -17,13 +17,14 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerAppearanceDAO;
 import gameserver.model.gameobjects.player.PlayerAppearance;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * Class that is responsible for loading/storing {@link gameserver.model.gameobjects.player.PlayerAppearance} 

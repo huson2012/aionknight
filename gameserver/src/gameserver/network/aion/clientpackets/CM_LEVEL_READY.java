@@ -16,13 +16,11 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dao.PlayerCmotionListDAO;
-import gameserver.model.gameobjects.player.Cmotion;
-
 import gameserver.dataholders.DataManager;
+import gameserver.model.gameobjects.player.Cmotion;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.windstreams.Location2D;
 import gameserver.model.templates.windstreams.WindstreamTemplate;
@@ -37,6 +35,7 @@ import gameserver.services.WeatherService;
 import gameserver.spawn.RiftSpawnManager;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 public class CM_LEVEL_READY extends AionClientPacket
 {

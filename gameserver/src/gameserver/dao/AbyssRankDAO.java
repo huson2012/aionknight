@@ -17,11 +17,12 @@
 
 package gameserver.dao;
 
-import java.util.ArrayList;
 import commons.database.dao.DAO;
 import gameserver.model.AbyssRankingResult;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.player.Player;
+
+import java.util.ArrayList;
 
 public abstract class AbyssRankDAO implements DAO
 {

@@ -16,8 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.GSConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.AionObject;
@@ -40,6 +38,7 @@ import gameserver.services.RepurchaseService;
 import gameserver.services.TradeService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 
 /**

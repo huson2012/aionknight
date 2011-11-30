@@ -17,17 +17,18 @@
  
 package gameserver.network.loginserver;
 
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.channels.SocketChannel;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import org.apache.log4j.Logger;
 import commons.network.AConnection;
 import commons.network.Dispatcher;
 import gameserver.network.factories.LsPacketHandlerFactory;
 import gameserver.network.loginserver.serverpackets.SM_GS_AUTH;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.SocketChannel;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class LoginServerConnection extends AConnection
 {

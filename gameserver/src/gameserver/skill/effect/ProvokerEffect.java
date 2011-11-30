@@ -16,13 +16,7 @@
  */
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
 import commons.utils.Rnd;
-
 import gameserver.controllers.movement.ActionObserver;
 import gameserver.controllers.movement.ActionObserver.ObserverType;
 import gameserver.dataholders.DataManager;
@@ -31,6 +25,11 @@ import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.ProvokeTarget;
 import gameserver.skill.model.SkillTemplate;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**

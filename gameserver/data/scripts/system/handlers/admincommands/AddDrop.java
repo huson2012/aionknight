@@ -17,8 +17,6 @@
 
 package admincommands;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import commons.database.DB;
 import commons.database.IUStH;
 import gameserver.configs.administration.AdminConfig;
@@ -30,6 +28,9 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class AddDrop extends AdminCommand
 {

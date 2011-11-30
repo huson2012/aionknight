@@ -23,13 +23,12 @@
 
 package gameserver.controllers;
 
-import javolution.util.FastMap;
-import org.apache.log4j.Logger;
-
 import gameserver.controllers.movement.RoadObserver;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.road.Road;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
 
 	public class RoadController extends CreatureController<Road> {
 		FastMap<Player, RoadObserver> observed = new FastMap<Player, RoadObserver>().shared();

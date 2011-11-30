@@ -17,9 +17,10 @@
 
 package gameserver.model.broker;
 
+import gameserver.model.gameobjects.BrokerItem;
+
 import java.util.ArrayList;
 import java.util.List;
-import gameserver.model.gameobjects.BrokerItem;
 
 public class BrokerPlayerCache
 {

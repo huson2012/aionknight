@@ -17,29 +17,15 @@
 
 package admincommands;
 
-import java.lang.reflect.Field;
 import gameserver.configs.administration.AdminConfig;
-import gameserver.configs.main.CacheConfig;
-import gameserver.configs.main.CustomConfig;
-import gameserver.configs.main.DropConfig;
-import gameserver.configs.main.EnchantsConfig;
-import gameserver.configs.main.EventConfig;
-import gameserver.configs.main.FallDamageConfig;
-import gameserver.configs.main.GSConfig;
-import gameserver.configs.main.GroupConfig;
-import gameserver.configs.main.LegionConfig;
-import gameserver.configs.main.NpcMovementConfig;
-import gameserver.configs.main.PeriodicSaveConfig;
-import gameserver.configs.main.PricesConfig;
-import gameserver.configs.main.RateConfig;
-import gameserver.configs.main.ShutdownConfig;
-import gameserver.configs.main.SiegeConfig;
-import gameserver.configs.main.TaskManagerConfig;
+import gameserver.configs.main.*;
 import gameserver.configs.network.IPConfig;
 import gameserver.configs.network.NetworkConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
+
+import java.lang.reflect.Field;
 
 public class Configure extends AdminCommand
 {

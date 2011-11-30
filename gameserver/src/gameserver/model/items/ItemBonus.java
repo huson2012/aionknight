@@ -17,11 +17,12 @@
 
 package gameserver.model.items;
 
+import gameserver.model.templates.bonus.InventoryBonusType;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.templates.bonus.InventoryBonusType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemBonus")

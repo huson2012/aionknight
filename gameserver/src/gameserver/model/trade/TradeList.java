@@ -17,10 +17,6 @@
 
 package gameserver.model.trade;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.TradeListData;
 import gameserver.model.gameobjects.Npc;
@@ -29,6 +25,11 @@ import gameserver.model.templates.TradeListTemplate;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.services.ItemService;
 import gameserver.world.World;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TradeList
 {

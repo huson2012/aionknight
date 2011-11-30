@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.Creature;
@@ -31,6 +30,7 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
 
 public class CubeExpandService
 {

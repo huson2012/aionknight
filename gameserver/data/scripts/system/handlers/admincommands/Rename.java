@@ -16,7 +16,6 @@
  */
 package admincommands;
 
-import java.util.Iterator;
 import commons.database.dao.DAOManager;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.PlayerDAO;
@@ -31,6 +30,8 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.util.Iterator;
 
 public class Rename extends AdminCommand
 {

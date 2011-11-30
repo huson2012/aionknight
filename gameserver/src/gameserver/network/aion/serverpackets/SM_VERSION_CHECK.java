@@ -16,9 +16,6 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.configs.main.GSConfig;
 import gameserver.configs.network.NetworkConfig;
@@ -26,6 +23,8 @@ import gameserver.model.siege.Influence;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.ChatService;
+
+import java.nio.ByteBuffer;
 
 
 /**

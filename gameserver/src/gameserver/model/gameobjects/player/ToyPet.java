@@ -17,9 +17,6 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.List;
 import gameserver.dataholders.DataManager;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.model.templates.pet.FoodType;
@@ -27,6 +24,10 @@ import gameserver.model.templates.pet.PetFlavour;
 import gameserver.model.templates.pet.PetRewardDescription;
 import gameserver.model.templates.pet.PetRewards;
 import gameserver.utils.InterruptableTask;
+
+import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.List;
 
 public class ToyPet
 {

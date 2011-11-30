@@ -1,9 +1,9 @@
 package gameserver.model.templates.item;
 
+import gameserver.model.SkillElement;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
-
-import gameserver.model.SkillElement;
 
  
 /**

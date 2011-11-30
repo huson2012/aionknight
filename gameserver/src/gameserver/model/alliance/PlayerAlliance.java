@@ -17,9 +17,6 @@
 
 package gameserver.model.alliance;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import gameserver.configs.main.GroupConfig;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.Npc;
@@ -32,6 +29,10 @@ import gameserver.services.AllianceService;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import javolution.util.FastMap;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class PlayerAlliance extends AionObject
 {

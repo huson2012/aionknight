@@ -17,9 +17,6 @@
  
 package admincommands;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map.Entry;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
@@ -30,6 +27,10 @@ import gameserver.network.aion.serverpackets.SM_SKILL_COOLDOWN;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map.Entry;
 
 public class RemoveCd extends AdminCommand
 {

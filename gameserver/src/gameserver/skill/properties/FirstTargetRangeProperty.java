@@ -16,26 +16,20 @@
  */
 package gameserver.skill.properties;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-import org.apache.log4j.Logger;
-
 import gameserver.geo.GeoEngine;
-import gameserver.model.gameobjects.Creature;
+import gameserver.model.gameobjects.*;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.model.gameobjects.Npc;
-import gameserver.model.gameobjects.Summon;
-import gameserver.model.gameobjects.Servant;
-import gameserver.model.gameobjects.Trap;
-import gameserver.model.gameobjects.NpcWithCreator;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.skill.model.Skill;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**

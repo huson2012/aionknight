@@ -17,12 +17,13 @@
 
 package gameserver.dao;
 
-import java.util.List;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Equipment;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.Storage;
 import gameserver.model.gameobjects.player.StorageType;
+
+import java.util.List;
 
 public abstract class InventoryDAO implements IDFactoryAwareDAO
 {

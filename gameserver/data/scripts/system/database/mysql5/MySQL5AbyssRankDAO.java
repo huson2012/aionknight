@@ -17,12 +17,6 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.AbyssRankDAO;
 import gameserver.dataholders.DataManager;
@@ -33,6 +27,13 @@ import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.AbyssRank;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.stats.AbyssRankEnum;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class MySQL5AbyssRankDAO extends AbyssRankDAO
 {

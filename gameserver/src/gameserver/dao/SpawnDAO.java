@@ -17,9 +17,10 @@
 
 package gameserver.dao;
 
-import java.util.Map;
 import commons.database.dao.DAO;
 import gameserver.model.templates.spawn.SpawnTemplate;
+
+import java.util.Map;
 
 public abstract class SpawnDAO implements DAO
 {

@@ -17,12 +17,6 @@
 
 package gameserver.services;
 
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import org.apache.log4j.Logger;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.DescriptionId;
@@ -37,6 +31,13 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.List;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 public class GuildService
 {

@@ -17,11 +17,12 @@
 
 package gameserver.world;
 
-import java.util.ArrayList;
-import java.util.List;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StaticObjectKnownList extends NpcKnownList
 {

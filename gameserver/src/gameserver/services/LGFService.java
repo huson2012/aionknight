@@ -17,12 +17,13 @@
 
 package gameserver.services;
 
-import java.util.HashMap;
-import java.util.Collection;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.LFGApplyGroup;
 import gameserver.model.gameobjects.LFGRecruitGroup;
 import gameserver.model.gameobjects.player.Player;
+
+import java.util.Collection;
+import java.util.HashMap;
 
 public class LGFService
 {

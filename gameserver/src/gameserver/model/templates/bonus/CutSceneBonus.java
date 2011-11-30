@@ -16,18 +16,17 @@
  */
 package gameserver.model.templates.bonus;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.Gender;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
 import gameserver.utils.PacketSendUtility;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**

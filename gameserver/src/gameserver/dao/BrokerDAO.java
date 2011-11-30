@@ -17,8 +17,9 @@
 
 package gameserver.dao;
 
-import java.util.List;
 import gameserver.model.gameobjects.BrokerItem;
+
+import java.util.List;
 
 public abstract class BrokerDAO implements IDFactoryAwareDAO
 {

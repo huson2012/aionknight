@@ -26,7 +26,6 @@ import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
-import gameserver.world.zone.ZoneName;
 
 public class _2549AGiftForAmma extends QuestHandler {
 	private final static int questId = 2549;

@@ -17,19 +17,6 @@
 
 package gameserver.services;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import java.util.Map.Entry;
-import javolution.util.FastList;
-import javolution.util.FastMap;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.main.SiegeConfig;
 import gameserver.controllers.movement.ActionObserver;
@@ -48,38 +35,22 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.model.group.PlayerGroup;
 import gameserver.model.legion.Legion;
 import gameserver.model.legion.LegionMember;
-import gameserver.model.siege.AethericField;
-import gameserver.model.siege.Artifact;
-import gameserver.model.siege.FortressGate;
-import gameserver.model.siege.FortressGateArtifact;
-import gameserver.model.siege.FortressGeneral;
-import gameserver.model.siege.Influence;
-import gameserver.model.siege.InstancePortal;
-import gameserver.model.siege.SiegeLocation;
-import gameserver.model.siege.SiegeRace;
-import gameserver.model.siege.SiegeType;
-import gameserver.model.templates.siege.AethericFieldTemplate;
-import gameserver.model.templates.siege.ArtifactTemplate;
-import gameserver.model.templates.siege.DefenseReward;
-import gameserver.model.templates.siege.FortressGateArtifactTemplate;
-import gameserver.model.templates.siege.FortressGateTemplate;
-import gameserver.model.templates.siege.SiegeGuardTemplate;
-import gameserver.model.templates.siege.SiegeRewardTemplate;
-import gameserver.model.templates.siege.SiegeSpawnList;
-import gameserver.model.templates.siege.SiegeSpawnLocationTemplate;
+import gameserver.model.siege.*;
+import gameserver.model.templates.siege.*;
 import gameserver.model.templates.spawn.SpawnTemplate;
-import gameserver.network.aion.serverpackets.SM_ABYSS_ARTIFACT_INFO;
-import gameserver.network.aion.serverpackets.SM_ABYSS_ARTIFACT_INFO3;
-import gameserver.network.aion.serverpackets.SM_FORTRESS_INFO;
-import gameserver.network.aion.serverpackets.SM_FORTRESS_STATUS;
-import gameserver.network.aion.serverpackets.SM_INFLUENCE_RATIO;
-import gameserver.network.aion.serverpackets.SM_SIEGE_AETHERIC_FIELDS;
-import gameserver.network.aion.serverpackets.SM_SIEGE_LOCATION_INFO;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.spawn.SpawnEngine;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
+import javolution.util.FastList;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.*;
+import java.util.Map.Entry;
 
 public class SiegeService
 {

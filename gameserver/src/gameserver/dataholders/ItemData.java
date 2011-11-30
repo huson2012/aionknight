@@ -17,22 +17,19 @@
 
 package gameserver.dataholders;
 
-import gnu.trove.TIntObjectHashMap;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import gameserver.model.items.ItemBonus;
 import gameserver.model.templates.bonus.InventoryBonusType;
 import gameserver.model.templates.item.ItemCategory;
 import gameserver.model.templates.item.ItemRace;
 import gameserver.model.templates.item.ItemTemplate;
+import gnu.trove.TIntObjectHashMap;
+
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.*;
 
 @XmlRootElement(name = "item_templates")
 @XmlAccessorType(XmlAccessType.FIELD)

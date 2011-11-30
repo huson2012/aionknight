@@ -17,9 +17,6 @@
 
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ScheduledFuture;
 import gameserver.configs.main.GroupConfig;
 import gameserver.model.Race;
 import gameserver.model.alliance.PlayerAlliance;
@@ -33,14 +30,7 @@ import gameserver.model.gameobjects.player.RequestResponseHandler;
 import gameserver.model.group.LootGroupRules;
 import gameserver.model.group.LootRuleType;
 import gameserver.model.group.PlayerGroup;
-import gameserver.network.aion.serverpackets.SM_ALLIANCE_INFO;
-import gameserver.network.aion.serverpackets.SM_ALLIANCE_MEMBER_INFO;
-import gameserver.network.aion.serverpackets.SM_INSTANCE_COOLDOWN;
-import gameserver.network.aion.serverpackets.SM_LEAVE_GROUP_MEMBER;
-import gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
-import gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
-import gameserver.network.aion.serverpackets.SM_SHOW_BRAND;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestCookie;
 import gameserver.restrictions.RestrictionsManager;
@@ -51,6 +41,10 @@ import gameserver.utils.idfactory.IDFactory;
 import gameserver.utils.stats.StatFunctions;
 import gameserver.world.WorldType;
 import javolution.util.FastMap;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ScheduledFuture;
 
 public class AllianceService
 {

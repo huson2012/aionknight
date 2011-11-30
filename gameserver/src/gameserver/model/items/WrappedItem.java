@@ -17,16 +17,17 @@
 
 package gameserver.model.items;
 
-import java.util.List;
-import gnu.trove.TIntIntHashMap;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
 import commons.utils.Rnd;
 import gameserver.dataholders.DataManager;
 import gameserver.model.templates.bonus.InventoryBonusType;
 import gameserver.model.templates.item.ItemRace;
+import gnu.trove.TIntIntHashMap;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "WrappedItem")

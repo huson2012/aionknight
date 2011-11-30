@@ -17,10 +17,11 @@
 
 package gameserver.model.gameobjects;
 
+import gameserver.model.broker.BrokerRace;
+
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Comparator;
-import gameserver.model.broker.BrokerRace;
 
 public class BrokerItem implements Comparable<BrokerItem>
 {

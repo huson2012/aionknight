@@ -17,15 +17,16 @@
 
 package gameserver.dataholders;
 
+import gameserver.model.templates.pet.PetTemplate;
 import gnu.trove.TIntObjectHashMap;
 import gnu.trove.TIntObjectIterator;
-import java.util.List;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.pet.PetTemplate;
+import java.util.List;
 
 @XmlRootElement(name = "pets")
 @XmlAccessorType(XmlAccessType.FIELD)

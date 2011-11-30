@@ -16,18 +16,15 @@
  */
 package gameserver.utils.i18n;
 
+import commons.scripting.scriptmanager.ScriptManager;
+import gameserver.GameServerError;
+import gameserver.configs.main.GSConfig;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.util.List;
 import java.util.Map;
-
-import org.apache.log4j.Logger;
-import commons.scripting.scriptmanager.ScriptManager;
-
-import gameserver.GameServerError;
-import gameserver.configs.main.GSConfig;
-
-
-import javolution.util.FastMap;
 
 /**
  * @author blakawk

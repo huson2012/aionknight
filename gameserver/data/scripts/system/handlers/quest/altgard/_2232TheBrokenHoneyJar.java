@@ -17,7 +17,6 @@
 
 package quest.altgard;
 
-import java.util.Collections;
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
@@ -33,6 +32,8 @@ import gameserver.services.ItemService;
 import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import java.util.Collections;
 
 public class _2232TheBrokenHoneyJar extends QuestHandler
 {

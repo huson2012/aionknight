@@ -17,15 +17,12 @@
 
 package gameserver.dataholders;
 
-import gnu.trove.TIntObjectHashMap;
-import java.util.List;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.model.templates.windstreams.WindstreamTemplate;
+import gnu.trove.TIntObjectHashMap;
+
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.*;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")

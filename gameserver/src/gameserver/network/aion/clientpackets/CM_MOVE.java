@@ -16,8 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.FallDamageConfig;
 import gameserver.controllers.MoveController;
 import gameserver.controllers.movement.MovementType;
@@ -30,6 +28,7 @@ import gameserver.task.impl.GroupUpdater;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.stats.StatFunctions;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 
 /**

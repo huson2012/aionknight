@@ -16,15 +16,14 @@
  */
 package gameserver.skill.effect;
 
+import gameserver.controllers.movement.AttackCalcObserver;
+import gameserver.skill.model.Effect;
+import gameserver.skill.model.SkillType;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.controllers.movement.AttackCalcObserver;
-import gameserver.skill.model.Effect;
-import gameserver.skill.model.SkillType;
 
 
 /**

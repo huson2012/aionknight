@@ -16,11 +16,11 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.sql.Timestamp;
-
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
+import java.sql.Timestamp;
 
 /**
  * I have no idea wtf is this

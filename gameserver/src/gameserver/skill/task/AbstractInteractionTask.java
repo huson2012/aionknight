@@ -17,10 +17,11 @@
 
 package gameserver.skill.task;
 
-import java.util.concurrent.Future;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.ThreadPoolManager;
+
+import java.util.concurrent.Future;
 
 public abstract class AbstractInteractionTask
 {

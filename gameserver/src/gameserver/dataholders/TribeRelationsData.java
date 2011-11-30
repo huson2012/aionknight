@@ -17,20 +17,16 @@
 
 package gameserver.dataholders;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import gameserver.model.templates.tribe.*;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.tribe.AggroRelations;
-import gameserver.model.templates.tribe.FriendlyRelations;
-import gameserver.model.templates.tribe.HostileRelations;
-import gameserver.model.templates.tribe.NeutralRelations;
-import gameserver.model.templates.tribe.SupportRelations;
-import gameserver.model.templates.tribe.Tribe;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @XmlRootElement(name = "tribe_relations")
 @XmlAccessorType(XmlAccessType.FIELD)

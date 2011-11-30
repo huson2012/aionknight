@@ -18,19 +18,13 @@ package quest.ishalgen;
 
 
 import gameserver.model.EmotionType;
-import gameserver.model.gameobjects.Creature;
-import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import gameserver.network.aion.serverpackets.SM_USE_OBJECT;
 import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
-import gameserver.utils.ThreadPoolManager;
 
 /**
  * @author Mr. Poke

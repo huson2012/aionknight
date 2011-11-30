@@ -17,9 +17,10 @@
 
 package gameserver.model.templates.spawn;
 
+import gameserver.utils.gametime.DayTime;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.utils.gametime.DayTime;
 
 @XmlType(name = "SpawnTime")
 @XmlEnum

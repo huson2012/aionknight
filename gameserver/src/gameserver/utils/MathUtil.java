@@ -17,11 +17,10 @@
 
 package gameserver.utils;
 
-import java.awt.Point;
-
-
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.geometry.Point3D;
+
+import java.awt.*;
 
 
 /**

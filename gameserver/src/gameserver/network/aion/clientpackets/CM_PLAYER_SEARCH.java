@@ -16,20 +16,19 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.CustomConfig;
-import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.FriendList.Status;
+import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_PLAYER_SEARCH;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.Util;
 import gameserver.world.World;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

@@ -18,12 +18,7 @@ package gameserver.controllers;
 
 
 import gameserver.controllers.attack.AttackStatus;
-import gameserver.model.gameobjects.Creature;
-import gameserver.model.gameobjects.Homing;
-import gameserver.model.gameobjects.Servant;
-import gameserver.model.gameobjects.SkillAreaNpc;
-import gameserver.model.gameobjects.Summon;
-import gameserver.model.gameobjects.Trap;
+import gameserver.model.gameobjects.*;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.siege.FortressGeneral;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;

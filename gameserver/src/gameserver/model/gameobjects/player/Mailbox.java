@@ -17,13 +17,10 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.SortedSet;
-import java.util.TreeSet;
-import java.util.concurrent.ConcurrentHashMap;
 import gameserver.model.gameobjects.Letter;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Mailbox
 {

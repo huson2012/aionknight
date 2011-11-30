@@ -17,9 +17,10 @@
 
 package gameserver.dao;
 
-import java.util.ArrayList;
 import gameserver.model.legion.LegionMember;
 import gameserver.model.legion.LegionMemberEx;
+
+import java.util.ArrayList;
 
 /**
  * Class that is responsible for storing/loading legion data

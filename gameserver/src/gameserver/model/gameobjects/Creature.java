@@ -17,10 +17,6 @@
 
 package gameserver.model.gameobjects;
 
-import java.util.concurrent.Future;
-import java.util.Map;
-import javolution.util.FastMap;
-import org.apache.commons.lang.StringUtils;
 import gameserver.ai.AI;
 import gameserver.controllers.CreatureController;
 import gameserver.controllers.MoveController;
@@ -43,6 +39,11 @@ import gameserver.task.impl.PacketBroadcaster;
 import gameserver.task.impl.PacketBroadcaster.BroadcastMode;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldPosition;
+import javolution.util.FastMap;
+import org.apache.commons.lang.StringUtils;
+
+import java.util.Map;
+import java.util.concurrent.Future;
 
 public abstract class Creature extends VisibleObject
 {

@@ -17,9 +17,10 @@
 
 package gameserver.model.gameobjects.stats;
 
+import gameserver.model.items.ItemSlot;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.items.ItemSlot;
 
 @XmlType(name = "StatEnum")
 @XmlEnum

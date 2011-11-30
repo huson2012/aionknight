@@ -17,12 +17,9 @@
 
 package gameserver.utils;
 
-import java.lang.management.LockInfo;
-import java.lang.management.ManagementFactory;
-import java.lang.management.MonitorInfo;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
 import org.apache.log4j.Logger;
+
+import java.lang.management.*;
 
 public class DeadlockDetector implements Runnable
 {

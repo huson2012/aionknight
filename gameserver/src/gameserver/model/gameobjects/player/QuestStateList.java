@@ -17,12 +17,13 @@
 
 package gameserver.model.gameobjects.player;
 
+import gameserver.quest.model.QuestState;
+import org.apache.log4j.Logger;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.SortedMap;
 import java.util.TreeMap;
-import org.apache.log4j.Logger;
-import gameserver.quest.model.QuestState;
 
 public class QuestStateList
 {

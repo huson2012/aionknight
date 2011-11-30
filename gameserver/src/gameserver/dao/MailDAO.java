@@ -17,11 +17,12 @@
 
 package gameserver.dao;
 
-import java.sql.Timestamp;
 import gameserver.model.gameobjects.Letter;
 import gameserver.model.gameobjects.player.Mailbox;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
+
+import java.sql.Timestamp;
 
 public abstract class MailDAO implements IDFactoryAwareDAO
 {

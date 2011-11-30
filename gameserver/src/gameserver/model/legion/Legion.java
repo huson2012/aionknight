@@ -17,18 +17,13 @@
 
 package gameserver.model.legion;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.Map.Entry;
 import gameserver.configs.main.LegionConfig;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.world.World;
+
+import java.sql.Timestamp;
+import java.util.*;
+import java.util.Map.Entry;
 
 public class Legion
 {

@@ -24,10 +24,9 @@ import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
-import gameserver.services.*;
 import gameserver.services.ItemService;
-import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
+
 import java.util.Collections;
 
 public class _28405KexkrasPast extends QuestHandler {

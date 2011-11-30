@@ -17,17 +17,18 @@
 
 package gameserver.dataholders;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import gameserver.model.siege.SiegeLocation;
+import gameserver.model.templates.siege.SiegeLocationTemplate;
+import org.apache.log4j.Logger;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import org.apache.log4j.Logger;
-import gameserver.model.siege.SiegeLocation;
-import gameserver.model.templates.siege.SiegeLocationTemplate;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @XmlRootElement(name = "siege_locations")
 @XmlAccessorType(XmlAccessType.FIELD)

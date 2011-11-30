@@ -17,16 +17,6 @@
 
 package admincommands;
 
-import java.io.File;
-import java.util.List;
-import javax.xml.XMLConstants;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import org.apache.log4j.Logger;
-import org.xml.sax.SAXException;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.SpawnsData;
@@ -35,6 +25,17 @@ import gameserver.model.templates.WorldMapTemplate;
 import gameserver.model.templates.spawn.SpawnGroup;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
+import org.apache.log4j.Logger;
+import org.xml.sax.SAXException;
+
+import javax.xml.XMLConstants;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import java.io.File;
+import java.util.List;
 
 public class SaveSpawnData extends AdminCommand
 {

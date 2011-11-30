@@ -17,11 +17,12 @@
 
 package gameserver.world.container;
 
-import java.util.Iterator;
-import java.util.Map;
 import gameserver.model.legion.Legion;
 import gameserver.world.exceptions.DuplicateAionObjectException;
 import javolution.util.FastMap;
+
+import java.util.Iterator;
+import java.util.Map;
 
 public class LegionContainer implements Iterable<Legion>
 {

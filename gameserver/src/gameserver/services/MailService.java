@@ -17,33 +17,26 @@
 
 package gameserver.services;
 
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.dao.InventoryDAO;
 import gameserver.dao.MailDAO;
 import gameserver.dao.PlayerDAO;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.Letter;
-import gameserver.model.gameobjects.player.Mailbox;
-import gameserver.model.gameobjects.player.Player;
-import gameserver.model.gameobjects.player.PlayerCommonData;
-import gameserver.model.gameobjects.player.Storage;
-import gameserver.model.gameobjects.player.StorageType;
+import gameserver.model.gameobjects.player.*;
 import gameserver.model.templates.mail.MailMessage;
-import gameserver.network.aion.serverpackets.SM_DELETE_ITEM;
-import gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE;
-import gameserver.network.aion.serverpackets.SM_MAIL_SERVICE;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class MailService
 {

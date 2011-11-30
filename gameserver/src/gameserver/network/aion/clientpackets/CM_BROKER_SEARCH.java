@@ -1,12 +1,11 @@
 package gameserver.network.aion.clientpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.services.BrokerService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

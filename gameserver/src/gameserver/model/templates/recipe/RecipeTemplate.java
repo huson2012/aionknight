@@ -16,15 +16,14 @@
  */
 package gameserver.model.templates.recipe;
 
-import java.util.ArrayList;
-import java.util.List;
+import gameserver.skill.model.learn.SkillRace;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-import gameserver.skill.model.learn.SkillRace;
+import java.util.ArrayList;
+import java.util.List;
 
 
 

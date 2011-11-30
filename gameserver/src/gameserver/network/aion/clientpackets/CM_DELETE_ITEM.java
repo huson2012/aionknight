@@ -16,9 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.List;
-
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.DescriptionId;
 import gameserver.model.gameobjects.Creature;
@@ -37,6 +34,8 @@ import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.List;
 
 
 

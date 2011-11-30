@@ -17,9 +17,10 @@
 
 package gameserver.dataholders.loadingutils.adapters;
 
+import gameserver.model.templates.item.ItemTemplate;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlIDREF;
-import gameserver.model.templates.item.ItemTemplate;
 
 public class NpcEquipmentList
 {

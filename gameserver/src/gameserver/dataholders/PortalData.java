@@ -17,18 +17,19 @@
 
 package gameserver.dataholders;
 
+import gameserver.model.Race;
+import gameserver.model.templates.portal.ExitPoint;
+import gameserver.model.templates.portal.PortalTemplate;
 import gnu.trove.TIntObjectHashMap;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.Race;
-import gameserver.model.templates.portal.ExitPoint;
-import gameserver.model.templates.portal.PortalTemplate;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 @XmlRootElement(name = "portal_templates")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -16,10 +16,6 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.teleport.TeleporterTemplate;
@@ -27,6 +23,9 @@ import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
 
 /**
  * 

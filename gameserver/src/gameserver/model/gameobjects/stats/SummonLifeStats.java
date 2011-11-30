@@ -20,8 +20,8 @@ package gameserver.model.gameobjects.stats;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.Summon;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.network.aion.serverpackets.SM_SUMMON_UPDATE;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
+import gameserver.network.aion.serverpackets.SM_SUMMON_UPDATE;
 import gameserver.services.LifeStatsRestoreService;
 import gameserver.utils.PacketSendUtility;
 

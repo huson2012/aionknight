@@ -17,13 +17,14 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.Collection;
 import gameserver.model.siege.SiegeLocation;
 import gameserver.model.siege.SiegeType;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import javolution.util.FastList;
+
+import java.nio.ByteBuffer;
+import java.util.Collection;
 
 public class SM_ABYSS_ARTIFACT_INFO3 extends AionServerPacket
 {

@@ -16,15 +16,14 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.ChatType;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
 
 
 /**

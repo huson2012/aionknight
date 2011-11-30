@@ -17,14 +17,15 @@
 
 package gameserver.dataholders;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import gameserver.model.templates.flyring.FlyRingTemplate;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.flyring.FlyRingTemplate;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @XmlRootElement(name = "fly_rings")
 @XmlAccessorType(XmlAccessType.FIELD)

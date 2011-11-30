@@ -17,45 +17,27 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.controllers.movement.StartMovingListener;
 import gameserver.dao.InventoryDAO;
-import gameserver.model.DescriptionId;
-import gameserver.model.EmotionType;
-import gameserver.model.Gender;
-import gameserver.model.Race;
-import gameserver.model.TaskId;
+import gameserver.model.*;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.model.gameobjects.stats.listeners.ItemEquipmentListener;
 import gameserver.model.items.ItemSlot;
-import gameserver.model.templates.item.ArmorType;
-import gameserver.model.templates.item.ItemTemplate;
-import gameserver.model.templates.item.LevelRestrict;
-import gameserver.model.templates.item.LevelRestrictType;
-import gameserver.model.templates.item.WeaponType;
+import gameserver.model.templates.item.*;
 import gameserver.model.templates.itemset.ItemSetTemplate;
-import gameserver.network.aion.serverpackets.SM_DELETE_ITEM;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
-import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
-import gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.services.StigmaService;
 import gameserver.services.TemporaryObjectsService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldPosition;
+import org.apache.log4j.Logger;
+
+import java.util.*;
 
 public class Equipment
 {

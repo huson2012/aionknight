@@ -17,15 +17,16 @@
 
 package gameserver.services;
 
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.log4j.Logger;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_CHAT_INIT;
 import gameserver.network.chatserver.ChatServer;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ChatService
 {

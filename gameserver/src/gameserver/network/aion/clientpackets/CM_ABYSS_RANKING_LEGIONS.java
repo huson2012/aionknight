@@ -17,14 +17,15 @@
 
 package gameserver.network.aion.clientpackets;
 
-import java.util.ArrayList;
-import org.apache.log4j.Logger;
 import gameserver.model.AbyssRankingResult;
 import gameserver.model.Race;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_ABYSS_RANKING_LEGIONS;
 import gameserver.services.AbyssRankingService;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
 
 public class CM_ABYSS_RANKING_LEGIONS extends AionClientPacket
 {

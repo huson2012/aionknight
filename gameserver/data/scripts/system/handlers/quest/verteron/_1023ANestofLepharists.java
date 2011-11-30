@@ -17,32 +17,19 @@
  
 package quest.verteron;
 
-import gameserver.configs.main.CustomConfig;
-import gameserver.dataholders.DataManager;
 import gameserver.model.EmotionType;
-import gameserver.model.PlayerClass;
-import gameserver.model.gameobjects.Item;
-import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.model.gameobjects.stats.StatEnum;
-import gameserver.model.templates.quest.QuestItems;
-import gameserver.network.aion.SystemMessageId;
-import gameserver.network.aion.serverpackets.*;
-import gameserver.quest.HandlerResult;
+import gameserver.network.aion.serverpackets.SM_EMOTION;
+import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
 import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
-import gameserver.services.*;
+import gameserver.services.TeleportService;
 import gameserver.skill.SkillEngine;
 import gameserver.skill.model.Skill;
 import gameserver.utils.PacketSendUtility;
-import gameserver.utils.ThreadPoolManager;
-import gameserver.world.WorldMapInstance;
 import gameserver.world.zone.ZoneName;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class _1023ANestofLepharists extends QuestHandler
 {

@@ -17,11 +17,6 @@
 
 package gameserver.skill.effect;
 
-import java.util.concurrent.Future;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.dataholders.DataManager;
 import gameserver.model.alliance.PlayerAllianceMember;
 import gameserver.model.gameobjects.player.Player;
@@ -31,6 +26,12 @@ import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import java.util.concurrent.Future;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AuraEffect")

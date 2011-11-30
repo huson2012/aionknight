@@ -17,15 +17,11 @@
 
 package gameserver.model.gameobjects;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.model.Race;
 import gameserver.model.templates.item.ItemRace;
 import gameserver.model.templates.survey.SurveyItem;
+
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SurveyTemplate", propOrder = { "title", "message", "select_text", "item" })

@@ -17,12 +17,6 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import commons.database.dao.DAOManager;
 import gameserver.dao.FriendListDAO;
@@ -31,6 +25,13 @@ import gameserver.model.gameobjects.player.Friend;
 import gameserver.model.gameobjects.player.FriendList;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQL5FriendListDAO extends FriendListDAO
 {

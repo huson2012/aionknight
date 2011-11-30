@@ -17,15 +17,16 @@
 
 package mysql5;
 
+import commons.database.DatabaseFactory;
+import gameserver.dao.SurveyDAO;
+import gameserver.model.gameobjects.Survey;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
-import gameserver.dao.SurveyDAO;
-import gameserver.model.gameobjects.Survey;
 
 public class MySQL5SurveyDAO extends SurveyDAO
 {

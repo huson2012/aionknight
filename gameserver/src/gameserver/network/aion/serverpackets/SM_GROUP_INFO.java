@@ -16,15 +16,14 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.model.group.LootDistribution;
 import gameserver.model.group.LootGroupRules;
 import gameserver.model.group.LootRuleType;
 import gameserver.model.group.PlayerGroup;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
 
 
 /**

@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import java.util.NoSuchElementException;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.gameobjects.player.Player;
@@ -26,6 +25,8 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.util.NoSuchElementException;
 
 public class SendToPrison extends AdminCommand
 {

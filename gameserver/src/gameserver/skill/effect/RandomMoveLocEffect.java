@@ -16,21 +16,20 @@
  */
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-import org.apache.log4j.Logger;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.geo.GeoEngine;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.model.DashParam;
-import gameserver.skill.model.Effect;
 import gameserver.skill.model.DashParam.DashType;
+import gameserver.skill.model.Effect;
 import gameserver.utils.MathUtil;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**

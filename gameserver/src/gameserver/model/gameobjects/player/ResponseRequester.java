@@ -17,11 +17,12 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import org.apache.log4j.Logger;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ResponseRequester
 {

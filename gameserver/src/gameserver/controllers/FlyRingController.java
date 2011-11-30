@@ -16,14 +16,12 @@
  */
 package gameserver.controllers;
 
-import org.apache.log4j.Logger;
-
 import gameserver.controllers.movement.FlyRingObserver;
 import gameserver.model.flyring.FlyRing;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
-
 import javolution.util.FastMap;
+import org.apache.log4j.Logger;
 
 
 /**

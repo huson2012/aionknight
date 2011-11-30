@@ -17,9 +17,10 @@
 
 package gameserver.network.aion;
 
-import java.nio.ByteBuffer;
-import org.apache.log4j.Logger;
 import commons.network.packet.BaseClientPacket;
+import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
 
 public abstract class AionClientPacket extends BaseClientPacket<AionConnection> implements Cloneable
 {

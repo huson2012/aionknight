@@ -17,14 +17,15 @@
 
 package gameserver.dataholders;
 
+import gameserver.model.templates.goods.GoodsList;
 import gnu.trove.TIntObjectHashMap;
-import java.util.List;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.goods.GoodsList;
+import java.util.List;
 
 @XmlRootElement(name = "goodslists")
 @XmlAccessorType(XmlAccessType.FIELD)

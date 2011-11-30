@@ -16,19 +16,18 @@
  */
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.DescriptionId;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
+import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Effect;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
 
 

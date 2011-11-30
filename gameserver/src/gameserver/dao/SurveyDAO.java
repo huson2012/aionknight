@@ -17,9 +17,10 @@
 
 package gameserver.dao;
 
-import java.util.List;
 import commons.database.dao.DAO;
 import gameserver.model.gameobjects.Survey;
+
+import java.util.List;
 
 public abstract class SurveyDAO implements DAO
 {

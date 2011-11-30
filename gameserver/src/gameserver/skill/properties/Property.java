@@ -17,11 +17,11 @@
 
 package gameserver.skill.properties;
 
+import gameserver.skill.model.Skill;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-import gameserver.skill.model.Skill;
 
 
 

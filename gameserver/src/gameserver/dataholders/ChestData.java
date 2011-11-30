@@ -17,16 +17,17 @@
  
 package gameserver.dataholders;
 
+import gameserver.model.templates.chest.ChestTemplate;
 import gnu.trove.THashMap;
 import gnu.trove.TIntObjectHashMap;
-import java.util.ArrayList;
-import java.util.List;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.chest.ChestTemplate;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlRootElement(name = "chest_templates")
 @XmlAccessorType(XmlAccessType.FIELD)

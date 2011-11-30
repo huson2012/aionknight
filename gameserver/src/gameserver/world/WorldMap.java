@@ -17,13 +17,10 @@
 
 package gameserver.world;
 
-import java.util.Set;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 import gameserver.model.templates.WorldMapTemplate;
+
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class WorldMap
 {

@@ -17,13 +17,6 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.log4j.Logger;
 import commons.database.DB;
 import commons.database.DatabaseFactory;
 import commons.database.IUStH;
@@ -34,6 +27,14 @@ import gameserver.model.gameobjects.player.BlockList;
 import gameserver.model.gameobjects.player.BlockedPlayer;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * MySQL5 DAO for editing the block list

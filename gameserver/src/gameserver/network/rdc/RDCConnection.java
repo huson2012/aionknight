@@ -16,13 +16,12 @@
  */
 package gameserver.network.rdc;
 
-import java.nio.ByteBuffer;
-import java.nio.channels.SocketChannel;
-
 import commons.ngen.network.Connection;
-
 import gameserver.network.rdc.commands.RDCACommandTable;
 import gameserver.network.rdc.commands.RDCCommand;
+
+import java.nio.ByteBuffer;
+import java.nio.channels.SocketChannel;
 
 
 /**

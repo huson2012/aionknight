@@ -16,10 +16,10 @@
  */
 package gameserver.ai.desires;
 
+import gameserver.ai.desires.impl.WalkDesire;
+
 import java.util.Iterator;
 import java.util.concurrent.PriorityBlockingQueue;
-
-import gameserver.ai.desires.impl.WalkDesire;
 
 
 /**

@@ -17,16 +17,6 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import commons.database.dao.DAOManager;
 import gameserver.dao.ItemStoneListDAO;
@@ -38,6 +28,13 @@ import gameserver.model.gameobjects.player.Mailbox;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.model.gameobjects.player.StorageType;
+import org.apache.log4j.Logger;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class MySQL5MailDAO extends MailDAO
 {

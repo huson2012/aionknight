@@ -17,10 +17,11 @@
 
 package gameserver.dao;
 
-import java.util.List;
 import commons.database.dao.DAO;
 import gameserver.model.NpcShout;
 import javolution.util.FastMap;
+
+import java.util.List;
 
 public abstract class NpcShoutsDAO implements DAO
 {

@@ -17,13 +17,6 @@
 
 package gameserver.skill.effect;
 
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
 import gameserver.dataholders.DataManager;
 import gameserver.model.SkillElement;
@@ -35,14 +28,13 @@ import gameserver.model.templates.stats.NpcRank;
 import gameserver.skill.change.Change;
 import gameserver.skill.effect.modifier.ActionModifier;
 import gameserver.skill.effect.modifier.ActionModifiers;
-import gameserver.skill.model.Effect;
-import gameserver.skill.model.HopType;
-import gameserver.skill.model.PreeffectsMasks;
-import gameserver.skill.model.SkillTemplate;
-import gameserver.skill.model.SkillType;
-import gameserver.skill.model.SpellStatus;
+import gameserver.skill.model.*;
 import gameserver.utils.stats.StatFunctions;
 import javolution.util.FastList;
+import org.apache.log4j.Logger;
+
+import javax.xml.bind.annotation.*;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Effect")

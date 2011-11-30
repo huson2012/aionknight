@@ -17,16 +17,13 @@
 
 package gameserver.dataholders;
 
+import gameserver.model.templates.stats.SummonStatsTemplate;
 import gnu.trove.TIntObjectHashMap;
+
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.stats.SummonStatsTemplate;
 
 @XmlRootElement(name = "summon_stats_templates")
 @XmlAccessorType(XmlAccessType.FIELD)

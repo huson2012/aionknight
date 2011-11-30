@@ -1,9 +1,5 @@
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import commons.database.dao.DAOManager;
 import gameserver.dao.PlayerCmotionListDAO;
 import gameserver.model.gameobjects.player.Cmotion;
@@ -11,6 +7,10 @@ import gameserver.model.gameobjects.player.CmotionList;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_CMOTION;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 /**

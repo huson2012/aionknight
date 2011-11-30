@@ -16,13 +16,12 @@
  */
 package gameserver.network.loginserver;
 
+import gameserver.network.loginserver.LoginServerConnection.State;
+import org.apache.log4j.Logger;
+
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.log4j.Logger;
-
-import gameserver.network.loginserver.LoginServerConnection.State;
 
 
 /**

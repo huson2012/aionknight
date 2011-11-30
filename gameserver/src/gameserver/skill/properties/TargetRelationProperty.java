@@ -16,21 +16,19 @@
  */
 package gameserver.skill.properties;
 
-import java.util.Iterator;
-import java.util.TreeSet;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.alliance.PlayerAllianceGroup;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.SkillAreaNpc;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.model.CreatureWithDistance;
 import gameserver.skill.model.Skill;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 
 /**
