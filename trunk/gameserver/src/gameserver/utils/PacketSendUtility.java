@@ -17,7 +17,6 @@
 package gameserver.utils;
 
 import commons.objects.filter.ObjectFilter;
-
 import gameserver.model.ChatType;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
@@ -25,7 +24,6 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.model.legion.Legion;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.network.aion.serverpackets.SM_MESSAGE;
-import gameserver.utils.Util;
 
 /**
  * This class contains static methods, which are utility methods, all of them are interacting only with objects passed

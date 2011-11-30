@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import java.util.concurrent.Future;
 import commons.database.dao.DAOManager;
 import gameserver.dao.PlayerPunishmentsDAO;
 import gameserver.model.TaskId;
@@ -25,6 +24,8 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldMapType;
+
+import java.util.concurrent.Future;
 
 public class PunishmentService
 {

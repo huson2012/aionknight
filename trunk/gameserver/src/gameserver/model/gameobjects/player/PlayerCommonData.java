@@ -17,8 +17,6 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.sql.Timestamp;
-import org.apache.log4j.Logger;
 import gameserver.GameServer;
 import gameserver.configs.main.CustomConfig;
 import gameserver.configs.main.GSConfig;
@@ -30,14 +28,7 @@ import gameserver.model.Race;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.model.templates.VisibleObjectTemplate;
-import gameserver.network.aion.serverpackets.SM_ABYSS_RANK;
-import gameserver.network.aion.serverpackets.SM_ABYSS_RANK_UPDATE;
-import gameserver.network.aion.serverpackets.SM_DP_INFO;
-import gameserver.network.aion.serverpackets.SM_LEGION_EDIT;
-import gameserver.network.aion.serverpackets.SM_STATS_INFO;
-import gameserver.network.aion.serverpackets.SM_STATUPDATE_DP;
-import gameserver.network.aion.serverpackets.SM_STATUPDATE_EXP;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.services.HTMLService;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTemplate;
@@ -45,6 +36,9 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.stats.XPLossEnum;
 import gameserver.world.World;
 import gameserver.world.WorldPosition;
+import org.apache.log4j.Logger;
+
+import java.sql.Timestamp;
 
 public class PlayerCommonData extends VisibleObjectTemplate
 {

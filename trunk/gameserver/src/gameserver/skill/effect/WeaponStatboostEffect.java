@@ -16,14 +16,6 @@
  */
 package gameserver.skill.effect;
 
-import java.util.TreeSet;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.controllers.movement.ActionObserver;
 import gameserver.controllers.movement.ActionObserver.ObserverType;
 import gameserver.model.gameobjects.Item;
@@ -32,6 +24,12 @@ import gameserver.model.gameobjects.stats.id.SkillEffectId;
 import gameserver.model.gameobjects.stats.modifiers.StatModifier;
 import gameserver.model.templates.item.WeaponType;
 import gameserver.skill.model.Effect;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import java.util.TreeSet;
 
 
 /**

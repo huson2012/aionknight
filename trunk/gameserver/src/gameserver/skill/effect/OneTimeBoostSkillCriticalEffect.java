@@ -16,16 +16,15 @@
  */
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.controllers.movement.AttackCalcObserver;
 import gameserver.controllers.movement.AttackStatusObserver;
 import gameserver.skill.model.Effect;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**

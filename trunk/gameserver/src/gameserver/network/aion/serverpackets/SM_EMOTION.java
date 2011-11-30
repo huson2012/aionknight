@@ -1,8 +1,5 @@
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
@@ -10,6 +7,8 @@ import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
 
 
 /**

@@ -17,9 +17,6 @@
 
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ScheduledFuture;
 import gameserver.configs.main.GroupConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.Race;
@@ -34,11 +31,7 @@ import gameserver.model.group.LootRuleType;
 import gameserver.model.group.PlayerGroup;
 import gameserver.model.instances.Dredgion;
 import gameserver.model.templates.portal.PortalTemplate;
-import gameserver.network.aion.serverpackets.SM_GROUP_INFO;
-import gameserver.network.aion.serverpackets.SM_GROUP_MEMBER_INFO;
-import gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
-import gameserver.network.aion.serverpackets.SM_SHOW_BRAND;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestCookie;
 import gameserver.restrictions.RestrictionsManager;
@@ -50,6 +43,10 @@ import gameserver.utils.stats.StatFunctions;
 import gameserver.world.WorldMapInstance;
 import gameserver.world.WorldType;
 import javolution.util.FastMap;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ScheduledFuture;
 
 public class GroupService
 {

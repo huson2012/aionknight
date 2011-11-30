@@ -17,13 +17,6 @@
 
 package gameserver.services;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.dao.PetitionDAO;
 import gameserver.model.Petition;
@@ -32,6 +25,9 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.network.aion.serverpackets.SM_PETITION;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.util.*;
 
 public class PetitionService
 {

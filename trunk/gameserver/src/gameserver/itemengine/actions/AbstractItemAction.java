@@ -17,11 +17,12 @@
 
 package gameserver.itemengine.actions;
 
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.player.Player;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.gameobjects.Item;
-import gameserver.model.gameobjects.player.Player;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbstractItemAction")

@@ -16,8 +16,8 @@
  */
 package gameserver.network.loginserver;
 
-import org.apache.log4j.Logger;
 import commons.network.packet.BaseClientPacket;
+import org.apache.log4j.Logger;
 
 
 /**

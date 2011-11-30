@@ -17,7 +17,6 @@
 
 package quest.beluslan;
 
-import java.util.Collections;
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
@@ -34,6 +33,8 @@ import gameserver.services.ItemService;
 import gameserver.services.QuestService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import java.util.Collections;
 
 public class _2051SavingBeluslanFortress extends QuestHandler
 {

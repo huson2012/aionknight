@@ -18,9 +18,10 @@
 
 package gameserver.dao;
 
-import java.util.Set;
 import commons.database.dao.DAO;
 import gameserver.model.Petition;
+
+import java.util.Set;
 
 public abstract class PetitionDAO implements DAO
 {

@@ -16,9 +16,9 @@
  */
 package gameserver.network.loginserver;
 
-import java.nio.ByteBuffer;
-
 import commons.network.packet.BaseServerPacket;
+
+import java.nio.ByteBuffer;
 
 
 /**

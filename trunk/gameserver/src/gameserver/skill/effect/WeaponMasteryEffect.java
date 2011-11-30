@@ -16,15 +16,14 @@
  */
 package gameserver.skill.effect;
 
+import gameserver.model.gameobjects.player.Player;
+import gameserver.model.templates.item.WeaponType;
+import gameserver.skill.model.Effect;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.model.gameobjects.player.Player;
-import gameserver.model.templates.item.WeaponType;
-import gameserver.skill.model.Effect;
 
 
 /**

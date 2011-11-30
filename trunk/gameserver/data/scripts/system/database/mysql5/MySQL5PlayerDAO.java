@@ -17,15 +17,7 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-import javolution.util.FastMap;
-import org.apache.log4j.Logger;
+import com.mysql.jdbc.exceptions.MySQLDataException;
 import commons.database.DatabaseFactory;
 import gameserver.configs.main.GSConfig;
 import gameserver.dao.PlayerDAO;
@@ -41,7 +33,12 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.world.World;
 import gameserver.world.WorldPosition;
-import com.mysql.jdbc.exceptions.MySQLDataException;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class that that is responsible for loading/storing {@link gameserver.model.gameobjects.player.Player}

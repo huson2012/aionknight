@@ -16,12 +16,11 @@
  */
 package gameserver.ai.desires.impl;
 
-import java.util.Iterator;
-
-
 import gameserver.ai.AI;
 import gameserver.ai.desires.Desire;
 import gameserver.ai.desires.DesireIteratorHandler;
+
+import java.util.Iterator;
 
 
 /**

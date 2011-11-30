@@ -17,11 +17,10 @@
 
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_MACRO_RESULT;
 import gameserver.services.PlayerService;
+import org.apache.log4j.Logger;
 
 
 /**

@@ -17,10 +17,11 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.world.WorldPosition;
+
+import java.nio.ByteBuffer;
 
 public class SM_CHANNEL_INFO extends AionServerPacket
 {

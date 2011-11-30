@@ -16,8 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.player.DeniedStatus;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
@@ -25,6 +23,7 @@ import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.network.aion.serverpackets.SM_VIEW_PLAYER_DETAILS;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 
 /**

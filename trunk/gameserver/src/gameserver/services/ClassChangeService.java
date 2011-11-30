@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import java.util.Arrays;
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.PlayerClass;
 import gameserver.model.Race;
@@ -27,6 +26,8 @@ import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.Arrays;
 
 public class ClassChangeService
 {

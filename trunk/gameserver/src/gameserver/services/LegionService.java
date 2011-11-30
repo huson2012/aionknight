@@ -17,13 +17,6 @@
 
 package gameserver.services;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
-import java.nio.ByteBuffer;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.main.LegionConfig;
 import gameserver.controllers.movement.ActionObserver;
@@ -36,30 +29,8 @@ import gameserver.model.gameobjects.player.DeniedStatus;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.RequestResponseHandler;
 import gameserver.model.gameobjects.player.StorageType;
-import gameserver.model.legion.Legion;
-import gameserver.model.legion.LegionEmblem;
-import gameserver.model.legion.LegionHistory;
-import gameserver.model.legion.LegionHistoryType;
-import gameserver.model.legion.LegionMember;
-import gameserver.model.legion.LegionMemberEx;
-import gameserver.model.legion.LegionRank;
-import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import gameserver.network.aion.serverpackets.SM_LEGION_ADD_MEMBER;
-import gameserver.network.aion.serverpackets.SM_LEGION_EDIT;
-import gameserver.network.aion.serverpackets.SM_LEGION_EMBLEM;
-import gameserver.network.aion.serverpackets.SM_LEGION_EMBLEM_SEND;
-import gameserver.network.aion.serverpackets.SM_LEGION_INFO;
-import gameserver.network.aion.serverpackets.SM_LEGION_LEAVE_MEMBER;
-import gameserver.network.aion.serverpackets.SM_LEGION_MEMBERLIST;
-import gameserver.network.aion.serverpackets.SM_LEGION_TABS;
-import gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_EMBLEM;
-import gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_MEMBER;
-import gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_NICKNAME;
-import gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_SELF_INTRO;
-import gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_TITLE;
-import gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_WAREHOUSE_INFO;
+import gameserver.model.legion.*;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.Util;
@@ -67,6 +38,14 @@ import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.World;
 import gameserver.world.container.LegionContainer;
 import gameserver.world.container.LegionMemberContainer;
+import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 /**
  * This class is designed to do all the work related with loading/storing legions and their members.

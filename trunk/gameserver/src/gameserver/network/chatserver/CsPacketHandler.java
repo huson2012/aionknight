@@ -17,11 +17,12 @@
 
 package gameserver.network.chatserver;
 
+import gameserver.network.chatserver.ChatServerConnection.State;
+import org.apache.log4j.Logger;
+
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.log4j.Logger;
-import gameserver.network.chatserver.ChatServerConnection.State;
 
 public class CsPacketHandler
 {

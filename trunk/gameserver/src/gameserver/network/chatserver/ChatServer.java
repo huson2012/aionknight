@@ -17,8 +17,6 @@
 
 package gameserver.network.chatserver;
 
-import java.nio.channels.SocketChannel;
-import org.apache.log4j.Logger;
 import commons.network.Dispatcher;
 import commons.network.NioServer;
 import gameserver.configs.network.NetworkConfig;
@@ -27,6 +25,9 @@ import gameserver.network.chatserver.serverpackets.SM_CS_PLAYER_AUTH;
 import gameserver.network.chatserver.serverpackets.SM_CS_PLAYER_LOGOUT;
 import gameserver.network.factories.CsPacketHandlerFactory;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
+
+import java.nio.channels.SocketChannel;
 
 public class ChatServer
 {

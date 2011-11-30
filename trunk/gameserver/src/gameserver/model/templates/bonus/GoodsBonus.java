@@ -16,14 +16,13 @@
  */
 package gameserver.model.templates.bonus;
 
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.player.Player;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.model.gameobjects.Item;
-import gameserver.model.gameobjects.player.Player;
 
 
 /**

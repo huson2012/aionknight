@@ -17,14 +17,11 @@
 
 package gameserver.utils.chathandlers;
 
-import java.io.File;
-
 import commons.scripting.scriptmanager.ScriptManager;
-
 import gameserver.GameServerError;
-
-
 import javolution.util.FastList;
+
+import java.io.File;
 
 /**
  * This class is managing a list of all chat handlers.

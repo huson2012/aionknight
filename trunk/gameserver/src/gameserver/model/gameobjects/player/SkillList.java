@@ -17,23 +17,20 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.templates.item.ArmorType;
 import gameserver.model.templates.item.WeaponType;
 import gameserver.network.aion.serverpackets.SM_SKILL_LIST;
-import gameserver.skill.effect.ArmorMasteryEffect;
-import gameserver.skill.effect.DualMasteryEffect;
-import gameserver.skill.effect.EffectTemplate;
-import gameserver.skill.effect.ShieldMasteryEffect;
-import gameserver.skill.effect.WeaponMasteryEffect;
+import gameserver.skill.effect.*;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SkillList
 {

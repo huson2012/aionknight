@@ -17,13 +17,6 @@
 
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.Future;
-import javolution.util.FastSet;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.dao.AnnouncementsDAO;
 import gameserver.model.Announcement;
@@ -34,6 +27,14 @@ import gameserver.network.aion.serverpackets.SM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
+import javolution.util.FastSet;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Future;
 
 /**
  * Система атоматических аннонсов

@@ -17,7 +17,6 @@
 
 package gameserver.model.items;
 
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
 import gameserver.controllers.movement.ActionObserver;
 import gameserver.controllers.movement.ActionObserver.ObserverType;
@@ -34,6 +33,7 @@ import gameserver.skill.SkillEngine;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.Skill;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
 
 public class GodStone extends ItemStone
 {

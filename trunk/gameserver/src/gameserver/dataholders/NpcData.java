@@ -17,16 +17,16 @@
 
 package gameserver.dataholders;
 
+import gameserver.configs.main.CustomConfig;
+import gameserver.model.templates.NpcTemplate;
 import gnu.trove.TIntObjectHashMap;
-import java.util.List;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.configs.main.CustomConfig;
-import gameserver.model.gameobjects.Npc;
-import gameserver.model.templates.NpcTemplate;
+import java.util.List;
 
 @XmlRootElement(name = "npc_templates")
 @XmlAccessorType(XmlAccessType.FIELD)

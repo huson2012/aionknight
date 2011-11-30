@@ -17,10 +17,6 @@
 
 package gameserver.model.gameobjects;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.ScheduledFuture;
 import commons.utils.Rnd;
 import gameserver.ai.npcai.AggressiveAi;
 import gameserver.ai.npcai.NpcAi;
@@ -52,6 +48,11 @@ import gameserver.world.KnownList;
 import gameserver.world.NpcKnownList;
 import gameserver.world.WorldPosition;
 import gameserver.world.WorldType;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ScheduledFuture;
 
 public class Npc extends Creature
 {

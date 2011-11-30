@@ -17,13 +17,14 @@
 
 package gameserver.dao;
 
-import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.TreeMap;
 import gameserver.model.legion.Legion;
 import gameserver.model.legion.LegionEmblem;
 import gameserver.model.legion.LegionHistory;
 import gameserver.model.legion.LegionWarehouse;
+
+import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * Class that is responsible for storing/loading legion data

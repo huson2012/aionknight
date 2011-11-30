@@ -18,7 +18,6 @@ package gameserver.network.aion.serverpackets;
 
 
 import gameserver.configs.main.CustomConfig;
-import gameserver.configs.main.GSConfig;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionConnection;
@@ -78,38 +77,14 @@ public class SM_QUEST_LIST extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
-		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
+		writeH(buf, 0x01);
+		writeH(buf, (-1*completeQuestList.size()) & 0xFFFF);
+
+		for(QuestState qs : completeQuestList.values())
 		{
-			writeH(buf, 0x01);
-			writeH(buf, (-1*completeQuestList.size()) & 0xFFFF);
-			for(QuestState qs : completeQuestList.values())
-			{
-				writeH(buf, qs.getQuestId());
-				writeH(buf, 0x00);
-				writeC(buf, qs.getCompleteCount());
-			}
-		}
-		else
-		{
-			writeH(buf, completeQuestList.size());
-			for(QuestState qs : completeQuestList.values())
-			{
-				writeH(buf, qs.getQuestId());
-				writeH(buf, 0x00);
-				writeC(buf, qs.getCompleteCount());
-			}
-			writeC(buf, startedQuestList.size());
-			for(QuestState qs : startedQuestList) // quest list size ( retail max is 30 )
-			{
-				writeH(buf, qs.getQuestId());
-				writeH(buf, 0);
-			}
-			for(QuestState qs : startedQuestList)
-			{
-				writeC(buf, qs.getStatus().value());
-				writeD(buf, qs.getQuestVars().getQuestVars());
-				writeC(buf, 0);
-			}
+			writeH(buf, qs.getQuestId());
+			writeH(buf, 0x00);
+			writeC(buf, qs.getCompleteCount());
 		}
 	}
 

@@ -16,12 +16,12 @@
  */
 package gameserver.model.templates.shield;
 
+import gameserver.model.Race;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-import gameserver.model.Race;
 
 
 /**

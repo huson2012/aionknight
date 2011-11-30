@@ -17,12 +17,13 @@
 
 package gameserver.quest.handlers.models;
 
+import gameserver.quest.QuestEngine;
+import gameserver.quest.handlers.template.ItemCollecting;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.quest.QuestEngine;
-import gameserver.quest.handlers.template.ItemCollecting;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemCollectingData")

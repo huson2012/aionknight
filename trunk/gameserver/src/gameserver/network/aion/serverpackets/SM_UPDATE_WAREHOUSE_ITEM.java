@@ -5,14 +5,13 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.model.gameobjects.Item;
 import gameserver.model.items.ItemId;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.InventoryPacket;
+
+import java.nio.ByteBuffer;
 
 /**
  *

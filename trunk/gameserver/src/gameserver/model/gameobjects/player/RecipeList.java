@@ -17,8 +17,6 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.HashSet;
-import java.util.Set;
 import commons.database.dao.DAOManager;
 import gameserver.dao.PlayerRecipesDAO;
 import gameserver.dataholders.DataManager;
@@ -28,6 +26,9 @@ import gameserver.network.aion.serverpackets.SM_LEARN_RECIPE;
 import gameserver.network.aion.serverpackets.SM_RECIPE_DELETE;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class RecipeList
 {

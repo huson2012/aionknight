@@ -17,9 +17,9 @@
 
 package gameserver.task;
 
-import org.apache.log4j.Logger;
 import commons.utils.AEFastSet;
 import commons.utils.concurrent.RunnableStatsManager;
+import org.apache.log4j.Logger;
 
 public abstract class AbstractFIFOPeriodicTaskManager<T> extends AbstractPeriodicTaskManager
 {

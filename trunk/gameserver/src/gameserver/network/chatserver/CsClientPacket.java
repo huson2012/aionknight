@@ -17,8 +17,8 @@
 
 package gameserver.network.chatserver;
 
-import org.apache.log4j.Logger;
 import commons.network.packet.BaseClientPacket;
+import org.apache.log4j.Logger;
 
 public abstract class CsClientPacket extends BaseClientPacket<ChatServerConnection> implements Cloneable
 {

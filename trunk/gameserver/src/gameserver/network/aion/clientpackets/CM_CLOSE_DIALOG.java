@@ -16,9 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.Collection;
-
-
 import gameserver.ai.AI;
 import gameserver.ai.state.AIState;
 import gameserver.dataholders.DataManager;
@@ -32,6 +29,8 @@ import gameserver.network.aion.serverpackets.SM_LOOKATOBJECT;
 import gameserver.network.aion.serverpackets.SM_MAIL_SERVICE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+
+import java.util.Collection;
 
 
 public class CM_CLOSE_DIALOG extends AionClientPacket

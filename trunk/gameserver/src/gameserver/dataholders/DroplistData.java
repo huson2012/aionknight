@@ -17,13 +17,14 @@
 
 package gameserver.dataholders;
 
-import java.util.List;
+import gameserver.model.templates.drops.NpcDrop;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import gameserver.model.templates.drops.NpcDrop;
+import java.util.List;
 
 @XmlRootElement(name = "droplist")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -18,11 +18,7 @@
 package gameserver.model.broker;
 
 import gameserver.model.PlayerClass;
-import gameserver.model.broker.filter.BrokerContainsExtraFilter;
-import gameserver.model.broker.filter.BrokerContainsFilter;
-import gameserver.model.broker.filter.BrokerFilter;
-import gameserver.model.broker.filter.BrokerMinMaxFilter;
-import gameserver.model.broker.filter.BrokerPlayerClassExtraFilter;
+import gameserver.model.broker.filter.*;
 import gameserver.model.gameobjects.Item;
 
 public enum BrokerItemMask

@@ -16,8 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
@@ -26,6 +24,7 @@ import gameserver.network.aion.AionClientPacket;
 import gameserver.services.ItemService;
 import gameserver.utils.MathUtil;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 
 /**

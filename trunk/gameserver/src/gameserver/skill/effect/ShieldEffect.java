@@ -16,14 +16,6 @@
  */
 package gameserver.skill.effect;
 
-import java.util.TreeSet;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.controllers.movement.AttackCalcObserver;
 import gameserver.controllers.movement.AttackShieldObserver;
 import gameserver.model.gameobjects.Npc;
@@ -33,6 +25,12 @@ import gameserver.model.gameobjects.stats.modifiers.StatModifier;
 import gameserver.skill.model.AttackType;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTargetRace;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
+import java.util.TreeSet;
 
 
 /**

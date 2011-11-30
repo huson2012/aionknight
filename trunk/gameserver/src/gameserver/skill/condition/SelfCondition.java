@@ -16,13 +16,14 @@
 
 package gameserver.skill.condition;
 
+import gameserver.model.gameobjects.player.Player;
+import gameserver.skill.model.Skill;
+import gameserver.skill.properties.TargetSpeciesAttribute;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.gameobjects.player.Player;
-import gameserver.skill.model.Skill;
-import gameserver.skill.properties.TargetSpeciesAttribute;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SelfCondition")

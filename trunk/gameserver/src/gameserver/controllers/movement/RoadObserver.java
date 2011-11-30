@@ -23,9 +23,6 @@
 
 package gameserver.controllers.movement;
 
-import java.util.Random;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.player.Player;
@@ -36,6 +33,8 @@ import gameserver.services.TeleportService;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.WorldType;
+
+import java.util.Random;
 
 public class RoadObserver extends ActionObserver {
 	private Player player;

@@ -16,10 +16,10 @@
  */
 package gameserver.network.loginserver.serverpackets;
 
-import java.nio.ByteBuffer;
-
 import gameserver.network.loginserver.LoginServerConnection;
 import gameserver.network.loginserver.LsServerPacket;
+
+import java.nio.ByteBuffer;
 
 
 /**

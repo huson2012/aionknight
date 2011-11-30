@@ -17,13 +17,14 @@
 
 package usercommands;
 
-import java.util.ArrayList;
-import java.util.List;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.UserCommand;
 import gameserver.world.World;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GMList extends UserCommand
 {

@@ -1,4 +1,4 @@
-/**
+/*
  * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
@@ -11,23 +11,17 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ *  You should have received a  copy  of the GNU General Public License
+ *  along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
-import gameserver.configs.main.GSConfig;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.quest.model.QuestStatus;
 
-/**
- * @author MrPoke
- * 
- */
+import java.nio.ByteBuffer;
+
 public class SM_QUEST_ACCEPTED extends AionServerPacket
 {
 	private int questId;
@@ -89,8 +83,6 @@ public class SM_QUEST_ACCEPTED extends AionServerPacket
 		switch(action)
 		{
 			case 1:
-			if(GSConfig.SERVER_VERSION.startsWith("2.5"))
-			{
 				writeC(buf, action);
 				writeD(buf, questId);
 				writeC(buf, status);
@@ -98,7 +90,6 @@ public class SM_QUEST_ACCEPTED extends AionServerPacket
 				writeD(buf, step);
 				writeH(buf, 0);
 				break;
-			}
 			case 2:
 				writeC(buf, action);
 				writeD(buf, questId);
@@ -111,11 +102,7 @@ public class SM_QUEST_ACCEPTED extends AionServerPacket
 				writeC(buf, action);
 				writeD(buf, questId);
 				writeC(buf, status);
-				if(GSConfig.SERVER_VERSION.startsWith("2.0"))
-				writeC(buf, 0x0);
 				writeC(buf, step);
-				if(GSConfig.SERVER_VERSION.startsWith("2.0"))
-				writeD(buf, 0x0);
 				break;
 			case 4:
 				writeC(buf, action);

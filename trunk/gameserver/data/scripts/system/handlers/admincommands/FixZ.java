@@ -17,9 +17,6 @@
 
 package admincommands;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dao.SpawnDAO;
@@ -36,6 +33,10 @@ import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FixZ extends AdminCommand
 {

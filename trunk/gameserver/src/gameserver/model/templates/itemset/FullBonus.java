@@ -16,16 +16,14 @@
  */
 package gameserver.model.templates.itemset;
 
-import java.util.TreeSet;
+import gameserver.model.gameobjects.stats.modifiers.StatModifier;
+import gameserver.model.templates.stats.ModifiersTemplate;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
-
-import gameserver.model.gameobjects.stats.modifiers.StatModifier;
-import gameserver.model.templates.stats.ModifiersTemplate;
+import java.util.TreeSet;
 
 
 /**

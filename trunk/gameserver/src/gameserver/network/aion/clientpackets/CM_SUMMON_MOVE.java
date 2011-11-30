@@ -16,8 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.controllers.movement.MovementType;
 import gameserver.model.gameobjects.Summon;
 import gameserver.model.gameobjects.player.Player;
@@ -25,6 +23,7 @@ import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_MOVE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 
 /**

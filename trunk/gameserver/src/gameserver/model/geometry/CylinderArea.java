@@ -17,8 +17,9 @@
 
 package gameserver.model.geometry;
 
-import java.awt.Point;
 import gameserver.utils.MathUtil;
+
+import java.awt.*;
 
 public class CylinderArea extends AbstractArea
 {

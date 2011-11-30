@@ -16,10 +16,7 @@
  */
 package gameserver.controllers.movement;
 
-import java.util.List;
-
 import commons.utils.Rnd;
-
 import gameserver.controllers.attack.AttackResult;
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.model.gameobjects.Creature;
@@ -30,6 +27,8 @@ import gameserver.skill.model.AttackType;
 import gameserver.skill.model.Effect;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.List;
 
 
 

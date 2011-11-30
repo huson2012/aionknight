@@ -16,9 +16,9 @@
  */
 package gameserver.utils.gametime;
 
-import java.security.InvalidParameterException;
-
 import gameserver.spawn.DayNightSpawnManager;
+
+import java.security.InvalidParameterException;
 
 
 /**

@@ -17,13 +17,10 @@
 
 package gameserver.quest.handlers.models.xmlQuest.operations;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.quest.model.QuestCookie;
 import gameserver.services.QuestService;
+
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CollectItemQuestOperation", propOrder = { "_true", "_false" })

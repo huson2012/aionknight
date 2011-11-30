@@ -17,11 +17,6 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerQuestListDAO;
 import gameserver.model.gameobjects.PersistentState;
@@ -29,6 +24,12 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.QuestStateList;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
 
 public class MySQL5PlayerQuestListDAO extends PlayerQuestListDAO
 {

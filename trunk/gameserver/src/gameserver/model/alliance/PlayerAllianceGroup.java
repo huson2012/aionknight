@@ -17,8 +17,9 @@
 
 package gameserver.model.alliance;
 
-import java.util.Collection;
 import javolution.util.FastMap;
+
+import java.util.Collection;
 
 public class PlayerAllianceGroup
 {

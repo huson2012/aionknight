@@ -18,7 +18,6 @@
 package gameserver.world;
 
 import gameserver.model.gameobjects.VisibleObject;
-import gameserver.world.MapRegion;
 
 public class NpcKnownList extends KnownList
 {

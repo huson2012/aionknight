@@ -17,12 +17,13 @@
 
 package gameserver.model.trade;
 
+import gameserver.model.gameobjects.Item;
+import gameserver.model.gameobjects.player.Player;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import gameserver.model.gameobjects.Item;
-import gameserver.model.gameobjects.player.Player;
 
 public class TradeRepurchaseList
 {

@@ -16,11 +16,10 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.services.BrokerService;
+import org.apache.log4j.Logger;
 
 
 /**

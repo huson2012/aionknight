@@ -17,9 +17,10 @@
 
 package gameserver.model;
 
+import gameserver.configs.network.FloodConfig;
+
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import gameserver.configs.network.FloodConfig;
 
 public class FloodIP
 {

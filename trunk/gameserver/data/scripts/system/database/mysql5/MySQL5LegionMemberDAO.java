@@ -17,11 +17,6 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.LegionMemberDAO;
 import gameserver.model.PlayerClass;
@@ -29,6 +24,12 @@ import gameserver.model.legion.LegionMember;
 import gameserver.model.legion.LegionMemberEx;
 import gameserver.model.legion.LegionRank;
 import gameserver.services.LegionService;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * Class that that is responsible for loading/storing {@link gameserver.model.legion.LegionMember} object

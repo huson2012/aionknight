@@ -16,8 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
-
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Summon;
 import gameserver.model.gameobjects.player.Player;
@@ -25,6 +23,7 @@ import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
 
 
 /**

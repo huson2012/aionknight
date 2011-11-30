@@ -17,8 +17,9 @@
 
 package gameserver.network.chatserver;
 
-import java.nio.ByteBuffer;
 import commons.network.packet.BaseServerPacket;
+
+import java.nio.ByteBuffer;
 
 public abstract class CsServerPacket extends BaseServerPacket
 {

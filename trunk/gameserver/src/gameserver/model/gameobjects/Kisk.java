@@ -17,8 +17,6 @@
 
 package gameserver.model.gameobjects;
 
-import java.util.ArrayList;
-import java.util.List;
 import gameserver.controllers.NpcController;
 import gameserver.model.Race;
 import gameserver.model.alliance.PlayerAllianceMember;
@@ -31,6 +29,9 @@ import gameserver.model.templates.stats.KiskStatsTemplate;
 import gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Kisk extends Npc
 {

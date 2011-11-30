@@ -16,11 +16,11 @@
  */
 package gameserver.network.rdc;
 
-import java.io.IOException;
-import java.nio.channels.SocketChannel;
-
 import commons.ngen.network.Connection;
 import commons.ngen.network.ConnectionFactory;
+
+import java.io.IOException;
+import java.nio.channels.SocketChannel;
 
 
 /**

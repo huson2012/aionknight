@@ -17,8 +17,6 @@
 
 package gameserver.model.gameobjects.stats;
 
-import java.util.TreeSet;
-import java.util.concurrent.atomic.AtomicInteger;
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.stats.modifiers.StatModifier;
@@ -28,6 +26,9 @@ import gameserver.model.templates.item.ItemTemplate;
 import gameserver.model.templates.stats.NpcStatsTemplate;
 import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.TreeSet;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class NpcGameStats extends CreatureGameStats<Npc>
 {

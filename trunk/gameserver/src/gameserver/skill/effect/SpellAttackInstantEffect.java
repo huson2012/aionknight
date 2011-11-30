@@ -16,13 +16,12 @@
  */
 package gameserver.skill.effect;
 
+import gameserver.skill.action.DamageType;
+import gameserver.skill.model.Effect;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.skill.action.DamageType;
-import gameserver.skill.model.Effect;
 
 /**
 

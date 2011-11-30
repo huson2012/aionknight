@@ -17,10 +17,10 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.shield.Shield;
 import gameserver.model.templates.shield.ShieldTemplate;
+import org.apache.log4j.Logger;
 
 public class ShieldService
 {

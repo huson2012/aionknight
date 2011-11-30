@@ -16,14 +16,12 @@
  */
 package gameserver.controllers.attack;
 
+import gameserver.configs.main.CustomConfig;
+import javolution.util.FastMap;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import gameserver.configs.main.CustomConfig;
-
-
-import javolution.util.FastMap;
 
 /**
  * @author Sarynth

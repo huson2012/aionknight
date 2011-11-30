@@ -17,11 +17,12 @@
 
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import gameserver.controllers.attack.AttackUtil;
 import gameserver.skill.action.DamageType;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTargetSlot;
+
+import javax.xml.bind.annotation.XmlAttribute;
 
 public class DispelBuffCounterAtkEffect extends DamageEffect
 {

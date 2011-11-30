@@ -17,16 +17,14 @@
 
 package gameserver.quest.handlers.models.xmlQuest.events;
 
-import java.util.List;
+import gameserver.quest.handlers.models.xmlQuest.QuestVar;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.quest.handlers.models.xmlQuest.QuestVar;
-import gameserver.quest.model.QuestCookie;
-import gameserver.quest.model.QuestState;
+import java.util.List;
 
 
 /**

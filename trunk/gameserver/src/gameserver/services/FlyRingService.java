@@ -17,10 +17,10 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.flyring.FlyRing;
 import gameserver.model.templates.flyring.FlyRingTemplate;
+import org.apache.log4j.Logger;
 
 public class FlyRingService
 {

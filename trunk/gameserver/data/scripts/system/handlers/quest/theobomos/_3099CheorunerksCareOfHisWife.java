@@ -25,7 +25,6 @@ import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
-import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
  
 public class _3099CheorunerksCareOfHisWife extends QuestHandler

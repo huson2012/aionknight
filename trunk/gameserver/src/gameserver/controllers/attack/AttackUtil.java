@@ -16,31 +16,25 @@
  */
 package gameserver.controllers.attack;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.Race;
 import gameserver.model.SkillElement;
-import gameserver.model.gameobjects.Creature;
-import gameserver.model.gameobjects.Npc;
-import gameserver.model.gameobjects.NpcWithCreator;
-import gameserver.model.gameobjects.Summon;
+import gameserver.model.gameobjects.*;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.CreatureGameStats;
 import gameserver.model.gameobjects.stats.StatEnum;
-import gameserver.model.gameobjects.Servant;
-import gameserver.model.gameobjects.Trap;
 import gameserver.model.siege.Influence;
 import gameserver.model.templates.item.WeaponType;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.stats.StatFunctions;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 

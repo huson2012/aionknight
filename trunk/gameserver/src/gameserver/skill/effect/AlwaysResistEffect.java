@@ -17,11 +17,12 @@
 
 package gameserver.skill.effect;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.controllers.movement.AttackCalcObserver;
 import gameserver.controllers.movement.AttackStatusObserver;
 import gameserver.skill.model.Effect;
+
+import javax.xml.bind.annotation.XmlAttribute;
 
 public class AlwaysResistEffect extends EffectTemplate
 {

@@ -17,9 +17,6 @@
 
 package gameserver.services;
 
-import java.util.Set;
-import java.util.TreeSet;
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
 import gameserver.configs.main.EnchantsConfig;
 import gameserver.model.DescriptionId;
@@ -44,6 +41,10 @@ import gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.Set;
+import java.util.TreeSet;
 
 public class EnchantService
 {

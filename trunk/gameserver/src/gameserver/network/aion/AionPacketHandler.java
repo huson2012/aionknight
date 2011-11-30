@@ -17,13 +17,14 @@
 
 package gameserver.network.aion;
 
-import java.nio.ByteBuffer;
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.log4j.Logger;
 import gameserver.configs.network.NetworkConfig;
 import gameserver.network.aion.AionConnection.State;
 import gameserver.utils.Util;
+import org.apache.log4j.Logger;
+
+import java.nio.ByteBuffer;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AionPacketHandler
 {
@@ -44,10 +45,10 @@ public class AionPacketHandler
 	public AionClientPacket handle(ByteBuffer data, AionConnection client)
 	{
 		State state = client.getState();
-		int id = data.get() & 0xff;
+		short id = data.getShort(); //2.7 Opcode is now 2 bytes.
 
-		/** Second opcodec. */
-		data.position(data.position() + 2);
+		//TODO: Add client packet validation for opcode instead of skipping
+		data.position(data.position() + 3);
 
 		return getPacket(state, id, data, client);
 	}
@@ -93,7 +94,7 @@ public class AionPacketHandler
 	{
 		if(NetworkConfig.DISPLAY_UNKNOWNPACKETS)
 		{
-			log.warn(String.format("Unknown packet recived from Aion client: 0x%02X, state=%s %n%s", id, state
+			log.warn(String.format("Неизвестный пакет получен от клиента: 0x%02X, state=%s %n%s", id, state
 				.toString(), Util.toHex(data)));
 		}
 	}

@@ -17,23 +17,24 @@
 
 package gameserver.model.gameobjects.stats;
 
-import java.util.concurrent.Future;
-import java.util.concurrent.locks.ReentrantLock;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.alliance.PlayerAllianceEvent;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.model.group.GroupEvent;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
+import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.network.aion.serverpackets.SM_FLY_TIME;
 import gameserver.network.aion.serverpackets.SM_STATUPDATE_HP;
 import gameserver.network.aion.serverpackets.SM_STATUPDATE_MP;
-import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.services.AllianceService;
 import gameserver.services.LifeStatsRestoreService;
 import gameserver.task.impl.PacketBroadcaster.BroadcastMode;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.zone.ZoneName;
+
+import java.util.concurrent.Future;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class PlayerLifeStats extends CreatureLifeStats<Player>
 {

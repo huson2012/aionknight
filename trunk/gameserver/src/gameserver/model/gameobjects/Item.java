@@ -17,9 +17,6 @@
 
 package gameserver.model.gameobjects;
 
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
 import gameserver.dataholders.DataManager;
 import gameserver.itemengine.actions.ItemActions;
 import gameserver.model.items.FusionStone;
@@ -31,6 +28,10 @@ import gameserver.model.templates.item.ItemQuality;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.model.templates.item.ItemType;
 import gameserver.services.ItemService;
+
+import java.util.Comparator;
+import java.util.Set;
+import java.util.TreeSet;
 
 
 /**

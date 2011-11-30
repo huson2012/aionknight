@@ -17,14 +17,15 @@
 
 package gameserver.quest.handlers.models.xmlQuest;
 
-import java.util.List;
+import gameserver.model.gameobjects.Npc;
+import gameserver.quest.model.QuestCookie;
+import gameserver.quest.model.QuestState;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.gameobjects.Npc;
-import gameserver.quest.model.QuestCookie;
-import gameserver.quest.model.QuestState;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "QuestNpc", propOrder = { "dialog" })

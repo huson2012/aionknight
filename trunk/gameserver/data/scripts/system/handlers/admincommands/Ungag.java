@@ -17,7 +17,6 @@
 
 package admincommands;
 
-import java.util.concurrent.Future;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.TaskId;
 import gameserver.model.gameobjects.player.Player;
@@ -25,6 +24,8 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.util.concurrent.Future;
 
 public class Ungag extends AdminCommand
 {

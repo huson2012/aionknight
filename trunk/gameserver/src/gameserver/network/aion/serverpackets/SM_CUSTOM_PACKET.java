@@ -17,12 +17,12 @@
 
 package gameserver.network.aion.serverpackets;
 
+import gameserver.network.aion.AionConnection;
+import gameserver.network.aion.AionServerPacket;
+
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-
-import gameserver.network.aion.AionConnection;
-import gameserver.network.aion.AionServerPacket;
 
 
 /**

@@ -16,9 +16,6 @@
  */
 package gameserver.controllers.movement;
 
-import java.util.Random;
-
-
 import gameserver.configs.administration.AdminConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.flyring.FlyRing;
@@ -35,6 +32,8 @@ import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.Random;
 
 
 /**

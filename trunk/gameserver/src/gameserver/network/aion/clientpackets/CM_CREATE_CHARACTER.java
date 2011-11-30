@@ -16,11 +16,7 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.sql.Timestamp;
-import java.util.List;
-
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.InventoryDAO;
 import gameserver.model.Gender;
 import gameserver.model.PlayerClass;
@@ -37,6 +33,9 @@ import gameserver.network.aion.serverpackets.SM_CREATE_CHARACTER;
 import gameserver.services.PlayerService;
 import gameserver.utils.Util;
 import gameserver.utils.idfactory.IDFactory;
+
+import java.sql.Timestamp;
+import java.util.List;
 
 
 /**

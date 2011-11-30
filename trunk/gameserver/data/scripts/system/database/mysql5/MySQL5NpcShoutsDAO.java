@@ -17,17 +17,18 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import javolution.util.FastMap;
-import java.util.ArrayList;
-import java.util.List;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.NpcShoutsDAO;
 import gameserver.model.NpcShout;
 import gameserver.model.ShoutEventType;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQL5NpcShoutsDAO extends NpcShoutsDAO
 {

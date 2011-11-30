@@ -1,14 +1,13 @@
 package gameserver.skill.effect;
 
+import gameserver.controllers.attack.AttackUtil;
+import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
+import gameserver.skill.model.Effect;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.controllers.attack.AttackUtil;
-import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
-import gameserver.skill.model.Effect;
 
 
 

@@ -16,11 +16,8 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.List;
-
 import commons.database.dao.DAOManager;
 import commons.versionning.Version;
-
 import gameserver.GameServer;
 import gameserver.cache.HTMLCache;
 import gameserver.configs.main.CustomConfig;
@@ -31,8 +28,8 @@ import gameserver.dataholders.DataManager;
 import gameserver.model.ChatType;
 import gameserver.model.EmotionType;
 import gameserver.model.account.Account;
-import gameserver.model.account.PlayerAccountData;
 import gameserver.model.account.CharacterPasskey.ConnectType;
+import gameserver.model.account.PlayerAccountData;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.Storage;
@@ -44,56 +41,12 @@ import gameserver.model.templates.GuildTemplate;
 import gameserver.model.templates.QuestTemplate;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.AionConnection;
-import gameserver.network.aion.serverpackets.SM_ABYSS_RANK;
-import gameserver.network.aion.serverpackets.SM_CHANNEL_INFO;
-import gameserver.network.aion.serverpackets.SM_CHARACTER_SELECT;
-import gameserver.network.aion.serverpackets.SM_CUBE_UPDATE;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
-import gameserver.network.aion.serverpackets.SM_EMOTION_LIST;
-import gameserver.network.aion.serverpackets.SM_ENTER_WORLD_CHECK;
-import gameserver.network.aion.serverpackets.SM_GAME_TIME;
-import gameserver.network.aion.serverpackets.SM_INFLUENCE_RATIO;
-import gameserver.network.aion.serverpackets.SM_INSTANCE_COOLDOWN;
-import gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
-import gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
-import gameserver.network.aion.serverpackets.SM_MACRO_LIST;
-import gameserver.network.aion.serverpackets.SM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_PLAYER_SPAWN;
-import gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
-import gameserver.network.aion.serverpackets.SM_PRICES;
-import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
-import gameserver.network.aion.serverpackets.SM_QUEST_LIST;
-import gameserver.network.aion.serverpackets.SM_RECIPE_LIST;
-import gameserver.network.aion.serverpackets.SM_SIEGE_LOCATION_INFO;
-import gameserver.network.aion.serverpackets.SM_SKILL_COOLDOWN;
-import gameserver.network.aion.serverpackets.SM_SKILL_LIST;
-import gameserver.network.aion.serverpackets.SM_STARTED_QUEST_LIST;
-import gameserver.network.aion.serverpackets.SM_STATS_INFO;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_TITLE_LIST;
-import gameserver.network.aion.serverpackets.SM_UI_SETTINGS;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
-import gameserver.services.AllianceService;
-import gameserver.services.ArenaService;
-import gameserver.services.BrokerService;
-import gameserver.services.ChatService;
-import gameserver.services.ClassChangeService;
-import gameserver.services.GroupService;
-import gameserver.services.GuildService;
-import gameserver.services.HTMLService;
-import gameserver.services.KiskService;
-import gameserver.services.LegionService;
-import gameserver.services.MailService;
-import gameserver.services.PetitionService;
-import gameserver.services.PlayerService;
-import gameserver.services.PunishmentService;
-import gameserver.services.SiegeService;
-import gameserver.services.StigmaService;
-import gameserver.services.TeleportService;
-import gameserver.services.ToyPetService;
+import gameserver.services.*;
 import gameserver.skill.SkillEngine;
 import gameserver.skill.effect.EffectId;
 import gameserver.skill.model.CreatureWithDistance;
@@ -103,6 +56,8 @@ import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 import gameserver.utils.rates.Rates;
 import gameserver.world.World;
+
+import java.util.List;
 
 
 /**

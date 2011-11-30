@@ -16,12 +16,12 @@
  */
 package gameserver.network.loginserver;
 
-import java.io.IOException;
-import java.nio.channels.SocketChannel;
-
 import commons.network.AConnection;
 import commons.network.ConnectionFactory;
 import commons.network.Dispatcher;
+
+import java.io.IOException;
+import java.nio.channels.SocketChannel;
 
 
 /**

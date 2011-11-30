@@ -17,8 +17,6 @@
 
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.List;
 import commons.utils.Rnd;
 import gameserver.ai.state.AIState;
 import gameserver.dataholders.DataManager;
@@ -30,6 +28,9 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.npcshouts.Shout;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NpcShoutsService
 {

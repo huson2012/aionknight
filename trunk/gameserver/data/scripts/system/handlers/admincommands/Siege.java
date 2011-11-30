@@ -17,15 +17,11 @@
 
 package admincommands;
 
-import java.util.Map;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.configs.main.SiegeConfig;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.model.siege.Artifact;
-import gameserver.model.siege.Commander;
 import gameserver.model.siege.SiegeLocation;
 import gameserver.model.siege.SiegeRace;
-import gameserver.model.siege.SiegeType;
 import gameserver.services.SiegeService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;

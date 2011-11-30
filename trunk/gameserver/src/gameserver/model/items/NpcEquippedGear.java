@@ -17,15 +17,16 @@
 
 package gameserver.model.items;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.Map.Entry;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import gameserver.dataholders.loadingutils.adapters.NpcEquipmentList;
 import gameserver.dataholders.loadingutils.adapters.NpcEquippedGearAdapter;
 import gameserver.model.templates.item.ItemTemplate;
+
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 @XmlJavaTypeAdapter(NpcEquippedGearAdapter.class)
 public class NpcEquippedGear implements Iterable<Entry<ItemSlot,ItemTemplate>>

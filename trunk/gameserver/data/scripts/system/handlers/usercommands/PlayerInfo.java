@@ -18,8 +18,6 @@
 
 package usercommands;
 
-import java.util.Iterator;
-import java.util.List;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
@@ -32,6 +30,9 @@ import gameserver.utils.Util;
 import gameserver.utils.chathandlers.UserCommand;
 import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.World;
+
+import java.util.Iterator;
+import java.util.List;
 
 public class PlayerInfo extends UserCommand {
     public PlayerInfo() {

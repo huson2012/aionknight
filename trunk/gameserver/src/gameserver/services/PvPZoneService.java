@@ -24,7 +24,6 @@ import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.model.templates.spawn.SpawnTemplate;
-import gameserver.services.TeleportService;
 import gameserver.spawn.SpawnEngine;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;

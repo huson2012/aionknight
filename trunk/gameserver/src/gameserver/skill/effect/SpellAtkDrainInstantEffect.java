@@ -16,15 +16,14 @@
  */
 package gameserver.skill.effect;
 
+import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
+import gameserver.skill.action.DamageType;
+import gameserver.skill.model.Effect;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
-import gameserver.skill.action.DamageType;
-import gameserver.skill.model.Effect;
 
 
 /**

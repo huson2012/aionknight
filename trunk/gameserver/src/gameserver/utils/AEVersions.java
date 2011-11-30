@@ -17,10 +17,10 @@
 
 package gameserver.utils;
 
-import org.apache.log4j.Logger;
 import commons.utils.AEInfos;
 import commons.versionning.Version;
 import gameserver.GameServer;
+import org.apache.log4j.Logger;
 
 public class AEVersions
 {

@@ -17,15 +17,16 @@
 
 package mysql5;
 
+import commons.database.DatabaseFactory;
+import gameserver.dao.PlayerMacrossesDAO;
+import gameserver.model.gameobjects.player.MacroList;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
-import gameserver.dao.PlayerMacrossesDAO;
-import gameserver.model.gameobjects.player.MacroList;
 
 public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 {

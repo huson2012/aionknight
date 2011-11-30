@@ -17,34 +17,18 @@
 
 package gameserver.configs;
 
-import java.util.Properties;
-import org.apache.log4j.Logger;
 import commons.configuration.ConfigurableProcessor;
 import commons.database.DatabaseConfig;
 import commons.utils.PropertiesUtils;
 import gameserver.GameServer;
 import gameserver.configs.administration.AdminConfig;
-import gameserver.configs.main.CacheConfig;
-import gameserver.configs.main.CustomConfig;
-import gameserver.configs.main.DropConfig;
-import gameserver.configs.main.EnchantsConfig;
-import gameserver.configs.main.EventConfig;
-import gameserver.configs.main.FallDamageConfig;
-import gameserver.configs.main.GSConfig;
-import gameserver.configs.main.GroupConfig;
-import gameserver.configs.main.HTMLConfig;
-import gameserver.configs.main.LegionConfig;
-import gameserver.configs.main.NpcMovementConfig;
-import gameserver.configs.main.PeriodicSaveConfig;
-import gameserver.configs.main.PricesConfig;
-import gameserver.configs.main.RateConfig;
-import gameserver.configs.main.ShutdownConfig;
-import gameserver.configs.main.SiegeConfig;
-import gameserver.configs.main.TaskManagerConfig;
-import gameserver.configs.main.ThreadConfig;
+import gameserver.configs.main.*;
 import gameserver.configs.network.FloodConfig;
 import gameserver.configs.network.IPConfig;
 import gameserver.configs.network.NetworkConfig;
+import org.apache.log4j.Logger;
+
+import java.util.Properties;
 
 public class Config
 {

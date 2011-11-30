@@ -17,10 +17,10 @@
 
 package gameserver.model.geometry;
 
-import java.awt.Point;
-import java.awt.Polygon;
-import java.util.Collection;
 import gameserver.utils.MathUtil;
+
+import java.awt.*;
+import java.util.Collection;
 
 public class PolyArea extends AbstractArea
 {

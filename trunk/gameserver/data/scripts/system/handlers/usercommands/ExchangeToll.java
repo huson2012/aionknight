@@ -17,7 +17,6 @@
 
 package usercommands;
 
-import java.sql.Connection;
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.account.Account;
 import gameserver.model.gameobjects.player.AbyssRank;

@@ -1,4 +1,4 @@
-/**
+/*
  * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
@@ -11,16 +11,15 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ *  You should have received a  copy  of the GNU General Public License
+ *  along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package gameserver.network.aion;
 
-import java.nio.ByteBuffer;
 import commons.network.packet.BaseServerPacket;
-import gameserver.configs.main.GSConfig;
 import gameserver.network.Crypt;
+
+import java.nio.ByteBuffer;
 
 public abstract class AionServerPacket extends BaseServerPacket
 {
@@ -39,23 +38,31 @@ public abstract class AionServerPacket extends BaseServerPacket
 	}
 
 	/**
-	 * Write packet opcodec and two additional bytes
-	 * 
+	 * Write packet short opcodec, static and two additional bytes for opcode check
+	 *
 	 * @param buf
 	 * @param value
 	 */
 	private final void writeOP(ByteBuffer buf, int value)
 	{
 		/** obfuscate packet id */
-		byte op = Crypt.encodeOpcodec(value);
-		buf.put(op);
-		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
-			Crypt.staticServerPacketCode = 0x54;
+		byte[] op= new byte[2];
+		op = toBytes((short)value);
+		op[0]= Crypt.encodeOpcodec(value);
+
+		buf.put(op[0]);
+		buf.put(op[1]);
+
 		/** put static server packet code */
 		buf.put(Crypt.staticServerPacketCode);
 
 		/** for checksum? */
-		buf.put((byte) ~op);
+		buf.put((byte) ~op[0]);
+		buf.put((byte) ~op[1]);
+	}
+	
+	private final byte[] toBytes(short s) {
+		return new byte[]{(byte)(s & 0x00FF),(byte)((s & 0xFF00)>>8)};
 	}
 
 	public final void write(AionConnection con)
@@ -64,7 +71,7 @@ public abstract class AionServerPacket extends BaseServerPacket
 	}
 	/**
 	 * Write and encrypt this packet data for given connection, to given buffer.
-	 * 
+	 *
 	 * @param con
 	 * @param buf
 	 */
@@ -82,13 +89,13 @@ public abstract class AionServerPacket extends BaseServerPacket
 
 	/**
 	 * Write data that this packet represents to given byte buffer.
-	 * 
+	 *
 	 * @param con
 	 * @param buf
 	 */
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
-		
+
 	}
 
 	/**

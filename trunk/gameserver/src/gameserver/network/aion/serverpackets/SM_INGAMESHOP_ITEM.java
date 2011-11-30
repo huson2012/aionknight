@@ -1,11 +1,10 @@
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-
-
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.CashShopManager.ShopItem;
+
+import java.nio.ByteBuffer;
 
 
 public class SM_INGAMESHOP_ITEM extends AionServerPacket

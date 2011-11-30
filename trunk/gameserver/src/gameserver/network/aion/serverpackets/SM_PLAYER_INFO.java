@@ -16,10 +16,6 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.List;
-
-
 import gameserver.configs.main.CustomConfig;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
@@ -29,6 +25,9 @@ import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.model.items.GodStone;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
+import java.util.List;
 
 
 /**

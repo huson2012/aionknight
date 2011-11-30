@@ -16,13 +16,12 @@
  */
 package gameserver.utils.idfactory;
 
+import commons.database.dao.DAOManager;
+import gameserver.dao.IdViewDAO;
+import org.apache.log4j.Logger;
+
 import java.util.BitSet;
 import java.util.concurrent.locks.ReentrantLock;
-
-import org.apache.log4j.Logger;
-import commons.database.dao.DAOManager;
-
-import gameserver.dao.IdViewDAO;
 
 
 /**

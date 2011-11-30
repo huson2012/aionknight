@@ -1,8 +1,8 @@
 package gameserver.dao;
 
 import commons.database.dao.DAO;
-import gameserver.model.gameobjects.player.CmotionList;
 import gameserver.model.gameobjects.player.Cmotion;
+import gameserver.model.gameobjects.player.CmotionList;
 import gameserver.model.gameobjects.player.Player;
 
 

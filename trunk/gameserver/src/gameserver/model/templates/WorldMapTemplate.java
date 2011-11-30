@@ -16,12 +16,12 @@
  */
 package gameserver.model.templates;
 
+import gameserver.world.WorldType;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import gameserver.world.WorldType;
 
 /**
  * @author Luno

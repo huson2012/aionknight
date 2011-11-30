@@ -16,8 +16,6 @@
  */
 package gameserver.quest.handlers.template;
 
-import org.apache.log4j.Logger;
-
 import gameserver.dataholders.DataManager;
 import gameserver.model.NpcType;
 import gameserver.model.gameobjects.Item;
@@ -31,6 +29,7 @@ import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
 
 
 /**

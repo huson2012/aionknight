@@ -17,10 +17,6 @@
 
 package gameserver.world;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.Npc;
@@ -30,8 +26,12 @@ import gameserver.model.gameobjects.stats.modifiers.ObjectContainer;
 import gameserver.model.templates.WorldMapTemplate;
 import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.exceptions.AlreadySpawnedException;
-import gameserver.world.exceptions.NotSetPositionException;
 import gameserver.world.exceptions.WorldMapNotExistException;
+import org.apache.log4j.Logger;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class World extends ObjectContainer
 {

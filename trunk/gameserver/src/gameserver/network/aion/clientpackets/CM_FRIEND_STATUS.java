@@ -17,8 +17,8 @@
 package gameserver.network.aion.clientpackets;
 
 
-import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.FriendList.Status;
+import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
 
 /**

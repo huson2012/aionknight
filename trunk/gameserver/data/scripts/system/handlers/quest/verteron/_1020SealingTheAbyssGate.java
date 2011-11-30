@@ -17,7 +17,6 @@
 
 package quest.verteron;
 
-import java.util.Collection;
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
@@ -36,6 +35,8 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldMapInstance;
 import gameserver.world.WorldMapType;
+
+import java.util.Collection;
 
 public class _1020SealingTheAbyssGate extends QuestHandler
 {

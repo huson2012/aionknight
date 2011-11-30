@@ -17,9 +17,10 @@
 
 package gameserver.world.zone;
 
-import java.util.Collection;
 import gameserver.model.templates.zone.Point2D;
 import gameserver.model.templates.zone.ZoneTemplate;
+
+import java.util.Collection;
 
 public class ZoneInstance
 {

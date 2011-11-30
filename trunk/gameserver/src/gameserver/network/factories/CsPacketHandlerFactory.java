@@ -17,9 +17,9 @@
 
 package gameserver.network.factories;
 
+import gameserver.network.chatserver.ChatServerConnection.State;
 import gameserver.network.chatserver.CsClientPacket;
 import gameserver.network.chatserver.CsPacketHandler;
-import gameserver.network.chatserver.ChatServerConnection.State;
 import gameserver.network.chatserver.clientpackets.CM_CS_AUTH_RESPONSE;
 import gameserver.network.chatserver.clientpackets.CM_CS_PLAYER_AUTH_RESPONSE;
 

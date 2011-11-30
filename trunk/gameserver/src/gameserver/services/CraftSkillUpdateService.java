@@ -17,9 +17,6 @@
 
 package gameserver.services;
 
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.DescriptionId;
 import gameserver.model.gameobjects.Creature;
@@ -33,6 +30,10 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CraftSkillUpdateService
 {

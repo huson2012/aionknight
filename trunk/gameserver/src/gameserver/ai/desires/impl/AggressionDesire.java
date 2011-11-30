@@ -16,9 +16,6 @@
  */
 package gameserver.ai.desires.impl;
 
-import java.util.Collections;
-
-
 import gameserver.ai.AI;
 import gameserver.ai.desires.AbstractDesire;
 import gameserver.ai.state.AIState;
@@ -43,6 +40,8 @@ import gameserver.skill.model.Skill;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import java.util.Collections;
 
 
 /**

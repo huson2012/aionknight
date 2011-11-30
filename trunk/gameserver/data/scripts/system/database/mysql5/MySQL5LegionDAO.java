@@ -17,25 +17,18 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.TreeMap;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.LegionDAO;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.StorageType;
-import gameserver.model.legion.Legion;
-import gameserver.model.legion.LegionEmblem;
-import gameserver.model.legion.LegionHistory;
-import gameserver.model.legion.LegionHistoryType;
-import gameserver.model.legion.LegionWarehouse;
+import gameserver.model.legion.*;
+import org.apache.log4j.Logger;
+
+import java.sql.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * Class that that is responsible for loading/storing {@link gameserver.model.legion.Legion} object from

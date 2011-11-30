@@ -17,22 +17,15 @@
 
 package gameserver.cache;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map.Entry;
+import gameserver.configs.main.HTMLConfig;
 import javolution.util.FastMap;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
-import gameserver.configs.main.HTMLConfig;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map.Entry;
 
 public final class HTMLCache
 {

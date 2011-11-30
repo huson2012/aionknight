@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.main.GSConfig;
 import gameserver.dao.SurveyDAO;
@@ -30,6 +29,8 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
 import java.util.List;
 
 /**

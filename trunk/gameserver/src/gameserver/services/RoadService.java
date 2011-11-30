@@ -17,10 +17,10 @@
  
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.model.road.Road;
 import gameserver.model.templates.road.RoadTemplate;
+import org.apache.log4j.Logger;
 
 public class RoadService {
 	Logger log = Logger.getLogger(RoadService.class);

@@ -1,15 +1,14 @@
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.Collection;
-
-
 import gameserver.model.gameobjects.LFGApplyGroup;
 import gameserver.model.gameobjects.LFGRecruitGroup;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.LGFService;
+
+import java.nio.ByteBuffer;
+import java.util.Collection;
 
 
 /**

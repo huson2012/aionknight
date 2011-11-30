@@ -1,14 +1,13 @@
-package gameserver.skill.effect; 
-	 
-import javax.xml.bind.annotation.XmlAccessType; 
-import javax.xml.bind.annotation.XmlAccessorType; 
-import javax.xml.bind.annotation.XmlType; 
-
+package gameserver.skill.effect;
 
 import gameserver.controllers.attack.AggroInfo;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.skill.model.Effect;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
  
  
 /** 

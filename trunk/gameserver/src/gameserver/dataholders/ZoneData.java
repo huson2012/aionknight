@@ -17,17 +17,14 @@
 
 package gameserver.dataholders;
 
-import gnu.trove.THashMap;
-import java.util.Iterator;
-import java.util.List;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.model.templates.zone.ZoneTemplate;
 import gameserver.world.zone.ZoneName;
+import gnu.trove.THashMap;
+
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.*;
+import java.util.Iterator;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")

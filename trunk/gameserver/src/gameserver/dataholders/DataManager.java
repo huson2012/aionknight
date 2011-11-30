@@ -17,9 +17,9 @@
 
 package gameserver.dataholders;
 
-import org.apache.log4j.Logger;
 import gameserver.dataholders.loadingutils.XmlDataLoader;
 import gameserver.utils.Util;
+import org.apache.log4j.Logger;
 
 public final class DataManager
 {

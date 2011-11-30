@@ -17,11 +17,12 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.model.account.Account;
 import gameserver.model.account.PlayerAccountData;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.PlayerInfo;
+
+import java.nio.ByteBuffer;
 
 public class SM_CHARACTER_LIST extends PlayerInfo
 {

@@ -16,10 +16,6 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.List;
-
-
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.model.gameobjects.stats.PlayerLifeStats;
@@ -29,6 +25,9 @@ import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.skill.model.Effect;
 import gameserver.world.WorldPosition;
+
+import java.nio.ByteBuffer;
+import java.util.List;
 
 
 /**

@@ -17,13 +17,13 @@
 
 package gameserver.network.chatserver.clientpackets;
 
-import org.apache.log4j.Logger;
 import commons.utils.ExitCode;
-import gameserver.network.chatserver.CsClientPacket;
 import gameserver.network.chatserver.ChatServerConnection.State;
+import gameserver.network.chatserver.CsClientPacket;
 import gameserver.network.chatserver.serverpackets.SM_CS_AUTH;
 import gameserver.services.ChatService;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
 
 public class CM_CS_AUTH_RESPONSE extends CsClientPacket
 {

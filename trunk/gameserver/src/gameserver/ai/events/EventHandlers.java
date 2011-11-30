@@ -16,18 +16,7 @@
  */
 package gameserver.ai.events;
 
-import gameserver.ai.events.handler.AttackedEventHandler;
-import gameserver.ai.events.handler.BackHomeEventHandler;
-import gameserver.ai.events.handler.DespawnEventHandler;
-import gameserver.ai.events.handler.DiedEventHandler;
-import gameserver.ai.events.handler.EventHandler;
-import gameserver.ai.events.handler.NotSeePlayerEventHandler;
-import gameserver.ai.events.handler.NothingTodoEventHandler;
-import gameserver.ai.events.handler.RespawnedEventHandler;
-import gameserver.ai.events.handler.RestoredHealthEventHandler;
-import gameserver.ai.events.handler.SeePlayerEventHandler;
-import gameserver.ai.events.handler.TalkEventHandler;
-import gameserver.ai.events.handler.TiredAttackingEventHandler;
+import gameserver.ai.events.handler.*;
 
 /**
 

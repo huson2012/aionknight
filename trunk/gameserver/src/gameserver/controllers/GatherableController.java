@@ -16,10 +16,7 @@
  */
 package gameserver.controllers;
 
-import java.util.List;
-
 import commons.utils.Rnd;
-
 import gameserver.controllers.movement.StartMovingListener;
 import gameserver.dataholders.DataManager;
 import gameserver.model.DescriptionId;
@@ -35,6 +32,8 @@ import gameserver.services.RespawnService;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.skill.task.GatheringTask;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.List;
 
 
 /**

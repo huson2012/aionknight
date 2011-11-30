@@ -17,11 +17,12 @@
 
 package gameserver.skill.change;
 
+import gameserver.model.gameobjects.stats.StatEnum;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.model.gameobjects.stats.StatEnum;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Change")

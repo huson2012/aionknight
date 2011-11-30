@@ -16,9 +16,7 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
-
 import gameserver.dao.PlayerAppearanceDAO;
 import gameserver.dao.PlayerDAO;
 import gameserver.model.Gender;
@@ -30,6 +28,7 @@ import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.AionConnection;
 import gameserver.services.PlayerService;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
 
 
 /**

@@ -17,9 +17,6 @@
 
 package quest.ascension;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.DataManager;
 import gameserver.model.EmotionType;
@@ -29,23 +26,19 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.model.templates.quest.QuestItems;
 import gameserver.network.aion.SystemMessageId;
-import gameserver.network.aion.serverpackets.SM_ASCENSION_MORPH;
-import gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
-import gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
-import gameserver.services.InstanceService;
-import gameserver.services.ItemService;
-import gameserver.services.QuestService;
-import gameserver.services.SkillLearnService;
-import gameserver.services.TeleportService;
+import gameserver.services.*;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.WorldMapInstance;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class _2008Ascension extends QuestHandler
 {

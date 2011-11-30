@@ -17,9 +17,10 @@
 
 package gameserver.task;
 
-import java.util.Set;
 import commons.utils.concurrent.RunnableStatsManager;
 import javolution.util.FastSet;
+
+import java.util.Set;
 
 public abstract class AbstractIterativePeriodicTaskManager<T> extends AbstractPeriodicTaskManager
 {

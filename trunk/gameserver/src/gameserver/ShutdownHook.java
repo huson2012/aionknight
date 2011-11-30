@@ -17,7 +17,6 @@
 
 package gameserver;
 
-import org.apache.log4j.Logger;
 import commons.utils.ExitCode;
 import commons.utils.concurrent.RunnableStatsManager;
 import commons.utils.concurrent.RunnableStatsManager.SortBy;
@@ -31,6 +30,7 @@ import gameserver.services.PlayerService;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.gametime.GameTimeManager;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
 
 public class ShutdownHook extends Thread
 {

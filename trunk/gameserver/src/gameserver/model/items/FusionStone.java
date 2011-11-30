@@ -17,11 +17,12 @@
 
 package gameserver.model.items;
 
-import java.util.TreeSet;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.stats.modifiers.StatModifier;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.services.ItemService;
+
+import java.util.TreeSet;
 
 public class FusionStone extends ItemStone
 {

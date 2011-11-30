@@ -16,12 +16,6 @@
  */
 package gameserver.skill.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.skill.action.Actions;
 import gameserver.skill.condition.Conditions;
 import gameserver.skill.effect.EffectTemplate;
@@ -30,6 +24,11 @@ import gameserver.skill.properties.Properties;
 import gameserver.skill.properties.Property;
 import gameserver.skill.properties.TargetRangeProperty;
 import gameserver.skill.properties.TargetRelationProperty;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 
 

@@ -17,14 +17,6 @@
 
 package gameserver.model.gameobjects.stats;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
-import java.util.Map.Entry;
-import org.apache.log4j.Logger;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dataholders.PlayerStatsData;
 import gameserver.model.EmotionType;
@@ -32,16 +24,16 @@ import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.state.CreatureState;
 import gameserver.model.gameobjects.stats.id.ItemStatEffectId;
 import gameserver.model.gameobjects.stats.id.StatEffectId;
-import gameserver.model.gameobjects.stats.modifiers.AddModifier;
-import gameserver.model.gameobjects.stats.modifiers.MeanModifier;
-import gameserver.model.gameobjects.stats.modifiers.SetModifier;
-import gameserver.model.gameobjects.stats.modifiers.SimpleModifier;
-import gameserver.model.gameobjects.stats.modifiers.StatModifier;
+import gameserver.model.gameobjects.stats.modifiers.*;
 import gameserver.model.items.ItemSlot;
 import gameserver.model.templates.stats.PlayerStatsTemplate;
 import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.*;
+import java.util.Map.Entry;
 
 public class PlayerGameStats extends CreatureGameStats<Player>
 {

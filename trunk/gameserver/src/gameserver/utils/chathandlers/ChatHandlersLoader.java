@@ -1,11 +1,11 @@
 package gameserver.utils.chathandlers;
 
-import java.lang.reflect.Modifier;
-
-import org.apache.log4j.Logger;
 import commons.scripting.classlistener.ClassListener;
 import commons.scripting.classlistener.DefaultClassListener;
 import commons.utils.ClassUtils;
+import org.apache.log4j.Logger;
+
+import java.lang.reflect.Modifier;
 
 
 /**

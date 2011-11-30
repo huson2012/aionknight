@@ -16,17 +16,15 @@
  */
 package gameserver.controllers.attack;
 
-import java.util.Collection;
-
-import javolution.util.FastMap;
-
-import org.apache.log4j.Logger;
-
 import gameserver.ai.events.Event;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
+import javolution.util.FastMap;
+import org.apache.log4j.Logger;
+
+import java.util.Collection;
 
 
 /**

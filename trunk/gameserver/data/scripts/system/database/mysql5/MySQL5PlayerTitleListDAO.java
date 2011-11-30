@@ -17,16 +17,17 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerTitleListDAO;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.Title;
 import gameserver.model.gameobjects.player.TitleList;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
 
 public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 {

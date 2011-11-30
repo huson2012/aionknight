@@ -17,13 +17,14 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
 import gameserver.model.AbyssRankingResult;
 import gameserver.model.Race;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.AbyssRankingService;
+
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
 
 public class SM_ABYSS_RANKING_LEGIONS extends AionServerPacket
 {

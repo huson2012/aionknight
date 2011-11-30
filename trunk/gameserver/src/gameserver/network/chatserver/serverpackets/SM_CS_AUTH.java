@@ -17,11 +17,12 @@
 
 package gameserver.network.chatserver.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.configs.network.IPConfig;
 import gameserver.configs.network.NetworkConfig;
 import gameserver.network.chatserver.ChatServerConnection;
 import gameserver.network.chatserver.CsServerPacket;
+
+import java.nio.ByteBuffer;
 
 public class SM_CS_AUTH extends CsServerPacket
 {

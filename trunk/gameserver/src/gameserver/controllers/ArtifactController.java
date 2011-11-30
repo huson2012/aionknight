@@ -16,8 +16,6 @@
  */
 package gameserver.controllers;
 
-import org.apache.log4j.Logger;
-
 import gameserver.controllers.movement.ActionObserver;
 import gameserver.controllers.movement.ActionObserver.ObserverType;
 import gameserver.dataholders.DataManager;
@@ -39,7 +37,6 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.services.SiegeService;
 import gameserver.skill.SkillEngine;
 import gameserver.skill.model.CreatureWithDistance;
-import gameserver.skill.model.Effect;
 import gameserver.skill.model.Skill;
 import gameserver.skill.model.SkillSubType;
 import gameserver.skill.model.SkillTemplate;
@@ -47,8 +44,7 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 import gameserver.world.WorldType;
-
-import java.util.Collections;
+import org.apache.log4j.Logger;
 
 
 /**

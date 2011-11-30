@@ -17,11 +17,12 @@
 
 package gameserver.skill.effect;
 
+import gameserver.skill.model.Effect;
+import gameserver.skill.model.SpellStatus;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-import gameserver.skill.model.Effect;
-import gameserver.skill.model.SpellStatus;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CloseAerialEffect")

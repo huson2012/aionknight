@@ -17,9 +17,7 @@
 
 package gameserver.utils.stats;
 
-import org.apache.log4j.Logger;
 import commons.utils.Rnd;
-
 import gameserver.configs.main.FallDamageConfig;
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.model.SkillElement;
@@ -37,7 +35,7 @@ import gameserver.model.templates.stats.NpcRank;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
 import gameserver.skill.effect.EffectId;
 import gameserver.utils.PacketSendUtility;
-import gameserver.model.PlayerClass;
+import org.apache.log4j.Logger;
 
 public class StatFunctions
 {

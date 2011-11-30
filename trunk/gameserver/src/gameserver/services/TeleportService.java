@@ -17,8 +17,6 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.Logger;
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.PlayerInitialData.LocationData;
 import gameserver.model.EmotionType;
@@ -38,22 +36,13 @@ import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.model.templates.teleport.TelelocationTemplate;
 import gameserver.model.templates.teleport.TeleportLocation;
 import gameserver.model.templates.teleport.TeleporterTemplate;
-import gameserver.network.aion.serverpackets.SM_CHANNEL_INFO;
-import gameserver.network.aion.serverpackets.SM_EMOTION;
-import gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
-import gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
-import gameserver.network.aion.serverpackets.SM_PLAYER_SPAWN;
-import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
-import gameserver.network.aion.serverpackets.SM_SET_BIND_POINT;
-import gameserver.network.aion.serverpackets.SM_STATS_INFO;
-import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import gameserver.network.aion.serverpackets.SM_TELEPORT_LOC;
-import gameserver.network.aion.serverpackets.SM_TELEPORT_MAP;
+import gameserver.network.aion.serverpackets.*;
 import gameserver.services.ZoneService.ZoneUpdateMode;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 import gameserver.world.WorldMapType;
+import org.apache.log4j.Logger;
 
 public class TeleportService
 {

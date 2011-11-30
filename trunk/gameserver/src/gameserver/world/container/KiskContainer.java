@@ -17,11 +17,12 @@
 
 package gameserver.world.container;
 
-import java.util.Map;
 import gameserver.model.gameobjects.Kisk;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.world.exceptions.DuplicateAionObjectException;
 import javolution.util.FastMap;
+
+import java.util.Map;
 
 public class KiskContainer
 {

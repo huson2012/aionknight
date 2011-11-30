@@ -17,8 +17,9 @@
  
 package gameserver.configs.network;
 
-import java.net.InetSocketAddress;
 import commons.configuration.Property;
+
+import java.net.InetSocketAddress;
 
 public class NetworkConfig
 {

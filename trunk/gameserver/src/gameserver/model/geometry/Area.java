@@ -17,7 +17,7 @@
 
 package gameserver.model.geometry;
 
-import java.awt.Point;
+import java.awt.*;
 
 public interface Area
 {

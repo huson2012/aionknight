@@ -16,15 +16,14 @@
  */
 package gameserver.network.loginserver.clientpackets;
 
-import org.apache.log4j.Logger;
 import commons.utils.ExitCode;
-
 import gameserver.network.loginserver.LoginServer;
-import gameserver.network.loginserver.LsClientPacket;
 import gameserver.network.loginserver.LoginServerConnection.State;
+import gameserver.network.loginserver.LsClientPacket;
 import gameserver.network.loginserver.serverpackets.SM_ACCOUNT_LIST;
 import gameserver.network.loginserver.serverpackets.SM_GS_AUTH;
 import gameserver.utils.ThreadPoolManager;
+import org.apache.log4j.Logger;
 
 
 /**

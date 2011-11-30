@@ -17,18 +17,19 @@
 
 package mysql5;
 
+import com.mysql.jdbc.exceptions.MySQLDataException;
+import commons.database.DatabaseFactory;
+import gameserver.dao.PetitionDAO;
+import gameserver.model.Petition;
+import gameserver.model.PetitionStatus;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import org.apache.log4j.Logger;
-import commons.database.DatabaseFactory;
-import gameserver.dao.PetitionDAO;
-import gameserver.model.Petition;
-import gameserver.model.PetitionStatus;
-import com.mysql.jdbc.exceptions.MySQLDataException;
 
 public class MySQL5PetitionDAO extends PetitionDAO
 {

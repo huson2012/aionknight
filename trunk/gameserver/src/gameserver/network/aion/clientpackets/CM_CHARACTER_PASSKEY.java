@@ -1,12 +1,11 @@
 package gameserver.network.aion.clientpackets;
 
 import commons.database.dao.DAOManager;
-
 import gameserver.configs.main.GSConfig;
 import gameserver.dao.PlayerPasskeyDAO;
 import gameserver.model.account.CharacterPasskey;
-import gameserver.model.account.PlayerAccountData;
 import gameserver.model.account.CharacterPasskey.ConnectType;
+import gameserver.model.account.PlayerAccountData;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.serverpackets.SM_CHARACTER_SELECT;

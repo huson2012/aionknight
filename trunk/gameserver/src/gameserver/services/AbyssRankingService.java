@@ -17,10 +17,6 @@
 
 package gameserver.services;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.configs.main.CustomConfig;
 import gameserver.dao.AbyssRankDAO;
@@ -32,6 +28,11 @@ import gameserver.network.aion.serverpackets.SM_ABYSS_RANK;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
 
 public class AbyssRankingService
 {

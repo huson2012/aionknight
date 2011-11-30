@@ -16,15 +16,14 @@
  */
 package gameserver.network.loginserver.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.List;
-
 import commons.network.IPRange;
-
 import gameserver.configs.network.IPConfig;
 import gameserver.configs.network.NetworkConfig;
 import gameserver.network.loginserver.LoginServerConnection;
 import gameserver.network.loginserver.LsServerPacket;
+
+import java.nio.ByteBuffer;
+import java.util.List;
 
 
 /**

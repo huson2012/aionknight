@@ -17,12 +17,13 @@
 
 package gameserver.model.gameobjects.player;
 
-import java.util.Collection;
-import java.util.LinkedHashMap;
 import gameserver.dataholders.DataManager;
 import gameserver.model.templates.TitleTemplate;
 import gameserver.network.aion.serverpackets.SM_TITLE_LIST;
 import gameserver.utils.PacketSendUtility;
+
+import java.util.Collection;
+import java.util.LinkedHashMap;
 
 public class TitleList
 {

@@ -16,10 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.Collections;
-
-import org.apache.log4j.Logger;
-
 import gameserver.model.EmotionType;
 import gameserver.model.TaskId;
 import gameserver.model.gameobjects.Item;
@@ -31,6 +27,9 @@ import gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE;
 import gameserver.network.aion.serverpackets.SM_WAREHOUSE_UPDATE;
 import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.Collections;
 
 
 /**

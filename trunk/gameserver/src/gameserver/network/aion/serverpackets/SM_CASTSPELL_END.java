@@ -17,11 +17,12 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.skill.model.Effect;
 import gameserver.skill.model.Skill;
+
+import java.nio.ByteBuffer;
 
 public class SM_CASTSPELL_END extends AionServerPacket
 {

@@ -16,14 +16,13 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.sql.Timestamp;
-import java.util.Map;
-
-
 import gameserver.model.legion.Legion;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
+import java.sql.Timestamp;
+import java.util.Map;
 
 
 /**

@@ -17,12 +17,13 @@
 
 package gameserver.model.gameobjects.player;
 
+import org.apache.log4j.Logger;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
-import org.apache.log4j.Logger;
+import java.util.Set;
 
 /**
  * Player macrosses collection, contains all player macrosses.

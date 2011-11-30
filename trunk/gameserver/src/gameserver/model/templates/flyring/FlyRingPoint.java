@@ -16,12 +16,12 @@
  */
 package gameserver.model.templates.flyring;
 
-import javax.xml.bind.annotation.XmlAccessorType;
+import gameserver.model.utils3d.Point3D;
+
 import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-
-import gameserver.model.utils3d.Point3D;
 
 
 /**

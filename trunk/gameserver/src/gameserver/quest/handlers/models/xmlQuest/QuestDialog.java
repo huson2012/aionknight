@@ -17,14 +17,15 @@
 
 package gameserver.quest.handlers.models.xmlQuest;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.quest.handlers.models.xmlQuest.conditions.QuestConditions;
 import gameserver.quest.handlers.models.xmlQuest.operations.QuestOperations;
 import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "QuestDialog", propOrder = { "conditions", "operations" })

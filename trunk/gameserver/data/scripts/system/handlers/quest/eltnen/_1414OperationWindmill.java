@@ -16,9 +16,6 @@
  */
 package quest.eltnen;
 
-import java.util.Collections;
-
-
 import gameserver.model.EmotionType;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
@@ -32,6 +29,8 @@ import gameserver.quest.model.QuestStatus;
 import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
+
+import java.util.Collections;
 
 
 /**

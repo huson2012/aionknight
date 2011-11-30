@@ -16,26 +16,17 @@
  */
 package gameserver.model.templates.pet;
 
+import gameserver.dataholders.DataManager;
+import gameserver.model.templates.item.ItemQuality;
+import gameserver.model.templates.item.ItemTemplate;
 import gnu.trove.TIntObjectHashMap;
 
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
-
-
-import gameserver.dataholders.DataManager;
-import gameserver.model.templates.item.ItemQuality;
-import gameserver.model.templates.item.ItemTemplate;
 
 
 /**

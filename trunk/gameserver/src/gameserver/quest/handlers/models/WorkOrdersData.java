@@ -17,17 +17,14 @@
 
 package gameserver.quest.handlers.models;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 import gameserver.model.templates.quest.QuestItems;
 import gameserver.quest.QuestEngine;
 import gameserver.quest.handlers.QuestHandler;
 import gameserver.quest.handlers.template.WorkOrders;
+
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WorkOrdersData", propOrder = { "giveComponent" })

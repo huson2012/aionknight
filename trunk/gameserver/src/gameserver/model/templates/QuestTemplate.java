@@ -16,27 +16,16 @@
  */
 package gameserver.model.templates;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlList;
-import javax.xml.bind.annotation.XmlType;
-
-
 import gameserver.model.Gender;
 import gameserver.model.PlayerClass;
 import gameserver.model.Race;
-import gameserver.model.templates.quest.CollectItems;
-import gameserver.model.templates.quest.QuestDrop;
-import gameserver.model.templates.quest.QuestItems;
-import gameserver.model.templates.quest.QuestWorkItems;
-import gameserver.model.templates.quest.Rewards;
+import gameserver.model.templates.quest.*;
 import gameserver.quest.model.QuestStartConditions;
+
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 /**
  * @author MrPoke

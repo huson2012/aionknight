@@ -17,11 +17,12 @@
 
 package gameserver.world;
 
-import java.util.ArrayList;
-import java.util.List;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.stats.modifiers.ObjectContainer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapRegion extends ObjectContainer
 {

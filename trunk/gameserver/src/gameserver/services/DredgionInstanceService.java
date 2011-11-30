@@ -17,9 +17,6 @@
 
 package gameserver.services;
 
-import java.util.List;
-import java.util.ArrayList;
-import org.apache.log4j.Logger;
 import gameserver.configs.main.CustomConfig;
 import gameserver.configs.main.GroupConfig;
 import gameserver.controllers.PortalController;
@@ -39,6 +36,10 @@ import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 import gameserver.world.WorldMap;
 import gameserver.world.WorldMapInstance;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DredgionInstanceService extends InstanceService
 {

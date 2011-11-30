@@ -17,13 +17,13 @@
 package gameserver.network.aion.clientpackets;
 
 import commons.database.dao.DAOManager;
+import gameserver.dao.PlayerCmotionListDAO;
 import gameserver.model.gameobjects.player.Cmotion;
 import gameserver.model.gameobjects.player.CmotionList;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.network.aion.serverpackets.SM_CMOTION;
 import gameserver.utils.PacketSendUtility;
-import gameserver.dao.PlayerCmotionListDAO;
 
 public class CM_CMOTION extends AionClientPacket
 {

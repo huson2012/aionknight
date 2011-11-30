@@ -17,13 +17,12 @@
 
 package gameserver.skill.effect.modifier;
 
+import gameserver.skill.model.Effect;
+import gameserver.utils.PositionUtil;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-
-import gameserver.skill.model.Effect;
-import gameserver.utils.PositionUtil;
 
 
 

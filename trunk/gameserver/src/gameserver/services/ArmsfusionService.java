@@ -17,7 +17,6 @@
 
 package gameserver.services;
 
-import org.apache.log4j.Logger;
 import commons.database.dao.DAOManager;
 import gameserver.dao.InventoryDAO;
 import gameserver.model.gameobjects.Item;
@@ -31,6 +30,8 @@ import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
 import java.util.Set;
 
 /**

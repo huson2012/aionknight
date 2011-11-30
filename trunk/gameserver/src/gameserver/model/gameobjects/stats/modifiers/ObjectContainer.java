@@ -17,15 +17,12 @@
 
 package gameserver.model.gameobjects.stats.modifiers;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.siege.Artifact;
+
+import java.util.*;
 
 public class ObjectContainer
 {

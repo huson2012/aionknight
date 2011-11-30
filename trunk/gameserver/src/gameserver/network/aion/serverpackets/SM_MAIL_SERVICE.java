@@ -16,15 +16,14 @@
  */
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
-import java.util.Collection;
-
-
 import gameserver.model.gameobjects.Letter;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.templates.mail.MailMessage;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.MailServicePacket;
+
+import java.nio.ByteBuffer;
+import java.util.Collection;
 
 
 /**

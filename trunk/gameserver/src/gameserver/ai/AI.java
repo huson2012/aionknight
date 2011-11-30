@@ -17,8 +17,6 @@
 
 package gameserver.ai;
 
-import java.util.Map;
-import java.util.concurrent.Future;
 import gameserver.ai.desires.Desire;
 import gameserver.ai.desires.DesireQueue;
 import gameserver.ai.desires.impl.CounterBasedDesireFilter;
@@ -32,6 +30,9 @@ import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.utils.ThreadPoolManager;
 import javolution.util.FastMap;
+
+import java.util.Map;
+import java.util.concurrent.Future;
 
 public abstract class AI<T extends Creature> implements Runnable
 {	

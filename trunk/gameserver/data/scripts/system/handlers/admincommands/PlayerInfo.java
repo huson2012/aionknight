@@ -17,9 +17,6 @@
 
 package admincommands;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import gameserver.configs.administration.AdminConfig;
 import gameserver.model.account.PlayerAccountData;
 import gameserver.model.gameobjects.Item;
@@ -33,6 +30,10 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.Util;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.world.World;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class PlayerInfo extends AdminCommand
 {

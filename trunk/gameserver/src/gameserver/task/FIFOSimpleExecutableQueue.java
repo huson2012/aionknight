@@ -15,8 +15,9 @@
 
 package gameserver.task;
 
-import java.util.Collection;
 import javolution.util.FastList;
+
+import java.util.Collection;
 
 public abstract class FIFOSimpleExecutableQueue<T> extends FIFOExecutableQueue
 {

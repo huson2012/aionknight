@@ -17,9 +17,10 @@
 
 package gameserver.quest.model;
 
+import gameserver.model.gameobjects.PersistentState;
+
 import java.sql.Timestamp;
 import java.util.Calendar;
-import gameserver.model.gameobjects.PersistentState;
 
 public class QuestState
 {

@@ -17,16 +17,17 @@
 
 package mysql5;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
-import org.apache.log4j.Logger;
 import commons.database.DatabaseFactory;
 import gameserver.dao.PlayerEmotionListDAO;
 import gameserver.model.gameobjects.player.Emotion;
 import gameserver.model.gameobjects.player.EmotionList;
 import gameserver.model.gameobjects.player.Player;
+import org.apache.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
 
 public class MySQL5PlayerEmotionListDAO extends PlayerEmotionListDAO
 {

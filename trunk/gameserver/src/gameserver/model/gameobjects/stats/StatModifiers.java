@@ -17,11 +17,12 @@
  
 package gameserver.model.gameobjects.stats;
 
+import gameserver.model.gameobjects.stats.modifiers.StatModifier;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import gameserver.model.gameobjects.stats.modifiers.StatModifier;
 
 public class StatModifiers
 {

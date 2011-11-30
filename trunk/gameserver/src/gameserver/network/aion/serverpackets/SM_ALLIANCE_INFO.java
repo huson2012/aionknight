@@ -17,13 +17,14 @@
 
 package gameserver.network.aion.serverpackets;
 
-import java.nio.ByteBuffer;
 import gameserver.model.alliance.PlayerAlliance;
 import gameserver.model.group.LootDistribution;
 import gameserver.model.group.LootGroupRules;
 import gameserver.model.group.LootRuleType;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+
+import java.nio.ByteBuffer;
 
 public class SM_ALLIANCE_INFO extends AionServerPacket
 {

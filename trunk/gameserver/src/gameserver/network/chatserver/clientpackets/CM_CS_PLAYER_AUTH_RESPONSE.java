@@ -17,9 +17,9 @@
 
 package gameserver.network.chatserver.clientpackets;
 
-import org.apache.log4j.Logger;
 import gameserver.network.chatserver.CsClientPacket;
 import gameserver.services.ChatService;
+import org.apache.log4j.Logger;
 
 public class CM_CS_PLAYER_AUTH_RESPONSE extends CsClientPacket
 {

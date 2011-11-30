@@ -16,8 +16,6 @@
  */
 package gameserver.controllers;
 
-import org.apache.log4j.Logger;
-
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.model.Race;
 import gameserver.model.gameobjects.VisibleObject;
@@ -26,6 +24,7 @@ import gameserver.model.shield.Shield;
 import gameserver.model.siege.SiegeRace;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.services.SiegeService;
+import org.apache.log4j.Logger;
 
 
 /**

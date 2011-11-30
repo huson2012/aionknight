@@ -16,10 +16,6 @@
  */
 package gameserver.network.aion.clientpackets;
 
-import java.util.ArrayList;
-
-import org.apache.log4j.Logger;
-
 import gameserver.dataholders.DataManager;
 import gameserver.itemengine.actions.AbstractItemAction;
 import gameserver.itemengine.actions.ItemActions;
@@ -40,6 +36,9 @@ import gameserver.quest.QuestEngine;
 import gameserver.quest.model.QuestCookie;
 import gameserver.restrictions.RestrictionsManager;
 import gameserver.utils.PacketSendUtility;
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
 
 
 /**

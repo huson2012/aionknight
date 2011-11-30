@@ -17,9 +17,10 @@
 
 package gameserver.configs.main;
 
-import java.util.regex.Pattern;
-import org.apache.log4j.Logger;
 import commons.configuration.Property;
+import org.apache.log4j.Logger;
+
+import java.util.regex.Pattern;
 
 public class LegionConfig
 {

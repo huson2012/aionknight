@@ -17,7 +17,6 @@
 
 package quest.beluslan;
 
-import java.util.Collections;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
@@ -36,6 +35,8 @@ import gameserver.services.ZoneService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.zone.ZoneName;
+
+import java.util.Collections;
 
 public class _2056ThawingKurngalfberg extends QuestHandler
 {
