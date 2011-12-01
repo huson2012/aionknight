@@ -78,7 +78,7 @@ public class PropertiesUtils
 
 	public static Properties[] loadAllFromDirectory(File dir, boolean recursive) throws IOException
 	{
-		Collection<File> files = FileUtils.listFiles(dir, new String[] { "properties" }, recursive);
+		Collection<File> files = FileUtils.listFiles(dir, new String[] { "ini" }, recursive);
 		return load(files.toArray(new File[files.size()]));
 	}
 }
