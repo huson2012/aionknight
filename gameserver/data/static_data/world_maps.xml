@@ -75,6 +75,7 @@
 	<map id="320120000" name="IDDC1_Arena_3F" instance="true" instanceMapId="37" cooldown="0" death_level="0" water_level="16" world_size="1024"/>
 	<map id="320130000" name="AdmaStronghold" nameid="401152" instance="true" instanceMapId="7" cooldown="180" death_level="0" water_level="16" world_size="1024"/>
 	<map id="320140000" name="IDAbProD3" instance="true" instanceMapId="35" cooldown="0" death_level="0" water_level="16" world_size="1024"/>
+	<map id="320150000" name="IDDramata_01" instance="true" death_level="0" water_level="16" world_size="2048"/>
 	<map id="400010000" name="Ab1" death_level="500" water_level="16" world_type="ABYSS" world_size="4096"/>
 	<map id="510010000" prison="true" name="LF_Prison" death_level="0" water_level="16" world_size="512"/>
 	<map id="520010000" prison="true" name="DF_Prison" death_level="0" water_level="16" world_size="512"/>
@@ -90,6 +91,10 @@
 	<map id="300280000" name="Lentor Outpost" instance="true" instanceMapId="49" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300300000" name="Empyrean Crucible" nameid="401824" instance="true" instanceMapId="54" cooldown="1320" death_level="0" water_level="16" world_size="1024"/>
 	<map id="300320000" name="Empyrean Crucible Solo" nameid="401841" instanceMapId="57" cooldown="1320" instance="true" death_level="0" water_level="16" world_size="512"/>
+	<map id="300350000" name="IDArena_pvp01" instance="true" instanceMapId="61" death_level="0" water_level="16" world_size="3072"/>
+	<map id="300360000" name="IDArena_pvp02" instance="true" instanceMapId="62" death_level="0" water_level="16" world_size="3072"/>
+	<map id="300420000" name="IDArena_pvp01_T" instance="true" instanceMapId="69" death_level="0" water_level="16" world_size="3072"/>
+	<map id="300430000" name="IDArena_pvp02_T" instance="true" instanceMapId="70" death_level="0" water_level="16" world_size="3072"/>
 	<map id="300310000" name="Tahmes" instance="true" instanceMapId="156" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300240000" name="IDStation" instance="true" instanceMapId="147" death_level="0" water_level="16" world_size="2048"/>
 	<map id="300250000" name="IDF4Re_Drana" instance="true" instanceMapId="148" death_level="0" water_level="16" world_size="2048"/>

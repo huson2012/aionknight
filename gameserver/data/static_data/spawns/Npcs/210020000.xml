@@ -949,7 +949,8 @@
 	</spawn>
 	<!-- Secret Beacon Mound (Object Normal lvl:1)-->
 	<spawn map="210020000" npcid="700267" pool="1" interval="295">
-		<object x="1573.00000" y="1128.00000" z="385.75000" h="78"/>
+		<object x="2265.98" y="2355.88" z="277.61" h="32"/>
+		<object x="1829.37" y="2536.13" z="266.987" h="48"/>
 	</spawn>
 	<!-- Senior Soldier (NPC Elite lvl:41)-->
 	<spawn map="210020000" npcid="207553" pool="29" interval="295">

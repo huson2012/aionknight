@@ -1239,11 +1239,6 @@
 	<spawn map="210040000" npcid="730134" pool="1" interval="295">
 		<object x="1706.5249" y="2685.5046" z="115.81746" h="69"/>
 	</spawn>
-	<!-- Third Calydon Stone Plate (Object Normal lvl:1) -->
-	<spawn map="210040000" npcid="700393" pool="2" interval="295">
-		<object staticid="1142" x="2113.9377" y="400.16104" z="232.64471" h="14"/>
-		<object staticid="300" x="348.04474" y="317.48914" z="128.30844" h="104"/>
-	</spawn>
 	<!-- Third Stone Plate (Object Normal lvl:1) -->
 	<spawn map="210040000" npcid="700358" pool="1" interval="295">
 		<object x="335.56686" y="337.19122" z="119.81000" h="120"/>
