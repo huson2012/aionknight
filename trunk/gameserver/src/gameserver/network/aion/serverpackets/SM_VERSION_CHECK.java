@@ -86,15 +86,18 @@ public class SM_VERSION_CHECK extends AionServerPacket
 		writeH(buf, 0x015E);
 		writeH(buf, 0x0A01);
 		writeH(buf, 0x0A01);
-		writeH(buf, 0x020A);
-		writeC(buf, 0x00);
-		if(CustomConfig.ENABLE_DECOR_CHRISTMAS)
-		{
-		    writeC(buf, 0x14);
-		}		
-		writeC(buf, 0x01);
-		writeC(buf, 0x00);
-		writeC(buf, 0x00);
+        writeH(buf, 0x370A);
+        writeC(buf, 0x02);
+        writeC(buf, 0x00);
+        writeC(buf, 0x14);
+        if(CustomConfig.ENABLE_DECOR_CHRISTMAS)
+            writeC(buf, 0x01);
+        else
+            writeC(buf, 0x00);
+        writeH(buf, 0x00);
+        writeH(buf, 0x00);
+        writeC(buf, 0x01);
+        writeH(buf, 0x00);
 		writeB(buf, ChatService.getIp());
 		writeH(buf, ChatService.getPort());
 	}
