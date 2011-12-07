@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	Назначение файла	: 
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 2.7 (Иннова)
+
+ -->
+
 <pets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pets.xsd">
 	<pet id="900000" name="Siberian Wild Tiger (Purebred)" nameid="1600012" eggid="190000000">
 		<petfunction type="food" id="1"/>

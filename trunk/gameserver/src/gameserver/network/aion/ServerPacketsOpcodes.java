@@ -1,4 +1,4 @@
-/*
+/**
  * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
  *
  * Aion-Knight is free software: you can redistribute it and/or modify
@@ -11,14 +11,14 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a  copy  of the GNU General Public License
+ * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package gameserver.network.aion;
 
 import gameserver.configs.main.GSConfig;
 import gameserver.network.aion.serverpackets.*;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -33,15 +33,14 @@ public class ServerPacketsOpcodes
 
 		private ServerPacketsOpcodes()
 		{
-		//her is a place for implement support for other aion versions
-		if(GSConfig.SERVER_VERSION.startsWith("2.7"))
-			initPacketsFor_2_7();
-		if(GSConfig.SERVER_VERSION.startsWith("2.6"))
-			initPacketsFor_2_6();
-		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
-			initPacketsFor_2_5();
-		if(GSConfig.SERVER_VERSION.startsWith("1.9"))
-			initPacketsFor_1_9();
+			if(GSConfig.SERVER_VERSION.startsWith("2.7"))
+				initPacketsFor_2_7();
+			if(GSConfig.SERVER_VERSION.startsWith("2.6"))
+				initPacketsFor_2_6();
+			if(GSConfig.SERVER_VERSION.startsWith("2.5"))
+				initPacketsFor_2_5();
+			if(GSConfig.SERVER_VERSION.startsWith("1.9"))
+				initPacketsFor_1_9();
 		}
 
 		static int getOpcode(Class<? extends AionServerPacket> packetClass)
@@ -154,7 +153,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_QUIT_RESPONSE.class,0x0160, idSet);// 2.6 0x60, 2.7
 		addPacketOpcode(SM_PLAYER_STATE.class,0x0162, idSet);// 2.6 0x62, 2.7
 		// 2.7 Unknown - 63 00 54 00 FF 01 00 00 
-		addPacketOpcode(SM_LEVEL_UPDATE.class,0x0064, idSet);// 2.6 0x64, 2.7
+		addPacketOpcode(SM_LEVEL_UPDATE.class,0x0164, idSet);// 2.6 0x64, 2.7
 		addPacketOpcode(SM_KEY.class,0x0166, idSet);// 2.6 0x66, 2.7
 		addPacketOpcode(SM_STARTED_QUEST_LIST.class,0x0167, idSet);// 2.6 0x67, 2.7
 		addPacketOpcode(SM_EXCHANGE_REQUEST.class,0x0168, idSet);// 2.6 0x68, 2.7

@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	Назначение файла	: 
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 2.7 (Иннова)
+
+ -->
+
 <portal_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_templates.xsd">
 	<!-- INSTANCES -->
 	<!-- Adma Stronghold -->

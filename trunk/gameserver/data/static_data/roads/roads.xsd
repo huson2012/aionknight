@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	: Пешие переходы между локациями
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
 	<xs:include schemaLocation="../import.xsd"/>
 	<xs:element name="roads">

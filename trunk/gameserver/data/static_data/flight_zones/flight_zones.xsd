@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+	Назначение файла	:
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 25 (Иннова)
+
+ -->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
-
+	<!--  -->
 	<xs:include schemaLocation="../import.xsd" />
-
+	<!--  -->
 	<xs:element name="flight_zones">
 		<xs:complexType>
 			<xs:sequence>
@@ -13,5 +22,5 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+	<!--  -->
 </xs:schema>

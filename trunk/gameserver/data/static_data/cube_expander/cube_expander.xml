@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cube_expander xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cube_expander.xsd">
 
 <!--
 
 	Назначение файла	:
-	Ревизия				: RC1 (Beta)
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
 
  -->
 
+<cube_expander xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cube_expander.xsd">
 	<!-- Poeta -->
 	<cube_npc id="798008" name="Baevrunerk">
 		<expand level="1" price="1000"/>

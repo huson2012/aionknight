@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+
+	Назначение файла	: 
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 2.7 (Иннова)
+
+ -->
+
 <gatherable_templates>
 	<gatherable_template id="400001" nameId="701957" sourceType="VEGETABLE" skillLevel="20">
 		<materials>

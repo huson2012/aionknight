@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<roads xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="roads.xsd">
 
 <!--
 
 	Назначение файла	: Пешие переходы между локациями
-	Ревизия				: RC1 (Beta)
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
 
  -->
 
+<roads xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="roads.xsd">
 	<!-- Дорога из Бертрона в Элтенен -->
 	<road radius="30.0" map="210030000" name="VERTERON_TO_ELTNEN">
 		<center z="154.24548" y="1823.3043" x="2697.981"/>
