@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
-Short description:
 
-count for wrapper_item specifies the maximum number of items you can get from the list.
-If additional attribute random=true is specified the maximum count is randomized up to the specified value.
-If no count is specified the rolling is performed once from the whole list, otherwise the rolling continues
-until the max count is reached.
-Each item has min and max count to roll at every operation, and if both values are equal, the constant
-amount is rolled.
-The order of item choosing during roll up doesn't matter, it is completely random.
-If specific items have to be rolled only for specific race you may add race attribute with values
-ELYOS or ASMODIANS.
-To include huge lists of items for rolling you may add an item group, the same as for bonuses (see bonuses.xsd),
-for example, type="MEDICINE" level="40", will choose all items from item_templates.xml having bonus
-type MEDICINE and its level 40.
+	Назначение файла	: 
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 2.7 (Иннова)
 
-Inside each wrapper_item you may have additional wrapper_item without id. It's an abstract wrapper item.
-Each of them is rolled independantly using the rules specified above.
-You can nest them as deep as you want to make complex rewards.
+ -->
 
--->
 <wrapped_items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!-- Red Solorius Stocking -->
 	<wrapper_item id="188050004">

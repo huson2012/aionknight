@@ -2,9 +2,9 @@
 
 <!--
 
-	Назначение файла	: Отношения между фракциями (NPC, Часть AI)
-	Ревизия				: RC1 (Beta)
-	Версия клиента		: 2.5 (Иннова)
+	Назначение файла	: Взаимоотношения между фракциями (NPC, Часть AI)
+	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия клиента		: 2.7 (Иннова)
 
  -->
 
@@ -2795,11 +2795,13 @@
 	<tribe base="GUARD_DARK" name="DUMMY_DGUARD">
 		<aggro>
 			<to>DUMMY</to>
+			<to>TARGETBASFELT_DF1</to>
 		</aggro>
 	</tribe>
 	<tribe base="GUARD_DARK" name="DUMMY2_DGUARD">
 		<aggro>
 			<to>DUMMY2</to>
+			<to>TARGETBASFELT2_DF1</to>
 		</aggro>
 	</tribe>
 	<tribe base="MONSTER" name="CRYSTAL">

@@ -237,10 +237,10 @@ public class GameServer
 		LoggingService.init();
 		Config.load();
 		
-		Util.printSection("The Aion-Knight Dev. Team");
+		Util.printSection("Developers info");
 		log.info("Main lang: Russian / Eng");
-		log.info("Rev type: RC1 <Beta Version>");
-		log.info("Dev. page: http://www.aion-knight.ru");
+		log.info("Family: Aion-Knight 2.7 <Beta version>");
+		log.info("Support: http://www.aion-knight.ru");
 		
 		Util.printSection("Connecting to DB");
 		DatabaseFactory.init();
