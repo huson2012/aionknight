@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package gameserver.network.aion.serverpackets;
 
 import gameserver.configs.main.CustomConfig;
@@ -23,13 +24,7 @@ import gameserver.model.siege.Influence;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.ChatService;
-
 import java.nio.ByteBuffer;
-
-
-/**
- * @author -Nemesiss- CC fix modified by Novo
- */
 
 public class SM_VERSION_CHECK extends AionServerPacket
 {
@@ -90,10 +85,13 @@ public class SM_VERSION_CHECK extends AionServerPacket
         writeC(buf, 0x02);
         writeC(buf, 0x00);
         writeC(buf, 0x14);
-        if(CustomConfig.ENABLE_DECOR_CHRISTMAS)
-            writeC(buf, 0x01);
-        else
-            writeC(buf, 0x00);
+        
+		if(CustomConfig.ENABLE_DECOR_CHRISTMAS)
+        writeC(buf, 0x01);
+        
+		else
+        
+		writeC(buf, 0x00);
         writeH(buf, 0x00);
         writeH(buf, 0x00);
         writeC(buf, 0x01);
