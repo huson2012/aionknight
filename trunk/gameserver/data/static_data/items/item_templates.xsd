@@ -110,6 +110,7 @@
 		<xs:attribute name="world_drop" type="xs:boolean" default="false" />
 		<xs:attribute name="doping" type="xs:boolean" default="false" />
 		<xs:attribute name="custom_item_type" type="itemCustomType" default="NONE" />
+		<xs:attribute name="enchanting" type="xs:boolean" default="false" />
 	</xs:complexType>
 	
 	<xs:simpleType name="itemCustomType">
@@ -179,6 +180,8 @@
 				minOccurs="0" maxOccurs="1"/>
 			<xs:element name="emotion" type="EmotionAction"
 				minOccurs="0" maxOccurs="1" />
+            <xs:element name="use" type="UseAction"
+                minOccurs="0" maxOccurs="1"/>				
 			<xs:element name="cosmetic" type="CosmeticAction"
 				minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
@@ -295,7 +298,12 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	
+
+	<xs:complexType name="UseAction">
+        <xs:complexContent>
+            <xs:extension base="AbstractItemAction"/>
+        </xs:complexContent>
+    </xs:complexType>	
 	<xs:complexType name="CosmeticAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
