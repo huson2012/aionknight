@@ -95,9 +95,9 @@ public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket
 		writeD(buf, itemId); // item id
 		
 		writeD(buf, time); // time of casting bar of an item
-		writeC(buf, end); // 1-casting bar hitted end, 3- interrupted by moving
-		writeC(buf, 0); // always 0
+		writeH(buf, end); // 1-casting bar hitted end, 3- interrupted by moving
 		writeC(buf, 1); //always 1
 		writeD(buf, unk); //some weird numbers
+        writeC(buf, end == 0 ? 0 : 2);
 	}
 }

@@ -296,9 +296,9 @@ public class SM_PLAYER_INFO extends AionServerPacket
 		writeC(buf, 0); // (2.5) 0 default, can be 5 sometimes. O_o
 		writeD(buf, (player.getTarget() == null || player.getTarget().getObjectId() == null) ? 
 			0 : player.getTarget().getObjectId());
-		writeH(buf, 0); // (2.5) 0 default. Can be 4 or 128 when target != 0. If sent wrong, a Supected Bot appears over your head >3
-		writeH(buf, 0); // (2.5) unk1 4 digits something...
-		writeH(buf, 0); // (2.5) unk2 It's 16 when unk1 != 0
-		writeC(buf, 0); // (2.5) 0 default, 1 for mentor title. Suspect id? Only 1 when (unk1 && unk2) != 0
+		writeC(buf, 0);
+		writeD(buf, 0);
+		writeH(buf, 0);
+		writeC(buf, 0);
 	}
 }

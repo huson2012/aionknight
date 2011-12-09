@@ -45,6 +45,6 @@ public class SM_WINDSTREAM extends AionServerPacket
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
 		writeD(buf, unk1);
-		writeC(buf, unk2);
+		writeD(buf, unk2);
 	}
 }

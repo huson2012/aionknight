@@ -83,6 +83,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_MACRO_LIST.class,0x0107, idSet);// 2.6 0x07, 2.7
 		addPacketOpcode(SM_NICKNAME_CHECK_RESPONSE.class,0x0109, idSet);// 2.6 0x09, 2.7
 		addPacketOpcode(SM_RIFT_ANNOUNCE.class,0x0A, idSet);// 2.1
+        addPacketOpcode(SM_RIFT_STATUS.class, 0x010A, idSet);// 2.7
 		addPacketOpcode(SM_SET_BIND_POINT.class,0x010B, idSet);// 2.6 0x0B, 2.7
 		// 2.7 Unknown - 0C 01 54 AB FE 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		addPacketOpcode(SM_ABYSS_RANK.class,0x010D, idSet);// 2.6 0x0D, 2.7
@@ -92,7 +93,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_LEARN_RECIPE.class,0x0111, idSet);// 2.6 0x11, 2.7
 		addPacketOpcode(SM_TELEPORT_LOC.class,0x0012, idSet);// 2.6 0x12, 2.7
 		addPacketOpcode(SM_DELETE.class,0x0014, idSet);// 2.6 0x14, 2.7
-		addPacketOpcode(SM_PLAYER_MOVE.class,0x0115, idSet);// 2.6 0x11, 2.7 Testing
+		addPacketOpcode(SM_PLAYER_MOVE.class,0x0015, idSet);// 2.6 0x11, 2.7 Testing
 		addPacketOpcode(SM_MESSAGE.class,0x0016, idSet);// 2.6 0x16, 2.7
 		addPacketOpcode(SM_LOGIN_QUEUE.class,0x0017, idSet);// 2.6 0x17, 2.7 Testing
 		addPacketOpcode(SM_INVENTORY_INFO.class,0x0018, idSet);// 2.6 0x18, 2.7
@@ -169,7 +170,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_INSTANCE_SCORE.class, 0x0179, idSet);// 2.1 0x76, 2.7 Testing
 		addPacketOpcode(SM_QUEST_ACCEPTED.class,0x017A, idSet);// 2.6 0x7A, 2.7
 		addPacketOpcode(SM_QUEST_LIST.class,0x017B, idSet);// 2.6 0x7B, 2.7
-		addPacketOpcode(SM_PING_RESPONSE.class,0x007E, idSet);// 2.6 0x7E, 2.7
+		addPacketOpcode(SM_PING_RESPONSE.class,0x017E, idSet);// 2.6 0x7E, 2.7
 		addPacketOpcode(SM_NEARBY_QUESTS.class,0x017F, idSet);// 2.6 0x7F, 2.7
 		addPacketOpcode(SM_CUBE_UPDATE.class,0x0180, idSet);// 2.6 0x80, 2.7
 		// 2.7 Unknown - 82 00 57 7D FF 

@@ -27,11 +27,13 @@ import java.nio.ByteBuffer;
 public class SM_CHARACTER_LIST extends PlayerInfo
 {
 	private final int	playOk2;
-	public SM_CHARACTER_LIST(int playOk2)
+
+    public SM_CHARACTER_LIST(int playOk2)
 	{
 		this.playOk2 = playOk2;
 	}
-	@Override
+
+    @Override
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
 		writeD(buf, playOk2);

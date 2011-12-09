@@ -171,19 +171,17 @@ public abstract class InventoryPacket extends AionServerPacket
 		writeD(buf, 0);
 		writeD(buf, 0);//unk 1.5.1.9
 		writeD(buf, 0);
-		/*
 		writeC(buf, 0);
 		writeC(buf, 0x0A);
 		writeH(buf, 0x19);
 		writeD(buf, 0x07);
+		/*
+		* This is where item bonuses should be inserted.
+		* The format is as follows:
+		* writeH(buf, 2560); 0x000A
+		* writeH(buf, bonusType); //ex. 0x12 is +HP
+		* writeD(buf, bonusAmount); //ex. 0xC4 is 196
 		*/
-			/*
-			 * This is where item bonuses should be inserted.
-			 * The format is as follows:
-			 * writeH(buf, 2560); 0x000A
-			 * writeH(buf, bonusType); //ex. 0x12 is +HP
-			 * writeD(buf, bonusAmount); //ex. 0xC4 is 196
-			 */
 
 		writeH(buf, 0x00);//seperator between item bonus and item mask
 		writeH(buf, item.getItemMask());

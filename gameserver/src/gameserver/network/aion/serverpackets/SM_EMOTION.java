@@ -262,8 +262,9 @@ public class SM_EMOTION extends AionServerPacket
 				break;
 			case SWITCH_DOOR:
 				// toggle doors
-				writeH(buf, 9);
-				writeD(buf, 0);
+				writeH(buf, state);
+				writeF(buf, speed);
+				writeD(buf, targetObjectId);
 				break;				
 			case START_EMOTE:
 				// emote startloop

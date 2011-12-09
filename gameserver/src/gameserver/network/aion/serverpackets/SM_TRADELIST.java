@@ -76,7 +76,7 @@ public class SM_TRADELIST extends AionServerPacket
 				{
 					GoodsList goodsListAdd = DataManager.GOODSLIST_DATA.getGoodsListById(tradeTabl.getId());
 
-					if(goodsListAdd.isLimited())
+					if(goodsListAdd != null && goodsListAdd.isLimited())
 					{
 						isLimited = true;
 						countItems += goodsListAdd.getItemsList().size();

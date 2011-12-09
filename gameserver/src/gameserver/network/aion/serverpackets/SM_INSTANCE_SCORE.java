@@ -102,14 +102,14 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 
 				int spaces = (member.getName().length() * 2) + 2;
 
-				if(spaces < 42)
-					writeB(buf, new byte[(42 - spaces)]);
+				if(spaces < 52)
+					writeB(buf, new byte[(52 - spaces)]);
 
 				count++;
 			}
 
 			if(count < 6)
-				writeB(buf, new byte[76 * (6 - count)]);//spaces
+				writeB(buf, new byte[80 * (6 - count)]);//spaces
 
 			count = 0;
 
@@ -137,14 +137,14 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 
 				int spaces = (member.getName().length() * 2) + 2;
 
-				if(spaces < 42)
-					writeB(buf, new byte[(42 - spaces)]);
+				if(spaces < 52)
+					writeB(buf, new byte[(52 - spaces)]);
 
 				count++;
 			}
 
 			if(count < 6)
-				writeB(buf, new byte[76 * (6 - count)]);//spaces
+				writeB(buf, new byte[80 * (6 - count)]);//spaces
 
 			int elyosScore = DredgionInstanceService.getInstance().getGroupScore(elyosGroup);
 			int asmosScore = DredgionInstanceService.getInstance().getGroupScore(asmosGroup);

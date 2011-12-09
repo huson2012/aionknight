@@ -129,9 +129,10 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 					writeItemStones(buf, item.getItem());
 					ItemStone god = item.getItem().getGodStone();
 					writeD(buf, god == null ? 0 : god.getItemId());
-					writeC(buf, 0x00);
 					writeD(buf, 0x00);
 					writeD(buf, 0x00);
+                    writeD(buf, 0x00);
+                    writeC(buf, 0x00);
 					writeS(buf, item.getItem().getCrafterName());
 				}
 				break;
@@ -170,6 +171,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 						writeD(buf, 0x00);
 						writeD(buf, 0);
 						writeD(buf, 0);
+                        writeD(buf, 0);
 						writeC(buf, 0x00);
 						writeS(buf, "");
 					}
@@ -200,6 +202,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 		writeC(buf, 0);
 		writeD(buf, 0);
 		writeD(buf, 0);
+        writeD(buf, 0);
 		writeS(buf, item.getSeller());
 		writeS(buf, item.getItem().getCrafterName());
 	}	
@@ -223,7 +226,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 					writeC(buf, modifier.getStat().getItemStoneMask());
 				}
 			}
-			writeB(buf, new byte[(6-count)*2]);
+			writeB(buf, new byte[(6-count)]);
 			count = 0;
 			for(ManaStone itemStone : itemStones)
 			{
@@ -260,6 +263,9 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 		writeD(buf, 0);
 		writeD(buf, 0);
 		writeH(buf, 0);
+        writeH(buf, 0);
+        writeD(buf, 0);
+        writeD(buf, 0);
 		writeS(buf, item.getSeller());
 		writeS(buf, item.getItem().getCrafterName());
 	}
