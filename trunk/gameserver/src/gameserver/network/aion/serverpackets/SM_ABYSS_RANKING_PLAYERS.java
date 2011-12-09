@@ -94,14 +94,15 @@ public class SM_ABYSS_RANKING_PLAYERS extends AionServerPacket
 
 				if(rs.getLegionName() == null)
 				{
-				writeS(buf, "");
-				writeB(buf, new byte[80]);
+				    writeS(buf, "");
+				    writeB(buf, new byte[80]);
 				}
 				else
 				{
-				writeS(buf, rs.getLegionName());
-				writeB(buf, new byte[80 - (rs.getLegionName().length() * 2)]);
+				    writeS(buf, rs.getLegionName());
+				    writeB(buf, new byte[80 - (rs.getLegionName().length() * 2)]);
 				}
+
 				count++;
 			}
 		}

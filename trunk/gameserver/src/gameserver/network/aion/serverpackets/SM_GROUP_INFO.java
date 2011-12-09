@@ -77,6 +77,7 @@ public class SM_GROUP_INFO extends AionServerPacket
 		writeD(buf, this.ethernal_item_above);
 		writeD(buf, this.over_ethernal);
 		writeD(buf, this.over_over_ethernal);
+        writeD(buf, 0x3F00);
 		writeD(buf, 0x00);
 		writeH(buf, 0x00);
 		writeC(buf, 0x00);

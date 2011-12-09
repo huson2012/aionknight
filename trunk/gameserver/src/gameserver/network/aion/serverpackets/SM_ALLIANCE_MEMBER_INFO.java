@@ -98,6 +98,7 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket
 			case APPOINT_CAPTAIN:
 				writeS(buf, pcd.getName());
 				writeD(buf, 0x00);
+                writeD(buf, 0x00);
 				
 				if (member.isOnline())
 				{

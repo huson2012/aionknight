@@ -72,16 +72,14 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 		writeC(buf, pcd.getLevel()); //level
 		writeC(buf, this.event.getId()); //something events
 		writeH(buf, 0x01); //channel
+        writeC(buf, 0);
 	  	if (this.event == GroupEvent.MOVEMENT)
 		{
 			return;
 		}
-		writeC(buf, 0);//unk 2.5
 		writeS(buf, pcd.getName()); //name
-		writeB(buf, new byte[(52 - pcd.getName().length()*2+2)]);
 		writeH(buf, 0x00); //unk
 		writeH(buf, 0x00); //unk
-		
 		List<Effect> abnormalEffects = player.getEffectController().getAbnormalEffects();
 		writeH(buf, abnormalEffects.size()); //Abnormal effects
 		for(Effect effect : abnormalEffects)
@@ -92,6 +90,7 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 			writeC(buf, effect.getTargetSlot()); //unk ?
 			writeD(buf, effect.getElapsedTime()); //estimatedtime
 		}
+        writeD(buf, 0);
 		writeD(buf, 0x25F7); //unk 9719
 	}
 }

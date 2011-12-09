@@ -34,6 +34,7 @@ public class SM_LEAVE_GROUP_MEMBER extends AionServerPacket
 	{
 		
 		writeD(buf,0x00);
+		writeD(buf,0x3F00);
 		writeD(buf,0x00);
 		writeH(buf,0x00);
 		writeC(buf,0x00);

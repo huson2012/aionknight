@@ -76,7 +76,7 @@ public class AionPacketHandlerFactory
 		addPacket(new CM_MAC_ADDRESS2(0x011D), State.IN_GAME);// 2.6 0x1D, 2.7
         addPacket(new CM_CHANGE_CHANNEL(0x011F), State.IN_GAME);// 2.6 0x1F, 2.7
         addPacket(new CM_CHECK_NICKNAME(0x0120), State.AUTHED);// 2.6 0x20, 2.7
-		addPacket(new CM_REPLACE_ITEM(0x21), State.IN_GAME);//  Testing
+		addPacket(new CM_REPLACE_ITEM(0x011C), State.IN_GAME);//  2.7
         addPacket(new CM_MACRO_CREATE(0x0122), State.IN_GAME);// 2.6 0x22, 2.7
 		addPacket(new CM_MACRO_DELETE(0x0123), State.IN_GAME);// 2.6 0x23, 2.7
         addPacket(new CM_SHOW_BRAND(0x0124), State.IN_GAME);// 2.6 0x24, 2.7 Testing
@@ -184,7 +184,7 @@ public class AionPacketHandlerFactory
 		addPacket(new CM_FIND_GROUP(0x02BC), State.IN_GAME);// 2.6 0xBC, 2.7
 		addPacket(new CM_CHARACTER_PASSKEY(0x00C0), State.AUTHED);// 2.6 0xC0, 2.7
         addPacket(new CM_BREAK_WEAPONS(0x01C2), State.IN_GAME);// 2.6 0xC2, 2.7
-		addPacket(new CM_DISCONNECT(0xF1), State.IN_GAME);// 2.1 Testing
+		addPacket(new CM_DISCONNECT(0x118), State.IN_GAME);// 2.7 Testing
         // Unknown 2.6 - 0xC7 Opcode Only, No Data Gets sent by client after SM_MAIL_SERVICE, every time. Server reply is unknown 95
 		addPacket(new CM_VERSION_CHECK(0x00F3), State.CONNECTED);// 2.6 0xF3, 2.7
         addPacket(new CM_REVIVE(0x00F4), State.IN_GAME);// 2.6 0xF4, 2.7

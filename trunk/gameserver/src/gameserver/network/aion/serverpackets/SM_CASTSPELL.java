@@ -76,6 +76,8 @@ public class SM_CASTSPELL extends AionServerPacket
 		}
 		
 		writeH(buf, duration);
-		writeD(buf, 0);
+		writeC(buf, 0);
+		writeF(buf, 1.0F);
+		writeC(buf, 1);
 	}
 }

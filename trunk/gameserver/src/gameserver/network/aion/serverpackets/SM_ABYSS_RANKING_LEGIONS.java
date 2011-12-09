@@ -41,7 +41,6 @@ public class SM_ABYSS_RANKING_LEGIONS extends AionServerPacket
 	@Override	
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
-		int count = 0;
 		writeD(buf, race.getRaceId());
 		writeD(buf, Math.round(AbyssRankingService.getInstance().getTimeOfUpdate() / 1000));// Date
 		writeD(buf, 0x01);

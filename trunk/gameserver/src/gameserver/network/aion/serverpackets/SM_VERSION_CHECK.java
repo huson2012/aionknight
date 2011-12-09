@@ -24,6 +24,7 @@ import gameserver.model.siege.Influence;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.ChatService;
+
 import java.nio.ByteBuffer;
 
 public class SM_VERSION_CHECK extends AionServerPacket
@@ -81,21 +82,25 @@ public class SM_VERSION_CHECK extends AionServerPacket
 		writeH(buf, 0x015E);
 		writeH(buf, 0x0A01);
 		writeH(buf, 0x0A01);
-        writeH(buf, 0x370A);
+		writeH(buf, 0x370A);
         writeC(buf, 0x02);
-        writeC(buf, 0x00);
-        writeC(buf, 0x14);
-        
-		if(CustomConfig.ENABLE_DECOR_CHRISTMAS)
-        writeC(buf, 0x01);
-        
-		else
-        
 		writeC(buf, 0x00);
+        writeC(buf, 0x14);
+
+		if(CustomConfig.ENABLE_DECOR_CHRISTMAS)
+		{
+		    writeC(buf, 0x01);
+		}
+        else
+        {
+            writeC(buf, 0x00);
+        }
+
+		writeH(buf, 0x00);
+		writeH(buf, 0x00);
+		writeC(buf, 0x01);
         writeH(buf, 0x00);
-        writeH(buf, 0x00);
-        writeC(buf, 0x01);
-        writeH(buf, 0x00);
+
 		writeB(buf, ChatService.getIp());
 		writeH(buf, ChatService.getPort());
 	}

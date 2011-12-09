@@ -66,22 +66,22 @@ public class SM_ATTACK extends AionServerPacket
 			case -60:
 			case 4:
 				writeD(buf, 32);
-			break;
+			    break;
 			case -62:
 			case 2:
 				writeD(buf, 64);
-			break;
+			    break;
 			case -64:
 			case 0:
 				writeD(buf, 128);
-			break;
+			    break;
             case -58:
 			case 6:
 				writeD(buf, 256);
-			break;
+			    break;
 			default:
 				writeD(buf, 0);
-			break;
+			    break;
 		}
 
 		writeC(buf, attackList.size());
@@ -95,14 +95,14 @@ public class SM_ATTACK extends AionServerPacket
 			{
 				case 0:
 				case 2:
-				break;
+				    break;
 				default:
 					writeD(buf, 0x00);
 					writeD(buf, 0x00);
 					writeD(buf, 0x00);
 					writeD(buf, attack.getReflectedDamage());
 					writeD(buf, attack.getSkillId());
-				break;
+				    break;
 			}
 		}
 		writeC(buf, 0);

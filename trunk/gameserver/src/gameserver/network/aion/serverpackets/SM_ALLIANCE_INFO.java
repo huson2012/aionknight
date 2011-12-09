@@ -67,6 +67,7 @@ public class SM_ALLIANCE_INFO extends AionServerPacket
 		writeD(buf, lootRules.getOver_ethernal());
 		writeD(buf, lootRules.getOver_over_ethernal());
 		writeC(buf, 0);
+        writeD(buf, 63);
 		writeD(buf, 0);
 
 		for (i = 0; i < 4; i++)
@@ -74,7 +75,8 @@ public class SM_ALLIANCE_INFO extends AionServerPacket
 			writeD(buf, i);
 			writeD(buf, 1000+i);
 		}
+
 		writeD(buf, 0);
-		writeS(buf, "");
+		writeD(buf, 0);
 	}
 }
