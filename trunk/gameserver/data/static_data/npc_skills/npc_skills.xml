@@ -2,80 +2,50 @@
 
 <!--
 
-	Назначение файла	: 
+	Назначение файла	: Характеристики умений NPC
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
 
  -->
 
 <npc_skill_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_skills.xsd">
-    <!-- NPC Skills made by Aion-Extreme 2.5 retail by Dallas -->
-    <!-- Padmarashka -->
+    <!-- Чуткая Марисса -->
     <npcskills npcid="216580" skill_count="11">
-        <!-- Protective Slumber - invul 15 sec! -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="19186" id="1"/>
-        <!-- Battle Frenzy -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="19187" id="2"/>
-        <!-- Padmarashka's Nurturing - reflect -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18727" id="3"/>
-        <!-- Destructive Bite - normal attack -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18728" id="4"/>
-        <!-- Brandish Tail -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18725" id="5"/>
-        <!-- Chilling Shriek -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="19183" id="6"/>
-        <!-- Despair -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18190" id="7"/>
-  	<!-- Poisonous Breath -->
-    <npcskill abouthp="false" probability="3" skilllevel="1" skillid="18724" id="8"/>
-        <!-- Primal Fear -->
+		<npcskill abouthp="false" probability="3" skilllevel="1" skillid="18724" id="8"/>
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="18722" id="9"/>
-        <!-- Rock Slide -->
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="19179" id="10"/>
-        <!-- Toxic Miasma -->
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="19185" id="11"/>
     </npcskills>		
-    <!-- Sematariux -->
+    <!-- Красноокая Семата -->
     <npcskills npcid="216520" skill_count="10">
-        <!-- Protective Slumber - invul 15 sec! -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="19186" id="1"/>
-        <!-- Battle Frenzy -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="19187" id="2"/>
-        <!-- Destructive Bite - normal attack -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18728" id="3"/>
-        <!-- Brandish Tail -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18725" id="4"/>
-        <!-- Chilling Shriek -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="19183" id="5"/>
-        <!-- Despair -->
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18190" id="6"/>
-      	<!-- Poisonous Breath -->
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="18724" id="7"/>	
-        <!-- Primal Fear -->
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="18722" id="8"/>		
-        <!-- Rock Slide -->
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="19179" id="9"/>		
-        <!-- Toxic Miasma -->
         <npcskill abouthp="false" probability="3" skilllevel="1" skillid="19185" id="10"/>		
     </npcskills>
-    <!-- Enraged Veille -->
+    <!-- Разгневанная Гера -->
 	<npcskills npcid="258200" skill_count="6">
-		<!-- Agent's Call - Teleport the target in front of the caster and Snare. Area of effect. 90% snare - doesnt teleport -->
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18709" id="1"/>
-		<!-- Withering Stare - Ranged snare and physical and magical defense decreased. -90% speed -25% phy def / -25% magic res -->
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18710" id="2"/>
-		<!-- Agent's Wrath - Gamehame Wave - atack normal aoe 990 -->
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18711" id="3"/>
-		<!-- Trap Strike aoe - Casting time increased. Attack speed decreased -->
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18712" id="4"/>
-		<!-- Power of Protection - A shield that protects the caster.15 sec invul - cooldown 180000=3min -->
 		<npcskill abouthp="false" probability="5" skilllevel="1" skillid="18985" id="5"/>
-		<!-- Sinful Retribution - Powerful Attack - 3sec stunn +748 dmg - delta=2 + weapon dmg -->
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18986" id="6"/>
-		<!-- Fool's Bane - Inflicts enough damage to kill the target with a single blow. 100k dmg -->
-        <!--	<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18987" id="7"/> -->
 	</npcskills>
-	<!-- Enraged Mastarius -->
+	<!-- Разгневанный Теграк -->
 	<npcskills npcid="258205" skill_count="6">
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18709" id="1"/>
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18710" id="2"/>
@@ -83,7 +53,6 @@
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18712" id="4"/>
 		<npcskill abouthp="false" probability="5" skilllevel="1" skillid="18985" id="5"/>
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18986" id="6"/>
-        <!--	<npcskill abouthp="false" probability="10" skilllevel="1" skillid="18987" id="7"/> -->
 	</npcskills>
 	<npcskills npcid="201010" skill_count="6">
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="17436" id="1"/>
@@ -48314,7 +48283,6 @@
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18422" id="10"/>
         <npcskill abouthp="false" probability="10" skilllevel="1" skillid="18001" id="11"/>
     </npcskills>
-<!-- skills de nos npc ordalie empyréenne -->
 	<!-- RM-1337c -->
 	<npcskills npcid="217593" skill_count="5">
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="19551" id="1"/>
@@ -48333,11 +48301,11 @@
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="17912" id="6"/>
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="16608" id="7"/>
 	</npcskills>
-	<!-- Tran de Vent -->
+	<!-- Тран воздуха -->
 	<npcskills npcid="217528" skill_count="1">
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="19545" id="1"/>
 	</npcskills>
-	<!-- Tran de Feu -->
+	<!-- Тран огня -->
 	<npcskills npcid="217527" skill_count="1">
 		<npcskill abouthp="false" probability="10" skilllevel="1" skillid="19544" id="1"/>
 	</npcskills>	

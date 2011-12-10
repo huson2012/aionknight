@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
-	Назначение файла	:
-	Версия сервера		: Aion-Knight 2.7 <Beta version>
-	Версия клиента		: 2.7 (Иннова)
-
+  Назначение файла: Схема XML-документа
+  ===============================================================================================================
+  Описание: Файл XSD определяет схему XML-документа - его структуру, порядок элементов; правила, которым должен 
+  соответствовать документ. В схеме определяются: элементы, атрибуты, которые будут присутствовать в документе, 
+  типы данных этих элементов и атрибутов, значения по умолчанию или фиксированные значения. Также возможно добав-
+  ление определений дочерних элементов, их порядка и количества. Данные должны быть записаны в соответствии с 
+  W3C XML Schema language.
+  ===============================================================================================================
+  Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+  Веб-cайт разработчиков: http://aion-knight.ru
+   
  -->
-
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<!-- Base types -->
+	<!-- Элементы простого типа  -->
 	<xs:simpleType name="playerClass">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="WARRIOR" />
@@ -26,7 +31,7 @@
 			<xs:enumeration value="CHANTER" />
 		</xs:restriction>
 	</xs:simpleType>
-
+	<!-- Элементы простого типа  -->
 	<xs:simpleType name="startingPlayerClass">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="WARRIOR" />
@@ -35,7 +40,7 @@
 			<xs:enumeration value="PRIEST" />
 		</xs:restriction>
 	</xs:simpleType>
-
+	<!-- Элементы простого типа  -->
 	<xs:simpleType name="Race">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ELYOS" />
@@ -71,5 +76,4 @@
 			<xs:enumeration value="NPC" />			
 		</xs:restriction>
 	</xs:simpleType>
-	
 </xs:schema>

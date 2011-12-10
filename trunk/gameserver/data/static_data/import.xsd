@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
-	Назначение файла	:
-	Версия сервера		: Aion-Knight 2.7 <Beta version>
-	Версия клиента		: 2.7 (Иннова)
-
+  Назначение файла: Схема XML-документа
+  ===============================================================================================================
+  Описание: Файл XSD определяет схему XML-документа - его структуру, порядок элементов; правила, которым должен 
+  соответствовать документ. В схеме определяются: элементы, атрибуты, которые будут присутствовать в документе, 
+  типы данных этих элементов и атрибутов, значения по умолчанию или фиксированные значения. Также возможно добав-
+  ление определений дочерних элементов, их порядка и количества. Данные должны быть записаны в соответствии с 
+  W3C XML Schema language.
+  ===============================================================================================================
+  Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+  Веб-cайт разработчиков: http://aion-knight.ru
+   
  -->
-
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- Структура элементов -->
 	<xs:element name="import">
 		<xs:annotation>
 			<xs:documentation><![CDATA[
-      Attributes:
+		
+		Атрибуты:
+		
 		'file' :
-				Required attribute.
-				Specified path to imported file or directory.
+				Необходимый атрибут.
+				Специфический путь для импортируемого файла или каталога.
 		'skipRoot' :
-				Optional attribute.
-				Default value: 'false'
-				If enabled, then root tags of imported files are ignored.
+				Необязательный атрибут.
+				Значение по умолчанию: 'false'
+				Если эта опция включена, то 'root' теги импортируемых файлов игнорируются.
 		'recirsiveImport':
-				Optional attribute.
-				Default value: 'true'
-				If enabled and attribute 'file' points to the directory, then all xml files in that
-				directory ( and deeper - recursively ) will be imported, otherwise only files inside that directory (without it subdirectories)
+				Необязательный атрибут.
+				Значение по умолчанию: 'true'
+				Если включен и атрибут 'file' указывает на каталог, то все xml-файлы в этом каталоге будут использованы, иначе 
+				только файлы в этом каталоге (без его подкаталогов).
 	]]></xs:documentation>
 		</xs:annotation>
 		<xs:complexType>

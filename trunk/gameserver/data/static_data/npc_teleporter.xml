@@ -9,8 +9,8 @@
  -->
 
 <npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
-	<!-- ASMODIANS -->
-	<!-- Pandaemonium -->
+	<!-- Асмодиане -->
+	<!-- Пандемониум -->
 	<teleporter_template npc_id="204191" name="Doman" teleportId="50" type="REGULAR">
 		<locations>
 			<telelocation loc_id="8" price="100"/>
@@ -20,7 +20,7 @@
 			<telelocation loc_id="82" price="1400"/>
 		</locations>
 	</teleporter_template>
-	<!-- Pandaemonium City Teleports -->
+	<!-- Городские телепорты Пандемониума -->
 	<teleporter_template npc_id="730018" name="DC1_SPOT_Street" teleportId="202" type="REGULAR">
 		<locations>
 			<telelocation loc_id="33" price="200"/>
@@ -39,33 +39,33 @@
 			<telelocation loc_id="34" price="800"/>
 		</locations>
 	</teleporter_template>
-	<!-- Pandaemonium - Marchutan Sanctuary Teleports -->
+	<!-- Пандемониум -> Святилище Маркутана -->
 	<teleporter_template npc_id="730268" name="DC1_Airport_ZONE_Entrance" teleportId="58"
 		type="REGULAR">
 		<locations>
 			<telelocation loc_id="110" price="0"/>
 		</locations>
 	</teleporter_template>
-	<!-- Marchutan Sanctuary - Pandaemonium Teleports -->
+	<!-- Святилище Маркутана -> Пандемониум -->
 	<teleporter_template npc_id="730269" name="DC2_Airport_ZONE_Entrance" teleportId="59"
 		type="REGULAR">
 		<locations>
 			<telelocation loc_id="109" price="0"/>
 		</locations>
 	</teleporter_template>
-	<!-- Pandaemonium - Gelkmaros Teleports -->
+	<!-- Пандемониум -> Келькмарос -->
 	<teleporter_template npc_id="730219" name="DC1_DF4_TELEPORT" teleportId="56" type="REGULAR">
 		<locations>
 			<telelocation loc_id="98" price="9300"/>
 		</locations>
 	</teleporter_template>
-	<!-- Gelkmaros - Pandaemonium Teleports -->
+	<!-- Келькмарос -> Пандемониум -->
 	<teleporter_template npc_id="730221" name="DF4_DC1_TELEPORT" teleportId="57" type="REGULAR">
 		<locations>
 			<telelocation loc_id="97" price="9300"/>
 		</locations>
 	</teleporter_template>
-	<!-- Gelkmaros Fortress-->
+	<!-- Крепость Келькмарос -->
 	<teleporter_template npc_id="799201" name="Gelkmaros Fortress" teleportId="215"
 		type="FLIGHT">
 		<locations>
@@ -94,7 +94,7 @@
 			<telelocation loc_id="102" teleportid="97001" price="2100"/>
 		</locations>
 	</teleporter_template>
-	<!-- Ishalgen -->
+	<!-- Исхальген -->
 	<teleporter_template npc_id="203679" name="Osmar" teleportId="51" type="REGULAR">
 		<locations>
 			<telelocation loc_id="7" price="100"/>
@@ -111,7 +111,7 @@
 			<telelocation loc_id="17" teleportid="12001" price="200"/>
 		</locations>
 	</teleporter_template>
-	<!-- Altgard -->
+	<!-- Альтгард -->
 	<teleporter_template npc_id="203581" name="Ukin" teleportId="52" type="REGULAR">
 		<locations>
 			<telelocation loc_id="7" price="500"/>
@@ -149,7 +149,7 @@
 			<telelocation loc_id="19" teleportid="127001" price="250"/>
 		</locations>
 	</teleporter_template>
-	<!-- Morheim -->
+	<!-- Морхейм -->
 	<teleporter_template npc_id="204399" name="Orhe" teleportId="53" type="REGULAR">
 		<locations>
 			<telelocation loc_id="7" price="1500"/>
@@ -200,8 +200,7 @@
 			<telelocation loc_id="65" teleportid="135001" price="1200"/>
 		</locations>
 	</teleporter_template>
-	<!-- Beluslan -->
-	<!-- player spawn are not in front of teleporters, search and you will find teleporters -->
+	<!-- Белуслан -->
 	<teleporter_template npc_id="204724" name="Eda" teleportId="55" type="REGULAR">
 		<locations>
 			<telelocation loc_id="7" price="100"/>
@@ -246,7 +245,7 @@
 			<telelocation loc_id="80" teleportid="113001" price="1100"/>
 		</locations>
 	</teleporter_template>
-	<!-- Brusthonin -->
+	<!-- Брустхонин -->
 	<teleporter_template npc_id="205124" name="Tusen" teleportId="54" type="REGULAR">
 		<locations>
 			<telelocation loc_id="7" price="1400"/>
@@ -285,8 +284,8 @@
 			<telelocation loc_id="87" teleportid="105001" price="1800"/>
 		</locations>
 	</teleporter_template>
-	<!-- ELYOS -->
-	<!-- Poeta -->
+	<!-- Элиос -->
+	<!-- Фоета -->
 	<teleporter_template npc_id="203194" name="Daines" teleportId="2" type="REGULAR">
 		<locations>
 			<telelocation loc_id="2" price="100"/>
@@ -303,7 +302,7 @@
 			<telelocation loc_id="12" teleportid="6001" price="200"/>
 		</locations>
 	</teleporter_template>
-	<!-- Sanctum -->
+	<!-- Элизиум -->
 	<teleporter_template npc_id="203726" name="Polyidus" teleportId="1" type="REGULAR">
 		<locations>
 			<telelocation loc_id="3" price="100"/>
@@ -313,7 +312,7 @@
 			<telelocation loc_id="81" price="1400"/>
 		</locations>
 	</teleporter_template>
-	<!-- Sanctum City Teleports -->
+	<!-- Городские телепорты Элизиума -->
 	<teleporter_template npc_id="730015" name="LC1_Airport_SPOT_Bank" teleportId="101"
 		type="REGULAR">
 		<locations>

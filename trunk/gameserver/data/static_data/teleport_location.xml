@@ -9,8 +9,8 @@
  -->
 
 <teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
-	<!-- Normal Teleport-->
-	<!-- ELYOS -->
+	
+	<!-- ЭЛИОС -->
 	<teleloc_template loc_id="2" mapid="110010000" name="Sanctum" posX="1313.25" posY="1512.011" posZ="568.107" heading="0"/>
 	<teleloc_template loc_id="3" mapid="210010000" name="Akarios Village" posX="806.11426" posY="1242.6438" posZ="118.98627" heading="0"/>
 	<teleloc_template loc_id="4" mapid="210030000" name="Verteron" posX="1643" posY="1500" posZ="119" heading="0"/>
@@ -25,7 +25,7 @@
 	<teleloc_template loc_id="107" mapid="110010000" name="LC1_Airport_ZONE_Entrance" posX="1366.8" posY="1539.5" posZ="569.0" heading="0"/>
 	<teleloc_template loc_id="108" mapid="110020000" name="LC2_Airport_ZONE_Entrance" posX="2155.6" posY="1566.9" posZ="1204.9" heading="0"/>
 	
-	<!-- ASMODIANS -->
+	<!-- АСМОДЕЯ -->
 	<teleloc_template loc_id="7" mapid="120010000" name="Pandemonium" posX="1685.5665" posY="1399.6561" posZ="195.38385" heading="60"/>
 	<teleloc_template loc_id="8" mapid="220010000" name="Ishalgen" posX="528.59595" posY="2449.176" posZ="281.59262" heading="0"/>
 	<teleloc_template loc_id="9" mapid="220030000" name="Altgard" posX="1748" posY="1807" posZ="254" heading="0"/>
