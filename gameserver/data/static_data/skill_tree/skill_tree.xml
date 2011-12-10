@@ -10,7 +10,7 @@
 
 <skill_tree>
 
-	<!-- WARRIOR -->
+	<!-- ВОИН -->
 	
 	<skill skillId="1" name="Basic Sword Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>
 	<skill skillId="3" name="Basic Mace Training" minLevel="1" autolearn="true" skillLevel="1" race="ALL" classId="WARRIOR" type="PASSIVE"/>

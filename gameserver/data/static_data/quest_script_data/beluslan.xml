@@ -708,7 +708,10 @@
 	<monster_hunt id="28605" start_npc_id="205235"> 
 		<monster_infos npc_id="216969" var_id="0" max_kill="8"/>
 		<monster_infos npc_id="216970" var_id="0" max_kill="8"/>
+		<monster_infos npc_id="216969" var_id="0" max_kill="8"/>
+		<monster_infos npc_id="216970" var_id="0" max_kill="8"/>
 		<monster_infos npc_id="216971" var_id="0" max_kill="8"/> 
+		<monster_infos npc_id="216972" var_id="0" max_kill="8"/>
 		<monster_infos npc_id="216972" var_id="0" max_kill="8"/>
 	</monster_hunt>	
 	<!-- 28606 An Honorable Death--> 

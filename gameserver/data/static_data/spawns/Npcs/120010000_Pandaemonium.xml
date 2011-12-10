@@ -262,515 +262,906 @@
 	<spawn map="120010000" npcid="799732" interval="295">
 		<object x="1160.7953" y="1341.8928" z="210" h="110"/>
 	</spawn>
-	<!-- Cavalorn (NPC Normal lvl:50)-->
+	<!--
+	Название: Мимир
+	Описание: Мудрец. Местонахождение - Храм знаний Пандемониума. Кажется, что его голова способна вместить все 
+	знания Пандемониума.
+	-->
 	<spawn map="120010000" npcid="204206" pool="1" interval="295">
 		<object x="1368.68" y="1051.2" z="206.53348" h="30"/>
 	</spawn>
-	<!-- Carrin (NPC Normal lvl:3)-->
+	<!--
+	Название: Энатуэль
+	Описание: Торговец роскошной одеждой. Торгует одеждой "Штучка" в модной лавке.
+	-->
 	<spawn map="120010000" npcid="798407" pool="1" interval="295">
 		<object x="842.42096" y="1449.0565" z="219.42696" h="87"/>
 	</spawn>
-	<!-- Chantinerk (NPC Normal lvl:45)-->
+	<!--
+	Название: Хаоринрин
+	Описание: Шиго-посланник торговой гильдии "Темное облако" в Воздушном порту Пандемониума. Самая младшая из 
+	посланников, серьезные дела ей пока не доверяют.
+	-->
 	<spawn rw="0" map="120010000" npcid="204282" pool="1" interval="295">
 		<object fly="0" staticid="0" x="1037.2268" y="1160.7743" z="201.52098" h="93" w="0" rw="0"/>
 	</spawn>
-  	<!-- Chauminminerk (NPC Normal lvl:15)-->
+  	<!--
+	Название: Чаумингминг
+	Описание: Шиго из торговой гильдии, охраняющий груз. Местонахождение: Воздушный порт в Пандемониуме. Сетует 
+	на то, что жизнь не дала ему шанса сделать успешную карьеру.
+	-->
 	<spawn map="120010000" npcid="798066" pool="1" interval="295">
 		<object x="962.465" y="1213.6843" z="201.49338" h="105"/>
 	</spawn>
-	<!-- Cheishunerk (NPC Normal lvl:15)-->
+	<!--
+	Название: Чайшунг
+	Описание: Воздушный порт Пандемониума - место работы этого шиго. С презрением относится к торговой гильдии 
+	"Темное облако".
+	-->
 	<spawn map="120010000" npcid="798061" pool="1" interval="295">
 		<object x="1004.386" y="1107.3075" z="200.04756" h="12"/>
 	</spawn>
-	<!-- Chopirunerk (NPC Normal lvl:15)-->
+	<!--
+	Название: Чопирун
+	Описание: Шиго из мастерской Тиграки, которого направили в Храм ремесел Пандемониума.
+	-->
 	<spawn map="120010000" npcid="798358" pool="1" interval="295">
 		<object x="1222.6613" y="1506.3448" z="213.96336" h="67"/>
 	</spawn>
-	<!-- Daraia (NPC Normal lvl:10)-->
+	<!--
+	Название: Дарайя
+	Описание: Кулинар. Местонахождение: Храм ремесел в Пандемониуме. До того как попал в Пандемониум, был поваром.
+	-->
 	<spawn map="120010000" npcid="204101" pool="1" interval="295">
 		<object x="1173.55" y="1528.78" z="214.16386" h="34"/>
 	</spawn>
-	<!-- Daskair (NPC Normal lvl:40)-->
+	<!--
+	Название: Даскаир
+	Описание: Местонахождение: Дорога изобилия в Пандемониуме. Его явно что-то беспокоит.
+	-->
 	<spawn map="120010000" npcid="204261" pool="1" interval="295">
 		<object x="1102.373" y="1481.1943" z="213.83382" h="65"/>
 	</spawn>
-	<!-- Daskin (NPC Normal lvl:3)-->
+	<!--
+	Название: Тимоганд
+	Описание: Даэв искусства шитья в Лавке элитной одежды Пандемониума. Очень элегантен, учтив, но никогда не 
+	говорит того, что думает на самом деле.
+	-->
 	<spawn map="120010000" npcid="798393" pool="1" interval="295">
 		<object x="826.8813" y="1413.0521" z="219.44727" h="112"/>
 	</spawn>
-	<!-- Dedication to Asmodians (Object Normal lvl:1)-->
+	<!--
+	Название: Жертва ради асмодиан
+	Описание: Объект
+	-->
 	<spawn map="120010000" npcid="730123" pool="1" interval="295">
 		<object x="793.54333" y="1278.6832" z="230.80457" h="15" staticid="286"/>
 	</spawn>
-	<!-- Dein (NPC Normal lvl:40)-->
+	<!--
+	Название: Дейн
+	Описание: Мастер предметов из Пандемониума. Торгует разными предметами в городе.
+	-->
 	<spawn map="120010000" npcid="204272" pool="1" interval="295">
 		<object x="1246.0" y="1208.0" z="214.66057" h="0"/>
 	</spawn>
-	<!-- Delua (NPC Normal lvl:3)-->
+	<!--
+	Название: Дэлуа
+	Описание: Воздушный порт - очередное место, которое хочет посетить эта непоседливая путешественница. 
+	Переживает за мужа и детей, которые остались на родине.
+	-->
 	<spawn map="120010000" npcid="204161" pool="1" interval="295">
 		<object x="1051.2009" y="1126.0792" z="201.99889" h="0"/>
 	</spawn>
-	<!-- Denesere (NPC Normal lvl:10)-->
+	<!--
+	Название: Денесер
+	Описание: Житель, ожидающий летающего корабля. Местонахождение: Воздушный порт в Пандемониуме. Ждет мать, о 
+	скором прибытии которой стало недавно известно.
+	-->
 	<spawn map="120010000" npcid="204159" pool="1" interval="295">
 		<object x="979.78326" y="1191.6543" z="200.17903" h="0"/>
 	</spawn>
-	<!-- Dengard (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204247" pool="1" interval="295">
 		<object x="1466.9122" y="1401.4241" z="177.53754" h="90" w="310"/>
 	</spawn>
-	<!-- Denir (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204162" pool="1" interval="295">
 		<object x="946.82495" y="1100.3679" z="195.8803" h="0"/>
 	</spawn>
-	<!-- Deyla (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204141" pool="1" interval="295">
 		<object x="1194.5724" y="1557.582" z="213.83618" h="105" w="313"/>
 	</spawn>
-	<!-- Dilaila (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204243" pool="1" interval="295">
 		<object x="1519.1161" y="1359.8064" z="183.0" h="1"/>
 	</spawn>
-	<!-- Djupi (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204158" pool="1" interval="295">
 		<object x="1047.7885" y="1212.276" z="201.5208" h="75"/>
 	</spawn>
-	<!-- Dolf (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204209" pool="1" interval="295">
 		<object x="1396.0" y="1045.7" z="214.90694" h="0"/>
 	</spawn>
-	<!-- Doman (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204191" pool="1" interval="295">
 		<object x="1686.0" y="1395.0" z="196.0" h="45"/>
 	</spawn>
-	<!-- Donoerin (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204160" pool="1" interval="295">
 		<object x="971.77954" y="1102.3655" z="197.39888" h="4"/>
 	</spawn>
-	<!-- Dorein (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204129" pool="1" interval="295">
 		<object x="1118.8285" y="1475.2474" z="214.28195" h="54"/>
 	</spawn>
-	<!-- Duna (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204256" pool="1" interval="295">
 		<object x="1476.3977" y="1363.0524" z="177.00171" h="15"/>
 	</spawn>
-	<!-- Eiperin (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204234" pool="1" interval="295">
 		<object x="873.0931" y="1372.1274" z="219.0" h="0"/>
 	</spawn>
-	<!-- Eiren (NPC Normal lvl:20)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204119" pool="1" interval="295">
 		<object x="1056.7479" y="1410.465" z="213.68877" h="80"/>
 	</spawn>
-	<!-- Elgar (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204113" pool="1" interval="295">
 		<object x="1160.2751" y="1594.1847" z="214.03719" h="0"/>
 	</spawn>
-	<!-- Emma -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="799939" pool="1" interval="295">
 		<object x="1246.6926" y="1350.7629" z="205" h="0"/>
 	</spawn>
-	<!-- Emvelu (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204165" pool="1" interval="295">
 		<object x="1035.6327" y="1172.1266" z="201.52081" h="0"/>
 	</spawn>
-	<!-- Enira (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798413" pool="1" interval="295">
 		<object x="822.4035" y="1431.1161" z="219.42696" h="92"/>
 	</spawn>
-	<!-- Enjodil (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="790008" pool="1" interval="295">
 		<object x="1049.889" y="1191.5938" z="201.5208" h="90"/>
 	</spawn>
-	<!-- Epren (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204197" pool="1" interval="295">
 		<object x="1326.5228" y="1327.2332" z="208.125" h="69"/>
 	</spawn>
-	<!-- Eramir (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204164" pool="1" interval="295">
 		<object x="1044.2184" y="1137.7871" z="201.99889" h="3"/>
 	</spawn>
-	<!--  Erdil (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798442" pool="1" interval="295">
 		<object x="1162.5627" y="1341.0485" z="209.6744" h="6"/>
 	</spawn>
-	<!-- Ersa (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204168" pool="1" interval="295">
 		<object x="987.911" y="1069.0615" z="201.99849" h="0" w="315"/>
 	</spawn>
-	<!-- Etunapi (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204166" pool="1" interval="295">
 		<object x="1050.3223" y="1189.935" z="202.0" h="45"/>
 	</spawn>
-	<!-- Evesup (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204167" pool="1" interval="295">
 		<object x="955.5159" y="1202.7279" z="202.99556" h="0"/>
 	</spawn>
-	<!-- Excelin (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204249" pool="1" interval="295">
 		<object x="1465.1748" y="1358.5588" z="177.0479" h="0"/>
 	</spawn>
-	<!-- Feden (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204169" pool="1" interval="295">
 		<object x="1034.4" y="1218.6" z="201.5" h="60" w="47"/>
 	</spawn>
-	<!-- Feglie (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204171" pool="1" interval="295">
 		<object x="947.0" y="1123.71" z="206.84729" h="0" w="314"/>
 	</spawn>
-	<!-- Femme Fatale of History 2 -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="748002" pool="1" interval="295">
 		<object x="1329.2567" y="1051.6169" z="207.88593" h="0" staticid="331"/>
 	</spawn>
-	<!-- Femme Fatale of History 9 (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730086" pool="1" interval="295">
 		<object x="1329.2183" y="1050.1338" z="208.93929" h="0" staticid="1434"/>
 	</spawn>
-	<!-- Femme Fatale of History 10 -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="748003" pool="1" interval="295">
 		<object x="1329.1804" y="1050.5585" z="207.35516" h="0" staticid="332"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204069" pool="1" interval="295">
 		<object x="1270.0" y="1250.0" z="216.23029" h="30"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204065" pool="1" interval="295">
 		<object x="1272.0" y="1165.0" z="215.21492" h="90"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204064" pool="1" interval="295">
 		<object x="1266.0" y="1173.0" z="215.09242" h="30"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204070" pool="1" interval="295">
 		<object x="1280.0" y="1250.0" z="216.2478" h="30"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204068" pool="1" interval="295">
 		<object x="1269.0" y="1217.0" z="214.07533" h="0"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204063" pool="1" interval="295">
 		<object x="1286.0" y="1173.0" z="215.09242" h="30"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204066" pool="1" interval="295">
 		<object x="1279.0" y="1165.0" z="215.21492" h="30"/>
 	</spawn>
-	<!-- Fenris's Fangs Elite Soldier (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204067" pool="1" interval="295">
 		<object x="1282.0" y="1217.0" z="214.07533" h="60"/>
 	</spawn>
-	<!-- Fenris's Fangs Test Past Papers -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="748001" pool="1" interval="295">
 		<object x="821" y="1395" z="218.37779" h="33" staticid="330"/>
 	</spawn>
-	<!-- Fjorgin (NPC Elite lvl:45)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204078" pool="1" interval="295">
 		<object x="1455.1246" y="1413.8226" z="177.52628" h="119"/>
 	</spawn>
-	<!-- Fjuedil (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204170" pool="1" interval="295">
 		<object x="1002.6595" y="1134.376" z="205.89146" h="90"/>
 	</spawn>
-	<!-- Frana (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204236" pool="1" interval="295">
 		<object x="785.14166" y="1296.5565" z="228.82748" h="26"/>
 	</spawn>
-	<!-- Freyr (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204059" pool="1" interval="295">
 		<object x="1306.1556" y="1225.9277" z="215.10233" h="60"/>
 	</spawn>
-	<!-- Frinda (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204085" pool="1" interval="295">
 		<object x="940.6362" y="1552.7856" z="222.19551" h="0"/>
 	</spawn>
-	<!-- Frozen in Time (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730089" pool="1" interval="295">
 		<object x="1408.4116" y="1052.0845" z="208.93712" h="60" staticid="1436"/>
 	</spawn>
-	<!-- Gaminart (NPC Junk lvl:20)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204268" pool="1" interval="295">
 		<object x="1403.3329" y="1066.8026" z="206.02371" h="90"/>
 	</spawn>
-	<!-- Gantrug (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204215" pool="1" interval="295">
 		<object x="1367.5323" y="1132.6719" z="213.89578" h="90"/>
 	</spawn>
-	<!-- Garm (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204089" pool="1" interval="295">
 		<object x="1001.20734" y="1528.3871" z="222.19403" h="50"/>
 	</spawn>
-	<!-- Garun (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204116" pool="1" interval="295">
 		<object x="1145.2019" y="1367.911" z="209.68735" h="30"/>
 	</spawn>
-	<!-- Garuvagg (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204255" pool="1" interval="295">
 		<object x="1478.688" y="1363.0566" z="177.00171" h="60"/>
 	</spawn>
-	<!-- Geiena (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204199" pool="1" interval="295">
 		<object x="1326.2932" y="1322.2673" z="208.125" h="55"/>
 	</spawn>
-	<!-- Genmjola (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204174" pool="1" interval="295">
 		<object x="1397.2088" y="1179.461" z="209.41924" h="90"/>
 	</spawn>
-	<!-- Genoti (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204186" pool="1" interval="295">
 		<object x="1402.43" y="1439.63" z="208.10017" h="90"/>
 	</spawn>
-	<!-- Genoveva (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204060" pool="1" interval="295">
 		<object x="1258.4016" y="1205.2303" z="214.3585" h="30"/>
 	</spawn>
-	<!-- Gerad (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204118" pool="1" interval="295">
 		<object x="1009.64" y="1363.38" z="213.68877" h="32"/>
 	</spawn>
-	<!-- Gert (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204090" pool="1" interval="295">
 		<object x="1210.9382" y="1539.3713" z="213.96336" h="68"/>
 	</spawn>
-	<!-- Giles (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204289" pool="1" interval="295">
 		<object x="1237.2872" y="1212.4445" z="214.66057" h="0"/>
 	</spawn>
-	<!-- Girditan (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204172" pool="1" interval="295">
 		<object x="1013.5016" y="1138.022" z="204.88452" h="30"/>
 	</spawn>
-	<!-- Glerm (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204175" pool="1" interval="295">
 		<object x="1380.0874" y="1197.1206" z="209.41872" h="120"/>
 	</spawn>
-	<!-- Golden Wuf (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="799729" interval="295">
 		<object x="1165.1283" y="1335.9283" z="210" h="80"/>
 	</spawn>
-	<!-- Gororunerk (NPC Normal lvl:15)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798057" pool="1" interval="295">
 		<object x="1304.2058" y="1517.9337" z="209.81087" h="0"/>
 	</spawn>
-	<!-- Grad (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204103" pool="1" interval="295">
 		<object x="1182.0" y="1526.0" z="214.25528" h="100"/>
 	</spawn>
-	<!-- Graipel (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204094" pool="1" interval="295">
 		<object x="1228.0" y="1444.0" z="209.09074" h="105"/>
 	</spawn>
-	<!-- Grer (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204073" pool="1" interval="295">
 		<object x="1358.0142" y="1480.0" z="209.81087" h="58"/>
 	</spawn>
-	<!-- Grimhild (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204079" pool="1" interval="295">
 		<object x="1470.6013" y="1421.2203" z="177.54225" h="60"/>
 	</spawn>
-	<!-- Groa (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204062" pool="1" interval="295">
 		<object x="1292.9202" y="1233.3287" z="214.35034" h="90"/>
 	</spawn>
-	<!-- Grupaks (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204107" pool="1" interval="295">
 		<object x="1174.7766" y="1599.858" z="214.03001" h="105"/>
 	</spawn>
-	<!-- Gullinkambi (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204074" pool="1" interval="295">
 		<object x="1383.052" y="1528.701" z="209.81026" h="60"/>
 	</spawn>
-	<!-- Gundrun (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204093" pool="1" interval="295">
 		<object x="1199.902" y="1515.355" z="215.0" h="15"/>
 	</spawn>
-	<!-- Gunnar (NPC Elite lvl:41)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204087" pool="1" interval="295">
 		<object x="987.5344" y="1546.9332" z="223.0" h="110"/>
 	</spawn>
-	<!-- Gunter (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204225" pool="1" interval="295">
 		<object x="1333.9872" y="1046.677" z="206.02371" h="30"/>
 	</spawn>
-	<!-- Gwendag (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204178" pool="1" interval="295">
 		<object x="1587.9429" y="1411.3473" z="192.30624" h="98" w="312"/>
 	</spawn>
-	<!-- Habirunerk (NPC Normal lvl:45)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204284" pool="1" interval="295">
 		<object x="942.186" y="1147.9602" z="195.88031" h="6"/>
 	</spawn>
-	<!-- Haink (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204204" pool="1" interval="295">
 		<object x="1359.9313" y="1385.7595" z="208.60344" h="30"/>
 	</spawn>
-	<!-- Haven (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204221" pool="1" interval="295">
 		<object x="1366.5111" y="1198.0183" z="208.37625" h="18"/>
 	</spawn>
-	<!-- Hebennjot (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204179" pool="1" interval="295">
 		<object x="1583.9" y="1401.4" z="193.1" h="0" w="39"/>
 	</spawn>
-	<!-- Heidrun (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204232" pool="1" interval="295">
 		<object x="1172.0" y="1176.4" z="207.97894" h="3"/>
 	</spawn>
-	<!-- Heimdall (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204182" pool="1" interval="295">
 		<object x="1614.0" y="1398.0" z="193.1269" h="60"/>
 	</spawn>
-	<!-- Heltinjola (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204181" pool="1" interval="295">
 		<object x="1537.9642" y="1406.3765" z="202.7958" h="30"/>
 	</spawn>
-	<!-- Hika (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204194" pool="1" interval="295">
 		<object x="1327.892" y="1324.6027" z="208.125" h="60"/>
 	</spawn>
-	<!-- Himingleva (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204278" pool="1" interval="295">
 		<object x="1031.4069" y="1406.4369" z="213.68877" h="17"/>
 	</spawn>
-	<!-- Hirei (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204201" pool="1" interval="295">
 		<object x="1372.0953" y="1276.55" z="208.35129" h="60"/>
 	</spawn>
-	<!-- History of Ancient Atreia (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730079" pool="1" interval="295">
 		<object x="1384.7676" y="1067.2747" z="216.28122" h="0" staticid="1420"/>
 	</spawn>
-	<!-- History of Pandaemonium (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730121" pool="1" interval="295">
 		<object x="1448.1708" y="1335.5664" z="178.84079" h="0" staticid="279"/>
 	</spawn>
-	<!-- Hiyask (NPC Normal lvl:3)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204180" pool="1" interval="295">
 		<object x="1588.0039" y="1392.1221" z="192.8585" h="30" w="317"/>
 	</spawn>
-	<!-- Hoki (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204124" pool="1" interval="295">
 		<object x="1076.5477" y="1414.2362" z="213.68877" h="45"/>
 	</spawn>
-	<!-- Honir (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204102" pool="1" interval="295">
 		<object x="1179.9397" y="1511.5337" z="214.25528" h="0"/>
 	</spawn>
-	<!-- Hungry Porgus (NPC Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="799735" interval="295">
 		<object x="1154.7953" y="1346.8726" z="210" h="71"/>
 	</spawn>
-	<!-- Hupre (NPC Normal lvl:47)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204133" pool="1" interval="295">
 		<object x="1043.7678" y="1495.7014" z="212.84732" h="105"/>
 	</spawn>
-	<!-- Huron (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204274" pool="1" interval="295">
 		<object x="1275.0" y="1368.0" z="205.0" h="96"/>
 	</spawn>
-	<!-- Igsrun (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204184" pool="1" interval="295">
 		<object x="1404.8" y="1362.3" z="208.10017" h="30"/>
 	</spawn>
-	<!-- Impetusium of Glory (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730081" pool="1" interval="295">
 		<object x="1390.173" y="1067.541" z="208.47321" h="0" staticid="1422"/>
 	</spawn>
-	<!-- In Defense of Humanity (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730087" pool="1" interval="295">
 		<object x="1398.5624" y="1054.3145" z="207.35481" h="0" staticid="1435"/>
 	</spawn>
-	<!-- Interesting Asmodae (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730085" pool="1" interval="295">
 		<object x="1352.6611" y="1067.2461" z="215.76271" h="0" staticid="1433"/>
 	</spawn>
-	<!-- Interesting Daevas of Asmodae-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730124" pool="1" interval="295">
 		<object x="1378.1847" y="1223.6332" z="209.17354" h="15" staticid="287"/>
 	</spawn>
-	<!-- Isdal (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204183" pool="1" interval="295">
 		<object x="1416.1781" y="1362.3143" z="208.10017" h="30"/>
 	</spawn>
-	<!-- Jakwillem (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204218" pool="1" interval="295">
 		<object x="1355.8" y="1153.4922" z="211.70454" h="30"/>
 	</spawn>
-	<!-- Jeckrow (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204173" pool="1" interval="295">
 		<object x="1400.7944" y="1187.9486" z="209.41872" h="65"/>
 	</spawn>
-	<!-- Johanert (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204238" pool="1" interval="295">
 		<object x="1338.6934" y="1168.778" z="208.37625" h="105"/>
 	</spawn>
-	<!-- Jotunmodr (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204277" pool="1" interval="295">
 		<object x="1439.8033" y="1273.5919" z="202.03017" h="63"/>
 	</spawn>
-	<!-- Journal of an Explorer (Object Normal lvl:1)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="730080" pool="1" interval="295">
 		<object x="1396.6576" y="1036.817" z="207.68881" h="25" staticid="1421"/>
 	</spawn>
-	<!-- Jylla (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204252" pool="1" interval="295">
 		<object x="1145.1206" y="1286.7954" z="209.67445" h="14"/>
 	</spawn>
-	<!-- Kadisa (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204137" pool="1" interval="295">
 		<object x="989.1" y="1423.2" z="213.5" h="0" w="41"/>
 	</spawn>
-	<!-- Kaiot (NPC Normal lvl:10)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204111" pool="1" interval="295">
 		<object x="1196.0" y="1467.0" z="214.16386" h="30"/>
 	</spawn>
-	<!-- Kalsten (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204080" pool="1" interval="295">
 		<object x="1455.6134" y="1451.4154" z="177.3169" h="90"/>
 	</spawn>
-	<!-- Kamorunerk (NPC Normal lvl:15)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798065" pool="1" interval="295">
 		<object x="1078.1108" y="1079.4569" z="202.0" h="63"/>
 	</spawn>
-	<!-- Kanensa (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204146" pool="1" interval="295">
 		<object x="939.9808" y="1122.541" z="208.0017" h="0"/>
 	</spawn>
-	<!-- Karollin (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204242" pool="1" interval="295">
 		<object x="1538.0082" y="1408.0657" z="203.0" h="100"/>
 	</spawn>
-	<!-- Kasir (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204207" pool="1" interval="295">
 		<object x="1403.49" y="1047.0" z="206.02371" h="90"/>
 	</spawn>
-	<!--  Katin (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798441" pool="1" interval="295">
 		<object x="1159.4358" y="1346.6099" z="209.6744" h="6"/>
 	</spawn>
-	<!-- Kehleb (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204254" pool="1" interval="295">
 		<object x="1145.1206" y="1296.0537" z="209.67445" h="0"/>
 	</spawn>
-	<!-- Kenikin (NPC Normal lvl:5)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204188" pool="1" interval="295">
 		<object x="1235.9" y="1411.1" z="208.1" h="0" w="36"/>
 	</spawn>
-	<!-- Keruthis (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204187" pool="1" interval="295">
 		<object x="1413.34" y="1439.4393" z="208.10017" h="90"/>
 	</spawn>
-	<!-- Khrudgelmir (NPC Normal lvl:50)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204253" pool="1" interval="295">
 		<object x="1112.7802" y="1291.1367" z="231.78072" h="0"/>
 	</spawn>
-	<!-- Kiengart (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204185" pool="1" interval="295">
 		<object x="1393.0" y="1426.0" z="208.08516" h="0"/>
 	</spawn>
-	<!-- Kinot (NPC Normal lvl:40)-->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="204121" pool="1" interval="295">
 		<object x="1059.4591" y="1398.0886" z="213.68877" h="45"/>
 	</spawn>
@@ -1418,51 +1809,87 @@
 	<spawn map="120010000" npcid="798409" pool="1" interval="105">
 		<object x="944.666" y="1126.073" z="208" h="0"/>
 	</spawn>
-	<!-- Belenus (NPC Daeva of Blessing lvl:50) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798417" pool="1" interval="295">
 		<object x="1446.4032" y="1453.2574" z="176.92947" h="89"/>
 	</spawn>
-	<!-- Onarunerk (NPC Mist Shield Merchant lvl:50) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798423" pool="1" interval="105">
 		<object x="1362.429" y="1385.7428" z="208.60344" h="30"/>
 	</spawn>
-	<!-- Gaster (NPC Warehouse Manager lvl:50) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798312" pool="1" interval="105">
 		<object x="1297.9873" y="1501.834" z="209.81087" h="117"/>
 	</spawn>
-	<!-- Albanis (NPC Warehouse Manager lvl:50) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798313" pool="1" interval="105">
 		<object x="1356.3419" y="1474.8851" z="208.81088" h="58"/>
 	</spawn>
-	<!-- Luichinchinerk (NPC Warehouse Manager lvl:15) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798314" pool="1" interval="105">
 		<object x="1363.4808" y="1496.2244" z="209.81088" h="62"/>
 	</spawn>
-	<!-- Micrinrinerk (NPC Trade Broker lvl:15) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798315" pool="1" interval="105">
 		<object x="1306.0" y="1523.0" z="209.81087" h="102"/>
 	</spawn>
-	<!-- Silke (NPC Daeva lvl:30) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798443" pool="1" interval="105">
 		<object x="1156.9106" y="1357.1816" z="209.67441" h="116"/>
 	</spawn>
-	<!-- Reira (NPC Street Musician lvl:30) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798402" pool="1" interval="105">
 		<object x="1274.7809" y="1350.6964" z="204.4608" h="30"/>
 	</spawn>
-	<!-- Ellon (NPC Daeva of Song lvl:30) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="798403" pool="1" interval="105">
 		<object x="1274.7809" y="1347.6964" z="204.4608" h="30"/>
 	</spawn>
-	<!-- Elma (NPC Box Trader lvl:55) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="799792" pool="1" interval="105">
 		<object x="1246.6866" y="1356.1626" z="204.42001" h="0"/>
 	</spawn>
-	<!-- Sihein (NPC Daeva of Summer lvl:55) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="799793" pool="1" interval="105">
 		<object x="1244.6205" y="1351.6508" z="204.42001" h="0"/>
 	</spawn>
-	<!-- Murea (NPC Daeva of Summer lvl:55) -->
+	<!--
+	Название: 
+	Описание: 
+	-->
 	<spawn map="120010000" npcid="799794" pool="1" interval="105">
 		<object x="1244.509" y="1363.3928" z="204.42004" h="0"/>
 	</spawn>

@@ -30,7 +30,7 @@ public class _1022KrallDesecration extends QuestHandler
 {
 
 	private final static int	questId	= 1022;
-	private final static int[]	mob_ids	= { 210178 };
+	private final static int[]	mob_ids	= { 210178,216892 };
 
 	public _1022KrallDesecration()
 	{
@@ -98,7 +98,9 @@ public class _1022KrallDesecration extends QuestHandler
 	@Override
 	public boolean onKillEvent(QuestCookie env)
 	{
-		if(defaultQuestOnKillEvent(env, 210178, 1, 5) || defaultQuestOnKillEvent(env, 210178, 5, true))
+
+    int[] mobs = {210178, 216892};
+     	if(defaultQuestOnKillEvent(env, mobs, 1, 5) || defaultQuestOnKillEvent(env, mobs, 5, true))
 			return true;
 		else
 			return false;
