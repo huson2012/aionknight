@@ -463,17 +463,9 @@
 		<object x="752.761" y="620.3555" z="197.5447" h="30"/>
 		<object x="754.3646" y="617.8907" z="197.1769" h="43"/>
 	</spawn>
-	<!-- Dream Boundary lvl:1 -->
-	<spawn map="300230000" npcid="700949" pool="1" interval="295">
-		<object x="229.3581" y="252.2569" z="191.1684" h="110"/>
-	</spawn>
 	<!-- Grave Robber's Corpse lvl:1 -->
 	<spawn map="300230000" npcid="700961" pool="1" interval="295">
 		<object staticid="56" x="467.3628" y="350.6577" z="170.3907" h="66"/>
-	</spawn>
-	<!-- Shadow Executor Asusin lvl:38 -->
-	<spawn map="300230000" npcid="700964" pool="1" interval="295">
-		<object x="237.6849" y="249.0171" z="189.8725" h="113"/>
 	</spawn>
 	<!-- Robstin lvl:1 -->
 	<spawn map="300230000" npcid="700965" pool="1" interval="295">

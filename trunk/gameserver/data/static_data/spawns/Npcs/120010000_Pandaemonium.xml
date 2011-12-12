@@ -260,7 +260,7 @@
 	Описание: Шиго
 	-->
 	<spawn map="120010000" npcid="799732" interval="295">
-		<object x="1160.7953" y="1341.8928" z="210" h="110"/>
+		<object h="6" x="1160.7953" y="1341.8928" z="209.6744" rw="5"/>
 	</spawn>
 	<!--
 	Название: Мимир
@@ -350,7 +350,7 @@
 	Переживает за мужа и детей, которые остались на родине.
 	-->
 	<spawn map="120010000" npcid="204161" pool="1" interval="295">
-		<object x="1051.2009" y="1126.0792" z="201.99889" h="0"/>
+		<object h="50" x="1051.2009" y="1126.0792" z="201.52077" w="502"/>
 	</spawn>
 	<!--
 	Название: Денесер
@@ -757,7 +757,7 @@
 	Описание: 
 	-->
 	<spawn map="120010000" npcid="204172" pool="1" interval="295">
-		<object x="1013.5016" y="1138.022" z="204.88452" h="30"/>
+		<object h="6" x="1013.5016" y="1138.022" z="204.8845" w="503"/>
 	</spawn>
 	<!--
 	Название: 
@@ -771,7 +771,7 @@
 	Описание: 
 	-->
 	<spawn map="120010000" npcid="799729" interval="295">
-		<object x="1165.1283" y="1335.9283" z="210" h="80"/>
+		<object h="59" x="1163.2157" y="1334.1437" z="209.6744" rw="5"/>
 	</spawn>
 	<!--
 	Название: 
@@ -967,7 +967,7 @@
 	Описание: 
 	-->
 	<spawn map="120010000" npcid="799735" interval="295">
-		<object x="1154.7953" y="1346.8726" z="210" h="71"/>
+		<object h="66" x="1153.3182" y="1344.8033" z="209.6744" rw="5"/>
 	</spawn>
 	<!--
 	Название: 
@@ -1219,7 +1219,7 @@
 	</spawn>
 	<!-- Latatusk (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="204096" pool="1" interval="295">
-		<object x="1235.5846" y="1529.7446" z="214.13577" h="0"/>
+		<object h="76" x="1242.7836" y="1533.7827" z="214.34003" w="500"/>
 	</spawn>
 	<!-- Lidorasa (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="204130" pool="1" interval="295">
@@ -1275,7 +1275,7 @@
 	</spawn>
 	<!-- Manic Aukwi (NPC Normal lvl:1)-->
 	<spawn map="120010000" npcid="799725" interval="295">
-		<object x="1158.4435" y="1355.4426" z="210" h="70"/>
+		<object h="32" x="1159.0563" y="1355.8844" z="209.67447" rw="5"/>
 	</spawn>
 	<!-- Mannheim (NPC Normal lvl:45)-->
 	<spawn map="120010000" npcid="204287" pool="1" interval="295">
@@ -1311,7 +1311,7 @@
 	</spawn>
 	<!-- Mellow Ksellid (NPC Normal lvl:1)-->
 	<spawn map="120010000" npcid="799733" interval="295">
-		<object x="1154.2019" y="1352.9426" z="210" h="90"/>
+		<object h="73" x="1151.6213" y="1354.3905" z="209.67441" rw="5"/>
 	</spawn>
 	<!-- Merar (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="204126" pool="1" interval="295">
@@ -1364,7 +1364,7 @@
 	</spawn>
 	<!-- Neusa (NPC Normal lvl:10)-->
 	<spawn map="120010000" npcid="204224" pool="1" interval="295">
-		<object x="1353.0651" y="1046.7568" z="206.02368" h="0"/>
+		<object h="108" x="1360.3229" y="1062.7451" z="206.0237" w="506"/>
 	</spawn>
 	<!-- Niberan (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="204145" pool="1" interval="295">
@@ -1412,7 +1412,7 @@
 	</spawn>
 	<!-- Oridana (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="204227" pool="1" interval="295">
-		<object x="1339.8967" y="1207.0017" z="208.37625" h="0"/>
+		<object h="60" x="1351.5133" y="1214.6252" z="207.99028" w="507"/>
 	</spawn>
 	<!-- Osvi (NPC Normal lvl:10)-->
 	<spawn map="120010000" npcid="204150" pool="1" interval="295">
@@ -1448,7 +1448,7 @@
 	</spawn>
 	<!-- Quick Kirca (NPC Normal lvl:1)-->
 	<spawn map="120010000" npcid="799724" interval="295">
-		<object x="1160.5671" y="1358.9093" z="210" h="90"/>
+		<object h="112" x="1161.6752" y="1359.5411" z="209.67441" rw="5"/>
 	</spawn>
 	<!-- Ragfrid (NPC Normal lvl:47)-->
 	<spawn map="120010000" npcid="204233" pool="1" interval="295">
@@ -1464,11 +1464,11 @@
 	</spawn>
 	<!-- Rebert (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="204131" pool="1" interval="295">
-		<object x="949.9" y="1420.4" z="213" h="86" w="35"/>
+		<object h="18" x="1046.4927" y="1477.0682" z="213.49184" w="501"/>
 	</spawn>
 	<!-- Red Eye Larail (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="799723" interval="295">
-		<object x="1158.6398" y="1359.5492" z="210" h="90"/>
+		<object h="17" x="1157.3761" y="1359.2908" z="209.6744" rw="5"/>
 	</spawn>
 	<!-- Reia (NPC Normal lvl:10)-->
 	<spawn map="120010000" npcid="204176" pool="1" interval="295">
@@ -1484,15 +1484,15 @@
 	</spawn>
 	<!-- Riikaard (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="798367" pool="1" interval="295">
-		<object x="812.7547" y="1301.6641" z="218.31612" h="16"/>
+		<object h="15" x="812.84204" y="1301.6113" z="218.31609" w="509"/>
 	</spawn>
 	<!-- Rotund Ayas (NPC Normal lvl:1)-->
 	<spawn map="120010000" npcid="799734" interval="295">
-		<object x="1151.5189" y="1345.9163" z="210" h="91"/>
+		<object h="89" x="1153.7727" y="1345.681" z="209.6744" rw="5"/>
 	</spawn>
 	<!-- Rotund Methu (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="799726" interval="295">
-		<object x="1158.9263" y="1357.4005" z="210" h="110"/>
+		<object h="36" x="1158.2682" y="1357.367" z="209.67441" rw="5"/>
 	</spawn>
 	<!-- Roskva (NPC Normal lvl:10)-->
 	<spawn map="120010000" npcid="204072" pool="1" interval="295">
@@ -1557,7 +1557,7 @@
 	</spawn>
 	<!-- Silvertail Dorion (NPC Normal lvl:1)-->
 	<spawn map="120010000" npcid="799730" interval="295">
-		<object x="1152.8805" y="1349.8917" z="210" h="110"/>
+		<object h="82" x="1152.8973" y="1351.0157" z="209.6744" rw="5"/>
 	</spawn>
 	<!-- Sinamara (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="204290" pool="1" interval="295">
@@ -1615,7 +1615,7 @@
 	</spawn>
 	<!-- Striped Elroco (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="799728" interval="295">
-		<object x="1160.9609" y="1355.6823" z="210" h="90"/>
+		<object h="91" x="1159.3654" y="1354.7235" z="209.67441" rw="5"/>
 	</spawn>
 	<!-- Teirunerk (NPC Normal lvl:21)-->
 	<spawn rw="0" map="120010000" npcid="204285" pool="1" interval="295">
@@ -1705,7 +1705,7 @@
 	</spawn>
 	<!-- Ustarn (NPC Normal lvl:40)-->
 	<spawn map="120010000" npcid="204257" pool="1" interval="295">
-		<object x="1257.7294" y="1511.309" z="214.13577" h="74"/>
+		<object h="93" x="1240.0945" y="1522.2377" z="214.13577" w="508"/>
 	</spawn>
 	<!-- Valensti (NPC Normal lvl:10)-->
 	<spawn map="120010000" npcid="204140" pool="1" interval="295">
@@ -1753,11 +1753,11 @@
 	</spawn>
 	<!-- White Dagg (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="799737" interval="295">
-		<object x="1167.4164" y="1336.4763" z="210" h="80"/>
+		<object h="8" x="1166.8839" y="1335.6174" z="209.6744" rw="5"/>
 	</spawn>
 	<!-- Wild Kitter (NPC Normal lvl:3)-->
 	<spawn map="120010000" npcid="799736" interval="295">
-		<object x="1167.9351" y="1337.9542" z="210" h="120"/>
+		<object h="119" x="1167.8463" y="1340.5089" z="209.6744" rw="5"/>
 	</spawn>
 	<!-- Wild Tayga (NPC Normal lvl:30)-->
 	<spawn map="120010000" npcid="212353" pool="3" interval="295">
@@ -1938,4 +1938,25 @@
 	<spawn interval="295" map="120010000" npcid="798449" pool="1">
 		<object h="106" x="843.09863" y="1428.7352" z="219.42696" w="316"/>
 	</spawn>
+	<!--
+	Название:
+	Описание: 
+	-->
+	<spawn map="120010000" npcid="798416" pool="1" interval="295">
+		<object h="32" x="1166.01" y="1527.79" z="214.164"/>
+	</spawn>
+	<!--
+	Название:
+	Описание: 
+	-->
+	<spawn map="120010000" npcid="799941" pool="1" interval="295">
+		<object h="76" x="1283.88" y="1362.84" z="204.461"/>
+	</spawn>
+	<!--
+	Название:
+	Описание: 
+	-->
+	<spawn map="120010000" npcid="799942" pool="1" interval="295">
+		<object h="85" x="1285.38" y="1360.93" z="204.461"/>
+	</spawn>	
 </spawns>

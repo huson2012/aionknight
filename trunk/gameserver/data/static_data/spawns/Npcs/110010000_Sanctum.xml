@@ -113,7 +113,7 @@
 	стать настоящим мастером своего дела, учится у даэвов особенностям использования эфира.
 	-->
 	<spawn map="110010000" npcid="203768" pool="1" interval="295">
-		<object x="1663.39250" y="1449.97730" z="549.39710" h="71"/>
+		<object h="30" x="1663.3925" y="1449.9773" z="549.39703" w="499"/>
 	</spawn>
 	<!-- 
 	Название: Актус
@@ -524,11 +524,11 @@
 	</spawn>
 	<!-- Golden Wuf (NPC Normal lvl:3) -->
 	<spawn map="110010000" npcid="799729" interval="295">
-		<object x="1556.9373" y="1433.7305" z="574" h="81" />
+		<object h="9" x="1556.3688" y="1432.0944" z="573.02625" w="0" rw="3"/>
 	</spawn>
 	<!-- Goldentail Dorion (NPC Normal lvl:1) -->
 	<spawn map="110010000" npcid="799731" interval="295">
-		<object x="1559.1307" y="1451.0184" z="574" h="70" />
+		<object h="89" x="1556.4684" y="1450.9363" z="572.87177" w="0" rw="3"/>
 	</spawn>
 	<!-- 
 	Название: Люце
@@ -601,7 +601,7 @@
 	</spawn>
 	<!-- Hungry Porgus (NPC Normal lvl:1)-->
 	<spawn map="110010000" npcid="799735" interval="295">
-		<object x="1562.7904" y="1445.5723" z="574" h="81" />
+		<object h="58" x="1564.4702" y="1443.5621" z="573.0333" w="0" rw="3"/>
 	</spawn>
 	<!-- Hygea (NPC Normal lvl:50)-->
 	<spawn map="110010000" npcid="203761" pool="1" interval="295">
@@ -869,7 +869,7 @@
 	</spawn>
 	<!-- Manic Aukwi (NPC Normal lvl:1)-->
 	<spawn map="110010000" npcid="799725" interval="295">
-		<object x="1549.4979" y="1456.3038" z="574" h="81" />
+		<object h="40" x="1550.1995" y="1456.6992" z="572.87195" w="0" rw="3"/>
 	</spawn>
 	<!-- Manuka (NPC Normal lvl:50)-->
 	<spawn map="110010000" npcid="203779" pool="1" interval="295">
@@ -901,7 +901,7 @@
 	</spawn>
 	<!-- Mellow Ksellid (NPC Normal lvl:1)-->
 	<spawn map="110010000" npcid="799733" interval="295">
-		<object x="1562.975" y="1448.9199" z="574" h="90" />
+		<object h="7" x="1563.3625" y="1450.3372" z="572.87177" w="0" rw="3"/>
 	</spawn>
 	<!-- Memorable Daevas (Object Normal lvl:1)-->
 	<spawn map="110010000" npcid="730126" pool="1" interval="295">
@@ -1145,7 +1145,7 @@
 	</spawn>
 	<!-- Rotund Ayas (NPC Normal lvl:1)-->
 	<spawn map="110010000" npcid="799734" interval="295">
-		<object x="1557.9976" y="1447.5701" z="574" h="81" />
+		<object h="25" x="1558.0892" y="1444.8011" z="572.8715" w="0" rw="3"/>
 	</spawn>
 	<!-- Rotund Methu (NPC Normal lvl:3)-->
 	<spawn map="110010000" npcid="799726" interval="295">
@@ -1421,7 +1421,7 @@
 	Описание: Шиго
 	-->
 	<spawn map="110010000" npcid="799737" interval="295">
-		<object x="1559.5194" y="1434.817" z="574.12482" h="81" />
+		<object h="41" x="1558.0981" y="1434.2651" z="573.02765" w="0" rw="3"/>
 	</spawn>
 	<!-- 
 	Название: Элизион
@@ -1435,7 +1435,7 @@
 	Описание: Шиго
 	-->
 	<spawn map="110010000" npcid="799736" interval="295">
-		<object x="1557.8058" y="1436.2673" z="574" h="100" />
+		<object h="53" x="1556.468" y="1435.8597" z="573.0237" w="0" rw="3"/>
 	</spawn>
 	<!-- 
 	Название: История гильдии шиго 2
@@ -1549,7 +1549,7 @@
 	Описание: Информации нет
 	-->
 	<spawn map="110010000" npcid="798446" pool="1" interval="295">
-		<object x="1612.642" y="1490.8577" z="549.5507" h="102"/>
+		<object h="96" x="1611.04" y="1494.21" z="549.551" w="532"/>
 	</spawn>
 	<!-- 
 	Название: Ноэни
@@ -1606,5 +1606,5 @@
         <object x="1908.577" y="1479.112" z="590.24023" h="61"/>
 		<object x="1908.8672" y="1549.132" z="590.24097" h="60"/>
 		<object x="1908.6232" y="1557.7723" z="590.2407" h="60"/>
-    </spawn>
+    </spawn>	
 </spawns>
