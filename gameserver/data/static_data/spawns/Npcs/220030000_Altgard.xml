@@ -93,14 +93,14 @@
 	Описание: 
 	-->
 	<spawn map="220030000" npcid="203574" pool="1" interval="295">
-		<object x="1607.36510" y="1719.13610" z="252.19330" h="110"/>
+		<object x="1607.36510" y="1719.13610" z="252.19330" h="110" w="518"/>
 	</spawn>
 	<!-- 
 	Название: 
 	Описание: 
 	-->
 	<spawn map="220030000" npcid="203666" pool="1" interval="295">
-		<object x="1754.53420" y="2017.65880" z="250.00000" h="32"/>
+		<object x="1754.53420" y="2017.65880" z="250.00000" h="32" w="519"/>
 	</spawn>
 	<!-- 
 	Название: 
@@ -684,7 +684,7 @@
 	</spawn>
 	<!-- Nerhel (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203625" pool="1" interval="295">
-		<object x="1884.00000" y="770.00000" z="256.87500" h="64"/>
+		<object x="1884.00000" y="770.00000" z="256.87500" h="64" w="523"/>
 	</spawn>
 	<!-- Nirmirn (NPC Normal lvl:10)-->
 	<spawn map="220030000" npcid="203576" pool="1" interval="295">
@@ -754,7 +754,7 @@
 	</spawn>
 	<!-- Rion (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203603" pool="1" interval="295">
-		<object x="1724.28770" y="1676.47950" z="254.26797" h="118"/>
+		<object x="1724.28770" y="1676.47950" z="254.26797" h="118" w="520"/>
 	</spawn>
 	<!-- Rubander (NPC Normal lvl:40)-->
 	<spawn map="220030000" npcid="203683" pool="1" interval="295">
@@ -762,7 +762,7 @@
 	</spawn>
 	<!-- Rungnir (NPC Normal lvl:16)-->
 	<spawn map="220030000" npcid="203667" pool="1" interval="295">
-		<object x="1743.28000" y="2018.40940" z="250.00000" h="28"/>
+		<object x="1743.28000" y="2018.40940" z="250.00000" h="28" w="521"/>
 	</spawn>
 	<!-- Sarad (NPC Normal lvl:10)-->
 	<spawn map="220030000" npcid="203657" pool="1" interval="295">
@@ -787,7 +787,7 @@
 	</spawn>
 	<!-- Sinood (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203646" pool="1" interval="295">
-		<object x="2708.43290" y="1046.09140" z="313.00000" h="65"/>
+		<object x="2708.43290" y="1046.09140" z="313.00000" h="65" w="531"/>
 	</spawn>
 	<!-- Skanin (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203618" pool="1" interval="295">
@@ -829,7 +829,7 @@
 	</spawn>
 	<!-- Tatural (NPC Normal lvl:20)-->
 	<spawn map="220030000" npcid="203622" pool="1" interval="295">
-		<object x="1883.2721" y="711.8875" z="258.36798" h="112"/>
+		<object x="1883.2721" y="711.8875" z="258.36798" h="112" w="524"/>
 	</spawn>
 	<!-- Thrud (NPC Normal lvl:25)-->
 	<spawn map="220030000" npcid="203555" pool="1" interval="295">
@@ -908,7 +908,7 @@
 	Описание: 
 	-->
 	<spawn map="220030000" npcid="203580" pool="1" interval="295">
-		<object x="1744.29400" y="1757.05380" z="256.00000" h="26"/>
+		<object x="1744.29400" y="1757.05380" z="256.00000" h="26" w="522"/>
 	</spawn>
 	<!-- 
 	Название: 
@@ -1090,5 +1090,33 @@
 	-->
 	<spawn interval="295" map="220030000" npcid="203584" pool="1">
 		<object h="89" x="1953.6869" y="724.4393" z="265.70297" w="289"/>
+	</spawn>
+	<!-- 
+	Название: 
+	Описание: 
+	-->
+	<spawn map="220030000" npcid="205022" pool="1" interval="295">
+		<object x="1786.5724" y="1781.1235" z="300.95392" h="74" fly="1" rw="185"/>
+	</spawn>
+	<!-- 
+	Название: 
+	Описание: 
+	-->
+	<spawn map="220030000" npcid="205021" pool="1" interval="295">
+		<object x="1764.9019" y="1879.7087" z="288.39618" h="40" fly="1" rw="185"/>
+	</spawn>
+	<!-- 
+	Название: 
+	Описание: 
+	-->
+	<spawn map="220030000" npcid="203652" pool="1" interval="295">
+		<object x="2684.45" y="1662.09" z="324.088" h="83" fly="1" w="533"/>
+	</spawn>
+	<!-- 
+	Название: 
+	Описание: 
+	-->
+	<spawn map="220030000" npcid="203653" pool="1" interval="295">
+		<object x="2689.26" y="1661.32" z="324.395" h="78" fly="1" w="534"/>
 	</spawn>
 </spawns>

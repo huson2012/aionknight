@@ -100,8 +100,8 @@ public class SM_ATTACK extends AionServerPacket
 					writeD(buf, 0x00);
 					writeD(buf, 0x00);
 					writeD(buf, 0x00);
-					writeD(buf, attack.getReflectedDamage());
-					writeD(buf, attack.getSkillId());
+					writeD(buf, 0);
+					writeD(buf, 0);
 				    break;
 			}
 		}
