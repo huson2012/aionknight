@@ -1017,7 +1017,7 @@
 		<object x="1829.37" y="2536.13" z="266.987" h="48"/>
 	</spawn>
 	<!-- Senior Soldier (NPC Elite lvl:41)-->
-	<spawn map="210020000" npcid="207553" pool="32" interval="295">
+	<spawn map="210020000" npcid="207553" pool="9" interval="295">
 		<object x="308.93912" y="2767.5828" z="270.45584" h="76"/>
 		<object x="334.45306" y="2726.5354" z="263.4721" h="32"/>
 		<object x="373.54834" y="2763.6587" z="259.48944" h="71"/>	
@@ -1027,7 +1027,6 @@
 		<object x="366.3408" y="2643.178" z="261.32956" h="104" fly="1" rw="145"/>
 		<object x="231.83449" y="2625.2456" z="234.12846" h="67" fly="1" rw="145"/>
 		<object x="426.18765" y="2735.2502" z="230.58464" h="67" fly="1" rw="145"/>
-		</spawn>
 	</spawn>
 	<!-- Senior Soldier (NPC Sanctum Detachment lvl:50) -->
 	<spawn map="210020000" npcid="207559" pool="2" interval="295">
