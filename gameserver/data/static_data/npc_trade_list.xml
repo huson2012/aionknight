@@ -8,7 +8,7 @@
 
  -->
 
-<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">
 	<tradelist_template npc_id="203060" name="mune" count="4" sell_rate="1" buy_rate="0.2">
 		<tradelist id="129"/>
 		<tradelist id="130"/>
@@ -1383,6 +1383,10 @@
 		<tradelist id="1178"/>
 		<tradelist id="1179"/>
 	</tradelist_template>
+	<!-- Lupukin -->
+	<tradelist_template npc_id="216527" name="lupukin" count="1" sell_rate="1" buy_rate="0.2">
+		<tradelist id="837"/>
+	</tradelist_template>
 	<tradelist_template npc_id="260233" name="smintian" count="4">
 		<tradelist id="232"/>
 		<tradelist id="239"/>
@@ -1466,6 +1470,22 @@
 		<tradelist id="118"/>
 		<tradelist id="105"/>
 		<tradelist id="467"/>
+	</tradelist_template>
+	<tradelist_template npc_id="207031" count="1" category="3">
+		<tradelist id="1281"/>
+	</tradelist_template>
+	<tradelist_template npc_id="207032" count="1" category="3">
+		<tradelist id="1282"/>
+	</tradelist_template>
+	<tradelist_template npc_id="207045" count="2" category="0">
+		<tradelist id="1283"/>
+		<tradelist id="1175"/>
+	</tradelist_template>
+	<tradelist_template npc_id="207092" count="1" category="0">
+		<tradelist id="1381"/>
+	</tradelist_template>
+	<tradelist_template npc_id="207093" count="1" category="0">
+		<tradelist id="1381"/>
 	</tradelist_template>
 	<tradelist_template npc_id="270149" name="arketer" count="4">
 		<tradelist id="232"/>
@@ -2710,6 +2730,30 @@
 	</tradelist_template>
 	<tradelist_template npc_id="799512" name="deornerk" count="1" sell_rate="1.5" buy_rate="0.2">
 		<tradelist id="834"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799681" count="1" category="0">
+		<tradelist id="1225"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799682" count="1" category="0">
+		<tradelist id="1225"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799683" count="1" category="0">
+		<tradelist id="1226"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799684" count="1" category="0">
+		<tradelist id="1226"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799697" count="1" category="0">
+		<tradelist id="1358"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799698" count="1" category="0">
+		<tradelist id="1358"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799700" count="1" category="0">
+		<tradelist id="1224"/>
+	</tradelist_template>
+	<tradelist_template npc_id="799701" count="1" category="0">
+		<tradelist id="1224"/>
 	</tradelist_template>
 	<tradelist_template npc_id="799704" name="zena" count="1" type="EXTRA">
 		<tradelist id="1058"/>
