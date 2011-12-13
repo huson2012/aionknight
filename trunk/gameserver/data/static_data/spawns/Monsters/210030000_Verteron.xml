@@ -1128,7 +1128,7 @@
 	</spawn>
 	<!-- Paksigue (Monster Elite lvl:13)-->
 	<spawn map="210030000" npcid="213006" pool="1" interval="300">
-		<object x="1540.603" y="1442.253" z="105.54157" h="74" w="19"/>
+		<object x="1540.603" y="1442.253" z="105.54157" h="74"/>
 	</spawn>
 	<!-- Peon (Monster Normal lvl:12)-->
 	<spawn map="210030000" npcid="210698" pool="13" interval="135">
