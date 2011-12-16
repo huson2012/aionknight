@@ -596,14 +596,19 @@ public class PlayerCommonData extends VisibleObjectTemplate
 	 * 
 	 * @param position
 	 */
-	public void setPosition(WorldPosition position)
-	{
-		if(this.position != null)
-		{
-			throw new IllegalStateException("position already set");
-		}
-		this.position = position;
-	}
+    public void setPosition(WorldPosition position, boolean ignoreISE)
+    {
+        if(this.position != null && !ignoreISE)
+        {
+                throw new IllegalStateException("position already set");
+        }
+        this.position = position;
+    }
+        
+    public void setPosition(WorldPosition position)
+    {
+        setPosition(position, false);
+    }
 
 	/**
 	 * Gets the cooresponding Player for this common data. Returns null if the player is not online
