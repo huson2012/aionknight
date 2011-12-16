@@ -1,75 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Настройки титулов игроков
+	====================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
+	====================================================
+	Редакция от 13.12.2011 (Frost)
 
  -->
-
 <player_titles>
+	<!-- Хранитель Фоэты -->
 	<title id="1" race="0">
 		<modifiers>
 			<add name="MAXHP" value="20" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Воин Бертрона -->
 	<title id="2" race="0">
 		<modifiers>
 			<add name="MAXHP" value="30" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="6" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Защитник Тольбаса -->
 	<title id="3" race="0">
 		<modifiers>
 			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Союзник Древней -->
 	<title id="4" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Охотник на краллов -->
 	<title id="5" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="1" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Друг пугала -->
 	<title id="6" race="0">
 		<modifiers>
 			<add name="PARRY" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Знаток животных -->
 	<title id="7" race="0">
 		<modifiers>
 			<add name="MAXMP" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Знаток языка краллов -->
 	<title id="8" race="0">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Стоик -->
 	<title id="9" race="0">
 		<modifiers>
 			<add name="EVASION" value="3" bonus="true"/>
 			<add name="PHYSICAL_ACCURACY" value="6" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Посланник Мабанты -->
 	<title id="10" race="0">
 		<modifiers>
 			<add name="PHYSICAL_DEFENSE" value="10" bonus="true"/>
 			<add name="BLOCK" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Специалист по бомбам -->
 	<title id="11" race="0">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Герой Элтенена -->
 	<title id="12" race="0">
 		<modifiers>
 			<add name="PHYSICAL_DEFENSE" value="15" bonus="true"/>
@@ -77,30 +90,35 @@
 			<add name="MAXHP" value="40" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Охотник на ньютов -->
 	<title id="13" race="0">
 		<modifiers>
 			<add name="MAGICAL_ACCURACY" value="6" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="9" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Мастер полетов -->
 	<title id="14" race="0">
 		<modifiers>
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Повар брауни -->
 	<title id="15" race="0">
 		<modifiers>
 			<add name="MAXHP" value="57" bonus="true"/>
 			<add name="MAXMP" value="57" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Целитель душ -->
 	<title id="16" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="7" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="-5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Помощник духа -->
 	<title id="17" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="5" bonus="true"/>
@@ -108,6 +126,7 @@
 			<add name="PARRY" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Специалист по делам сердечным -->
 	<title id="18" race="0">
 		<modifiers>
 			<add name="MAXHP" value="36" bonus="true"/>
@@ -115,6 +134,7 @@
 			<add name="BLOCK" value="12" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Обладатель желтой повязки -->
 	<title id="19" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
@@ -122,6 +142,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Спаситель Эйрона -->
 	<title id="20" race="0">
 		<modifiers>
 			<add name="MAXHP" value="30" bonus="true"/>
@@ -129,6 +150,7 @@
 			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Почетный археолог -->
 	<title id="21" race="0">
 		<modifiers>
 			<add name="MAXMP" value="36" bonus="true"/>
@@ -136,6 +158,7 @@
 			<add name="MAGICAL_RESIST" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Одинокий авантюрист -->
 	<title id="22" race="0">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
@@ -143,6 +166,7 @@
 			<add name="FLY_TIME" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Избранник Фасерта -->
 	<title id="23" race="0">
 		<modifiers>
 			<rate name="SPEED" value="3" bonus="true"/>
@@ -150,6 +174,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Главный ищейка -->
 	<title id="24" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="1" bonus="true"/>
@@ -157,6 +182,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Захватчик Индрата -->
 	<title id="25" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
@@ -164,18 +190,21 @@
 			<add name="FLY_TIME" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Покровитель Бальбоа -->
 	<title id="26" race="0">
 		<modifiers>
 			<add name="BLOCK" value="15" bonus="true"/>
 			<add name="MAXHP" value="35" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Шаман повстанцев -->
 	<title id="27" race="0">
 		<modifiers>
 			<add name="MAXMP" value="45" bonus="true"/>
 			<add name="MAGICAL_RESIST" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Опытный рыболов -->
 	<title id="28" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="10" bonus="true"/>
@@ -183,6 +212,7 @@
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Мастер шпионажа -->
 	<title id="29" race="0">
 		<modifiers>
 			<add name="MAXHP" value="57" bonus="true"/>
@@ -190,6 +220,7 @@
 			<add name="MAGICAL_RESIST" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Знаток языка балауров -->
 	<title id="30" race="0">
 		<modifiers>
 			<add name="MAGICAL_ACCURACY" value="3" bonus="true"/>
@@ -197,17 +228,20 @@
 			<add name="MAGICAL_RESIST" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Охотник на асмодиан -->
 	<title id="31" race="0">
 		<modifiers>
 			<add name="MAXHP" value="40" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Победитель асмодиан -->
 	<title id="32" race="0">
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Непобедимый воин -->
 	<title id="33" race="0">
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
@@ -215,6 +249,7 @@
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Герой Элиоса -->
 	<title id="34" race="0">
 		<modifiers>
 			<add name="MAXHP" value="60" bonus="true"/>
@@ -223,6 +258,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Истребление пиратов -->
 	<title id="35" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="10" bonus="true"/>
@@ -230,6 +266,7 @@
 			<add name="MAXHP" value="50" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Лучший мастер  -->
 	<title id="36" race="0">
 		<modifiers>
 			<add name="EVASION" value="6" bonus="true"/>
@@ -237,6 +274,7 @@
 			<add name="PHYSICAL_DEFENSE" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Рыцарь Миразента -->
 	<title id="37" race="0">
 		<modifiers>
 			<add name="MAXHP" value="80" bonus="true"/>
@@ -245,6 +283,7 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Мастер DP -->
 	<title id="38" race="0">
 		<modifiers>
 			<add name="MAXHP" value="45" bonus="true"/>
@@ -252,23 +291,27 @@
 			<add name="BOOST_MAGICAL_SKILL" value="12" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Даэв в белых одеждах -->
 	<title id="39" race="0">
 		<modifiers>
 			<add name="MAXHP" value="100" bonus="true"/>
 			<add name="REGEN_HP" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Хозяин меча балауров -->
 	<title id="40" race="0">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Посланник "Темного облака" -->
 	<title id="41" race="0">
 		<modifiers>
 			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Крал-живодер -->
 	<title id="42" race="0">
 		<modifiers>
 			<add name="MAXHP" value="44" bonus="true"/>
@@ -276,17 +319,20 @@
 			<add name="FLY_TIME" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Профессиональный страж-охотник -->
 	<title id="43" race="0">
 		<modifiers>
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Упорный преследователь -->
 	<title id="44" race="0">
 		<modifiers>
 			<add name="MAXHP" value="48" bonus="true"/>
 			<add name="MAXMP" value="48" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Растяпа -->
 	<title id="45" race="0">
 		<modifiers>
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
@@ -294,6 +340,7 @@
 			<add name="FLY_TIME" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Разрушитель Аджотурана -->
 	<title id="46" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="6" bonus="true"/>
@@ -301,6 +348,7 @@
 			<add name="PARRY" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Исследователь исполинов -->
 	<title id="47" race="0">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
@@ -308,6 +356,7 @@
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Рыцарь Гоморона -->
 	<title id="48" race="0">
 		<modifiers>
 			<add name="MAXHP" value="40" bonus="true"/>
@@ -315,6 +364,7 @@
 			<add name="MAGICAL_RESIST" value="-6" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Столкновение с судьбой -->
 	<title id="49" race="0">
 		<modifiers>
 			<add name="MAXHP" value="52" bonus="true"/>
@@ -322,6 +372,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Спаситель будущего -->
 	<title id="50" race="0">
 		<modifiers>
 			<add name="MAXHP" value="65" bonus="true"/>
@@ -329,57 +380,67 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Герой разбойников -->
 	<title id="51" race="1">
 		<modifiers>
 			<add name="MAXHP" value="20" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Кладоискатель -->
 	<title id="52" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Убийца медведей -->
 	<title id="53" race="1">
 		<modifiers>
 			<add name="EVASION" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Знаток языка оборотней -->
 	<title id="54" race="1">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Поборник мечты -->
 	<title id="55" race="1">
 		<modifiers>
 			<add name="MAXMP" value="20" bonus="true"/>
 			<add name="FLY_TIME" value="1" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Легендарный охотник -->
 	<title id="56" race="1">
 		<modifiers>
 			<add name="PARRY" value="6" bonus="true"/>
 			<rate name="SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Хранитель Альтгарда -->
 	<title id="57" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="2" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="6" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Убийца рюкрога -->
 	<title id="58" race="1">
 		<modifiers>
 			<add name="EVASION" value="8" bonus="true"/>
 			<add name="MAGICAL_RESIST" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Повелитель ожерелья -->
 	<title id="59" race="1">
 		<modifiers>
 			<add name="MAXMP" value="34" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Хранитель Морхейма -->
 	<title id="60" race="1">
 		<modifiers>
 			<add name="PHYSICAL_DEFENSE" value="15" bonus="true"/>
@@ -387,18 +448,21 @@
 			<add name="MAXHP" value="40" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Повар шиго -->
 	<title id="61" race="1">
 		<modifiers>
 			<add name="EVASION" value="6" bonus="true"/>
 			<add name="FLY_TIME" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Чудотворец -->
 	<title id="62" race="1">
 		<modifiers>
 			<add name="MAXHP" value="40" bonus="true"/>
 			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Член банды грабителей Кидорун  -->
 	<title id="63" race="1">
 		<modifiers>
 			<add name="PARRY" value="8" bonus="true"/>
@@ -406,18 +470,21 @@
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Защитник старших -->
 	<title id="64" race="1">
 		<modifiers>
 			<add name="MAXMP" value="42" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="12" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Приятель Пата и Конга -->
 	<title id="65" race="1">
 		<modifiers>
 			<add name="BLOCK" value="15" bonus="true"/>
 			<add name="MAXHP" value="40" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Покоритель Серебряной гривы -->
 	<title id="66" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
@@ -425,6 +492,7 @@
 			<add name="PARRY" value="6" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Быстрый гонец древней  -->
 	<title id="67" race="1">
 		<modifiers>
 			<add name="MAXHP" value="36" bonus="true"/>
@@ -432,6 +500,7 @@
 			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Боровшийся с краллами -->
 	<title id="68" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
@@ -439,6 +508,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Помощник Дукара -->
 	<title id="69" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
@@ -446,24 +516,28 @@
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Друг Айскера -->
 	<title id="70" race="1">
 		<modifiers>
 			<add name="BOOST_MAGICAL_SKILL" value="6" bonus="true"/>
 			<rate name="FLY_SPEED" value="1" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Упорный первопроходец -->
 	<title id="71" race="1">
 		<modifiers>
 			<add name="MAGICAL_ACCURACY" value="6" bonus="true"/>
 			<add name="MAXMP" value="28" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Хранитель Брустхонина -->
 	<title id="72" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="3" bonus="true"/>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Жертва Слейпнира -->
 	<title id="73" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="10" bonus="true"/>
@@ -471,6 +545,7 @@
 			<rate name="SPEED" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Герой Белуслана -->
 	<title id="74" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
@@ -478,24 +553,28 @@
 			<add name="FLY_TIME" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Охотник снежной долины -->
 	<title id="75" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="9" bonus="true"/>
 			<add name="PHYSICAL_CRITICAL" value="7" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Спаситель Весфера -->
 	<title id="76" race="1">
 		<modifiers>
 			<add name="MAGICAL_ACCURACY" value="8" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Защитник Мусфеля -->
 	<title id="77" race="1">
 		<modifiers>
 			<add name="FIRE_RESISTANCE" value="3" bonus="true"/>
 			<add name="MAXHP" value="32" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Коллекционер манускриптов -->
 	<title id="78" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
@@ -503,6 +582,7 @@
 			<add name="MAXHP" value="40" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Напрасно пришедший в Элиос -->
 	<title id="79" race="1">
 		<modifiers>
 			<add name="MAXHP" value="57" bonus="true"/>
@@ -510,6 +590,7 @@
 			<add name="PHYSICAL_DEFENSE" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Знаток языка балауров -->
 	<title id="80" race="1">
 		<modifiers>
 			<add name="MAGICAL_ACCURACY" value="3" bonus="true"/>
@@ -517,17 +598,20 @@
 			<add name="MAGICAL_RESIST" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Охотник на Элийцев -->
 	<title id="81" race="1">
 		<modifiers>
 			<add name="MAXHP" value="40" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Победитель Элийцев -->
 	<title id="82" race="1">
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Доблестный воин -->
 	<title id="83" race="1">
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
@@ -535,6 +619,7 @@
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Герой Асмодеи -->
 	<title id="84" race="1">
 		<modifiers>
 			<add name="MAXHP" value="60" bonus="true"/>
@@ -543,6 +628,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Уничтожение "Стального плавника" -->
 	<title id="85" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="10" bonus="true"/>
@@ -550,6 +636,7 @@
 			<add name="MAXHP" value="50" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Лучший мастер -->
 	<title id="86" race="1">
 		<modifiers>
 			<add name="EVASION" value="6" bonus="true"/>
@@ -557,6 +644,7 @@
 			<add name="PHYSICAL_DEFENSE" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Клык Фенрира -->
 	<title id="87" race="1">
 		<modifiers>
 			<add name="MAXHP" value="80" bonus="true"/>
@@ -565,6 +653,7 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Прошедший экзамен по DP -->
 	<title id="88" race="1">
 		<modifiers>
 			<add name="MAXHP" value="45" bonus="true"/>
@@ -572,23 +661,27 @@
 			<add name="BOOST_MAGICAL_SKILL" value="12" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Свет земли -->
 	<title id="89" race="1">
 		<modifiers>
 			<add name="MAXHP" value="100" bonus="true"/>
 			<add name="REGEN_HP" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Хозяин проклятого меча -->
 	<title id="90" race="1">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Посланник торговцев -->
 	<title id="91" race="1">
 		<modifiers>
 			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Излишне любопытный -->
 	<title id="92" race="1">
 		<modifiers>
 			<add name="MAXMP" value="57" bonus="true"/>
@@ -596,11 +689,13 @@
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Убийца стража -->
 	<title id="93" race="1">
 		<modifiers>
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Союзник Серебряной гривы -->
 	<title id="94" race="1">
 		<modifiers>
 			<add name="MAXHP" value="44" bonus="true"/>
@@ -608,6 +703,7 @@
 			<add name="FLY_TIME" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Прирожденный торговец -->
 	<title id="95" race="1">
 		<modifiers>
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
@@ -615,6 +711,7 @@
 			<add name="FLY_TIME" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Хранитель правосудия -->
 	<title id="96" race="1">
 		<modifiers>
 			<add name="MAXHP" value="27" bonus="true"/>
@@ -622,12 +719,14 @@
 			<add name="MAXMP" value="28" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Покоритель духов -->
 	<title id="97" race="1">
 		<modifiers>
 			<add name="MAXHP" value="50" bonus="true"/>
 			<add name="MAGICAL_RESIST" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Грозный пират  -->
 	<title id="98" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
@@ -635,6 +734,7 @@
 			<add name="FLY_TIME" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Изменивший судьбу -->
 	<title id="99" race="1">
 		<modifiers>
 			<add name="MAXHP" value="52" bonus="true"/>
@@ -642,6 +742,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Побывавший в будущем -->
 	<title id="100" race="1">
 		<modifiers>
 			<add name="MAXHP" value="65" bonus="true"/>
@@ -649,6 +750,7 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Чемпион турнир -->
 	<title id="101" race="2">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="3" bonus="true"/>
@@ -656,6 +758,7 @@
 			<add name="PARRY" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Миллионер из Атреи -->
 	<title id="102" race="2">
 		<modifiers>
 			<add name="MAXHP" value="36" bonus="true"/>
@@ -663,6 +766,7 @@
 			<add name="BLOCK" value="8" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Наставник -->
 	<title id="103" race="2">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
@@ -670,12 +774,14 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Интеллектуал -->
 	<title id="104" race="2">
 		<modifiers>
 			<rate name="SPEED" value="3" bonus="true"/>
 			<add name="MAXHP" value="100" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Мудрец Айона -->
 	<title id="105" race="2">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
@@ -683,6 +789,7 @@
 			<add name="MAXHP" value="150" bonus="true"/>
 		</modifiers>
 	</title>
+	<!-- Щедрая душа -->
 	<title id="106" race="2">
 		<modifiers>
 			<add name="MAXHP" value="60" bonus="true"/>
@@ -690,6 +797,7 @@
 			<rate name="SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="107" race="0">
 		<modifiers>
 			<add name="REGEN_HP" value="3" bonus="true"/>
@@ -698,6 +806,7 @@
 			<add name="MAXMP" value="60" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="108" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
@@ -706,6 +815,7 @@
 			<add name="PHYSICAL_DEFENSE" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="109" race="0">
 		<modifiers>
 			<add name="MAXHP" value="65" bonus="true"/>
@@ -713,6 +823,7 @@
 			<add name="PHYSICAL_ACCURACY" value="14" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="110" race="0">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
@@ -721,6 +832,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="111" race="0">
 		<modifiers>
 			<add name="HEAL_BOOST" value="12" bonus="true"/>
@@ -728,6 +840,7 @@
 			<add name="MAXHP" value="50" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="112" race="0">
 		<modifiers>
 			<add name="BLOCK" value="14" bonus="true"/>
@@ -735,6 +848,7 @@
 			<rate name="BOOST_HATE" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="113" race="0">
 		<modifiers>
 			<add name="EVASION" value="7" bonus="true"/>
@@ -743,6 +857,7 @@
 			<add name="MAGICAL_RESIST" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="114" race="0">
 		<modifiers>
 			<rate name="SPEED" value="3" bonus="true"/>
@@ -750,18 +865,21 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="115" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="116" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="17" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="117" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
@@ -770,50 +888,59 @@
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="118" race="0">
 		<modifiers>
 			<add name="PVP_ATTACK_RATIO" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="119" race="0">
 		<modifiers>
 			<add name="PVP_DEFEND_RATIO" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="120" race="0">
 		<modifiers>
 			<add name="PVP_ATTACK_RATIO" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="121" race="0">
 		<modifiers>
 			<add name="PVP_DEFEND_RATIO" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="122" race="0">
 		<modifiers>
 			<add name="PVP_ATTACK_RATIO" value="20" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="123" race="0">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-1" bonus="true"/>
 			<rate name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="124" race="0">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="125" race="0">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="126" race="1">
 		<modifiers>
 			<add name="REGEN_HP" value="3" bonus="true"/>
@@ -822,6 +949,7 @@
 			<add name="MAXMP" value="60" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="127" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
@@ -830,6 +958,7 @@
 			<add name="PHYSICAL_DEFENSE" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="128" race="1">
 		<modifiers>
 			<add name="MAXHP" value="65" bonus="true"/>
@@ -837,6 +966,7 @@
 			<add name="PHYSICAL_ACCURACY" value="14" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="129" race="1">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
@@ -845,6 +975,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="130" race="1">
 		<modifiers>
 			<add name="HEAL_BOOST" value="12" bonus="true"/>
@@ -852,6 +983,7 @@
 			<add name="MAXHP" value="50" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="131" race="1">
 		<modifiers>
 			<add name="BLOCK" value="14" bonus="true"/>
@@ -859,6 +991,7 @@
 			<rate name="BOOST_HATE" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="132" race="1">
 		<modifiers>
 			<add name="EVASION" value="7" bonus="true"/>
@@ -867,25 +1000,29 @@
 			<add name="MAGICAL_RESIST" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="133" race="1">
 		<modifiers>
 			<rate name="SPEED" value="3" bonus="true"/>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
-                        <rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
+			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="134" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="135" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="17" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="136" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
@@ -894,50 +1031,59 @@
 			<rate name="FLY_SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="137" race="1">
 		<modifiers>
 			<add name="PVP_ATTACK_RATIO" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="138" race="1">
 		<modifiers>
 			<add name="PVP_DEFEND_RATIO" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="139" race="1">
 		<modifiers>
 			<add name="PVP_ATTACK_RATIO" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="140" race="1">
 		<modifiers>
 			<add name="PVP_DEFEND_RATIO" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="141" race="1">
 		<modifiers>
 			<add name="PVP_ATTACK_RATIO" value="20" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="20" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="142" race="1">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-1" bonus="true"/>
 			<rate name="BOOST_CASTING_TIME" value="-1" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="143" race="1">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="144" race="1">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="145" race="2">
 		<modifiers>
 			<add name="MAXHP" value="100" bonus="true"/>
@@ -945,6 +1091,7 @@
 			<add name="FLY_TIME" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="146" race="2">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
@@ -952,18 +1099,21 @@
 			<rate name="SPEED" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="147" race="0">
 		<modifiers>
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="148" race="1">
 		<modifiers>
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="FLY_TIME" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="149" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
@@ -972,6 +1122,7 @@
 			<add name="MAGICAL_CRITICAL" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="150" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
@@ -980,6 +1131,7 @@
 			<add name="MAGICAL_CRITICAL" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="151" race="2">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
@@ -988,6 +1140,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="152" race="2">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-1" bonus="true"/>
@@ -995,6 +1148,7 @@
 			<rate name="SPEED" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="153" race="2">
 		<modifiers>
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
@@ -1002,18 +1156,21 @@
 			<rate name="SPEED" value="3" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="154" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="4" bonus="true"/>
 			<add name="MAGICAL_CRITICAL" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="155" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
 			<add name="MAGICAL_CRITICAL" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="156" race="0">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
@@ -1021,18 +1178,21 @@
 			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="157" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="4" bonus="true"/>
 			<add name="MAGICAL_CRITICAL" value="2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="158" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
 			<add name="MAGICAL_CRITICAL" value="4" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="159" race="1">
 		<modifiers>
 			<add name="PHYSICAL_CRITICAL" value="8" bonus="true"/>
@@ -1040,6 +1200,7 @@
 			<rate name="SPEED" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="160" race="2">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
@@ -1047,6 +1208,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="161" race="2">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
@@ -1054,6 +1216,7 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="162" race="2">
 		<modifiers>
 			<rate name="SPEED" value="5" bonus="true"/>
@@ -1061,6 +1224,7 @@
 			<rate name="ATTACK_SPEED" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="163" race="2">
 		<modifiers>
 			<rate name="SPEED" value="5" bonus="true"/>
@@ -1068,18 +1232,21 @@
 			<rate name="BOOST_CASTING_TIME" value="-2" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="164" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="6" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="4" bonus="true"/>
 		</modifiers>
 	</title>	
+	<!--  -->
 	<title id="165" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="6" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="166" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="10" bonus="true"/>
@@ -1088,6 +1255,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="167" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="12" bonus="true"/>
@@ -1096,6 +1264,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="10" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="168" race="0">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="14" bonus="true"/>
@@ -1103,19 +1272,22 @@
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="169" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="6" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="4" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="170" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="8" bonus="true"/>
 			<add name="MAGICAL_ACCURACY" value="6" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="171" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="10" bonus="true"/>
@@ -1124,6 +1296,7 @@
 			<add name="BOOST_MAGICAL_SKILL" value="5" bonus="true"/>
 		</modifiers>
 	</title>
+	<!--  -->
 	<title id="172" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="12" bonus="true"/>
@@ -1131,7 +1304,8 @@
 			<add name="PHYSICAL_ATTACK" value="2" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="10" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="173" race="1">
 		<modifiers>
 			<add name="PHYSICAL_ACCURACY" value="14" bonus="true"/>
@@ -1139,7 +1313,8 @@
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="15" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="174" race="0">
 		<modifiers>
 			<add name="EVASION" value="10" bonus="true"/>
@@ -1147,7 +1322,8 @@
 			<add name="BLOCK" value="10" bonus="true"/>
 			<add name="PARRY" value="10" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="175" race="1">
 		<modifiers>
 			<add name="EVASION" value="10" bonus="true"/>
@@ -1155,49 +1331,56 @@
 			<add name="BLOCK" value="10" bonus="true"/>
 			<add name="PARRY" value="10" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="176" race="2">
 		<modifiers>
 			<add name="PHYSICAL_ATTACK" value="3" bonus="true"/>
 			<rate name="FLY_SPEED" value="2" bonus="true"/>
 			<add name="BOOST_MAGICAL_SKILL" value="17" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="177" race="2">
 		<modifiers>
 			<add name="MAXHP" value="100" bonus="true"/>
 			<add name="MAGICAL_RESIST" value="8" bonus="true"/>
 			<add name="PHYSICAL_DEFENSE" value="25" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="178" race="2">
 		<modifiers>
 			<rate name="SPEED" value="5" bonus="true"/>
 			<add name="MAXHP" value="100" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="10" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="179" race="2">
 		<modifiers>
 			<rate name="SPEED" value="3" bonus="true"/>
 			<add name="MAXHP" value="500" bonus="true"/>
 			<add name="MAGICAL_RESIST" value="20" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="180" race="2">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
 			<add name="MAXHP" value="500" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="3" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="181" race="2">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>
 			<add name="MAXHP" value="500" bonus="true"/>
 			<add name="PVP_DEFEND_RATIO" value="3" bonus="true"/>
 		</modifiers>
-	</title>	
+	</title>
+	<!--  -->
 	<title id="182" race="2">
 		<modifiers>
 			<rate name="SPEED" value="4" bonus="true"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
-
+	
 	Назначение файла	: Настройка телепортов
+	====================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	====================================================
+	
  -->
-
 <npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
 	<!-- Асмодиане -->
 	<!-- Пандемониум -->

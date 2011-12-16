@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Расположение городских телепортов
+	=======================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	=======================================================
+	Редакция от 13.12.2011 (Frost)
+	
  -->
-
 <teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
 	
 	<!-- ЭЛИОС -->
@@ -24,7 +25,6 @@
 	<teleloc_template loc_id="96" mapid="210050000" name="LF4_Airport_ZONE" posX="1333.0" posY="273.0" posZ="589.49347" heading="39"/>
 	<teleloc_template loc_id="107" mapid="110010000" name="LC1_Airport_ZONE_Entrance" posX="1366.8" posY="1539.5" posZ="569.0" heading="0"/>
 	<teleloc_template loc_id="108" mapid="110020000" name="LC2_Airport_ZONE_Entrance" posX="2155.6" posY="1566.9" posZ="1204.9" heading="0"/>
-	
 	<!-- АСМОДЕЯ -->
 	<teleloc_template loc_id="7" mapid="120010000" name="Pandemonium" posX="1685.5665" posY="1399.6561" posZ="195.38385" heading="60"/>
 	<teleloc_template loc_id="8" mapid="220010000" name="Ishalgen" posX="528.59595" posY="2449.176" posZ="281.59262" heading="0"/>
@@ -39,7 +39,7 @@
 	<teleloc_template loc_id="110" mapid="120020000" name="DC2_Airport_ZONE_Entrance" posX="1559.2" posY="1426.9" posZ="265.7" heading="0"/>
 	<teleloc_template loc_id="97" mapid="120010000" name="DC1_Airport_ZONE_Port" posX="943.9" posY="1126.1" posZ="206.9" heading="0"/>
 	<teleloc_template loc_id="98" mapid="220070000" name="DF4_Airport_ZONE" posX="1771.5" posY="2892.2" posZ="548.8" heading="0"/>
-	<!-- Abyss ELYOS -->
+	<!-- Бездна (Элиос) -->
 	<teleloc_template loc_id="35" mapid="400010000" name="Ab1_SUB_1111" posX="2865.8623" posY="1036.5726" posZ="1528.1271" heading="44"/>
 	<teleloc_template loc_id="36" mapid="400010000" name="Siels Western Fortress" posX="2985.3564" posY="2595.3398" posZ="1489.0905" heading="33"/>
 	<teleloc_template loc_id="37" mapid="400010000" name="Siels Eastern Fortess" posX="2656.2722" posY="3063.4211" posZ="1483.1167" heading="33"/>
@@ -57,7 +57,7 @@
 	<teleloc_template loc_id="72" mapid="400010000" name="Ab1_DYN_L_1221_1" posX="2033.3788" posY="1294.3495" posZ="2963.5703" heading="60"/>
 	<teleloc_template loc_id="73" mapid="400010000" name="Ab1_DYN_L_1231_1" posX="2533.71" posY="2090.47" posZ="3049.97" heading="91"/>
 	<teleloc_template loc_id="74" mapid="400010000" name="Ab1_DYN_L_1241_1" posX="1789.7555" posY="2314.2678" posZ="2949.6802" heading="7"/>
-	<!-- Abyss ASMODIANS -->
+	<!-- Бездна (Асмодея) -->
 	<teleloc_template loc_id="38" mapid="400010000" name="Ab1_SUB_1121" posX="1078.7183" posY="2838.5483" posZ="1636.5863" heading="0"/>
 	<teleloc_template loc_id="50" mapid="400010000" name="Eastern Shard of Latesran" posX="1644" posY="2881" posZ="1667" heading="0"/>
 	<teleloc_template loc_id="51" mapid="400010000" name="Asmo Eastern Lower Layer of Latesran"/>
@@ -75,8 +75,8 @@
 	<teleloc_template loc_id="75" mapid="400010000" name="Miren Fortress" posX="2033.3788" posY="1294.3495" posZ="2963.5703" heading="60"/>
 	<teleloc_template loc_id="76" mapid="400010000" name="Kysis Fortress" posX="2533.71" posY="2090.47" posZ="3049.97" heading="91"/>
 	<teleloc_template loc_id="77" mapid="400010000" name="Krotan Refuge" posX="1789.7555" posY="2314.2678" posZ="2949.6802" heading="7"/>
-	<!-- Flying Teleport-->
-	<!-- ELYOS -->
+	<!-- Воздушные перелеты -->
+	<!-- Элиос -->
 	<teleloc_template loc_id="12" mapid="210010000" name="Akarios Village"/>
 	<teleloc_template loc_id="13" mapid="210010000" name="Melponeh Campsite"/>
 	<teleloc_template loc_id="14" mapid="210030000" name="Verteron Citadel"/>
@@ -102,7 +102,8 @@
 	<teleloc_template loc_id="85" mapid="210060000" name="Jamanok Inn"/>
 	<teleloc_template loc_id="116" mapid="210060000" name="Port Anangke"/>
 	<teleloc_template loc_id="117" mapid="210060000" name="Josnack vigil"/>
-	<!-- ASMODIANS -->
+	<!-- Воздушные перелеты -->
+	<!-- Асмодея -->
 	<teleloc_template loc_id="18" mapid="220010000" name="Aldelle Village"/>
 	<teleloc_template loc_id="17" mapid="220010000" name="Anturoon Sentry Post"/>
 	<teleloc_template loc_id="63" mapid="220020000" name="Morheim Ice Fortress"/>
@@ -128,7 +129,7 @@
 	<teleloc_template loc_id="88" mapid="220050000" name="BuBu Village"/>
 	<teleloc_template loc_id="127" mapid="220050000" name="Edge of Torment"/>
 	<teleloc_template loc_id="128" mapid="220050000" name="Lollu Overlook"/>
-	<!-- Inggison -->
+	<!-- Ингиссон -->
 	<teleloc_template loc_id="90" mapid="210050000" name="LF4_Dyn_D_2011" posX="1665.5944" posY="2163.85" posZ="325.41592" heading="2"/>
 	<teleloc_template loc_id="91" mapid="210050000" name="LF4_Dyn_D_2021" posX="790.97266" posY="1963.0989" posZ="337.8406" heading="111"/>
    <teleloc_template loc_id="90" mapid="210050000" name="LF4_Dyn_L_2011" posX="1666.5121" posY="2190.421" posZ="324.8958" heading="7"/>
@@ -136,7 +137,7 @@
 	<teleloc_template loc_id="99" mapid="210050000" name="Inggison Illusion Fortress" posX="1335.09" posY="275.42" posZ="589.7" heading="113"/>
 	<teleloc_template loc_id="100" mapid="210050000" name="Underground Fortress Observation Base"/>
 	<teleloc_template loc_id="101" mapid="210050000" name="Sotena Sanctuary Village"/>
-	<!-- Gelkmaros -->
+	<!-- Келькмарос -->
 	<teleloc_template loc_id="93" mapid="220070000" name="DF4_Dyn_D_3011" posX="1263.3544" posY="823.83575" posZ="310.0366" heading="56"/>
 	<teleloc_template loc_id="94" mapid="220070000" name="DF4_Dyn_D_3021" posX="1952.8867" posY="1069.4634" posZ="326.8721" heading="68"/>
 	<teleloc_template loc_id="102" mapid="220070000" name="Gelkmaros Fortress" posX="1891.33" posY="2862.69" posZ="556.54" heading="17"/>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Названия и параметры карт
+	===================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	====================================================
+	Редакция от 13.12.2011 (Frost)
+	
  -->
-
 <world_maps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="world_maps.xsd">
 	<map id="110010000" name="Sanctum" death_level="400" water_level="16" world_type="ELYSEA" world_size="3072"/>
 	<map id="110020000" name="Kaisinel" death_level="400" water_level="16" world_type="ELYSEA" world_size="3072"/>

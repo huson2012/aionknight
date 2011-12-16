@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Начальный крафт (Скилы)
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
 
  -->
-
 <skill_tree>
+	<!-- Собирательство -->
 	<skill minLevel="1" autolearn="true" skillId="30001" skillLevel="1" name="Collection" race="ALL" classId="ALL" type="ACTIVE"/>
+	<!-- Экстракт Эфира -->
 	<skill minLevel="10" autolearn="true" skillId="30003" skillLevel="1" name="Extract Aether" race="ALL" classId="ALL" type="ACTIVE"/>
+	<!-- Изменение веществ -->
 	<skill minLevel="10" autolearn="true" skillId="40009" skillLevel="1" name="Morph Substances" race="ALL" classId="ALL" type="ACTIVE"/>
 </skill_tree>

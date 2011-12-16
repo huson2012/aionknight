@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <!--
 
 	Назначение файла	: Пешие переходы между локациями
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
+	
  -->
-
 <roads xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="roads.xsd">
 	<!-- Дорога из Бертрона в Элтенен -->
 	<road radius="30.0" map="210030000" name="VERTERON_TO_ELTNEN">

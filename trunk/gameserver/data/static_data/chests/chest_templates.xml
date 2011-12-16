@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
 	Назначение файла	: Настройка сундуков
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
 
  -->
-
 <chest_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	 xsi:noNamespaceSchemaLocation="chests_template.xsd">
 	<chest npcid="217100">
@@ -27,7 +30,7 @@
     </chest>
 	<chest npcid="217105">
         <keyitem id="1" itemid="0" quantity="1"/>
-   </chest>
+	</chest>
 	<chest npcid="217734">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
@@ -49,12 +52,12 @@
 	<chest npcid="217759">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
-	<!-- INSTANCES -->
+	<!-- ДАНЖИ -->
 	<chest npcid="700853">
         <keyitem id="1" itemid="185000103" quantity="1"/>
         <keyitem id="2" itemid="185000107" quantity="3"/>
     </chest>
-    <!-- lower abyss nokey -->
+    <!-- Нижняя Бездна -->
     <chest npcid="700462">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
@@ -85,7 +88,6 @@
     <chest npcid="700471">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
-    <!-- Roah -->
     <chest npcid="700472">
         <keyitem id="1" itemid="185000036" quantity="1"/>
     </chest>
@@ -95,7 +97,7 @@
 	<chest npcid="700474">
         <keyitem id="1" itemid="185000038" quantity="1"/>
     </chest>
-	<!-- Asteria -->
+	<!-- Астерия -->
 	<chest npcid="700475">
         <keyitem id="1" itemid="185000033" quantity="1"/>
     </chest>
@@ -105,7 +107,7 @@
 	<chest npcid="700477">
         <keyitem id="1" itemid="185000035" quantity="1"/>
 	</chest>
-	<!-- Krotan Chamber -->
+	<!-- Подземная крепость Кротан -->
 	<chest npcid="700539">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
@@ -133,14 +135,14 @@
 	<chest npcid="700561">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
-	<!-- Steel Rake -->
+	<!-- Корабль "Стальной плавник" -->
 	<chest npcid="700554">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
 	<chest npcid="700555">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
-	<!-- Abyssal Splinter -->
+	<!-- Руины хаоса -->
 	<chest npcid="700859">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
@@ -162,7 +164,7 @@
 	<chest npcid="700938">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
-    <!-- Esoterrace -->
+    <!-- Арака -->
     <chest npcid="701022">
         <keyitem id="1" itemid="185000110" quantity="1"/>
     </chest>

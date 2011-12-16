@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
-	Назначение файла	: 
+	Назначение файла	: Описание нескриптовых квестов
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
 
  -->
-
 <quests>
 	<quest max_repeat_count="1" minlevel_permitted="1" nameId="2201001" name="Symbol of the Chosen" id="85">
 		<rewards exp="100" gold="200"/>
@@ -13542,7 +13545,7 @@
 			<reward_item count="1" item_id="188050589"/>
 		</rewards>
 		<quest_drop drop_each_member="false" chance="70" item_id="182204549" npc_id="213113"/>
-		<quest_drop drop_each_member="false" chance="70" item_id="182204550" npc_id="213115"/>
+		<quest_drop drop_each_member="false" chance="70" item_id="182204550" npc_id="213114"/>
 	</quest>
 	<quest race_permitted="ASMODIANS" cannot_share="true" max_repeat_count="1" minlevel_permitted="41" nameId="2207883" name="Powwow With the Mau" id="2641">
 		<rewards exp="732200" gold="57720"/>

@@ -1695,14 +1695,6 @@
 		<object x="2867.42500" y="1611.38000" z="247.37500" h="100"/>
 		<object x="2744.17700" y="1589.11100" z="247.67230" h="99"/>
 	</spawn>
-	<!-- MuMu Ang (Monster Normal lvl:16)-->
-	<spawn map="220030000" npcid="210623" pool="1" interval="295" time="DAY">
-		<object x="1363.68000" y="153.05000" z="314.16498" h="8"/>
-	</spawn>
-	<!-- MuMu Di (Monster Normal lvl:16)-->
-	<spawn map="220030000" npcid="210624" pool="1" interval="295" time="NIGHT">
-		<object x="1473.55000" y="206.20000" z="292.73750" h="70"/>
-	</spawn>
 	<!-- MuMu Farmer (Monster Normal lvl:13) (from client spawn)-->
 	<spawn map="220030000" npcid="210468" pool="9" interval="195" rw="5">
 		<object x="1656.8707" y="1255.4982" z="274.74265" h="120"/>
@@ -1937,10 +1929,6 @@
 		<object x="1675.7867" y="1238.9285" z="270.3841" h="46"/>
 		<object x="1781.4791" y="1339.7229" z="281.37186" h="67" rw="5"/>
 	</spawn>
-	<!-- MuMu Ring (Monster Normal lvl:16)-->
-	<spawn map="220030000" npcid="210620" pool="1" interval="295" time="NIGHT">
-		<object x="1533.89000" y="233.51000" z="285.62500" h="9"/>
-	</spawn>
 	<!-- MuMu Worker (Monster Normal lvl:15) (from client spawn)-->
 	<spawn map="220030000" npcid="210449" pool="2" interval="220" rw="5">
 		<object x="1475.4135" y="202.61592" z="292.74817" h="108"/>
@@ -1978,14 +1966,6 @@
 		<object x="2317.7996" y="2302.107" z="281.27588" h="18"/>
 		<object x="1307.044" y="321.08334" z="310.87747" h="21"/>
 		<object x="2453.0815" y="2096.6863" z="277.6679" h="100"/>
-	</spawn>
-	<!-- MuMu Zen (Monster Normal lvl:16)-->
-	<spawn map="220030000" npcid="210622" pool="1" interval="295" time="DAY">
-		<object x="1371.48610" y="376.81433" z="307.90753" h="3"/>
-	</spawn>
-	<!-- MuMu Zoo (Monster Normal lvl:16)-->
-	<spawn map="220030000" npcid="210621" pool="1" interval="295" time="NIGHT">
-		<object x="1642.57000" y="269.93000" z="294.42810" h="117"/>
 	</spawn>
 	<!-- Needletail Karnif (Monster Normal lvl:10) (from client spawn)-->
 	<spawn map="220030000" npcid="210421" pool="8" interval="135">

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
-	Назначение файла	: 
+	Назначение файла	: Собирательство
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
+	
  -->
-
 <gatherable_templates>
 	<gatherable_template id="400001" nameId="701957" sourceType="VEGETABLE" skillLevel="20">
 		<materials>
