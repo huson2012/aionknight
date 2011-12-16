@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Умения (Скилы)
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 16.12.2011 (Frost)
+	
  -->
-
 <skill_tree>
 
 	<!-- ВОИН -->
@@ -99,8 +102,10 @@
     <skill skillId="154" name="Shield Counter I" minLevel="15" skillLevel="7" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="16" skillLevel="8" race="ALL" classId="KNIGHT" type="ACTIVE"/>
     <skill skillId="154" name="Shield Counter I" minLevel="17" skillLevel="9" race="ALL" classId="KNIGHT" type="ACTIVE"/>
+	
 	<!-- FIGHTER -->
-    <skill skillId="8" name="Advanced Sword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
+    
+	<skill skillId="8" name="Advanced Sword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
 	<skill skillId="9" name="Advanced Dagger Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
 	<skill skillId="10" name="Advanced Mace Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
 	<skill skillId="15" name="Advanced Greatsword Training I" minLevel="9" autolearn="true" skillLevel="1" race="ALL" classId="FIGHTER" type="PASSIVE"/>
@@ -8400,11 +8405,17 @@
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="58" skillLevel="7" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="59" skillLevel="8" race="ALL" classId="PRIEST" type="ACTIVE"/>
 	<skill skillId="2284" name="Thunder Of Judgement IV" minLevel="60" skillLevel="9" race="ALL" classId="PRIEST" type="ACTIVE"/>
+	
 	<!-- Stigma -->
+	
 	<skill skillId="2285" name="Blessing Of Healing I" minLevel="45" skillLevel="1" race="ALL" classId="PRIEST" type="ACTIVE" stigma="true"/>
+	
 	<!-- CHANTER -->
-    <skill skillId="2288" name="Cross Defense I" minLevel="45" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
+    
+	<skill skillId="2288" name="Cross Defense I" minLevel="45" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE"/>
+	
 	<!-- Stigma -->	
+	
 	<skill skillId="2286" name="Spike Chain I" minLevel="43" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
 	<skill skillId="2287" name="Spike Chain II" minLevel="55" skillLevel="1" race="ALL" classId="CHANTER" type="ACTIVE" stigma="true"/>
 </skill_tree>

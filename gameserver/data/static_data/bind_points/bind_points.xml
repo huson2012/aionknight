@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Точки воскрешенеия в городах
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция от 13.12.2011 (Frost)
+	
  -->
-
 <bind_points xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bind_points.xsd">
 	<!-- Элизиум -->
 	<bind_point name="Sanctum" npcid="700018" bindid="1" mapid="110010000" posX="1476.3" posY="1595.5" posZ="572.9" price="1540"/>

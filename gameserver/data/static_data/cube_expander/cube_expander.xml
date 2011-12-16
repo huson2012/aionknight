@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
-	Назначение файла	:
+	Назначение файла	: Расширение куба (NPC)
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
+	
  -->
-
 <cube_expander xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cube_expander.xsd">
-	<!-- Poeta -->
+	<!-- Фоэта -->
 	<cube_npc id="798008" name="Baevrunerk">
 		<expand level="1" price="1000"/>
 	</cube_npc>
-	<!-- Ishalgen -->
+	<!-- Исхальген -->
 	<cube_npc id="798037" name="Bacorerk">
 		<expand level="1" price="1000"/>
 	</cube_npc>
-	<!-- Pandaemonium -->
+	<!-- Пандемониум -->
     <cube_npc id="798058" name="Ondarinerk">
         <expand level="1" price="1000"/>
         <expand level="2" price="12000"/>
@@ -32,7 +35,7 @@
         <expand level="4" price="180000"/>
 		<expand level="5" price="360000"/>
     </cube_npc>
-    <!-- Sanctum -->
+    <!-- Элизиум -->
     <cube_npc id="798011" name="Heerunerk">
         <expand level="1" price="1000"/>
         <expand level="2" price="12000"/>
@@ -47,7 +50,7 @@
         <expand level="4" price="180000"/>
 		<expand level="5" price="360000"/>
     </cube_npc>
-    <!-- Abyss, Tigraki Island -->
+    <!-- Бездна, Остров Тиграки -->
     <cube_npc id="279022" name="Jarumonerk">
         <expand level="1" price="1000"/>
         <expand level="2" price="12000"/>

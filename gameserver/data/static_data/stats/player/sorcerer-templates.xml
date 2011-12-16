@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
 	Назначение файла	: 
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
 
  -->
-
 <player_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
 	<!-- Checked By Kamui 10/2009 at US Retail -->
 	<player_stats class="SORCERER" level="9">

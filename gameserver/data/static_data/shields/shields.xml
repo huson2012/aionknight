@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <!--
 
 	Назначение файла	: Щиты крепостей
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
+	
  -->
-
 <shields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shields.xsd">
 	<shield name="TEMINON_SHIELD" race="ELYOS" x="3002.9207" y="903.2752" z="1520.0913" radius="313.5392" skill="8314" map="400010000"/>
  	<shield name="PRIMUM_SHIELD" race="ASMODIANS" x="893.7403" y="2953.727" z="1586.35" radius="357.0371" skill="8314" map="400010000"/>

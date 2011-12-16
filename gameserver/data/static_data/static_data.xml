@@ -2,13 +2,15 @@
 <!--
 
 	Назначение файла	: Статические данные игрового сервера
+	=========================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
+	=========================================================
+	Редакция от 13.12.2011 (Frost)
 
  -->
-
 <ae_static_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="static_data.xsd">
-
+	<!-- Импорт корневого каталога \Static_Data -->
 	<import file="world_maps.xml"/>
 	<import file="npc_trade_list.xml"/>
 	<import file="npc_teleporter.xml"/>
@@ -19,111 +21,147 @@
 	<import file="items/item_templates.xml"/>
 	<import file="player_titles.xml"/>
 	<import file="presets.xml"/>
+	<!-- Статы персонажей -->
 	<player_stats_templates>
 		<import file="stats/player" skipRoot="true"/>
 	</player_stats_templates>
+	<!-- Статы суммонов -->
 	<summon_stats_templates>
 		<import file="stats/summon" skipRoot="true"/>
 	</summon_stats_templates>
+	<!-- Шаблоны абсолютно всех NPC -->
 	<npc_templates>
 		<import file="npcs" skipRoot="true"/>
 	</npc_templates>
+	<!-- Данные по умениям (Скиллам) -->
 	<skill_data>
 		<import file="skills" skipRoot="true"/>
 	</skill_data>
+	<!-- Существующие умения (Скиллы) -->
 	<skill_tree>
 		<import file="skill_tree" skipRoot="true"/>
 	</skill_tree>
+	<!-- Точки воскрешения в городах -->
 	<bind_points>
 		<import file="bind_points" skipRoot="true"/>
 	</bind_points>
+	<!-- NPC, расширяющие Куб игрока -->
 	<cube_expander>
 		<import file="cube_expander" skipRoot="true"/>
 	</cube_expander>
+	<!-- Работники складов -->
 	<warehouse_expander>
 		<import file="warehouse_expander" skipRoot="true"/>
 	</warehouse_expander>
+	<!-- Собирательство -->
 	<gatherable_templates>
 		<import file="gatherables" skipRoot="true"/>
 	</gatherable_templates>
+	<!-- Внутриигровые Гильдии -->
 	<guild_templates>
 		<import file="guilds" skipRoot="true"/>
 	</guild_templates>
+	<!-- Описание нескриптовых квестов -->
 	<quests>
 		<import file="quest_data" skipRoot="true"/>
 	</quests>
+	<!-- Описание скриптовых квестов -->
 	<quest_scripts>
 		<import file="quest_script_data" skipRoot="true"/>
 	</quest_scripts>
+	<!-- Игровые зоны -->
 	<zones>
 		<import file="zones" skipRoot="true"/>
 	</zones>
+	<!-- Игровые зоны в которых возможен Полёт -->
 	<flight_zones>
 		<import file="flight_zones" skipRoot="true"/>
 	</flight_zones>
+	<!-- Список продаваемых товаров -->
 	<goodslists>
 		<import file="goodslists" skipRoot="true"/>
 	</goodslists>
+	<!-- Глобальный спавн всех NPC и МОБОВ -->
 	<spawns>
 		<import file="spawns" skipRoot="true"/>
 	</spawns>
+	<!-- Взаимоотношение между фракциями NPC -->
 	<tribe_relations>
 		<import file="tribe" skipRoot="true"/>
 	</tribe_relations>
+	<!-- Шаблоны игровых рецептов -->
 	<recipe_templates>
 		<import file="recipe" skipRoot="true"/>
 	</recipe_templates>
+	<!-- Описание всех существующих порталов -->
 	<portal_templates>
 		<import file="portals" skipRoot="true"/>
 	</portal_templates>
+	<!-- Всевозможные сундуки -->
 	<chest_templates>
 		<import file="chests" skipRoot="true"/>
 	</chest_templates>
+	<!-- Сеты вещей -->
 	<item_sets>
 		<import file="item_sets" skipRoot="true"/>
 	</item_sets>
+	<!-- Описание умений NPC -->
 	<npc_skill_templates>
 		<import file="npc_skills" skipRoot="true"/>
 	</npc_skill_templates>
+	<!-- Описание умений Петов -->
 	<pet_skill_templates>
 		<import file="pet_skills" skipRoot="true"/>
 	</pet_skill_templates>
+	<!-- Описание расположения Крепостей -->
 	<siege_locations>
 		<import file="siege/siege_locations.xml" skipRoot="true"/>
 	</siege_locations>
+	<!-- Описание спавна в Крепостях -->
 	<siege_spawns>
 		<import file="siege/siege_spawns.xml" skipRoot="true"/>
 	</siege_spawns>
+	<!-- Щиты Крепостей -->
 	<shields>
 		<import file="shields/shields.xml" skipRoot="true" />
 	</shields>
+	<!-- Бонусы, получаемые за выполнение заданий/миссий -->
 	<bonuses>
 		<import file="bonuses/bonuses.xml" skipRoot="true" />
 	</bonuses>
+	<!-- Воздушные кольца -->
 	<fly_rings>
 		<import file="fly_rings/fly_rings.xml" skipRoot="true" />
 	</fly_rings>
+	<!-- Петы -->
 	<pets>
 		<import file="pets/pets.xml" skipRoot="true"/>
 	</pets>
+	<!-- Воздушные тоннели -->
 	<windstreams>
 		<import file="windstreams" skipRoot="true"/>
 	</windstreams>
+	<!-- Упакованные предметы -->
 	<wrapped_items>
 		<import file="items/wrapped_items.xml" skipRoot="true"/>
 	</wrapped_items>
+	<!-- Эмрибоны Петов -->
 	<pet_feed>
 		<import file="pets/pet_feed.xml" skipRoot="true"/>
 	</pet_feed>
+	<!-- Глобальный Дроп-Лист (XML версия) -->
 	<droplist>
 		<import file="drops/droplist.xml" skipRoot="true"/>
 	</droplist>
+	<!-- Диалоги NPC -->
 	<npc_shouts>
 		<import file="npc_shouts/npc_shouts.xml" skipRoot="true" />
 	</npc_shouts>
+	<!-- Поошрение новичков -->
 	<levelup_surveys>
 		<import file="levelup_surveys/surveys.xml" skipRoot="true" />
 	</levelup_surveys>
+	<!-- Пешие переходы между локациями -->
 	<roads>
 		<import file="roads/roads.xml" skipRoot="true"/>
 	</roads>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
 
 	Назначение файла	: Описание упакованных вещей
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
 
  -->
-
 <wrapped_items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!-- Red Solorius Stocking -->
 	<wrapper_item id="188050004">

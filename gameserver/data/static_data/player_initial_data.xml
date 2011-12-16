@@ -2,17 +2,19 @@
 <!--
 
 	Назначение файла	: Начальные данные персонажей
+	====================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 2.7 (Иннова)
-
+	====================================================
+	Редакция от 13.12.2011 (Frost)
+	
  -->
-
 <player_initial_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="player_initial_data.xsd">
-	<!-- НАЧАЛЬНАЯ ТОЧКА СПАВНА ДЛЯ АСМОДИАН -->
+	<!-- Начальная точка спавна для Асмодиан -->
 	<asmodian_spawn_location map_id="220010000" heading="32" x="571.0388" y="2787.3420" z="299.8750"/>
-	<!-- НАЧАЛЬНАЯ ТОЧКА СПАВНА ДЛЯ ЭЛИЙЦЕВ -->
+	<!-- Начальная точка спавна для Элийцев -->
 	<elyos_spawn_location map_id="210010000" heading="32" x="1212.9423" y="1044.8516" z="140.75568"/>
-	<!-- ВОИН -->
+	<!-- Класс: Воин -->
 	<player_data class="WARRIOR">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -23,7 +25,7 @@
 			<item id="169300002" count="20"/>
 		</items>
 	</player_data>
-	<!-- МАГ -->
+	<!-- Класс: Маг -->
 	<player_data class="MAGE">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -34,7 +36,7 @@
 			<item id="169300002" count="20"/>
 		</items>
 	</player_data>
-	<!--  -->
+	<!-- Класс: Жрец -->
 	<player_data class="PRIEST">
 		<items>
 			<item id="182400001" count="1000"/>
@@ -45,7 +47,7 @@
 			<item id="169300002" count="20"/>
 		</items>
 	</player_data>
-	<!--  -->
+	<!-- Класс: Следопыт -->
 	<player_data class="SCOUT">
 		<items>
 			<item id="182400001" count="1000"/>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <!--
 
 	Назначение файла	: Расположение щитов крепостей
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 <Beta version>
 	Версия клиента		: 25 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 13.12.2011 (Frost)
+	
  -->
-
 <shields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="siege_shields.xsd">
 	<shield id="1011" map="400010000" name="DIVINE_FORTRESS" radius="85.0">
 		<center x="2137.505" y="1930.4448" z="3221.5593"/>
