@@ -20,6 +20,7 @@ import gameserver.model.gameobjects.Creature;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_ABNORMAL_EFFECT;
 import gameserver.network.aion.serverpackets.SM_ABNORMAL_STATE;
+import gameserver.network.aion.serverpackets.SM_SKILL_LIST;
 import gameserver.skill.effect.EffectId;
 import gameserver.skill.model.DispelCategoryType;
 import gameserver.skill.model.Effect;
@@ -445,6 +446,11 @@ public class EffectController
 		}
 		if (count<=1)
 			abnormals &= ~mask;
+
+        if (owner instanceof Player)
+        {
+            PacketSendUtility.sendPacket((Player) owner, new SM_SKILL_LIST((Player) owner));
+        }
 	}
 
 	/**
