@@ -50,6 +50,7 @@ import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.restrictions.RestrictionsManager;
 import gameserver.services.*;
+import gameserver.services.CrucibleChallengeService;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.exceptionhandlers.exception_enums;
@@ -265,6 +266,12 @@ public class NpcController extends CreatureController<Npc>
 			return;
 		}
 
+		//Crucible Challenger recordkeeper round request
+		if((getOwner().getNpcId() == 730461)||(getOwner().getNpcId() == 730462)|| CrucibleChallengeService.isCrucibleChallenge(getOwner().getWorldId())){
+			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 1011));
+			return;
+		}
+		
 		int titleId = getOwner().getObjectTemplate().getTitleId();
 		if
 		(

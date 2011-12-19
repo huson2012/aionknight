@@ -71,8 +71,9 @@ public final class DataManager
 	public static DroplistData			DROPLIST_DATA;
 	public static NpcShoutsData			NPC_SHOUTS_DATA;
 	public static LevelUpSurveyData		LEVEL_UP_SURVEYS;
-
+	
 	private XmlDataLoader loader;
+
 	public static final DataManager getInstance()
 	{
 		return SingletonHolder.instance;
@@ -80,8 +81,10 @@ public final class DataManager
 
 	private DataManager()
 	{
-		Util.printSection("Create a cache file data");
-
+		Util.printSection("DataPack Manager");
+		log.info("Reading data files: Ok.");
+		log.info("Loading Data. Please wait...");
+		log.info("==================================================");
 		this.loader = XmlDataLoader.getInstance();
 		long start = System.currentTimeMillis();
 		StaticData data = loader.loadStaticData();
@@ -136,6 +139,7 @@ public final class DataManager
 		long seconds = time / 1000;
 
 		String timeMsg = seconds > 0 ? seconds + " sec." : time + " ms.";
+		log.info("==================================================");
 		log.info("DataPack load time: " + timeMsg);
 		
 	}
