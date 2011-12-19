@@ -1,37 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-
-	Название локации : Храм Пхасумандир
-	===================================
-	ID локации		 : 300170000
-	Версия Клиента	 : 2.5 (Иннова)
-	===============================================================
+	
+	Назначение файла: Описание и координаты расположения NPC
+	=========================================================================================
+	Название локации: Храм Пхасумандир
+	Описание: Храм балауров, расположенный глубоко в тоннеле Силентера. Здесь балауры хоронят 
+	своих героев.
+	=========================================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: Aion 2.7 (Иннова)
+	=========================================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 20/12/2011 (Frost)
 
  -->
 <spawns>
-	<!-- Asmodian Soulspell (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216292" pool="2" interval="295" rw="10">
 		<object x="1428.7766" y="279.204" z="243.85385" h="6"/>
 		<object x="1427.6089" y="296.72263" z="243.85385" h="117"/>
 	</spawn>
-	<!-- Asmodian Soulmedic (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216294" pool="2" interval="295" rw="10">
 		<object x="1337.4481" y="302.8029" z="246.72415" h="90"/>
 		<object x="1322.441" y="313.44278" z="246.72415" h="113"/>
 	</spawn>
-	<!-- Asmodian Soulranger (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216293" pool="2" interval="295" rw="10">
 		<object x="1337.2145" y="274.33054" z="246.72415" h="30"/>
 		<object x="1275.2567" y="288.04266" z="246.81406" h="60"/>
 	</spawn>
-	<!-- Asmodian Soulsword (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216291" pool="2" interval="295" rw="10">
 		<object x="1413.1278" y="292.89508" z="246.80171" h="0"/>
 		<object x="1373.7394" y="313.0227" z="246.72415" h="78"/>
 	</spawn>
-	<!-- Balaur Monument (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216298" pool="8" interval="295" rw="10">
 		<object x="1424.6885" y="1262.2949" z="302.5" h="101"/>
 		<object x="1444.3115" y="1220.5615" z="307.07043" h="94"/>
@@ -43,15 +63,24 @@
 		<object x="1369.2556" y="1020.73334" z="279.09167" h="60"/>
 		<object x="1328.5544" y="1020.6689" z="278.75" h="60"/>
 	</spawn>
-	<!-- Balaur Statue (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216297" pool="1" interval="295" rw="10">
 		<object x="1447.9445" y="1388.1417" z="302.29547" h="77"/>
 	</spawn>
-	<!-- Brutal Soulwatcher (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216583" pool="1" rw="5">
 		<object x="935.522" y="445.489" h="0" z="221.311"/>
 	</spawn>
-	<!-- Calamity (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="281646" pool="9">
 		<object x="1529.48" y="1050.3" h="0" z="272.819"/>
 		<object x="1526.45" y="1040.59" h="0" z="274.207"/>
@@ -63,29 +92,44 @@
 		<object x="1502.55" y="1038.01" h="0" z="272.387"/>
 		<object x="1526.06" y="1048.05" h="0" z="273.665"/>
 	</spawn>
-	<!-- Elyos Spiritblade (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216287" pool="4" interval="295" rw="10">
 		<object x="1215.2792" y="299.88232" z="243.46425" h="30"/>
 		<object x="1319.687" y="287.93643" z="246.80157" h="60"/>
 		<object x="1356.5568" y="288.04327" z="245.3584" h="58"/>
 		<object x="1356.6488" y="324.3216" z="249.16525" h="88"/>
 	</spawn>
-	<!-- Elyos Spiritbow (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216289" pool="1" interval="295" rw="10">
 		<object x="1376.5591" y="274.0717" z="246.72415" h="33"/>
 	</spawn>
-	<!-- Elyos Spiritmage (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216288" pool="4" interval="295" rw="10">
 		<object x="1426.5979" y="293.1739" z="243.85385" h="6"/>
 		<object x="1427.6542" y="282.16644" z="243.85385" h="6"/>
 		<object x="1375.8239" y="302.4227" z="246.72415" h="90"/>
 		<object x="1259.6113" y="287.8447" z="246.81406" h="60"/>
 	</spawn>
-	<!-- Elyos Spiritsalve (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216290" pool="1" interval="295" rw="10">
 		<object x="1413.1917" y="282.75125" z="246.79112" h="0"/>
 	</spawn>
-	<!-- Explosive Root (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216646" pool="8" rw="5">
 		<object x="1295.33" y="941.919" h="0" z="278.875"/>
 		<object x="1142.57" y="1095.47" h="0" z="278.875"/>
@@ -96,14 +140,20 @@
 		<object x="1174.75" y="976.013" h="0" z="277.297"/>
 		<object x="1258.52" y="1017.94" h="0" z="278.589"/>
 	</spawn>
-	<!-- Grave Slime (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216286" pool="4" interval="295" rw="10">
 		<object x="1073.1715" y="78.3049" z="233.84416" h="30"/>
 		<object x="1113.7947" y="82.929474" z="231.08525" h="3"/>
 		<object x="1138.9762" y="82.83335" z="227.95258" h="74"/>
 		<object x="1102.5703" y="50.75419" z="234.30533" h="23"/>
 	</spawn>
-	<!-- Hate Obscura (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216301" pool="18" interval="295" rw="10">
 		<object x="1215.6118" y="494.61356" z="247.11366" h="30"/>
 		<object x="1198.2833" y="514.58435" z="246.64575" h="119"/>
@@ -124,7 +174,10 @@
 		<object x="1215.3479" y="571.67163" z="246.23135" h="30"/>
 		<object x="1215.7043" y="539.16266" z="246.23135" h="30"/>
 	</spawn>
-	<!-- Malicious Obscura (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216300" pool="7" interval="295" rw="10">
 		<object x="1247.2095" y="401.58163" z="240.19661" h="59"/>
 		<object x="1274.3561" y="428.9338" z="240.24548" h="75"/>
@@ -134,7 +187,10 @@
 		<object x="1293.4912" y="442.10135" z="240.23627" h="90"/>
 		<object x="1293.201" y="471.12592" z="240.21866" h="89"/>
 	</spawn>
-	<!-- Misguiding Obscura (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="216302" pool="5" interval="295" rw="10">
 		<object x="1233.4431" y="280.88016" z="243.87668" h="59"/>
 		<object x="1247.7852" y="295.8097" z="246.82167" h="60"/>
@@ -1046,100 +1102,174 @@
 	<spawn map="300170000" interval="295" npcid="216170" pool="1" rw="5">
 		<object x="1499.78" y="1507.1" h="0" z="300.33"/>
 	</spawn>
-	<!-- Spawn by service script -->
-    <!-- The Soulcaller (Monster Hero lvl:55) -->
+	
+	<!-- ДАЛЬНЕЙШИЙ СПАВН УПРАВЛЯЕТСЯ ОТДЕЛЬНЫМ СЕРВИСНЫМ СКРИПТОМ -->
+    
+	<!-- 
+	Название: Призыватель душ Умаир
+	Описание: Балаур
+	-->
 	<spawn map="300170000" interval="295" npcid="216159" pool="1">
 		<object x="1355.826" y="390.9307" h="94" z="249.25447"/>
 	</spawn>    
-	<!-- Ahbana the Wicked (Monster Hero lvl:55) -->
+	<!-- 
+	Название: Привязанный Ахбана
+	Описание: Балаур
+	-->
    	<spawn map="300170000" npcid="216158" pool="1" interval="44200">
         	<object  x="1356.57" y="147.764" z="246.2737" h="0" />
     	</spawn>
-    <!-- Taros Lifebane (Monster Hero lvl:55) -->
+    <!-- 
+	Название: Пленный воин Тарос
+	Описание: Получеловек
+	-->
 	<spawn map="300170000" interval="295" npcid="216248" pool="1" rw="20">
 		<object x="1400.43" y="1284.99" h="0" z="302.75"/>
 	</spawn>
-	<!-- Shadowshift (Monster Hero lvl:55) -->
+	<!-- 
+	Название: Верный Сулаган
+	Описание: Нежить
+	-->
 	<spawn map="300170000" interval="295" npcid="216247" pool="1" rw="5">
 		<object x="1394.38" y="458.539" h="0" z="243.317"/>
 	</spawn>
-	<!-- The Great Virhana (Monster Hero lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216246" pool="1" rw="5">
 		<object x="1215.32" y="659.387" h="89" z="250.238"/>
 	</spawn>
-	<!-- The Plaguebearer (Monster Hero lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216163" pool="1" rw="5">
 		<object x="1052.83" y="83.5968" h="0" z="233.842"/>
 	</spawn>
-	<!-- Vehala the Cursed (Monster Hero lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216242" pool="1" rw="5">
 		<object x="1103.3" y="19.5208" h="0" z="234.108"/>
 	</spawn>
-	<!-- Manadar (Monster Hero lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216160" pool="1" rw="5">
 		<object x="1084.87" y="614.102" h="0" z="234.411"/>
 	</spawn>
-    <!-- Dorakiki the Bold (Monster Hero lvl:55) -->
+    <!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216169" pool="1" rw="5">
 		<object x="1173.88" y="1212.45" h="0" z="283.5"/>
 	</spawn>
-    <!-- Isbariya the Resolute (Monster Hero lvl:55) -->
+    <!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216182" pool="1" rw="5">
 		<object x="1603.43" y="1593.01" h="0" z="307.034"/>
 	</spawn>
-    <!-- Judge Kramaka (Monster Elite lvl:55) -->
+    <!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216181" pool="1" rw="5">
 		<object x="1640.2" y="1428.82" h="0" z="305.835"/>
 	</spawn>
-	<!-- Protector Narma (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216179" pool="1" rw="5">
 		<object x="1631.57" y="1495.91" h="0" z="329.945"/>
 	</spawn>
-	<!-- Protector Dinata (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216177" pool="1" rw="5">
 		<object x="1501.43" y="1593.96" h="0" z="329.945"/>
 	</spawn>
-	<!--Protector Pahraza (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216175" pool="1" rw="5">
 		<object x="1434.53" y="1584.14" h="0" z="305.825"/>
 	</spawn>
-	<!--Gatekeeper Rhapsharr (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216173" pool="1" rw="5">
 		<object x="1546.5916" y="1471.214" h="84" z="300.33008"/>
 	</spawn>
-	<!--Gatekeeper Samarrn (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216172" pool="1" rw="5">
 		<object x="1494.27" y="1362.55" h="0" z="307.793"/>
 	</spawn>
-	<!--Gatekeeper Kutarrun (Monster Elite lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216171" pool="1" rw="5">
 		<object x="1403.51" y="1475.79" h="98" z="307.793"/>
 	</spawn>	
-	<!--Macunbello (Monster Hero lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216735" pool="1">
 		<object x="981.015" y="134.373" h="0" z="241.755"/>
 	</spawn>
-	<!--Thurzon the Undying (Monster Hero lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" interval="295" npcid="216525" pool="1" rw="5">
 		<object x="1398.88" y="532.729" h="0" z="241.232"/>
 	</spawn>
-	<!-- Prison Of Ice -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="730275" pool="1" interval="295">
 		<object x="1611.1266" y="1604.6935" z="311.78503" h="17"/>
 	</spawn>
-	<!-- IDCatacome_SensoryArea_Q20025 (Monster Normal lvl:55) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="206109" pool="1" interval="295" rw="10">
 		<object x="1355.42" y="119.871" h="0" z="246.272"/>
 	</spawn>
-	<!-- Teleporter Macumbello Exit -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="730276" pool="1" interval="295" rw="10">
 		<object x="790.68585" y="319.889" z="220.89594" h="90"/>
 	</spawn>
-	<!-- Artefact1 Divine Artifact -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="281541" pool="1" interval="295">
 		<object x="1588.6936" y="1587.7366" z="308.24246" h="78"/>
 	</spawn>
-	<!-- Artefact2  Magic Artifact -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="300170000" npcid="281542" pool="1" interval="295">
 		<object x="1601.2065" y="1578.2158" z="308.24246" h="78"/>
 	</spawn>

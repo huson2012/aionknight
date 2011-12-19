@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-	This file is part of aion-unique <aion-unique.org>.
-
-	aion-unique is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-
-	aion-unique is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with aion-unique.  If not, see <http://www.gnu.org/licenses/>.
 	
-	Rifts
-	@author ATracer
-	@author Atomix
-	
+	Назначение файла: Описание и координаты расположения Пространственных разломов
+	==============================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: Aion 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 20/12/2011 (Frost)
+ 
  -->
 <spawns>
-	<!-- Rift Eltnen Master -->
+	<!--
+	Название: Пространственный разлом
+	Локация: Элтенен
+	-->
 	<spawn map="210020000" npcid="700137" pool="1" handler="RIFT" anchor="ELTNEN_AM">
 		<object x="183.269" y="2829.474" z="152.375" h="0"/>
 	</spawn>
@@ -43,7 +37,10 @@
 	<spawn map="210020000" npcid="700137" pool="1" handler="RIFT" anchor="ELTNEN_GM">
 		<object x="2182.4036" y="561.195" z="434.10077" h="0"/>
 	</spawn>
-	<!-- Rift Morheim Slave -->
+	<!--
+	Название: Пространственный разлом
+	Локация: Морхейм
+	-->
 	<spawn map="220020000" npcid="700137" pool="1" handler="RIFT" anchor="MORHEIM_AS">
 		<object x="745.42" y="1872.32" z="364.74625" h="0"/>
 	</spawn>
@@ -65,7 +62,10 @@
 	<spawn map="220020000" npcid="700137" pool="1" handler="RIFT" anchor="MORHEIM_GS">
 		<object x="2930.681" y="879.490" z="370.00906" h="0"/>
 	</spawn>
-	<!-- Rift Heiron Master-->
+	<!--
+	Название: Пространственный разлом
+	Локация: Интердика
+	-->
 	<spawn map="210040000" npcid="700137" pool="1" handler="RIFT" anchor="HEIRON_AM">
 		<object x="2662.011" y="434.266" z="398.71674" h="0"/>
 	</spawn>
@@ -87,7 +87,10 @@
 	<spawn map="210040000" npcid="700137" pool="1" handler="RIFT" anchor="HEIRON_GM">
 		<object x="2742.70" y="2078.44" z="142.5325" h="0"/>
 	</spawn>
-	<!-- Rift Beluslan Slave-->
+	<!--
+	Название: Пространственный разлом
+	Локация: Белуслан
+	-->
 	<spawn map="220040000" npcid="700137" pool="1" handler="RIFT" anchor="BELUSLAN_AS">
 		<object x="127.16362" y="1064.9808" z="297.60693" h="0"/>
 	</spawn>
@@ -109,7 +112,10 @@
 	<spawn map="220040000" npcid="700137" pool="1" handler="RIFT" anchor="BELUSLAN_GS">
 		<object x="1744.005" y="1900.656" z="589.0837" h="0"/>
 	</spawn>
-	<!-- Rift Morheim Master-->
+	<!--
+	Название: Пространственный разлом
+	Локация: Морхейм
+	-->
 	<spawn map="220020000" npcid="700137" pool="1" handler="RIFT" anchor="MORHEIM_AM">
 		<object x="450" y="2350" z="439" h="0"/>
 	</spawn>
@@ -131,7 +137,10 @@
 	<spawn map="220020000" npcid="700137" pool="1" handler="RIFT" anchor="MORHEIM_GM">
 		<object x="2450" y="600" z="266" h="0"/>
 	</spawn>
-	<!-- Rift Eltnen Slave-->
+	<!--
+	Название: Пространственный разлом
+	Локация: Элтенен
+	-->
 	<spawn map="210020000" npcid="700137" pool="1" handler="RIFT" anchor="ELTNEN_AS">
 		<object x="719.3252" y="2777.0325" z="259.08435" h="0"/>
 	</spawn>
@@ -153,7 +162,10 @@
 	<spawn map="210020000" npcid="700137" pool="1" handler="RIFT" anchor="ELTNEN_GS">
 		<object x="2586.272" y="651.752" z="463.625" h="0"/>
 	</spawn>
-	<!-- Rift Beluslan Master-->
+	<!--
+	Название: Пространственный разлом
+	Локация: Белуслан
+	-->
 	<spawn map="220040000" npcid="700137" pool="1" handler="RIFT" anchor="BELUSLAN_AM">
 		<object x="233.323" y="150.91" z="240.881" h="0"/>
 	</spawn>
@@ -175,7 +187,10 @@
 	<spawn map="220040000" npcid="700137" pool="1" handler="RIFT" anchor="BELUSLAN_GM">
 		<object x="1596.497" y="2053.25" z="582.12" h="0"/>
 	</spawn>
-	<!-- Rift Heiron Slave-->
+	<!--
+	Название: Пространственный разлом
+	Локация: Интердика
+	-->
 	<spawn map="210040000" npcid="700137" pool="1" handler="RIFT" anchor="HEIRON_AS">
 		<object x="2132.444" y="434.266" z="228" h="0"/>
 	</spawn>

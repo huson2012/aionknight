@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver;
@@ -75,6 +79,9 @@ public class GameServer
 	{
 		long start = System.currentTimeMillis();
 		
+		/**
+		 * Название и путь к файлу конфигурации игрового сервера
+		 */
 		if(args.length == 0)
 			CONFIGURATION_FILE = "./config/gameserver.ini";
 		else
@@ -83,68 +90,85 @@ public class GameServer
 		}
 		
 		File cfgFile = new File(CONFIGURATION_FILE);
+		
+		/**
+		 * Сообщение, выводимое в консоль в случае отсутствия файла конфигруации
+		 */
 		if(!cfgFile.exists())
-			log.fatal("Unable to stat " + CONFIGURATION_FILE + " : No such file.");
+		log.fatal("Unable to stat " + CONFIGURATION_FILE + " : No such file.");
+		
+		/**
+		 * Сообщение, выводимое в консоль в случаее краха файла конфигруации
+		 */			
 		if(!cfgFile.canRead())
-			log.fatal("Unable to stat " + CONFIGURATION_FILE + " : Unreadable file (check filesystem permissions)");
+		log.fatal("Unable to stat " + CONFIGURATION_FILE + " : Unreadable file (check filesystem permissions)");
 		
 		cfgFile = null;
 		initUtilityServicesAndConfig();
-
-		DataManager.getInstance();
-
-		Util.printSection("IDFactory Manager");
-		IDFactory.getInstance();
-		
-		World.getInstance();
 		
 		GameServer gs = new GameServer();
 		DAOManager.getDAO(PlayerDAO.class).setPlayersOffline(false);
 		
+		/**
+		 * Секционная загрузка данных. Логирование результатов загрузки сервера.
+		 */
+		Util.printSection("IDFactory Manager");
+		IDFactory.getInstance();
+		DataManager.getInstance();
+		
+		Util.printSection("Spawns Manager");
+		DayNightSpawnManager.getInstance().notifyChangeMode();
+		SpawnEngine.getInstance();
+		
+		Util.printSection("Zone Manager");
+		World.getInstance();
+		ZoneService.getInstance();
+		GameTimeService.getInstance();
+		WeatherService.getInstance();
+		
+		Util.printSection("Quest Manager");
+		QuestEngine.getInstance();
+		QuestEngine.getInstance().load(false);
+		
+		Util.printSection("Roads Manager");
+		RoadService.getInstance();
+		log.info("Moves between locations: Ok");
+		
+		Util.printSection("Brokers Manager");
+		BrokerService.getInstance();
+
+		Util.printSection("Siege Manager");
+		SiegeService.getInstance();	
+		ShieldService.getInstance();
+		GroupService.getInstance();
+		AllianceService.getInstance();
+		
+		Util.printSection("Abyss Ranking Manager");
+		AbyssRankingService.getInstance();
+		
+		Util.printSection("HTML Manager");
+		HTMLCache.getInstance();
+		
 		Util.printSection("Geodata Manager");
-		log.info("Loading Geodata");
+		log.info("Reading *.geo files...");
 		long startTime = System.currentTimeMillis();
 		GeoEngine.getInstance();
 		log.info("Loaded in " + (System.currentTimeMillis() - startTime)/1000 + " s");
 
-		NpcShoutsService.getInstance();
-		
-		Util.printSection("Spawns Manager");
-		SpawnEngine.getInstance();
-		DayNightSpawnManager.getInstance().notifyChangeMode();
-		
-		Util.printSection("Roads Manager");
-		log.info("Road Service: Initialized");
-		RoadService.getInstance();
-
-		Util.printSection("Quest Manager");
-		QuestEngine.getInstance();
-		QuestEngine.getInstance().load(false);
-
 		Util.printSection("Task Manager");
 		PacketBroadcaster.getInstance();
-		GameTimeService.getInstance();
 		AnnouncementService.getInstance();
-		DebugService.getInstance();
-		ZoneService.getInstance();
-		WeatherService.getInstance();
-		DuelService.getInstance();
-		MailService.getInstance();
-		GroupService.getInstance();
-		AllianceService.getInstance();
-		BrokerService.getInstance();
-		PeriodicSaveService.getInstance();	
-		Influence.getInstance();
 		DropService.getInstance();
 		ExchangeService.getInstance();
-		PetitionService.getInstance();
 		FlyRingService.getInstance();
 		LanguageHandler.getInstance();
 		ChatHandlers.getInstance();
-		AbyssRankingService.getInstance();
-		SiegeService.getInstance();	
-		ShieldService.getInstance();		
-		HTMLCache.getInstance();
+		NpcShoutsService.getInstance();
+		PetitionService.getInstance();
+		DuelService.getInstance();
+		MailService.getInstance();
+		Influence.getInstance();
+		PeriodicSaveService.getInstance();	
 		
 		try {
 			GameServer.ASMOS_COUNT = DAOManager.getDAO(PlayerDAO.class).getCharacterCountForRace(Race.ASMODIANS);
@@ -153,13 +177,21 @@ public class GameServer
 		}
 		catch (Exception e) { }
 		
+		/**
+		 * Итоговая информация о загрузке сервера. Вывод информации о состоянии памяти, текущей версии сервера,
+		 * версии поддерживаемого клиента. Логирования состояния на момент старта сервера.
+		 */
 		Util.printSection("System Manager");
 		AEVersions.printFullVersionInfo();
-		System.gc();
-		AEInfos.printAllInfos();
+		System.gc(); AEInfos.printAllInfos();
 
+		Util.printSection("Debug System Manager");
+		log.info("Debug Service: Initialized");
+		DebugService.getInstance();
+		
 		Util.printSection("Client Manager");
-		log.info("The supported version of the client: " + GSConfig.SERVER_VERSION);
+		log.info("The supported version of client: " + GSConfig.SERVER_VERSION);
+
 		
 		Util.printSection("Log Manager");
 		log.info("Server started in " + (System.currentTimeMillis() - start) / 1000 + " sec.");
@@ -239,7 +271,7 @@ public class GameServer
 		
 		Util.printSection("Developers info");
 		log.info("Main lang: Russian / Eng");
-		log.info("Family: Aion-Knight 2.7 <Beta version>");
+		log.info("Family: Aion-Knight 2.7 (Beta version)");
 		log.info("Support: http://www.aion-knight.ru");
 		
 		Util.printSection("Connecting to DB");

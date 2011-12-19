@@ -2,7 +2,7 @@
 <!--
 
 	Назначение файла	: Описание квестов (Белуслан)
-	Версия сервера		: Aion-Knight 2.7 <Beta version>
+	Версия сервера		: Aion-Knight 2.7 (Beta version)
 	Версия клиента		: 2.5 (Иннова)
 
  -->
@@ -482,8 +482,14 @@
 	<item_collecting id="2658" start_npc_id="204785"/>
 	<!-- 2659: [Spy/Group] Clear the Way -->
 	<monster_hunt id="2659" start_npc_id="204651">
-		<monster_infos var_id="0" max_kill="11" npc_id="213577" />
-		<monster_infos var_id="1" max_kill="20" npc_id="213579" />
+		<monster_infos var_id="0" max_kill="11" npc_id="214118" />
+		<monster_infos var_id="0" max_kill="11" npc_id="214120" />
+		<monster_infos var_id="1" max_kill="11" npc_id="214119" />
+		<monster_infos var_id="1" max_kill="20" npc_id="214112" />
+		<monster_infos var_id="1" max_kill="20" npc_id="214114" />
+		<monster_infos var_id="1" max_kill="20" npc_id="214115" />
+		<monster_infos var_id="1" max_kill="20" npc_id="214117" />
+		<monster_infos var_id="1" max_kill="20" npc_id="214116" />
 	</monster_hunt>
 	<!-- [Spy/Group] Open the Path -->
 	<item_collecting id="2660" start_npc_id="204651"/>
@@ -680,7 +686,7 @@
 	</monster_hunt>
 	<!-- [Coin/Group] Foolish Recklessness -->
 	<monster_hunt id="4524" start_npc_id="204773">
-		<monster_infos var_id="0" max_kill="1" npc_id="212588"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="214159"/>
 	</monster_hunt>
 	<!-- [Coin/Group] Drakan Gone Qooqoo -->
 	<monster_hunt id="4525" start_npc_id="204767">
