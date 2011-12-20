@@ -948,4 +948,10 @@
 		<entrypoint mapid="220040000" x="971.3177" y="123.94148" z="396.68887"/>
 		<exitpoint mapid="220020000" x="2047.1138" y="3000.418" z="251.34573"/>
 	</portal>
+	<portal name="ARENA_L_LOBBY_RETURN_AREA">
+		<exitpoint mapid="110070000" x="444.9" y="251.61" z="127"/>
+	</portal>
+     <portal name="ARENA_D_LOBBY_RETURN_AREA">
+		<exitpoint mapid="120080000" x="549.99" y="204.3" z="94"/>
+	</portal>
 </portal_templates>
