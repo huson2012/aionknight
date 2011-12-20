@@ -165,6 +165,9 @@ public class StaticData
 	@XmlElement(name = "levelup_surveys")
 	public LevelUpSurveyData		levelUpSurveys;
 
+	@XmlElement(name = "staticdoor_templates")
+	public StaticDoorData			staticDoorData;
+
 	@SuppressWarnings("unused")
 	private void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
@@ -213,5 +216,6 @@ public class StaticData
 		DataManager.log.info("Loaded " + npcShoutsData.size() + " npc shouts");
 		DataManager.log.info("Loaded " + roadData.size() + " roads entries");
 		DataManager.log.info("Loaded " + levelUpSurveys.size() + " level up surveys");
+		DataManager.log.info("Loaded " + staticDoorData.size() + " static door locations");	
 	}
 }

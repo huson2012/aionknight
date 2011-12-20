@@ -165,4 +165,7 @@
 	<roads>
 		<import file="roads/roads.xml" skipRoot="true"/>
 	</roads>
+	<staticdoor_templates>
+		<import file="staticdoor" skipRoot="true"/>
+	</staticdoor_templates>
 </ae_static_data>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<staticdoor_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="staticdoor_template.xsd">
+	<!-- Steel Rake -->
+	<staticdoor doorid="74" keyid="185000042" mapid="300100000" />
+	<staticdoor doorid="43" keyid="185000043" mapid="300100000"/>
+	<staticdoor doorid="39" keyid="185000044" mapid="300100000"/>
+	<staticdoor doorid="75" keyid="185000045" mapid="300100000"/>
+	<staticdoor doorid="73" keyid="185000054" mapid="300100000"/>
+	<!-- Steel Rake Lower Level Deck -->
+	<staticdoor doorid="70" keyid="185000048" mapid="300100000"/>
+	<staticdoor doorid="94" keyid="185000049" mapid="300100000"/>
+	<staticdoor doorid="80" keyid="185000051" mapid="300100000"/>
+	<!-- Steel Rake Bridge Deck -->
+	<staticdoor doorid="93" keyid="185000053" mapid="300100000"/>
+	<staticdoor doorid="91" keyid="185000074" mapid="300100000"/>
+	<!-- Chantra Dredgion -->
+	<staticdoor doorid="4" keyid="0" mapid="300210000"/>
+	<staticdoor doorid="173" keyid="0" mapid="300210000"/>
+	<!-- Theobomos lab -->
+	<staticdoor doorid="129" keyid="185000015" mapid="310110000"/>
+	<staticdoor doorid="233" keyid="185000016" mapid="310110000"/>
+	<staticdoor doorid="132" keyid="185000017" mapid="310110000"/>
+	<staticdoor doorid="133" keyid="185000017" mapid="310110000"/>
+	<staticdoor doorid="127" keyid="185000018" mapid="310110000"/>
+	<staticdoor doorid="62" keyid="185000019" mapid="310110000"/>
+	<staticdoor doorid="61" keyid="185000020" mapid="310110000"/>
+	<staticdoor doorid="63" keyid="185000021" mapid="310110000"/>
+	<staticdoor doorid="95" keyid="185000022" mapid="310110000"/>
+	<staticdoor doorid="64" keyid="185000023" mapid="310110000"/>
+	<staticdoor doorid="128" keyid="185000024" mapid="310110000"/>
+	<staticdoor doorid="130" keyid="185000025" mapid="310110000"/>
+	<!-- Adma Stronghold -->
+	<staticdoor doorid="256" keyid="185000027" mapid="320130000"/>
+	<staticdoor doorid="257" keyid="185000027" mapid="320130000"/>
+	<staticdoor doorid="255" keyid="185000028" mapid="320130000"/>
+	<staticdoor doorid="1" keyid="185000029" mapid="320130000"/>
+	<staticdoor doorid="253" keyid="185000030" mapid="320130000"/>
+	<staticdoor doorid="254" keyid="185000031" mapid="320130000"/>
+	<staticdoor doorid="122" keyid="185000032" mapid="320130000"/>
+	<!-- Udas upper -->
+	<staticdoor doorid="99" keyid="1" mapid="300150000"/><!-- no need key -->
+	<staticdoor doorid="97" keyid="185000083" mapid="300150000"/>
+	<staticdoor doorid="102" keyid="185000084" mapid="300150000"/>
+	<staticdoor doorid="121" keyid="185000085" mapid="300150000"/>
+	<!-- Beshmundir -->
+	<staticdoor doorid="471" keyid="1" mapid="300170000"/><!-- need to find key -->
+	<staticdoor doorid="470" keyid="1" mapid="300170000"/><!-- need to find key -->
+	<staticdoor doorid="473" keyid="1" mapid="300170000"/><!-- need to find key -->
+	<staticdoor doorid="531" keyid="185000096" mapid="300170000"/>
+	<staticdoor doorid="532" keyid="185000093" mapid="300170000"/>
+	<staticdoor doorid="533" keyid="185000092" mapid="300170000"/>
+	<staticdoor doorid="534" keyid="185000094" mapid="300170000"/>
+	<staticdoor doorid="535" keyid="185000097" mapid="300170000"/>
+	<staticdoor doorid="536" keyid="185000095" mapid="300170000"/>
+	<!-- Udas Temple -->
+	<staticdoor doorid="295" keyid="185000086" mapid="300160000"/>
+	<staticdoor doorid="111" keyid="1" mapid="300160000"/><!-- need to find key -->
+	<staticdoor doorid="100" keyid="185000087" mapid="300160000"/>
+	<!-- Talocs Hollow -->
+	<staticdoor doorid="180" keyid="185000108" mapid="300190000"/>
+	<!-- Krotan Instance -->
+	<staticdoor doorid="28" keyid="185000059" mapid="300140000"/>
+	<!-- Divine Instance -->
+	<staticdoor doorid="19" keyid="185000104" mapid="300220000"/>
+</staticdoor_templates>

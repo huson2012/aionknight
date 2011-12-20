@@ -61,6 +61,7 @@
 	<xs:include schemaLocation="npc_shouts/npc_shouts.xsd"/>
 	<xs:include schemaLocation="levelup_surveys/surveys.xsd"/>
 	<xs:include schemaLocation="roads/roads.xsd"/>
+	<xs:include schemaLocation="staticdoor/staticdoor_templates.xsd"/>	
 	<!--  -->
 	<xs:element name="ae_static_data">
 		<xs:complexType>
@@ -112,6 +113,7 @@
 				<xs:element ref="npc_shouts" minOccurs="0"/>
 				<xs:element ref="levelup_surveys" minOccurs="0"/>
 				<xs:element ref="roads" minOccurs="0"/>
+				<xs:element ref="staticdoor_templates" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

@@ -71,6 +71,7 @@ public final class DataManager
 	public static DroplistData			DROPLIST_DATA;
 	public static NpcShoutsData			NPC_SHOUTS_DATA;
 	public static LevelUpSurveyData		LEVEL_UP_SURVEYS;
+	public static StaticDoorData		STATICDOOR_DATA;	
 	
 	private XmlDataLoader loader;
 
@@ -135,6 +136,7 @@ public final class DataManager
 		DROPLIST_DATA = data.droplistData;
 		NPC_SHOUTS_DATA = data.npcShoutsData;
 		LEVEL_UP_SURVEYS = data.levelUpSurveys;
+		STATICDOOR_DATA = data.staticDoorData;
 
 		long seconds = time / 1000;
 
