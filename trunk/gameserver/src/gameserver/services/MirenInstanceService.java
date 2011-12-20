@@ -1,56 +1,80 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
- */
-
 package gameserver.services;
 
 import gameserver.model.gameobjects.Monster;
-import gameserver.model.gameobjects.Npc;
-import gameserver.model.gameobjects.VisibleObject;
+import gameserver.model.gameobjects.player.Player;
 import gameserver.model.group.PlayerGroup;
+import gameserver.model.templates.spawn.SpawnTemplate;
+import gameserver.utils.PacketSendUtility;
+import gameserver.spawn.SpawnEngine;
+
 
 public class MirenInstanceService
 {
-	protected VisibleObject					chests[];
-	int mapId = 300130000;
-	
 	public void onGroupReward(Monster monster, PlayerGroup group)
 	{
+        //Countdown to kill the Boss Awakened Miren Prince and chests appear
 		if(monster.getObjectTemplate().getTemplateId() == 215222)
 		{
-			SpawnChest(group);
+		    long timeRemain = (group.getInstanceStartTime() + 600000) - System.currentTimeMillis();
+            
+            if(timeRemain > 1)
+			{
+			//When kills Awakened Miren Prince spawns chests
+            SpawnTemplate chest1, chest2, chest3, chest4, chest5, chest6, chest7, chest8, chest9, chest10, chest11;
+            
+            chest1 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 478f, 815f, 199f, (byte)10, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest1, group.getGroupLeader().getInstanceId());
+
+            chest2 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 471f, 834f, 199f, (byte)3, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest2, group.getGroupLeader().getInstanceId());
+
+            chest3 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 471f, 854f, 199f, (byte)117, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest3, group.getGroupLeader().getInstanceId());
+
+            chest4 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 478f, 873f, 199f, (byte)110, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest4, group.getGroupLeader().getInstanceId());
+
+            chest5 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 490f, 888f, 199f, (byte)103, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest5, group.getGroupLeader().getInstanceId());
+
+            chest6 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 508f, 899f, 199f, (byte)96, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest6, group.getGroupLeader().getInstanceId());
+
+            chest7 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 527f, 902f, 199f, (byte)90, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest7, group.getGroupLeader().getInstanceId());
+
+            chest8 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 547f, 899f, 199f, (byte)84, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest8, group.getGroupLeader().getInstanceId());
+
+            chest9 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 564f, 889f, 199f, (byte)77, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest9, group.getGroupLeader().getInstanceId());
+
+            chest10 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 577f, 874f, 199f, (byte)70, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest10, group.getGroupLeader().getInstanceId());
+
+            chest11 = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 214804, 584f, 855f, 199f, (byte)63, 0, 0, true);
+            SpawnEngine.getInstance().spawnObject(chest11, group.getGroupLeader().getInstanceId());
+            }
+            else {
+                for(Player member : group.getMembers())
+                {
+                    //TODO: Find retail message
+                    PacketSendUtility.sendMessage(member, "Your party is very slow. No chests reward for instance.");
+                }
+            }
 		}
-	}
-	
-	public void SpawnChest(PlayerGroup group)
-	{	
-		chests = new VisibleObject[12];
-		
-		chests[0] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700544, (float) 576.8508, (float) 836.40424, (float) 200, (byte) 44, true);
-		chests[1] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 477.4225, (float) 814.993, (float) 199.70894, (byte) 11, true);
-		chests[2] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 470.9954, (float) 834.474, (float) 199.70894, (byte) 118, true);
-		chests[3] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 470.5955, (float) 854.473, (float) 199.70894, (byte) 117, true);
-		chests[4] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 476.9531, (float) 874.273, (float) 199.70882, (byte) 108, true);
-		chests[5] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 489.9968, (float) 889.522, (float) 199.70882, (byte) 103, true);
-		chests[6] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 507.7754, (float) 900.224, (float) 199.70882, (byte) 98, true);
-		chests[7] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 528.1088, (float) 903.631, (float) 199.70882, (byte) 90, true);
-		chests[8] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 547.4296, (float) 900.064, (float) 199.70882, (byte) 83, true);
-		chests[9] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 565.3545, (float) 890.399, (float) 199.70882, (byte) 78, true);
-		chests[10] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700543, (float) 578.5674, (float) 875.200, (float) 199.70882, (byte) 70, true);
-		chests[11] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700561, (float) 586.5694, (float) 856.1183, (float) 199.70882, (byte) 64, true);
+
+        //When kills 11 Sealed Gold Chest spawn Ancient Treasure Box
+        if(monster.getObjectTemplate().getTemplateId() == 214804) {
+            
+            group.setInstanceKills(group.getInstanceKills() + 1);
+            
+            if (group.getInstanceKills() == 11){
+                SpawnTemplate goldchest;
+                goldchest = SpawnEngine.getInstance().addNewSpawn(300130000, group.getGroupLeader().getInstanceId(), 700559, 585f, 835f, 199f, (byte)57, 0, 0, true);
+                SpawnEngine.getInstance().spawnObject(goldchest, group.getGroupLeader().getInstanceId());
+            }
+        }
 	}
 	
 	public static MirenInstanceService getInstance()
