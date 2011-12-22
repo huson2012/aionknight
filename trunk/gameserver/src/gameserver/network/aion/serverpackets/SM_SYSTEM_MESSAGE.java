@@ -74,6 +74,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 		return new SM_SYSTEM_MESSAGE(1300627, playerName);
 	}
 
+    public static SM_SYSTEM_MESSAGE STR_MSG_FRIENDLY_LEAVE_IDARENA(String playerName)
+    {
+    return new SM_SYSTEM_MESSAGE(1400289, playerName);
+    }
+	
 	/**
 	 * You used item
 	 */

@@ -17,6 +17,8 @@
 
 package gameserver.services;
 
+import org.apache.log4j.Logger;
+
 import commons.database.DatabaseFactory;
 import gameserver.controllers.SummonController.UnsummonType;
 import gameserver.model.EmotionType;
@@ -27,20 +29,25 @@ import gameserver.model.gameobjects.Summon;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.group.PlayerGroup;
+import gameserver.services.InstanceService;
 import gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import gameserver.network.aion.serverpackets.SM_EMOTION;
 import gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
-import gameserver.network.aion.serverpackets.SM_STAGE_STEP_STATUS;
+import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
 import gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import gameserver.network.aion.serverpackets.SM_STAGE_STEP_STATUS;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
-import org.apache.log4j.Logger;
+import gameserver.model.gameobjects.stats.modifiers.Executor;
+import gameserver.world.World;
+import commons.utils.Rnd;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -59,6 +66,7 @@ public class EmpyreanCrucibleService
 	int round;
 	int type;
 	int itemId;
+	boolean hasReward = false;
 	private final static int[] code = {35464, 36464, 37464, 38464, 8392, 43856, 13784, 49248, 19176, 54640};
 	/**
 	 ** Array with reward points
@@ -84,7 +92,7 @@ public class EmpyreanCrucibleService
 
 	public class MonsterSpawnNode {
 		int npcId = 0;
-		int flag = 0;
+		int flag = 0; //0 = normal, 1 = do not add to kill_list
 		float x = 0;
 		float y = 0;
 		float z = 0;
@@ -98,6 +106,27 @@ public class EmpyreanCrucibleService
 			this.h = h;
 		}
 	}
+	
+	public boolean start(final PlayerGroup group){
+		PacketSendUtility.sendMessage(group.getGroupLeader(), "teleport in 20s.");
+
+		ThreadPoolManager.getInstance().schedule(new Runnable() {
+
+			@Override
+			public void run() {
+
+				World.getInstance().doOnAllPlayers(new Executor<Player>() {
+					@Override
+					public boolean run(Player player) {
+						PacketSendUtility.sendSysMessage(player, "test started");
+						return true;
+					}
+				});
+				startEvent(group);
+			}
+		}, 20000);
+		return false;
+	}	
 	public void startEvent(PlayerGroup group){
 		this.registeredGroup = group;
 		
@@ -239,21 +268,41 @@ public class EmpyreanCrucibleService
 	 */
 	public void doReward()
 	{	
+		if(hasReward)
+			return;
+		hasReward = true;	
 		int instanceTime = (int) ((registeredGroup.getInstanceStartTime() + 14400000) - System.currentTimeMillis());
 		int grandTotal = registeredGroup.getGroupInstancePoints();
-		int rewardCount = grandTotal / 68; 
+		int rewardCount = grandTotal / (registeredGroup.size()) / 10;
 		for(Player player : registeredGroup.getMembers()){
 			if(player.getWorldId() == mapId){
 				ItemService.addItem(player, 186000130, rewardCount);
 					if (player.getCommonData().getRace().getRaceId() == 0)
 						itemId = 186000124;
 					else itemId = 186000125;
+				//PacketSendUtility.sendMessage(player, "You received "+rewardCount+" arena signs from total"+(grandTotal/68));	
 				player.getInventory().removeFromBagByItemId(itemId, player.getInventory().getItemCountByItemId(itemId));
 				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(mapId, instanceTime, registeredGroup, grandTotal, rewardCount, true));
 			}
 		}
 	}
 
+	/**
+	 * 
+	 */
+	public void doReward(Player player)
+	{
+		int instanceTime = (int) ((registeredGroup.getInstanceStartTime() + 14400000) - System.currentTimeMillis());
+		int grandTotal = registeredGroup.getGroupInstancePoints();
+		int rewardCount = (grandTotal / registeredGroup.size()); 
+			if(player.getWorldId() == mapId)
+			{
+				ItemService.addItem(player, 186000130, rewardCount);
+				//PacketSendUtility.sendMessage(player, "You received "+rewardCount+" arena points from total  "+grandTotal);
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(mapId, instanceTime, registeredGroup, grandTotal, rewardCount, true));
+	        }
+	}
+	
 	public void groupUnreg()
 	{
 		registeredGroup.setEmpyreanCrucible(null);
@@ -335,16 +384,44 @@ public class EmpyreanCrucibleService
 		}
 		sendStageStart();
  	}
-		public void changeStart()
-	{
-			sendWaves();
-	}
+ 		public void changeStart()
+ 	{
+ 			sendWaves();
+ 	}
+ 	
 	
-	/**
-	 * @param instance
-	 */
-	private List<MonsterSpawnNode> getNpcsFromDB(int worldId, int stage, int round, Race playerRace)
-	{
+	public void exitArena(Player paramPlayer)
+  {
+    PacketSendUtility.sendPacket(paramPlayer, new SM_QUEST_ACCEPTED(4, 0, 0));
+    int i = Rnd.get(1, 2);
+    int j = Rnd.get(1, 8);
+    if (paramPlayer.getWorldId() == 300300000)
+      if (paramPlayer.getCommonData().getRace() == Race.ASMODIANS)
+        TeleportService.teleportTo(paramPlayer, 120080000,  571 + i, 260 + j, 93.480003356933594F, 2200);
+      else
+        TeleportService.teleportTo(paramPlayer, 110070000,  510 + i, 230 + j, 126.97586822509766F, 2200);
+    PlayerGroup localPlayerGroup = paramPlayer.getPlayerGroup();
+    Iterator localIterator = localPlayerGroup.getMembers().iterator();
+    while (localIterator.hasNext())
+    {
+      Player localPlayer = (Player)localIterator.next();
+      if (!(localPlayer.equals(paramPlayer)))
+        PacketSendUtility.sendPacket(localPlayer, SM_SYSTEM_MESSAGE.STR_MSG_FRIENDLY_LEAVE_IDARENA(paramPlayer.getName()));
+    }
+    paramPlayer.setInstancePlayerScore(0);
+  }
+
+	
+ 	/**
+	 * 
+	 * @param worldId
+	 * @param stage
+	 * @param round
+	 * @param playerRace
+	 * @return
+ 	 */
+ 	private List<MonsterSpawnNode> getNpcsFromDB(int worldId, int stage, int round, Race playerRace)
+ 	{
 		Connection con = null;
 		List<MonsterSpawnNode> tmpList = new ArrayList<EmpyreanCrucibleService.MonsterSpawnNode>();
 		boolean result = false;
