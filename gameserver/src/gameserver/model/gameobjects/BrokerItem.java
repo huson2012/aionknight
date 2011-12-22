@@ -22,6 +22,7 @@ import gameserver.model.broker.BrokerRace;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Comparator;
+import gameserver.configs.main.CustomConfig;
 
 public class BrokerItem implements Comparable<BrokerItem>
 {
@@ -61,7 +62,7 @@ public class BrokerItem implements Comparable<BrokerItem>
 		this.itemBrokerRace = itemBrokerRace;
 		this.isSold = false;
 		this.isSettled = false;
-		this.expireTime = new Timestamp(Calendar.getInstance().getTimeInMillis() + 691200000); // 8 days
+		this.expireTime = new Timestamp(Calendar.getInstance().getTimeInMillis() + CustomConfig.BROKER_EXPIRE_TIME * 86400000);
 		this.settleTime = new Timestamp(Calendar.getInstance().getTimeInMillis());
 		
 		this.state = PersistentState.NEW;

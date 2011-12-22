@@ -1,3 +1,24 @@
+/**
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ */
+
 package gameserver.controllers;
 
 import gameserver.configs.main.CustomConfig;
@@ -40,28 +61,21 @@ import gameserver.world.WorldMapInstance;
 import gameserver.world.WorldType;
 import gameserver.world.zone.ZoneInstance;
 import org.apache.log4j.Logger;
-
 import java.util.Collections;
 import java.util.concurrent.Future;
 
-
 /**
  * This class is for controlling players.
- * 
- * @author -Nemesiss-, ATracer (2009-09-29), blakawk, Sarynth
- * @author RotO (Attack-speed hack protection)
  */
 public class PlayerController extends CreatureController<Player>
 {
 	private boolean			isInShutdownProgress = false;
-	
 	private boolean			canAutoRevive = true;
 
 	/**
 	 * Zone update mask
 	 */
 	private volatile byte	zoneUpdateMask;
-
 	private long lastAttackMilis = 0;
 	private long lastSkillMilis = 0;
 	private int lastSkillAnimationTime = 0;

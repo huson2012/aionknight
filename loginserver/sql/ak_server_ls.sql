@@ -1,5 +1,5 @@
 /*
- Source Server         : Aion-Knight RC1 [Beta]
+ Source Server         : Aion-Knight 2.7 (Beta version)
  Source Server Type    : MySQL
  Source Server Version : 50045
  Source Host           : 192.168.0.1

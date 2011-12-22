@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.network.aion.serverpackets;
@@ -20,7 +24,6 @@ package gameserver.network.aion.serverpackets;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
-
 import java.nio.ByteBuffer;
 
 public class SM_CRAFT_UPDATE extends AionServerPacket
@@ -63,22 +66,22 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 
 		switch(action)
 		{
-			case 0: //init
+			case 0: // Инициализация
 				writeD(buf, success);
 				writeD(buf, failure);
 				writeD(buf, 0);
-				writeD(buf, 1200);	//delay after which bar will start moving (ms)
-				writeD(buf, 1330048);	//start crafting system message
+				writeD(buf, 1200);		// Задержки, после чего бар начнет двигаться (мс)
+				writeD(buf, 1330048);	// Сообщение о начале крафта
 				writeH(buf, 0x24);
-				writeD(buf, nameId);	//item nameId to display it's name in system message above
+				writeD(buf, nameId);	// item nameId to display it's name in system message above
 				writeH(buf, 0);
 				break;
-			case 1: //regular update
-			case 2: //speed up update
+			case 1: // Регулярные обновления
+			case 2: // Скорость обновление
 				writeD(buf, success);
 				writeD(buf, failure);
-				writeD(buf, delay);	//time of moving execution (ms)
-				writeD(buf, 1200);	//delay after which bar will start moving (ms)
+				writeD(buf, delay);	// time of moving execution (ms)
+				writeD(buf, 1200);	// delay after which bar will start moving (ms)
 				writeD(buf, 0);
 				writeH(buf, 0);
 				break;
@@ -90,30 +93,30 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(buf, 0);
 				writeH(buf, 0);
 				break;
-			case 4:	//cancel crafting
+			case 4:	// Отмена крафта
 				writeD(buf, success);
 				writeD(buf, failure);
 				writeD(buf, 0);
 				writeD(buf, 0);
-				writeD(buf, 1330051);	//canceled crafting system message
+				writeD(buf, 1330051);	// Сообщение об отмене крафта
 				writeH(buf, 0);
 				break;
-			case 5: //success finish
+			case 5: // Успешный крафт
 				writeD(buf, success);
 				writeD(buf, failure);
 				writeD(buf, 0);
 				writeD(buf, 0);	
-				writeD(buf, 1300788);	//success crafting system message
+				writeD(buf, 1300788);	// Сообщение об успешном крафте
 				writeH(buf, 0x24);
 				writeD(buf, nameId);	//item nameId to display it's name in system message above
 				writeH(buf, 0);
 				break;
-			case 6: //fail finish
+			case 6: // Неудача при крафте
 				writeD(buf, success);
 				writeD(buf, failure);
 				writeD(buf, 0);
 				writeD(buf, 0);	
-				writeD(buf, 1330050);	//fail crafting system message
+				writeD(buf, 1330050);	// Сообщение о неудачном крафте
 				writeH(buf, 0x24);
 				writeD(buf, nameId);	//item nameId to display it's name in system message above
 				writeH(buf, 0);

@@ -1,80 +1,73 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.network.aion.serverpackets;
 
+import gameserver.network.aion.AionConnection;
+import gameserver.network.aion.AionServerPacket;
 import gameserver.model.gameobjects.Item;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.siege.Artifact;
-import gameserver.network.aion.AionConnection;
-import gameserver.network.aion.AionServerPacket;
-
 import java.nio.ByteBuffer;
 
-
-/**
-
- */
-public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket
+public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket 
 {
-	private int playerObjId;
-	private int targetObjId;
-	private int itemObjId;
-	private int itemId;
+    private int playerObjId;
+    private int targetObjId;
+    private int itemObjId;
+    private int itemId;
     private int time;
     private int end;
     private int unk;
 
-	public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId)
+    public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId) 
 	{
-		this.playerObjId = playerObjId;
-		this.targetObjId = playerObjId;
-		this.itemObjId = itemObjId;
-		this.itemId = itemId;
-		this.time = 0;
-		this.end = 1;
-		this.unk = 1;
-	}
-	
-	public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId, int time, int end, int unk)
-	{
-		this(playerObjId, playerObjId, itemObjId, itemId, time, end, unk);
-	}
-	public SM_ITEM_USAGE_ANIMATION(int playerObjId, int targetObjId, int itemObjId, int itemId, int time, int end, int unk)
-	{
-		this.playerObjId = playerObjId;
-		this.targetObjId = targetObjId;
-		this.itemObjId = itemObjId;
-		this.itemId = itemId;
-		this.time = time;
-		this.end = end;
-		this.unk = unk;
-	}
+        this.playerObjId = playerObjId;
+        this.itemObjId = itemObjId;
+        this.itemId = itemId;
+        this.time = 0;
+        this.end = 1;
+        this.unk = 1;
+    }
 
-	public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId, int time, int end)
+    public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId, int time, int end, int unk) 
 	{
-		this.playerObjId = playerObjId;
-		this.targetObjId = playerObjId;
-		this.itemObjId = itemObjId;
-		this.itemId = itemId;
-		this.time = time;
-		this.end = end;
-	}
-	
-	public SM_ITEM_USAGE_ANIMATION(Artifact artifact, Player player, Item stone, int end)
+        this.playerObjId = playerObjId;
+        this.itemObjId = itemObjId;
+        this.itemId = itemId;
+        this.time = time;
+        this.end = end;
+        this.unk = unk;
+    }
+
+    public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId, int time, int end) 
+	{
+        this.playerObjId = playerObjId;
+        this.itemObjId = itemObjId;
+        this.itemId = itemId;
+        this.time = time;
+        this.end = end;
+    }
+    
+    public SM_ITEM_USAGE_ANIMATION(Artifact artifact, Player player, Item stone, int end) 
 	{
 		this.playerObjId = player.getObjectId();
 		this.targetObjId = artifact.getObjectId();
@@ -85,19 +78,29 @@ public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket
 		this.unk = 1;
 	}
 
-	@Override
-	protected void writeImpl(AionConnection con, ByteBuffer buf)
+    public SM_ITEM_USAGE_ANIMATION(int playerObjId,int targetObjId, int itemObjId, int itemId, int time, int end, int unk) 
 	{
+        this.playerObjId = playerObjId;
+        this.targetObjId = targetObjId;
+        this.itemObjId = itemObjId;
+        this.itemId = itemId;
+        this.time = time;
+        this.end = end;
+        this.unk = unk;
+    }
+    
+	@Override
+	protected void writeImpl(AionConnection con, ByteBuffer buf) {
 		writeD(buf, playerObjId); // player obj id
-		writeD(buf, targetObjId); // target obj id 
-		
+		writeD(buf, targetObjId); // target obj id
+
 		writeD(buf, itemObjId); // itemObjId
-		writeD(buf, itemId); // item id
-		
-		writeD(buf, time); // time of casting bar of an item
-		writeH(buf, end); // 1-casting bar hitted end, 3- interrupted by moving
-		writeC(buf, 1); //always 1
-		writeD(buf, unk); //some weird numbers
-        writeC(buf, end == 0 ? 0 : 2);
+		writeD(buf, itemId); 	// item id
+
+		writeD(buf, time); 	// time of casting bar of an item
+		writeH(buf, end); 	// 1-casting bar hitted end, 3- interrupted by moving
+		writeC(buf, 1); 	// always 1
+		writeD(buf, unk);
+		writeC(buf, end == 0 ? 0 : 2);
 	}
 }

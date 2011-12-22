@@ -1,194 +1,199 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package mysql5;
 
+import commons.database.DB;
 import commons.database.DatabaseFactory;
+import commons.database.IUStH;
 import gameserver.dao.PlayerSettingsDAO;
 import gameserver.model.gameobjects.PersistentState;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.model.gameobjects.player.PlayerSettings;
 import org.apache.log4j.Logger;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class MySQL5PlayerSettingsDAO extends PlayerSettingsDAO
+public class MySQL5PlayerSettingsDAO extends PlayerSettingsDAO 
 {
-	private static final Logger log = Logger.getLogger(MySQL5PlayerSettingsDAO.class);
+    private static final Logger log = Logger.getLogger(MySQL5PlayerSettingsDAO.class);
 
-	/**
-	 * TODO
-	 * 1) analyze possibility to zip settings
-	 * 2) insert/update instead of replace
-	 * 
-	 * 0 - uisettings
-	 * 1 - shortcuts
-	 * 2 - display
-	 * 3 - deny
-	 */
 
-	@Override
-	public void loadSettings(final Player player)
+    @Override
+    public void loadSettings(final Player player) 
 	{
-		final int playerId = player.getObjectId();
-		final PlayerSettings playerSettings = new PlayerSettings();
-		Connection con = null;
-		try
-		{
-			con = DatabaseFactory.getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM player_settings WHERE player_id = ?");
-			statement.setInt(1, playerId);
-			ResultSet resultSet = statement.executeQuery();
-			while(resultSet.next())
+        final int playerId = player.getObjectId();
+        final PlayerSettings playerSettings = new PlayerSettings();
+        Connection con = null;
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement statement = con.prepareStatement("SELECT * FROM player_settings WHERE player_id = ?");
+            statement.setInt(1, playerId);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int type = resultSet.getInt("settings_type");
+                switch (type) {
+                    case 0:
+                        playerSettings.setUiSettings(resultSet.getBytes("settings"));
+                        break;
+                    case 1:
+                        playerSettings.setShortcuts(resultSet.getBytes("settings"));
+                        break;
+                    case 2:
+                        playerSettings.setDisplay(resultSet.getInt("settings"));
+                        break;
+                    case 3:
+                        playerSettings.setDeny(resultSet.getInt("settings"));
+                        break;
+                }
+            }
+            resultSet.close();
+            statement.close();
+        }
+        catch (Exception e) {
+            log.fatal("Could not restore PlayerSettings data for player " + playerId + " from DB: " + e.getMessage(), e);
+        }
+        finally {
+            DatabaseFactory.close(con);
+        }
+        playerSettings.setPersistentState(PersistentState.UPDATED);
+        player.setPlayerSettings(playerSettings);
+    }
+
+    @Override
+    public void saveSettings(final Player player) 
+	{
+        final int playerId = player.getObjectId();
+
+        PlayerSettings playerSettings = player.getPlayerSettings();
+        if (playerSettings.getPersistentState() == PersistentState.UPDATED)
+            return;
+
+        final byte[] uiSettings = playerSettings.getUiSettings();
+        final byte[] shortcuts = playerSettings.getShortcuts();
+        final int display = playerSettings.getDisplay();
+        final int deny = playerSettings.getDeny();
+
+        if (uiSettings != null) {
+            DB.insertUpdate("REPLACE INTO player_settings values (?, ?, ?)", new IUStH() 
 			{
-				int type = resultSet.getInt("settings_type");
-				switch(type)
+                @Override
+                public void handleInsertUpdate(PreparedStatement stmt) throws SQLException 
 				{
-					case 0:
-						playerSettings.setUiSettings(resultSet.getBytes("settings"));
-						break;
-					case 1:
-						playerSettings.setShortcuts(resultSet.getBytes("settings"));
-						break;
-					case 2:
-						playerSettings.setDisplay(resultSet.getInt("settings"));
-						break;
-					case 3:
-						playerSettings.setDeny(resultSet.getInt("settings"));
-						break;
-				}			
-			}
-			resultSet.close();
-			statement.close();
-		}
-		catch (Exception e)
+                    stmt.setInt(1, playerId);
+                    stmt.setInt(2, 0);
+                    stmt.setBytes(3, uiSettings);
+                    stmt.execute();
+                }
+            });
+        }
+
+        if (shortcuts != null) {
+            DB.insertUpdate("REPLACE INTO player_settings values (?, ?, ?)", new IUStH() 
+			{
+                @Override
+                public void handleInsertUpdate(PreparedStatement stmt) throws SQLException 
+				{
+                    stmt.setInt(1, playerId);
+                    stmt.setInt(2, 1);
+                    stmt.setBytes(3, shortcuts);
+                    stmt.execute();
+                }
+            });
+        }
+
+        DB.insertUpdate("REPLACE INTO player_settings values (?, ?, ?)", new IUStH() 
 		{
-			log.fatal("Could not restore PlayerSettings data for player " + playerId + " from DB: "+e.getMessage(), e);
-		}
-		finally
+            @Override
+            public void handleInsertUpdate(PreparedStatement stmt) throws SQLException 
+			{
+                stmt.setInt(1, playerId);
+                stmt.setInt(2, 2);
+                stmt.setInt(3, display);
+                stmt.execute();
+            }
+        });
+
+        DB.insertUpdate("REPLACE INTO player_settings values (?, ?, ?)", new IUStH() 
 		{
-			DatabaseFactory.close(con);
-		}
-		playerSettings.setPersistentState(PersistentState.UPDATED);
-		player.setPlayerSettings(playerSettings);
-	}
+            @Override
+            public void handleInsertUpdate(PreparedStatement stmt) throws SQLException 
+			{
+                stmt.setInt(1, playerId);
+                stmt.setInt(2, 3);
+                stmt.setInt(3, deny);
+                stmt.execute();
+            }
+        });
+
+    }
 
 	@Override
-	public void saveSettings(final Player player)
+	public PlayerSettings lauchSettings(final int objId)
 	{
-		final int playerId = player.getObjectId();
-		
-		PlayerSettings playerSettings = player.getPlayerSettings();
-		if(playerSettings.getPersistentState() == PersistentState.UPDATED)
-			return;
-		
-		final byte[] uiSettings = playerSettings.getUiSettings();
-		final byte[] shortcuts = playerSettings.getShortcuts();
-		final int display = playerSettings.getDisplay();
-		final int deny = playerSettings.getDeny();
-		
-		if(uiSettings != null)
-		{
-			Connection con = null;
-			try
-			{
-				con = DatabaseFactory.getConnection();
-				PreparedStatement stmt = con.prepareStatement("REPLACE INTO player_settings values (?, ?, ?)");
-				stmt.setInt(1, playerId);
-				stmt.setInt(2, 0);
-				stmt.setBytes(3, uiSettings);
-				stmt.execute();
-			}
-			catch(Exception e)
-			{
-				log.error(e);
-			}
-			finally
-			{
-				DatabaseFactory.close(con);
-			}
-		}
-
-		if(shortcuts != null)
-		{
-			Connection con = null;
-			try
-			{
-				con = DatabaseFactory.getConnection();
-				PreparedStatement stmt = con.prepareStatement("REPLACE INTO player_settings values (?, ?, ?)");
-				stmt.setInt(1, playerId);
-				stmt.setInt(2, 1);
-				stmt.setBytes(3, shortcuts);
-				stmt.execute();
-			}
-			catch(Exception e)
-			{
-				log.error(e);
-			}
-			finally
-			{
-				DatabaseFactory.close(con);
-			}
-		}
-		
-		Connection con = null;
-		try
-		{
-			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("REPLACE INTO player_settings values (?, ?, ?)");
-			stmt.setInt(1, playerId);
-			stmt.setInt(2, 2);
-			stmt.setInt(3, display);
-			stmt.execute();
-		}
-		catch(Exception e)
-		{
-			log.error(e);
-		}
-		finally
-		{
-			DatabaseFactory.close(con);
-		}
-		
-		con = null;
-		try
-		{
-			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("REPLACE INTO player_settings values (?, ?, ?)");
-			stmt.setInt(1, playerId);
-			stmt.setInt(2, 3);
-			stmt.setInt(3, deny);
-			stmt.execute();
-		}
-		catch(Exception e)
-		{
-			log.error(e);
-		}
-		finally
-		{
-			DatabaseFactory.close(con);
-		}
+	    final PlayerSettings playerSettings = new PlayerSettings();
+	    Connection con = null;
+	    try
+	    {
+	        con = DatabaseFactory.getConnection();
+	        PreparedStatement statement = con.prepareStatement("SELECT * FROM player_settings WHERE player_id = ?");
+	        statement.setInt(1, objId);
+	        ResultSet resultSet = statement.executeQuery();
+	        while (resultSet.next())
+	        {
+	            int type = resultSet.getInt("settings_type");
+	            switch (type)
+	            {
+	                case 0:
+	                    playerSettings.setUiSettings(resultSet.getBytes("settings"));
+	                    break;
+	                case 1:
+	                    playerSettings.setShortcuts(resultSet.getBytes("settings"));
+	                    break;
+	                case 2:
+	                    playerSettings.setDisplay(resultSet.getInt("settings"));
+	                    break;
+	                case 3:
+	                    playerSettings.setDeny(resultSet.getInt("settings"));
+	                    break;
+	            }
+	        }
+	        resultSet.close();
+	        statement.close();
+	    }
+	    catch (Exception e)
+	    {
+	        log.fatal("Could not restore PlayerSettings data for player " + objId + " from DB: " + e.getMessage(), e);
+	    }
+	    finally
+	    {
+	        DatabaseFactory.close(con);
+	    }
+	    return playerSettings;
 	}
 
-	@Override
-	public boolean supports(String databaseName, int majorVersion, int minorVersion)
-	{
-		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
+    @Override
+    public boolean supports(String databaseName, int majorVersion, int minorVersion) {
+        return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
 	}
 }

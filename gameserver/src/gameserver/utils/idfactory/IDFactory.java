@@ -1,45 +1,46 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.utils.idfactory;
 
 import commons.database.dao.DAOManager;
 import gameserver.dao.IdViewDAO;
 import org.apache.log4j.Logger;
-
 import java.util.BitSet;
 import java.util.concurrent.locks.ReentrantLock;
-
 
 /**
  * This class is responsible for id generation for all Aion-Knight Dev. Team objects.<br>
  * This class is Thread-Safe.<br>
  * This class is designed to be very strict with id usage. Any illegal operation will throw {@link IDFactoryError}
- * 
- * @author SoulKeeper
  */
 public class IDFactory
 {
 
 	private static final Logger	log	= Logger.getLogger(IDFactory.class);
 	/**
-	 * Bitset that is used for all id's.<br>
+	 * Bitset that is used for all id's.
 	 * We are allowing BitSet to grow over time, so in the end it can be as big as {@link Integer#MAX_VALUE}
 	 */
-	private final BitSet		idList;
+	private final BitSet idList;
 
 	/**
 	 * Synchronization of bitset
@@ -49,7 +50,7 @@ public class IDFactory
 	/**
 	 * Id that will be used as minimal on next id request
 	 */
-	private volatile int		nextMinId	= 0;
+	private volatile int nextMinId	= 0;
 
 	/**
 	 * Returns next free id.
@@ -68,7 +69,7 @@ public class IDFactory
 		// Here should be calls to all IDFactoryAwareDAO implementations to initialize
 		// used values in IDFactory
 		lockIds(DAOManager.getDAO(IdViewDAO.class).getUsedIDs());
-		log.info("IDFactory: " + getUsedCount() + " id's used.");
+		log.info("ID Factory: " + getUsedCount() + " id's used.");
 	}
 
 	public static final IDFactory getInstance()

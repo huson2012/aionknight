@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
  */
-package gameserver.network.aion.clientpackets;
 
+package gameserver.network.aion.clientpackets;
 
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.QuestsData;
@@ -26,37 +26,35 @@ import gameserver.network.aion.serverpackets.SM_QUEST_ACCEPTED;
 import gameserver.quest.QuestEngine;
 import gameserver.services.GuildService;
 
-public class CM_DELETE_QUEST extends AionClientPacket
+public class CM_DELETE_QUEST extends AionClientPacket 
 {
 
-	static QuestsData		questsData = DataManager.QUEST_DATA;
-	public int questId;
-	
-	public CM_DELETE_QUEST(int opcode)
-	{
-		super(opcode);
-	}
+    static QuestsData questsData = DataManager.QUEST_DATA;
+    public int questId;
 
-
-	@Override
-	protected void readImpl()
+    public CM_DELETE_QUEST(int opcode) 
 	{
-		questId = readH();
-	}
+        super(opcode);
+    }
 
-	@Override
-	protected void runImpl()
+    @Override
+    protected void readImpl() 
 	{
-		Player player = getConnection().getActivePlayer();
-		if(questsData.getQuestById(questId).isTimer())
-		{
-			player.getController().cancelTask(TaskId.QUEST_TIMER);
-			sendPacket(new SM_QUEST_ACCEPTED(4, questId, 0));
-		}		
-		if (!QuestEngine.getInstance().deleteQuest(player, questId))
-			return;
-		sendPacket(new SM_QUEST_ACCEPTED(questId));
+        questId = readH();
+    }
+
+    @Override
+    protected void runImpl() 
+	{
+        Player player = getConnection().getActivePlayer();
+        if (questsData.getQuestById(questId).isTimer()) {
+            player.getController().cancelTask(TaskId.QUEST_TIMER);
+            sendPacket(new SM_QUEST_ACCEPTED(questId, 0));
+        }
+        if (!QuestEngine.getInstance().deleteQuest(player, questId))
+            return;
+        sendPacket(new SM_QUEST_ACCEPTED(questId));
 		GuildService.getInstance().deleteDaily(player, questId);
-		player.getController().updateNearbyQuests();
-	}
+        player.getController().updateNearbyQuests();
+    }
 }

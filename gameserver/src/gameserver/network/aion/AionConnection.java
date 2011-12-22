@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.network.aion;
@@ -44,63 +48,63 @@ import java.util.List;
 public class AionConnection extends AConnection
 {
 	/**
-	 * Logger for this class.
+	 * Logger для этого класса.
 	 */
 	private static final Logger	log	= Logger.getLogger(AionConnection.class);
 
 	/**
-	 * Possible states of AionConnection
+	 * Возможные состояния AionConnection
 	 */
 	public static enum State
 	{
 		/**
-		 * client just connect
+		 * клиент просто подключите
 		 */
 		CONNECTED,
 		/**
-		 * client is authenticated
+		 * клиент аутентифицируется
 		 */
 		AUTHED,
 		/**
-		 * client entered world.
+		 * клиент вошел мира.
 		 */
 		IN_GAME
 	}
 
 	/**
-	 * Server Packet "to send" Queue
+	 * Сервер Пакет "отправить" Очереди
 	 */
-	private final FastList<AionServerPacket>	sendMsgQueue	= new FastList<AionServerPacket>();
+	private final FastList<AionServerPacket> sendMsgQueue = new FastList<AionServerPacket>();
 
 	/**
-	 * Current state of this connection
+	 * Состояние соединения
 	 */
-	private State							state;
+	private State state;
 
 	/**
-	 * AionClient is authenticating by passing to GameServer id of account.
+	 * AionClient-аутентификации путем перехода к GameServer id учетной записи.
 	 */
-	private Account							account;
+	private Account	account;
 
 	/**
-	 * Crypt that will encrypt/decrypt packets.
+	 * Crypt, которая будет шифровать/расшифровывать пакеты.
 	 */
-	private final Crypt						crypt = new Crypt ();
+	private final Crypt	crypt = new Crypt ();
 
 	/**
-	 * active Player that owner of this connection is playing [entered game]
+	 * активный Игрок, владеющий этой связи играет [вошел игры]
 	 */
-	private Player							activePlayer;
-	private String							lastPlayerName = "";
+	private Player activePlayer;
+	private String lastPlayerName = "";
 
-	private AionPacketHandler				aionPacketHandler;
-	private long                     		lastPingTimeMS;
+	private AionPacketHandler aionPacketHandler;
+	private long lastPingTimeMS;
 	
 	private int nbInvalidPackets = 0;
 	private final static int MAX_INVALID_PACKETS = 3;
 
 	/**
-	 * Constructor
+	 * Конструктор
 	 * 
 	 * @param sc
 	 * @param d
@@ -118,7 +122,10 @@ public class AionConnection extends AConnection
 
 		String ip = getIP();
 		log.debug("connection from: " + ip);
-		// Anti-spamm
+		
+		/**
+		 * Анти-Спам
+		 */
 		List<String> IPsException = Arrays.asList(FloodConfig.FLOOD_CONTROLLER_EXCEPTIONS.split(","));
 		
 		if (!FloodController.exist(ip) || !FloodController.checkFlood(ip) || IPsException.contains(ip))

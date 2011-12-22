@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.network.aion;
@@ -24,7 +28,6 @@ import gameserver.model.gameobjects.player.PlayerCommonData;
 import gameserver.model.items.GodStone;
 import gameserver.model.items.ItemSlot;
 import org.apache.log4j.Logger;
-
 import java.nio.ByteBuffer;
 import java.util.List;
 
@@ -34,7 +37,6 @@ public abstract class PlayerInfo extends AionServerPacket
 
 	protected PlayerInfo()
 	{
-
 	}
 
 	protected void writePlayerInfo(ByteBuffer buf, PlayerAccountData accPlData)
@@ -49,86 +51,63 @@ public abstract class PlayerInfo extends AionServerPacket
 		writeD(buf, genderId);
 		writeD(buf, raceId);
 		writeD(buf, pbd.getPlayerClass().getClassId());
-
 		writeD(buf, playerAppearance.getVoice());
-
 		writeD(buf, playerAppearance.getSkinRGB());
 		writeD(buf, playerAppearance.getHairRGB());
 		writeD(buf, playerAppearance.getEyeRGB());
 		writeD(buf, playerAppearance.getLipRGB());
-
 		writeC(buf, playerAppearance.getFace());
 		writeC(buf, playerAppearance.getHair());
 		writeC(buf, playerAppearance.getDecoration());
-		writeC(buf, playerAppearance.getTattoo());
-		
+		writeC(buf, playerAppearance.getTattoo());		
 		writeC(buf, playerAppearance.getFaceContour());
 		writeC(buf, playerAppearance.getExpression());
-
 		writeC(buf, 6);// always 6 - 2.5.x
-
 		writeC(buf, playerAppearance.getJawLine());
-
 		writeC(buf, playerAppearance.getForehead());
-
 		writeC(buf, playerAppearance.getEyeHeight());
 		writeC(buf, playerAppearance.getEyeSpace());
 		writeC(buf, playerAppearance.getEyeWidth());
 		writeC(buf, playerAppearance.getEyeSize());
 		writeC(buf, playerAppearance.getEyeShape());
 		writeC(buf, playerAppearance.getEyeAngle());
-
 		writeC(buf, playerAppearance.getBrowHeight());
 		writeC(buf, playerAppearance.getBrowAngle());
 		writeC(buf, playerAppearance.getBrowShape());
-
 		writeC(buf, playerAppearance.getNose());
 		writeC(buf, playerAppearance.getNoseBridge());
 		writeC(buf, playerAppearance.getNoseWidth());
 		writeC(buf, playerAppearance.getNoseTip());
-
 		writeC(buf, playerAppearance.getCheeks());
 		writeC(buf, playerAppearance.getLipHeight());
 		writeC(buf, playerAppearance.getMouthSize());
 		writeC(buf, playerAppearance.getLipSize());
 		writeC(buf, playerAppearance.getSmile());
 		writeC(buf, playerAppearance.getLipShape());
-
 		writeC(buf, playerAppearance.getChinHeight());
 		writeC(buf, playerAppearance.getCheekBones());
-
 		writeC(buf, playerAppearance.getEarShape());
 		writeC(buf, playerAppearance.getHeadSize());
-
 		writeC(buf, playerAppearance.getNeck());
 		writeC(buf, playerAppearance.getNeckLength());
 		writeC(buf, playerAppearance.getShoulderSize());
-
 		writeC(buf, playerAppearance.getTorso());
 		writeC(buf, playerAppearance.getChest());
 		writeC(buf, playerAppearance.getWaist());
 		writeC(buf, playerAppearance.getHips());
-
 		writeC(buf, playerAppearance.getArmThickness());
-		writeC(buf, playerAppearance.getHandSize());
-		
+		writeC(buf, playerAppearance.getHandSize());		
 		writeC(buf, playerAppearance.getLegThickness());
-		writeC(buf, playerAppearance.getFootSize());
-		
+		writeC(buf, playerAppearance.getFootSize());		
 		writeC(buf, playerAppearance.getFacialRatio());
-		writeC(buf, 0x00); // 0x00
-		
+		writeC(buf, 0x00); // 0x00	
 		writeC(buf, playerAppearance.getArmLength());
-		writeC(buf, playerAppearance.getLegLength());
-		
+		writeC(buf, playerAppearance.getLegLength());	
 		writeC(buf, playerAppearance.getShoulders());
-		writeC(buf, playerAppearance.getFaceShape());
-		
-		writeC(buf, 0x00); // always 0 may be acessLevel
-		
+		writeC(buf, playerAppearance.getFaceShape());		
+		writeC(buf, 0x00); // always 0 may be acessLevel		
 		writeC(buf, 0x00); // always 0 - unk -17
 		writeC(buf, 0x00); // added 119
-
 		writeF(buf, playerAppearance.getHeight());
 		int raceSex = 100000 + raceId * 2 + genderId;
 		writeD(buf, raceSex);

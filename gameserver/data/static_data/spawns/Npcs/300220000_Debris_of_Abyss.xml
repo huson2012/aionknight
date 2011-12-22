@@ -1,52 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
-	<!--
-	This script will build the U3J Project for Aion:
+<!--
 	
-	This program is free software: you can redistribute it and/or modify it under
-	the terms of the GNU General Public License as published by the Free Software
-	Foundation, either version 3 of the License, or (at your option) any later
-	version.
-	
-	This program is distributed in the hope that it will be useful, but WITHOUT
-	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-	FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
-	details.
-	
-	You should have received a copy of the GNU General Public License along with
-	this program. If not, see "http://www.gnu.org/licenses"
-	-->
-
+	Назначение файла: Описание и координаты расположения NPC
+	========================================================
+	Название локации: Руины хаоса
+	Описание: Балауры,  Завоевавшие одну из крепостей  Бездны, Крепость святости, установили 
+	здесь магические  пространственны  врата, надеясь открыть путь к элийцам или  асмодианам, 
+	но эти врата привели их к  малой Бездне. Это место образовано огромным  кристаллом эфира, 
+	отделившимся от Айона, и закрыто от других при помощи Артефакта защиты. В течение долгих 
+	лет артефакт создавал пространство вокруг себя, чтобы увеличить возможности  для обороны. 
+	Также и существа, обитающие здесь, мутировали  под влиянием  артефакта, служат хранителю 
+	артефакта и стараются, чтобы артефакт был сохранен. Даэвы, завоевавшие Крепость святости, 
+	могут начать битву за артефакт в малой бездне, воспользовавшись тоннелем, созданным 
+	балаурами.
+	========================================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: Aion 2.7 (Иннова)
+	========================================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 20/12/2011 (Frost)
+ 
+ -->
 <spawns>
-	<!-- Abyssal Splinter Exit -->
+	<!-- 
+	Название: Выход из Руин хаоса
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="730317" pool="1">
 		<object staticid="84" x="709.81561" y="160.09514" h="0" z="453.43399"/>
 	</spawn>
-	<!-- Polearm of Akarios -->
+	<!-- 
+	Название: Копье Акариоса
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="700864" pool="1">
 		<object staticid="3" x="422.04611" y="680.90729" h="0" z="442.43668"/>
 	</spawn>
-	<!-- Worn Book -->
+	<!-- 
+	Название: Старый журнал
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="700865" pool="1">
 		<object staticid="1" x="462.79999" y="735.00574" h="0" z="438.70291"/>
 	</spawn>
-	<!-- Broken Orkanimum -->
+	<!-- 
+	Название: Разрушенный орканиум
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="700862" pool="1">
 		<object staticid="21" x="755.47302" y="567.20331" h="0" z="464.65384"/>
 	</spawn>
-	<!-- Huge Aether Fragment
+	<!-- 
+	Название: Огромный осколок эфира
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="700955" pool="3">
 		<object x="452.897" y="692.361" h="0" z="432.692"/>
 		<object x="633.75" y="557.882" h="0" z="423.124"/>
 		<object x="669.576" y="335.135" h="0" z="465.895"/>
-	</spawn> -->
-	<!-- Artefact de protection -->
+	</spawn>
+	<!-- 
+	Название: Артефакт защиты
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="700856" pool="1">
 		<object staticid="79" x="327.89014" y="770.41431" h="0" z="201.64903"/>
 		<object staticid="78" x="327.89014" y="770.41431" h="0" z="201.64903"/>
 		<object staticid="60" x="327.89014" y="770.41431" h="0" z="201.64903"/>
 	</spawn>
-	<!-- Vieux coffre au tresor--> 
+	<!-- 
+	Название: Сундук с древними сокровищами
+	Описание: Объект
+	-->
 	<spawn map="300220000" interval="105" npcid="700859" pool="12">
 		<object x="306.507" y="715.272" h="0" z="370.919"/>
 		<object x="368.292" y="771.303" h="0" z="349.94"/>
@@ -61,6 +87,10 @@
 		<object x="280.992" y="767.557" h="0" z="291.909"/>
 		<object x="270.471" y="743.99" h="0" z="321.996"/>
 	</spawn>
+	<!-- 
+	Название: Осколок орканиума
+	Описание: Объект
+	-->
 	<spawn map="300220000" npcid="700863" pool="7" interval="295">
 		<object x="639.3" y="263.331" z="463.046" h="107"/>
 		<object x="653.494" y="229.03" z="460.657" h="31"/>

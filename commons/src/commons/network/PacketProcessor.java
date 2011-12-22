@@ -1,3 +1,24 @@
+/**
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
+ *
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ */
+
 package commons.network;
 
 import java.util.ArrayList;
@@ -7,17 +28,13 @@ import java.util.ListIterator;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import org.apache.log4j.Logger;
-
 import commons.network.packet.BaseClientPacket;
 
 
 /**
  * Packet Processor responsible for executing packets in correct order with respecting rules: - 1 packet / client at one
  * time. - execute packets in received order.
- * 
- * @author -Nemesiss-
  * @param <T>
  *           AConnection - owner of client packets.
  * 
@@ -27,45 +44,45 @@ public class PacketProcessor<T extends AConnection>
 	/**
 	 * Logger for PacketProcessor
 	 */
-	private static final Logger				log					= Logger.getLogger(PacketProcessor.class.getName());
+	private static final Logger	log	= Logger.getLogger(PacketProcessor.class.getName());
 	/**
 	 * When one working thread should be killed.
 	 */
-	private final static int				reduceThreshold		= 3;
+	private final static int reduceThreshold	= 3;
 	/**
 	 * When one working thread should be created.
 	 */
-	private final static int				increaseThreshold	= 50;
+	private final static int increaseThreshold = 50;
 
 	/**
 	 * Lock for synchronization.
 	 */
-	private final Lock						lock				= new ReentrantLock();
+	private final Lock lock = new ReentrantLock();
 
 	/**
 	 * Not Empty condition.
 	 */
-	private final Condition					notEmpty			= lock.newCondition();
+	private final Condition	notEmpty = lock.newCondition();
 
 	/**
 	 * Queue of packet that will be executed in correct order.
 	 */
-	private final List<BaseClientPacket<T>>	packets				= new LinkedList<BaseClientPacket<T>>();
+	private final List<BaseClientPacket<T>>	packets	= new LinkedList<BaseClientPacket<T>>();
 
 	/**
 	 * Working threads.
 	 */
-	private final List<Thread>				threads				= new ArrayList<Thread>();
+	private final List<Thread> threads = new ArrayList<Thread>();
 
 	/**
 	 * minimum number of working Threads
 	 */
-	private final int						minThreads;
+	private final int minThreads;
 
 	/**
 	 * maximum number of working Threads
 	 */
-	private final int						maxThreads;
+	private final int maxThreads;
 
 	/**
 	 * Create and start PacketProcessor responsible for executing packets.
@@ -184,9 +201,6 @@ public class PacketProcessor<T extends AConnection>
 	/**
 	 * Packet Processor Task that will execute packet with respecting rules: - 1 packet / client at one time. - execute
 	 * packets in received order.
-	 * 
-	 * @author -Nemesiss-
-	 * 
 	 */
 	private final class PacketProcessorTask implements Runnable
 	{
@@ -222,20 +236,17 @@ public class PacketProcessor<T extends AConnection>
 
 	/**
 	 * Checking if PacketProcessor is busy or idle and increasing / reducing numbers of threads.
-	 * 
-	 * @author -Nemesiss-
-	 * 
 	 */
 	private final class CheckerTask implements Runnable
 	{
 		/**
 		 * How often CheckerTask should do check.
 		 */
-		private final int	sleepTime	= 60 * 1000;
+		private final int sleepTime	= 60 * 1000;
 		/**
 		 * Number of packets waiting for execution on last check.
 		 */
-		private int			lastSize	= 0;
+		private int	lastSize = 0;
 
 		/**
 		 * {@inheritDoc}

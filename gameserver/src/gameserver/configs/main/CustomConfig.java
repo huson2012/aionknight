@@ -264,4 +264,7 @@ public class CustomConfig
 
     @Property(key = "gameserver.dredgion.enable", defaultValue = "true")
     public static boolean ENABLE_DREDGION;
+
+	@Property(key = "gameserver.broker.expiretime", defaultValue = "8")
+	public static long BROKER_EXPIRE_TIME;
 }

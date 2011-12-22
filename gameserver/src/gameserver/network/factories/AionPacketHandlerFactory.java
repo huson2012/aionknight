@@ -25,15 +25,14 @@ import gameserver.network.aion.clientpackets.*;
 public class AionPacketHandlerFactory
 {
 	private AionPacketHandler	handler;
-
 	public static final AionPacketHandlerFactory getInstance()
 	{
 		return SingletonHolder.instance;
 	}
 
 	/**
-	* Creates new instance of <tt>AionPacketHandlerFactory</tt><br>
-	*/
+	 * Creates new instance of <tt>AionPacketHandlerFactory</tt><br>
+	 */
 		private AionPacketHandlerFactory()
 		{
 		handler = new AionPacketHandler();
@@ -68,11 +67,9 @@ public class AionPacketHandlerFactory
         addPacket(new CM_PLAYER_SEARCH(0x0112), State.IN_GAME);// 2.6 0x12, 2.7
         addPacket(new CM_LEGION_UPLOAD_INFO(0x0113), State.IN_GAME);// 2.6 0x13, 2.7 Testing
 		addPacket(new CM_BLOCK_ADD(0x0115), State.IN_GAME);// 2.6 0x15, 2.7
-
 		addPacket(new CM_FRIEND_STATUS(0x0119), State.IN_GAME);// 2.6 0x19, 2.7
 		addPacket(new CM_BLOCK_DEL(0x011A), State.IN_GAME);// 2.6 0x1A, 2.7 Testing
 		addPacket(new CM_SHOW_BLOCKLIST(0x011B), State.IN_GAME);// 2.6 0x1B, 2.7
-
 		addPacket(new CM_MAC_ADDRESS2(0x011D), State.IN_GAME);// 2.6 0x1D, 2.7
         addPacket(new CM_CHANGE_CHANNEL(0x011F), State.IN_GAME);// 2.6 0x1F, 2.7
         addPacket(new CM_CHECK_NICKNAME(0x0120), State.AUTHED);// 2.6 0x20, 2.7
@@ -100,7 +97,6 @@ public class AionPacketHandlerFactory
         addPacket(new CM_SUMMON_ATTACK(0x013E), State.IN_GAME);// 2.6 0x3E, 2.7
 		addPacket(new CM_PLAY_MOVIE_END(0x0140), State.IN_GAME);//  2.6 0x40, 2.7
         addPacket(new CM_DELETE_QUEST(0x0143), State.IN_GAME);// 2.6 0x43, 2.7
-
 		addPacket(new CM_EXIT_EC(0x47), State.IN_GAME); // 2.5 -- NEW!
 		addPacket(new CM_ITEM_REMODEL(0x0149), State.IN_GAME);// 2.6 0x49, 2.7
 		addPacket(new CM_GODSTONE_SOCKET(0x014E), State.IN_GAME);//  2.6 0x4E, 2.7
@@ -137,7 +133,6 @@ public class AionPacketHandlerFactory
 		addPacket(new CM_CLIENT_COMMAND_LOC(0x017D), State.IN_GAME);// 2.6 0x7D (2.7 Disabled in Retail?)
         addPacket(new CM_TITLE_SET(0x017E), State.IN_GAME);// 2.6 0x7E, 2.7
 		addPacket(new CM_TIME_CHECK(0x0081), State.CONNECTED, State.AUTHED, State.IN_GAME);// 2.6 0x81, 2.7
-		// Unknown 2.7 - 82 00 57 7D FF (After Channel Change or Spawn, before CM_LEVEL_READY)
 		addPacket(new CM_LEGION_EMBLEM(0x0083), State.IN_GAME);// 2.6 0x83, 2.7
         addPacket(new CM_PET_MOVE(0x0084), State.IN_GAME);// 2.6 0x84, 2.7
         addPacket(new CM_PET(0x0085), State.IN_GAME);// 2.6 0x85, 2.7
@@ -147,13 +142,12 @@ public class AionPacketHandlerFactory
 		addPacket(new CM_CHAT_MESSAGE_PUBLIC(0x008E), State.IN_GAME);// 2.6 0x8E, 2.7
 		addPacket(new CM_CHAT_MESSAGE_WHISPER(0x008F), State.IN_GAME);// 2.6 0x8F, 2.7
 	    addPacket(new CM_CASTSPELL(0x0090), State.IN_GAME);//  2.6 0x90, 2.7
-		addPacket(new CM_SKILL_DEACTIVATE(0x0191), State.IN_GAME); // 2.6 0x91, 2.7
+		addPacket(new CM_SKILL_DEACTIVATE(0x0091), State.IN_GAME); // 2.6 0x91, 2.7
         addPacket(new CM_TARGET_SELECT(0x0092), State.IN_GAME);// 2.6 0x92, 2.7
         addPacket(new CM_ATTACK(0x0093), State.IN_GAME);// 2.6 0x93, 2.7
         addPacket(new CM_USE_ITEM(0x0094), State.IN_GAME);// 2.6 0x94, 2.7
 		addPacket(new CM_EQUIP_ITEM(0x0095), State.IN_GAME);// 2.6 0x95, 2.7
         addPacket(new CM_REMOVE_ALTERED_STATE(0x0096), State.IN_GAME);// 2.6 0x96, 2.7
-
         addPacket(new CM_PLAYER_LISTENER(0x009B), State.IN_GAME);// 2.6 0x9B, 2.7
 		addPacket(new CM_LEGION(0x009C), State.IN_GAME);// 2.6 0x9C, 2.7
 		addPacket(new CM_EXIT_LOCATION(0x9D), State.IN_GAME);// 2.1

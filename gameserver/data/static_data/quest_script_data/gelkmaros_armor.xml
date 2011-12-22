@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 
-	Назначение файла	: Описание квестов
+	Назначение файла	: Описание скриптовых квестов
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 (Beta version)
 	Версия клиента		: 2.7 (Иннова)
-
- -->
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 20/12/2011 (Frost)
+ 
+-->
 <quest_scripts>
-	<!-- Trouble in Stone -->
+	<!-- Брешь в обороне -->
 	<item_collecting id="21051" start_npc_id="799291"/>
-	<!-- Dragon Hunting -->
+	<!-- Несокрушимые балауры -->
 	<item_collecting id="21052" start_npc_id="799268"/>
-	<!-- Dramata Drama -->
+	<!-- Неожиданное препятствие -->
 	<item_collecting id="21053" start_npc_id="799320"/>
-	<!-- [Group] Mission of Destiny -->
+	<!-- [Группа] Роковая миссия -->
 	<item_collecting id="21054" start_npc_id="799318"/>
-	<!-- [Group] Ortiz's Plan -->
+	<!-- [[Группа] План Ортиза -->
 	<item_collecting id="21055" start_npc_id="799295"/>
 </quest_scripts>
