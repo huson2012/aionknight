@@ -1,19 +1,24 @@
-/*
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.network.aion;
 
 import gameserver.model.gameobjects.Item;
@@ -24,7 +29,6 @@ import gameserver.model.items.ItemSlot;
 import gameserver.model.items.ItemStone;
 import gameserver.model.items.ManaStone;
 import gameserver.model.templates.item.ItemTemplate;
-
 import java.nio.ByteBuffer;
 import java.util.Set;
 
@@ -85,22 +89,15 @@ public abstract class InventoryPacket extends AionServerPacket
 		writeD(buf, 0);
 		writeH(buf, 0);
 		writeD(buf, item.getItemTemplate().getStigma().getShard());  // Shard
-
 		writeB(buf, new byte[160]);
-
 		writeD(buf, 1); // unk 1
-
 		writeB(buf, new byte[82]);
-
 		writeH(buf, 0x0b); // unk 0B 00
 		writeC(buf, 0);
 		writeD(buf, item.getItemTemplate().getTemplateId());
 		writeB(buf, new byte[43]);
-
 		writeD(buf, 66110); //3E 02 01 00
-
 		writeB(buf, new byte[27]);
-
 		writeH(buf, item.getEquipmentSlot()); // Item slot
 		writeC(buf, 0);
 	}
@@ -149,23 +146,16 @@ public abstract class InventoryPacket extends AionServerPacket
 		}
 
 		writeC(buf, 0x06);
-
 		writeD(buf, item.isEquipped() ? itemSlotId : 0x00);
-
 		writeC(buf, 0x01);
-
 		writeD(buf, ItemSlot.getSlotsFor(item.getItemTemplate().getItemSlot()).get(0).getSlotIdMask());
 		writeD(buf, item.hasFusionedItem() ? 0x00 : 0x02);
-
 		writeC(buf, 0x0B); //? some details separator
-
 		writeC(buf, item.isSoulBound() ? 1 : 0);
 		writeC(buf, item.getEnchantLevel());//enchant (1-15)
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
 		writeC(buf, item.hasOptionalSocket() ? item.getOptionalSocket() : 0x00);
-
 		writeItemStones(buf, item);
-
 		ItemStone god = item.getGodStone();
 		writeD(buf, god == null ? 0 : god.getItemId());
 		writeD(buf, 0);
@@ -192,13 +182,11 @@ public abstract class InventoryPacket extends AionServerPacket
 		writeD(buf, item.getTempTradeTimeLeft());
 		writeD(buf, 0);//unk 2.5
 		writeH(buf, 0);//unk 2.5
-
+		
 		size = buf.position() - sizeLoc;
 		placeHolder = buf.position();
 		buf.position(sizeLoc - 2);
-
 		writeH(buf, size);
-
 		buf.position(placeHolder);
 	}
 
@@ -217,6 +205,7 @@ public abstract class InventoryPacket extends AionServerPacket
 	protected void writeItemStones(ByteBuffer buf, Item item)
 	{
 		int count = 0;
+		
 		//TODO implement new area to store the values for the manastones
 		if(item.hasManaStones())
 		{
@@ -286,7 +275,7 @@ public abstract class InventoryPacket extends AionServerPacket
 			writeB(buf, new byte[24]);
 		}
 
-		//for now max 6 stones - write some junk
+		// for now max 6 stones - write some junk
 	}
 
 	/**
@@ -311,19 +300,14 @@ public abstract class InventoryPacket extends AionServerPacket
 		writeC(buf, item.isSoulBound() ? 1 : 0);
 		writeC(buf, item.getEnchantLevel()); //enchant (1-15)
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
-
 		writeC(buf, item.hasOptionalSocket() ? item.getOptionalSocket() : 0x00);
-
 		writeItemStones(buf, item);
-
 		writeC(buf, 0);
 		writeD(buf, item.getItemColor());
 		writeD(buf, 0);
-
 		writeD(buf, 0);//unk 1.5.1.9
 		writeD(buf, 0);
 		writeC(buf, 0);
-
 		writeH(buf, item.getItemMask());
 		writeQ(buf, item.getItemCount());
 		writeS(buf, item.getCrafterName());// Crafter

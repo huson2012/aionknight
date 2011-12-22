@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.cache;
@@ -21,7 +25,6 @@ import gameserver.configs.main.HTMLConfig;
 import javolution.util.FastMap;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +46,7 @@ public final class HTMLCache
     private static final File HTML_ROOT = new File(HTMLConfig.HTML_ROOT);
     private static final class SingletonHolder
     {
-		private static final HTMLCache  INSTANCE        = new HTMLCache();
+		private static final HTMLCache INSTANCE = new HTMLCache();
     }
 
     public static HTMLCache getInstance()
@@ -60,7 +63,7 @@ public final class HTMLCache
 		reload(false);
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("Unchecked")
     public synchronized void reload(boolean deleteCacheFile)
     {
 		cache.clear();
@@ -71,15 +74,15 @@ public final class HTMLCache
 
 		if(deleteCacheFile && cacheFile.exists())
 		{
-			log.info("Cache[HTML]: Deleting cache file... OK.");
+			log.info("HTML Cache: Deleting cache file... Ok!");
 			cacheFile.delete();
 		}
 
-		log.info("Cache[HTML]: Caching started... OK.");
+		log.info("HTML Cache: Caching started... Ok!");
 
 		if(cacheFile.exists())
 		{
-			log.info("Cache[HTML]: Using cache file... OK.");
+			log.info("HTML Cache: Using cache file... Ok!");
 			ObjectInputStream ois = null;
 			try
 		{
@@ -109,11 +112,11 @@ public final class HTMLCache
             log.info(String.valueOf(this));
             if(cacheFile.exists())
             {
-				log.info("Cache[HTML]: Compaction skipped!");
+				log.info("HTML Cache: Compaction skipped!");
             }
             else
             {
-				log.info("Cache[HTML]: Compacting htmls... OK.");
+				log.info("HTML Cache: Compacting htmls... Ok!");
 				final StringBuilder sb = new StringBuilder(8192);
 
 				for(Entry<String, String> entry : cache.entrySet())
@@ -128,7 +131,7 @@ public final class HTMLCache
 					}
 						catch(RuntimeException e)
 					{
-					log.warn("Cache[HTML]: Error during compaction of " + entry.getKey(), e);
+					log.warn("[!] HTML Cache: Error during compaction of " + entry.getKey(), e);
 				}
 			}
 				log.info(String.valueOf(this));
@@ -136,7 +139,7 @@ public final class HTMLCache
 
             if(!cacheFile.exists())
             {
-				log.info("Cache[HTML]: Creating cache file... OK.");
+				log.info("HTML Cache: Creating cache file... Ok!");
 				ObjectOutputStream oos = null;
 				try
 				{
@@ -224,7 +227,7 @@ public final class HTMLCache
     public void reloadPath(File f)
     {
 		parseDir(f);
-		log.info("Cache[HTML]: Reloaded specified path.");
+		log.info("HTML Cache: Reloaded specified path.");
     }
 
     public void parseDir(File dir)
@@ -264,7 +267,7 @@ public final class HTMLCache
 			}
 			catch(Exception e)
 			{
-				log.warn("Problem with htm file: ", e);
+				log.warn("[!] Problem with HTML file: ", e);
 			}
 		finally
 		{
@@ -293,8 +296,8 @@ public final class HTMLCache
     @Override
     public String toString()
     {
-		return "Cache[HTML]: " + String.format("%.3f", (float) size / 1024) + " kilobytes on " + loadedFiles
-		+ " file(s) loaded.";
+		return "HTML Cache: " + String.format("%.3f", (float) size / 1024) + " Kb on " + loadedFiles
+		+ " file(s)";
     }
 
     public static String getRelativePath(File base, File file)

@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-  ~ This file is part of aion-emu.
-  ~
-  ~ aion-emu is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ aion-emu is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with aion-emu.  If not, see <http://www.gnu.org/licenses/>.
-  -->
 
+  Назначение файла: Схема XML-документа
+  ===============================================================================================================
+  Описание: Файл XSD определяет схему XML-документа - его структуру, порядок элементов; правила, которым должен 
+  соответствовать документ. В схеме определяются: элементы, атрибуты, которые будут присутствовать в документе, 
+  типы данных этих элементов и атрибутов, значения по умолчанию или фиксированные значения. Также возможно добав-
+  ление определений дочерних элементов, их порядка и количества. Данные должны быть записаны в соответствии с 
+  W3C XML Schema language.
+  ===============================================================================================================
+  Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+  Веб-cайт разработчиков: http://aion-knight.ru
+   
+ -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:element name="scriptinfo" type="scriptInfo"/>

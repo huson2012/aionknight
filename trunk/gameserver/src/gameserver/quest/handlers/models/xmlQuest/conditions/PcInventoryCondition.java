@@ -1,35 +1,33 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.quest.handlers.models.xmlQuest.conditions;
 
 import gameserver.model.gameobjects.player.Player;
 import gameserver.quest.model.QuestCookie;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
-/**
- * @author Mr. Poke
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PcInventoryCondition")
 public class PcInventoryCondition extends QuestCondition
@@ -42,7 +40,6 @@ public class PcInventoryCondition extends QuestCondition
 
 	/**
 	 * Gets the value of the itemId property.
-	 * 
 	 */
 	public int getItemId()
 	{
@@ -51,7 +48,6 @@ public class PcInventoryCondition extends QuestCondition
 
 	/**
 	 * Gets the value of the count property.
-	 * 
 	 */
 	public long getCount()
 	{
@@ -64,24 +60,24 @@ public class PcInventoryCondition extends QuestCondition
     @Override
     public boolean doCheck(QuestCookie env)
     {
-            Player player = env.getPlayer();
+        Player player = env.getPlayer();
             long itemCount = player.getInventory().getItemCountByItemId(itemId);
             switch (getOp())
             {
-                    case EQUAL:
-                            return itemCount == count;
-                    case GREATER:
-                            return itemCount > count;
-                    case GREATER_EQUAL:
-                            return itemCount >= count;
-                    case LESSER:
-                            return itemCount < count;
-                    case LESSER_EQUAL:
-                            return itemCount <= count;
-                    case NOT_EQUAL:
-                            return itemCount != count;
-                    default:
-                            return false;
-            }
+                case EQUAL:
+                        return itemCount == count;
+                case GREATER:
+                        return itemCount > count;
+                case GREATER_EQUAL:
+                        return itemCount >= count;
+                case LESSER:
+                        return itemCount < count;
+                case LESSER_EQUAL:
+                        return itemCount <= count;
+                case NOT_EQUAL:
+                        return itemCount != count;
+                default:
+            return false;
+        }
     }
 }

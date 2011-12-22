@@ -1,19 +1,24 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.controllers.attack;
 
 import commons.utils.Rnd;
@@ -31,21 +36,12 @@ import gameserver.skill.model.Effect;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.stats.StatFunctions;
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
-
-/**
-
- * @edit kecimis
- * 
- */
 public class AttackUtil
 {
-	
 	/**
 	 * @param attacker
 	 * @param attacked
@@ -57,11 +53,9 @@ public class AttackUtil
 		
 		float damageMultiplier = attacker.getObserveController().getBasePhysicalDamageMultiplier();
 		CreatureGameStats<?> gameStats = attacker.getGameStats();
-		
-		//calculate damage
+
 		int damage = StatFunctions.calculateBaseDamageToTarget(attacker, attacked);
-		
-		//attacked status
+
 		AttackStatus status = calculatePhysicalStatus(attacker, attacked);
 		switch(status)
 		{
@@ -73,10 +67,9 @@ public class AttackUtil
 				break;
 			case PARRY:
 				damage *= 0.6;
-				break;
+			break;
 		}
-	
-		//attacker status
+
 		int criticalReduce = attacked.getGameStats().getCurrentStat(StatEnum.PHYSICAL_CRITICAL_DAMAGE_REDUCE);
 		if (calculatePhysicalAttackerStatus(attacker, attacked, 1) == AttackStatus.CRITICAL)
 		{
@@ -93,7 +86,7 @@ public class AttackUtil
 					break;
 				default:
 					status = AttackStatus.CRITICAL;
-					break;
+				break;
 			}
 
 			WeaponType weaponType = null;
@@ -101,14 +94,11 @@ public class AttackUtil
 				weaponType = ((Player)attacker).getEquipment().getMainHandWeaponType();
 			
 			if (weaponType != null)
-				damage = calculateWeaponCritical(damage, criticalReduce, weaponType);
+			damage = calculateWeaponCritical(damage, criticalReduce, weaponType);
 		}
 		
 		damage = Math.round(damage * damageMultiplier);
-
-		//adjust damage
 		damage = adjustDamages(attacker, attacked, damage);
-		
 		
 		switch (status)
 		{
@@ -119,14 +109,13 @@ public class AttackUtil
 			default:
 				if (damage <= 0)
 					damage = 1;
-				break;
+			break;
 		}
 		
 		int hitCount = Rnd.get(1,gameStats.getCurrentStat(StatEnum.MAIN_HAND_HITS));
 		
 		attackList.addAll(splitDamage(hitCount, damage, status));
-		
-		//calculate subhand damage
+
 		if(attacker instanceof Player && ((Player)attacker).getEquipment().getSubHandWeaponType() != null)
 		{
 			int subHandDamage = StatFunctions.calculateSubHandPhysicDamageToTarget(attacker, attacked);
@@ -157,14 +146,11 @@ public class AttackUtil
 					break;
 				default:
 					subHandStatus = AttackStatus.SUBHAND_NORMALHIT;
-					break;
+				break;
 			}
 			
 			subHandDamage = calculateSubHandResult(attacker, attacked, subHandDamage, subHandStatus);
-	
-			//multiplier
 			subHandDamage = Math.round(subHandDamage * damageMultiplier);
-			
 			
 			switch (subHandStatus)
 			{
@@ -175,20 +161,16 @@ public class AttackUtil
 				default:
 					if (subHandDamage <= 0)
 						subHandDamage = 1;
-					break;
+				break;
 			}
-			
-			
+
 			int subHandHits =  Rnd.get(1,gameStats.getCurrentStat(StatEnum.SUB_HAND_HITS));
 			attackList.addAll(splitDamage(subHandHits, subHandDamage, subHandStatus));
 		}
-		
-		//effect on critical hit
+
 		if (CustomConfig.CRITICAL_EFFECTS && status == AttackStatus.CRITICAL)
 			launchEffectOnCritical((Player)attacker,attacked);
-		
-		//check for shield
-		attacked.getObserveController().checkShieldStatus(attackList, attacker);
+			attacked.getObserveController().checkShieldStatus(attackList, attacker);
 		
 		return attackList;
 	}
@@ -227,17 +209,14 @@ public class AttackUtil
 			case RESIST:
 			case CRITICAL_RESIST:
 				damage = 0;
-				break;
+			break;
 		}
 		
 		attackList.add(new AttackResult(damage, status));
-		
-		//check for shield
 		attacked.getObserveController().checkShieldStatus(attackList, attacker);
 		
 		return attackList;
 	}
-	
 	
 	public static List<AttackResult> splitDamage(int hitCount, int damage, AttackStatus status)
 	{
@@ -273,16 +252,16 @@ public class AttackUtil
 			case SUBHAND_DODGE:
 			case SUBHAND_CRITICAL_DODGE:
 				damage = 0;
-				break;
+			break;
 			case SUBHAND_BLOCK:
 			case SUBHAND_CRITICAL_BLOCK:
 				int shieldDamageReduce = attacked.getGameStats().getCurrentStat(StatEnum.DAMAGE_REDUCE);
 				damage -= Math.round((damage * shieldDamageReduce) / 100);
-				break;
+			break;
 			case SUBHAND_PARRY:
 			case SUBHAND_CRITICAL_PARRY:
 				damage *= 0.6;
-				break;
+			break;
 		}
 		
 		//effector status
@@ -295,7 +274,7 @@ public class AttackUtil
 			case SUBHAND_CRITICAL:
 				WeaponType weaponType = ((Player)attacker).getEquipment().getSubHandWeaponType();
 				damage = calculateWeaponCritical(damage, criticalReduce, weaponType);
-				break;
+			break;
 		}
 
 		//adjust damage
@@ -343,7 +322,7 @@ public class AttackUtil
 				break;
 			default:
 				damages = Math.round(damages * 1.5f);
-				break;
+			break;
 		}
 		/** adjust damage with PSYCHICAL_CRITICAL_DAMAGE_REDUCE
 		 * 10 PSYCHICAL_CRITICAL_DAMAGE_REDUCE = -1% from damage
@@ -354,7 +333,6 @@ public class AttackUtil
 	}
 	
 	/**
-	 * 
 	 * @param effect
 	 * @param skillDamage
 	 */
@@ -377,10 +355,9 @@ public class AttackUtil
 				damage *= 0.6;
 				break;
 			default:
-				break;
+			break;
 		}
-		
-		//effector status
+
 		int criticalReduce = effect.getEffected().getGameStats().getCurrentStat(StatEnum.PHYSICAL_CRITICAL_DAMAGE_REDUCE);
 		if (calculatePhysicalAttackerStatus(effector, effected, effect.getCriticalProb()) == AttackStatus.CRITICAL)
 		{
@@ -394,13 +371,13 @@ public class AttackUtil
 					break;
 				default:
 					status = AttackStatus.CRITICAL;
-					break;
+				break;
 			}
 			
 			if (effector instanceof Player)
 				damage = calculateWeaponCritical(damage, criticalReduce, ((Player)effector).getEquipment().getMainHandWeaponType());
 			else
-				damage *= 2;
+			damage *= 2;
 		}
 		
 		//multiply damage
@@ -438,7 +415,7 @@ public class AttackUtil
 				//TODO rest of the cases
 				default:
 					Logger.getLogger(AttackUtil.class).debug("Missing handled rng: "+rng+" for skillId: "+effect.getSkillId());
-					break;
+				break;
 			}
 		}
 		
@@ -452,7 +429,6 @@ public class AttackUtil
 	}
 
 	/**
-	 * 
 	 * @param effect
 	 * @param effected
 	 * @param damage
@@ -470,7 +446,6 @@ public class AttackUtil
 	}
 
 	/**
-	 * 
 	 * @param effect
 	 * @param skillDamage
 	 * @param element
@@ -696,7 +671,7 @@ public class AttackUtil
 								baseDamages *= 1.15;
 							else if(asmo >= 0.71f)
 								baseDamages *= 1.1;
-							break;
+						break;
 					}
 				}
 				//custom dmg reduction according to lvl of attacker and target
@@ -715,7 +690,6 @@ public class AttackUtil
 				}
 				
 			}
-				
 		}
 		else if((attacker instanceof Summon) || (attacker instanceof Servant) || (attacker instanceof Trap) || (attacker instanceof NpcWithCreator)
 			&& (target instanceof Player || target instanceof Summon)) {
@@ -725,11 +699,9 @@ public class AttackUtil
 			baseDamages = Math.round(baseDamages * (1 + pvpAttackBonus - pvpDefenceBonus));
 			}
 
-
 		return baseDamages;
 
 	}
-	
 	
 	public static void launchEffectOnCritical(Player attacker, Creature attacked)
 	{
@@ -759,6 +731,4 @@ public class AttackUtil
 		e.initialize();
 		e.applyEffect();
 	}
-	
-	
 }

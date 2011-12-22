@@ -1,32 +1,32 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.network.aion.serverpackets;
 
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
-
 import java.nio.ByteBuffer;
 
-
 /**
- * In this packet Server is sending response for CM_DELETE_CHARACTER.
- * 
- * @author -Nemesiss-
- * 
+ * В этот пакет сервер посылает ответ на CM_DELETE_CHARACTER.
  */
 public class SM_DELETE_CHARACTER extends AionServerPacket
 {
@@ -34,7 +34,7 @@ public class SM_DELETE_CHARACTER extends AionServerPacket
 	private int deletionTime;
 
 	/**
-	 * Constructs new <tt>SM_DELETE_CHARACTER </tt> packet
+	 * Создание нового пакета SM_DELETE_CHARACTER
 	 */
 	public SM_DELETE_CHARACTER(int playerObjId, int deletionTime)
 	{
@@ -50,13 +50,13 @@ public class SM_DELETE_CHARACTER extends AionServerPacket
 	{
 		if(playerObjId != 0)
 		{
-			writeD(buf, 0x00);// unk
+			writeD(buf, 0x00); // Неизвестно
 			writeD(buf, playerObjId);
 			writeD(buf, deletionTime);
 		}
 		else
 		{
-			writeD(buf, 0x10);// unk
+			writeD(buf, 0x10); // Неизвестно
 			writeD(buf, 0x00);
 			writeD(buf, 0x00);
 		}

@@ -1,57 +1,58 @@
-/*
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- *  You should have received a  copy  of the GNU General Public License
- *  along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.network.aion.serverpackets;
 
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
-import gameserver.quest.model.QuestCookie;
 import gameserver.services.QuestService;
-
 import java.nio.ByteBuffer;
 import java.util.List;
 
-public class SM_NEARBY_QUESTS extends AionServerPacket
+public class SM_NEARBY_QUESTS extends AionServerPacket 
 {
-	private Integer[] questIds;
-	private int size;
-	
-	public SM_NEARBY_QUESTS(List<Integer> questIds)
+    private Integer[] questIds;
+    private int size;
+
+    public SM_NEARBY_QUESTS(List<Integer> questIds) 
 	{
-		this.questIds = questIds.toArray(new Integer[questIds.size()]);
-		this.size = questIds.size();
-	}
+        this.questIds = questIds.toArray(new Integer[questIds.size()]);
+        this.size = questIds.size();
+    }
 
 
-	@Override
-	protected void writeImpl(AionConnection con, ByteBuffer buf)
+    @Override
+    protected void writeImpl(AionConnection con, ByteBuffer buf) 
 	{
-		if(questIds == null || con.getActivePlayer() == null)
-			return;
-
-		writeC(buf, 0x00);
-		writeH(buf, (-1*size) & 0xFFFF);
-
-		for(int id : questIds)
-		{
-			writeH(buf, id);
-			if (QuestService.canStart(new QuestCookie(null, con.getActivePlayer(), id, 0)))
-				writeH(buf, 0);
-			else
-				writeH(buf, 2);
-		}
-	}
+        if (questIds == null || con.getActivePlayer() == null)
+            return;
+        int playerLevel = con.getActivePlayer().getLevel();
+		writeC(buf, 0x00); // 2.1
+		writeH(buf, (-1*size) & 0xFFFF); // 2.1
+        for (int id : questIds) {
+            writeH(buf, id);
+            if (QuestService.checkLevelRequirement(id, playerLevel))
+                writeH(buf, 0);
+            else
+                writeH(buf, 2);
+        }
+    }
 }

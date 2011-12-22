@@ -1,106 +1,30 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.utils;
 
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.geometry.Point3D;
-
 import java.awt.*;
 
-
-/**
- * Class with basic math.<br>
- * Thanks to: <li>
- * <ul>
- * http://geom-java.sourceforge.net/
- * </ul>
- * <ul>
- * http://local.wasp.uwa.edu.au/~pbourke/geometry/pointline/DistancePoint.java
- * </ul>
- * </li> <br>
- * <br>
- * Few words about speed:
- * 
- * <pre>
- * Math.hypot(dx, dy); // Extremely slow
- * Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2)); // 20 times faster than hypot
- * Math.sqrt(dx * dx + dy * dy); // 10 times faster then previous line
- * </pre>
- * 
- * We don't need squared distances for calculations, {@linkplain Math#sqrt(double)} is very fast.<br>
- * In fact the difference is very small, so it can be ignored.<br>
- * Feel free to run the following test (or to find a mistake in it ^^).<br>
- * 
- * <pre>
- * import java.util.Random;
- * 
- * public class MathSpeedTest
- * {
- * 
- * 	private static long	time;
- * 
- * 	private static long	n	= 100000000L;
- * 
- * 	public static void main(String[] args)
- * 	{
- * 
- * 		Random r = new Random();
- * 
- * 		long x;
- * 		long y;
- * 
- * 		double res = 0;
- * 		setTime();
- * 		for(int i = 0; i &lt; n; i++)
- * 		{
- * 			x = r.nextInt();
- * 			y = r.nextInt();
- * 			res = Math.sqrt(x * x + y * y);
- * 		}
- * 		printTime();
- * 		System.out.println(res);
- * 
- * 		setTime();
- * 		for(int i = 0; i &lt; n; i++)
- * 		{
- * 			x = r.nextInt();
- * 			y = r.nextInt();
- * 			res = x * x + y * y;
- * 		}
- * 		printTime();
- * 		System.out.println(Math.sqrt(res));
- * 	}
- * 
- * 	public static void setTime()
- * 	{
- * 		time = System.currentTimeMillis();
- * 	}
- * 
- * 	public static void printTime()
- * 	{
- * 		System.out.println(System.currentTimeMillis() - time);
- * 	}
- * }
- * </pre>
- * 
- * @author Disturbing
- * @author SoulKeeper
- */
 public class MathUtil
 {
 	/**

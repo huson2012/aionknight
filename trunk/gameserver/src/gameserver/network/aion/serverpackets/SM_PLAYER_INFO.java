@@ -263,8 +263,7 @@ public class SM_PLAYER_INFO extends AionServerPacket
 
 		writeH(buf, player.getGameStats().getBaseStat(StatEnum.ATTACK_SPEED));
 		writeH(buf, player.getGameStats().getCurrentStat(StatEnum.ATTACK_SPEED));
-		writeC(buf, 0); // It's always 2 when it's my SM_INFO, 0 when I receive from other players. WHY? Trial = 2?
-		// Sometimes these other players send other values also, like 10, 12, 3, and even 2.
+		writeC(buf, 4);
 
 		writeS(buf, player.hasStore() ? player.getStore().getStoreMessage() : "");// private store message
 
