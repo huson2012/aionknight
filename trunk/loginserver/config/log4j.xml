@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!--
 	
-	Íàçíà÷åíèå ôàéëà	: 
+	ÐÐ°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°	: 
 	====================================================
-	Âåðñèÿ ñåðâåðà		: Aion-Knight 2.7 (Beta version)
-	Âåðñèÿ êëèåíòà		: 2.7 (Èííîâà)
+	Ð’ÐµÑ€ÑÐ¸Ñ ÑÐµÑ€Ð²ÐµÑ€Ð°		: Aion-Knight 2.7 (Beta version)
+	Ð’ÐµÑ€ÑÐ¸Ñ ÐºÐ»Ð¸ÐµÐ½Ñ‚Ð°		: 2.7 (Ð˜Ð½Ð½Ð¾Ð²Ð°)
 	====================================================
 	
  -->
@@ -12,7 +12,7 @@
 
 <log4j:configuration>
 
-    <!-- Ïå÷àòü èíôîðìàöèè â êîíñîëü -->
+    <!-- ÐŸÐµÑ‡Ð°Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸ Ð² ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ -->
     <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.EnhancedPatternLayout">
             <param name="ConversionPattern" value="[%p] %d{yyyy-MM-dd HH:mm:ss} - %m%n"/>
@@ -20,7 +20,7 @@
 		<filter class="commons.log4j.filters.ConsoleFilter"/>
     </appender>
 
-    <!-- Ïå÷àòàåò âñå, ÷òî ïîêàçàíî â êîíñîëè â ôàéë 'console.log' -->
+    <!-- ÐŸÐµÑ‡Ð°Ñ‚Ð°ÐµÑ‚ Ð²ÑÐµ, Ñ‡Ñ‚Ð¾ Ð¿Ð¾ÐºÐ°Ð·Ð°Ð½Ð¾ Ð² ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ Ð² Ñ„Ð°Ð¹Ð» 'console.log' -->
     <appender name="CONSOLE_TO_FILE" class="commons.log4j.appenders.TruncateToZipFileAppender">
         <param name="file" value="log/console.log"/>
         <param name="append" value="false"/>
@@ -33,7 +33,7 @@
 	  <filter class="commons.log4j.filters.ConsoleFilter"/>
     </appender>
 
-    <!-- Ïðèíèìàåò ñîîáùåíèÿ òîëüêî ñ èñêëþ÷åíèÿìè è ðåãèñòðèðóåò èõ â îòäåëüíûé ôàéë -->
+    <!-- ÐŸÑ€Ð¸Ð½Ð¸Ð¼Ð°ÐµÑ‚ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñ Ð¸ÑÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸ÑÐ¼Ð¸ Ð¸ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð¸Ñ€ÑƒÐµÑ‚ Ð¸Ñ… Ð² Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð» -->
     <appender name="ERROR_APPENDER" class="commons.log4j.appenders.TruncateToZipFileAppender">
         <param name="file" value="log/errors.log"/>
         <param name="append" value="false"/>
@@ -46,7 +46,7 @@
         <filter class="commons.log4j.filters.ThrowablePresentFilter"/>
     </appender>
 
-    <!-- Êîíå÷íûé âèä Logger -->
+    <!-- ÐšÐ¾Ð½ÐµÑ‡Ð½Ñ‹Ð¹ Ð²Ð¸Ð´ Logger -->
     <root>
         <priority value="info"/>
         <appender-ref ref="CONSOLE"/>
