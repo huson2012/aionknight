@@ -1,0 +1,1 @@
+select player_id from player_pets group by player_id, pet_id having count(*) > 1;
