@@ -34,47 +34,47 @@ public class GameServerInfo
 	/**
 	 * Id of this GameServer
 	 */
-	private final byte					id;
+	private final byte id;
 
 	/**
 	 * Allowed IP for this GameServer if gs will connect from another ip wont be registered.
 	 */
-	private final String				ip;
+	private final String ip;
 
 	/**
 	 * Password
 	 */
-	private final String				password;
+	private final String password;
 
 	/**
 	 * Default server address, usually internet address
 	 */
-	private byte[]						defaultAddress;
+	private byte[] defaultAddress;
 
 	/**
 	 * Mapping of ip ranges, usually used for local area connections
 	 */
-	private List<IPRange>				ipRanges;
+	private List<IPRange> ipRanges;
 
 	/**
 	 * Port on with this GameServer is accepting clients.
 	 */
-	private int							port;
+	private int	port;
 
 	/**
 	 * gsConnection - if GameServer is connected to LoginServer.
 	 */
-	private GsConnection				gsConnection;
+	private GsConnection gsConnection;
 
 	/**
 	 * Max players count that may play on this GameServer.
 	 */
-	private int							maxPlayers;
+	private int	maxPlayers;
 	
 	/**
 	 * requiredAccess - required access to gain entry to server.
 	 */
-	private int							requiredAccess;
+	private int	requiredAccess;
 	
 	/**
 	 * Map<AccId,Account> of accounts logged in on this GameServer.
@@ -330,8 +330,10 @@ public class GameServerInfo
 	}
 
 	/**
-	 * Returns ip address that will be used as server ip for specific player.<br>
-	 * The problem is that players can access server from various subnetworks so we need to send different ip adresses.<br>
+	 * Returns ip address that will be used as server ip for specific player.
+	 * The problem is that players can access server from various subnetworks 
+	 * so we need to send different ip adresses.
+	 *
 	 * If gameserver is not online - it returns 127.0.0.1 as server address.
 	 * 
 	 * @param playerIp

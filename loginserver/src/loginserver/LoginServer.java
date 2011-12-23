@@ -59,7 +59,7 @@ public class LoginServer
         }
         catch (Exception e)
         {
-            log.fatal("Failed initializing Key Generator. Reason: " + e.getMessage(), e);
+            log.fatal("Failed key generator. Reason: " + e.getMessage(), e);
             System.exit(ExitCode.CODE_ERROR);
         }
 
@@ -77,6 +77,6 @@ public class LoginServer
         AEInfos.printAllInfos();
         
         Util.printSection("Log Manager");
-        log.info("Server started in " + (System.currentTimeMillis() - start) / 1000 + " sec.");
+        log.info("Server load at " + (System.currentTimeMillis() - start) / 1000 + " sec.");
     }
 }

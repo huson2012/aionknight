@@ -8,7 +8,7 @@
 	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	Редакция: 20/12/2011 (Frost)
+	Редакция: 23/12/2011 (Frost)
 	
  -->
 <teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
@@ -134,8 +134,9 @@
 	<!-- Ингиссон -->
 	<teleloc_template loc_id="90" mapid="210050000" name="LF4_Dyn_D_2011" posX="1665.5944" posY="2163.85" posZ="325.41592" heading="2"/>
 	<teleloc_template loc_id="91" mapid="210050000" name="LF4_Dyn_D_2021" posX="790.97266" posY="1963.0989" posZ="337.8406" heading="111"/>
-   <teleloc_template loc_id="90" mapid="210050000" name="LF4_Dyn_L_2011" posX="1666.5121" posY="2190.421" posZ="324.8958" heading="7"/>
-   <teleloc_template loc_id="91" mapid="210050000" name="LF4_Dyn_L_2021" posX="812.62964" posY="1986.4653" posZ="337.32233" heading="113"/>
+	<teleloc_template loc_id="90" mapid="210050000" name="LF4_Dyn_L_2011" posX="1666.5121" posY="2190.421" posZ="324.8958" heading="7"/>
+    <teleloc_template loc_id="91" mapid="210050000" name="LF4_Dyn_L_2021" posX="812.62964" posY="1986.4653" posZ="337.32233" heading="113"/>
+	<teleloc_template loc_id="99" mapid="210050000" name="Inggison Illusion Fortress" posX="1335.09" posY="275.42" posZ="589.7" heading="113"/>
 	<teleloc_template loc_id="99" mapid="210050000" name="Inggison Illusion Fortress" posX="1335.09" posY="275.42" posZ="589.7" heading="113"/>
 	<teleloc_template loc_id="100" mapid="210050000" name="Underground Fortress Observation Base"/>
 	<teleloc_template loc_id="101" mapid="210050000" name="Sotena Sanctuary Village"/>

@@ -29,7 +29,7 @@ public class ExecuteWrapper implements Runnable
 {
 	private static final Logger	log	= Logger.getLogger(ExecuteWrapper.class);
 
-	private final Runnable		runnable;
+	private final Runnable runnable;
 
 	public ExecuteWrapper(Runnable runnable)
 	{
@@ -62,7 +62,7 @@ public class ExecuteWrapper implements Runnable
 		}
 		catch(RuntimeException e)
 		{
-			log.warn("Exception in a Runnable execution:", e);
+			log.warn("Exception in a Runnable execution: ", e);
 		}
 		finally
 		{

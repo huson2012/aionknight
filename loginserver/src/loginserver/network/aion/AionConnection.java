@@ -1,3 +1,24 @@
+/**
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
+ *
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ */
+
 package loginserver.network.aion;
 
 import java.io.IOException;
@@ -8,9 +29,7 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
-
 import javax.crypto.SecretKey;
-
 import loginserver.configs.Config;
 import loginserver.controller.AccountController;
 import loginserver.controller.AccountTimeController;
@@ -20,68 +39,64 @@ import loginserver.network.aion.serverpackets.SM_INIT;
 import loginserver.network.ncrypt.CryptEngine;
 import loginserver.network.ncrypt.EncryptedRSAKeyPair;
 import loginserver.network.ncrypt.KeyGen;
-
 import org.apache.log4j.Logger;
 import commons.network.AConnection;
 import commons.network.Dispatcher;
 import commons.network.PacketProcessor;
 
-
 /**
  * Object representing connection between LoginServer and Aion Client.
- * 
- * @author -Nemesiss-
  */
 public class AionConnection extends AConnection
 {
 	/**
 	 * Logger for this class.
 	 */
-	private static final Logger								log				= Logger.getLogger(AionConnection.class);
+	private static final Logger	log	= Logger.getLogger(AionConnection.class);
 	/**
 	 * PacketProcessor for executing packets.
 	 */
-	private final static PacketProcessor<AionConnection>	processor		= new PacketProcessor<AionConnection>(1, 8);
+	private final static PacketProcessor<AionConnection> processor = new PacketProcessor<AionConnection>(1, 8);
 	/**
 	 * Server Packet "to send" Queue
 	 */
-	private final Deque<AionServerPacket>					sendMsgQueue	= new ArrayDeque<AionServerPacket>();
+	private final Deque<AionServerPacket> sendMsgQueue = new ArrayDeque<AionServerPacket>();
 
 	/**
 	 * Unique Session Id of this connection
 	 */
-	private int												sessionId		= hashCode();
+	private int	sessionId = hashCode();
 
 	/**
 	 * Account object for this connection. if state = AUTHED_LOGIN account cant be null.
 	 * 
 	 */
-	private Account											account;
+	private Account account;
 
 	/**
 	 * Crypt to encrypt/decrypt packets
 	 */
-	private CryptEngine										cryptEngine;
+	private CryptEngine cryptEngine;
 
 	/**
 	 * True if this user is connecting to GS.
 	 */
-	private boolean											joinedGs;
+	private boolean	joinedGs;
 
 	/**
 	 * Scrambled key pair for RSA
 	 */
-	private EncryptedRSAKeyPair								encryptedRSAKeyPair;
+	private EncryptedRSAKeyPair	encryptedRSAKeyPair;
 
 	/**
 	 * Session Key for this connection.
 	 */
-	private SessionKey										sessionKey;
+	private SessionKey sessionKey;
 
 	/**
 	 * Current state of this connection
 	 */
-	private State											state;
+	private State state;
 
 	/**
 	 * Possible states of AionConnection

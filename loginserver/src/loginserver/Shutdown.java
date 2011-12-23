@@ -31,11 +31,12 @@ public class Shutdown extends Thread
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger	log			= Logger.getLogger(Shutdown.class);
+	private static final Logger	log	= Logger.getLogger(Shutdown.class);
+	
 	/**
 	 * Instance of Shutdown.
 	 */
-	private static Shutdown		instance	= new Shutdown();
+	private static Shutdown instance = new Shutdown();
 
 	/**
 	 * get the shutdown-hook instance the shutdown-hook instance is created by the first call of this function, but it
@@ -58,17 +59,21 @@ public class Shutdown extends Thread
 	@Override
 	public void run()
 	{
-		/** Disconnecting all the clients */
+		/** 
+		 * Disconnecting all the clients 
+		 */
 		try
 		{
 			IOServer.getInstance().shutdown();
 		}
 		catch (Throwable t)
 		{
-			log.error("Can't shutdown IOServer", t);
+			log.error("Can't shutdown I/O Server", t);
 		}
 
-		/** Shuting down DB connections */
+		/** 
+		 * Shuting down DB connections 
+		 */
 		try
 		{
 			DatabaseFactory.shutdown();
@@ -78,7 +83,9 @@ public class Shutdown extends Thread
 			log.error("Can't shutdown DatabaseFactory", t);
 		}
 
-		/** Shuting down threadpools */
+		/** 
+		 * Shuting down threadpools 
+		 */
 		try
 		{
 			ThreadPoolManager.getInstance().shutdown();

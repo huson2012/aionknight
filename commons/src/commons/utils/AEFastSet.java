@@ -29,8 +29,8 @@ import javolution.util.FastCollection.Record;
 @SuppressWarnings("unchecked")
 public class AEFastSet<E> extends AEFastCollection<E> implements Set<E>
 {
-	private static final Object			NULL	= new Object();
-	private final FastMap<E, Object>	map;
+	private static final Object	NULL = new Object();
+	private final FastMap<E, Object> map;
 
 	public AEFastSet()
 	{

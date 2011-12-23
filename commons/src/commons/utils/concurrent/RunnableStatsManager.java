@@ -170,7 +170,8 @@ public final class RunnableStatsManager
 			this.xmlAttributeName = xmlAttributeName;
 		}
 
-		private final Comparator<MethodStat>	comparator	= new Comparator<MethodStat>(){
+		private final Comparator<MethodStat> comparator	= new Comparator<MethodStat>()
+		{
 			@SuppressWarnings("rawtypes")
 			public int compare(MethodStat o1, MethodStat o2)
 			{
