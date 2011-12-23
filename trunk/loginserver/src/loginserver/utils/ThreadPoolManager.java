@@ -1,3 +1,24 @@
+/**
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
+ *
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ */
+
 package loginserver.utils;
 
 import java.util.concurrent.LinkedBlockingQueue;
@@ -13,21 +34,17 @@ import org.apache.log4j.Logger;
 import commons.network.DisconnectionTask;
 import commons.network.DisconnectionThreadPool;
 
-
-/**
- * @author -Nemesiss-
- */
 public class ThreadPoolManager implements DisconnectionThreadPool
 {
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger				log			= Logger.getLogger(ThreadPoolManager.class);
+	private static final Logger	log	= Logger.getLogger(ThreadPoolManager.class);
 
 	/**
 	 * Instance of ThreadPoolManager
 	 */
-	private static ThreadPoolManager		instance	= new ThreadPoolManager();
+	private static ThreadPoolManager instance = new ThreadPoolManager();
 
 	/**
 	 * STPE for normal scheduled tasks
@@ -40,7 +57,7 @@ public class ThreadPoolManager implements DisconnectionThreadPool
 	/**
 	 * TPE for execution of gameserver client packets
 	 */
-	private ThreadPoolExecutor				gameServerPacketsThreadPool;
+	private ThreadPoolExecutor gameServerPacketsThreadPool;
 
 	/**
 	 * @return ThreadPoolManager instance.
@@ -64,7 +81,7 @@ public class ThreadPoolManager implements DisconnectionThreadPool
 		disconnectionScheduledThreadPool.setRemoveOnCancelPolicy(true);
 
 		gameServerPacketsThreadPool = new ThreadPoolExecutor(4, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS,
-			new LinkedBlockingQueue<Runnable>(), new PriorityThreadFactory("Game Server Packet Pool",
+			new LinkedBlockingQueue<Runnable>(), new PriorityThreadFactory("GS Packet Pool",
 				Thread.NORM_PRIORITY + 3));
 
 	}
@@ -77,7 +94,7 @@ public class ThreadPoolManager implements DisconnectionThreadPool
 	 * @param delay
 	 * @return ScheduledFuture
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("Unchecked")
 	public <T extends Runnable> ScheduledFuture<T> schedule(T r, long delay)
 	{
 		try
@@ -101,7 +118,7 @@ public class ThreadPoolManager implements DisconnectionThreadPool
 	 * @param delay
 	 * @return ScheduledFuture
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("Unchecked")
 	public <T extends Runnable> ScheduledFuture<T> scheduleAtFixedRate(T r, long initial, long delay)
 	{
 		try
@@ -221,7 +238,7 @@ public class ThreadPoolManager implements DisconnectionThreadPool
 		}
 		catch (InterruptedException e)
 		{
-			log.error("Can't shutdown ThreadPoolManager", e);
+			log.error("[!] Can't shutdown ThreadPoolManager", e);
 		}
 	}
 }

@@ -63,7 +63,7 @@ public class GameServerTable
 	public static void load()
 	{
 		gameservers = getDAO().getAllGameServers();
-		log.info("GS table: " + gameservers.size() + " registered GameServers.");
+		log.info("GS table: " + gameservers.size() + " registered GS.");
 	}
 	public static GsAuthResponse registerGameServer(GsConnection gsConnection, byte requestedId, byte[] defaultAddress,
 		List<IPRange> ipRanges, int port, int maxPlayers, int requiredAccess, String password)
@@ -75,7 +75,7 @@ public class GameServerTable
 		 */
 		if (gsi == null)
 		{
-			log.info(gsConnection + " requestedID=" + requestedId + " not aviable!");
+			log.info(gsConnection + " requested ID = " + requestedId + " not aviable!");
 			return GsAuthResponse.NOT_AUTHED;
 		}
 

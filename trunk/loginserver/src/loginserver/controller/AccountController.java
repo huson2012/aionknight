@@ -1,8 +1,28 @@
+/**
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
+ *
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ */
+
 package loginserver.controller;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import loginserver.GameServerInfo;
 import loginserver.GameServerTable;
 import loginserver.configs.Config;
@@ -21,30 +41,23 @@ import loginserver.network.gameserver.serverpackets.SM_ACCOUNT_AUTH_RESPONSE;
 import loginserver.network.gameserver.serverpackets.SM_GS_REQUEST_CHARACTER_COUNT;
 import loginserver.network.gameserver.serverpackets.SM_REQUEST_KICK_ACCOUNT;
 import loginserver.utils.AccountUtils;
-
 import commons.database.dao.DAOManager;
 import commons.utils.NetworkUtils;
 
-
 /**
  * This class is resposible for controlling all account actions
- *
- * @author KID
- * @author SoulKeeper
  */
 public class AccountController
 {
 	/**
 	 * Map with accounts that are active on LoginServer or joined GameServer and are not authenticated yet.
 	 */
-	private static final Map<Integer, AionConnection>		accountsOnLS         = new HashMap<Integer,
-																					   AionConnection>();
+	private static final Map<Integer, AionConnection> accountsOnLS  = new HashMap<Integer, AionConnection>();
 
 	/**
 	 * Map with accounts that are reconnecting to LoginServer ie was joined GameServer.
 	 */
-	private static final Map<Integer, ReconnectingAccount>	reconnectingAccounts = new HashMap<Integer,
-																					   ReconnectingAccount>();
+	private static final Map<Integer, ReconnectingAccount>	reconnectingAccounts = new HashMap<Integer, ReconnectingAccount>();
 
 	/**
 	 * Map with characters count on each gameserver and accounts
@@ -70,7 +83,7 @@ public class AccountController
 	 */
 	public static synchronized void checkAuth(SessionKey key, GsConnection gsConnection)
 	{
-		AionConnection	con = accountsOnLS.get(key.accountId);
+		AionConnection con = accountsOnLS.get(key.accountId);
 
 		if(con != null && con.getSessionKey().checkSessionKey(key))
 		{
@@ -146,10 +159,10 @@ public class AccountController
 	}
 
 	/**
-	 * Tries to authentificate account.<br>
-	 * If success returns {@link AionAuthResponse#AUTHED} and sets account object to connection.<br>
+	 * Tries to authentificate account.
+	 * If success returns {@link AionAuthResponse#AUTHED} and sets account object to connection.
 	 *
-	 * If {@link loginserver.configs.Config#ACCOUNT_AUTO_CREATION} is enabled - creates new account.<br>
+	 * If {@link loginserver.configs.Config#ACCOUNT_AUTO_CREATION} is enabled - creates new account.
 	 *
 	 * @param name
 	 *           name of account
@@ -226,8 +239,7 @@ public class AccountController
 			// If someone is at loginserver, he should be disconnected
 			if(accountsOnLS.containsKey(account.getId()))
 			{
-				AionConnection	aionConnection = accountsOnLS.remove(account.getId());
-
+				AionConnection aionConnection = accountsOnLS.remove(account.getId());
 				aionConnection.close(true);
 
 				return AionAuthResponse.ALREADY_LOGGED_IN;
@@ -352,15 +364,19 @@ public class AccountController
 		{
 			accountsCharacterCounts.remove(accountId);
 		}
-		accountsCharacterCounts.put(accountId, new HashMap<Integer, Integer> ());
 		
+		accountsCharacterCounts.put(accountId, new HashMap<Integer, Integer> ());		
 		accountCharacterCount = accountsCharacterCounts.get(accountId);
 		
-		for (GameServerInfo gsi : GameServerTable.getGameServers()) {
+		for (GameServerInfo gsi : GameServerTable.getGameServers()) 
+		{
 			gsc = gsi.getGsConnection();
-			if (gsc != null) {
+			if (gsc != null) 
+			{
 				gsc.sendPacket(new SM_GS_REQUEST_CHARACTER_COUNT(accountId));
-			} else {
+			} 
+			else
+			{
 				accountCharacterCount.put((int)gsi.getId(), 0);
 			}
 		}
@@ -424,9 +440,11 @@ public class AccountController
 	 */
 	public static synchronized void addCharacterCountFor (int accountId, int gsid, int characterCount)
 	{
-		if(!accountsCharacterCounts.containsKey(accountId)) {
+		if(!accountsCharacterCounts.containsKey(accountId)) 
+		{
 			accountsCharacterCounts.put(accountId, new HashMap<Integer, Integer> ());
 		}
+		
 		accountsCharacterCounts.get(accountId).put(gsid, characterCount);
 	}
 }

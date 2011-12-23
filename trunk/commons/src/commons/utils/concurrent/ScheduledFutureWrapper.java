@@ -29,7 +29,7 @@ import java.util.concurrent.TimeoutException;
 
 public final class ScheduledFutureWrapper implements ScheduledFuture<Object>
 {
-	private final ScheduledFuture<?>	future;
+	private final ScheduledFuture<?> future;
 
 	public ScheduledFutureWrapper(ScheduledFuture<?> future)
 	{

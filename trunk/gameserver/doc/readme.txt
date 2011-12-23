@@ -22,31 +22,31 @@
  
  =======================================================================================================
  Java эмулятор игрового сервера 'Aion-Knight' оcнован на исходных кодах нескольких команд разработчиков, 
- за что им и огромное спасибо!
+ за что им огромное спасибо!
  =======================================================================================================
  
  Команды, принимавшие участие в развитии проекта Aion Emu:
  
- [x] - Aion-Emu & ZettaCore (Основа)
+ [*] - Aion-Emu & ZettaCore (Основа)
         |
-	   [x] - Aion-Unique (1.5)
-	   [x] - Aion-Engine (1.9)
-	   [x] - Aion-Lighting (2.1)
-	   [x] - Open-AionXEmu Team (2.5)
-	   [x] - Aion J-Free (2.6)
+	   [*] - Aion-Unique (1.5)
+	   [*] - Aion-Engine (1.9)
+	   [*] - Aion-Lighting, AionChs (2.1)
+	   [*] - Open-AionXEmu (2.5)
+	   [*] - AionJFree (2.6)
 
  Над кодом программы работали:
  
- - SoulKeeper	- PZIKO333		- RotO
- - ATracer		- GosthMan		- SuneC
- - KKnD			- Orpheo		- Dallas
- - Pinguin		- Blakawk		- Jego
+ - SoulKeeper	- PZIKO333		- RotO			- Watson
+ - ATracer		- GosthMan		- SuneC			- Wylovech
+ - KKnD			- Orpheo		- Dallas		-
+ - Pinguin		- Blakawk		- Jego			-
  - Mr. Poke		- Nemesiss		- Jjhun
  - Sarynth		- Vial			- Rolandas
  - Kecimis		- Divinity		- Luno
  - Ritsu		- Sphinx		- Disturbing
  - HellBoy		- LokiReborn	- Aquanox
- - Dns			- Cura 
+ - Dns			- Cura 			- EvilSpirit
  
  Команда Aion-Knight 2.7 (Beta version):
  
