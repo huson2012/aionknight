@@ -13,6 +13,7 @@
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
 -- ----------------------------
 -- Table structure for `abyss_rank`
 -- ----------------------------
@@ -497,6 +498,23 @@ CREATE TABLE `player_appearance` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for `player_cmotions`
+-- ----------------------------
+DROP TABLE IF EXISTS `player_cmotions`;
+CREATE TABLE `player_cmotions` (
+  `player_id` int(11) NOT NULL,
+  `cmotion_id` int(11) NOT NULL,
+  `cmotion_active` tinyint(1) NOT NULL DEFAULT '0',
+  `cmotion_expires_time` bigint(20) NOT NULL DEFAULT '0',
+  `cmotion_creation_time` timestamp NOT NULL DEFAULT '2011-01-01 00:00:01',
+  PRIMARY KEY (`player_id`,`cmotion_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of player_cmotions
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `player_effects`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_effects`;
@@ -528,24 +546,6 @@ CREATE TABLE `player_emotions` (
 
 -- ----------------------------
 -- Records of player_emotions
--- ----------------------------
-
--- ----------------------------
--- Table structure for player_cmotions
--- ----------------------------
-
-CREATE TABLE `player_cmotions` (
-  `player_id` int(11) NOT NULL,
-  `cmotion_id` int(11) NOT NULL,
-  `cmotion_active` tinyint(1) NOT NULL DEFAULT '0',
-  `cmotion_expires_time` bigint(20) NOT NULL DEFAULT '0',
-  `cmotion_creation_time` timestamp NOT NULL DEFAULT '2011-01-01 00:00:01',
-  PRIMARY KEY (`player_id`,`cmotion_id`),
-  CONSTRAINT `player_cmotions_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of player_cmotions
 -- ----------------------------
 
 -- ----------------------------
@@ -593,7 +593,7 @@ CREATE TABLE `player_macrosses` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of player_motion
+-- Records of player_macrosses
 -- ----------------------------
 
 -- ----------------------------
