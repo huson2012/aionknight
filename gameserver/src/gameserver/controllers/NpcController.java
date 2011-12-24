@@ -70,7 +70,7 @@ import java.util.concurrent.Future;
  */
 public class NpcController extends CreatureController<Npc>
 {
-	private static final Logger	log	= Logger.getLogger(NpcController.class);
+	private static final Logger log = Logger.getLogger(NpcController.class);
 
 	@Override
 	public void notSee(VisibleObject object, boolean isOutOfRange)
@@ -79,7 +79,7 @@ public class NpcController extends CreatureController<Npc>
 		if(object instanceof Creature)
 			getOwner().getAggroList().remove((Creature) object);
 		if(object instanceof Player || object instanceof Summon)
-			getOwner().getAi().handleEvent(Event.NOT_SEE_PLAYER);			
+			getOwner().getAi().handleEvent(Event.NOT_SEE_PLAYER);
 	}
 
 	@Override
@@ -90,11 +90,11 @@ public class NpcController extends CreatureController<Npc>
 		owner.getAi().handleEvent(Event.SEE_CREATURE);
 		if(object instanceof Player)
 		{
-			owner.getAi().handleEvent(Event.SEE_PLAYER);		
+			owner.getAi().handleEvent(Event.SEE_PLAYER);
 			if(owner.hasWalkRoutes())
 				PacketSendUtility.sendPacket((Player) object, new SM_EMOTION(owner, EmotionType.START_EMOTE2));
-			NpcShoutsService.getInstance().handleEvent(owner, (Player)object, ShoutEventType.SEEUSER);
-		}	
+			NpcShoutsService.getInstance().handleEvent(owner, (Player) object, ShoutEventType.SEEUSER);
+		}
 		else if(object instanceof Summon)
 		{
 			owner.getAi().handleEvent(Event.SEE_PLAYER);
@@ -110,9 +110,9 @@ public class NpcController extends CreatureController<Npc>
 
 		Npc owner = getOwner();
 
-		if (owner != null && owner.isCustom())
+		if(owner != null && owner.isCustom())
 		{
-			DAOManager.getDAO(SpawnDAO.class).setSpawned(owner.getSpawn().getSpawnId(),owner.getObjectId(), true);
+			DAOManager.getDAO(SpawnDAO.class).setSpawned(owner.getSpawn().getSpawnId(), owner.getObjectId(), true);
 		}
 
 		//set state from npc templates
@@ -128,7 +128,7 @@ public class NpcController extends CreatureController<Npc>
 		{
 			owner.setState(CreatureState.FLYING);
 		}
-		
+
 	}
 
 	public void onDespawn(boolean forced)
@@ -141,18 +141,18 @@ public class NpcController extends CreatureController<Npc>
 		if(owner == null || !owner.isSpawned())
 			return;
 
-		if (owner != null && owner.isCustom())
+		if(owner != null && owner.isCustom())
 		{
-			DAOManager.getDAO(SpawnDAO.class).setSpawned(owner.getSpawn().getSpawnId(), owner.getSpawn().isNoRespawn(1)?-1:owner.getObjectId(), false);
+			DAOManager.getDAO(SpawnDAO.class).setSpawned(owner.getSpawn().getSpawnId(), owner.getSpawn().isNoRespawn(1) ? -1 : owner.getObjectId(), false);
 		}
 
 		owner.getAi().handleEvent(Event.DESPAWN);
-		
+
 		if(owner.getTarget() != null && owner.getTarget() instanceof Creature)
 		{
-			NpcShoutsService.getInstance().handleEvent(owner, (Creature)owner.getTarget(), ShoutEventType.DESPAWN);
+			NpcShoutsService.getInstance().handleEvent(owner, (Creature) owner.getTarget(), ShoutEventType.DESPAWN);
 		}
-		
+
 		World.getInstance().despawn(owner);
 	}
 
@@ -166,12 +166,11 @@ public class NpcController extends CreatureController<Npc>
 		addTask(TaskId.DECAY, RespawnService.scheduleDecayTask(this.getOwner()));
 		scheduleRespawn();
 
-		PacketSendUtility.broadcastPacket(owner,
-			new SM_EMOTION(owner, EmotionType.DIE, 0, lastAttacker == null ? 0 : lastAttacker.getObjectId()));
+		PacketSendUtility.broadcastPacket(owner, new SM_EMOTION(owner, EmotionType.DIE, 0, lastAttacker == null ? 0 : lastAttacker.getObjectId()));
 
 		// Monster Controller overrides this method.
 		this.doReward();
-		
+
 		if((owner.getWorldType() == WorldType.ABYSS || owner.getWorldType() == WorldType.BALAUREA) && lastAttacker instanceof Player)
 		{
 			int relatedLocId = SiegeService.getInstance().getSiegeNpcLocation(owner.getObjectId());
@@ -181,18 +180,18 @@ public class NpcController extends CreatureController<Npc>
 				if(winner != null)
 				{
 					ArrayList<Player> toReward = new ArrayList<Player>();
-					if (winner instanceof PlayerAlliance)
+					if(winner instanceof PlayerAlliance)
 					{
-						PlayerAlliance alliance = (PlayerAlliance)winner;
+						PlayerAlliance alliance = (PlayerAlliance) winner;
 						for(PlayerAllianceMember m : alliance.getMembers())
 						{
 							if(m.getPlayer().getWorldType() == WorldType.ABYSS || m.getPlayer().getWorldType() == WorldType.BALAUREA)
 								toReward.add(m.getPlayer());
 						}
 					}
-					else if (winner instanceof PlayerGroup)
+					else if(winner instanceof PlayerGroup)
 					{
-						PlayerGroup group = (PlayerGroup)winner;
+						PlayerGroup group = (PlayerGroup) winner;
 						for(Player p : group.getMembers())
 						{
 							if(p.getWorldType() == WorldType.ABYSS || p.getWorldType() == WorldType.BALAUREA)
@@ -201,7 +200,7 @@ public class NpcController extends CreatureController<Npc>
 					}
 					else if(winner instanceof Player)
 					{
-						Player p = (Player)winner;
+						Player p = (Player) winner;
 						if(p.isInGroup() && p.getPlayerGroup() != null)
 						{
 							for(Player pl : p.getPlayerGroup().getMembers())
@@ -226,12 +225,12 @@ public class NpcController extends CreatureController<Npc>
 				}
 			}
 		}
-		
+
 		owner.getAi().handleEvent(Event.DIED);
-		
+
 		if(lastAttacker != null && lastAttacker instanceof Creature)
 		{
-			NpcShoutsService.getInstance().handleEvent(owner, (Creature)lastAttacker, ShoutEventType.DIE);
+			NpcShoutsService.getInstance().handleEvent(owner, (Creature) lastAttacker, ShoutEventType.DIE);
 		}
 
 		// deselect target at the end
@@ -258,7 +257,7 @@ public class NpcController extends CreatureController<Npc>
 
 		if(QuestEngine.getInstance().onDialog(new QuestCookie(getOwner(), player, 0, -1)))
 			return;
-		
+
 		// Zephyr Deliveryman
 		if(getOwner().getObjectId() == player.getZephyrObjectId())
 		{
@@ -267,37 +266,38 @@ public class NpcController extends CreatureController<Npc>
 		}
 
 		//Crucible Challenger recordkeeper round request
-		if((getOwner().getNpcId() == 730461)||(getOwner().getNpcId() == 730462)|| CrucibleChallengeService.isCrucibleChallenge(getOwner().getWorldId())){
+		if((getOwner().getNpcId() == 730461) || (getOwner().getNpcId() == 730462) || CrucibleChallengeService.isCrucibleChallenge(getOwner().getWorldId()))
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 1011));
 			return;
 		}
-		
+
 		int titleId = getOwner().getObjectTemplate().getTitleId();
-		if
-		(
-			(
-				// title ids of npcs
-				titleId == 315018
-				|| titleId == 350474 
-				|| titleId == 350473 
-				|| titleId == 350212 
-				|| titleId == 350304 
-				|| titleId == 350305
-				|| titleId == 370000
-				|| titleId == 370003
-				// aerolinks
-				|| (getOwner().getNpcId() >= exception_enums.NPC_TELEPORT_AERO_RANGE_I && getOwner().getNpcId() <= exception_enums.NPC_TELEPORT_AERO_RANGE_II && getOwner().getNpcId() != exception_enums.NPC_TELEPORT_REGULAR_ASMO_I)
-				// balaurea gates
-				|| (getOwner().getNpcId() >= 730296 && getOwner().getNpcId() <= 730303)
-				|| getOwner().getNpcId() == 730428 // Marchutan Priory => Gelkmaros
+		if((
+		// title ids of npcs
+		titleId == 315018 || titleId == 350474 || titleId == 350473 || titleId == 350212 || titleId == 350304 || titleId == 350305 || titleId == 370000 || titleId == 370003
+		// aerolinks
+		|| (getOwner().getNpcId() >= exception_enums.NPC_TELEPORT_AERO_RANGE_I && getOwner().getNpcId() <= exception_enums.NPC_TELEPORT_AERO_RANGE_II && getOwner().getNpcId() != exception_enums.NPC_TELEPORT_REGULAR_ASMO_I)
+		// balaurea gates
+		|| (getOwner().getNpcId() >= 730296 && getOwner().getNpcId() <= 730303) || getOwner().getNpcId() == 730428 // Marchutan Priory => Gelkmaros
 				|| getOwner().getNpcId() == 205322 // Gelkmaros		   => Marchutan Priory
 				|| getOwner().getNpcId() == 730427 // Marchutan Priory => Pandaemonium
 				|| getOwner().getNpcId() == 730424 // Kaisinel Academy => Sanctum
 				|| getOwner().getNpcId() == 730425 // Kaisinel Academy => Inggison
 				|| getOwner().getNpcId() == 205314 // Inggison         => Kaisinel Academy
-			)
-		)
-		{			
+				// Crucible Coliseum
+				|| getOwner().getNpcId() == 205985 // Junos
+				|| getOwner().getNpcId() == 205986 // Shinin
+				|| getOwner().getNpcId() == 207056 // Discipline Training Grounds (Elyos)
+				|| getOwner().getNpcId() == 207057 // Chaos Training Grounds (Elyos)
+				|| getOwner().getNpcId() == 207058 // Discipline Training Grounds (Asmodians)
+				|| getOwner().getNpcId() == 207059 // Chaos Training Grounds (Asmodians)
+				|| getOwner().getNpcId() == 730481 // Arena of Chaos (Elyos)
+				|| getOwner().getNpcId() == 730482 // Arena of Chaos (Asmodians)
+				|| getOwner().getNpcId() == 730483 // Arena of Discipline (Elyos)
+		|| getOwner().getNpcId() == 730484 // Arena of Discipline (Asmodians)
+		))
+		{
 			NpcQuestData npcQD = QuestEngine.getInstance().getNpcQuestData(getOwner().getNpcId());
 			QuestStateList list = player.getQuestStateList();
 			List<Integer> events = npcQD.getOnTalkEvent();
@@ -319,7 +319,7 @@ public class NpcController extends CreatureController<Npc>
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 10));
 			else
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 1011));
-			
+
 		}
 		else
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 10));
@@ -352,18 +352,18 @@ public class NpcController extends CreatureController<Npc>
 			return;
 
 		//Eracus Temple, Check if the player did the quest to enter. Teleport: Meneus
-		if (dialogId == 30 && (npc.getNpcId() == 203981))
+		if(dialogId == 30 && (npc.getNpcId() == 203981))
 		{
 			int completedquestid = 0;
 			completedquestid = 1346;
 			QuestState qstel = player.getQuestStateList().getQuestState(completedquestid);
-			if (qstel == null || qstel.getStatus() != QuestStatus.COMPLETE)
+			if(qstel == null || qstel.getStatus() != QuestStatus.COMPLETE)
 			{
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 				return;
 			}
 			TeleportService.teleportTo(player, 210020000, 1, 439.3f, 422.2f, 274.3f, 0);
-				return;
+			return;
 		}
 
 		switch(dialogId)
@@ -371,7 +371,7 @@ public class NpcController extends CreatureController<Npc>
 			case 2:
 				// buy
 				TradeListTemplate tradeList = TradeService.getTradeListData().getTradeListTemplate(npc.getNpcId());
-				if (tradeList == null)
+				if(tradeList == null)
 					log.warn("Missing tradelist for NPC : " + npc.getNpcId());
 				else
 					PacketSendUtility.sendPacket(player, new SM_TRADELIST(npc, tradeList, player.getPrices().getVendorBuyModifier()));
@@ -418,9 +418,9 @@ public class NpcController extends CreatureController<Npc>
 				}
 				break;
 			case 20:
-			    // TODO this is 2.1 warehouse
-			    // moved to 21 in 2.5, so 20 should be something new
-			    break;
+				// TODO this is 2.1 warehouse
+				// moved to 21 in 2.5, so 20 should be something new
+				break;
 			case 21:
 				// warehouse
 				if(MathUtil.isInRange(npc, player, 10)) // avoiding exploit with sending fake dialog_select packet
@@ -441,11 +441,9 @@ public class NpcController extends CreatureController<Npc>
 			case 30:
 				// soul healing
 				final long expLost = player.getCommonData().getExpRecoverable();
-				if (expLost == 0)
-				player.getEffectController().removeEffect(8291);
-				final double factor = (expLost < 1000000 ?
-					0.25 - (0.00000015 * expLost) 
-					: 0.1);
+				if(expLost == 0)
+					player.getEffectController().removeEffect(8291);
+				final double factor = (expLost < 1000000 ? 0.25 - (0.00000015 * expLost) : 0.1);
 				final int price = (int) (expLost * factor);
 
 				RequestResponseHandler responseHandler = new RequestResponseHandler(npc){
@@ -457,8 +455,8 @@ public class NpcController extends CreatureController<Npc>
 							if(!player.getInventory().decreaseKinah(price))
 								return;
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.EXP(String.valueOf(expLost)));
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.SOUL_HEALED());							
-							player.getCommonData().resetRecoverableExp();							
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.SOUL_HEALED());
+							player.getCommonData().resetRecoverableExp();
 							player.getEffectController().removeEffect(8291);
 						}
 						else
@@ -475,13 +473,10 @@ public class NpcController extends CreatureController<Npc>
 				};
 				if(player.getCommonData().getExpRecoverable() > 0)
 				{
-					boolean result = player.getResponseRequester().putRequest(SM_QUESTION_WINDOW.STR_SOUL_HEALING,
-						responseHandler);
+					boolean result = player.getResponseRequester().putRequest(SM_QUESTION_WINDOW.STR_SOUL_HEALING, responseHandler);
 					if(result)
 					{
-						PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(
-							SM_QUESTION_WINDOW.STR_SOUL_HEALING, 0, String.valueOf(price)
-						));
+						PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_SOUL_HEALING, 0, String.valueOf(price)));
 					}
 				}
 				else
@@ -577,23 +572,23 @@ public class NpcController extends CreatureController<Npc>
 				break;
 			case 56:
 				//Plastic Surgery
-				if (player.getInventory().getItemCountByItemId(169650000) > 0 || player.getInventory().getItemCountByItemId(169650001) > 0)
-					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, true, false));  
+				if(player.getInventory().getItemCountByItemId(169650000) > 0 || player.getInventory().getItemCountByItemId(169650001) > 0)
+					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, true, false));
 				else
-					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, false, false));  
+					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, false, false));
 				player.setEditMode(true);
 				break;
 			case 57:
 				//Gender Switch
-				if (player.getInventory().getItemCountByItemId(169660000) > 0 || player.getInventory().getItemCountByItemId(169660001) > 0)
-					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, true, true));  
+				if(player.getInventory().getItemCountByItemId(169660000) > 0 || player.getInventory().getItemCountByItemId(169660001) > 0)
+					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, true, true));
 				else
-					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, false, true));  
+					PacketSendUtility.sendPacket(player, new SM_PLASTIC_SURGERY(player, false, true));
 				player.setEditMode(true);
 				break;
 			case 58:
 				// dredgion npc
-				break;	
+				break;
 			case 61:
 				// armsfusion
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 29));
@@ -638,6 +633,13 @@ public class NpcController extends CreatureController<Npc>
 				// condition all equiped items 
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 35));
 				break;
+			case 73:
+				TradeListTemplate tradeInTradeList = TradeService.getTradeListData().getTradeListTemplate(npc.getNpcId());
+				if(tradeInTradeList == null)
+					log.warn("Missing arena trade list for NPC : " + npc.getNpcId());
+				else
+					PacketSendUtility.sendPacket(player, new SM_TRADEINTRADELIST(npc, tradeInTradeList, player.getPrices().getVendorBuyModifier()));
+				break;
 			case 10000:
 				// generic npc reply (most are teleporters)
 				TeleporterTemplate template = DataManager.TELEPORTER_DATA.getTeleporterTemplate(npc.getNpcId());
@@ -647,87 +649,88 @@ public class NpcController extends CreatureController<Npc>
 					if(loc != null)
 					{
 
-						if( template.getRace() != null && !player.getCommonData().getRace().equals(template.getRace()) )
+						if(template.getRace() != null && !player.getCommonData().getRace().equals(template.getRace()))
 						{
-								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MOVE_PORTAL_ERROR_INVALID_RACE);
-								return;
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MOVE_PORTAL_ERROR_INVALID_RACE);
+							return;
 						}
-						
+
 						if(!player.getInventory().decreaseKinah(loc.getPrice()))
 							return;
-						
+
 						TelelocationTemplate tlt = DataManager.TELELOCATION_DATA.getTelelocationTemplate(loc.getLocId());
 						TeleportService.teleportTo(player, tlt.getMapId(), tlt.getX(), tlt.getY(), tlt.getZ(), 1000);
 					}
 				}
-				else if(getOwner().getNpcId() >= 730296 && getOwner().getNpcId() <= 730303){
+				else if(getOwner().getNpcId() >= 730296 && getOwner().getNpcId() <= 730303)
+				{
 					double radian = Math.toRadians(MathUtil.convertHeadingToDegree(player.getHeading()));
 					int worldId = getOwner().getWorldId();
-					float x = (float)(player.getX() + (10 * Math.cos(radian)));
-					float y = (float)(player.getY() + (10 * Math.sin(radian)));
+					float x = (float) (player.getX() + (10 * Math.cos(radian)));
+					float y = (float) (player.getY() + (10 * Math.sin(radian)));
 					float z = player.getZ() + 0.2f;
 					TeleportService.teleportTo(player, worldId, x, y, z, 1);
 				}
 				// Kaisinel Academy => Sanctum
-                else if(getOwner().getNpcId() == 730424)
-                    TeleportService.teleportTo(player, 110010000, 1366.8f, 1539.5f, 569.0f, 1000);
+				else if(getOwner().getNpcId() == 730424)
+					TeleportService.teleportTo(player, 110010000, 1366.8f, 1539.5f, 569.0f, 1000);
 				// Kaisinel Academy => Inggison
-                else if(getOwner().getNpcId() == 730425)
-                {
-                    if(player.getInventory().getKinahCount() < 9300)
-                    {
-                        PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Inggison.");
-                        return;
-                    }
-                    else if (player.getLevel() < 51)
-				    {
-				        PacketSendUtility.sendMessage(player, "You don't have the necesary level to travel to Inggison.");
-                        return;
-                    }
-                    TeleportService.teleportTo(player, 210050000, 1335.0f, 276.0f, 589.3662f, 1000);
-                }
-                // Inggison => Kaisinel Academy
-                else if(getOwner().getNpcId() == 205314)
-                {
-                    if(player.getInventory().getKinahCount() < 9300)
-                    {
-                        PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Kaisinel Academy.");
-                        return;
-                    }
-                    TeleportService.teleportTo(player, 110070000, 444.98f, 251.62f, 129.97f, 1000);
-                }
+				else if(getOwner().getNpcId() == 730425)
+				{
+					if(player.getInventory().getKinahCount() < 9300)
+					{
+						PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Inggison.");
+						return;
+					}
+					else if(player.getLevel() < 51)
+					{
+						PacketSendUtility.sendMessage(player, "You don't have the necesary level to travel to Inggison.");
+						return;
+					}
+					TeleportService.teleportTo(player, 210050000, 1335.0f, 276.0f, 589.3662f, 1000);
+				}
+				// Inggison => Kaisinel Academy
+				else if(getOwner().getNpcId() == 205314)
+				{
+					if(player.getInventory().getKinahCount() < 9300)
+					{
+						PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Kaisinel Academy.");
+						return;
+					}
+					TeleportService.teleportTo(player, 110070000, 444.98f, 251.62f, 129.97f, 1000);
+				}
 				// Marchutan Priory => Pandaemonium
 				else if(getOwner().getNpcId() == 730427)
-				    TeleportService.teleportTo(player, 120010000, 1609.9f, 1390.7f, 193.1f, 1000);
+					TeleportService.teleportTo(player, 120010000, 1609.9f, 1390.7f, 193.1f, 1000);
 				// Marchutan Priory => Gelkmaros
 				else if(getOwner().getNpcId() == 730428)
 				{
-				    if(player.getInventory().getKinahCount() < 9300)
-				    {
-				        PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Gelkmaros.");
-				        return;
-				    }
-				    else if (player.getLevel() < 51)
-				    {
-				        PacketSendUtility.sendMessage(player, "You don't have the necesary level to travel to Gelkmaros.");
-				        return;
-				    }
-                    TeleportService.teleportTo(player, 220070000, 1763.0f, 2911.0f, 554.7982f, 1000);
+					if(player.getInventory().getKinahCount() < 9300)
+					{
+						PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Gelkmaros.");
+						return;
+					}
+					else if(player.getLevel() < 51)
+					{
+						PacketSendUtility.sendMessage(player, "You don't have the necesary level to travel to Gelkmaros.");
+						return;
+					}
+					TeleportService.teleportTo(player, 220070000, 1763.0f, 2911.0f, 554.7982f, 1000);
 				}
 				// Gelkmaros => Marchutan Priory
 				else if(getOwner().getNpcId() == 205322)
 				{
-				    if(player.getInventory().getKinahCount() < 9300)
-				    {
-				        PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Gelkmaros.");
-				        return;
-				    }
-                    TeleportService.teleportTo(player, 120080000, 548.65f, 200.5f, 93.48f, 1000);
+					if(player.getInventory().getKinahCount() < 9300)
+					{
+						PacketSendUtility.sendMessage(player, "You don't have enough kinah to travel to Gelkmaros.");
+						return;
+					}
+					TeleportService.teleportTo(player, 120080000, 548.65f, 200.5f, 93.48f, 1000);
 				}
 				else
 				{
-				    log.warn("No action defined for dialogId 10000 from npcId " + getOwner().getNpcId());				
-				}				
+					log.warn("No action defined for dialogId 10000 from npcId " + getOwner().getNpcId());
+				}
 				break;
 			default:
 				if(questId > 0)
@@ -770,27 +773,27 @@ public class NpcController extends CreatureController<Npc>
 			log.warn("CHECKPOINT: npc attacked without ai " + npc.getObjectTemplate().getTemplateId());
 			return;
 		}
-		
+
 		getOwner().getKnownList().doOnAllNpcs(new Executor<Npc>(){
 			@Override
 			public boolean run(Npc tmp)
 			{
-				if (getOwner().isSupportFrom(tmp) && MathUtil.isInRange(getOwner(), tmp, 10))
+				if(getOwner().isSupportFrom(tmp) && MathUtil.isInRange(getOwner(), tmp, 10))
 				{
-					if (getOwner().getWorldId() != 300100000 && (Math.abs(getOwner().getZ() - tmp.getZ()) < 3))
+					if(getOwner().getWorldId() != 300100000 && (Math.abs(getOwner().getZ() - tmp.getZ()) < 3))
 						tmp.getAggroList().addHate(creature, 1);
 				}
 				return true;
 			}
 		}, true);
-		
+
 		NpcShoutsService.getInstance().handleEvent(npc, creature, ShoutEventType.WOUNDED);
-		
+
 		if(npc.getLifeStats().getHpPercentage() <= 35)
 		{
 			NpcShoutsService.getInstance().handleEvent(npc, creature, ShoutEventType.ATK);
 		}
-		
+
 	}
 
 	@Override
@@ -816,7 +819,7 @@ public class NpcController extends CreatureController<Npc>
 	 * In instances - no npc respawn
 	 */
 	public void scheduleRespawn()
-	{	
+	{
 		if(getOwner().isInInstance())
 			return;
 
@@ -827,6 +830,7 @@ public class NpcController extends CreatureController<Npc>
 			addTask(TaskId.RESPAWN, respawnTask);
 		}
 	}
+
 	public void onCreatureDie(Creature lastAttacker)
 	{
 		super.onDie(lastAttacker);

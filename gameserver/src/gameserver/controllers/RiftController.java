@@ -37,6 +37,7 @@ import gameserver.network.aion.serverpackets.SM_RIFT_ANNOUNCE;
 import gameserver.network.aion.serverpackets.SM_RIFT_STATUS;
 import gameserver.services.RespawnService;
 import gameserver.services.TeleportService;
+import gameserver.spawn.RiftSpawnManager;
 import gameserver.spawn.RiftSpawnManager.RiftEnum;
 import gameserver.utils.PacketSendUtility;
 import gameserver.world.WorldMapInstance;
@@ -46,32 +47,32 @@ public class RiftController extends NpcController
 {
 	private boolean isMaster = false;
 	private SpawnTemplate slaveSpawnTemplate;
-	private Npc slave;	
+	private SpawnTemplate masterSpawnTemplate;
+	private Npc slave;
 	private Integer maxEntries;
-	private Integer maxLevel;	
+	private Integer maxLevel;
 	private int usedEntries;
-	private boolean isAccepting;	
+	private boolean isAccepting;
 	private RiftEnum riftTemplate;
-	
+
 	/**
 	 * Used to create master rifts or slave rifts (slave == null)
 	 * 
 	 * @param slaveSpawnTemplate
 	 */
-
-	public RiftController(Npc slave, RiftEnum riftTemplate)
+	public RiftController(Npc slave, SpawnTemplate spawnTemplate, RiftSpawnManager.RiftEnum riftTemplate)
 	{
 		this.riftTemplate = riftTemplate;
 		if(slave != null)//master rift should be created
 		{
 			this.slave = slave;
 			this.slaveSpawnTemplate = slave.getSpawn();
+			this.masterSpawnTemplate = spawnTemplate;
 			this.maxEntries = riftTemplate.getEntries();
 			this.maxLevel = riftTemplate.getMaxLevel();
-			
 			isMaster = true;
 			isAccepting = true;
-		}	
+		}
 	}
 
 	@Override
@@ -81,56 +82,52 @@ public class RiftController extends NpcController
 		{
 			Race race = player.getCommonData().getRace();
 			WorldType world = player.getWorldType();
-			if(race == Race.ASMODIANS && world == WorldType.ELYSEA ||
-				race == Race.ELYOS && world == WorldType.ASMODAE)
+			if(race == Race.ASMODIANS && world == WorldType.ELYSEA || race == Race.ELYOS && world == WorldType.ASMODAE)
 			{
 				PacketSendUtility.sendPacket(player, new SM_MESSAGE(0, null, "Rifts have been disabled for opposing races.", ChatType.ANNOUNCEMENTS));
 				return;
 			}
 		}
-		
+
 		if(!isMaster && !isAccepting)
 			return;
-		
-		RequestResponseHandler responseHandler = new RequestResponseHandler(getOwner())
-		{
+
+		RequestResponseHandler responseHandler = new RequestResponseHandler(getOwner()){
 			@Override
 			public void acceptRequest(Creature requester, Player responder)
 			{
 				if(!isAccepting)
 					return;
-				
+
 				int worldId = slaveSpawnTemplate.getWorldId();
 				float x = slaveSpawnTemplate.getX();
 				float y = slaveSpawnTemplate.getY();
 				float z = slaveSpawnTemplate.getZ();
-				
+
 				TeleportService.teleportTo(responder, worldId, x, y, z, 0);
 				usedEntries++;
-				
+
 				if(usedEntries >= maxEntries)
 				{
 					isAccepting = false;
-					
+
 					RespawnService.scheduleDecayTask(getOwner());
 					RespawnService.scheduleDecayTask(slave);
 				}
-				PacketSendUtility.broadcastPacket(getOwner(), 
-					new SM_RIFT_STATUS(getOwner().getObjectId(), usedEntries, maxEntries, maxLevel));
-					
+				PacketSendUtility.broadcastPacket(getOwner(), new SM_RIFT_STATUS(getOwner().getObjectId(), usedEntries, maxEntries, maxLevel));
+				sendUpdate();
+
 			}
+
 			@Override
 			public void denyRequest(Creature requester, Player responder)
 			{
 				//do nothing
 			}
 		};
-
 		boolean requested = player.getResponseRequester().putRequest(SM_QUESTION_WINDOW.STR_USE_RIFT, responseHandler);
-		if (requested)
-		{
+		if(requested)
 			PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_USE_RIFT, 0));
-		}
 	}
 
 	@Override
@@ -138,11 +135,10 @@ public class RiftController extends NpcController
 	{
 		if(!isMaster)
 			return;
-		
+
 		if(object instanceof Player)
 		{
-			PacketSendUtility.sendPacket((Player) object, 
-				new SM_RIFT_STATUS(getOwner().getObjectId(), usedEntries, maxEntries, maxLevel));
+			PacketSendUtility.sendPacket((Player) object, new SM_RIFT_STATUS(getOwner().getObjectId(), usedEntries, maxEntries, maxLevel));
 		}
 	}
 
@@ -151,27 +147,44 @@ public class RiftController extends NpcController
 	 */
 	public void sendMessage(Player activePlayer)
 	{
-		if(isMaster && getOwner().isSpawned())
-			PacketSendUtility.sendPacket(activePlayer, new SM_RIFT_ANNOUNCE(riftTemplate.getDestination()));
+		if((isMaster) && (getOwner().isSpawned()))
+		{
+			PacketSendUtility.sendPacket(activePlayer, new SM_RIFT_ANNOUNCE(33, getOwner().getObjectId().intValue(), riftTemplate, masterSpawnTemplate, RiftSpawnManager.getRemaningTime()));
+			PacketSendUtility.sendPacket(activePlayer, new SM_RIFT_ANNOUNCE(13, getOwner().getObjectId().intValue(), usedEntries, RiftSpawnManager.getRemaningTime()));
+		}
 	}
 
 	public void sendAnnounce()
 	{
-		if(isMaster && getOwner().isSpawned())
+		if((isMaster) && (getOwner().isSpawned()))
 		{
 			WorldMapInstance worldInstance = getOwner().getPosition().getMapRegion().getParent();
-			
 			worldInstance.doOnAllPlayers(new Executor<Player>(){
 				@Override
 				public boolean run(Player player)
 				{
 					if(player.isSpawned())
 					{
-						sendMessage(player);
+						PacketSendUtility.sendPacket(player, new SM_RIFT_ANNOUNCE(9, 0, RiftSpawnManager.getRiftsSize(), player.getCommonData().getRace()));
+						RiftController.this.sendMessage(player);
+						PacketSendUtility.sendPacket(player, new SM_RIFT_ANNOUNCE(9, 1, 1, player.getCommonData().getRace()));
 					}
 					return true;
 				}
 			});
 		}
+	}
+
+	public void sendUpdate()
+	{
+		WorldMapInstance worldInstance = getOwner().getPosition().getMapRegion().getParent();
+		worldInstance.doOnAllPlayers(new Executor<Player>(){
+			public boolean run(Player player)
+			{
+				if(player.isSpawned())
+					PacketSendUtility.sendPacket(player, new SM_RIFT_ANNOUNCE(13, getOwner().getObjectId(), usedEntries, RiftSpawnManager.getRemaningTime()));
+				return true;
+			}
+		});
 	}
 }

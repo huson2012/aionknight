@@ -27,6 +27,7 @@ import gameserver.model.templates.NpcTemplate;
 import gameserver.model.templates.portal.PortalTemplate;
 import gameserver.model.templates.spawn.SpawnGroup;
 import gameserver.quest.QuestEngine;
+import gameserver.services.CashShopManager;
 import gameserver.skill.model.SkillTemplate;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
@@ -52,13 +53,13 @@ import static org.apache.commons.io.filefilter.FileFilterUtils.*;
 
 public class Reload extends AdminCommand
 {
-	private static final Logger	log	= Logger.getLogger(Reload.class);
+	private static final Logger log = Logger.getLogger(Reload.class);
 
 	public Reload()
 	{
 		super("reload");
 	}
-	
+
 	public enum ReloadType
 	{
 		UNKNOWN,
@@ -70,7 +71,7 @@ public class Reload extends AdminCommand
 		SKILL,
 		SPAWN
 	}
-	
+
 	private void sendSyntax(Player admin)
 	{
 		String message = "syntax: //reload <";
@@ -86,26 +87,26 @@ public class Reload extends AdminCommand
 	@Override
 	public void executeCommand(Player admin, String[] params)
 	{
-		if (admin.getAccessLevel() < AdminConfig.COMMAND_RELOAD)
+		if(admin.getAccessLevel() < AdminConfig.COMMAND_RELOAD)
 		{
 			PacketSendUtility.sendMessage(admin, "You dont have enough rights to execute this command");
 			return;
 		}
 
-		if (params == null || params.length != 1)
+		if(params == null || params.length != 1)
 		{
 			sendSyntax(admin);
 			return;
 		}
-		
+
 		ReloadType reloadType = ReloadType.UNKNOWN;
 		try
 		{
 			reloadType = ReloadType.valueOf(params[0].toUpperCase());
 		}
-		catch (Exception e)
-		{ }
-		
+		catch(Exception e)
+		{}
+
 		switch(reloadType)
 		{
 			case COMMAND:
@@ -127,8 +128,8 @@ public class Reload extends AdminCommand
 					JAXBContext jc = JAXBContext.newInstance(StaticData.class);
 					Unmarshaller un = jc.createUnmarshaller();
 					un.setSchema(getSchema("./data/static_data/static_data.xsd"));
-					
-					NpcData data = (NpcData)un.unmarshal(npcXml);
+
+					NpcData data = (NpcData) un.unmarshal(npcXml);
 					if(data != null && data.getTemplates() != null)
 						npcTemplates.addAll(data.getTemplates());
 				}
@@ -138,15 +139,15 @@ public class Reload extends AdminCommand
 					log.error(e);
 					return;
 				}
-				
+
 				if(npcTemplates.size() > 0)
 				{
 					DataManager.NPC_DATA.setTemplates(npcTemplates);
-					
+
 					PacketSendUtility.sendMessage(admin, "NPC templates reloaded successfuly, now updating World to reflect changes ...!");
-					
+
 					World.getInstance().doOnAllNpcs(new Executor<Npc>(){
-						
+
 						@Override
 						public boolean run(Npc object)
 						{
@@ -158,13 +159,13 @@ public class Reload extends AdminCommand
 							return true;
 						}
 					}, true);
-					
+
 					PacketSendUtility.sendMessage(admin, "Complete !");
-					
+
 				}
 				else
 					PacketSendUtility.sendMessage(admin, "NPC templates reload failed! Keeping last version ...");
-				
+
 				break;
 			case PORTAL:
 				File portalDir = new File("./data/static_data/portals");
@@ -174,16 +175,16 @@ public class Reload extends AdminCommand
 					JAXBContext jc = JAXBContext.newInstance(StaticData.class);
 					Unmarshaller un = jc.createUnmarshaller();
 					un.setSchema(getSchema("./data/static_data/static_data.xsd"));
-					
-					for (File file : listFiles(portalDir, true))
+
+					for(File file : listFiles(portalDir, true))
 					{
-						PortalData data = (PortalData)un.unmarshal(file);
-						if (data != null && data.getPortals() != null)
+						PortalData data = (PortalData) un.unmarshal(file);
+						if(data != null && data.getPortals() != null)
 							portalTemplates.addAll(data.getPortals());
 					}
-					
+
 				}
-				catch (Exception e)
+				catch(Exception e)
 				{
 					PacketSendUtility.sendMessage(admin, "Portals reload failed! Keeping last version ...");
 					log.error(e);
@@ -200,31 +201,31 @@ public class Reload extends AdminCommand
 			case QUEST:
 				File questXml = new File("./data/static_data/quest_data/quest_data.xml");
 				File questDir = new File("./data/static_data/quest_script_data");
-				
+
 				QuestsData newQuestData;
 				ArrayList<QuestScriptsData> newScriptData = new ArrayList<QuestScriptsData>();
-				
+
 				try
 				{
 					JAXBContext jc = JAXBContext.newInstance(StaticData.class);
 					Unmarshaller un = jc.createUnmarshaller();
 					un.setSchema(getSchema("./data/static_data/static_data.xsd"));
 					newQuestData = (QuestsData) un.unmarshal(questXml);
-					for (File file : listFiles(questDir, true))
+					for(File file : listFiles(questDir, true))
 					{
-						QuestScriptsData data = ((QuestScriptsData)un.unmarshal(file));
-						if (data != null)
-							if (data.getData() != null)
+						QuestScriptsData data = ((QuestScriptsData) un.unmarshal(file));
+						if(data != null)
+							if(data.getData() != null)
 								newScriptData.add(data);
 					}
 				}
-				catch (Exception e)
+				catch(Exception e)
 				{
 					PacketSendUtility.sendMessage(admin, "Quests reload failed! Keeping last version ...");
 					log.error(e);
 					return;
 				}
-				
+
 				if(newQuestData != null)
 				{
 					try
@@ -247,6 +248,19 @@ public class Reload extends AdminCommand
 					}
 				}
 				break;
+			case SHOP:
+				try
+				{
+					CashShopManager.reload();
+				}
+				catch(Exception e)
+				{
+					PacketSendUtility.sendMessage(admin, "Ingame shop reload failed! Keeping last version ...");
+					log.error(e);
+					return;
+				}
+				PacketSendUtility.sendMessage(admin, "Ingame shop reloaded successfuly!");
+				break;
 			case SKILL:
 				File skillDir = new File("./data/static_data/skills");
 				List<SkillTemplate> skillTemplates = new ArrayList<SkillTemplate>();
@@ -255,15 +269,15 @@ public class Reload extends AdminCommand
 					JAXBContext jc = JAXBContext.newInstance(StaticData.class);
 					Unmarshaller un = jc.createUnmarshaller();
 					un.setSchema(getSchema("./data/static_data/static_data.xsd"));
-					
-					for (File file : listFiles(skillDir, true))
+
+					for(File file : listFiles(skillDir, true))
 					{
-						SkillData data = (SkillData)un.unmarshal(file);
-						if (data != null)
+						SkillData data = (SkillData) un.unmarshal(file);
+						if(data != null)
 							skillTemplates.addAll(data.getSkillTemplates());
 					}
 				}
-				catch (Exception e)
+				catch(Exception e)
 				{
 					PacketSendUtility.sendMessage(admin, "Skills reload failed! Keeping last version ...");
 					log.error(e);
@@ -286,21 +300,21 @@ public class Reload extends AdminCommand
 					JAXBContext jc = JAXBContext.newInstance(StaticData.class);
 					Unmarshaller un = jc.createUnmarshaller();
 					un.setSchema(getSchema("./data/static_data/static_data.xsd"));
-					
-					for (File file : listFiles(spawnDir, true))
+
+					for(File file : listFiles(spawnDir, true))
 					{
-						SpawnsData data = (SpawnsData)un.unmarshal(file);
-						if (data != null && data.getSpawnGroups() != null)
+						SpawnsData data = (SpawnsData) un.unmarshal(file);
+						if(data != null && data.getSpawnGroups() != null)
 							spawnTemplates.addAll(data.getSpawnGroups());
 					}
 				}
-				catch (Exception e)
+				catch(Exception e)
 				{
 					PacketSendUtility.sendMessage(admin, "Spawns reload failed! Keeping last version ...");
 					log.error(e);
 					return;
 				}
-				
+
 				if(spawnTemplates.size() > 0)
 				{
 					DataManager.SPAWNS_DATA.setSpawns(spawnTemplates);
@@ -324,7 +338,7 @@ public class Reload extends AdminCommand
 		{
 			schema = sf.newSchema(new File(xml_schema));
 		}
-		catch (SAXException saxe)
+		catch(SAXException saxe)
 		{
 			throw new Error("Error while getting schema", saxe);
 		}
@@ -336,7 +350,6 @@ public class Reload extends AdminCommand
 	{
 		IOFileFilter dirFilter = recursive ? makeSVNAware(HiddenFileFilter.VISIBLE) : null;
 
-		return FileUtils.listFiles(root, and(and(notFileFilter(prefixFileFilter("new")),
-			suffixFileFilter(".xml")), HiddenFileFilter.VISIBLE), dirFilter);
+		return FileUtils.listFiles(root, and(and(notFileFilter(prefixFileFilter("new")), suffixFileFilter(".xml")), HiddenFileFilter.VISIBLE), dirFilter);
 	}
 }

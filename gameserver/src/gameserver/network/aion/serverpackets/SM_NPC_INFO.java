@@ -28,7 +28,6 @@ import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.model.items.ItemSlot;
 import gameserver.model.items.NpcEquippedGear;
 import gameserver.model.siege.Artifact;
-import gameserver.model.siege.FortressGate;
 import gameserver.model.templates.NpcTemplate;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.model.templates.spawn.SpawnTemplate;
@@ -40,218 +39,230 @@ import java.util.Map.Entry;
 /**
  * This packet is displaying visible npc/monsters.
  */
-public class SM_NPC_INFO extends AionServerPacket 
+public class SM_NPC_INFO extends AionServerPacket
 {
-    /**
-     * Visible npc
-     */
-    private Creature npc;
-    private NpcTemplate npcTemplate;
-    private int npcId;
-    private int masterObjId;
-    private String masterName = "";
-    
+	/**
+	 * Visible npc
+	 */
+	private Creature npc;
+	private NpcTemplate npcTemplate;
+	private int npcId;
+	private int masterObjId;
+	private String masterName = "";
+
 	@SuppressWarnings("unused")
-    private float speed = 0.3f;
-    private final int npcTypeId;
+	private float speed = 0.3f;
+	private final int npcTypeId;
 
-
-    /**
-     * Constructs new SM_NPC_INFO packet
-     *
-     * @param npc visible npc.
-     * @param player
-     */
-    public SM_NPC_INFO(Npc npc, Player player) 
+	/**
+	 * Constructs new SM_NPC_INFO packet
+	 *
+	 * @param npc visible npc.
+	 * @param player
+	 */
+	public SM_NPC_INFO(Npc npc, Player player)
 	{
-        this.npc = npc;
-        npcTemplate = npc.getObjectTemplate();
-        
-    	if(npcTemplate.getNpcType() == NpcType.NEUTRAL || npcTemplate.getNpcType() == NpcType.ARTIFACT){
+		this.npc = npc;
+		npcTemplate = npc.getObjectTemplate();
+
+		if(npcTemplate.getNpcType() == NpcType.NEUTRAL || npcTemplate.getNpcType() == NpcType.ARTIFACT)
+		{
 			if(player.isAggroIconTo(npc.getTribe()))
 				npcTypeId = NpcType.NEUTRAL.getId();
 			else
 				npcTypeId = NpcType.NON_ATTACKABLE.getId();
 		}
-		else{
-		npcTypeId = (player.isAggroIconTo(npc.getTribe()) ?
-			NpcType.AGGRESSIVE.getId() : npcTemplate.getNpcType().getId());
+		else
+		{
+			npcTypeId = (player.isAggroIconTo(npc.getTribe()) ? NpcType.AGGRESSIVE.getId() : npcTemplate.getNpcType().getId());
 		}
 		npcId = npc.getNpcId();
-		
+
 	}
 
-    /**
-     * Constructs new <tt>SM_NPC_INFO </tt> packet
-     *
-     * @param player
-     * @param kisk - the visible npc.
-     */
-    public SM_NPC_INFO(Player player, Kisk kisk) 
+	/**
+	 * Constructs new <tt>SM_NPC_INFO </tt> packet
+	 *
+	 * @param player
+	 * @param kisk - the visible npc.
+	 */
+	public SM_NPC_INFO(Player player, Kisk kisk)
 	{
-        this.npc = kisk;
-        npcTypeId = (kisk.isAggroFrom(player) ?
-                NpcType.ATTACKABLE.getId() : NpcType.NON_ATTACKABLE.getId());
-        npcTemplate = kisk.getObjectTemplate();
-        npcId = kisk.getNpcId();
+		this.npc = kisk;
+		npcTypeId = (kisk.isAggroFrom(player) ? NpcType.ATTACKABLE.getId() : NpcType.NON_ATTACKABLE.getId());
+		npcTemplate = kisk.getObjectTemplate();
+		npcId = kisk.getNpcId();
 
-        masterObjId = kisk.getOwnerObjectId();
-        masterName = kisk.getOwnerName();
-    }
+		masterObjId = kisk.getOwnerObjectId();
+		masterName = kisk.getOwnerName();
+	}
 
-    /**
-     * @param player
-     * @param groupgate - the visible npc.
-     */
-    public SM_NPC_INFO(Player player, GroupGate groupgate) {
-        this.npc = groupgate;
-        npcTypeId = (groupgate.isAggroFrom(player) ?
-                NpcType.ATTACKABLE.getId() : NpcType.NON_ATTACKABLE.getId());
-        npcTemplate = groupgate.getObjectTemplate();
-        npcId = groupgate.getNpcId();
-
-        Player owner = (Player) groupgate.getCreator();
-        if (owner != null) {
-            masterObjId = owner.getObjectId();
-            masterName = owner.getName();
-        }
-    }
-
-    /**
-     * @param summon
-     */
-    public SM_NPC_INFO(Summon summon) {
-        this.npc = summon;
-        npcTemplate = summon.getObjectTemplate();
-        npcTypeId = npcTemplate.getNpcType().getId();
-        npcId = summon.getNpcId();
-        Player owner = summon.getMaster();
-        if (owner != null) {
-            masterObjId = owner.getObjectId();
-            masterName = owner.getName();
-            speed = owner.getGameStats().getCurrentStat(StatEnum.SPEED) / 1000f;
-        } else {
-            masterName = "LOST";
-        }
-    }
-
-    public SM_NPC_INFO(Trap trap) {
-        this.npc = trap;
-        npcTemplate = trap.getObjectTemplate();
-        npcTypeId = npcTemplate.getNpcType().getId();
-        npcId = trap.getNpcId();
-        Player owner = (Player)trap.getMaster();
-        if (owner != null) {
-            masterObjId = owner.getObjectId();
-            masterName = owner.getName();
-            speed = 0;
-        } else {
-            masterName = "LOST";
-        }
-    }
-	
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void writeImpl(AionConnection con, ByteBuffer buf) 
+	/**
+	 * @param player
+	 * @param groupgate - the visible npc.
+	 */
+	public SM_NPC_INFO(Player player, GroupGate groupgate)
 	{
-        writeF(buf, npc.getX());// x
-        writeF(buf, npc.getY());// y
-        writeF(buf, npc.getZ());// z
-        writeD(buf, npc.getObjectId());
-        writeD(buf, npcId);
-        writeD(buf, npcId);
-        writeC(buf, npcTypeId);
-        writeH(buf, npc.getState());
+		this.npc = groupgate;
+		npcTypeId = (groupgate.isAggroFrom(player) ? NpcType.ATTACKABLE.getId() : NpcType.NON_ATTACKABLE.getId());
+		npcTemplate = groupgate.getObjectTemplate();
+		npcId = groupgate.getNpcId();
 
-        writeC(buf, npc.getHeading());
-        writeD(buf, npcTemplate.getNameId());
-        writeD(buf, npcTemplate.getTitleId());// titleID
-        writeH(buf, 0x00);// unk
-        writeC(buf, 0x00);// unk
-        writeD(buf, 0x00);// unk
+		Player owner = (Player) groupgate.getCreator();
+		if(owner != null)
+		{
+			masterObjId = owner.getObjectId();
+			masterName = owner.getName();
+		}
+	}
 
-        /**
-         * Master Info (Summon, Kisk, Etc)
-         */
-        writeD(buf, masterObjId);// masterObjectId
-        writeS(buf, masterName);// masterName
+	/**
+	 * @param summon
+	 */
+	public SM_NPC_INFO(Summon summon)
+	{
+		this.npc = summon;
+		npcTemplate = summon.getObjectTemplate();
+		npcTypeId = npcTemplate.getNpcType().getId();
+		npcId = summon.getNpcId();
+		Player owner = summon.getMaster();
+		if(owner != null)
+		{
+			masterObjId = owner.getObjectId();
+			masterName = owner.getName();
+			speed = owner.getGameStats().getCurrentStat(StatEnum.SPEED) / 1000f;
+		}
+		else
+		{
+			masterName = "LOST";
+		}
+	}
 
-        int maxHp = npc.getLifeStats().getMaxHp();
-        int currHp = npc.getLifeStats().getCurrentHp();
-        writeC(buf, 100 * currHp / maxHp);// %hp
-        writeD(buf, npc.getGameStats().getCurrentStat(StatEnum.MAXHP));
-        writeC(buf, npc.getLevel());// lvl
+	public SM_NPC_INFO(Trap trap)
+	{
+		this.npc = trap;
+		npcTemplate = trap.getObjectTemplate();
+		npcTypeId = npcTemplate.getNpcType().getId();
+		npcId = trap.getNpcId();
+		Player owner = (Player) trap.getMaster();
+		if(owner != null)
+		{
+			masterObjId = owner.getObjectId();
+			masterName = owner.getName();
+			speed = 0;
+		}
+		else
+		{
+			masterName = "LOST";
+		}
+	}
 
-        NpcEquippedGear gear = npcTemplate.getEquipment();
-        if (gear == null)
-            writeH(buf, 0x00);
-        else {
-            writeH(buf, gear.getItemsMask());
-            for (Entry<ItemSlot, ItemTemplate> item : gear) // getting it from template ( later if we make sure that npcs actually use items, we'll make Item from it )
-            {
-                writeD(buf, item.getValue().getTemplateId());
-                writeD(buf, 0x00);
-                writeD(buf, 0x00);
-                writeH(buf, 0x00);
-            }
-        }
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	protected void writeImpl(AionConnection con, ByteBuffer buf)
+	{
+		writeF(buf, npc.getX());// x
+		writeF(buf, npc.getY());// y
+		writeF(buf, npc.getZ());// z
+		writeD(buf, npc.getObjectId());
+		writeD(buf, npcId);
+		writeD(buf, npcId);
+		writeC(buf, npcTypeId);
+		writeH(buf, npc.getState());
 
-        writeF(buf, 1.5f);
-        writeF(buf, npcTemplate.getHeight());
-        writeF(buf, npc.getMoveController().getSpeed()); // speed
+		writeC(buf, npc.getHeading());
+		writeD(buf, npcTemplate.getNameId());
+		writeD(buf, npcTemplate.getTitleId());// titleID
+		writeH(buf, 0x00);// unk
+		writeC(buf, 0x00);// unk
+		writeD(buf, 0x00);// unk
 
-        writeH(buf, 2000);// 0x834
-        writeH(buf, 2000);// 0x834
+		/**
+		 * Master Info (Summon, Kisk, Etc)
+		 */
+		writeD(buf, masterObjId);// masterObjectId
+		writeS(buf, masterName);// masterName
 
-        if (npc instanceof Servant)
-            writeC(buf, 0x01);// unk
-        else
-            writeC(buf, 0x00);
+		int maxHp = npc.getLifeStats().getMaxHp();
+		int currHp = npc.getLifeStats().getCurrentHp();
+		writeC(buf, 100 * currHp / maxHp);// %hp
+		writeD(buf, npc.getGameStats().getCurrentStat(StatEnum.MAXHP));
+		writeC(buf, npc.getLevel());// lvl
 
-        /**
-         * Movement
-         */
-        writeF(buf, npc.getX());// x
-        writeF(buf, npc.getY());// y
-        writeF(buf, npc.getZ());// z
-        writeC(buf, 0x00); // move type
+		NpcEquippedGear gear = npcTemplate.getEquipment();
+		if(gear == null)
+			writeH(buf, 0x00);
+		else
+		{
+			writeH(buf, gear.getItemsMask());
+			for(Entry<ItemSlot, ItemTemplate> item : gear) // getting it from template ( later if we make sure that npcs actually use items, we'll make Item from it )
+			{
+				writeD(buf, item.getValue().getTemplateId());
+				writeD(buf, 0x00);
+				writeD(buf, 0x00);
+				writeH(buf, 0x00);
+			}
+		}
 
-        SpawnTemplate spawn = npc.getSpawn();
-        if (spawn == null)
-        {
-        	writeH(buf, 0);
-        }
-        else
-        {
-        	int mask = (Math.round(spawn.getStaticid() / 0xFF) < 0 ? 0 : Math.round(spawn.getStaticid() / 0xFF));
-        	byte[] statics = new byte[]{(byte) spawn.getStaticid(), (byte) mask};
-        	writeB(buf, statics);
-        }
+		writeF(buf, 1.5f);
+		writeF(buf, npcTemplate.getHeight());
+		writeF(buf, npc.getMoveController().getSpeed()); // speed
 
-        writeC(buf, 0);
-        writeC(buf, 0); 
-        writeC(buf, 0);
-        writeC(buf, 0);
-        writeC(buf, 0);
-        writeC(buf, 0);
-        writeC(buf, 0);
-        writeC(buf, 0);
-        writeC(buf, npc.getVisualState());
+		writeH(buf, 2000);// 0x834
+		writeH(buf, 2000);// 0x834
 
-        /**
-         * 1 : normal (kisk too)
-         * 2 : summon
-         * 32 : trap
-         * 1024 : holy servant, noble energy
-         */
-        writeH(buf, npc.getNpcObjectType().getId());
-        writeC(buf, 0x00);
-        if (npc instanceof Artifact) {
-            writeD(buf, 0);
-        } else {
-            writeD(buf, npc.getTarget() == null ? 0 : npc.getTarget().getObjectId());
+		if(npc instanceof Servant)
+			writeC(buf, 0x01);// unk
+		else
+			writeC(buf, 0x00);
+
+		/**
+		 * Movement
+		 */
+		writeF(buf, npc.getX());// x
+		writeF(buf, npc.getY());// y
+		writeF(buf, npc.getZ());// z
+		writeC(buf, 0x00); // move type
+
+		SpawnTemplate spawn = npc.getSpawn();
+		if(spawn == null)
+		{
+			writeH(buf, 0);
+		}
+		else
+		{
+			int mask = (Math.round(spawn.getStaticid() / 0xFF) < 0 ? 0 : Math.round(spawn.getStaticid() / 0xFF));
+			byte[] statics = new byte[] { (byte) spawn.getStaticid(), (byte) mask };
+			writeB(buf, statics);
+		}
+
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, 0);
+		writeC(buf, npc.getVisualState());
+
+		/**
+		 * 1 : normal (kisk too)
+		 * 2 : summon
+		 * 32 : trap
+		 * 1024 : holy servant, noble energy
+		 */
+		writeH(buf, npc.getNpcObjectType().getId());
+		writeC(buf, 0x00);
+		if(npc instanceof Artifact)
+		{
+			writeD(buf, 0);
+		}
+		else
+		{
+			writeD(buf, npc.getTarget() == null ? 0 : npc.getTarget().getObjectId());
 		}
 	}
 }

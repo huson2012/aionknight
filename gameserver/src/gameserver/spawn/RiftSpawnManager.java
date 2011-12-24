@@ -48,12 +48,13 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class RiftSpawnManager
 {
-	
+
 	private static final Logger log = Logger.getLogger(RiftSpawnManager.class);
 	private static final ConcurrentLinkedQueue<Npc> rifts = new ConcurrentLinkedQueue<Npc>();
-	private static final int RIFT_RESPAWN_DELAY	= 120 * 60 * 1000;
+	private static final int RIFT_RESPAWN_DELAY = 120 * 60 * 1000;
 	private static final int RIFT_LIFETIME = 120 * 60 * 1000;
 	private static final Map<String, SpawnGroup> spawnGroups = new HashMap<String, SpawnGroup>();
+
 	public static void addRiftSpawnGroup(SpawnGroup spawnGroup)
 	{
 		spawnGroups.put(spawnGroup.getAnchor(), spawnGroup);
@@ -63,37 +64,36 @@ public class RiftSpawnManager
 	{
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeInMillis(System.currentTimeMillis());
-		
+
 		long TIME_BEFORE_SPAWN_RIFT = 0;
-		
-		if (calendar.get(Calendar.HOUR_OF_DAY) % 2 == 0)
+
+		if(calendar.get(Calendar.HOUR_OF_DAY) % 2 == 0)
 			TIME_BEFORE_SPAWN_RIFT += 1 * 60 * 60 * 1000;
-		
+
 		TIME_BEFORE_SPAWN_RIFT += ((60 - calendar.get(Calendar.MINUTE)) * 60 - calendar.get(Calendar.SECOND)) * 1000;
-		
+
 		Timestamp newTime = new Timestamp(System.currentTimeMillis() + TIME_BEFORE_SPAWN_RIFT);
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable(){
 			@Override
 			public void run()
 			{
 				Util.printSection("Rifts Manager");
 				ArrayList<Integer> rifts = new ArrayList<Integer>();
 				int nbRift, rndRift;
-				
-				for (int i=0; i<4; i++)
+
+				for(int i = 0; i < 4; i++)
 				{
 					nbRift = getNbRift();
 					log.info("Spawning " + nbRift + " rifts for map: " + getMapName(i));
-					
-					for (int j=0; j<nbRift; j++)
+
+					for(int j = 0; j < nbRift; j++)
 					{
-						rndRift = Rnd.get(i*7, (i+1)*7-1);
-						
-						while (rifts.contains(rndRift))
-							rndRift = Rnd.get(i*7, (i+1)*7-1);
-							rifts.add(rndRift);
-							spawnRift(RiftEnum.values()[rndRift]);
+						rndRift = Rnd.get(i * 7, (i + 1) * 7 - 1);
+
+						while(rifts.contains(rndRift))
+							rndRift = Rnd.get(i * 7, (i + 1) * 7 - 1);
+						rifts.add(rndRift);
+						spawnRift(RiftEnum.values()[rndRift]);
 					}
 					rifts.clear();
 				}
@@ -105,25 +105,26 @@ public class RiftSpawnManager
 	{
 		double rnd = Rnd.get(0, 99);
 
-		if (rnd == 0)
+		if(rnd == 0)
 			return 6;
-		else if (rnd <= 2)
+		else if(rnd <= 2)
 			return 5;
-		else if (rnd <= 5)
+		else if(rnd <= 5)
 			return 4;
-		else if (rnd <= 10)
+		else if(rnd <= 10)
 			return 3;
-		else if (rnd <= 25)
+		else if(rnd <= 25)
 			return 2;
-		else if (rnd <= 70)
+		else if(rnd <= 70)
 			return 1;
 		else
 			return 0;
-		
+
 	}
-		private static String getMapName(int mapId)
+
+	private static String getMapName(int mapId)
 	{
-		switch (mapId)
+		switch(mapId)
 		{
 			case 0:
 				return "ELTNEN";
@@ -137,31 +138,32 @@ public class RiftSpawnManager
 				return "UNKNOWN";
 		}
 	}
-		private static void spawnRift(RiftEnum rift)
+
+	private static void spawnRift(RiftEnum rift)
 	{
 		log.info("Spawning rift: " + rift.name());
 		SpawnGroup masterGroup = spawnGroups.get(rift.getMaster());
 		SpawnGroup slaveGroup = spawnGroups.get(rift.getSlave());
-		
+
 		if(masterGroup == null || slaveGroup == null)
 			return;
-		
+
 		int instanceCount = World.getInstance().getWorldMap(masterGroup.getMapid()).getInstanceCount();
-		
+
 		SpawnTemplate masterTemplate = masterGroup.getNextRandomTemplate();
 		SpawnTemplate slaveTemplate = slaveGroup.getNextRandomTemplate();
-		
+
 		for(int i = 1; i <= instanceCount; i++)
 		{
-			Npc slave = spawnInstance(i, masterGroup, slaveTemplate, new RiftController(null, rift));
-			spawnInstance(i, masterGroup, masterTemplate, new RiftController(slave, rift));
-		}		
+			Npc slave = spawnInstance(i, masterGroup, slaveTemplate, new RiftController(null, null, rift));
+			spawnInstance(i, masterGroup, masterTemplate, new RiftController(slave, masterTemplate, rift));
+		}
 	}
 
 	private static Npc spawnInstance(int instanceIndex, SpawnGroup spawnGroup, SpawnTemplate spawnTemplate, RiftController riftController)
 	{
 		NpcTemplate masterObjectTemplate = DataManager.NPC_DATA.getNpcTemplate(spawnGroup.getNpcid());
-		Npc npc = new Npc(IDFactory.getInstance().nextId(),riftController, spawnTemplate, masterObjectTemplate);
+		Npc npc = new Npc(IDFactory.getInstance().nextId(), riftController, spawnTemplate, masterObjectTemplate);
 		npc.setKnownlist(new NpcKnownList(npc));
 		npc.setEffectController(new EffectController(npc));
 		npc.getController().onRespawn();
@@ -170,16 +172,15 @@ public class RiftSpawnManager
 		world.setPosition(npc, spawnTemplate.getWorldId(), instanceIndex, spawnTemplate.getX(), spawnTemplate.getY(), spawnTemplate.getZ(), spawnTemplate.getHeading());
 		world.spawn(npc);
 		rifts.add(npc);
-		scheduleDespawn(npc);		
+		scheduleDespawn(npc);
 		riftController.sendAnnounce();
-		
+
 		return npc;
 	}
 
 	private static void scheduleDespawn(final Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
+		ThreadPoolManager.getInstance().schedule(new Runnable(){
 			@Override
 			public void run()
 			{
@@ -187,8 +188,8 @@ public class RiftSpawnManager
 				{
 					PacketSendUtility.broadcastPacket(npc, new SM_DELETE(npc, 15));
 					npc.getController().onDespawn(true);
-					World.getInstance().despawn(npc);						
-				}	
+					World.getInstance().despawn(npc);
+				}
 				rifts.remove(npc);
 			}
 		}, RIFT_LIFETIME);
@@ -224,12 +225,13 @@ public class RiftSpawnManager
 		BELUSLAN_EM("BELUSLAN_EM", "HEIRON_ES", 60, 60, Race.ELYOS),
 		BELUSLAN_FM("BELUSLAN_FM", "HEIRON_FS", 60, 60, Race.ELYOS),
 		BELUSLAN_GM("BELUSLAN_GM", "HEIRON_GS", 72, 60, Race.ELYOS);
-		
+
 		private String master;
 		private String slave;
 		private int entries;
 		private int maxLevel;
 		private Race destination;
+
 		private RiftEnum(String master, String slave, int entries, int maxLevel, Race destination)
 		{
 			this.master = master;
@@ -268,11 +270,19 @@ public class RiftSpawnManager
 	public static void sendRiftStatus(Player activePlayer)
 	{
 		for(Npc rift : rifts)
-		{
 			if(rift.getWorldId() == activePlayer.getWorldId())
-			{
 				((RiftController) rift.getController()).sendMessage(activePlayer);
-			}
-		}
+	}
+
+	public static int getRemaningTime()
+	{
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(System.currentTimeMillis());
+		return 3600 - (cal.get(12) * 60 + cal.get(13));
+	}
+
+	public static int getRiftsSize()
+	{
+		return rifts.size();
 	}
 }

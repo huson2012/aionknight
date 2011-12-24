@@ -19,37 +19,35 @@ package gameserver.network.aion.clientpackets;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.AionClientPacket;
 import gameserver.services.MailService;
-import org.apache.log4j.Logger;
 
 /**
 * @author kosyachok, Jenose (v2.5.0.x)
 *
 */
-    public class CM_DELETE_MAIL extends AionClientPacket
-    {
-       private static final Logger log = Logger.getLogger(CM_DELETE_MAIL.class);
-       
-       int unk1;
-       int unk2;
-       int mailObjId;
-       
-       public CM_DELETE_MAIL(int opcode)
-       {
-          super(opcode);
-       }
-       
-       @Override
-       protected void readImpl()
-       {
-          unk1 = readH();
-          mailObjId = readD();
-          unk2 = readC();
-       }
-       
-       @Override
-       protected void runImpl()
-       {
-          Player player = getConnection().getActivePlayer();
-          MailService.getInstance().deleteMail(player, mailObjId);
-       }
-    }
+public class CM_DELETE_MAIL extends AionClientPacket
+{
+
+	int unk1;
+	int unk2;
+	int mailObjId;
+
+	public CM_DELETE_MAIL(int opcode)
+	{
+		super(opcode);
+	}
+
+	@Override
+	protected void readImpl()
+	{
+		unk1 = readH();
+		mailObjId = readD();
+		unk2 = readC();
+	}
+
+	@Override
+	protected void runImpl()
+	{
+		Player player = getConnection().getActivePlayer();
+		MailService.getInstance().deleteMail(player, mailObjId);
+	}
+}

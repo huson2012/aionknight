@@ -24,18 +24,33 @@ package gameserver.utils.rates;
 public abstract class Rates
 {
 	public abstract int getGroupXpRate();
+
 	public abstract int getXpRate();
+
 	public abstract float getApNpcRate();
+
 	public abstract float getApPlayerRate();
+
 	public abstract float getGatheringXPRate();
+
 	public abstract float getGatheringLvlRate();
+
 	public abstract float getCraftingXPRate();
+
 	public abstract float getCraftingLvlRate();
+
 	public abstract int getDropRate();
+
 	public abstract int getChestDropRate();
+
 	public abstract int getQuestXpRate();
+
 	public abstract int getQuestKinahRate();
+
 	public abstract int getKinahRate();
+
+	public abstract int getBokerRate();
+
 	public static Rates getRatesFor(byte membership)
 	{
 		switch(membership)
@@ -44,6 +59,8 @@ public abstract class Rates
 				return new RegularRates();
 			case 1:
 				return new PremiumRates();
+			case 2:
+				return new VipRates();
 			default:
 				return new RegularRates();
 		}

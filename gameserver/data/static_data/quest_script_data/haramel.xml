@@ -39,7 +39,6 @@
 		<monster_infos var_id="0" max_kill="1" npc_id="216919"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="216920"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="216921"/>
-		<monster_infos var_id="0" max_kill="1" npc_id="216922"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="217025"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="217067"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="217108"/>
@@ -53,6 +52,10 @@
 	<!-- The Big Boss -->
 	<monster_hunt id="18507" start_npc_id="799524" end_npc_id="203166">
 		<monster_infos var_id="0" max_kill="1" npc_id="216922"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700829"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700830"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700831"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700832"/>
 	</monster_hunt>
 	<!-- A Handshake Deal -->
 	<monster_hunt id="18508" start_npc_id="799522" end_npc_id="799523">
@@ -90,7 +93,6 @@
 		<monster_infos var_id="0" max_kill="1" npc_id="216919"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="216920"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="216921"/>
-		<monster_infos var_id="0" max_kill="1" npc_id="216922"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="217025"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="217067"/>
 		<monster_infos var_id="0" max_kill="1" npc_id="217108"/>
@@ -104,6 +106,10 @@
 	<!-- Hammertime -->
 	<monster_hunt id="28507" start_npc_id="799524" end_npc_id="203649">
 		<monster_infos var_id="0" max_kill="1" npc_id="216922"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700829"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700830"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700831"/>
+		<monster_infos var_id="0" max_kill="1" npc_id="700832"/>
 	</monster_hunt>
 	<!-- Securing Moofrenerk's Retreat -->
 	<monster_hunt id="28508" start_npc_id="799522" end_npc_id="799523">

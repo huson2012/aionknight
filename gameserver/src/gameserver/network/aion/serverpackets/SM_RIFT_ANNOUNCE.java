@@ -17,11 +17,12 @@
 package gameserver.network.aion.serverpackets;
 
 import gameserver.model.Race;
+import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+import gameserver.spawn.RiftSpawnManager;
 
 import java.nio.ByteBuffer;
-
 
 /**
  * 
@@ -31,52 +32,74 @@ import java.nio.ByteBuffer;
 public class SM_RIFT_ANNOUNCE extends AionServerPacket
 {
 	private Race race;
+	private SpawnTemplate spawnTemplate;
+	private RiftSpawnManager.RiftEnum rift;
+	private int action;
+	private int targetObjectId;
+	private int annouce;
+	private int usedEntries;
+	private int count;
+	private int time;
 
-	/**
-	 * Constructs new <tt>SM_RIFT_ANNOUNCE</tt> packet
-	 * 
-	 * @param player
-	 */
-	public SM_RIFT_ANNOUNCE(Race race)
+	public SM_RIFT_ANNOUNCE(int action, int annouce, int count, Race race)
 	{
+		this.action = action;
+		this.annouce = annouce;
+		this.count = count;
 		this.race = race;
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
+	public SM_RIFT_ANNOUNCE(int action, int targetObjectId, RiftSpawnManager.RiftEnum rift, SpawnTemplate spawnTemplate, int time)
+	{
+		this.action = action;
+		this.targetObjectId = targetObjectId;
+		this.rift = rift;
+		this.spawnTemplate = spawnTemplate;
+		this.time = time;
+	}
+
+	public SM_RIFT_ANNOUNCE(int action, int targetObjectId, int usedEntries, int time)
+	{
+		this.action = action;
+		this.targetObjectId = targetObjectId;
+		this.usedEntries = usedEntries;
+		this.time = time;
+	}
+
 	@Override
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
 	{
-		writeD(buf, 0); // unk 1.9
-		switch(race) //destination
+		writeH(buf, action);
+		switch(action)
 		{
-			//master rift announcements
-			case ASMODIANS:
-				writeD(buf, 1);
-				writeD(buf, 0);
+			case 9:
+				writeC(buf, annouce);
+				writeD(buf, count);
+				switch(race.getRaceId())
+				{
+					case 1:
+						writeD(buf, 0);
+						break;
+					case 2:
+						writeD(buf, 1);
+				}
 				break;
-			case ELYOS:
-				writeD(buf, 1);
-				writeD(buf, 0);
+			case 13:
+				writeC(buf, 3);
+				writeD(buf, targetObjectId);
+				writeD(buf, usedEntries);
+				writeD(buf, time);
 				break;
+			case 33:
+				writeC(buf, 2);
+				writeD(buf, targetObjectId);
+				writeD(buf, rift.getEntries());
+				writeD(buf, time);
+				writeD(buf, 25);
+				writeD(buf, rift.getMaxLevel());
+				writeF(buf, spawnTemplate.getX());
+				writeF(buf, spawnTemplate.getY());
+				writeF(buf, spawnTemplate.getZ());
 		}
-		
-		// [1.9] Need Extra writeD
-		// Sample 08 50 A7 00 00 00 00 01 00 00 00 00 00 00 00
-		// Sample 08 50 A7 00 00 00 00 00 00 00 00 00 00 00 00
-		// Sample 08 50 A7 00 00 00 00 00 00 00 00 01 00 00 00
-		// Sample 08 50 A7 01 00 2E 00 00 00 00 00 00 00 00 00
-		// Sample 08 50 A7 00 A5 B3 43 00 00 00 00 00 00 00 00
-		// Sample 08 50 A7 01 2C 0B 8E 00 00 00 00 00 00 00 00
-		// Delete these once this packet is fixed for 1.9
-		
-		// Old data?
-		// ELYSEA:
-		// 1 0 -> to asmodae
-		// 0 1 -> to elysea
-		// ASMODAE
-		// 1 0 -> to elysea
-		// 0 1 -> to asmodae
 	}
 }
