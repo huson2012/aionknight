@@ -48,7 +48,7 @@ public class PremiumRates extends Rates
 	{
 		return RateConfig.PREMIUM_DROP_RATE;
 	}
-	
+
 	@Override
 	public int getChestDropRate()
 	{
@@ -78,7 +78,7 @@ public class PremiumRates extends Rates
 	{
 		return RateConfig.PREMIUM_CRAFTING_XP_RATE;
 	}
-	
+
 	@Override
 	public float getCraftingLvlRate()
 	{
@@ -90,7 +90,7 @@ public class PremiumRates extends Rates
 	{
 		return RateConfig.PREMIUM_GATHERING_XP_RATE;
 	}
-	
+
 	@Override
 	public float getGatheringLvlRate()
 	{
@@ -101,5 +101,11 @@ public class PremiumRates extends Rates
 	public int getKinahRate()
 	{
 		return RateConfig.PREMIUM_KINAH_RATE;
+	}
+
+	@Override
+	public int getBokerRate()
+	{
+		return RateConfig.PREMIUM_BOKER_RATE;
 	}
 }

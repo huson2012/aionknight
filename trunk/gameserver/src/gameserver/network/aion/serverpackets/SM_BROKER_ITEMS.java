@@ -41,7 +41,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 	private int brokerFunction;
 	private int id;
 	private long totalKinah;
-		
+
 	public SM_BROKER_ITEMS(BrokerItem[] brokerItems, int itemsCount, int startPage, int brokerFunction)
 	{
 		this.brokerItems = brokerItems;
@@ -55,7 +55,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 		this.brokerItems = brokerItems;
 		this.brokerFunction = brokerFunction;
 	}
-	
+
 	public SM_BROKER_ITEMS(BrokerItem[] brokerItems, int id, int brokerFunction)
 	{
 		this.brokerItems = brokerItems;
@@ -90,7 +90,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 
 	@Override
 	protected void writeImpl(AionConnection con, ByteBuffer buf)
-	{	
+	{
 		writeC(buf, brokerFunction);
 		switch(brokerFunction)
 		{
@@ -108,7 +108,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 						writeCommonInfo(buf, item);
 				}
 				break;
-				
+
 			case 1:
 				writeD(buf, 0x00);
 				writeH(buf, brokerItems.length);
@@ -134,23 +134,23 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 					writeD(buf, god == null ? 0 : god.getItemId());
 					writeD(buf, 0x00);
 					writeD(buf, 0x00);
-                    writeD(buf, 0x00);
-                    writeC(buf, 0x00);
+					writeD(buf, 0x00);
+					writeC(buf, 0x00);
 					writeS(buf, item.getItem().getCrafterName());
 				}
 				break;
-				
+
 			case 2:
 				writeC(buf, 0x00);
 				writeD(buf, buyItem.getObjectId());
-				writeQ(buf, buyItem.getItemCount());				
+				writeQ(buf, buyItem.getItemCount());
 				break;
-				
+
 			case 4:
 				writeC(buf, 0x00);
 				writeD(buf, id);
 				break;
-				
+
 			case 5:
 				writeQ(buf, totalKinah);
 				writeH(buf, (brokerItems == null || brokerItems.length < 0) ? 0x00 : brokerItems.length);
@@ -170,11 +170,11 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 						writeC(buf, 0x00);
 						writeD(buf, item.getItemId());
 						writeC(buf, 0x00);
-						writeB(buf, new byte[24]);				
+						writeB(buf, new byte[24]);
 						writeD(buf, 0x00);
 						writeD(buf, 0);
 						writeD(buf, 0);
-                        writeD(buf, 0);
+						writeD(buf, 0);
 						writeC(buf, 0x00);
 						writeS(buf, "");
 					}
@@ -183,12 +183,12 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 			case 6:
 				writeC(buf, 0x00);
 				break;
-				
+
 			default:
 				return;
 		}
 	}
-	
+
 	private void writeArmorWeaponInfo(ByteBuffer buf, BrokerItem item)
 	{
 		writeD(buf, item.getItem().getObjectId());
@@ -205,18 +205,19 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 		writeC(buf, 0);
 		writeD(buf, 0);
 		writeD(buf, 0);
-        writeD(buf, 0);
+		writeD(buf, 0);
 		writeS(buf, item.getSeller());
 		writeS(buf, item.getItem().getCrafterName());
-	}	
+	}
+
 	private void writeItemStones(ByteBuffer buf, Item item)
 	{
 		int count = 0;
-		
+
 		if(item.hasManaStones())
 		{
 			Set<ManaStone> itemStones = item.getItemStones();
-			
+
 			for(ManaStone itemStone : itemStones)
 			{
 				if(count == 6)
@@ -229,7 +230,7 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 					writeC(buf, modifier.getStat().getItemStoneMask());
 				}
 			}
-			writeB(buf, new byte[(6-count)]);
+			writeB(buf, new byte[(6 - count)]);
 			count = 0;
 			for(ManaStone itemStone : itemStones)
 			{
@@ -240,16 +241,17 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 				if(modifier != null)
 				{
 					count++;
-					writeH(buf, ((SimpleModifier)modifier).getValue());
+					writeH(buf, ((SimpleModifier) modifier).getValue());
 				}
 			}
-			writeB(buf, new byte[(6-count)*2]);
+			writeB(buf, new byte[(6 - count) * 2]);
 		}
 		else
 		{
 			writeB(buf, new byte[24]);
 		}
-	}	
+	}
+
 	private void writeCommonInfo(ByteBuffer buf, BrokerItem item)
 	{
 		writeD(buf, item.getItem().getObjectId());
@@ -266,9 +268,9 @@ public class SM_BROKER_ITEMS extends AionServerPacket
 		writeD(buf, 0);
 		writeD(buf, 0);
 		writeH(buf, 0);
-        writeH(buf, 0);
-        writeD(buf, 0);
-        writeD(buf, 0);
+		writeH(buf, 0);
+		writeD(buf, 0);
+		writeD(buf, 0);
 		writeS(buf, item.getSeller());
 		writeS(buf, item.getItem().getCrafterName());
 	}

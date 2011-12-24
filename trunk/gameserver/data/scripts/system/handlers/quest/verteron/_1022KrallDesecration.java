@@ -29,8 +29,8 @@ import gameserver.utils.PacketSendUtility;
 public class _1022KrallDesecration extends QuestHandler
 {
 
-	private final static int	questId	= 1022;
-	private final static int[]	mob_ids	= { 210178,216892 };
+	private final static int questId = 1022;
+	private final static int[] mob_ids = { 210158, 210178, 216892 };
 
 	public _1022KrallDesecration()
 	{
@@ -40,8 +40,8 @@ public class _1022KrallDesecration extends QuestHandler
 	@Override
 	public void register()
 	{
-		qe.setNpcQuestData(203178).addOnTalkEvent(questId);
 		qe.addQuestLvlUp(questId);
+		qe.setNpcQuestData(203178).addOnTalkEvent(questId);
 		for(int mob_id : mob_ids)
 			qe.setNpcQuestData(mob_id).addOnKillEvent(questId);
 	}
@@ -80,8 +80,7 @@ public class _1022KrallDesecration extends QuestHandler
 						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
-							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject()
-								.getObjectId(), 10));
+							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
 				}
@@ -90,7 +89,7 @@ public class _1022KrallDesecration extends QuestHandler
 		else if(qs.getStatus() == QuestStatus.REWARD)
 		{
 			if(targetId == 203178)
-				return defaultQuestEndDialog(env);
+				return defaultQuestEndDialog(env, (1017));
 		}
 		return false;
 	}
@@ -98,9 +97,7 @@ public class _1022KrallDesecration extends QuestHandler
 	@Override
 	public boolean onKillEvent(QuestCookie env)
 	{
-
-    int[] mobs = {210178, 216892};
-     	if(defaultQuestOnKillEvent(env, mobs, 1, 5) || defaultQuestOnKillEvent(env, mobs, 5, true))
+		if(defaultQuestOnKillEvent(env, 210158, 1, 5) || defaultQuestOnKillEvent(env, 210178, 1, 5) || defaultQuestOnKillEvent(env, 216892, 5, true))
 			return true;
 		else
 			return false;

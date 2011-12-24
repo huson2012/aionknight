@@ -45,7 +45,7 @@ public class CustomConfig
 
 	@Property(key = "gameserver.enable.simple.2ndclass", defaultValue = "false")
 	public static boolean ENABLE_SIMPLE_2NDCLASS;
-	
+
 	@Property(key = "gameserver.enable.decor.christmas", defaultValue = "false")
 	public static boolean ENABLE_DECOR_CHRISTMAS;
 
@@ -72,7 +72,7 @@ public class CustomConfig
 
 	@Property(key = "gameserver.channels.world.enabled", defaultValue = "false")
 	public static boolean CHANNEL_WORLD_ENABLED;
-	
+
 	@Property(key = "gameserver.channels.message.interval", defaultValue = "0")
 	public static byte CHANNEL_MESSAGE_INTERVAL;
 
@@ -127,11 +127,11 @@ public class CustomConfig
 	@Property(key = "gameserver.log.castspell.cooldownhack", defaultValue = "true")
 	public static boolean LOG_CASTSPELL_COOLDOWNHACK;
 
-    @Property(key = "gameserver.skill.chain.trigger", defaultValue = "true")
-    public static boolean SKILL_CHAIN_TRIGGER;
-    
-    @Property(key = "gameserver.skill.chain.rate", defaultValue = "80")
-    public static int SKILL_CHAIN_RATE;
+	@Property(key = "gameserver.skill.chain.trigger", defaultValue = "true")
+	public static boolean SKILL_CHAIN_TRIGGER;
+
+	@Property(key = "gameserver.skill.chain.rate", defaultValue = "80")
+	public static int SKILL_CHAIN_RATE;
 
 	@Property(key = "gameserver.pvpreward.enable", defaultValue = "false")
 	public static boolean PVPREWARD_ENABLE;
@@ -167,10 +167,10 @@ public class CustomConfig
 	public static int DISCONNECT_DELAY;
 
 	@Property(key = "gameserver.enable.surveys", defaultValue = "false")
-	public static boolean	ENABLE_SURVEYS;
+	public static boolean ENABLE_SURVEYS;
 
 	@Property(key = "enable.html.welcome", defaultValue = "false")
-	public static boolean   ENABLE_HTML_WELCOME;
+	public static boolean ENABLE_HTML_WELCOME;
 
 	@Property(key = "gameserver.topranking.time", defaultValue = "0:00:00")
 	public static String TOP_RANKING_TIME;
@@ -213,15 +213,15 @@ public class CustomConfig
 
 	@Property(key = "gameserver.abyssxform.afterlogout", defaultValue = "false")
 	public static boolean ABYSS_XFORM_DURATION_AFTER_LOGOUT;
-	
+
 	@Property(key = "gameserver.dmgreduction.lvldiffpvp", defaultValue = "false")
 	public static boolean DMG_REDUCTION_LVL_DIFF_PVP;
-	
+
 	@Property(key = "gameserver.cmotions.retail", defaultValue = "true")
-	public static boolean       RETAIL_CMOTIONS;
-	   
+	public static boolean RETAIL_CMOTIONS;
+
 	@Property(key = "gameserver.cmotions.getlevel", defaultValue = "20")
-	public static int           CMOTIONS_GETLEVEL;
+	public static int CMOTIONS_GETLEVEL;
 
 	@Property(key = "gameserver.emotions.retail", defaultValue = "true")
 	public static boolean RETAIL_EMOTIONS;
@@ -240,7 +240,7 @@ public class CustomConfig
 
 	@Property(key = "gameserver.npc.relation.aggro", defaultValue = "true")
 	public static boolean NPC_RELATION_AGGRO;
-	
+
 	@Property(key = "gameserver.npc.dynamicstat", defaultValue = "false")
 	public static boolean NPC_DYNAMIC_STAT;
 
@@ -262,9 +262,9 @@ public class CustomConfig
 	@Property(key = "gameserver.rate.tollexchange.kinah", defaultValue = "1000")
 	public static int TOLL_EXCHANGE_KINAH_RATE;
 
-    @Property(key = "gameserver.dredgion.enable", defaultValue = "true")
-    public static boolean ENABLE_DREDGION;
+	@Property(key = "gameserver.dredgion.enable", defaultValue = "true")
+	public static boolean ENABLE_DREDGION;
 
-	@Property(key = "gameserver.broker.expiretime", defaultValue = "8")
-	public static long BROKER_EXPIRE_TIME;
+	@Property(key = "gameserver.dailycoun.altexchange.enable", defaultValue = "true")
+	public static boolean ENABLE_DAILYCOIN_EX;
 }

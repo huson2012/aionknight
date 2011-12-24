@@ -59,7 +59,6 @@ import gameserver.world.World;
 
 import java.util.List;
 
-
 /**
  * In this packets aion client is asking if given char [by oid] may login into game [ie start playing].
  * 
@@ -71,13 +70,13 @@ public class CM_ENTER_WORLD extends AionClientPacket
 	/**
 	 * Object Id of player that is entering world
 	 */
-	private int					objectId;
-	
+	private int objectId;
+
 	private static String serverMessage;
 	private static String serverMessageRegular;
 	private static String serverMessagePremium;
+	private static String serverMessageVip;
 
-		
 	/**
 	 * Constructs new instance of <tt>CM_ENTER_WORLD </tt> packet
 	 * 
@@ -87,41 +86,46 @@ public class CM_ENTER_WORLD extends AionClientPacket
 	{
 		super(opcode);
 	}
-	
+
 	static
 	{
-                String bufferDisplayRev = null;
+		String bufferDisplayRev = null;
 
-                if(GSConfig.SERVER_MOTD_DISPLAYREV)
-                    bufferDisplayRev = LanguageHandler.translate(CustomMessageId.SERVER_REVISION, new Version(GameServer.class).getRevision());
+		if(GSConfig.SERVER_MOTD_DISPLAYREV)
+			bufferDisplayRev = LanguageHandler.translate(CustomMessageId.SERVER_REVISION, new Version(GameServer.class).getRevision());
 
-                if(RateConfig.DISPLAY_RATE)
-                {
-                    String bufferRegular = LanguageHandler.translate(CustomMessageId.WELCOME_REGULAR, GSConfig.SERVER_NAME, RateConfig.XP_RATE, RateConfig.QUEST_XP_RATE, RateConfig.DROP_RATE, RateConfig.KINAH_RATE);
-                    String bufferPremium = LanguageHandler.translate(CustomMessageId.WELCOME_PREMIUM, GSConfig.SERVER_NAME, RateConfig.PREMIUM_XP_RATE, RateConfig.PREMIUM_QUEST_XP_RATE, RateConfig.PREMIUM_DROP_RATE, RateConfig.PREMIUM_KINAH_RATE);
+		if(RateConfig.DISPLAY_RATE)
+		{
+			String bufferRegular = LanguageHandler.translate(CustomMessageId.WELCOME_REGULAR, GSConfig.SERVER_NAME, RateConfig.XP_RATE, RateConfig.QUEST_XP_RATE, RateConfig.DROP_RATE, RateConfig.KINAH_RATE);
+			String bufferPremium = LanguageHandler.translate(CustomMessageId.WELCOME_PREMIUM, GSConfig.SERVER_NAME, RateConfig.PREMIUM_XP_RATE, RateConfig.PREMIUM_QUEST_XP_RATE, RateConfig.PREMIUM_DROP_RATE, RateConfig.PREMIUM_KINAH_RATE);
+			String bufferVip = LanguageHandler.translate(CustomMessageId.WELCOME_VIP, GSConfig.SERVER_NAME, RateConfig.VIP_XP_RATE, RateConfig.VIP_QUEST_XP_RATE, RateConfig.VIP_DROP_RATE, RateConfig.VIP_KINAH_RATE);
 
-                    if(bufferDisplayRev !=  null)
-                    {
-                        bufferRegular += bufferDisplayRev;
-                        bufferPremium += bufferDisplayRev;
-                    }
+			if(bufferDisplayRev != null)
+			{
+				bufferRegular += bufferDisplayRev;
+				bufferPremium += bufferDisplayRev;
+				bufferVip += bufferDisplayRev;
+			}
 
-                    serverMessageRegular = bufferRegular;
-                    bufferRegular = null;
+			serverMessageRegular = bufferRegular;
+			bufferRegular = null;
 
-                    serverMessagePremium = bufferPremium;
-                    bufferPremium = null;
-                }
-                else
-                {
-                    String buffer = LanguageHandler.translate(CustomMessageId.WELCOME_BASIC, GSConfig.SERVER_NAME);
+			serverMessagePremium = bufferPremium;
+			bufferPremium = null;
 
-                    if(bufferDisplayRev !=  null)
-                            buffer += bufferDisplayRev;
+			serverMessageVip = bufferVip;
+			bufferVip = null;
+		}
+		else
+		{
+			String buffer = LanguageHandler.translate(CustomMessageId.WELCOME_BASIC, GSConfig.SERVER_NAME);
 
-                    serverMessage = buffer;
-                    buffer = null;
-                }
+			if(bufferDisplayRev != null)
+				buffer += bufferDisplayRev;
+
+			serverMessage = buffer;
+			buffer = null;
+		}
 	}
 
 	/**
@@ -142,9 +146,9 @@ public class CM_ENTER_WORLD extends AionClientPacket
 		AionConnection client = getConnection();
 
 		Player player = World.getInstance().findPlayer(objectId);
-		if (player!= null)
+		if(player != null)
 		{
-			if (player.getClientConnection() != null)
+			if(player.getClientConnection() != null)
 				player.getClientConnection().close(new SM_SYSTEM_MESSAGE(1310052), true);
 			else
 				PlayerService.playerLoggedOut(player);
@@ -152,13 +156,13 @@ public class CM_ENTER_WORLD extends AionClientPacket
 		}
 
 		// passkey check
-		if (GSConfig.PASSKEY_ENABLE && !client.getAccount().getCharacterPasskey().isPass())
+		if(GSConfig.PASSKEY_ENABLE && !client.getAccount().getCharacterPasskey().isPass())
 		{
 			client.getAccount().getCharacterPasskey().setConnectType(ConnectType.ENTER);
 			client.getAccount().getCharacterPasskey().setObjectId(objectId);
 			boolean isExistPasskey = DAOManager.getDAO(PlayerPasskeyDAO.class).existCheckPlayerPasskey(client.getAccount().getId());
 
-			if (!isExistPasskey)
+			if(!isExistPasskey)
 				client.sendPacket(new SM_CHARACTER_SELECT(0));
 			else
 				client.sendPacket(new SM_CHARACTER_SELECT(1));
@@ -179,7 +183,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 		}
 
 		Player player = PlayerService.getPlayer(objectId, account);
-		
+
 		int lastOnlineTime = player.getLastOnline();
 
 		if(player != null && client.setActivePlayer(player))
@@ -193,7 +197,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 
 			if(player.getSkillCoolDowns() != null)
 				client.sendPacket(new SM_SKILL_COOLDOWN(player.getSkillCoolDowns()));
-			
+
 			if(player.getItemCoolDowns() != null)
 				client.sendPacket(new SM_ITEM_COOLDOWN(player.getItemCoolDowns()));
 
@@ -244,7 +248,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 			client.sendPacket(new SM_INVENTORY_INFO());
 
 			PlayerService.playerLoggedIn(player);
-			
+
 			/**
 			 * Energy of Repose must be calculated before sending SM_STATS_INFO
 			 */
@@ -257,27 +261,29 @@ public class CM_ENTER_WORLD extends AionClientPacket
 					hours = 20;
 				hours *= 5; // we get 100% of max value after 20hours of offline.
 				int currentResposePercent = Math.round((player.getCommonData().getRepletionState() / maxRespose) * 100);
-				if (currentResposePercent + hours >= 100){
+				if(currentResposePercent + hours >= 100)
+				{
 					player.getCommonData().setRepletionState(maxRespose);
 				}
-				else{
+				else
+				{
 					currentResposePercent += hours;
 					player.getCommonData().setRepletionState((maxRespose * currentResposePercent) / 100);
 				}
 			}
 			client.sendPacket(new SM_STATS_INFO(player));
-			
+
 			client.sendPacket(new SM_CUBE_UPDATE(player, 6, player.getCommonData().getAdvencedStigmaSlotSize()));
-			
+
 			KiskService.onLogin(player);
 			TeleportService.sendSetBindPoint(player);
-			
+
 			// Alliance Packet after SetBindPoint
 			if(player.isInAlliance())
 				AllianceService.getInstance().onLogin(player);
-			
+
 			client.sendPacket(new SM_INSTANCE_COOLDOWN(player));
-			
+
 			client.sendPacket(new SM_MACRO_LIST(player));
 			client.sendPacket(new SM_GAME_TIME());
 			QuestEngine.getInstance().onLvlUp(new QuestCookie(null, player, 0, 0));
@@ -293,20 +299,25 @@ public class CM_ENTER_WORLD extends AionClientPacket
 			client.sendPacket(new SM_PRICES(player.getPrices()));
 			client.sendPacket(new SM_ABYSS_RANK(player.getAbyssRank()));
 
-                        if(serverMessage != null)
-                        {
-                            client.sendPacket(new SM_MESSAGE(0, null, serverMessage,
-				ChatType.ANNOUNCEMENTS));
-                        }else{
-                            if(client.getAccount().getMembership()==1)
-                            {
-                                client.sendPacket(new SM_MESSAGE(0, null, serverMessagePremium,
-                                    ChatType.ANNOUNCEMENTS));
-                            }else{
-                                client.sendPacket(new SM_MESSAGE(0, null, serverMessageRegular,
-                                    ChatType.ANNOUNCEMENTS));
-                            }
-                        }
+			if(serverMessage != null)
+			{
+				client.sendPacket(new SM_MESSAGE(0, null, serverMessage, ChatType.ANNOUNCEMENTS));
+			}
+			else
+			{
+				if(client.getAccount().getMembership() == 1)
+				{
+					client.sendPacket(new SM_MESSAGE(0, null, serverMessagePremium, ChatType.ANNOUNCEMENTS));
+				}
+				else if(client.getAccount().getMembership() == 2)
+				{
+					client.sendPacket(new SM_MESSAGE(0, null, serverMessageVip, ChatType.ANNOUNCEMENTS));
+				}
+				else
+				{
+					client.sendPacket(new SM_MESSAGE(0, null, serverMessageRegular, ChatType.ANNOUNCEMENTS));
+				}
+			}
 
 			if(player.isInPrison())
 				PunishmentService.updatePrisonStatus(player);
@@ -320,7 +331,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 			player.setRates(Rates.getRatesFor(client.getAccount().getMembership()));
 
 			ToyPetService.getInstance().onPlayerLogin(player);
-			
+
 			/**
 			 * Announce on GM connection
 			 */
@@ -332,22 +343,22 @@ public class CM_ENTER_WORLD extends AionClientPacket
 
 					if(CustomConfig.GMTAG_DISPLAY)
 					{
-						if(player.getAccessLevel() == 1 )
+						if(player.getAccessLevel() == 1)
 						{
 							playerName += CustomConfig.GM_LEVEL1.trim();
 						}
-						else if (player.getAccessLevel() == 2 )
+						else if(player.getAccessLevel() == 2)
 						{
 							playerName += CustomConfig.GM_LEVEL2.trim();
 						}
-						else if (player.getAccessLevel() == 3 )
+						else if(player.getAccessLevel() == 3)
 						{
 							playerName += CustomConfig.GM_LEVEL3.trim();
 						}
 					}
 
 					playerName += player.getName();
-					
+
 					final String _playerName = playerName;
 
 					World.getInstance().doOnAllPlayers(new Executor<Player>(){
@@ -391,9 +402,9 @@ public class CM_ENTER_WORLD extends AionClientPacket
 					PacketSendUtility.sendMessage(player, "! YOU LOGGED IN SPEED MODE !");
 				}
 			}
-			
+
 			ClassChangeService.showClassChangeDialog(player);
-			
+
 			/**
 			 * Notify mail service to load all mails
 			 */
@@ -408,28 +419,28 @@ public class CM_ENTER_WORLD extends AionClientPacket
 			 */
 			if(!GSConfig.DISABLE_CHAT_SERVER)
 				ChatService.onPlayerLogin(player);
-			
+
 			/**
 			 * Send petition data if player has one
 			 */
 			PetitionService.getInstance().onPlayerLogin(player);
-			
+
 			/**
 			 * Alert player about currently vulnerable fortresses
 			 */
 			SiegeService.getInstance().onPlayerLogin(player);
-			
+
 			/**
 			 * Trigger restore services on login.
 			 */
 			player.getLifeStats().updateCurrentStats();
 
 			if(CustomConfig.ENABLE_HTML_WELCOME)
-				HTMLService.showHTML(player,HTMLCache.getInstance().getHTML("welcome.xhtml"));
+				HTMLService.showHTML(player, HTMLCache.getInstance().getHTML("welcome.xhtml"));
 
 			if(CustomConfig.ENABLE_SURVEYS)
 				HTMLService.onPlayerLogin(player);
-				
+
 			if(player.getGuild().getGuildId() != 0)
 			{
 				int currentQuest = player.getGuild().getCurrentQuest();
@@ -448,7 +459,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 			}
 			if(ArenaService.getInstance().isInArena(player))
 				player.setInArena(true);
-				
+
 			/**
 			 * Artifact effects
 			 */
@@ -466,7 +477,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 					}
 				}
 			}
-			
+
 			player.getController().onEnterWorld();
 		}
 		else

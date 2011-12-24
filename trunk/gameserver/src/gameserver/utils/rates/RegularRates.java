@@ -36,7 +36,7 @@ public class RegularRates extends Rates
 	{
 		return RateConfig.DROP_RATE;
 	}
-	
+
 	@Override
 	public int getChestDropRate()
 	{
@@ -73,15 +73,12 @@ public class RegularRates extends Rates
 		return RateConfig.XP_RATE;
 	}
 
-	/** (non-Javadoc)
-	 * @see gameserver.utils.rates.Rates#getCraftingXPRate()
-	 */
 	@Override
 	public float getCraftingXPRate()
 	{
 		return RateConfig.CRAFTING_XP_RATE;
 	}
-	
+
 	@Override
 	public float getCraftingLvlRate()
 	{
@@ -93,7 +90,7 @@ public class RegularRates extends Rates
 	{
 		return RateConfig.GATHERING_XP_RATE;
 	}
-	
+
 	@Override
 	public float getGatheringLvlRate()
 	{
@@ -104,5 +101,11 @@ public class RegularRates extends Rates
 	public int getKinahRate()
 	{
 		return RateConfig.KINAH_RATE;
+	}
+
+	@Override
+	public int getBokerRate()
+	{
+		return RateConfig.BOKER_RATE;
 	}
 }
