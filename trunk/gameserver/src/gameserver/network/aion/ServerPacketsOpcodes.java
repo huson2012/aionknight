@@ -206,7 +206,8 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_GROUP_LOOT.class, 0xA7, idSet);// 2.1
 		addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class, 0x01A8, idSet);// 2.6 0xA8, 2.7
 		addPacketOpcode(SM_MAY_LOGIN_INTO_GAME.class, 0x01A9, idSet);// 2.6 0xA9, 2.7
-		addPacketOpcode(SM_ACADEMY_BOOTCAMP_STAGE.class, 0x01AA, idSet); // 2.7
+		addPacketOpcode(SM_STAGE_STEP_STATUS.class, 0x01AA, idSet); // 2.7 - NEW!
+		addPacketOpcode(SM_ACADEMY_BOOTCAMP_STAGE.class, 0xAB, idSet); // 2.5
 		addPacketOpcode(SM_ABYSS_RANKING_LEGIONS.class, 0x01AB, idSet);// 2.6 0xAB, 2.7
 		addPacketOpcode(SM_PONG.class, 0x01AC, idSet);// 2.6 0xAC, 2.7
 		addPacketOpcode(SM_INSTANCE_COOLDOWN.class, 0x01AD, idSet);// 2.6 0xAD, 2.7
