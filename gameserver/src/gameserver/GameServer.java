@@ -131,7 +131,7 @@ public class GameServer
 		
 		Util.printSection("Roads Manager");
 		RoadService.getInstance();
-		log.info("Moves between locations: Ok");
+		log.info("Moves between locations: Ok!");
 		
 		Util.printSection("Brokers Manager");
 		BrokerService.getInstance();
@@ -185,7 +185,7 @@ public class GameServer
 		System.gc(); AEInfos.printAllInfos();
 
 		Util.printSection("Debug System Manager");
-		log.info("Debug Service: Initialized");
+		log.info("Debug Service: Initialized!");
 		DebugService.getInstance();
 		
 		Util.printSection("Client Manager");

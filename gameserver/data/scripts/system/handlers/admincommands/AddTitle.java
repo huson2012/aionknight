@@ -29,9 +29,12 @@ import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 
+/**
+ * Команда для добавления титула игроку.
+ */
+
 public class AddTitle extends AdminCommand
 {
-
 	public AddTitle()
 	{
 		super("addtitle");

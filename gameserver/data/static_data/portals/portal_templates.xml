@@ -1,126 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
-	Назначение файла	: Описание порталов
+	Назначение файла	: Описание всех порталов (Вход <-> Выход)
+	================================================================
 	Версия сервера		: Aion-Knight 2.7 (Beta version)
 	Версия клиента		: 2.7 (Иннова)
-
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 30/12/2011 (Frost)
+	
  -->
-
-<portal_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_templates.xsd">
-	<!-- INSTANCES -->
-	<!-- Adma Stronghold -->
+<portal_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_templates.xsd">	
+	<!-- 
+	Точка входа: Брустхонин
+	Точка выхода: Форт Адма (Данж)
+	-->
 	<portal npcid="730165" instance="true" minlevel="46" maxlevel="60" group="true">
 		<entrypoint mapid="220050000" x="2339.747" y="160.00119" z="246.44734"/>
 		<exitpoint mapid="320130000" x="450.66864" y="199.70248" z="167.84444"/>
 	</portal>
-	<!-- Sulfur tree nest Entrance Elyos -->
+	<!-- 
+	Точка входа: Арэшурат (Бездна)
+	Точка выхода: Гнездо серного дерева (Данж)
+	-->
 	<portal npcid="700452" instance="true" minlevel="30" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="1342.0155" y="1242.6877" z="1496.5812"/>
 		<exitpoint mapid="300060000" x="462.352" y="345.609" z="162.817"/>
 	</portal>
-	<!-- Sulfur tree nest Entrance Asmo -->
+	<!-- 
+	Точка входа: Арэшурат (Бездна)
+	Точка выхода: Гнездо серного дерева (Данж)
+	-->
 	<portal npcid="700529" instance="true" minlevel="30" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="1342.0155" y="1242.6877" z="1496.5812"/>
 		<exitpoint mapid="300060000" x="462.352" y="345.609" z="162.817"/>
 	</portal>
-	<!-- Sulfur tree nest Exit -->
+	<!-- 
+	Точка входа: Гнездо серного дерева (Данж)
+	Точка выхода: Арэшурат (Бездна)
+	-->
 	<portal npcid="700453" instance="false" minlevel="30" maxlevel="60" group="false">
 		<entrypoint mapid="300060000" x="462.352" y="345.609" z="162.817"/>
 		<exitpoint mapid="400010000" x="1342.0155" y="1242.6877" z="1496.5812"/>
 	</portal>
-	<!-- Asteria chamber Entrance Asmo -->
+	<!-- 
+	Точка входа: Арэшурат (Бездна)
+	Точка выхода: Пропасть Астерии (Данж)
+	-->
 	<portal npcid="700533" instance="true" minlevel="40" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="705.45" y="2921.74" z="2880.84"/>
 		<exitpoint mapid="300050000" x="469.343" y="567.713" z="201.732"/>
 	</portal>
-	<!-- Asteria chamber Entrance Elyos -->
+	<!-- 
+	Точка входа: Арэшурат (Бездна)
+	Точка выхода: Пропасть Астерии (Данж)
+	-->
 	<portal npcid="700460" instance="true" minlevel="40" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="705.45" y="2921.74" z="2880.84"/>
 		<exitpoint mapid="300050000" x="469.343" y="567.713" z="201.732"/>
 	</portal>
-	<!-- Asteria chamber Exit -->
+	<!-- 
+	Точка входа: Пропасть Астерии (Данж)
+	Точка выхода: Арэшурат (Бездна)
+	-->
 	<portal npcid="700461" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300050000" x="469.343" y="567.713" z="201.732"/>
 		<exitpoint mapid="400010000" x="705.45" y="2921.74" z="2880.84"/>
 	</portal>
-	<!-- Right Wing Chamber Entrance Elyos -->
+	<!-- 
+	Точка входа: Арэшурат (Бездна)
+	Точка выхода: Тень правого крыла (Данж)
+	-->
 	<portal npcid="700456" instance="true" minlevel="30" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="2556.7175" y="2856.7388" z="1488.4329"/>
 		<exitpoint mapid="300090000" x="263" y="386" z="103"/>
 	</portal>
-	<!-- Right Wing Chamber Entrance Asmo -->
+	<!-- 
+	Точка входа: Арэшурат (Бездна)
+	Точка выхода: Тень правого крыла (Данж)
+	-->
 	<portal npcid="700531" instance="true" minlevel="30" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="2556.7175" y="2856.7388" z="1488.4329"/>
 		<exitpoint mapid="300090000" x="263" y="386" z="103"/>
 	</portal>
-	<!-- Right Wing Chamber Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700457" instance="false" minlevel="30" maxlevel="60" group="false">
 		<entrypoint mapid="300090000" x="263" y="386" z="103"/>
 		<exitpoint mapid="400010000" x="2556.7175" y="2856.7388" z="1488.4329"/>
 	</portal>
-	<!-- Left Wing Chamber Entrance Elyos -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700454" instance="true" minlevel="30" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="2784.99" y="2664.03" z="1486.7"/>
 		<exitpoint mapid="300080000" x="672.09576" y="606.1819" z="321.19"/>
 	</portal>
-	<!-- Left Wing Chamber Entrance Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700530" instance="true" minlevel="30" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="2784.99" y="2664.03" z="1486.7"/>
 		<exitpoint mapid="300080000" x="672.09576" y="606.1819" z="321.19"/>
 	</portal>
-	<!-- Left Wing Chamber Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700455" instance="false" minlevel="30" maxlevel="60" group="false">
 		<entrypoint mapid="300080000" x="672.09576" y="606.1819" z="321.19"/>
 		<exitpoint mapid="400010000" x="2784.99" y="2664.03" z="1486.7"/>
 	</portal>
-	<!-- Miren Chamber Entrance Elyos -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700483" instance="true" minlevel="40" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="1819.069" y="2316.4944" z="2931.5413"/>
 		<exitpoint mapid="300130000" x="527.2135" y="120.230865" z="175.89606"/>
 	</portal>
-	<!-- Miren Chamber Entrance Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700536" instance="true" minlevel="40" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="1819.069" y="2316.4944" z="2931.5413"/>
 		<exitpoint mapid="300130000" x="527.2135" y="120.230865" z="175.89606"/>
 	</portal>
-	<!-- Miren Chamber Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700484" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300130000" x="527.2135" y="120.230865" z="175.89606"/>
 		<exitpoint mapid="400010000" x="1819.069" y="2316.4944" z="2931.5413"/>
 	</portal>
-	<!-- Kysis Chamber Entrance Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700535" instance="true" minlevel="40" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="2528.8364" y="2063.277" z="3031.8384"/>
 		<exitpoint mapid="300120000" x="528.079" y="120.837616" z="175.9537"/>
 	</portal>
-	<!-- Kysis Chamber Entrance Elyos -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700481" instance="true" minlevel="40" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="2528.8364" y="2063.277" z="3031.8384"/>
 		<exitpoint mapid="300120000" x="528.079" y="120.837616" z="175.9537"/>
 	</portal>
-	<!-- Kysis Chamber Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700482" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300120000" x="528.079" y="120.837616" z="175.9537"/>
 		<exitpoint mapid="400010000" x="2528.8364" y="2063.277" z="3031.8384"/>
 	</portal>
-	<!-- Krotan Chamber Entrance Elyos -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700458" instance="true" minlevel="40" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="2011.16" y="1252.53" z="2945.4082"/>
 		<exitpoint mapid="300140000" x="527.79846" y="109.320755" z="175.92393"/>
 	</portal>
-	<!-- Krotan Chamber Entrance Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700534" instance="true" minlevel="40" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="2011.16" y="1252.53" z="2945.4082"/>
 		<exitpoint mapid="300140000" x="527.79846" y="109.320755" z="175.92393"/>
 	</portal>
-	<!-- Krotan Chamber Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700459" instance="false" minlevel="40" maxlevel="55" group="false">
 		<entrypoint mapid="300140000" x="527.79846" y="109.320755" z="175.92393"/>
 		<exitpoint mapid="400010000" x="2011.16" y="1252.53" z="2945.4082"/>
 	</portal>
-	<!--Chamber of Roah Entrance Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700532" instance="true" minlevel="40" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="2712.53" y="757.89" z="2854.295"/>
 		<exitpoint mapid="300070000" x="503.74" y="395.70" z="94.34"/>
@@ -803,17 +874,17 @@
 		<entrypoint mapid="600010000" x="1019.2403" y="961.7963" z="309.11652"/>
 		<exitpoint mapid="220070000" x="1703.9194" y="1114.0623" z="379.39148"/>
 	</portal>
-	<!-- Sematariux's Hideout Entrance Elyos -->
-	<portal npcid="730291" instance="false" minlevel="53" maxlevel="60" group="false" race="ELYOS">
-		<entrypoint mapid="210050000" x="135.68661" y="2018.0414" z="433.1476"/>
-		<exitpoint mapid="210050000" x="141.81787" y="2067.792" z="438.74838"/>
+	<!-- Padmarashka Entrance Elyos -->
+	<portal npcid="730291" instance="true" minlevel="50" maxlevel="55" group="true" race="ELYOS">
+		<entrypoint mapid="210050000" x="136.9814" y="2006.6646" z="434.29237"/>
+		<exitpoint mapid="320150000" x="369.41263" y="528.68994" z="67.28671"/>
 	</portal>
-	<!-- Padmarashka's Cave Entrance Asmodians -->
-	<portal npcid="730293" instance="false" minlevel="53" maxlevel="60" group="false" race="ASMODIANS">
-		<entrypoint mapid="220070000" x="2974.4292" y="1205.7853" z="241.9072"/>
-		<exitpoint mapid="220070000" x="2927.791" y="921.5419" z="35.288937"/>
+	<!-- Padmarashka Entrance Asmo -->
+	<portal npcid="730293" instance="true" minlevel="50" maxlevel="55" group="true" race="ASMODIANS">
+		<entrypoint mapid="220070000" x="2971.7256" y="1215.9103" z="242.0056"/>
+		<exitpoint mapid="320150000" x="369.41263" y="528.68994" z="67.28671"/>
 	</portal>
-	<!--Beluslan teleport stone statue -->
+	<!-- Beluslan teleport stone statue -->
 	<portal npcid="730055" instance="false" minlevel="40" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="220040000" x="1737.7941" y="1721.357" z="572.625"/>
 		<exitpoint mapid="220040000" x="1761.6423" y="1773.4304" z="672.3485"/>
@@ -835,123 +906,200 @@
 		<exitpoint mapid="210050000" x="932.951355" y="1906.001343" z="340.000" race="ELYOS"/>
 		<exitpoint mapid="220070000" x="1287.057617" y="857.303101" z="312.459076" race="ASMODIANS"/>
 	</portal>
-	<!-- Kaininel -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730430" instance="true" minlevel="50" maxlevel="60" group="true" race="ELYOS">
-	  <entrypoint mapid="110070000" x="510.76837" y="217.71835" z="127.29544" />
-      <exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>
+		<entrypoint mapid="110070000" x="510.76837" y="217.71835" z="127.29544" />
+		<exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>
     </portal>
-	<!-- Kaininel/Crucible Challenger -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730461" instance="true" minlevel="50" maxlevel="60" group="false" race="ELYOS">
-	  <entrypoint mapid="110070000" x="492.141785" y="215.587006" z="129.934692" />
-      <exitpoint mapid="300320000" x="330.360" y="1651.1676" z="95.5"/>	  
+		<entrypoint mapid="110070000" x="492.141785" y="215.587006" z="129.934692" />
+		<exitpoint mapid="300320000" x="330.360" y="1651.1676" z="95.5"/>	  
     </portal>
-	<!-- Marchutan -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730431" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
-      <entrypoint mapid="120080000" x="577.2926" y="261.17194" z="93.48979" />
-      <exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>
+		<entrypoint mapid="120080000" x="577.2926" y="261.17194" z="93.48979" />
+		<exitpoint mapid="300300000" x="345.0" y="345.0" z="96.0"/>
     </portal>
-	<!-- Marchutan/Crucible Challenger -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730462" instance="true" minlevel="50" maxlevel="60" group="false" race="ASMODIANS">
-      <entrypoint mapid="120080000" x="578.954651" y="239.277054" z="95.814842" />
-      <exitpoint mapid="300320000" x="330.360" y="1651.1676" z="95.5"/>	  
+		<entrypoint mapid="120080000" x="578.954651" y="239.277054" z="95.814842" />
+		<exitpoint mapid="300320000" x="330.360" y="1651.1676" z="95.5"/>	  
     </portal>
-	<!-- Pvp Zone -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="250148" instance="false" minlevel="50" maxlevel="55" group="false">
 		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
 		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="484.684" y="517.064" z="1032.84" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="633.1899" y="540.5875" z="1031.0491" race="ASMODIANS"/>
 	</portal>
-	<!-- Pvp Zone Terrase Teleporter Ely/Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="250146" instance="false" minlevel="50" maxlevel="55" group="false">
 	   <entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
 	   <entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
-	<exitpoint mapid="300100000" x="489.95102" y="498.1902" z="951.7029" race="ELYOS"/>
-	<exitpoint mapid="300100000" x="613.9179" y="501.58667" z="942.24" race="ASMODIANS"/>
+		<exitpoint mapid="300100000" x="489.95102" y="498.1902" z="951.7029" race="ELYOS"/>
+		<exitpoint mapid="300100000" x="613.9179" y="501.58667" z="942.24" race="ASMODIANS"/>
 	</portal>
-	<!-- Pvp Zone Out Teleporter Ely/Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="250147" instance="false" minlevel="50" maxlevel="55" group="false">
-	   <entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
-	   <entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
+		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
+		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="484.684" y="517.064" z="1032.84" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="633.1899" y="540.5875" z="1031.0491" race="ASMODIANS"/>
 	</portal>
-	<!-- Pvp Zone Endboss Teleporter Ely/Asmo -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="217778" instance="true" minlevel="50" maxlevel="60" group="true">
 		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
 		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="375.63638" y="510.2968" z="1072.1212"/>
 	<portalitem id="1" itemid="168000112" quantity="1"/>
 	</portal>
-	<!-- Nidalber Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="700184" instance="false" minlevel="30" maxlevel="60" group="false">
 		<entrypoint mapid="320040000" x="276.24802" y="161.69484" z="202.62405" race="ASMODIANS"/>
 		<exitpoint mapid="220020000" x="3032.4126" y="869.0681" z="362.875"/>
 	</portal>
-	<!-- Beshmundir Temple Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730286" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="300170000" x="1595.5532" y="1598.0559" z="306.86905"/>
 		<exitpoint mapid="600010000" x="1414.1562" y="767.6203" z="312.77734"/>
 	</portal>
-	<!-- Prison Of Ice Exit -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730287" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="300170000" x="549.76447" y="1344.0505" z="223.52919"/>
 		<exitpoint mapid="600010000" x="1414.1562" y="767.6203" z="312.77734"/>
 	</portal>
-	<!-- Balaurea Gates -->
-	<!-- Spiritfall Gate -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730301" instance="false" minlevel="50" maxlevel="55" group="false">
 		<entrypoint mapid="220070000" x="723.8195" y="2276.3245" z="389.6456" race="ASMODIANS"/>
 		<exitpoint mapid="220070000" x="730.8245" y="2289.9814" z="389.6456"/>
 	</portal>
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="730301" instance="false" minlevel="50" maxlevel="55" group="false">
 		<entrypoint mapid="220070000" x="730.8245" y="2289.9814" z="389.6456" race="ASMODIANS"/>
 		<exitpoint mapid="220070000" x="723.8195" y="2276.3245" z="389.6456"/>
 	</portal>
-	<!-- Verteron to Eltnen -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="258135" instance="false" minlevel="20" maxlevel="60" group="false" race="ELYOS">
 		<entrypoint mapid="210030000" x="2962.2664" y="1822.282" z="141.65634"/>
 		<exitpoint mapid="210020000" x="109.3882" y="2385.6294" z="230.16324"/>
 	</portal>
-	<!-- Eltnen to Verteron -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="257835" instance="false" minlevel="20" maxlevel="60" group="false" race="ELYOS">
 		<entrypoint mapid="210020000" x="107.3882" y="2385.6294" z="228.16324"/>
 		<exitpoint mapid="210030000" x="2688.5173" y="1822.8547" z="143.65634"/>
 	</portal>
-	<!-- Eltnen to Heiron -->
+	<!-- 
+	Точка входа: 
+	Точка выхода: 
+	-->
 	<portal npcid="257834" instance="false" minlevel="10" maxlevel="60" group="false" race="ELYOS">
 		<entrypoint mapid="210020000" x="2346.2915" y="2915.0833" z="356.54688"/>
 		<exitpoint mapid="210040000" x="1680.0441" y="116.888985" z="137.81668"/>
 	</portal>
-	<!-- Heiron to Eltnen -->
+	<!-- 
+	Точка входа: Интердика
+	Точка выхода: Элтенен
+	-->
 	<portal npcid="257833" instance="false" minlevel="10" maxlevel="60" group="false" race="ELYOS">
 		<entrypoint mapid="210040000" x="1680.0441" y="116.888985" z="135.81668"/>
 		<exitpoint mapid="210020000" x="2346.2915" y="2915.0833" z="358.54688"/>
 	</portal>
-	<!-- Altgard to Morheim -->
+	<!-- 
+	Точка входа: Альтгард
+	Точка выхода: Морхейм
+	-->
 	<portal npcid="257233" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="220030000" x="2852.1843" y="1360.8065" z="248.5"/>
 		<exitpoint mapid="220020000" x="401.47552" y="2959.4053" z="327"/>
 	</portal>
-	<!-- Morheim to Altgard -->
+	<!-- 
+	Точка входа: Морхейм
+	Точка выхода: Альтгард
+	-->
 	<portal npcid="257234" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="220020000" x="401.47552" y="2959.4053" z="325"/>
 		<exitpoint mapid="220030000" x="2852.1843" y="1360.8065" z="250.5"/>
 	</portal>
-	<!-- Morheim to Beluslan -->
+	<!-- 
+	Точка входа: Морхейм
+	Точка выхода: Белуслан
+	-->
 	<portal npcid="257235" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="220020000" x="2047.1138" y="3000.418" z="249.34573"/>
 		<exitpoint mapid="220040000" x="971.3177" y="123.94148" z="396.68887"/>
 	</portal>
-	<!-- Beluslan to Morheim -->
+	<!-- 
+	Точка входа: Белуслан
+	Точка выхода: Морхейм
+	-->
 	<portal npcid="257533" instance="false" minlevel="10" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="220040000" x="971.3177" y="123.94148" z="396.68887"/>
 		<exitpoint mapid="220020000" x="2047.1138" y="3000.418" z="251.34573"/>
 	</portal>
+	<!-- 
+	Точка выхода: Священная арена Кайсинель
+	-->
 	<portal name="ARENA_L_LOBBY_RETURN_AREA">
 		<exitpoint mapid="110070000" x="444.9" y="251.61" z="127"/>
 	</portal>
-     <portal name="ARENA_D_LOBBY_RETURN_AREA">
+    <!-- 
+	Точка выхода: Священная арена Маркутана
+	-->
+	<portal name="ARENA_D_LOBBY_RETURN_AREA">
 		<exitpoint mapid="120080000" x="549.99" y="204.3" z="94"/>
+	</portal>
+	<!-- 
+	Точка входа: Кошмар
+	Точка выхода: Кошмар
+	-->
+	<portal npcid="730341" instance="true" minlevel="37" maxlevel="55" group="false">
+		<entrypoint mapid="300230000" x="350.27" y="168.34" z="147.72"/>
+		<exitpoint mapid="300230000" x="689.42" y="681.90" z="200.28"/>
 	</portal>
 </portal_templates>

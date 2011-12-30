@@ -37,24 +37,29 @@ public class ExchangeToll extends UserCommand {
         super("exchangetoll");
     }
 
-    //Look up information only once for this instance of the command
+    // Просмотр информации возможно только один раз для данного экземпляра команды
     private int apExchangeRate = CustomConfig.TOLL_EXCHANGE_AP_RATE;
     private int kinahExchangeRate = CustomConfig.TOLL_EXCHANGE_KINAH_RATE;
     private String exchangeRestriction = CustomConfig.TOLL_EXCHANGE_RESTRICTION.toLowerCase();
 
     @Override
-    public void executeCommand(Player player, String params) {
+    public void executeCommand(Player player, String params) 
+	{
             if (player == null) {
-                    //This should not happen!
+                    // Этого не должно случиться!
                     return;
             }
 
-        if (!CustomConfig.TOLL_EXCHANGE_ENABLED) {
+        if (!CustomConfig.TOLL_EXCHANGE_ENABLED) 
+		{
             PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_DISABLED));
             return;
         }
 
-        //Verify exchangeRestriction is set.  An invalid parameter will cause it to default to none (no restriction on exchange)
+        /**
+		 * Проверка установлен ли 'exchangeRestriction'. Если был использован недопустимый параметр, то
+		 * по умолчанию будет 'none' (нет ограничений на обмен).
+		 */
         if (exchangeRestriction == null && (!exchangeRestriction.equals("none") && !exchangeRestriction.equals("ap") && !exchangeRestriction.equals("kinah")))
                 exchangeRestriction = "none";
 
@@ -95,7 +100,7 @@ public class ExchangeToll extends UserCommand {
 
                 player.getCommonData().setAp(currentAP - apToExchange);
         } else {
-                //Exchange Amount into ShopMoney (default is Kinah, but overridden if restriction is AP
+                
                 int baseToExchange = Integer.parseInt(params);
                 if (exchangeRestriction.equals("ap")) {
                     AbyssRank rank = player.getAbyssRank();
@@ -142,51 +147,55 @@ public class ExchangeToll extends UserCommand {
             PacketSendUtility.sendPacket(player, new SM_INGAMESHOP_BALANCE());
     }
 
-    private int calculateAPToExchange(Player player, int apToExchange, int accountAP) {
-            if (accountAP < apToExchange) {
-                    PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_AP));
-                    return -1;
-            }
+    private int calculateAPToExchange(Player player, int apToExchange, int accountAP) 
+	{
+        if (accountAP < apToExchange) {
+                PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_AP));
+            return -1;
+        }
 
-            //Only convert in even numbers and don't steal from the player!
-            int difference = apToExchange % apExchangeRate;
-            apToExchange -= difference;
+        // Конвертировать только в четные числа!
+        int difference = apToExchange % apExchangeRate;
+        apToExchange -= difference;
 
-            return apToExchange;
+        return apToExchange;
     }
 
-    private int calculateAPToExchange(Player player, String[] args, int accountAP) {
-            //Exchange AP into ShopMoney.
-            if (args.length < 2) {
-                    //Must specify the amount of AP to use
-                PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_SYNTAX, apExchangeRate, kinahExchangeRate));
-                return -1;
-            }
+    private int calculateAPToExchange(Player player, String[] args, int accountAP) 
+	{
+        // Обмен AP на ShopMoney.
+        if (args.length < 2) {
+                // Для использования необходимо указать кол-во AP!
+            PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_SYNTAX, apExchangeRate, kinahExchangeRate));
+            return -1;
+        }
 
-            int apToExchange = Integer.parseInt(args[1]);
-            if (accountAP < apToExchange) {
-                    PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_AP));
-                    return -1;
-            }
+        int apToExchange = Integer.parseInt(args[1]);
+        if (accountAP < apToExchange) {
+                PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_AP));
+            return -1;
+        }
 
-            //Only convert in even numbers and don't steal from the player!
-            int difference = apToExchange % apExchangeRate;
-            apToExchange -= difference;
+        // Конвертировать только в четные числа!
+        int difference = apToExchange % apExchangeRate;
+        apToExchange -= difference;
 
-            return apToExchange;
+        return apToExchange;
     }
 
-    private int calculateKinahToExchange(Player player, int kinahToExchange) {
-            //Does the player even have the Kinah specified?
-            if (player.getInventory().getKinahCount() < kinahToExchange) {
-                    PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_KINAH));
-                    return -1;
-            }
+    private int calculateKinahToExchange(Player player, int kinahToExchange) 
+	{
+        // Игрок не указал кол-во Кинар?
+        if (player.getInventory().getKinahCount() < kinahToExchange) 
+		{
+            PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_KINAH));
+            return -1;
+        }
 
-            //Only convert in even numbers and don't steal from the player!
-            int difference = kinahToExchange % kinahExchangeRate;
-            kinahToExchange -= difference;
+        // Конвертировать только в четные числа!
+        int difference = kinahToExchange % kinahExchangeRate;
+        kinahToExchange -= difference;
 
-            return kinahToExchange;
+		return kinahToExchange;
     }
 }

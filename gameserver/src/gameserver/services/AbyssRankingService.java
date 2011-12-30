@@ -33,7 +33,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -41,15 +40,15 @@ import java.util.HashMap;
 public class AbyssRankingService
 {
 	/**
-	 * Logger for this class.
+	 * Логирование класса.
 	 */
-	private static final Logger	log		= Logger.getLogger(AbyssRankingService.class);
+	private static final Logger	log	= Logger.getLogger(AbyssRankingService.class);
 	private final HashMap<Race, ArrayList<AbyssRankingResult>> inviduals;
 	private final HashMap<Race, ArrayList<AbyssRankingResult>> legions;
 	
 	private long timeofUpdate = 0;
 	/**
-	 * TODO SYNCHRONIZE WITH LEGION SERVICE!
+	 * TODO СИНХРОНИЗАЦИИ СО СЛУЖБОЙ ЛЕГИОНОВ!
 	 */
 	private AbyssRankingService()
 	{
@@ -64,7 +63,7 @@ public class AbyssRankingService
 	}
 
 	/**
-	 * Reload the Abyss Ranking system
+	 * Перезагрузите системы рейтинга Бездны.
 	 */
 	public void reload()
 	{
@@ -72,18 +71,17 @@ public class AbyssRankingService
 	}
 	
 	/**
-	 * Load the Abyss Ranking system
-	 * Called only on start of server
+	 * Загрузка системы рейтинга Бездны.
+	 * Вызывается при старте игрового сервера.
 	 */
 	private void load()
 	{
 		log.info("AbyssRankService: Loaded!");
-		
 		scheduleUpdate();
 	}
 
 	/**
-	 * Should be called only from load()
+	 * Должен быть вызван только из load()
 	 */
 	private void scheduleUpdate()
 	{
@@ -110,9 +108,9 @@ public class AbyssRankingService
 			@Override
 			public boolean run(Player p)
 			{
-				//reset daily/weekly kills/ap
+				// Сброс ежедневных/еженедельных убийств/AP
 				p.getAbyssRank().doUpdate();
-				//saves to db
+				// Сохранение результата в БД.
 				getDAO().storeAbyssRank(p);
 				return true;
 			}
@@ -123,10 +121,10 @@ public class AbyssRankingService
 			@Override
 			public void run()
 			{
-				//save to db
+				// Сохранение результата в БД.
 				World.getInstance().doOnAllPlayers(playerSaveToDB);
 				
-				//update rankings
+				// Обновление состояния общего рейтинга Бездны.
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -137,7 +135,7 @@ public class AbyssRankingService
 					}
 				}, 15000);
 				
-				//update players in-game
+				// Обновление статистики игроков в игре
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -166,7 +164,7 @@ public class AbyssRankingService
 	}
 	
 	/**
-	 * Returns Inviduals and Legions Rankings
+	 * Обновление индивидуального рейтинга и рейтинга легионов.
 	 * 
 	 * @param race
 	 * @return
@@ -184,7 +182,7 @@ public class AbyssRankingService
 		return timeofUpdate;
 	}
 	/**
-	 * Retuns {@link gameserver.dao.AbyssRankDAO} , just a shortcut
+	 * Возвращает {@link gameserver.dao.AbyssRankDAO}, просто ярлык
 	 * 
 	 * @return {@link gameserver.dao.AbyssRankDAO}
 	 */

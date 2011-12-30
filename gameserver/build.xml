@@ -82,6 +82,8 @@
     	<mkdir dir="${build.dist.gs}/data" />
     	<mkdir dir="${build.dist.gs}/libs" />
     	<mkdir dir="${build.dist.gs}/sql" />
+		<mkdir dir="${build.dist.gs}/doc" />
+		<mkdir dir="${build.dist.gs}/licenses" />
     	
     	<copy todir="${build.dist.gs}">
             <fileset dir="${build}">
@@ -100,6 +102,18 @@
                 <include name="*.*"/>
             </fileset>
         </copy>
+		
+		<copy todir="${build.dist.gs}/licenses">
+			<fileset dir="licenses">
+				<include name="*.*"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${build.dist.gs}/doc">
+			<fileset dir="doc">
+				<include name="*.*"/>
+			</fileset>
+		</copy>
     	
     	<copy todir="${build.dist.gs}/config">
 			<fileset dir="config">

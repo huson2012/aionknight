@@ -45,7 +45,6 @@ import gameserver.utils.idfactory.IDFactory;
 import gameserver.utils.stats.StatFunctions;
 import gameserver.world.WorldType;
 import javolution.util.FastMap;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -53,8 +52,7 @@ import java.util.concurrent.ScheduledFuture;
 public class AllianceService
 {
 	/**
-	 * 
-	 * @return alliance service
+	 * @return альянс-сервис
 	 */
 	public static final AllianceService getInstance()
 	{
@@ -62,12 +60,12 @@ public class AllianceService
 	}
 	
 	/**
-	 * Caching remove group member schedule
+	 * Кэширование расписания удаления членов группы.
 	 */
 	private FastMap<Integer, ScheduledFuture<?>>	playerAllianceRemovalTasks;
 
 	/**
-	 * Caching alliance members
+	 * Кэширование членов альянса
 	 */
 	private final FastMap<Integer, PlayerAlliance> allianceMembers;
 	
@@ -78,7 +76,7 @@ public class AllianceService
 	}
 
 	/**
-	 * This method will add a member to the group member cache
+	 * Этот метод добавляет члена группы в кэш.
 	 * 
 	 * @param player
 	 */
@@ -89,7 +87,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param playerObjId
 	 */
 	private void removeAllianceMemberFromCache(int playerObjId)
@@ -97,11 +94,10 @@ public class AllianceService
 		if(allianceMembers.containsKey(playerObjId))
 			allianceMembers.remove(playerObjId);
 	}
-
 	
 	/**
 	 * @param playerObjId
-	 * @return returns true if player is in the cache
+	 * @return возвращает true, если игрок уже находится в кэше.
 	 */
 	public boolean isAllianceMember(int playerObjId)
 	{
@@ -109,7 +105,7 @@ public class AllianceService
 	}
 
 	/**
-	 * Returns the player's alliance -- Required when Relogging
+	 * Возвращает игрока в альянс - требуется при релоге персонажа.
 	 * 
 	 * @param playerObjId
 	 * @return PlayerAlliance
@@ -120,7 +116,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param playerObjectId
 	 * @param task
 	 */
@@ -131,7 +126,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param playerObjectId
 	 */
 	private void cancelRemovalTask(int playerObjectId)
@@ -144,7 +138,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param player
 	 */
 	public void scheduleRemove(final Player player)
@@ -162,7 +155,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param inviter
 	 * @param invited
 	 */
@@ -208,7 +200,7 @@ public class AllianceService
 				{
 					alliance = new PlayerAlliance(IDFactory.getInstance().nextId(), inviter.getObjectId());
 					
-					// Collect Inviter Group
+					// Сбор группы торгов
 					if (inviter.isInGroup())
 					{
 						PlayerGroup group = inviter.getPlayerGroup();
@@ -241,7 +233,7 @@ public class AllianceService
 					return;
 				}
 
-				// Collect Invited Group
+				// Сбор приглашений в группу
 				if (invited.isInGroup())
 				{
 					PlayerGroup group = invited.getPlayerGroup();
@@ -260,7 +252,7 @@ public class AllianceService
 						playersToAdd.add(invited);
 				}
 				
-				// Finally, send packets and add players.
+				// Посылка пакета на добавление игроков.
 				for (Player member : playersToAdd)
 				{
 					addMemberToAlliance(alliance, member);
@@ -277,7 +269,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param alliance
 	 * @param newMember
 	 */
@@ -296,7 +287,6 @@ public class AllianceService
 
 
 	/**
-	 * 
 	 * @param alliance
 	 * @param playerObjectId
 	 * @param allianceGroupId
@@ -319,7 +309,6 @@ public class AllianceService
 	}
 
 	/**
-	 * 
 	 * @param memberToUpdate
 	 * @param event
 	 * @param params
@@ -371,7 +360,6 @@ public class AllianceService
 	}
 	
 	/**
-	 * 
 	 * @param alliance
 	 * @param event
 	 * @param params
@@ -434,26 +422,25 @@ public class AllianceService
 		
 		switch(status)
 		{
-			case 14: // Leave Alliance
+			case 14: // Выход из Альянса
 				removeMemberFromAlliance(alliance, actingMember.getObjectId(), PlayerAllianceEvent.LEAVE);
 				break;
-			case 15: // Ban from Alliance
+			case 15: // Бан Альянса
 				removeMemberFromAlliance(alliance, playerObjId, PlayerAllianceEvent.BANNED, actingMember.getName());
 				break;
-			case 16: // Make Alliance Captain
+			case 16: // Определение капитана Альянса
 				String oldLeader = alliance.getCaptain().getName();
 				alliance.setLeader(playerObjId);
 				broadcastAllianceInfo(alliance, PlayerAllianceEvent.APPOINT_CAPTAIN, oldLeader, alliance.getCaptain().getName());
 				break;
-			case 19: // Check Readiness State
+			case 19: // Проверка состояния боевой готовности
 				PacketSendUtility.sendMessage(actingMember, "Readiness check is not implmeneted yet. (ID: " + playerObjId + ")");
-				//PacketSendUtility.sendPacket(actingMember, new SM_ALLIANCE_READY_CHECK(playerObjId, status));
 				break;
-			case 23: // Appoint Alliance ViceCaptain
+			case 23: // Назначение Вице-Капитана Альянса
 				alliance.promoteViceLeader(playerObjId);
 				broadcastAllianceInfo(alliance, PlayerAllianceEvent.APPOINT_VICE_CAPTAIN, alliance.getPlayer(playerObjId).getName());
 				break;
-			case 24: // Demote Alliance ViceCaptain
+			case 24: // Снятие полномочий Вице-Капитана Альянса
 				alliance.demoteViceLeader(playerObjId);
 				broadcastAllianceInfo(alliance, PlayerAllianceEvent.DEMOTE_VICE_CAPTAIN, alliance.getPlayer(playerObjId).getName());
 				break;
@@ -461,17 +448,16 @@ public class AllianceService
 	}
 
 	/**
-	 * 
 	 * @param member
 	 * @param event
 	 * @param params
 	 */
 	public void removeMemberFromAlliance(PlayerAlliance alliance, int memberObjectId, PlayerAllianceEvent event, String ... params)
 	{
-		// Player
+		// Игрок
 		PlayerAllianceMember allianceMember = alliance.getPlayer(memberObjectId);
 
-		// TODO: Why is this null sometimes (found when banning from alliance)
+		// TODO: Почему-то это иногда null (когда альянс запрещен).
 		if (allianceMember == null)
 			return;
 
@@ -481,17 +467,16 @@ public class AllianceService
 			PacketSendUtility.sendPacket(allianceMember.getPlayer(), new SM_LEAVE_GROUP_MEMBER());
 		}
 
-		// Alliance
+		// Альянс
 		broadcastAllianceMemberInfo(alliance, allianceMember, event, params);
 		alliance.removeMember(memberObjectId);
 		removeAllianceMemberFromCache(memberObjectId);
 
 		broadcastAllianceMemberInfo(alliance, memberObjectId, PlayerAllianceEvent.BANNED);
 
-		// Check Disband
+		// Проверка на роспуск Альянса
 		if (alliance.size() == 1)
 		{
-			// IDFactory.getInstance().releaseId(alliance.getObjectId());
 			Player player = alliance.getCaptain().getPlayer();
 			removeMemberFromAlliance(alliance, alliance.getCaptainObjectId(), event);
 			if (player != null)
@@ -500,7 +485,7 @@ public class AllianceService
 	}
 
 	/**
-	 * Unused until login packet sequence can be determined
+	 * Неиспользованные до входа пакеты последовательности, которые могут быть определены
 	 * 
 	 * @param player
 	 */
@@ -511,7 +496,7 @@ public class AllianceService
 
 		final PlayerAlliance alliance = getPlayerAlliance(player.getObjectId());
 		
-		// Alliance is empty.
+		// Альянс пуст.
 		if(alliance.size() == 0)
 		{
 			removeAllianceMemberFromCache(player.getObjectId());
@@ -523,7 +508,7 @@ public class AllianceService
 	}
 
 	/**
-	 * Unused until login packet sequence can be determined
+	 * Неиспользованные до входа пакеты последовательности, которые могут быть определены
 	 * 
 	 * @param player
 	 */
@@ -533,7 +518,6 @@ public class AllianceService
 
 		alliance.onPlayerLogin(player);
 		
-		// Required for relogging to work. (?)
 		PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
 		
 		PacketSendUtility.sendPacket(player, new SM_ALLIANCE_INFO(alliance));
@@ -552,7 +536,7 @@ public class AllianceService
 	}
 	
 	/**
-	 * Currently sends movement packet to all alliance members.
+	 * В настоящее время посылает движения пакетов для всех членов альянса.
 	 * 
 	 * @param player
 	 * @param event
@@ -578,13 +562,13 @@ public class AllianceService
 				break;
 				
 			default:
-				// Unsupported
+				// Не поддерживается!
 				break;
 		}
 	}
 	
 	/**
-	 * Sends brand information to each member.
+	 * Посылает уникальную информацию для каждого члена Альянса.
 	 * 
 	 * @param alliance
 	 * @param modeId
@@ -606,11 +590,11 @@ public class AllianceService
 	 */
 	public void doReward(PlayerAlliance alliance, Monster owner)
 	{
-		// TODO: Merge with group type do-reward. (Near identical to GroupService doReward code.)
-		// Plus complete rewrite of drop system and exp system.
+		// TODO: Слиться с системой наград в группе. (Практически идентичные с GroupService doReward код.)
+		// Плюс полностью переписать систему падения и exp.
 		// http://www.aionsource.com/topic/40542-character-stats-xp-dp-origin-gerbatorteam-july-2009/
 		
-		// Find Group Members and Determine Highest Level
+		// Поиск членов группы и сортировка по уровню.
 		List<Player> players = new ArrayList<Player>();
 		int partyLvlSum = 0;
 		int highestLevel = 0;
@@ -629,27 +613,28 @@ public class AllianceService
 			}
 		}
 		
-		// All are dead or not nearby.
+		// Все они погибли, или не рядом.
 		if (players.size() == 0)
 			return;
 		
-		//AP reward
+		//AP награда
 		int apRewardPerMember = 0;
 		WorldType worldType = owner.getWorldType();
 		
-		//WorldType worldType = sp.getWorld().getWorldMap(player.getWorldId()).getWorldType();
 		if(worldType == WorldType.ABYSS || 
 		(worldType == WorldType.BALAUREA && (owner.getObjectTemplate().getRace() == Race.DRAKAN || owner.getObjectTemplate().getRace() == Race.LIZARDMAN)))
 		{
-			// Split Evenly
+			// Поровну
 			apRewardPerMember = Math.round(StatFunctions.calculateGroupAPReward(highestLevel, owner) / players.size());
 		}
 		
-		// Exp reward
+		// Exp награда
 		long expReward = StatFunctions.calculateGroupExperienceReward(highestLevel, owner);
 		
-		// Exp Mod
-		// TODO: Add logic to prevent power leveling. Players 10 levels below highest member should get 0 exp.
+		// Exp мод
+		//
+		// TODO: Добавить логику, чтобы предотвратить выравнивание власти. Игроки 10 уровней ниже 
+		// высшей государство-член должно получить 0 exp.
 		double mod = 1;
 		if (players.size() == 0)
 			return;
@@ -673,33 +658,33 @@ public class AllianceService
 				else
 					PacketSendUtility.sendPacket(member, SM_SYSTEM_MESSAGE.EXP(reward, owner.getObjectTemplate().getNameId()));
 
-				// DP reward
+				// DP награда
 				int currentDp = member.getCommonData().getDp();
 				int dpReward = StatFunctions.calculateGroupDPReward(member, owner);
 				member.getCommonData().setDp(dpReward + currentDp);
 
-				// AP reward
+				// AP награда
 				if (apRewardPerMember > 0)
 					member.getCommonData().addAp(Math.round(apRewardPerMember * member.getRates().getApNpcRate()));
 			}
 			QuestEngine.getInstance().onKill(new QuestCookie(owner, member, 0 , 0));
 		}
 		
-		// Give Drop
+		// Получение дропа
 		Player leader = alliance.getCaptain().getPlayer();
 		
-		// TODO: Better Group/Alliance Drop methods.
+		// TODO: Улучшить метод выпадения дропа в Альянсе/Группе
 		if (leader == null) return;
 		
 		DropService.getInstance().registerDrop(owner, leader, highestLevel, players);
 	}
 
 	/**
-	 * This method will get all group members
+	 * Этот метод позволит получить всех членов группы
 	 *
 	 * @param group
 	 * @param except
-	 * @return list of group members
+	 * @return список членов группы
 	 */
 	public List<Integer> getAllianceMembers(final PlayerAlliance alliance, boolean except)
 	{
@@ -735,7 +720,9 @@ public class AllianceService
 				{
 					luckyMembers.add(roundRobinMember);
 					break;
-				} // if no member is found then the loot is FREEFORALL.
+				} 
+			
+			// Если ни один участник не найден, то дроп становится доступным любому персонажу.
 			case FREEFORALL:
 				luckyMembers = getAllianceMembers(alliance, false);
 				break;

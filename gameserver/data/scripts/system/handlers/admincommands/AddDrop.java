@@ -32,13 +32,15 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Команда для добавления необходимого дропа в БД.
+ */
+ 
 public class AddDrop extends AdminCommand
 {
-
 	public AddDrop()
 	{
 		super("adddrop");

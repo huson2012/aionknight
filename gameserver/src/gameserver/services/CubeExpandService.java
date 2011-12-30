@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -37,8 +41,9 @@ public class CubeExpandService
 	private static final Logger	log = Logger.getLogger(CubeExpandService.class);
 	private static final int MIN_EXPAND	= 0;
 	private static final int MAX_EXPAND	= 9;
+	
 	/**
-	 * Shows Question window and expands on positive response
+	 * Показывает куб и расширяет его при положительном результате
 	 * 
 	 * @param player
 	 * @param npc
@@ -57,7 +62,7 @@ public class CubeExpandService
 			&& validateNewSize(cubeLevel(player) + 1))
 		{
 			/**
-			 * Check if our player can pay the cubic expand price
+			 * Проверяем, может ли игрок заплатить необходимую сумму для расширения куба
 			 */
 			final int price = getPriceByLevel(expandTemplate, cubeLevel(player) + 1);
 
@@ -93,14 +98,14 @@ public class CubeExpandService
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300430));
 	}
 	/**
-	 * Expands the cubes
+	 * Расширяем куб
 	 * @param player
 	 */
 	public static void expand(Player player)
 	{
 		if (!validateNewSize(cubeLevel(player) + 1))
 			return;
-		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300431, "9")); // 9 Slots added
+		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300431, "9")); // 9 слотов добавлено
 		player.setCubesize(player.getCubeSize() + 1);
 		PacketSendUtility.sendPacket(player, new SM_CUBE_UPDATE(player, 0));
 	}
@@ -132,7 +137,7 @@ public class CubeExpandService
 		return cubeLevel;
 	}
 	/**
-	 * Checks if new player cube is not max
+	 * Проверяем на сколько уже расширен куб 
 	 * 
 	 * @param level
 	 * @return true or false
@@ -144,7 +149,7 @@ public class CubeExpandService
 		return true;
 	}
 	/**
-	 * Checks if npc can expand level
+	 * Проверяем соответствует ли уровень игрока требуемому для расширения куба
 	 * 
 	 * @param clist
 	 * @param level
@@ -157,7 +162,7 @@ public class CubeExpandService
 		return true;
 	}
 	/**
-	 * The guy who created cube template should blame himself :) One day I will rewrite them
+	 * Тот кто создал шаблон для куба - нехороший чеовек ))) Когда-нить придется его переписать.
 	 * 
 	 * @param clist
 	 * @param level

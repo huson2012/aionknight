@@ -31,6 +31,9 @@ import gameserver.utils.i18n.LanguageHandler;
 
 public class GiveMissingSkills extends UserCommand
 {
+	/**
+	 * Запрос на получение отсутсвующих умений по команде //givemissingskills
+	 */
 	public GiveMissingSkills()
 	{
 		super("givemissingskills");

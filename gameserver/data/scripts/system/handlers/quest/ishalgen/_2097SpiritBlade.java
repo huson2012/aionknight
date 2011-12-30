@@ -1,19 +1,24 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package quest.ishalgen;
 
 import gameserver.model.gameobjects.Npc;
@@ -26,17 +31,11 @@ import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.services.ItemService;
 import gameserver.utils.PacketSendUtility;
-
 import java.util.Collections;
 
-/**
- * @author Orpheo
- *
- */
 public class _2097SpiritBlade extends QuestHandler
 {
-
-	private final static int	questId	= 2097;
+	private final static int questId = 2097;
 
 	public _2097SpiritBlade()
 	{
@@ -77,7 +76,7 @@ public class _2097SpiritBlade extends QuestHandler
 		if(env.getVisibleObject() instanceof Npc)
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if(targetId == 203550) //Munin
+		if(targetId == 203550) // Munin
 		{
 			if(qs == null || qs.getStatus() == QuestStatus.START)
 			{
@@ -95,7 +94,7 @@ public class _2097SpiritBlade extends QuestHandler
 				else
 					return defaultQuestStartDialog(env);
 			}
-			else if(qs != null && qs.getStatus() == QuestStatus.REWARD) //Reward
+			else if(qs != null && qs.getStatus() == QuestStatus.REWARD) // Reward
 			{
 				if(env.getDialogId() == 26)
 					return sendQuestDialog(env, 10002);
@@ -111,7 +110,7 @@ public class _2097SpiritBlade extends QuestHandler
 			}
 		}
 		
-		else if(targetId == 203546) //Skuld
+		else if(targetId == 203546) // Skuld
 		{
 
 			if(qs != null && qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 1)
@@ -132,7 +131,7 @@ public class _2097SpiritBlade extends QuestHandler
 
 		}
 		
-		else if(targetId == 279034) //Baoninerk
+		else if(targetId == 279034) // Baoninerk
 		{
 			if(qs != null && qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 2)
 			{

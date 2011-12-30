@@ -30,9 +30,12 @@ import gameserver.utils.i18n.LanguageHandler;
 
 public class ExperienceOff extends UserCommand
 {
+	/**
+	 * Выключение начисления опыта
+	 */
 	public ExperienceOff()
 	{
-		super("xpoff");
+		super("xpoff"); 
 	}
 
 	@Override

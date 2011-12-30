@@ -52,8 +52,8 @@ public class LoginServer
 	private static final Logger	log	= Logger.getLogger(LoginServer.class);
 
 	/**
-	 * Map<accountId,Connection> for waiting request. This request is send to LoginServer and GameServer is waiting for
-	 * response.
+	 * Map<accountId,Connection> for waiting request. This request is send to LoginServer and GameServer is 
+	 * waiting for response.
 	 */
 	private Map<Integer, AionConnection> loginRequests = new HashMap<Integer, AionConnection>();
 
@@ -86,8 +86,8 @@ public class LoginServer
 	}
 
 	/**
-	 * Connect to LoginServer and return object representing this connection. This method is blocking and may block till
-	 * connect successful.
+	 * Connect to LoginServer and return object representing this connection. This method is blocking and may 
+	 * block till connect successful.
 	 * 
 	 * @return LoginServerConnection
 	 */
@@ -97,7 +97,7 @@ public class LoginServer
 		for(;;)
 		{
 			loginServer = null;
-			log.info("Connecting to LoginServer: " + NetworkConfig.LOGIN_ADDRESS);
+			log.info("Connecting to LS: " + NetworkConfig.LOGIN_ADDRESS);
 			try
 			{
 				sc = SocketChannel.open(NetworkConfig.LOGIN_ADDRESS);
@@ -108,7 +108,7 @@ public class LoginServer
 			}
 			catch(Exception e)
 			{
-				log.info("Cant connect to LoginServer: " + e.getMessage());
+				log.info("Cant connect to LS: " + e.getMessage());
 			}
 			try
 			{
@@ -161,8 +161,8 @@ public class LoginServer
 	}
 
 	/**
-	 * Notify that client is disconnected - we must clear waiting request to LoginServer if any to prevent leaks. Also
-	 * notify LoginServer that this account is no longer on GameServer side.
+	 * Notify that client is disconnected - we must clear waiting request to LoginServer if any to prevent leaks. 
+	 * Also notify LoginServer that this account is no longer on GameServer side.
 	 * 
 	 * @param client
 	 */
@@ -188,8 +188,8 @@ public class LoginServer
 	}
 
 	/**
-	 * Starts authentication procedure of this client - LoginServer will sends response with information about account
-	 * name if authentication is ok.
+	 * Starts authentication procedure of this client - LoginServer will sends response with information about 
+	 * account name if authentication is ok.
 	 * 
 	 * @param accountId 
 	 * @param client
@@ -241,7 +241,14 @@ public class LoginServer
 			client.setState(AionConnection.State.AUTHED);
 			loggedInAccounts.put(accountId, client);
 			log.info("Account authed: " + accountId + " = " + accountName);
-			client.setAccount(AccountService.getAccount(accountId, accountName, accountTime, accessLevel, membership));
+			client.setAccount(AccountService.getAccount
+			(
+				accountId, 
+				accountName, 
+				accountTime, 
+				accessLevel, 
+				membership
+			));
 			client.sendPacket(new SM_L2AUTH_LOGIN_CHECK(true));
 		}
 		else
@@ -280,8 +287,8 @@ public class LoginServer
 	}
 
 	/**
-	 * This method is called by CM_ACCOUNT_RECONNECT_KEY LoginServer packets to give GameServer reconnection key for
-	 * client that was requesting reconnection.
+	 * This method is called by CM_ACCOUNT_RECONNECT_KEY LoginServer packets to give GameServer reconnection key 
+	 * for client that was requesting reconnection.
 	 * 
 	 * @param accountId
 	 * @param reconnectKey
@@ -299,8 +306,8 @@ public class LoginServer
 	}
 
 	/**
-	 * This method is called by CM_REQUEST_KICK_ACCOUNT LoginServer packets to request GameServer to disconnect client
-	 * with given account id.
+	 * This method is called by CM_REQUEST_KICK_ACCOUNT LoginServer packets to request GameServer to disconnect 
+	 * client with given account id.
 	 * 
 	 * @param accountId
 	 */
