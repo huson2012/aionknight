@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -31,7 +35,7 @@ public class DivineInstanceService
 	
 	public void onGroupReward(Monster monster, PlayerGroup group)
 	{
-		if(monster.getObjectTemplate().getTemplateId() == 700955) // Huge Aether Fragment
+		if(monster.getObjectTemplate().getTemplateId() == 700955) // Огромный Фрагмент Эфира
 			group.setInstanceKills(group.getInstanceKills() + 1);
 		
 		if(monster.getObjectTemplate().getTemplateId() == 216951) // Pazuzu
@@ -46,7 +50,7 @@ public class DivineInstanceService
 		if(monster.getObjectTemplate().getTemplateId() == 216952 || monster.getObjectTemplate().getTemplateId() == 216960) // YamennesBlindsight & Painflare
 			YamennesChests(group);
 		
-		if(monster.getObjectTemplate().getTemplateId() == 700856) // Yamennes artifact
+		if(monster.getObjectTemplate().getTemplateId() == 700856) // Yamennes артефакт
 		{
 			if (group.getInstanceKills() == 3)
 				YamennesPainflare(group);
@@ -63,7 +67,8 @@ public class DivineInstanceService
 		chests[1] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700934, (float) 653.838, (float) 360.395, (float) 467.514, (byte) 0, true);
 		chests[2] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700934, (float) 647.004, (float) 357.248, (float) 469.606, (byte) 0, true);
 		chests[3] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700860, (float) 649.243, (float) 361.338, (float) 467.392, (byte) 0, true);
-		//Huge Aether Fragment
+		
+		// Огромный Фрагмент Эфира
 		chests[4] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700955, (float) 669.576, (float) 335.135, (float) 465.895, (byte) 0, true);
 	}
 
@@ -75,7 +80,8 @@ public class DivineInstanceService
 		chests[1] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700934, (float) 601.293, (float) 584.667, (float) 424.227, (byte) 0, true);
 		chests[2] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700934, (float) 602.959, (float) 589.268, (float) 424.283, (byte) 0, true);
 		chests[3] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700935, (float) 598.828, (float) 588.259, (float) 422.79437, (byte) 0, true);
-		//Huge Aether Fragment
+		
+		// Огромный Фрагмент Эфира
 		chests[4] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700955, (float) 633.75, (float) 557.882, (float) 423.124, (byte) 0, true);
 	}
 
@@ -87,7 +93,8 @@ public class DivineInstanceService
 		chests[1] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700934, (float) 408.109, (float) 650.901, (float) 440.441, (byte) 0, true);
 		chests[2] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700934, (float) 402.404, (float) 655.552, (float) 440.421, (byte) 0, true);
 		chests[3] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700936, (float) 403.983, (float) 651.584, (float) 440.284, (byte) 0, true);
-		//Huge Aether Fragment
+		
+		// Огромный Фрагмент Эфира
 		chests[4] = (Npc) InstanceService.addNewSpawn(mapId, group.getGroupLeader().getInstanceId(), 700955, (float) 452.897, (float) 692.361, (float) 432.692, (byte) 0, true);
 	}
 	
@@ -123,6 +130,6 @@ public class DivineInstanceService
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		protected static final DivineInstanceService	instance	= new DivineInstanceService();
+		protected static final DivineInstanceService instance = new DivineInstanceService();
 	}
 }

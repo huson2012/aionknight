@@ -31,9 +31,12 @@ import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 import gameserver.world.World;
 
+/**
+ * Команда, позволяющая расширить куб игрока
+ */
+ 
 public class AddCube extends AdminCommand
 {
-
 	public AddCube()
 	{
 		super("addcube");

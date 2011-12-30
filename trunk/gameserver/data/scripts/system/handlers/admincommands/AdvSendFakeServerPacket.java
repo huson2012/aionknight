@@ -32,7 +32,6 @@ import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 import org.apache.log4j.Logger;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -46,21 +45,19 @@ import java.util.List;
 public class AdvSendFakeServerPacket extends AdminCommand
 {
 	private static final Logger logger = Logger.getLogger(AdvSendFakeServerPacket.class);
-
 	private static final File FOLDER = new File("./data/packets");
-
 	private Unmarshaller unmarshaller;
 
 	/**
-	 * Create an instance of admin command.
+	 * —оздание экземпл€ра админ-команды.
 	 *
-	 * @throws GameServerError on initialization error
+	 * @throws GameServerError (при ошибке инициализации).
 	 */
 
 	public AdvSendFakeServerPacket()
 	{
 		super("send");
-		// init unmrshaller once.
+
 		try
 		{
 			unmarshaller = JAXBContext.newInstance(Packets.class, Packet.class, Part.class).createUnmarshaller();
@@ -91,9 +88,6 @@ public class AdvSendFakeServerPacket extends AdminCommand
 		final String mappingName = params[0];
 		final Player target = getTargetPlayer(admin);
 
-		//logger.debug("Mapping: " + mappingName);
-		//logger.debug("Target: " + target);
-
 		File packetsData = new File(FOLDER, mappingName + ".xml");
 
 		if (!packetsData.exists())
@@ -110,7 +104,7 @@ public class AdvSendFakeServerPacket extends AdminCommand
 		}
 		catch (JAXBException e)
 		{
-			logger.error("Unmarshalling error", e);
+			logger.error("[!] Unmarshalling error", e);
 			return;
 		}
 
@@ -128,11 +122,9 @@ public class AdvSendFakeServerPacket extends AdminCommand
 		final String senderObjectId = String.valueOf(sender.getObjectId());
 		final String targetObjectId = String.valueOf(target.getObjectId());
 
-		int packetIndex = 0;// first packet should be sent immediately.
+		int packetIndex = 0; // первый пакет должен быть отправлен сразу.
 		for (final Packet packetTemplate : packets)
 		{
-			//logger.debug("Processing: " + packetTemplate);
-
 			final SM_CUSTOM_PACKET packet = new SM_CUSTOM_PACKET(packetTemplate.getOpcode());
 
 			for (Part part : packetTemplate.getParts())
@@ -148,7 +140,7 @@ public class AdvSendFakeServerPacket extends AdminCommand
 				if (value.indexOf("${targetObjectId}") != -1)
 					value = value.replace("${targetObjectId}", targetObjectId);
 
-				if (part.getRepeatCount() == 1) // skip loop
+				if (part.getRepeatCount() == 1) // пропускаем петлю
 				{
 					packet.addElement(byCode, value);
 				}
@@ -164,10 +156,9 @@ public class AdvSendFakeServerPacket extends AdminCommand
 				@Override
 				public void run()
 				{
-					//logger.debug("Sending: " + packetTemplate);
 					PacketSendUtility.sendPacket(target, packet);
 				}
-			}, packetIndex * packets.getDelay()); //Kamui: this is correct or a mistake?
+			}, packetIndex * packets.getDelay()); // Frost: это правильно или ошибочно?
 
 			packetIndex++;
 		}

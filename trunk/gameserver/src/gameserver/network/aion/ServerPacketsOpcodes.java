@@ -78,8 +78,6 @@ public class ServerPacketsOpcodes
 		Set<Integer> idSet = new HashSet<Integer>();
 
 		addPacketOpcode(SM_STATS_INFO.class, 0x0001, idSet);// 2.6 0x01, 2.7
-		// 2.7 Unknown - 01 01 54 BE FE 00 00
-		// 2.7 Unknown - 03 01 54 A0 FE 01 
 		addPacketOpcode(SM_CHAT_INIT.class, 0x0104, idSet);// 2.6 0x04, 2.7
 		addPacketOpcode(SM_CHANNEL_INFO.class, 0x0105, idSet);// 2.6 0x05, 2.7
 		addPacketOpcode(SM_MACRO_RESULT.class, 0x0106, idSet);// 2.6 0x06, 2.7
@@ -88,7 +86,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_RIFT_ANNOUNCE.class, 0x0A, idSet);// 2.1
 		addPacketOpcode(SM_RIFT_STATUS.class, 0x010A, idSet);// 2.7
 		addPacketOpcode(SM_SET_BIND_POINT.class, 0x010B, idSet);// 2.6 0x0B, 2.7
-		// 2.7 Unknown - 0C 01 54 AB FE 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 		addPacketOpcode(SM_ABYSS_RANK.class, 0x010D, idSet);// 2.6 0x0D, 2.7
 		addPacketOpcode(SM_FRIEND_UPDATE.class, 0x000E, idSet);// 2.6 0x0E, 2.7
 		addPacketOpcode(SM_PETITION.class, 0x000F, idSet);// 2.6 0x0F, (Disabled in 2.7 Retail?)
@@ -126,7 +123,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_ATTACK.class, 0x0034, idSet);// 2.6 0x34, 2.7
 		addPacketOpcode(SM_MOVE.class, 0x0037, idSet);// 2.6 0x37, 2.7
 		addPacketOpcode(SM_TRANSFORM.class, 0x0038, idSet);// 2.6 0x38, 2.7
-		// 2.7 Unknown - 39 00 54 F6 FF 0E 83 00 80 5A
 		addPacketOpcode(SM_DIALOG_WINDOW.class, 0x003A, idSet);// 2.6 0x3A, 2.7
 		addPacketOpcode(SM_SELL_ITEM.class, 0x003C, idSet);// 2.6 0x41, 2.7
 		addPacketOpcode(SM_WEATHER.class, 0x0040, idSet);// 2.6 0x40, 2.7
@@ -145,7 +141,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_STIGMA_SKILL_REMOVE.class, 0x004D, idSet);// 2.6 0x4D, 2.7
 		addPacketOpcode(SM_ABNORMAL_EFFECT.class, 0x0050, idSet);// 2.6 0x50, 2.7
 		addPacketOpcode(SM_ABNORMAL_STATE.class, 0x0051, idSet);// 2.6 0x51, 2.7
-
 		addPacketOpcode(SM_PLASTIC_SURGERY.class, 0x0153, idSet);// 2.6 0x53, 2.7
 		addPacketOpcode(SM_FORTRESS_STATUS.class, 0x0154, idSet);// 2.6 0x54, 2.7
 		addPacketOpcode(SM_INFLUENCE_RATIO.class, 0x0155, idSet);// 2.6 0x55, 2.7
@@ -156,7 +151,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_ABYSS_ARTIFACT_INFO.class, 0x015E, idSet);// 2.6 0x5E, 2.7 Testing
 		addPacketOpcode(SM_QUIT_RESPONSE.class, 0x0160, idSet);// 2.6 0x60, 2.7
 		addPacketOpcode(SM_PLAYER_STATE.class, 0x0162, idSet);// 2.6 0x62, 2.7
-		// 2.7 Unknown - 63 00 54 00 FF 01 00 00 
 		addPacketOpcode(SM_LEVEL_UPDATE.class, 0x0164, idSet);// 2.6 0x64, 2.7
 		addPacketOpcode(SM_KEY.class, 0x0166, idSet);// 2.6 0x66, 2.7
 		addPacketOpcode(SM_STARTED_QUEST_LIST.class, 0x0167, idSet);// 2.6 0x67, 2.7
@@ -167,7 +161,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_EXCHANGE_ADD_KINAH.class, 0x016D, idSet);// 2.6 0x6D, 2.7
 		addPacketOpcode(SM_EMOTION_LIST.class, 0x016F, idSet);// 2.6 0x63, 2.7
 		addPacketOpcode(SM_TARGET_UPDATE.class, 0x0171, idSet);// 2.6 0x71, 2.7
-		// 2.7 Unknown - 73 01 54 30 FE 07 19
 		addPacketOpcode(SM_LEGION_UPDATE_SELF_INTRO.class, 0x0177, idSet);// 2.6 0x77, 2.7
 		addPacketOpcode(SM_DREDGION_INSTANCE.class, 0x0178, idSet);// 2.6 0x78, 2.7
 		addPacketOpcode(SM_INSTANCE_SCORE.class, 0x0179, idSet);// 2.1 0x76, 2.7 Testing
@@ -176,8 +169,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_PING_RESPONSE.class, 0x017E, idSet);// 2.6 0x7E, 2.7
 		addPacketOpcode(SM_NEARBY_QUESTS.class, 0x017F, idSet);// 2.6 0x7F, 2.7
 		addPacketOpcode(SM_CUBE_UPDATE.class, 0x0180, idSet);// 2.6 0x80, 2.7
-		// 2.7 Unknown - 82 00 57 7D FF 
-		// 2.7 Unknown - 83 01 54 20 FE 02 43 00 68 00 69... Reply to CM_CHAT_RECRUIT_GROUP
 		addPacketOpcode(SM_PET.class, 0x0185, idSet);// 2.6 0x85, 2.7
 		addPacketOpcode(SM_UPDATE_NOTE.class, 0x0186, idSet);// 2.6 0x86, 2.7
 		addPacketOpcode(SM_ITEM_COOLDOWN.class, 0x0187, idSet);// 2.6 0x87, 2.7
@@ -188,7 +179,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_LEGION_UPDATE_TITLE.class, 0x0190, idSet);// 2.6 0x90, 2.7
 		addPacketOpcode(SM_LEGION_UPDATE_MEMBER.class, 0x0191, idSet);// 2.6 0x91, 2.7
 		addPacketOpcode(SM_CMOTION.class, 0x0192, idSet);// 2.6 0x92, 2.7
-		// 2.6 - Unknown Opcode 95, sent after Unknown client C7 after SM_MAIL_SERVICE: 95 54 52 01 07 00 00 00 01 00 00 
 		//addPacketOpcode(SM_NPC_TRADE.class,0x0197, idSet); // 2.7
 		addPacketOpcode(SM_TRADEINTRADELIST.class, 0x0197, idSet); // 2.7
 		addPacketOpcode(SM_SUMMON_OWNER_REMOVE.class, 0x0198, idSet); // 2.6 0x98, 2.7
@@ -200,7 +190,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_SUMMON_USESKILL.class, 0x01A0, idSet);// 2.6 0xA0, 2.7
 		addPacketOpcode(SM_MAIL_SERVICE.class, 0x01A1, idSet);// 2.6 0xA1, 2.7
 		addPacketOpcode(SM_FRIEND_LIST.class, 0x01A2, idSet);// 2.6 0xA2, 2.7
-
 		addPacketOpcode(SM_PRIVATE_STORE.class, 0x01A4, idSet); // 2.6 0xA4, 2.7
 		addPacketOpcode(SM_ABYSS_RANK_UPDATE.class, 0xA6, idSet);// 2.1
 		addPacketOpcode(SM_GROUP_LOOT.class, 0xA7, idSet);// 2.1
@@ -215,21 +204,18 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_BROKER_ITEMS.class, 0x01B0, idSet);// 2.6 0xB0, 2.7
 		addPacketOpcode(SM_PRIVATE_STORE_NAME.class, 0x01B1, idSet);// 2.6 0xB1, 2.7
 		addPacketOpcode(SM_CRAFT_ANIMATION.class, 0x01B2, idSet);// 2.6 0xB2, 2.7
-		// 2.7 Unknown - B3 01 54 70 FE 00 00 00 00 00 01 00 01 00 00
 		addPacketOpcode(SM_ASCENSION_MORPH.class, 0x01B4, idSet);// 2.6 0xB4, 2.7 Testing
 		addPacketOpcode(SM_CRAFT_UPDATE.class, 0x01B5, idSet);// 2.6 0xB5, 2.7
 		addPacketOpcode(SM_CUSTOM_SETTINGS.class, 0x01B6, idSet);// 2.6 0xB6, 2.7
 		addPacketOpcode(SM_ITEM_USAGE_ANIMATION.class, 0x01B7, idSet);// 2.6 0xB7, 2.7
 		addPacketOpcode(SM_DUEL.class, 0x01B9, idSet);// 2.6 0xB9, 2.7
 		addPacketOpcode(SM_PET_MOVE.class, 0x01BB, idSet);// 2.6 0xBB, 2.7
-		// 2.7 Unknown - BD 01 54 7A FE 00 00
 		addPacketOpcode(SM_QUESTIONNAIRE.class, 0x01BF, idSet);// 2.6 0xBF, 2.7
 		addPacketOpcode(SM_RESURRECT.class, 0x01C0, idSet);// 2.6 0xC0, 2.7
 		addPacketOpcode(SM_DIE.class, 0x01C1, idSet);// 2.6 0xC1, 2.7
 		addPacketOpcode(SM_WINDSTREAM_LOCATIONS.class, 0x01C2, idSet);// 2.6 0xC2, 2.7
 		addPacketOpcode(SM_WINDSTREAM.class, 0x01C3, idSet);// 2.6 0xC3, 2.7
 		addPacketOpcode(SM_FIND_GROUP.class, 0x01C4, idSet);// 2.6 0xC4, 2.7
-		// 2.7 Unknown - C5 01 54 62 FE 01 00 00 
 		addPacketOpcode(SM_WAREHOUSE_INFO.class, 0x01C6, idSet);// 2.6 0xC6, 2.7
 		addPacketOpcode(SM_REPURCHASE.class, 0x01C7, idSet);// 2.6 0xC7, 2.7
 		addPacketOpcode(SM_DELETE_WAREHOUSE_ITEM.class, 0x01C8, idSet);// 2.6 0xC8, 2.7
@@ -241,12 +227,10 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_TITLE_LIST.class, 0x01CE, idSet);// 2.6 0xCE, 2.7
 		addPacketOpcode(SM_CHARACTER_SELECT.class, 0x01D1, idSet);// 2.6 0xD1, 2.7
 		addPacketOpcode(SM_PLAYER_SEARCH.class, 0x01D3, idSet);// 2.6 0xD3, 2.7
-		addPacketOpcode(SM_LEGION_EMBLEM_SEND.class, 0x01D4, idSet);// 2.6 0xD4, 2.7
+		addPacketOpcode(SM_LEGION_EMBLEM_SEND.class, 0xBF, idSet);// 2.6 0xD4, 2.7 Testing
 		addPacketOpcode(SM_LEGION_EMBLEM.class, 0x01D5, idSet);// 2.6 0xD5, 2.7
-		// 2.7 Unknown - D6 01 54 95 FE 00 00 00 9E B3 5A CE 9E B3 5A CE
 		addPacketOpcode(SM_LEGION_UPDATE_EMBLEM.class, 0x01D7, idSet);// 2.6 0xD7, 2.7 Testing
 		addPacketOpcode(SM_SIEGE_AETHERIC_FIELDS.class, 0x01D8, idSet);// 2.6 0xD8, 2.7 Testing
-		// 2.7 Unknown - D9 01 54 96 FE 6D F4 0B 0A 00 00 00 9E B3 5A CE
 		addPacketOpcode(SM_ABYSS_ARTIFACT_INFO3.class, 0x01DA, idSet);// 2.6 0xDA, 2.7 Testing
 		addPacketOpcode(SM_FRIEND_RESPONSE.class, 0x00DC, idSet);// 2.6
 		addPacketOpcode(SM_BLOCK_LIST.class, 0x01DE, idSet);// 2.6 0xDE, 2.7
@@ -254,7 +238,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_FRIEND_NOTIFY.class, 0x00E0, idSet);// 2.1
 		addPacketOpcode(SM_TELEPORT_MAP.class, 0x01E2, idSet);// 2.6 0xE2, 2.7
 		addPacketOpcode(SM_FORCED_MOVE.class, 0x01E3, idSet);// 2.6 0xE3, 2.7
-		// 2.7 Unknown - E4 01 54 83 FE C3 B9 37 80 03 07 00 00 00 00 00 00 00
 		addPacketOpcode(SM_USE_OBJECT.class, 0x01E5, idSet);// 2.6 0xE5, 2.7
 		addPacketOpcode(SM_CHARACTER_LIST.class, 0x01E6, idSet);// 2.6 0xE6, 2.7
 		addPacketOpcode(SM_L2AUTH_LOGIN_CHECK.class, 0x01E7, idSet);// 2.6 0xE7, 2.7
@@ -420,7 +403,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_PET_MOVE.class, 0xB8, idSet);
 		addPacketOpcode(SM_QUESTIONNAIRE.class, 0xBF, idSet); //2.6
 		addPacketOpcode(SM_DIE.class, 0xBE, idSet);
-		//addPacketOpcode(SM_LEGION_EMBLEM_SEND.class,0xBF, idSet);// Testing
+		addPacketOpcode(SM_LEGION_EMBLEM_SEND.class,0xBF, idSet);// Testing
 		addPacketOpcode(SM_FORCED_MOVE.class, 0xC0, idSet);
 		addPacketOpcode(SM_RESURRECT.class, 0xC1, idSet);
 		addPacketOpcode(SM_WINDSTREAM_LOCATIONS.class, 0xC3, idSet);
@@ -611,7 +594,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_PET_MOVE.class, 0xB8, idSet);
 		addPacketOpcode(SM_QUESTIONNAIRE.class, 0xBC, idSet);
 		addPacketOpcode(SM_DIE.class, 0xBE, idSet);
-		//addPacketOpcode(SM_LEGION_EMBLEM_SEND.class,0xBF, idSet);// Testing
+		addPacketOpcode(SM_LEGION_EMBLEM_SEND.class,0xBF, idSet);// Testing
 		addPacketOpcode(SM_FORCED_MOVE.class, 0xC0, idSet);
 		addPacketOpcode(SM_RESURRECT.class, 0xC1, idSet);
 		addPacketOpcode(SM_WINDSTREAM_LOCATIONS.class, 0xC3, idSet);

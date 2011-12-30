@@ -26,7 +26,6 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.UserCommand;
 import gameserver.world.World;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class GMList extends UserCommand
 {
 	public GMList ()
 	{
-		super("gmlist");
+		super("gmlist"); // Список присутствующих в игре Гейм-Мастеров
 	}
 	
 	@Override
@@ -56,13 +55,13 @@ public class GMList extends UserCommand
 		
 		if(admins.size() > 0)
 		{
-			PacketSendUtility.sendMessage(player, admins.size() + " GM(s) online :");
+			PacketSendUtility.sendMessage(player, admins.size() + " GM(s) online: ");
 			for(Player a : admins)
 			{
 				PacketSendUtility.sendMessage(player, a.getName());
 			}
 		}
 		else
-		PacketSendUtility.sendMessage(player, "No GM is online currently.");
+		PacketSendUtility.sendMessage(player, "No GM is online currently!");
 	}
 }

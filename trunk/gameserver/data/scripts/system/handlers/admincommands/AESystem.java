@@ -30,12 +30,14 @@ import gameserver.utils.AEVersions;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.utils.chathandlers.AdminCommand;
-
 import java.util.List;
+
+/**
+ * Команда, выводящая системную информацию.
+ */
 
 public class AESystem extends AdminCommand
 {
-
 	public AESystem()
 	{
 		super("sys");
@@ -58,33 +60,33 @@ public class AESystem extends AdminCommand
 
 		if (params[0].equals("info"))
 		{
-			// Time
+			// Время
 			PacketSendUtility.sendMessage(admin, "System Informations at: " + AEInfos.getRealTime().toString());
 
-			// Version Infos
+			// Информация о версии
 			for (String line : AEVersions.getFullVersionInfo())
 				PacketSendUtility.sendMessage(admin, line);
 
-			// OS Infos
+			// Информация о используемой ОС
 			for (String line : AEInfos.getOSInfo())
 				PacketSendUtility.sendMessage(admin, line);
 
-			// CPU Infos
+			// Информация о CPU
 			for (String line : AEInfos.getCPUInfo())
 				PacketSendUtility.sendMessage(admin, line);
 
-			// JRE Infos
+			// Информация о JRE 
 			for (String line : AEInfos.getJREInfo())
 				PacketSendUtility.sendMessage(admin, line);
 
-			// JVM Infos
+			// Информация о JVM 
 			for (String line : AEInfos.getJVMInfo())
 				PacketSendUtility.sendMessage(admin, line);
 		}
 
 		else if (params[0].equals("memory"))
 		{
-			// Memory Infos
+			// Информация о состоянии памяти
 			for(String line : AEInfos.getMemoryInfo())
 				PacketSendUtility.sendMessage(admin, line);
 		}

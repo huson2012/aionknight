@@ -40,18 +40,16 @@ import gameserver.model.legion.LegionMember;
 import gameserver.utils.collections.cachemap.CacheMap;
 import gameserver.utils.collections.cachemap.CacheMapFactory;
 import org.apache.log4j.Logger;
-
 import java.util.Iterator;
 import java.util.List;
 
 public class AccountService
 {
-	private static final Logger			log			= Logger.getLogger(AccountService.class);
-
-	private static CacheMap<Integer, Account>	accountsMap	= CacheMapFactory.createSoftCacheMap("Account", "account");
+	private static final Logger log	 = Logger.getLogger(AccountService.class);
+	private static CacheMap<Integer, Account> accountsMap = CacheMapFactory.createSoftCacheMap("Account", "account");
 
 	/**
-	 * Returns {@link Account} object that has given id.
+	 * Возвращает {@link Account} ID объекта.
 	 * 
 	 * @param accountId
 	 * @param accountTime
@@ -85,13 +83,15 @@ public class AccountService
 	}
 
 	/**
-	 * Removes from db characters that should be deleted (their deletion time has passed).
+	 * Удаляет из базы данных персонажей, которые должны быть удалены (подошло время их удаления).
 	 * 
 	 * @param account
 	 */
 	private static void removeDeletedCharacters(Account account)
 	{
-		/** Removes chars that should be removed */
+		/** 
+		 * Удаляет персонажей, которые должны быть удалены.
+		 */
 		Iterator<PlayerAccountData> it = account.iterator();
 		while(it.hasNext())
 		{
@@ -115,7 +115,7 @@ public class AccountService
 	}
 
 	/**
-	 * Loads account data and returns.
+	 * Загружает данные по кол-ву персонажей.
 	 * 
 	 * @param accountId
 	 * @param accountName
@@ -137,19 +137,16 @@ public class AccountService
 			LegionMember legionMember = DAOManager.getDAO(LegionMemberDAO.class).loadLegionMember(playerOid);
 
 			/**
-			 * Load only equipment and its stones to display on character selection screen
+			 * Загрузка экипировки, для отображения на экране выбора персонажа
 			 */
 			List<Item> equipments = DAOManager.getDAO(InventoryDAO.class).loadEquipment(playerOid);
 
-			// added by Deimos
-			// Remove MAIN_OFF_HAND and SUB_OFF_HAND slot weapons from character selection screen
 			for (int i = equipments.size() - 1; i >= 0; --i)
 			{
 				if (equipments.get(i).getEquipmentSlot() == 131072 || equipments.get(i).getEquipmentSlot() == 262144)
 				{ 
 					equipments.remove(i);
 				}
-				
 			}
 
 			PlayerAccountData acData = new PlayerAccountData(playerCommonData, appereance, equipments, legionMember);
@@ -157,11 +154,10 @@ public class AccountService
 			account.addPlayerAccountData(acData);
 
 			/**
-			 * load account warehouse only once
+			 * Единовременная прогрузка склада персонажа
 			 */	
 			if(account.getAccountWarehouse() == null)
 			{
-				//TODO memory lake.....
 				Player player = new Player(new PlayerController(), playerCommonData, appereance, account);
 				Storage accWarehouse = DAOManager.getDAO(InventoryDAO.class).loadStorage(player, StorageType.ACCOUNT_WAREHOUSE);
 				ItemService.loadItemStones(accWarehouse.getStorageItems());
@@ -170,7 +166,7 @@ public class AccountService
 		}
 		
 		/**
-		 * For new accounts - create empty account warehouse
+		 * Создание пустого пространства под склад игрока - только для новых персонажей.
 		 */
 		if(account.getAccountWarehouse() == null)
 			account.setAccountWarehouse(new Storage(StorageType.ACCOUNT_WAREHOUSE));
@@ -179,7 +175,7 @@ public class AccountService
 	}
 	
 	/**
-	 * Load characters count on account from database
+	 * Загрузка кол-ва учетных записей по персонажам их БД.
 	 * 
 	 * @param accountId
 	 * @return

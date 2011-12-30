@@ -14,17 +14,16 @@
    
  -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+	<!-- Элементы -->
     <xs:element name="scriptinfo" type="scriptInfo"/>
-
     <xs:element name="scriptlist" type="scriptList"/>
-
+	<!-- Комплексные данные -->
     <xs:complexType name="scriptList">
         <xs:sequence>
             <xs:element ref="scriptinfo" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-
+	<!-- Комплексные данные в последовательности -->
     <xs:complexType name="scriptInfo">
         <xs:sequence>
             <xs:element ref="scriptinfo" minOccurs="0" maxOccurs="unbounded"/>

@@ -33,23 +33,24 @@ import gameserver.utils.Util;
 import gameserver.utils.chathandlers.UserCommand;
 import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.World;
-
 import java.util.Iterator;
 import java.util.List;
 
-public class PlayerInfo extends UserCommand {
+public class PlayerInfo extends UserCommand 
+{
     public PlayerInfo() {
         super("playerinfo");
     }
 
     @Override
-    public void executeCommand(Player player, String params) {
+    public void executeCommand(Player player, String params) 
+	{
         
 		String[] args = params.split(" ");
 		Player target = World.getInstance().findPlayer(Util.convertName(args[0]));
 
         if (target == null) {
-            PacketSendUtility.sendMessage(player, "Ein Spieler mit diesem Namen ist nicht online bzw. existiert nicht.");
+            PacketSendUtility.sendMessage(player, "The player with this name is not on a network or do not exist.");
             return;
         }
 		
@@ -57,7 +58,7 @@ public class PlayerInfo extends UserCommand {
 
         sb.append("<poll>\n");
         sb.append("<poll_introduction>\n");
-        sb.append("	<![CDATA[<font color='4CB1E5'>Spielerinfo -- Aion-Germany.net</font>]]>\n");
+        sb.append("	<![CDATA[<font color='4CB1E5'>Player Info - Aion-Knight Dev.</font>]]>\n");
         sb.append("</poll_introduction>\n");
         sb.append("<poll_title>\n");
         sb.append("	<font color='ffc519'></font>\n");
@@ -79,11 +80,11 @@ public class PlayerInfo extends UserCommand {
         sb.append("<br><br>\n");
 		if (target.getCommonData().getRace() == Race.ELYOS)
 		{
-			sb.append("Informationen zum Spieler " + target.getName() + ":   <img src='http://www.aion-destination.de/_images/elyos.png'><br><hr><br><br>\n");
+			sb.append("Information about the player " + target.getName() + ": <img src='http://www.aion-destination.de/_images/elyos.png'><br><hr><br><br>\n");
 		}
 		else
 		{
-			sb.append("Informationen zum Spieler " + target.getName() + ":   <img src='http://sites.google.com/site/aioninfos/bilder/sonstiges/Asmodier-Symbol-35x40.png'><br><hr><br><br>\n");
+			sb.append("Information about the player " + target.getName() + ": <img src='http://sites.google.com/site/aioninfos/bilder/sonstiges/Asmodier-Symbol-35x40.png'><br><hr><br><br>\n");
 		}
 			
 			

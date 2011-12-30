@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+
+	Назначение файла	: Демонстрация работы с сетевыми пакетами
+	================================================================
+	Версия сервера		: Aion-Knight 2.7 (Beta version)
+	Версия клиента		: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	Редакция: 28/12/2011 (Frost)
+
+ -->
 <packets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="packets.xsd"
 	delay="2000">
 
 	<!--
-	Information:
-		* To send this mapping use admin command '//send demo'.
-		* Each packet is sent with delay {packets#delay} between them.
-		* Each packet part can be repeated many times by specifying attribute {part#repeat}
-		  i.e. <part type="c" value="0x00" repeat="29" />
+	Информация:
+	
+		* Для просмотра результатов используйте команду администратора '//send demo'.
+		* Каждый пакет использует 'Delay' {packets#delay} перед посылкой следующего.
+		* Части пакетов могут повторяться много раз, если указать атрибут {part#repeat}
+		* Форма использования атрибутов: <part type="c" value="0x00" repeat="29" />
 	-->
 
-	<!-- Example: send first SM_MESSAGE packet -->
-	<!-- Format: ccdhS -->
+	<!-- 
+	Пример: Используем пакет 'SM_MESSAGE'
+	Формат: ccdhS 
+	-->
 	<packet opcode="0x1B">
-		<part type="c" value="0x19" /><!-- chat type: ANNOUNCEMENTS -->
+		<part type="c" value="0x19" /><!-- Тип сообщения: ANNOUNCEMENTS -->
 		<part type="c" value="0x00" />
-		<part type="d" value="${objectId}" /><!-- write sender objectId -->
+		<part type="d" value="${objectId}" /><!-- Отправитель objectId -->
 		<part type="h" value="0x00" />
 		<part type="s" value="Hello, World!" />
 	</packet>
 
 	<!--
-	Example: send second SM_MESSAGE packet.
-	Packet will be sent after {packets#delay} milliseconds.
+	Пример: Используем пакет 'SM_MESSAGE'
+	Пакет будет отправлен после  {packets#delay} миллисекунд.
 	 -->
 	<packet opcode="0x1B">
 		<part type="c" value="0x19" />
@@ -32,5 +47,4 @@
 		<part type="h" value="0x00" />
 		<part type="s" value="New message!" />
 	</packet>
-
 </packets>

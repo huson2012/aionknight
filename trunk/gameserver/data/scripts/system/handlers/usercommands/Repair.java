@@ -73,5 +73,4 @@ public class Repair extends UserCommand {
         DAOManager.getDAO(PlayerDAO.class).storePlayer(repairPlayer);
         PacketSendUtility.sendMessage(player, "Player " + pcd.getName() + " was repaired");
     }
-
 }

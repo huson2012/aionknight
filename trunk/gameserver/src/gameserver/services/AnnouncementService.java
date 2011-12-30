@@ -33,7 +33,6 @@ import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 import javolution.util.FastSet;
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -41,17 +40,17 @@ import java.util.Set;
 import java.util.concurrent.Future;
 
 /**
- * РЎРёСЃС‚РµРјР° Р°С‚РѕРјР°С‚РёС‡РµСЃРєРёС… Р°РЅРЅРѕРЅСЃРѕРІ
+ * Сервис Анонсов
  */
  public class AnnouncementService
 {
 	/**
-	 * Logger for this class.
+	 * Logger для класса.
 	 */
-	private static final Logger	log		= Logger.getLogger(AnnouncementService.class);
+	private static final Logger	log	= Logger.getLogger(AnnouncementService.class);
 
-	private Collection<Announcement>	announcements;
-	private List<Future<?>>		delays	= new ArrayList<Future<?>>();
+	private Collection<Announcement> announcements;
+	private List<Future<?>>	 delays	= new ArrayList<Future<?>>();
 	
 	private AnnouncementService()
 	{
@@ -64,24 +63,24 @@ import java.util.concurrent.Future;
 	}
 
 	/**
-	 * Reload the announcements system
+	 * Перезагрузите анонс-системы
 	 */
 	public void reload()
 	{
-		// Cancel all tasks
+		// Завершение задачи
 		if (delays != null && delays.size() > 0)
 			for (Future<?> delay : delays)
 				delay.cancel(false);
 		
-		// Clear all announcements
+		// Очистка всех анонсов
 		announcements.clear();
 		
-		// And load again all announcements
+		// Загружаем анонсы снова
 		load();
 	}
 	
 	/**
-	 * Load the announcements system
+	 * Запуск анонс-системы
 	 */
 	private void load()
 	{
@@ -133,11 +132,6 @@ import java.util.concurrent.Future;
 		return getDAO().getAnnouncements();
 	}
 
-	/**
-	 * Retuns {@link loginserver.dao.AnnouncementDAO} , just a shortcut
-	 * 
-	 * @return {@link loginserver.dao.AnnouncementDAO}
-	 */
 	private AnnouncementsDAO getDAO()
 	{
 		return DAOManager.getDAO(AnnouncementsDAO.class);

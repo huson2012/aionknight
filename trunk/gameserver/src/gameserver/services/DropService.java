@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -63,18 +67,18 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class DropService
 {
-	private static final Logger			log					= Logger.getLogger(DropService.class);
+	private static final Logger log = Logger.getLogger(DropService.class);
 
-	private DropList					dropList;
+	private DropList dropList;
 
-	private Map<Integer, Set<DropItem>>	currentDropMap		= new FastMap<Integer, Set<DropItem>>().shared();
-	private Map<Integer, DropNpc>		dropRegistrationMap	= new FastMap<Integer, DropNpc>().shared();
+	private Map<Integer, Set<DropItem>>	currentDropMap = new FastMap<Integer, Set<DropItem>>().shared();
+	private Map<Integer, DropNpc> dropRegistrationMap  = new FastMap<Integer, DropNpc>().shared();
 
 	/**
-	 * Integer is the group/alliance Id
+	 * Integer группы / Id альянса
 	 */
-	private Map<Integer, DropNpc>		specialDropMap		= new FastMap<Integer, DropNpc>().shared();
-	private final ReentrantLock			specialDropLock		= new ReentrantLock();
+	private Map<Integer, DropNpc> specialDropMap = new FastMap<Integer, DropNpc>().shared();
+	private final ReentrantLock specialDropLock  = new ReentrantLock();
 	
 	public static final DropService getInstance()
 	{
@@ -141,7 +145,7 @@ public class DropService
 	}
 
 	/**
-	 * @return the dropList
+	 * @return дроплист
 	 */
 	public DropList getDropList()
 	{
@@ -149,7 +153,7 @@ public class DropService
 	}
 
 	/**
-	 * After NPC dies - it can register arbitrary drop
+	 * После того, как NPC умирает - он может дать произвольный дроп
 	 * 
 	 * @param npc
 	 */
@@ -161,13 +165,13 @@ public class DropService
 	}
 
 	/**
-	 * After NPC dies - it can register arbitrary drop
+	 * После того, как NPC умирает - он может дать произвольный дроп
 	 * 
 	 * @param npc
 	 * @param player
 	 * @param lvl
 	 * @param players
-	 *           List of all the group members in range.
+	 *           Список всех членов группы, в диапазоне.
 	 */
 	public void registerDrop(Npc npc, Player player, int lvl, List<Player> players)
 	{
@@ -190,7 +194,8 @@ public class DropService
 		if(!DropConfig.DISABLE_DROP_REDUCTION && npc.getObjectTemplate().getNpcType() != NpcType.CHEST)
 		{
 			normalDropPercentage = DropRewardEnum.dropRewardFrom(npc.getLevel() - lvl);
-			// craft items will keep dropping if the player is killing low level mobs:
+			
+			// Крафт вещей будет снижаться, если игрок убивает мобов низких уровней:
 			craftItemDropPercentage = 100 - ((100 - normalDropPercentage) / 2);
 		}
 
@@ -223,7 +228,7 @@ public class DropService
 						int maxRepeat = DataManager.QUEST_DATA.getQuestById(questId).getMaxRepeatCount();
 						if (qs == null || qs.getStatus() != QuestStatus.COMPLETE || qs.canRepeat(maxRepeat))
 						{
-							// set drop rates to usual if quest is not complete
+							// Устанавливает рейты дропа на обычные, если квест небыл завершен
 							craftItemDropRate = normalDropRate = playerDropRate;
 							break;
 						}
@@ -279,7 +284,7 @@ public class DropService
 					
 					if (category == ItemCategory.HEART)
 					{
-						// Creatures have only 1 heart ;)
+						// Существо имеет только 1 сердце ;)
 						if (Hearts > 0)
 							continue;
 						Hearts++;
@@ -331,14 +336,14 @@ public class DropService
 		
 		QuestService.getQuestDrop(droppedItems, npc, player);
 		
-		// Now set correct indexes
+		// Устанавливаем правильные индексы
 		int index = 1;
 		for (DropItem drop: droppedItems)
 			drop.setIndex(index++);
 		
 		currentDropMap.put(npcUniqueId, droppedItems);
 
-		// TODO: Player should not be null
+		// TODO: Игрок не должен быть null.
 		if(player != null)
 		{
 			List<Player> dropPlayers = new ArrayList<Player>();
@@ -347,7 +352,8 @@ public class DropService
 			{
 				dropRegistrationMap.put(npcUniqueId, new DropNpc(AllianceService.getInstance().getMembersToRegistrateByRules(player,
 					player.getPlayerAlliance(), npc), npcUniqueId));
-				// Fetch players in range
+				
+				// Fetch игроков в диапазоне
 				DropNpc dropNpc = dropRegistrationMap.get(npcUniqueId);
 				dropNpc.setInRangePlayers(players);
 				dropNpc.setGroupSize(dropNpc.getInRangePlayers().size());
@@ -365,7 +371,8 @@ public class DropService
 			{
 				dropRegistrationMap.put(npcUniqueId, new DropNpc(GroupService.getInstance().getMembersToRegistrateByRules(player,
 					player.getPlayerGroup(), npc), npcUniqueId));
-				//Fetch players in range
+				
+				// Fetch игроков в диапазоне
 				DropNpc dropNpc = dropRegistrationMap.get(npcUniqueId);
 				dropNpc.setInRangePlayers(players);
 				dropNpc.setGroupSize(dropNpc.getInRangePlayers().size());
@@ -408,7 +415,7 @@ public class DropService
 	}
 
 	/**
-	 * When player clicks on dead NPC to request drop list
+	 * Когда игрок нажимает на мертвых NPC просить выпадающего списка
 	 * 
 	 * @param player
 	 * @param npcId
@@ -449,7 +456,7 @@ public class DropService
 	}
 
 	/**
-	 * This method will change looted corpse to not in use
+	 * Этот метод будет изменить разграбили трупом, чтобы не использовать в
 	 * @param player
 	 * @param npcId
 	 * @param close
@@ -486,27 +493,27 @@ public class DropService
 	}
 
 	/**
-	 * Request an item from a killed mob.
+	 * Запрос дропа из убитого моба.
 	 * 
 	 * @param player
-	 *           The player that loots the mob.
+	 *           Игрок, собирает дроп.
 	 * @param npcId
-	 *           The mob that gets looted.
+	 *           Убитый им моб.
 	 * @param itemIndex
-	 *           The index of the looted item.
+	 *           Индекс выпавших итемов.
 	 */
 	public void requestDropItem(final Player player, int npcId, int itemIndex)
 	{
 		final Set<DropItem> dropItems = currentDropMap.get(npcId);
 		final DropNpc dropNpc = dropRegistrationMap.get(npcId);
 
-		// drop was unregistered
+		// Дроп не был зарегистрирован
 		if(dropItems == null || dropNpc == null)
 		{
 			return;
 		}
 
-		// TODO prevent possible exploits
+		// TODO предотвращения возможных эксплойтов
 
 		DropItem requestedItem = null;
 
@@ -546,7 +553,7 @@ public class DropService
 				@Override
 				public void denyRequest(Creature requester, Player responder)
 				{
-					// do nothing
+					// пусто
 				}
 			};
 			SM_QUESTION_WINDOW question = new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_CONFIRM_LOOT, 0,
@@ -640,8 +647,6 @@ public class DropService
 				}
 			}
 
-			//If looting player not in Group/Alliance or distribution is set to NORMAL
-			//or all party members have passed, making item FFA....
 			if((!player.isInGroup() && !player.isInAlliance()) || requestedItem.getDistributionType() == 0
 				|| requestedItem.isFreeForAll()
 				|| (requestedItem.isItemWonNotCollected() && player == requestedItem.getWinningPlayer()))
@@ -657,11 +662,11 @@ public class DropService
 			}
 			else
 			{
-				// If player didn't got all item stack
+				// Если игрок не получил все, элемент стека
 				requestedItem.setCount(currentDropItemCount);
 			}
 
-			// show updated drop list
+			// Обновление списка дропа
 			resendDropList(dropNpc.getBeingLooted(), dropNpc.getNpcId(), dropItems);
 		}
 	}

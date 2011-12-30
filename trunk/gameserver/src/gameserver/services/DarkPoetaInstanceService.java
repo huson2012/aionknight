@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -51,7 +55,9 @@ public class DarkPoetaInstanceService
 			return;
 		}
 
-		// extra boss spawn after killing final boss
+		/** 
+		 * Спавн дополнительного Босса после убийства первого
+		 */
 		if(monster.getObjectTemplate().getTemplateId() == 214904)
 		{
 			group.setInstanceDisplaycounter(false);
@@ -60,7 +66,7 @@ public class DarkPoetaInstanceService
 
 			SpawnTemplate spawn;
 
-			if(timeRemain > 7200000 && totalPoints >= 19643)// S Grade
+			if(timeRemain > 7200000 && totalPoints >= 19643)// S грейд
 			{
 				for(Player member : group.getMembers())
 				{
@@ -71,7 +77,7 @@ public class DarkPoetaInstanceService
 					215280, 1176f, 1227f, 145f, (byte) 14, 0, 0, true);
 				SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
 			}
-			else if(timeRemain > 5400000 && totalPoints >= 17046)// A Grade
+			else if(timeRemain > 5400000 && totalPoints >= 17046)// A грейд
 			{
 				for(Player member : group.getMembers())
 				{
@@ -82,7 +88,7 @@ public class DarkPoetaInstanceService
 					215281, 1176f, 1227f, 145f, (byte) 14, 0, 0, true);
 				SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
 			}
-			else if(timeRemain > 3600000 && totalPoints > 13055)// B Grade
+			else if(timeRemain > 3600000 && totalPoints > 13055)// B грейд
 			{
 				for(Player member : group.getMembers())
 				{
@@ -93,7 +99,7 @@ public class DarkPoetaInstanceService
 					215282, 1176f, 1227f, 145f, (byte) 14, 0, 0, true);
 				SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
 			}
-			else if(timeRemain > 1800000 && totalPoints > 9334)// C Grade
+			else if(timeRemain > 1800000 && totalPoints > 9334)// C грейд
 			{
 				for(Player member : group.getMembers())
 				{
@@ -104,7 +110,7 @@ public class DarkPoetaInstanceService
 					215283, 1176f, 1227f, 145f, (byte) 14, 0, 0, true);
 				SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
 			}
-			else if(timeRemain > 1)// grade D
+			else if(timeRemain > 1)// грейд D
 			{
 				for(Player member : group.getMembers())
 				{
@@ -159,22 +165,25 @@ public class DarkPoetaInstanceService
 				break;
 
 			default:
+			/**
+			 * Опредиление типа и расы мобов
+			 */
 				if(monster.getObjectTemplate().getRace() != null)
 				{
 					switch(monster.getObjectTemplate().getRace().getRaceId())
 					{
-						case 22: // UNDEAD
+						case 22: // НЕЖИТЬ
 							pointsReward = 12;
 							break;
-						case 9: // BROWNIE
+						case 9: // БРАУНИ
 							pointsReward = 18;
 							break;
-						case 6: // LIZARDMAN
+						case 6: // ЯЩЕР
 							pointsReward = 24;
 							break;
-						case 8: // NAGA
-						case 18: // DRAGON
-						case 24: // MAGICALMONSTER
+						case 8:  // НАГА
+						case 18: // ДРАКОН
+						case 24: // МАГИЧЕСКИЙ МОНСТР
 							pointsReward = 30;
 							break;
 						default:

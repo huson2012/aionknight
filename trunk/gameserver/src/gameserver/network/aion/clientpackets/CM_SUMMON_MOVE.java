@@ -1,19 +1,24 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+/**   
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.network.aion.clientpackets;
 
 import gameserver.controllers.movement.MovementType;
@@ -25,22 +30,13 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.world.World;
 import org.apache.log4j.Logger;
 
-
-/**
-
- * 
- */
 public class CM_SUMMON_MOVE extends AionClientPacket
 {
 	private static final Logger	log	= Logger.getLogger(CM_SUMMON_MOVE.class);
-
-	private MovementType		type;
-
-	private byte				heading;
-
-	private byte				movementType;
-
-	private float				x, y, z, x2, y2, z2;
+	private MovementType type;
+	private byte heading;
+	private byte movementType;
+	private float x, y, z, x2, y2, z2;
 
 	/**
 	 * Constructs new instance of <tt>CM_MOVE </tt> packet
@@ -111,17 +107,17 @@ public class CM_SUMMON_MOVE extends AionClientPacket
 			case MOVEMENT_START_KEYBOARD:
 				World.getInstance().updatePosition(summon, x, y, z, heading);
 				PacketSendUtility.broadcastPacket(summon, new SM_MOVE(summon.getObjectId(), x, y, z, x2, y2, z2, heading, type));
-				break;
+			break;
 			case VALIDATE_MOUSE:
 			case VALIDATE_KEYBOARD:
 				PacketSendUtility.broadcastPacket(summon, new SM_MOVE(summon.getObjectId(), x, y, z, x2, y2, z2, heading,
 					(type == MovementType.VALIDATE_MOUSE) ? MovementType.MOVEMENT_START_MOUSE
 						: MovementType.MOVEMENT_START_KEYBOARD));
-				break;
+			break;
 			case MOVEMENT_STOP:
 				PacketSendUtility.broadcastPacket(summon, new SM_MOVE(summon.getObjectId(), x, y, z, heading, type));
 				World.getInstance().updatePosition(summon, x, y, z, heading);
-				break;
+			break;
 			case UNKNOWN:
 				StringBuilder sb = new StringBuilder();
 				sb.append("Unknown movement type: ").append(movementType);
@@ -130,9 +126,9 @@ public class CM_SUMMON_MOVE extends AionClientPacket
 				sb.append(" Z=").append(z);
 				sb.append(" player=").append(player.getName());
 				log.warn(sb.toString());
-				break;
+			break;
 			default:
-				break;
+			break;
 		}
 	}
 }

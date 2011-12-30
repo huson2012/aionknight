@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -59,14 +63,14 @@ public class BeshmundirInstanceService
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799518, 933f, 444f, 220f, (byte)25, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        else if(monster.getObjectTemplate().getTemplateId() == 216588)// island 2
+        else if(monster.getObjectTemplate().getTemplateId() == 216588) // Второй остров
         {
             SpawnTemplate spawn;
             
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799519, 788f, 442f, 220f, (byte)25, 0, 0, true);
             SpawnEngine.getInstance().spawnObject(spawn, group.getGroupLeader().getInstanceId());
         }
-        else if(monster.getObjectTemplate().getTemplateId() == 216589)// island 3spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 799520, 817f, 276f, 220f, (byte)25, 0, 0, true);
+        else if(monster.getObjectTemplate().getTemplateId() == 216589) // Третий остров
         {
             SpawnTemplate spawn;
             
@@ -94,7 +98,7 @@ public class BeshmundirInstanceService
             SpawnEngine.getInstance().spawnObject(Thurzon, group.getGroupLeader().getInstanceId());
         }
         
-        if(monster.getObjectTemplate().getTemplateId() == 216170)//Gatekeeper Darfall
+        if(monster.getObjectTemplate().getTemplateId() == 216170) // Привратник Darfall
         {
             SpawnTemplate spawn;
             spawn = SpawnEngine.getInstance().addNewSpawn(300170000, group.getGroupLeader().getInstanceId(), 216175, 1434.53f, 1584.14f, 305.825f, (byte)98, 0, 0, true);

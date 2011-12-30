@@ -32,9 +32,14 @@ import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 import gameserver.world.World;
 
-public class AddCredits extends AdminCommand {
+/**
+ * Команда на выдачу игроку валюты для оплаты товаров в 'ingameShop'
+ */
 
-    public AddCredits() {
+public class AddCredits extends AdminCommand 
+{
+    public AddCredits() 
+	{
         super("addcredits");
     }
     

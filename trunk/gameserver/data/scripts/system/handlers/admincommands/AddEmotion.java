@@ -30,9 +30,12 @@ import gameserver.utils.chathandlers.AdminCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 
+/**
+ * Команда для добавления дополнительных игровых эмоций игроку.
+ */
+
 public class AddEmotion extends AdminCommand
 {
-
 	public AddEmotion()
 	{
 		super("addemotion");

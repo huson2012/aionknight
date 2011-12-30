@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -24,7 +28,6 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import gameserver.world.World;
 import org.apache.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,8 +37,9 @@ public class ChatService
 	private static Map<Integer, Player>	players	= new HashMap<Integer, Player>();
 	private static byte[] ip = { 127, 0, 0, 1 };
 	private static int port	= 10241;
+	
 	/**
-	 * Send token to chat server
+	 * Послаем специальный маркер на чат-сервер
 	 * 
 	 * @param player
 	 */
@@ -59,7 +63,7 @@ public class ChatService
 
 	}
 	/**
-	 * Disonnect from chat server
+	 * Отключение от чат-сервера
 	 * 
 	 * @param player
 	 */
@@ -91,28 +95,28 @@ public class ChatService
 		}
 	}
 	/**
-	 * @return the ip
+	 * @return IP-Адрес
 	 */
 	public static byte[] getIp()
 	{
 		return ip;
 	}
 	/**
-	 * @return the port
+	 * @return Порт
 	 */
 	public static int getPort()
 	{
 		return port;
 	}
 	/**
-	 * @param ip the ip to set
+	 * @param ip-ip для соединения
 	 */
 	public static void setIp(byte[] _ip)
 	{
 		ip = _ip;
 	}
 	/**
-	 * @param port the port to set
+	 * @param порт-порт для соединения
 	 */
 	public static void setPort(int _port)
 	{

@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+ * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
+ * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
+ * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
+ * более поздней версии.
  *
- * This is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this software.If not, see <http://www.gnu.org/licenses/>.
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package quest.esoterrace;
@@ -23,21 +27,25 @@ import gameserver.quest.model.QuestCookie;
 import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 
-public class _18405MemoriesintheCornerofHisMind extends QuestHandler {
+public class _18405MemoriesintheCornerofHisMind extends QuestHandler 
+{
     private final static int questId = 18405;
 
-    public _18405MemoriesintheCornerofHisMind() {
+    public _18405MemoriesintheCornerofHisMind() 
+	{
         super(questId);
     }
 
     @Override
-    public void register() {
+    public void register() 
+	{
         qe.setNpcQuestData(799553).addOnTalkEvent(questId);
 		qe.setNpcQuestData(799552).addOnTalkEvent(questId);
     }
 
     @Override
-    public boolean onDialogEvent(QuestCookie env) {
+    public boolean onDialogEvent(QuestCookie env) 
+	{
         Player player = env.getPlayer();
 
         if (env.getTargetId() == 0)
@@ -49,9 +57,12 @@ public class _18405MemoriesintheCornerofHisMind extends QuestHandler {
 
         int var = qs.getQuestVarById(0);
 
-        if (qs.getStatus() == QuestStatus.START) {
-            if (env.getTargetId() == 799553) {
-                switch (env.getDialogId()) {
+        if (qs.getStatus() == QuestStatus.START) 
+		{
+            if (env.getTargetId() == 799553) 
+			{
+                switch (env.getDialogId()) 
+				{
                     case 26:
                         if (var == 1)
                     return sendQuestDialog(env, 1011);

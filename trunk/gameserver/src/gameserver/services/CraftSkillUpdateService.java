@@ -1,18 +1,22 @@
 /**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
- *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -31,7 +35,6 @@ import gameserver.quest.model.QuestState;
 import gameserver.quest.model.QuestStatus;
 import gameserver.utils.PacketSendUtility;
 import org.apache.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,25 +53,25 @@ public class CraftSkillUpdateService
 
 	private CraftSkillUpdateService()
 	{
-		// Asmodian
-		npcBySkill.put(204096, new LearnTemplate(30002, false, 29001, 0, 0)); //Extract Vitality
-		npcBySkill.put(204257, new LearnTemplate(30003, false, 29003, 0, 0));	//Extract Aether
-		npcBySkill.put(204100, new LearnTemplate(40001, true, 2934, 4956, 29039));	//Cooking
-		npcBySkill.put(204104, new LearnTemplate(40002, true, 2931, 4947, 29009));	//Weaponsmithing
-		npcBySkill.put(204106, new LearnTemplate(40003, true, 2932, 4950, 29015));	//Armorsmithing
-		npcBySkill.put(204110, new LearnTemplate(40004, true, 2936, 4962, 29021));	//Tailoring
-		npcBySkill.put(204102, new LearnTemplate(40007, true, 2935, 4959, 29033));	//Alchemy
-		npcBySkill.put(204108, new LearnTemplate(40008, true, 2933, 4953, 29027));	//Handicrafting
+		// Асмодиане
+		npcBySkill.put(204096, new LearnTemplate(30002, false, 29001, 0, 0));  		// Экстракт Жизнеспособности
+		npcBySkill.put(204257, new LearnTemplate(30003, false, 29003, 0, 0));		// Экстракт Эфира
+		npcBySkill.put(204100, new LearnTemplate(40001, true, 2934, 4956, 29039));	// Кулинария
+		npcBySkill.put(204104, new LearnTemplate(40002, true, 2931, 4947, 29009));	// Создание оружия
+		npcBySkill.put(204106, new LearnTemplate(40003, true, 2932, 4950, 29015));	// Создание брони
+		npcBySkill.put(204110, new LearnTemplate(40004, true, 2936, 4962, 29021));	// Пошив Одежды
+		npcBySkill.put(204102, new LearnTemplate(40007, true, 2935, 4959, 29033));	// Алхимия
+		npcBySkill.put(204108, new LearnTemplate(40008, true, 2933, 4953, 29027));	// Handicrafting (?)
 
-		// Elyos
-		npcBySkill.put(203780, new LearnTemplate(30002, false, 19001, 0, 0));	//Extract Vitality
-		npcBySkill.put(203782, new LearnTemplate(30003, false, 19003, 0, 0));	//Extract Aether
-		npcBySkill.put(203784, new LearnTemplate(40001, true, 1944, 3952, 19039));	//Cooking
-		npcBySkill.put(203788, new LearnTemplate(40002, true, 1941, 3943, 19009));	//Weaponsmithing
-		npcBySkill.put(203790, new LearnTemplate(40003, true, 1942, 3946, 19015));	//Armorsmithing
-		npcBySkill.put(203793, new LearnTemplate(40004, true, 1946, 3958, 19021));	//Tailoring
-		npcBySkill.put(203786, new LearnTemplate(40007, true, 1945, 3955, 19033));	//Alchemy
-		npcBySkill.put(203792, new LearnTemplate(40008, true, 1943, 3949, 19027));	//Handicrafting
+		// Элийцы
+		npcBySkill.put(203780, new LearnTemplate(30002, false, 19001, 0, 0));		// Экстракт Жизнеспособности
+		npcBySkill.put(203782, new LearnTemplate(30003, false, 19003, 0, 0));		// Экстракт Эфира
+		npcBySkill.put(203784, new LearnTemplate(40001, true, 1944, 3952, 19039));	// Кулинария
+		npcBySkill.put(203788, new LearnTemplate(40002, true, 1941, 3943, 19009));	// Создание оружия
+		npcBySkill.put(203790, new LearnTemplate(40003, true, 1942, 3946, 19015));	// Создание брони
+		npcBySkill.put(203793, new LearnTemplate(40004, true, 1946, 3958, 19021));	// Пошив Одежды
+		npcBySkill.put(203786, new LearnTemplate(40007, true, 1945, 3955, 19033));	// Алхимия
+		npcBySkill.put(203792, new LearnTemplate(40008, true, 1943, 3949, 19027));	// Handicrafting (?)
 
 		cost.put(0, 3500);
 		cost.put(99, 17000);
@@ -115,7 +118,7 @@ public class CraftSkillUpdateService
 		}
 
 		/**
-		 * @return the expert quest Id
+		 * @return эксперт квест Id
 		 */
 		public int getExpertQuestId()
 		{
@@ -123,7 +126,7 @@ public class CraftSkillUpdateService
 		}
 
 		/**
-		 * @return the top expert quest Id
+		 * @return топ эксперт квест Id
 		 */
 		public int getTopExpertQuestId()
 		{
@@ -131,7 +134,7 @@ public class CraftSkillUpdateService
 		}
 
 		/**
-		 * @return the master quest Id
+		 * @return мастер квест Id
 		 */
 		public int getMasterQuestId()
 		{

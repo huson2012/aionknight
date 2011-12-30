@@ -1,3 +1,24 @@
+/**
+ * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+ * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+ * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+ * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+ * версии.
+ * 
+ * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+ * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+ * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+ * Стандартную Общественную Лицензию GNU.
+ * 
+ * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+ * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Cambridge, MA 02139, USA
+ * 
+ * Веб-cайт разработчиков : http://aion-knight.ru
+ * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+ * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ */
+
 package gameserver.services;
 
 import gameserver.model.gameobjects.player.Player;
@@ -10,24 +31,19 @@ import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.world.World;
 
 import java.util.List;
-
 import commons.utils.Rnd;
 
-/**
- * @author kosyachok
- *
- */
 public class CrucibleChallengeService
 {
-	private SpawnLocation[] spawnCoords = { new SpawnLocation(330f, 360f, 1651f, 1676f, 95.5f),//1 stage
-			new SpawnLocation(1769f, 1797f, 780f, 811f, 469.5f),//2 stage
-			new SpawnLocation(1286f, 1332f, 1708f, 1753f, 316f),//3 stage
+	private SpawnLocation[] spawnCoords = { new SpawnLocation(330f, 360f, 1651f, 1676f, 95.5f), // 1 Раунд
+			new SpawnLocation(1769f, 1797f, 780f, 811f, 469.5f), // 2 Раунд
+			new SpawnLocation(1286f, 1332f, 1708f, 1753f, 316f), // 3 Раунд
 
 	};
 
-	private SpawnLocation[] readyRooms = { new SpawnLocation(379f, 380f, 349f, 351f, 96.8f),//1 arena
-			new SpawnLocation(1259f, 1261f, 827f, 829f, 358.6f),//2,3 arena
-			new SpawnLocation(1815f, 1817f, 795f, 797f, 470.0f),//4 arena
+	private SpawnLocation[] readyRooms = { new SpawnLocation(379f, 380f, 349f, 351f, 96.8f), // 1 Арена
+			new SpawnLocation(1259f, 1261f, 827f, 829f, 358.6f), // 2, 3 Арена
+			new SpawnLocation(1815f, 1817f, 795f, 797f, 470.0f), // 4 Арена
 	};
 
 	public SpawnLocation getSpawnLocation(int stage)

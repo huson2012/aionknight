@@ -63,7 +63,7 @@ public class ChatServer
 		for(;;)
 		{
 			chatServer = null;
-			log.info("Connecting to ChatServer: " + NetworkConfig.CHAT_ADDRESS);
+			log.info("Connecting to CS: " + NetworkConfig.CHAT_ADDRESS);
 			try
 			{
 				sc = SocketChannel.open(NetworkConfig.CHAT_ADDRESS);
