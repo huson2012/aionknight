@@ -26,8 +26,17 @@ import gameserver.dataholders.DataManager;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
-import gameserver.utils.PacketSendUtility;
+import gameserver.model.templates.spawn.SpawnTemplate;
 import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.utils.PacketSendUtility;
+import gameserver.dao.SpawnDAO;
+
+import commons.database.dao.DAOManager;
+
+/**
+ * @author Luno
+ * 
+ */
 
 public class DeleteSpawn extends AdminCommand
 {
@@ -49,12 +58,19 @@ public class DeleteSpawn extends AdminCommand
 		VisibleObject cre = admin.getTarget();
 		if (!(cre instanceof Npc))
 		{
-			PacketSendUtility.sendMessage(admin, "Wrong target");
+			PacketSendUtility.sendMessage(admin, "Не был взят тагрет спавна.");
 			return;
 		}
+		
 		Npc npc = (Npc) cre;
-		DataManager.SPAWNS_DATA.removeSpawn(npc.getSpawn());
-		npc.getController().delete();
-		PacketSendUtility.sendMessage(admin, "Spawn removed");
+        SpawnTemplate template = npc.getSpawn();
+        int spawnId = DAOManager.getDAO(SpawnDAO.class).isInDB(template.getSpawnGroup().getNpcid(), template.getX(), template.getY());
+        DAOManager.getDAO(SpawnDAO.class).deleteSpawn(spawnId);
+		
+        DataManager.SPAWNS_DATA.removeSpawn(npc.getSpawn());
+        npc.getController().delete();
+        PacketSendUtility.sendMessage(admin, "Спавн был удален!");
+		
+
 	}
 }

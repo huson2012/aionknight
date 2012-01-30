@@ -1,19 +1,24 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.skill.model;
 
 import commons.utils.Rnd;
@@ -30,19 +35,12 @@ import gameserver.utils.PacketSendUtility;
 import gameserver.utils.ThreadPoolManager;
 import javolution.util.FastMap;
 import org.apache.log4j.Logger;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
-
-/**
-
- * @edit kecimis
- *
- */
 public class Effect
 {
 	private SkillTemplate skillTemplate;
@@ -639,14 +637,14 @@ public class Effect
 		{
 			if (getSkillType() == SkillType.PHYSICAL)
 			{
-				if (getAttackStatus() == AttackStatus.CRITICAL)	
+				if (attackStatus == AttackStatus.CRITICAL)
 					setAttackStatus(AttackStatus.CRITICAL_DODGE);
 				else
 					setAttackStatus(AttackStatus.DODGE);
 			}
 			else
 			{
-				if (getAttackStatus() == AttackStatus.CRITICAL)	
+				if (attackStatus == AttackStatus.CRITICAL)
 					setAttackStatus(AttackStatus.CRITICAL_RESIST);
 				else
 					setAttackStatus(AttackStatus.RESIST);
@@ -656,7 +654,7 @@ public class Effect
 		}
 		
 		//set spellstatus for sm_castspell_end packet
-		switch(getAttackStatus())
+		switch(attackStatus)
 		{
 			case DODGE:
 			case CRITICAL_DODGE:
@@ -664,12 +662,12 @@ public class Effect
 				break;
 			case PARRY:
 			case CRITICAL_PARRY:
-				if (getSpellStatus() == SpellStatus.NONE)
+				if (spellStatus == SpellStatus.NONE)
 					setSpellStatus(SpellStatus.PARRY);
 				break;
 			case BLOCK:
 			case CRITICAL_BLOCK:
-				if (getSpellStatus() == SpellStatus.NONE)
+				if (spellStatus == SpellStatus.NONE)
 					setSpellStatus(SpellStatus.BLOCK);
 				break;
 			case RESIST:
@@ -691,7 +689,7 @@ public class Effect
 		{
 			for(EffectTemplate template : sucessEffects.values())
 			{
-				if (getEffected() != null && getEffected().getLifeStats().isAlreadyDead() && !skillTemplate.hasResurrectEffect())
+				if (effected != null && effected.getLifeStats().isAlreadyDead() && !skillTemplate.hasResurrectEffect())
 					continue;
 				template.applyEffect(this);
 				template.startSubEffect(this);
@@ -703,8 +701,8 @@ public class Effect
 		 */
 		if(effectHate != 0)
 		{
-			if (getEffected() != null && effector.isEnemy(getEffected()) && !this.isDelayDamage())
-				getEffected().getAggroList().addHate(effector, 1);
+			if (effected != null && effector.isEnemy(effected) && !this.isDelayDamage)
+                effected.getAggroList().addHate(effector, 1);
 			effector.getController().broadcastHate(effectHate);
 		}
 	}
@@ -945,11 +943,9 @@ public class Effect
 
 	public boolean isInSuccessEffects(int position)
 	{
-		if (sucessEffects.get(position) != null)
-			return true;
-		
-		return false;
-	}
+        return sucessEffects.get(position) != null;
+
+    }
 	/**
 	 * @return
 	 */

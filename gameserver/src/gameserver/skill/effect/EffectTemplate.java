@@ -70,8 +70,8 @@ public abstract class EffectTemplate
 	@XmlAttribute(name = "preeffects_mask")
 	protected int preeffectsMask;
 	@XmlAttribute(name = "preeffect_prob")
-	protected float preeffectProb = 1.0f;;
-	@XmlAttribute(name = "critical_prob")
+	protected float preeffectProb = 1.0f;
+    @XmlAttribute(name = "critical_prob")
 	protected float criticalProb = 1.0f;
 	@XmlAttribute(name = "acc_mod")
 	protected int accMod;
@@ -247,10 +247,10 @@ public abstract class EffectTemplate
 	 * 
 	 * @param effect
 	 */
-	public void startEffect(Effect effect){};
-	
-	
-	/**
+	public void startEffect(Effect effect){}
+
+
+    /**
 	 * method calculate common for all effecttemplates
 	 * excluded effecttemplates or with exception
 	 * summoneffects
@@ -283,7 +283,7 @@ public abstract class EffectTemplate
 		}
 
 		//check for given condition effect
-		if (this.getCondEffect() != null && !checkCondEffect(effect))
+		if (this.condEffect != null && !checkCondEffect(effect))
 			return;//do not apply effecttemplate if target is not in abnormalstate
 		
 		SkillType skillType = effect.getSkillType();
@@ -293,9 +293,9 @@ public abstract class EffectTemplate
 			skillType = SkillType.MAGICAL;
 		
 		//check dodge/resist
-		if (!isNoresist())
+		if (!noresist)
 		{
-			int accMod = getAccMod();
+			int accMod = this.accMod;
 			if (this instanceof SignetBurstEffect)
 				accMod += effect.getAccModBoost();
 			
@@ -321,13 +321,13 @@ public abstract class EffectTemplate
 		}
 
 		//switch according to effecttemplate position
-		switch(getPosition())
+		switch(position)
 		{
 			case 1:
 			break;
 			default:
 				//check preeffects
-				FastList<Integer> positions = PreeffectsMasks.getPositions(this.getPreeffectsMask());
+				FastList<Integer> positions = PreeffectsMasks.getPositions(this.preeffectsMask);
 				if (positions != null)
 				{
 					for(int pos : positions)
@@ -338,7 +338,7 @@ public abstract class EffectTemplate
 				}
 				
 				//check preeffect probability
-				if (Rnd.get(0, 100) > this.getPreeffectProb() * 100)
+				if (Rnd.get(0, 100) > this.preeffectProb * 100)
 					return;
 			break;	
 		}
@@ -356,19 +356,19 @@ public abstract class EffectTemplate
 	
 	private boolean checkCondEffect(Effect effect)
 	{
-		if (this.getCondEffect().contains("NON_FLYING"))
+		if (this.condEffect.contains("NON_FLYING"))
 		{
 			if (effect.getEffected() instanceof Player)
 				return ((Player)effect.getEffected()).getFlyState() == 0;
 		}
-		else if (this.getCondEffect().contains("FLYING"))
+		else if (this.condEffect.contains("FLYING"))
 		{
 			if (effect.getEffected() instanceof Player)
 				return ((Player)effect.getEffected()).getFlyState() == 1;
 		}
 		else
 		{
-			EffectId effectId = EffectId.valueOf(this.getCondEffect());
+			EffectId effectId = EffectId.valueOf(this.condEffect);
 			if (effect.getEffected().getEffectController().isAbnormalSet(effectId))
 				return true;
 		}
@@ -384,23 +384,20 @@ public abstract class EffectTemplate
 	 */
 	private boolean isMagicalEffectTemp()
 	{
-		if (this instanceof SilenceEffect ||
-			this instanceof SleepEffect ||
-			this instanceof RootEffect ||
-			this instanceof SnareEffect ||
-			this instanceof StunEffect ||
-			this instanceof PoisonEffect ||
-			this instanceof BindEffect ||
-			this instanceof BleedEffect ||
-			this instanceof BlindEffect ||
-			this instanceof DeboostHealEffect ||
-			this instanceof ParalyzeEffect ||
-			this instanceof SlowEffect
-			)
-			return true;
-		
-		return false;
-	}
+        return this instanceof SilenceEffect ||
+                this instanceof SleepEffect ||
+                this instanceof RootEffect ||
+                this instanceof SnareEffect ||
+                this instanceof StunEffect ||
+                this instanceof PoisonEffect ||
+                this instanceof BindEffect ||
+                this instanceof BleedEffect ||
+                this instanceof BlindEffect ||
+                this instanceof DeboostHealEffect ||
+                this instanceof ParalyzeEffect ||
+                this instanceof SlowEffect;
+
+    }
 	
 	
 	
@@ -471,15 +468,16 @@ public abstract class EffectTemplate
 	 * 
 	 * @param effect
 	 */
-	public void onPeriodicAction(Effect effect){};
-	/**
+	public void onPeriodicAction(Effect effect){}
+
+    /**
 	 * End effect on effected
 	 * 
 	 * @param effect
 	 */
-	public void endEffect(Effect effect){};
-		
-	public boolean calculateEffectResistRate(Effect effect, StatEnum statEnum ) 
+	public void endEffect(Effect effect){}
+
+    public boolean calculateEffectResistRate(Effect effect, StatEnum statEnum )
  	{
 		int effectPower = 1000;
 
@@ -611,9 +609,7 @@ public abstract class EffectTemplate
 		if(effect.getEffected().getGameStats().getCurrentStat(StatEnum.MAGICAL_DEFEND) >= 99999)
 			return false;
 		//full resist for overpowered mobs
-		if(effect.getEffected().getGameStats().getCurrentStat(StatEnum.PHYSICAL_DEFENSE) >= 99999)
-			return false;
+         return effect.getEffected().getGameStats().getCurrentStat(StatEnum.PHYSICAL_DEFENSE) < 99999;
 
- 		return true;
-	} 
+     }
 }

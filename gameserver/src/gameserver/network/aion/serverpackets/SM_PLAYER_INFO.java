@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.network.aion.serverpackets;
@@ -35,12 +35,11 @@ import java.util.List;
 
 public class SM_PLAYER_INFO extends AionServerPacket
 {
-
 	/**
 	 * Visible player
 	 */
-	private final Player	player;
-	private boolean			enemy;
+	private final Player player;
+	private boolean	enemy;
 
 	/**
 	 * Constructs new <tt>SM_PLAYER_INFO </tt> packet
@@ -91,18 +90,21 @@ public class SM_PLAYER_INFO extends AionServerPacket
 		writeC(buf, 0x00);
 		writeC(buf, 0x00);
 		writeC(buf, 0x00);
-		
 		writeC(buf, enemy ? 0x00 : 38); // (2.5) Old 0x26... o.o
-
 		writeC(buf, raceId); // race
 		writeC(buf, pcd.getPlayerClass().getClassId());
 		writeC(buf, genderId); // sex
 		writeH(buf, player.getState());
 
-		byte[] unk = new byte[] { (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00,
-			(byte) 0x00, (byte) 0x00 };
-		writeB(buf, unk);
+		byte[] unk = new byte[] 
+		{ 
+			(byte) 0x00, (byte) 0x00, 
+			(byte) 0x00, (byte) 0x00, 
+			(byte) 0x00, (byte) 0x00,
+			(byte) 0x00, (byte) 0x00 
+		};
 
+		writeB(buf, unk);
 		writeC(buf, player.getHeading());
 
 		String playerName = "";
@@ -113,10 +115,12 @@ public class SM_PLAYER_INFO extends AionServerPacket
 			{
 				playerName += CustomConfig.GM_LEVEL1.trim();
 			}
+			
 			else if (player.getAccessLevel() == 2 )
 			{
 				playerName += CustomConfig.GM_LEVEL2.trim();
 			}
+			
 			else if (player.getAccessLevel() == 3 )
 			{
 				playerName += CustomConfig.GM_LEVEL3.trim();
@@ -126,39 +130,40 @@ public class SM_PLAYER_INFO extends AionServerPacket
 		playerName += player.getName();
 		
 		writeS(buf, playerName);
-
 		writeH(buf, pcd.getTitleId());
 		writeH(buf, 0); // (2.5) 0 default, 1 for cute mentor wings around your name <3
 		writeH(buf, player.getCastingSkillId());
-		writeD(buf, player.isLegionMember() ? player
-			.getLegion().getLegionId() : 0);
-		writeC(buf, player.isLegionMember() ? player
-			.getLegion().getLegionEmblem().getEmblemVer() : 0);
+		writeD(buf, player.isLegionMember() ? player.getLegion().getLegionId() : 0);
+		writeC(buf, player.isLegionMember() ? player.getLegion().getLegionEmblem().getEmblemVer() : 0);
+		
 		if (player.isLegionMember())
 		{
 			writeC(buf, player.getLegion().getLegionEmblem().getIsCustom() ? 0x80 : 0x00);
-			writeC(buf, 0xFF); // This is the transparency setting; official is 0xFF for none, but I think changing the cape's color is cool ^^:
-		} else {
+			writeC(buf, 0xFF); 
+
+		} 
+		
+		else 
+		{
 			writeC(buf, 0x00);
 			writeC(buf, 0x00);
 		}
-		writeC(buf, player.isLegionMember() ? player
-			.getLegion().getLegionEmblem().getColor_r() : 0);
-		writeC(buf, player.isLegionMember() ? player
-			.getLegion().getLegionEmblem().getColor_g() : 0);
-		writeC(buf, player.isLegionMember() ? player
-			.getLegion().getLegionEmblem().getColor_b() : 0);
-		writeS(buf, player.isLegionMember() ? player
-			.getLegion().getLegionName() : "");
+		
+		writeC(buf, player.isLegionMember() ? player.getLegion().getLegionEmblem().getColor_r() : 0);
+		writeC(buf, player.isLegionMember() ? player.getLegion().getLegionEmblem().getColor_g() : 0);
+		writeC(buf, player.isLegionMember() ? player.getLegion().getLegionEmblem().getColor_b() : 0);
+		writeS(buf, player.isLegionMember() ? player.getLegion().getLegionName() : "");
 
 		int maxHp = player.getLifeStats().getMaxHp();
 		int currHp = player.getLifeStats().getCurrentHp();
-		writeC(buf, 100 * currHp / maxHp);// %hp
-		writeH(buf, pcd.getDp());// current dp
-		writeC(buf, 0); // (2.5) 0 default. In their fisrt login, newbies have it 2. Can be 1 sometimes in random players. O_o
+		
+		writeC(buf, 100 * currHp / maxHp); // %hp
+		writeH(buf, pcd.getDp()); // current dp
+		writeC(buf, 0); 
 
 		List<Item> items = player.getEquipment().getEquippedItemsWithoutStigma();
 		short mask = 0;
+		
 		for(Item item : items)
 		{
 			mask |= item.getEquipmentSlot();
@@ -174,7 +179,7 @@ public class SM_PLAYER_INFO extends AionServerPacket
 				GodStone godStone = item.getGodStone();
 				writeD(buf, godStone != null ? godStone.getItemId() : 0); 
 				writeD(buf, item.getItemColor());
-				writeH(buf, 0x00);// unk (0x00)
+				writeH(buf, 0x00); // Unk (0x00)
 			}
 		}
 
@@ -182,88 +187,65 @@ public class SM_PLAYER_INFO extends AionServerPacket
 		writeD(buf, playerAppearance.getHairRGB());
 		writeD(buf, playerAppearance.getEyeRGB());
 		writeD(buf, playerAppearance.getLipRGB());
-
 		writeC(buf, playerAppearance.getFace());
 		writeC(buf, playerAppearance.getHair());
 		writeC(buf, playerAppearance.getDecoration());
-		writeC(buf, playerAppearance.getTattoo());
-		
+		writeC(buf, playerAppearance.getTattoo());		
 		writeC(buf, playerAppearance.getFaceContour());
 		writeC(buf, playerAppearance.getExpression());
-
-		writeC(buf, 6);// always 6 - 2.5.x
-
+		writeC(buf, 6); // Always 6 - 2.5.x
 		writeC(buf, playerAppearance.getJawLine());
 		writeC(buf, playerAppearance.getForehead());
-
 		writeC(buf, playerAppearance.getEyeHeight());
 		writeC(buf, playerAppearance.getEyeSpace());
 		writeC(buf, playerAppearance.getEyeWidth());
 		writeC(buf, playerAppearance.getEyeSize());
 		writeC(buf, playerAppearance.getEyeShape());
 		writeC(buf, playerAppearance.getEyeAngle());
-
 		writeC(buf, playerAppearance.getBrowHeight());
 		writeC(buf, playerAppearance.getBrowAngle());
 		writeC(buf, playerAppearance.getBrowShape());
-
 		writeC(buf, playerAppearance.getNose());
 		writeC(buf, playerAppearance.getNoseBridge());
 		writeC(buf, playerAppearance.getNoseWidth());
 		writeC(buf, playerAppearance.getNoseTip());
-
 		writeC(buf, playerAppearance.getCheeks());
 		writeC(buf, playerAppearance.getLipHeight());
 		writeC(buf, playerAppearance.getMouthSize());
 		writeC(buf, playerAppearance.getLipSize());
 		writeC(buf, playerAppearance.getSmile());
 		writeC(buf, playerAppearance.getLipShape());
-
 		writeC(buf, playerAppearance.getChinHeight());
 		writeC(buf, playerAppearance.getCheekBones());
-
 		writeC(buf, playerAppearance.getEarShape());
 		writeC(buf, playerAppearance.getHeadSize());
-
 		writeC(buf, playerAppearance.getNeck());
 		writeC(buf, playerAppearance.getNeckLength());
 		writeC(buf, playerAppearance.getShoulderSize());
-
 		writeC(buf, playerAppearance.getTorso());
 		writeC(buf, playerAppearance.getChest());
 		writeC(buf, playerAppearance.getWaist());
 		writeC(buf, playerAppearance.getHips());
-
 		writeC(buf, playerAppearance.getArmThickness());
-		writeC(buf, playerAppearance.getHandSize());
-		
+		writeC(buf, playerAppearance.getHandSize());		
 		writeC(buf, playerAppearance.getLegThickness());
-		writeC(buf, playerAppearance.getFootSize());
-		
+		writeC(buf, playerAppearance.getFootSize());	
 		writeC(buf, playerAppearance.getFacialRatio());
-		writeC(buf, 0x00); // 0x00
-		
+		writeC(buf, 0x00); // 0x00		
 		writeC(buf, playerAppearance.getArmLength());
-		writeC(buf, playerAppearance.getLegLength());
-		
+		writeC(buf, playerAppearance.getLegLength());		
 		writeC(buf, playerAppearance.getShoulders());
-		writeC(buf, playerAppearance.getFaceShape());
-		
-		writeC(buf, 0x00); // always 0 may be acessLevel
-		
+		writeC(buf, playerAppearance.getFaceShape());		
+		writeC(buf, 0x00); // Always 0 may be acessLevel		
 		writeC(buf, playerAppearance.getVoice());
-
 		writeF(buf, playerAppearance.getHeight());
-
-		writeF(buf, 0.25f); // scale
-		writeF(buf, 2.0f); // gravity or slide surface o_O
-		writeF(buf, player.getGameStats().getCurrentStat(StatEnum.SPEED) / 1000f); // move speed
-
+		writeF(buf, 0.25f); // Scale
+		writeF(buf, 2.0f); // Gravity or slide surface o_O
+		writeF(buf, player.getGameStats().getCurrentStat(StatEnum.SPEED) / 1000f); // Move speed
 		writeH(buf, player.getGameStats().getBaseStat(StatEnum.ATTACK_SPEED));
 		writeH(buf, player.getGameStats().getCurrentStat(StatEnum.ATTACK_SPEED));
 		writeC(buf, 4);
-
-		writeS(buf, player.hasStore() ? player.getStore().getStoreMessage() : "");// private store message
+		writeS(buf, player.hasStore() ? player.getStore().getStoreMessage() : ""); // Private store message
 
 		/**
 		 * Movement
@@ -285,7 +267,6 @@ public class SM_PLAYER_INFO extends AionServerPacket
 
 		writeC(buf, player.getVisualState()); // visualState
 		writeS(buf, player.getCommonData().getNote()); // note show in right down windows if your target on player
-		
 		writeH(buf, player.getLevel()); // [level]
 		writeH(buf, player.getPlayerSettings().getDisplay()); // display helmet/cloak
 		writeH(buf, player.getPlayerSettings().getDeny()); // config for auto deny invites etc

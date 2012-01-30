@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers;
@@ -42,7 +42,6 @@ public class FlyController
 {
 	@SuppressWarnings("unused")
 	private static final Logger	log	= Logger.getLogger(FlyController.class);
-
 	private Player player;
 
 	public FlyController(Player player)
@@ -50,9 +49,6 @@ public class FlyController
 		this.player = player;
 	}
 
-	/**
-	 * 
-	 */
 	public void onStopGliding()
 	{
 		if(player.isInState(CreatureState.GLIDING))
@@ -65,7 +61,7 @@ public class FlyController
 				if (!checkFlightZone())
 					return;
 				
-				//flight allowed
+				// Flight allowed
 				player.setFlyState(1);
 			}
 			else
@@ -110,32 +106,41 @@ public class FlyController
      * This method is called to check if you should be able to fly
      * Call with silentCheck == true to avoid client messages
 	 */
-    public boolean canFly(boolean silentCheck) {
+    public boolean canFly(boolean silentCheck) 
+	{
         // Bypass Checks for GM Access Levels
-    	if (player.getAccessLevel() < AdminConfig.GM_FLIGHT_FREE) {
+    	if (player.getAccessLevel() < AdminConfig.GM_FLIGHT_FREE) 
+		{
 	        // Check Zone, Always Disallow Flight in Unknown Zones
 	        ZoneInstance currentZone = player.getZoneInstance();
-	        if (currentZone == null) {
+	        if (currentZone == null) 
+			{
 	        	if (!silentCheck) PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FLYING_FORBIDDEN_HERE);
 	        	return false;
 	        }
-	        // Check for allowed flight zones in no fly maps, will always be null if no flight zone and/or not in flight zone
+			
+	        // Check for allowed flight zones in no fly maps, will always be null if no flight zone 
+			// and/or not in flight zone
             FlightZoneInstance currentFlightZoneName = null;
-	        if (ZoneService.getInstance().mapHasFightZones(player.getWorldId())) {
-		        currentFlightZoneName = ZoneService.getInstance().findFlightZoneInCurrentMap(player.getPosition());;
-	        }
+	        
+			if (ZoneService.getInstance().mapHasFightZones(player.getWorldId())) 
+			{
+		        currentFlightZoneName = ZoneService.getInstance().findFlightZoneInCurrentMap(player.getPosition());
+            }
 	        // Check Zone Template, Always override and forbid flying in flyBan = true zones
 	        // Overrides freefly for non gm's so certain zones can me made nofly on freefly servers
 	        // Does not Override defined fly zones (aether gathering areas etc on no fly maps)
             ZoneTemplate currentZoneTemplate = currentZone.getTemplate();
-            if (currentZoneTemplate.isFlightBanned()== true && currentFlightZoneName == null){
+            
+			if (currentZoneTemplate.isFlightBanned() && currentFlightZoneName == null)
+			{
 	        	if (!silentCheck) PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FLYING_FORBIDDEN_HERE);
                 return false;
             }
 	        // Check Zone Template, Is Flight Allowed?: Default is (0), FalseIf not defined.
             // Check if freefly is enabled, freefly Overrides fly="false" (isFlightAllowed)in template.
             // Use flyBan="true" in Zone Template to override free fly for non GM.
-            if (currentZoneTemplate.isFlightAllowed()== false && GSConfig.FREEFLY == false) {
+            if (!currentZoneTemplate.isFlightAllowed() && !GSConfig.FREEFLY) {
 	        	if (!silentCheck) PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FLYING_FORBIDDEN_HERE);
 			return false;
             }
@@ -149,14 +154,17 @@ public class FlyController
      * This method is called to start flying
      * (called by CM_EMOTION when pageUp or pressed fly button)
      */
-    public boolean startFly() {
-    	if (player.getFlyController().canFly(false) == true) {
-            //zer0patches TODO: check and optimize
-		player.setState(CreatureState.FLYING);
-		player.setFlyState(1);
-		player.getLifeStats().triggerFpReduce(null);
-		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_EMOTE2, 0, 0), true);
-		PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
+    public boolean startFly() 
+	{
+    	if (player.getFlyController().canFly(false)) 
+		{
+			//zer0patches TODO: check and optimize
+			player.setState(CreatureState.FLYING);
+			player.setFlyState(1);
+			player.getLifeStats().triggerFpReduce(null);
+			PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_EMOTE2, 0, 0), true);
+			PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
+		
 		return true;
     	} else {
         	return false;
@@ -223,8 +231,7 @@ public class FlyController
 					return false;
 				}
 			}
-		}
-		
+		}		
 		return true;
 	}
 }

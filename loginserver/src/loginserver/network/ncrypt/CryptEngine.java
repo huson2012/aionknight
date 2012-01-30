@@ -1,22 +1,22 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.network.ncrypt;
@@ -32,19 +32,15 @@ public class CryptEngine
     /**
      * A key
      */
-    private byte[] key =
-    {
-        (byte) 0x6b, (byte) 0x60, (byte) 0xcb, (byte) 0x5b, (byte) 0x82, (byte) 0xce, (byte) 0x90, (byte) 0xb1,
-        (byte) 0xcc, (byte) 0x2b, (byte) 0x6c, (byte) 0x55, (byte) 0x6c, (byte) 0x6c, (byte) 0x6c, (byte) 0x6c
-    };
+    private byte[] key = {(byte) 0x6b, (byte) 0x60, (byte) 0xcb, (byte) 0x5b, (byte) 0x82, (byte) 0xce, (byte) 0x90, (byte) 0xb1, (byte) 0xcc, (byte) 0x2b, (byte) 0x6c, (byte) 0x55, (byte) 0x6c, (byte) 0x6c, (byte) 0x6c, (byte) 0x6c};
     /**
      * Tells you whether the key is updated or not
      */
-    private boolean        updatedKey = false;
+    private boolean updatedKey = false;
     /**
      * A secret blowfish cipher
      */
-    private BlowfishCipher cipher;
+    private final BlowfishCipher cipher;
 
     /**
      * Default constructor. Initialize the Blowfish Cipher with an initial static key
@@ -57,6 +53,7 @@ public class CryptEngine
 
     /**
      * Update the key for packet encryption/decryption with the Blowfish Cipher
+     *
      * @param newKey new Blowfish Key
      */
     public void updateKey(byte[] newKey)
@@ -66,7 +63,8 @@ public class CryptEngine
 
     /**
      * Decrypt given data
-     * @param data byte array to be decrypted
+     *
+     * @param data   byte array to be decrypted
      * @param offset byte array offset
      * @param length byte array length
      * @return true, if decrypted packet has valid checksum, false overwise
@@ -80,7 +78,8 @@ public class CryptEngine
 
     /**
      * Encrypt given data
-     * @param data byte array to be encrypted
+     *
+     * @param data   byte array to be encrypted
      * @param offset byte array offset
      * @param length byte array length
      * @return length of encrypted byte array
@@ -111,12 +110,13 @@ public class CryptEngine
 
     /**
      * Verify checksum in a packet
-     * @param data byte array - encrypted packet
+     *
+     * @param data   byte array - encrypted packet
      * @param offset byte array offset
      * @param length byte array size
      * @return true, if checksum is ok, false overwise
      */
-    private boolean verifyChecksum(byte[] data, int offset, int length)
+    private static boolean verifyChecksum(byte[] data, int offset, int length)
     {
         if ((length & 3) != 0 || (length <= 4))
         {
@@ -124,16 +124,16 @@ public class CryptEngine
         }
 
         long chksum = 0;
-        int  count  = length - 4;
+        int count = length - 4;
         long check;
-        int  i;
+        int i;
 
         for (i = offset; i < count; i += 4)
         {
-            check  = data[i] & 0xff;
-            check  |= data[i + 1] << 8 & 0xff00;
-            check  |= data[i + 2] << 0x10 & 0xff0000;
-            check  |= data[i + 3] << 0x18 & 0xff000000;
+            check = data[i] & 0xff;
+            check |= data[i + 1] << 8 & 0xff00;
+            check |= data[i + 2] << 0x10 & 0xff0000;
+            check |= data[i + 3] << 0x18 & 0xff000000;
             chksum ^= check;
         }
 
@@ -151,31 +151,32 @@ public class CryptEngine
 
     /**
      * add checksum to the end of the packet
-     * @param raw byte array - encrypted packet
+     *
+     * @param raw    byte array - encrypted packet
      * @param offset byte array offset
      * @param length byte array size
      */
-    private void appendChecksum(byte[] raw, int offset, int length)
+    private static void appendChecksum(byte[] raw, int offset, int length)
     {
         long chksum = 0;
-        int  count  = length - 4;
+        int count = length - 4;
         long ecx;
-        int  i;
+        int i;
 
         for (i = offset; i < count; i += 4)
         {
-            ecx    = raw[i] & 0xff;
-            ecx    |= raw[i + 1] << 8 & 0xff00;
-            ecx    |= raw[i + 2] << 0x10 & 0xff0000;
-            ecx    |= raw[i + 3] << 0x18 & 0xff000000;
+            ecx = raw[i] & 0xff;
+            ecx |= raw[i + 1] << 8 & 0xff00;
+            ecx |= raw[i + 2] << 0x10 & 0xff0000;
+            ecx |= raw[i + 3] << 0x18 & 0xff000000;
             chksum ^= ecx;
         }
 
-        ecx        = raw[i] & 0xff;
-        ecx        |= raw[i + 1] << 8 & 0xff00;
-        ecx        |= raw[i + 2] << 0x10 & 0xff0000;
-        ecx        |= raw[i + 3] << 0x18 & 0xff000000;
-        raw[i]     = (byte) (chksum & 0xff);
+        ecx = raw[i] & 0xff;
+        ecx |= raw[i + 1] << 8 & 0xff00;
+        ecx |= raw[i + 2] << 0x10 & 0xff0000;
+        ecx |= raw[i + 3] << 0x18 & 0xff000000;
+        raw[i] = (byte) (chksum & 0xff);
         raw[i + 1] = (byte) (chksum >> 0x08 & 0xff);
         raw[i + 2] = (byte) (chksum >> 0x10 & 0xff);
         raw[i + 3] = (byte) (chksum >> 0x18 & 0xff);
@@ -183,26 +184,27 @@ public class CryptEngine
 
     /**
      * First packet encryption with XOR key (integer - 4 bytes)
-     * @param data byte array to be encrypted
+     *
+     * @param data   byte array to be encrypted
      * @param offset byte array offset
      * @param length byte array length
-     * @param key integer value as key
+     * @param key    integer value as key
      */
-    private void encXORPass(byte[] data, int offset, int length, int key)
+    private static void encXORPass(byte[] data, int offset, int length, int key)
     {
         int stop = length - 8;
-        int pos  = 4 + offset;
+        int pos = 4 + offset;
         int edx;
         int ecx = key;
 
         while (pos < stop)
         {
-            edx         = (data[pos] & 0xFF);
-            edx         |= (data[pos + 1] & 0xFF) << 8;
-            edx         |= (data[pos + 2] & 0xFF) << 16;
-            edx         |= (data[pos + 3] & 0xFF) << 24;
-            ecx         += edx;
-            edx         ^= ecx;
+            edx = (data[pos] & 0xFF);
+            edx |= (data[pos + 1] & 0xFF) << 8;
+            edx |= (data[pos + 2] & 0xFF) << 16;
+            edx |= (data[pos + 3] & 0xFF) << 24;
+            ecx += edx;
+            edx ^= ecx;
             data[pos++] = (byte) (edx & 0xFF);
             data[pos++] = (byte) (edx >> 8 & 0xFF);
             data[pos++] = (byte) (edx >> 16 & 0xFF);
@@ -212,6 +214,6 @@ public class CryptEngine
         data[pos++] = (byte) (ecx & 0xFF);
         data[pos++] = (byte) (ecx >> 8 & 0xFF);
         data[pos++] = (byte) (ecx >> 16 & 0xFF);
-        data[pos]   = (byte) (ecx >> 24 & 0xFF);
+        data[pos] = (byte) (ecx >> 24 & 0xFF);
     }
 }

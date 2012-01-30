@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.legion;
@@ -32,9 +36,9 @@ public class LegionMember
 
 	public LegionMember(int objectId, Legion legion, LegionRank rank)
 	{
-		this.setObjectId(objectId);
-		this.setLegion(legion);
-		this.setRank(rank);
+        this.objectId = objectId;
+        this.legion = legion;
+        this.rank = rank;
 	}
 
 	public LegionMember()
@@ -98,46 +102,46 @@ public class LegionMember
 
    public boolean hasRights(int type)
    {
-      if(getRank() == LegionRank.BRIGADE_GENERAL)
+      if(rank == LegionRank.BRIGADE_GENERAL)
          return true;
 
-      int legionaryPermission1 = getLegion().getLegionaryPermission1();
-      int legionaryPermission2 = getLegion().getLegionaryPermission2();
-      int centurionPermission1 = getLegion().getCenturionPermission1();
-      int centurionPermission2 = getLegion().getCenturionPermission2();
-      int deputyPermission1 = getLegion().getDeputyPermission1();
-      int deputyPermission2 = getLegion().getDeputyPermission2();
-      int volunteerPermission1 = getLegion().getVolunteerPermission1();
-      int volunteerPermission2 = getLegion().getVolunteerPermission2();
+      int legionaryPermission1 = legion.getLegionaryPermission1();
+      int legionaryPermission2 = legion.getLegionaryPermission2();
+      int centurionPermission1 = legion.getCenturionPermission1();
+      int centurionPermission2 = legion.getCenturionPermission2();
+      int deputyPermission1 = legion.getDeputyPermission1();
+      int deputyPermission2 = legion.getDeputyPermission2();
+      int volunteerPermission1 = legion.getVolunteerPermission1();
+      int volunteerPermission2 = legion.getVolunteerPermission2();
 
       switch(type)
       {
         case 1:
-			if(getRank().canInviteToLegion(legionaryPermission1, centurionPermission1))
+			if(rank.canInviteToLegion(legionaryPermission1, centurionPermission1))
 		return true;
 
         case 2:
-			if(getRank().canKickFromLegion(legionaryPermission1, centurionPermission1))
+			if(rank.canKickFromLegion(legionaryPermission1, centurionPermission1))
 		return true;
 
         case 3:
-			if(getRank().canUseLegionWarehouse(legionaryPermission1, centurionPermission1, deputyPermission1))
+			if(rank.canUseLegionWarehouse(legionaryPermission1, centurionPermission1, deputyPermission1))
 		return true;
 
         case 4:
-			if(getRank().canEditAnnouncement(legionaryPermission2, centurionPermission2))
+			if(rank.canEditAnnouncement(legionaryPermission2, centurionPermission2))
 		return true;
 
         case 5:
-			if(getRank().canStoreLegionWarehouse(legionaryPermission2, centurionPermission2, deputyPermission2, volunteerPermission2))
+			if(rank.canStoreLegionWarehouse(legionaryPermission2, centurionPermission2, deputyPermission2, volunteerPermission2))
 		return true;
 
 		case 6:
-			if(getRank().canUseArtifact(legionaryPermission2, centurionPermission2))
+			if(rank.canUseArtifact(legionaryPermission2, centurionPermission2))
 		return true;
 
 		case 7:
-			if(getRank().canUseGateGuardianStone(legionaryPermission2, centurionPermission2, deputyPermission2, volunteerPermission2))
+			if(rank.canUseGateGuardianStone(legionaryPermission2, centurionPermission2, deputyPermission2, volunteerPermission2))
 		return true;
       }
       return false;

@@ -43,7 +43,7 @@ public class ProcAtkInstantEffect extends DamageEffect
 	public void applyEffect(final Effect effect)
 	{
 		
-		final boolean isGodstone = (effect.getItemTemplate() != null && effect.getItemTemplate().getGodstoneInfo() != null ? true : false);
+		final boolean isGodstone = (effect.getItemTemplate() != null && effect.getItemTemplate().getGodstoneInfo() != null);
 		ThreadPoolManager.getInstance().schedule(new Runnable(){
 			@Override
 			public void run()

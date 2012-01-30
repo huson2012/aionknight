@@ -1,19 +1,24 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.model.templates.item;
 
 import gameserver.dataholders.DataManager;
@@ -30,14 +35,10 @@ import gameserver.model.templates.VisibleObjectTemplate;
 import gameserver.model.templates.itemset.ItemSetTemplate;
 import gameserver.model.templates.stats.ModifiersTemplate;
 import org.apache.commons.lang.StringUtils;
-
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 import java.util.TreeSet;
 
-/**
- * @author Luno modified by ATracer
- */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "item_templates")
 public class ItemTemplate extends VisibleObjectTemplate
@@ -402,8 +403,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 	{
 		try
 		{
-			int val = Integer.parseInt(description);
-			return val;
+			return Integer.parseInt(description);
 		}
 		catch(NumberFormatException nfe)
 		{
@@ -584,7 +584,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 	
 	void afterUnmarshal (Unmarshaller u, Object parent)
 	{
-		setItemId(Integer.parseInt(id));
+        itemId = Integer.parseInt(id);
 		
 		restricts = new int[12];
 		if (restrict == null)
@@ -716,14 +716,14 @@ public class ItemTemplate extends VisibleObjectTemplate
 	 */
 	public boolean isLimitOne()
 	{
-		return (getMask() & ItemMask.LIMIT_ONE) == ItemMask.LIMIT_ONE;
+		return (mask & ItemMask.LIMIT_ONE) == ItemMask.LIMIT_ONE;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isTradeable()
 	{
-		return (getMask() & ItemMask.TRADEABLE) == ItemMask.TRADEABLE;
+		return (mask & ItemMask.TRADEABLE) == ItemMask.TRADEABLE;
 	}
 	/**
 	 * 
@@ -731,28 +731,28 @@ public class ItemTemplate extends VisibleObjectTemplate
 	 */
 	public boolean isSellable()
 	{
-		return (getMask() & ItemMask.SELLABLE) == ItemMask.SELLABLE;
+		return (mask & ItemMask.SELLABLE) == ItemMask.SELLABLE;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isStorableinCharWarehouse()
 	{
-		return (getMask() & ItemMask.STORABLE_IN_WH) == ItemMask.STORABLE_IN_WH;
+		return (mask & ItemMask.STORABLE_IN_WH) == ItemMask.STORABLE_IN_WH;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isStorableinAccWarehouse()
 	{
-		return (getMask() & ItemMask.STORABLE_IN_AWH) == ItemMask.STORABLE_IN_AWH;
+		return (mask & ItemMask.STORABLE_IN_AWH) == ItemMask.STORABLE_IN_AWH;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isStorableinLegionWarehouse()
 	{
-		return (getMask() & ItemMask.STORABLE_IN_LWH) == ItemMask.STORABLE_IN_LWH;
+		return (mask & ItemMask.STORABLE_IN_LWH) == ItemMask.STORABLE_IN_LWH;
 	}
 	/**
 	 * @return
@@ -760,28 +760,28 @@ public class ItemTemplate extends VisibleObjectTemplate
 	 */
 	public boolean isBreakable()
 	{
-		return (getMask() & ItemMask.BREAKABLE) == ItemMask.BREAKABLE;
+		return (mask & ItemMask.BREAKABLE) == ItemMask.BREAKABLE;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isSoulBound()
 	{
-		return (getMask() & ItemMask.SOUL_BOUND) == ItemMask.SOUL_BOUND;
+		return (mask & ItemMask.SOUL_BOUND) == ItemMask.SOUL_BOUND;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isRemoveWhenLogout()
 	{
-		return (getMask() & ItemMask.REMOVE_LOGOUT) == ItemMask.REMOVE_LOGOUT;
+		return (mask & ItemMask.REMOVE_LOGOUT) == ItemMask.REMOVE_LOGOUT;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isNoEnchant()
 	{
-		return (getMask() & ItemMask.NO_ENCHANT) == ItemMask.NO_ENCHANT;
+		return (mask & ItemMask.NO_ENCHANT) == ItemMask.NO_ENCHANT;
 	}
 	/**
 	 * @return
@@ -789,42 +789,42 @@ public class ItemTemplate extends VisibleObjectTemplate
 	 */
 	public boolean isCanProcEnchant()
 	{
-		return (getMask() & ItemMask.CAN_PROC_ENCHANT) == ItemMask.CAN_PROC_ENCHANT;
+		return (mask & ItemMask.CAN_PROC_ENCHANT) == ItemMask.CAN_PROC_ENCHANT;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isCanFuse()
 	{
-		return (getMask() & ItemMask.CAN_COMPOSITE_WEAPON) == ItemMask.CAN_COMPOSITE_WEAPON;
+		return (mask & ItemMask.CAN_COMPOSITE_WEAPON) == ItemMask.CAN_COMPOSITE_WEAPON;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isChangeSkinPermitted()
 	{
-		return (getMask() & ItemMask.REMODELABLE) == ItemMask.REMODELABLE;
+		return (mask & ItemMask.REMODELABLE) == ItemMask.REMODELABLE;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isCanSplit()
 	{
-		return (getMask() & ItemMask.CAN_SPLIT) == ItemMask.CAN_SPLIT;
+		return (mask & ItemMask.CAN_SPLIT) == ItemMask.CAN_SPLIT;
 	}
 	/**
 	 * @return
 	 */
 	public boolean isItemDropPermitted()
 	{
-		return (getMask() & ItemMask.DELETABLE) == ItemMask.DELETABLE;
+		return (mask & ItemMask.DELETABLE) == ItemMask.DELETABLE;
 	}
 	/**
 	 * @return the dyePermitted
 	 */
 	public boolean isItemDyePermitted()
 	{
-		return (getMask() & ItemMask.DYEABLE) == ItemMask.DYEABLE;
+		return (mask & ItemMask.DYEABLE) == ItemMask.DYEABLE;
 	}
 
 	/**
@@ -883,7 +883,8 @@ public class ItemTemplate extends VisibleObjectTemplate
 	  public Boolean IsArena()
 	  {
 	    if (isArena == null)
-	      return Boolean.valueOf(false);
-	    return isArena;
+	      return false;
+
+          return isArena;
 	  }
 }

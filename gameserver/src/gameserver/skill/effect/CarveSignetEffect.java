@@ -76,7 +76,7 @@ public class CarveSignetEffect extends DamageEffect
 		int nextSignetlvl = 1;
 		for (int i=1;i <= 5;i++)
 		{
-			if (effected.getEffectController().getAbnormalEffect(signet+"_"+i) != null)
+			if (effected.getEffectController().getAbnormalEffect(signet+ '_' +i) != null)
 				nextSignetlvl = i+1;
 		}
 		
@@ -106,7 +106,7 @@ public class CarveSignetEffect extends DamageEffect
 		
 		for (int i = 1; i<=signetlvl; i++)
 		{
-			Effect tmpPlacedSignet = effected.getEffectController().getAbnormalEffect(signet+"_"+i);
+			Effect tmpPlacedSignet = effected.getEffectController().getAbnormalEffect(signet+ '_' +i);
 			if (tmpPlacedSignet != null)
 				placedSignet = tmpPlacedSignet;
 					

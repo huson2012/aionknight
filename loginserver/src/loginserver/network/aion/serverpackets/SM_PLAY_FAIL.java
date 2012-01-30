@@ -1,22 +1,22 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.network.aion.serverpackets;
@@ -28,29 +28,29 @@ import loginserver.network.aion.AionServerPacket;
 
 public class SM_PLAY_FAIL extends AionServerPacket
 {
-	/**
-	 * response - why play fail
-	 */
-	private AionAuthResponse	response;
+    /**
+     * response - why play fail
+     */
+    private final AionAuthResponse response;
 
-	/**
-	 * Constructs new instance of <tt>SM_PLAY_FAIL</tt> packet.
-	 * 
-	 * @param response auth response
-	 */
-	public SM_PLAY_FAIL(AionAuthResponse response)
-	{
-		super(0x06);
+    /**
+     * Constructs new instance of <tt>SM_PLAY_FAIL</tt> packet.
+     *
+     * @param response auth response
+     */
+    public SM_PLAY_FAIL(AionAuthResponse response)
+    {
+        super(0x06);
 
-		this.response = response;
-	}
+        this.response = response;
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	protected void writeImpl(AionConnection con, ByteBuffer buf)
-	{
-		writeC(buf, getOpcode());
-		writeD(buf, response.getMessageId());
-	}
+    /**
+     * {@inheritDoc}
+     */
+    protected void writeImpl(AionConnection con, ByteBuffer buf)
+    {
+        writeC(buf, getOpcode());
+        writeD(buf, response.getMessageId());
+    }
 }

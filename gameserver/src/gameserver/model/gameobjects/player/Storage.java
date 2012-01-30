@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects.player;
@@ -25,7 +29,6 @@ import gameserver.network.aion.serverpackets.SM_UPDATE_ITEM;
 import gameserver.network.aion.serverpackets.SM_UPDATE_WAREHOUSE_ITEM;
 import gameserver.utils.PacketSendUtility;
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
@@ -36,13 +39,9 @@ public class Storage
 	private static final Logger	log	= Logger.getLogger(Storage.class);
 
 	private Player owner;
-
 	protected ItemStorage storage;
-
 	private Item kinahItem;
-
 	protected int storageType;
-	
 	protected Queue<Item> deletedItems = new ConcurrentLinkedQueue<Item>();
 	
 	/**
@@ -116,10 +115,10 @@ public class Storage
 		kinahItem.increaseItemCount(amount);
 
 		if(storageType == StorageType.CUBE.getId())
-			PacketSendUtility.sendPacket(getOwner(), new SM_UPDATE_ITEM(kinahItem));
+			PacketSendUtility.sendPacket(owner, new SM_UPDATE_ITEM(kinahItem));
 
 		if (storageType == StorageType.ACCOUNT_WAREHOUSE.getId())
-			PacketSendUtility.sendPacket(getOwner(), new SM_UPDATE_WAREHOUSE_ITEM(kinahItem, storageType));
+			PacketSendUtility.sendPacket(owner, new SM_UPDATE_WAREHOUSE_ITEM(kinahItem, storageType));
 		setPersistentState(PersistentState.UPDATE_REQUIRED);
 	}
 	/**
@@ -133,10 +132,10 @@ public class Storage
 		if(operationResult)
 		{
 			if(storageType == StorageType.CUBE.getId())
-				PacketSendUtility.sendPacket(getOwner(), new SM_UPDATE_ITEM(kinahItem));
+				PacketSendUtility.sendPacket(owner, new SM_UPDATE_ITEM(kinahItem));
 
 			if (storageType == StorageType.ACCOUNT_WAREHOUSE.getId())
-				PacketSendUtility.sendPacket(getOwner(), new SM_UPDATE_WAREHOUSE_ITEM(kinahItem, storageType));
+				PacketSendUtility.sendPacket(owner, new SM_UPDATE_WAREHOUSE_ITEM(kinahItem, storageType));
 		}
 		setPersistentState(PersistentState.UPDATE_REQUIRED);
 		return operationResult;
@@ -270,7 +269,7 @@ public class Storage
 		Item item = storage.getItemFromStorageByItemObjId(itemObjId);
 		if(item == null)
 		{ // the item doesn't exist, return false if the count is bigger then 0.
-			log.warn("An item from player '" + getOwner().getName() + "' that should be removed doesn't exist.");
+			log.warn("An item from player '" + owner.getName() + "' that should be removed doesn't exist.");
 			return count == 0;
 		}
 		boolean result = decreaseItemCount(item, count) >= 0;
@@ -304,11 +303,11 @@ public class Storage
 		if(item.getItemCount() == 0)
 		{
 			storage.removeItemFromStorage(item);
-			PacketSendUtility.sendPacket(getOwner(), new SM_DELETE_ITEM(item.getObjectId()));
+			PacketSendUtility.sendPacket(owner, new SM_DELETE_ITEM(item.getObjectId()));
 			deletedItems.add(item);
 		}
 		else
-			PacketSendUtility.sendPacket(getOwner(), new SM_UPDATE_ITEM(item));
+			PacketSendUtility.sendPacket(owner, new SM_UPDATE_ITEM(item));
 		
 		setPersistentState(PersistentState.UPDATE_REQUIRED);
 		return count;

@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.network.aion.serverpackets;
@@ -53,7 +53,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * Busy in game
 	 */
-	public static final SM_SYSTEM_MESSAGE	BUDDYLIST_BUSY	= new SM_SYSTEM_MESSAGE(900847);
+	public static final SM_SYSTEM_MESSAGE BUDDYLIST_BUSY = new SM_SYSTEM_MESSAGE(900847);
 
 	/**
 	 * %0 is not playing the game
@@ -69,7 +69,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 
     public static SM_SYSTEM_MESSAGE STR_MSG_FRIENDLY_LEAVE_IDARENA(String playerName)
     {
-    return new SM_SYSTEM_MESSAGE(1400289, playerName);
+		return new SM_SYSTEM_MESSAGE(1400289, playerName);
     }
 	
 	/**
@@ -88,15 +88,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You are dead
 	 */
-	public static SM_SYSTEM_MESSAGE	DIE		= new SM_SYSTEM_MESSAGE(1340000);
-
-	/**
-	 * 
-	 */
-	public static SM_SYSTEM_MESSAGE	REVIVE	= new SM_SYSTEM_MESSAGE(1300738);
-	
-	public static final SM_SYSTEM_MESSAGE	STR_SKILL_OBSTACLE	= new SM_SYSTEM_MESSAGE(1300030);
-	public static final SM_SYSTEM_MESSAGE	STR_ATTACK_OBSTACLE_EXIST	= new SM_SYSTEM_MESSAGE(1300033);
+	public static SM_SYSTEM_MESSAGE	DIE = new SM_SYSTEM_MESSAGE(1340000);
+	public static SM_SYSTEM_MESSAGE	REVIVE = new SM_SYSTEM_MESSAGE(1300738);
+	public static final SM_SYSTEM_MESSAGE STR_SKILL_OBSTACLE = new SM_SYSTEM_MESSAGE(1300030);
+	public static final SM_SYSTEM_MESSAGE STR_ATTACK_OBSTACLE_EXIST	= new SM_SYSTEM_MESSAGE(1300033);
 
 	/**
 	 * 
@@ -182,17 +177,17 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * Your Requested player to trade
 	 */
-	public static final SM_SYSTEM_MESSAGE	REQUEST_TRADE			= new SM_SYSTEM_MESSAGE(1300353);
+	public static final SM_SYSTEM_MESSAGE REQUEST_TRADE = new SM_SYSTEM_MESSAGE(1300353);
 
 	/**
 	 * Your Friends List is full
 	 */
-	public static final SM_SYSTEM_MESSAGE	BUDDYLIST_LIST_FULL		= new SM_SYSTEM_MESSAGE(1300887);
+	public static final SM_SYSTEM_MESSAGE BUDDYLIST_LIST_FULL = new SM_SYSTEM_MESSAGE(1300887);
 
 	/**
 	 * The character is not on your Friends List.
 	 */
-	public static final SM_SYSTEM_MESSAGE	BUDDYLIST_NOT_IN_LIST	= new SM_SYSTEM_MESSAGE(1300889);
+	public static final SM_SYSTEM_MESSAGE BUDDYLIST_NOT_IN_LIST	= new SM_SYSTEM_MESSAGE(1300889);
 
 	/**
 	 * The server is due to shut down in %0 seconds. Please quit the game.
@@ -205,27 +200,27 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You cannot block a character who is currently on your Friends List.
 	 */
-	public static SM_SYSTEM_MESSAGE	BLOCKLIST_NO_BUDDY			= new SM_SYSTEM_MESSAGE(1300891);
+	public static SM_SYSTEM_MESSAGE	BLOCKLIST_NO_BUDDY = new SM_SYSTEM_MESSAGE(1300891);
 
 	/**
 	 * Character already in block list
 	 */
-	public static SM_SYSTEM_MESSAGE	BLOCKLIST_ALREADY_BLOCKED	= new SM_SYSTEM_MESSAGE(1300894);
+	public static SM_SYSTEM_MESSAGE	BLOCKLIST_ALREADY_BLOCKED = new SM_SYSTEM_MESSAGE(1300894);
 
 	/**
 	 * The character is not blocked.
 	 */
-	public static SM_SYSTEM_MESSAGE	BLOCKLIST_NOT_BLOCKED		= new SM_SYSTEM_MESSAGE(1300897);
+	public static SM_SYSTEM_MESSAGE	BLOCKLIST_NOT_BLOCKED = new SM_SYSTEM_MESSAGE(1300897);
 	
 	/**
 	 * You must level up to raise your skill level.
 	 */
-	public static SM_SYSTEM_MESSAGE	STR_CRAFT_INFO_MAXPOINT_UP	= new SM_SYSTEM_MESSAGE(1300898);
+	public static SM_SYSTEM_MESSAGE	STR_CRAFT_INFO_MAXPOINT_UP = new SM_SYSTEM_MESSAGE(1300898);
 	
 	/**
 	 * You do not have enough Kinah.
 	 */
-	public static SM_SYSTEM_MESSAGE	STR_NOT_ENOUGH_MONEY		= new SM_SYSTEM_MESSAGE(1300388);
+	public static SM_SYSTEM_MESSAGE	STR_NOT_ENOUGH_MONEY = new SM_SYSTEM_MESSAGE(1300388);
 	
 	/**
 	 * You have crafted %0.
@@ -239,7 +234,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You have crafted successfully.
 	 */
-	public static SM_SYSTEM_MESSAGE	STR_CRAFT_SUCCESS_GETEXP	= new SM_SYSTEM_MESSAGE(1330059);
+	public static SM_SYSTEM_MESSAGE	STR_CRAFT_SUCCESS_GETEXP = new SM_SYSTEM_MESSAGE(1330059);
 	
 	/**
 	 * %0 has blocked you.
@@ -289,9 +284,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 		return new SM_SYSTEM_MESSAGE(1300099, player);
 	}
 
-	public static SM_SYSTEM_MESSAGE	DUEL_START	= new SM_SYSTEM_MESSAGE(1300770);
+	public static SM_SYSTEM_MESSAGE	DUEL_START = new SM_SYSTEM_MESSAGE(1300770);
 
-	public static SM_SYSTEM_MESSAGE	DUEL_END	= new SM_SYSTEM_MESSAGE(1300771);
+	public static SM_SYSTEM_MESSAGE	DUEL_END = new SM_SYSTEM_MESSAGE(1300771);
 
 	/**
 	 * Starting the duel with %0.
@@ -336,21 +331,24 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You have successfully soul-bound %0.
 	 */
-	public static SM_SYSTEM_MESSAGE SOUL_BOUND_ITEM_SUCCEED(DescriptionId itemDescId) {
+	public static SM_SYSTEM_MESSAGE SOUL_BOUND_ITEM_SUCCEED(DescriptionId itemDescId) 
+	{
 		return new SM_SYSTEM_MESSAGE(1300485, itemDescId);
 	}
 
 	/**
 	 * You cancelled the soul-binding of %0.
 	 */
-	public static SM_SYSTEM_MESSAGE SOUL_BOUND_ITEM_CANCELED(DescriptionId itemDescId) {
+	public static SM_SYSTEM_MESSAGE SOUL_BOUND_ITEM_CANCELED(DescriptionId itemDescId) 
+	{
 		return new SM_SYSTEM_MESSAGE(1300487, itemDescId);
 	}
 	
 	/**
 	 * Soul-binding of items not possible while %0.
 	 */
-	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_INVALID_STANCE(int systemMessageId) {
+	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_INVALID_STANCE(int systemMessageId) 
+	{
 		return new SM_SYSTEM_MESSAGE(1300489, new DescriptionId(systemMessageId * 2 + 1));
 	}
 	
@@ -1150,9 +1148,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You can use this skill only while flying.
 	 */
-	public static SM_SYSTEM_MESSAGE STR_SKILL_RESTRICTION_FLY_ONLY		= new SM_SYSTEM_MESSAGE(1300113);
-
-	public static SM_SYSTEM_MESSAGE	STR_ITEM_ERROR						= new SM_SYSTEM_MESSAGE(1300514);
+	public static SM_SYSTEM_MESSAGE STR_SKILL_RESTRICTION_FLY_ONLY = new SM_SYSTEM_MESSAGE(1300113);
+	public static SM_SYSTEM_MESSAGE	STR_ITEM_ERROR = new SM_SYSTEM_MESSAGE(1300514);
 
 	/**
 	 * You cannot use the item as its cooldown time has not expired yet.
@@ -1170,17 +1167,17 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You cannot fly in this area.
 	 */
-	public static SM_SYSTEM_MESSAGE	STR_FLYING_FORBIDDEN_HERE			= new SM_SYSTEM_MESSAGE(1300960);
+	public static SM_SYSTEM_MESSAGE	STR_FLYING_FORBIDDEN_HERE = new SM_SYSTEM_MESSAGE(1300960);
 
 	/**
 	 * You cannot use teleport services when you flying
 	 */
-	public static SM_SYSTEM_MESSAGE	STR_CANNOT_USE_AIRPORT_WHEN_FLYING	= new SM_SYSTEM_MESSAGE(1300696);
+	public static SM_SYSTEM_MESSAGE	STR_CANNOT_USE_AIRPORT_WHEN_FLYING = new SM_SYSTEM_MESSAGE(1300696);
 
 	/**
 	 * The NPC you selected does not have the ability to teleport you.
 	 */
-	public static SM_SYSTEM_MESSAGE	STR_CANNOT_MOVE_TO_AIRPORT_WRONG_NPC	= new SM_SYSTEM_MESSAGE(1300692);
+	public static SM_SYSTEM_MESSAGE	STR_CANNOT_MOVE_TO_AIRPORT_WRONG_NPC = new SM_SYSTEM_MESSAGE(1300692);
 
 	/**
 	 * You cannot move to that destination.
@@ -1215,7 +1212,6 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 		return new SM_SYSTEM_MESSAGE(1300030);
 	}
 	
-
 	public static SM_SYSTEM_MESSAGE NO_POWER_SHARD_EQUIPPED()
 	{
 		return new SM_SYSTEM_MESSAGE(1300490);
@@ -1274,9 +1270,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 		return new SM_SYSTEM_MESSAGE(901285, kinah);
 	}
 
-	public static final SM_SYSTEM_MESSAGE	MSG_FULL_INVENTORY			= new SM_SYSTEM_MESSAGE(1300762);
+	public static final SM_SYSTEM_MESSAGE MSG_FULL_INVENTORY = new SM_SYSTEM_MESSAGE(1300762);
 
-	public static final AionServerPacket	CUBEEXPAND_NOT_ENOUGH_KINAH	= new SM_SYSTEM_MESSAGE(1300831);
+	public static final AionServerPacket CUBEEXPAND_NOT_ENOUGH_KINAH = new SM_SYSTEM_MESSAGE(1300831);
 
 	/**
 	 * Manastone Messages
@@ -1547,9 +1543,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 		return new SM_SYSTEM_MESSAGE(390272, true);
 	}
 
-	public static final SM_SYSTEM_MESSAGE	STR_MOVE_PORTAL_ERROR_INVALID_RACE	= new SM_SYSTEM_MESSAGE(901354);
-	public static final SM_SYSTEM_MESSAGE	STR_MSG_CANT_INSTANCE_ENTER_LEVEL	= new SM_SYSTEM_MESSAGE(1400179);
-	public static final SM_SYSTEM_MESSAGE	STR_MSG_ENTER_ONLY_PARTY_DON		= new SM_SYSTEM_MESSAGE(1390256);
+	public static final SM_SYSTEM_MESSAGE STR_MOVE_PORTAL_ERROR_INVALID_RACE = new SM_SYSTEM_MESSAGE(901354);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_CANT_INSTANCE_ENTER_LEVEL	= new SM_SYSTEM_MESSAGE(1400179);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_ENTER_ONLY_PARTY_DON = new SM_SYSTEM_MESSAGE(1390256);
 	
 	//You may enter %WORLDNAME0 again after %1 minutes.
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_ENTER_INSTANCE_COOL_TIME_MIN(int worldDescId, int time)
@@ -1580,36 +1576,34 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	//You need a key to open the door.
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_OPEN_DOOR_NEED_KEY_ITEM = new SM_SYSTEM_MESSAGE(1300723);
-
-	public static final SM_SYSTEM_MESSAGE	STR_GIVE_ITEM_PROC_NO_PROC_GIVE_ITEM	= new SM_SYSTEM_MESSAGE(1300505);
-	public static final SM_SYSTEM_MESSAGE	STR_GIVE_ITEM_PROC_CANNOT_GIVE_PROC_TO_EQUIPPED_ITEM	= new SM_SYSTEM_MESSAGE(1300503);
+	public static final SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_NO_PROC_GIVE_ITEM = new SM_SYSTEM_MESSAGE(1300505);
+	public static final SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_CANNOT_GIVE_PROC_TO_EQUIPPED_ITEM = new SM_SYSTEM_MESSAGE(1300503);
+	
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_ENCHANTED_TARGET_ITEM(DescriptionId itemDescId)
 	{
 		return new SM_SYSTEM_MESSAGE(1300508, itemDescId);
 	}
 
-	public static final SM_SYSTEM_MESSAGE	STR_MSG_DICE_INVEN_ERROR	= new SM_SYSTEM_MESSAGE(1390182);
-	public static final SM_SYSTEM_MESSAGE	COMBINE_INVENTORY_IS_FULL	= new SM_SYSTEM_MESSAGE(1330037);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_DICE_INVEN_ERROR = new SM_SYSTEM_MESSAGE(1390182);
+	public static final SM_SYSTEM_MESSAGE COMBINE_INVENTORY_IS_FULL	= new SM_SYSTEM_MESSAGE(1330037);
 	
 	/***
 	 * Kisks
 	 * - Sarynth, Master
 	 */
-
-	public static final SM_SYSTEM_MESSAGE	STR_CANNOT_REGISTER_BINDSTONE_HAVE_NO_AUTHORITY	= new SM_SYSTEM_MESSAGE(1300799);
-	public static final SM_SYSTEM_MESSAGE	STR_CANNOT_REGISTER_BINDSTONE_FAR_FROM_NPC	= new SM_SYSTEM_MESSAGE(1300800);
-	public static final SM_SYSTEM_MESSAGE	STR_BINDSTONE_IS_DESTROYED			= new SM_SYSTEM_MESSAGE(1300802);
-	public static final SM_SYSTEM_MESSAGE	STR_BINDSTONE_IS_REMOVED			= new SM_SYSTEM_MESSAGE(1300803);
-	public static final SM_SYSTEM_MESSAGE	STR_CANNOT_USE_BINDSTONE_ITEM_NOT_PROPER_AREA = new SM_SYSTEM_MESSAGE(1300804);
-	public static final SM_SYSTEM_MESSAGE	STR_CANNOT_USE_BINDSTONE_ITEM_WHILE_FLYING	= new SM_SYSTEM_MESSAGE(1300806);
-	public static final SM_SYSTEM_MESSAGE	STR_BINDSTONE_DESTROYED				= new SM_SYSTEM_MESSAGE(1390158);
-	public static final SM_SYSTEM_MESSAGE	STR_BINDSTONE_REGISTER				= new SM_SYSTEM_MESSAGE(1390159);
-	public static final SM_SYSTEM_MESSAGE	STR_BINDSTONE_ALREADY_INSTALLED			= new SM_SYSTEM_MESSAGE(1390160);
-	public static final SM_SYSTEM_MESSAGE	STR_BINDSTONE_ALREADY_REGISTERED		= new SM_SYSTEM_MESSAGE(1390161);
-	public static final SM_SYSTEM_MESSAGE   STR_BINDSTONE_IS_ATTACKED			= new SM_SYSTEM_MESSAGE(1390166);
-	public static final SM_SYSTEM_MESSAGE	STR_CANNOT_REGISTER_BINDSTONE_FULL		= new SM_SYSTEM_MESSAGE(1400247);
-
-	public static final SM_SYSTEM_MESSAGE	STR_CANNOT_USE_MAGIC_PASSAGE		= new SM_SYSTEM_MESSAGE(1300150);
+	public static final SM_SYSTEM_MESSAGE STR_CANNOT_REGISTER_BINDSTONE_HAVE_NO_AUTHORITY = new SM_SYSTEM_MESSAGE(1300799);
+	public static final SM_SYSTEM_MESSAGE STR_CANNOT_REGISTER_BINDSTONE_FAR_FROM_NPC = new SM_SYSTEM_MESSAGE(1300800);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_IS_DESTROYED = new SM_SYSTEM_MESSAGE(1300802);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_IS_REMOVED = new SM_SYSTEM_MESSAGE(1300803);
+	public static final SM_SYSTEM_MESSAGE STR_CANNOT_USE_BINDSTONE_ITEM_NOT_PROPER_AREA = new SM_SYSTEM_MESSAGE(1300804);
+	public static final SM_SYSTEM_MESSAGE STR_CANNOT_USE_BINDSTONE_ITEM_WHILE_FLYING = new SM_SYSTEM_MESSAGE(1300806);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_DESTROYED = new SM_SYSTEM_MESSAGE(1390158);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_REGISTER = new SM_SYSTEM_MESSAGE(1390159);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_ALREADY_INSTALLED = new SM_SYSTEM_MESSAGE(1390160);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_ALREADY_REGISTERED = new SM_SYSTEM_MESSAGE(1390161);
+	public static final SM_SYSTEM_MESSAGE STR_BINDSTONE_IS_ATTACKED = new SM_SYSTEM_MESSAGE(1390166);
+	public static final SM_SYSTEM_MESSAGE STR_CANNOT_REGISTER_BINDSTONE_FULL = new SM_SYSTEM_MESSAGE(1400247);
+	public static final SM_SYSTEM_MESSAGE STR_CANNOT_USE_MAGIC_PASSAGE = new SM_SYSTEM_MESSAGE(1300150);
 	/**
 	 * add by xj2479564
 	 * @param name

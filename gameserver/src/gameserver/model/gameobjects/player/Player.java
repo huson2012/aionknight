@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects.player;
@@ -65,7 +69,6 @@ import gameserver.world.World;
 import gameserver.world.zone.ZoneInstance;
 import gnu.trove.TIntObjectHashMap;
 import org.apache.log4j.Logger;
-
 import java.sql.Timestamp;
 import java.util.*;
 import java.util.concurrent.ScheduledFuture;
@@ -416,7 +419,7 @@ public class Player extends Creature
 
         public boolean isOnline()
         {
-                return getClientConnection() != null;
+                return clientConnection != null;
         }
 
         public int getCubeSize()
@@ -647,7 +650,7 @@ public class Player extends Creature
                         }
                 }
 
-                Equipment equipment = getEquipment();
+                Equipment equipment = this.equipment;
                 if(equipment.getPersistentState() == PersistentState.UPDATE_REQUIRED)
                 {
                         dirtyItems.addAll(equipment.getEquippedItems());
@@ -681,7 +684,7 @@ public class Player extends Creature
                         allItems.addAll(petBag.getAllItems());
                 }
 
-                Equipment equipment = getEquipment();
+                Equipment equipment = this.equipment;
                 allItems.addAll(equipment.getEquippedItems());
 
                 return allItems;
@@ -699,7 +702,7 @@ public class Player extends Creature
         public void setCubesize(int cubesize)
         {
                 this.playerCommonData.setCubesize(cubesize);
-                getInventory().setLimit(getInventory().getLimit() + (cubesize * CUBE_SPACE));
+            inventory.setLimit(inventory.getLimit() + (cubesize * CUBE_SPACE));
         }
 
         /**
@@ -872,7 +875,7 @@ public class Player extends Creature
                         ThreadPoolManager.getInstance().scheduleAtFixedRate(new ItemUpdateTask(this),
                                 PeriodicSaveConfig.PLAYER_ITEMS * 1000, PeriodicSaveConfig.PLAYER_ITEMS * 1000));
 
-                getCommonData().updateAbyssSkills(this, abyssRank);
+            playerCommonData.updateAbyssSkills(this, abyssRank);
         }
 
         /**
@@ -938,9 +941,7 @@ public class Player extends Creature
          */
         public boolean hasStore()
         {
-                if(getStore() != null)
-                        return true;
-                return false;
+            return store != null;
         }
 
         /**
@@ -948,7 +949,7 @@ public class Player extends Creature
          */
         public void resetLegionMember()
         {
-                setLegionMember(null);
+            legionMember = null;
         }
 
         /**
@@ -1016,7 +1017,7 @@ public class Player extends Creature
         public void setWarehouseSize(int warehouseSize)
         {
                 this.playerCommonData.setWarehouseSize(warehouseSize);
-                getWarehouse().setLimit(getWarehouse().getLimit() + (warehouseSize * WAREHOUSE_SPACE));
+            regularWarehouse.setLimit(regularWarehouse.getLimit() + (warehouseSize * WAREHOUSE_SPACE));
         }
 
         /**
@@ -1286,9 +1287,9 @@ public class Player extends Creature
         @Override
         public boolean isEnemyPlayer(Player player)
         {
-                return (player.getCommonData().getRace() != getCommonData().getRace() || getController().isDueling(player) || ArenaService
+                return (player.playerCommonData.getRace() != playerCommonData.getRace() || getController().isDueling(player) || ArenaService
                         .getInstance().isEnemy(getController().getOwner(), player))
-                        && !player.getAdminNeutral();
+                        && !player.isAdminNeutral;
         }
 
         /**
@@ -1311,14 +1312,14 @@ public class Player extends Creature
          */
         public boolean isFriend(Player player)
         {
-                return (player.getCommonData().getRace() == getCommonData().getRace() && !getController().isDueling(player))
-                        || player.getAdminNeutral();
+                return (player.playerCommonData.getRace() == playerCommonData.getRace() && !getController().isDueling(player))
+                        || player.isAdminNeutral;
         }
 
         @Override
         public String getTribe()
         {
-                switch(getCommonData().getRace())
+                switch(playerCommonData.getRace())
                 {
                         case ELYOS:
                                 return "PC";
@@ -1337,7 +1338,7 @@ public class Player extends Creature
         public boolean isAggroFrom(Npc npc)
         {
                 //neutral dont get aggro
-                if (getAdminNeutral())
+                if (isAdminNeutral)
                         return false;
 
                 String currentTribe = npc.getTribe();
@@ -1355,7 +1356,7 @@ public class Player extends Creature
          */
         public boolean isAggroIconTo(String npcTribe)
         {
-                switch(getCommonData().getRace())
+                switch(playerCommonData.getRace())
                 {
                         case ELYOS:
                                 if(DataManager.TRIBE_RELATIONS_DATA.isGuardDark(npcTribe)
@@ -1565,7 +1566,7 @@ public class Player extends Creature
                         catch(Exception ex)
                         {
                                 log
-                                        .error("Exception during periodic saving of player " + player.getName() + " " + ex.getCause() != null ? ex
+                                        .error("Exception during periodic saving of player " + player.getName() + ' ' + ex.getCause() != null ? ex
                                                 .getCause().getMessage()
                                                 : "null");
                         }
@@ -1592,7 +1593,7 @@ public class Player extends Creature
                         catch(Exception ex)
                         {
                                 log
-                                        .error("Exception during periodic saving of player items " + player.getName() + " " + ex.getCause() != null ? ex
+                                        .error("Exception during periodic saving of player items " + player.getName() + ' ' + ex.getCause() != null ? ex
                                                 .getCause().getMessage()
                                                 : "null");
                         }
@@ -1649,15 +1650,15 @@ public class Player extends Creature
                 switch(chanId)
                 {
                         case CHAT_FIXED_ON_ASMOS:
-                                return "." + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_ASMOS);
+                                return '.' + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_ASMOS);
                         case CHAT_FIXED_ON_ELYOS:
-                                return "." + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_ELYOS);
+                                return '.' + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_ELYOS);
 						case CHAT_FIXED_ON_ADMIN:
-								return "." + LanguageHandler.translate(CustomMessageId.CHANNEL_NAME_ADMIN);
+								return '.' + LanguageHandler.translate(CustomMessageId.CHANNEL_NAME_ADMIN);
                         case CHAT_FIXED_ON_WORLD:
-                                return "." + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_WORLD);
+                                return '.' + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_WORLD);
                         case CHAT_FIXED_ON_BOTH:
-                                return "." + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_BOTH);
+                                return '.' + LanguageHandler.translate(CustomMessageId.CHANNEL_COMMAND_BOTH);
                 }
                 return "";
         }
@@ -1678,7 +1679,7 @@ public class Player extends Creature
 
         public boolean banFromWorld(String by, String reason, long duration)
         {
-                if(isBannedFromWorld())
+                if(bannedFromWorld)
                 {
                         return false;
                 }
@@ -1714,7 +1715,7 @@ public class Player extends Creature
 
         public void scheduleUnbanFromWorld()
         {
-                if(!isBannedFromWorld())
+                if(!bannedFromWorld)
                 {
                         throw new RuntimeException("scheduling unban task when not banned from "
                                 + getChanCommand(CHAT_FIX_WORLD_CHANNEL));
@@ -1777,7 +1778,7 @@ public class Player extends Creature
                 long elapsed = 0;
                 if(bannedFromWorldDuring == 0)
                 {
-                        return "indeterminé";
+                        return "indeterminР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р Р‹Р РЋРІвЂћСћР В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р Р†РІР‚С›РЎС›Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В©";
                 }
                 else
                 {

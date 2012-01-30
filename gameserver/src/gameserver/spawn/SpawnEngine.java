@@ -1,22 +1,22 @@
-/**
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.spawn;
@@ -68,19 +68,22 @@ public class SpawnEngine
 	{
 		this.spawnAll();
 	}
-		public VisibleObject spawnObject(SpawnTemplate spawn, int instanceIndex, boolean isCustom)
+	
+	public VisibleObject spawnObject(SpawnTemplate spawn, int instanceIndex, boolean isCustom)
 	{
 		VisibleObject vObject = spawnObject(spawn, instanceIndex);
+		
 		if (vObject != null)
 		{
 			vObject.setCustom(isCustom);
 		}
 		return vObject;
 	}
-		public VisibleObject spawnObject(SpawnTemplate spawn, int instanceIndex)
+	
+	public VisibleObject spawnObject(SpawnTemplate spawn, int instanceIndex)
 	{
-		
 		VisibleObjectTemplate template = null;
+		
 		if (spawn == null)
 		{
 			return null;
@@ -96,17 +99,21 @@ public class SpawnEngine
 				return null;
 			gatherableCounter++;
 		}
+		
 		else
 		{
 			template = npcData.getNpcTemplate(objectId);
-			if(template == null)
-			{
-				log.error("No template for NPC " + String.valueOf(objectId));
-				return null;
-			}
+			
+		if(template == null)
+		{
+			log.error("No template for NPC " + String.valueOf(objectId));
+			return null;
+		}
 			npcCounter++;
 		}
+		
 		IDFactory iDFactory = IDFactory.getInstance();
+		
 		if(template instanceof NpcTemplate)
 		{
 			NpcType npcType = ((NpcTemplate) template).getNpcType();
@@ -118,13 +125,11 @@ public class SpawnEngine
 				{
 					case AGGRESSIVE:
 					case ATTACKABLE:
-						npc = new Monster(iDFactory.nextId(), new MonsterController(),
-							spawn, template);
+						npc = new Monster(iDFactory.nextId(), new MonsterController(), spawn, template);
 						npc.setKnownlist(new NpcKnownList(npc));
 						break;
 					case POSTBOX:
-						npc = new Npc(iDFactory.nextId(), new PostboxController(), spawn,
-							template);
+						npc = new Npc(iDFactory.nextId(), new PostboxController(), spawn, template);
 						npc.setKnownlist(new StaticObjectKnownList(npc));
 						break;
 					case RESURRECT:
@@ -134,121 +139,123 @@ public class SpawnEngine
 						npc.setKnownlist(new StaticObjectKnownList(npc));
 						break;
 					case USEITEM:
-						npc = new Npc(iDFactory.nextId(), new ActionitemController(),
-							spawn, template);
+						npc = new Npc(iDFactory.nextId(), new ActionitemController(), spawn, template);
 						npc.setKnownlist(new StaticObjectKnownList(npc));
 						break;
 					case PORTAL:
-						npc = new Npc(iDFactory.nextId(), new PortalController(), spawn,
-							template);
+						npc = new Npc(iDFactory.nextId(), new PortalController(), spawn, template);
 						npc.setKnownlist(new StaticObjectKnownList(npc));
 						break;
 					case CHEST:
-						npc = new Npc(iDFactory.nextId(), new ChestController(), spawn,
-							template);
+						npc = new Npc(iDFactory.nextId(), new ChestController(), spawn, template);
 						npc.setKnownlist(new NpcKnownList(npc));
 						break;
 					case NEUTRAL:
 					default:
-						npc = new Npc(iDFactory.nextId(), new NpcController(), spawn,
-							template);
+						npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, template);
 						npc.setKnownlist(new NpcKnownList(npc));
 					break;
 				}
 			}
+			
 			else
 			{
-				npc = new Npc(iDFactory.nextId(), new NpcController(), spawn,
-					template);
+				npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, template);
 				npc.setKnownlist(new NpcKnownList(npc));
 			}
+			
 			if (objectId == 215402 || objectId == 215403 || objectId == 215404 || objectId == 215405 || objectId == 798378 || objectId == 798379)
 			{
 				npc = null;
-				npc = new Npc(iDFactory.nextId(), new SteelRakeController(),
-					spawn, template);
+				npc = new Npc(iDFactory.nextId(), new SteelRakeController(), spawn, template);
 				npc.setKnownlist(new NpcKnownList(npc));
 			}
+			
 			else if (objectId == 700548 || objectId == 730207)
 			{
 				npc = null;
-				npc = new Npc(iDFactory.nextId(), new SteelRakeController(),
-					spawn, template);
+				npc = new Npc(iDFactory.nextId(), new SteelRakeController(), spawn, template);
 				npc.setKnownlist(new StaticObjectKnownList(npc));
 			}
-            if (objectId == 730321) {
-                npc = new Npc(iDFactory.nextId(), new HaramelController(),
-                        spawn, template);
+            
+			if (objectId == 730321) 
+			{
+                npc = new Npc(iDFactory.nextId(), new HaramelController(), spawn, template);
                 npc.setKnownlist(new StaticObjectKnownList(npc));
             }
-            if (objectId == 216922 || objectId == 700852) {
-                npc = new Npc(iDFactory.nextId(), new HaramelController(),
-                        spawn, template);
+            
+			if (objectId == 216922 || objectId == 700852) 
+			{
+                npc = new Npc(iDFactory.nextId(), new HaramelController(), spawn, template);
                 npc.setKnownlist(new NpcKnownList(npc));
             }
+			
 			else if (objectId == 799517 || objectId == 799518 || objectId == 799519 || objectId == 799520 || objectId == 730275)
 			{
 				npc = null;
-				npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(),
-					spawn, template);
+				npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(), spawn, template);
 				npc.setKnownlist(new StaticObjectKnownList(npc));
 			}
-            if (objectId == 216583 || objectId == 799518) {
-                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(),
-                        spawn, template);
+            
+			if (objectId == 216583 || objectId == 799518) 
+			{
+                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(), spawn, template);
                 npc.setKnownlist(new NpcKnownList(npc));
             }
-                        if (objectId == 216584 || objectId == 799519) {
-                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(),
-                        spawn, template);
+			
+			if (objectId == 216584 || objectId == 799519) 
+			{
+                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(), spawn, template);
                 npc.setKnownlist(new NpcKnownList(npc));
             }
-                        if (objectId == 216585 || objectId == 799520) {
-                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(),
-                        spawn, template);
+			
+			if (objectId == 216585 || objectId == 799520) 
+			{
+                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(), spawn, template);
                 npc.setKnownlist(new NpcKnownList(npc));
             }
-                        if (objectId == 216263 || objectId == 730286 || objectId == 730275) {
-                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(),
-                        spawn, template);
+			
+			if (objectId == 216263 || objectId == 730286 || objectId == 730275) 
+			{
+                npc = new Npc(iDFactory.nextId(), new BeshmundirTempleController(), spawn, template);
                 npc.setKnownlist(new NpcKnownList(npc));
             }			
+			
 			else if (objectId == 700926 || objectId == 700924 || objectId == 700927 || objectId == 700922 || objectId == 730339 || objectId == 730336 || objectId == 730338 || objectId == 730337)
 			{
 				npc = null;
-				npc = new Npc(iDFactory.nextId(), new KromedesTrialController(),
-					spawn, template);
+				npc = new Npc(iDFactory.nextId(), new KromedesTrialController(), spawn, template);
 				npc.setKnownlist(new StaticObjectKnownList(npc));
 			}
-  			else if (objectId == 799567 || objectId == 799568 || objectId == 799569 || objectId == 799570 || objectId == 799571 || objectId == 799572
+  			
+			else if (objectId == 799567 || objectId == 799568 || objectId == 799569 || objectId == 799570 || objectId == 799571 || objectId == 799572
 			|| objectId == 205331 || objectId == 205332 || objectId == 205333 || objectId == 205334 || objectId == 205335 || objectId == 205336 || objectId == 205337
 			|| objectId == 205338 || objectId == 205339 || objectId == 205340 || objectId == 205341 || objectId == 205342 || objectId == 205343 || objectId == 205344 || objectId == 799573
 			|| objectId == 205426 || objectId == 205427 || objectId == 205428 || objectId == 205429 || objectId == 205430 || objectId == 205431)
   			{
-  			  npc = null;
-  			  npc = new Npc(iDFactory.nextId(), new EmpyreanCrucibleController(),
-  			   spawn, template);
-  			  npc.setKnownlist(new StaticObjectKnownList(npc));
+				npc = null;
+				npc = new Npc(iDFactory.nextId(), new EmpyreanCrucibleController(), spawn, template);
+				npc.setKnownlist(new StaticObjectKnownList(npc));
 			}
+			
 			if (objectId == 730218 || objectId == 730219)
 			{
 				npc = null;
-				npc = new Npc(iDFactory.nextId(), new RestrictedPortalController(),
-					spawn, template);
+				npc = new Npc(iDFactory.nextId(), new RestrictedPortalController(), spawn, template);
 				npc.setKnownlist(new StaticObjectKnownList(npc));
 			}
+			
 			if (objectId == 212649 || objectId == 204649 || objectId == 204020 || objectId == 278593 || objectId == 278599 || objectId == 278600 || objectId == 278601 || objectId == 278602 || objectId == 278603 || objectId == 278604 || objectId == 278605)
 			{
 				npc = null;
-				npc = new Monster(iDFactory.nextId(), new MonsterController(),
-					spawn, template);
+				npc = new Monster(iDFactory.nextId(), new MonsterController(), spawn, template);
 				npc.setKnownlist(new NpcKnownList(npc));
 			}
+			
 			if(objectId == 258221 || objectId == 258219)
 			{
 				npc = null;
-				npc = new Monster(iDFactory.nextId(), new MonsterController(),
-					spawn, template);
+				npc = new Monster(iDFactory.nextId(), new MonsterController(), spawn, template);
 				npc.setKnownlist(new NpcKnownList(npc));
 			}
 
@@ -259,6 +266,7 @@ public class SpawnEngine
 			
 			return npc;
 		}
+		
 		else if(template instanceof GatherableTemplate)
 		{
 			Gatherable gatherable = new Gatherable(spawn, template, iDFactory.nextId(), new GatherableController());
@@ -270,7 +278,6 @@ public class SpawnEngine
 	}
 
 	/**
-	 * 
 	 * @param spawn
 	 * @param instanceIndex
 	 * @param creator
@@ -280,8 +287,7 @@ public class SpawnEngine
 	{
 		int objectId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
-		Trap trap = new Trap(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn,
-			npcTemplate);
+		Trap trap = new Trap(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn, npcTemplate);
 		trap.setKnownlist(new NpcKnownList(trap));
 		trap.setEffectController(new EffectController(trap));
 		trap.setCreator(creator);
@@ -353,6 +359,7 @@ public class SpawnEngine
 	public Artifact spawnArtifact(int artifactId, SiegeRace race, ArtifactTemplate template)
 	{
 		int mapId = DataManager.SIEGE_LOCATION_DATA.getSiegeLocations().get(artifactId).getLocationTemplate().getWorldId();
+		
 		// Spawn artifact itself
 		int artifactNpcId = template.getBaseInfo().getNpcId(race);
 		SpawnTemplate artifactSpawnTemplate = addNewSpawn(mapId, 1, artifactNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
@@ -362,7 +369,7 @@ public class SpawnEngine
 		af.getController().onRespawn();
 		af.setTemplate(template);
 		bringIntoWorld(af, artifactSpawnTemplate, 1);
-				
+
 		// Spawn and register protector
 		if(template.getProtectorTemplate() != null)
 		{
@@ -396,7 +403,6 @@ public class SpawnEngine
 	}
 
 	/**
-	 * 
 	 * @param spawn
 	 * @param instanceIndex
 	 * @param creator
@@ -426,8 +432,7 @@ public class SpawnEngine
 	{
 		int npcId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate template = DataManager.NPC_DATA.getNpcTemplate(npcId);
-		Kisk kisk = new Kisk(IDFactory.getInstance().nextId(), new KiskController(),
-			spawn, template, creator);
+		Kisk kisk = new Kisk(IDFactory.getInstance().nextId(), new KiskController(), spawn, template, creator);
 		kisk.setKnownlist(new StaticObjectKnownList(kisk));
 		kisk.setEffectController(new EffectController(kisk));
 		kisk.getController().onRespawn();
@@ -436,7 +441,6 @@ public class SpawnEngine
 	}
 	
 	/**
-	 * 
 	 * @param spawn
 	 * @param instanceIndex
 	 * @param creator
@@ -487,7 +491,6 @@ public class SpawnEngine
 	}
 	
 	/**
-	 * 
 	 * @param spawn
 	 * @param instanceIndex
 	 * @param creator
@@ -498,8 +501,7 @@ public class SpawnEngine
 	{
 		int objectId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
-		Totem totem = new Totem(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn,
-			npcTemplate);
+		Totem totem = new Totem(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn, npcTemplate);
 		totem.setKnownlist(new NpcKnownList(totem));
 		totem.setEffectController(new EffectController(totem));
 		totem.setCreator(creator);
@@ -510,7 +512,6 @@ public class SpawnEngine
 		return totem;
 	}
 	/**
-     * 
      * @param spawn
      * @param instanceIndex
      * @param creator
@@ -519,34 +520,31 @@ public class SpawnEngine
      */
     public Homing spawnHoming(SpawnTemplate spawn, int instanceIndex, Creature creator, int attackCount, int skillId, byte masterLevel)
     {
-            int objectId = spawn.getSpawnGroup().getNpcid();
-            NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
-            //sets players lvl till we figure out retail like lvls
-            npcTemplate.setLevel(masterLevel);
-            Homing homing = new Homing(IDFactory.getInstance().nextId(), new HomingController(), spawn,
-                    npcTemplate);
-            homing.setState(CreatureState.WEAPON_EQUIPPED);
-            homing.setKnownlist(new NpcKnownList(homing));
-            homing.setEffectController(new EffectController(homing));
-            homing.setCreator(creator);
-            homing.setAttackCount(attackCount);
-            homing.setSkillId(skillId);
-            homing.setTarget(creator.getTarget());
-            //set accurancy and magical accurancy, completly custom: lvl 55 has 2200 both
-            homing.getGameStats().setStat(StatEnum.MAIN_HAND_ACCURACY, Math.round((float)homing.getLevel()*(2200f/55f)));
-            homing.getGameStats().setStat(StatEnum.MAGICAL_ACCURACY, Math.round((float)homing.getLevel()*(2200f/55f)));
-            //set custom power to prevent really low dmg of energies/servants
-            //lvl 55 has 40 power(aprox. 200 per hit on a player)
-            if (homing.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK) < (homing.getLevel()*40/55))
-            	homing.getGameStats().setStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK, Math.round((float)homing.getLevel()*(40f/55f)));
-            homing.getController().onRespawn();
-            bringIntoWorld(homing, spawn, instanceIndex);
-            return homing;
+		int objectId = spawn.getSpawnGroup().getNpcid();
+		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
+		//sets players lvl till we figure out retail like lvls
+		npcTemplate.setLevel(masterLevel);
+		Homing homing = new Homing(IDFactory.getInstance().nextId(), new HomingController(), spawn, npcTemplate);
+		homing.setState(CreatureState.WEAPON_EQUIPPED);
+		homing.setKnownlist(new NpcKnownList(homing));
+		homing.setEffectController(new EffectController(homing));
+		homing.setCreator(creator);
+		homing.setAttackCount(attackCount);
+		homing.setSkillId(skillId);
+		homing.setTarget(creator.getTarget());
+		//set accurancy and magical accurancy, completly custom: lvl 55 has 2200 both
+		homing.getGameStats().setStat(StatEnum.MAIN_HAND_ACCURACY, Math.round((float)homing.getLevel()*(2200f/55f)));
+		homing.getGameStats().setStat(StatEnum.MAGICAL_ACCURACY, Math.round((float)homing.getLevel()*(2200f/55f)));
+		//set custom power to prevent really low dmg of energies/servants
+		//lvl 55 has 40 power(aprox. 200 per hit on a player)
+		if (homing.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK) < (homing.getLevel()*40/55))
+			homing.getGameStats().setStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK, Math.round((float)homing.getLevel()*(40f/55f)));
+		homing.getController().onRespawn();
+		bringIntoWorld(homing, spawn, instanceIndex);
+		return homing;
     }
 
-	
 	/**
-	 * 
 	 * @param creator
 	 * @param npcId
 	 * @return
@@ -576,7 +574,6 @@ public class SpawnEngine
 	}
 
 	/**
-	 * 
 	 * @param worldId
 	 * @param objectId
 	 * @param x
@@ -588,10 +585,9 @@ public class SpawnEngine
 	 * @return
 	 */
 	private SpawnTemplate createSpawnTemplate(int worldId, int objectId, float x, float y, float z, byte heading,
-		int walkerid, int randomwalk)
+	int walkerid, int randomwalk)
 	{
 		SpawnTemplate spawnTemplate = new SpawnTemplate(x, y, z, heading, walkerid, randomwalk, 0);
-
 		SpawnGroup spawnGroup = new SpawnGroup(worldId, objectId, 295, 1);
 		spawnTemplate.setSpawnGroup(spawnGroup);
 		spawnGroup.getObjects().add(spawnTemplate);
@@ -618,7 +614,7 @@ public class SpawnEngine
 		byte heading, int walkerid, int randomwalk, boolean noRespawn)
 	{
 		return this
-			.addNewSpawn(worldId, instanceId, objectId, x, y, z, heading, walkerid, randomwalk, noRespawn, false);
+		.addNewSpawn(worldId, instanceId, objectId, x, y, z, heading, walkerid, randomwalk, noRespawn, false);
 	}
 
 	/**
@@ -637,7 +633,7 @@ public class SpawnEngine
 	 * @return SpawnTemplate
 	 */
 	public SpawnTemplate addNewSpawn(int worldId, int instanceId, int objectId, float x, float y, float z,
-		byte heading, int walkerid, int randomwalk, boolean noRespawn, boolean isNewSpawn)
+	byte heading, int walkerid, int randomwalk, boolean noRespawn, boolean isNewSpawn)
 	{
 		SpawnTemplate spawnTemplate = createSpawnTemplate(worldId, objectId, x, y, z, heading, walkerid, randomwalk);
 
@@ -718,7 +714,7 @@ public class SpawnEngine
 
 		List<SpawnGroup> worldSpawns = DataManager.SPAWNS_DATA.getSpawnsForWorld(worldId);
 
-		if(worldSpawns == null || worldSpawns.size() == 0)
+		if(worldSpawns == null || worldSpawns.isEmpty())
 			return;
 
 		int instanceSpawnCounter = 0;

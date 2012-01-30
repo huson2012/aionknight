@@ -119,14 +119,8 @@
 	</xs:simpleType>
 
 	<xs:complexType name="QuestStartCondition">
-		<xs:sequence>
-			<xs:element name="quest" type="QuestStep" minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="QuestStep">
-		<xs:attribute name="id" type="xs:int" />
-		<xs:attribute name="rewardNo" type="xs:int" />
+		<xs:attribute name="quest" type="xs:int" />
+		<xs:attribute name="step" type="xs:int" />
 	</xs:complexType>
 
 	<xs:simpleType name="Gender">

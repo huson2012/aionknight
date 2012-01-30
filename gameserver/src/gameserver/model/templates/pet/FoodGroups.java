@@ -1,46 +1,46 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published
- * by the Free Software Foundation, either version 3 of the License,
- * or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a  copy  of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.model.templates.pet;
 
 import gameserver.dataholders.DataManager;
 import gameserver.model.templates.item.ItemQuality;
 import gameserver.model.templates.item.ItemTemplate;
 import gnu.trove.TIntObjectHashMap;
-
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-
-/**
- * @author Rolandas
- *
- */
+import java.util.regex.Pattern;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FoodGroups", propOrder = { "groups" })
 
 public class FoodGroups 
 {
-	@XmlElement(name="group")
-	protected List<FoodGroups.Group> groups;
+    private static final Pattern COMPILE = Pattern.compile(",");
+    @XmlElement(name="group")
+	protected List<Group> groups;
 
 	@XmlTransient
 	TIntObjectHashMap<Set<FoodType>> allFood;
@@ -51,27 +51,31 @@ public class FoodGroups
 
 		for (Group group : this.groups)
 		{
-			String[] ids = group.getValue().split(",");
+			String[] ids = COMPILE.split(group.getValue());
 
-			for (int i = 0; i < ids.length; i++)
-			{
-				try
-				{
-					int value = Integer.parseInt(ids[i]);
-					Set<FoodType> set;
-					if (allFood.containsKey(value))
-						set = allFood.get(value);
-					else
-					{
-						set = new HashSet<FoodType>();
-						allFood.put(value, set);
-					}
-					set.add(group.getType());
-				}
-				catch (Exception e)
-				{
-				}
-			}
+            for (String id : ids)
+            {
+                try
+                {
+                    int value = Integer.parseInt(id);
+                    Set<FoodType> set;
+                    if (allFood.containsKey(value))
+                    {
+                        set = allFood.get(value);
+                    }
+                    else
+                    {
+                        set = new HashSet<FoodType>();
+                        allFood.put(value, set);
+                    }
+
+                    set.add(group.getType());
+                }
+                catch (Exception e)
+                {
+
+                }
+            }
 		}
 		
 		this.groups.clear();

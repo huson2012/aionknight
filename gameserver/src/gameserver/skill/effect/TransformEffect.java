@@ -135,9 +135,9 @@ public abstract class TransformEffect extends EffectTemplate
 				{
 					if (template instanceof TransformEffect)
 					{
-						if (((TransformEffect)template).getTransformId() == model)
+						if (((TransformEffect) template).model == model)
 							continue;
-						newModel = ((TransformEffect)template).getTransformId();
+						newModel = ((TransformEffect) template).model;
 						break;
 					}
 				}

@@ -1,5 +1,25 @@
-package gameserver.ai.npcai;
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
+ */
 
+package gameserver.ai.npcai;
 
 import gameserver.ai.AI;
 import gameserver.ai.desires.AbstractDesire;
@@ -17,12 +37,6 @@ import gameserver.model.gameobjects.stats.StatEnum;
 import gameserver.skill.SkillEngine;
 import gameserver.skill.model.Skill;
 
-
-
-/**
-
- * 
- */
 public class HomingAi extends NpcAi
 {
 	public HomingAi()
@@ -69,7 +83,7 @@ public class HomingAi extends NpcAi
 		@Override
 		public void handleState(AIState state, AI<?> ai)
 		{
-			// ai logic is rather strange but ok till global refactoring
+			// AI logic is rather strange but ok till global refactoring
 			ai.clearDesires();
 			Homing homing = (Homing) ai.getOwner();
 			Creature target = (Creature) homing.getOwner().getTarget();
@@ -88,8 +102,10 @@ public class HomingAi extends NpcAi
 			ai.addDesire(new MoveToTargetDesire(homing, target, ai.getOwner().getGameStats().getCurrentStat(StatEnum.ATTACK_RANGE)/1000f, AIState.ATTACKING.getPriority()));
 			if (homing.getSkillId() == 0)
 				ai.addDesire(new HomingAttackDesire(homing, target, homing.getAttackCount(), AIState.ATTACKING.getPriority()));
-			else//skillId != 0, Call Condor, etc
-				ai.addDesire(new HomingSkillUseDesire(homing, target, homing.getAttackCount(), AIState.ATTACKING.getPriority()));
+			
+			else // SkillId != 0, Call Condor, etc
+			
+			ai.addDesire(new HomingSkillUseDesire(homing, target, homing.getAttackCount(), AIState.ATTACKING.getPriority()));
 
 			if(!ai.isScheduled())
 				ai.schedule();
@@ -111,7 +127,8 @@ public class HomingAi extends NpcAi
 				owner.getLifeStats().reduceHp(10000, owner);
 				return false;
 			}
-			//despawn if creator == null
+			
+			// Despawn if creator == null
 			if (((Homing)owner).getActingCreature() == null)
 			{
 				owner.getLifeStats().reduceHp(10000, owner);
@@ -131,14 +148,14 @@ public class HomingAi extends NpcAi
 		/**
 		 * Homing object
 		 */
-		private Homing		owner;
+		private Homing owner;
+		
 		/**
 		 * Target of homing
 		 */
-		private Creature	target;
+		private Creature target;
 
 		/**
-		 * 
 		 * @param desirePower
 		 * @param owner
 		 */
@@ -157,7 +174,7 @@ public class HomingAi extends NpcAi
 				owner.getLifeStats().reduceHp(10000, owner);
 				return false;
 			}
-			//despawn if creator == null
+			// Despawn if creator == null
 			if (((Homing)owner).getActingCreature() == null)
 			{
 				owner.getLifeStats().reduceHp(10000, owner);
@@ -178,15 +195,14 @@ public class HomingAi extends NpcAi
 		@Override
 		public int getExecutionInterval()
 		{
-			//TODO found out interval for call condor etc
+			// TODO: Found out interval for call condor etc
 			return 4;
 		}
 
 		@Override
 		public void onClear()
 		{
-			// TODO Auto-generated method stub
+			// TODO: Auto-generated method stub
 		}
 	}
-
 }

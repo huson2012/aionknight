@@ -1,50 +1,50 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.utils;
 
 import org.apache.log4j.Logger;
 
-public class ThreadUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
+class ThreadUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler
 {
-	/**
-	 * Logger for this class.
-	 */
-	private static final Logger	log	= Logger.getLogger(ThreadUncaughtExceptionHandler.class);
+    /**
+     * Logger for this class.
+     */
+    private static final Logger log = Logger.getLogger(ThreadUncaughtExceptionHandler.class);
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public void uncaughtException(Thread t, Throwable e)
-	{
-		log.error("Critical Error - Thread: " + t.getName() + " terminated abnormaly: " + e, e);
-		if (e instanceof OutOfMemoryError)
-		{
-			log.error("Server went out of memory, trying running GC to free some bytes ...", e);
-			// TODO maybe restart thread
-			System.gc();
-			System.runFinalization();
-			log.info("GC pass completed successfully.");
-		}
-		// TODO! some threads should be "restarted" on error
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void uncaughtException(Thread t, Throwable e)
+    {
+        log.error("Critical Error - Thread: " + t.getName() + " terminated abnormaly: " + e, e);
+        if (e instanceof OutOfMemoryError)
+        {
+            log.error("Server went out of memory, trying running GC to free some bytes ...", e);
+            // TODO maybe restart thread
+            System.gc();
+            System.runFinalization();
+            log.info("GC pass completed successfully.");
+        }
+        // TODO! some threads should be "restarted" on error
+    }
 }

@@ -199,7 +199,6 @@ public class GatherableTemplate extends VisibleObjectTemplate
 	@Override
 	public String getName()
 	{
-		String name = "";
-		return name;
+		return "";
 	}
 }

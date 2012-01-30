@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers;
@@ -185,10 +185,11 @@ public class ArtifactController extends NpcController
 		
 		Logger.getLogger(ArtifactController.class).debug("Artifact " + getOwner().getLocationId() + " activated by " + player.getName());
         SkillTemplate sTemplate = DataManager.SKILL_DATA.getSkillTemplate(getOwner().getTemplate().getEffectTemplate().getSkillId());
+		
 		// Start Activation
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(getOwner(), player, stone, 0), true);
 		broadcastActivationEventToAllies(player, ArtifactActivationEvent.START_ACTIVATION);
-		setStatus(ArtifactStatus.ACTIVATING);
+        status = ArtifactStatus.ACTIVATING;
 		
 		ThreadPoolManager.getInstance().schedule(new Runnable(){
 			@Override
@@ -212,7 +213,7 @@ public class ArtifactController extends NpcController
 						@Override
 						public void run()
 						{
-							// broadcast artifact disabled
+							// Broadcast artifact disabled
 							broadcastActivationEventToAllies(player, ArtifactActivationEvent.DISABLE);
 							setStatus(ArtifactStatus.IDLE);
 						}
@@ -237,7 +238,6 @@ public class ArtifactController extends NpcController
 				}
 			}
 		});
-
 	}
 	
 	/**
@@ -298,12 +298,12 @@ public class ArtifactController extends NpcController
 	// This function is called after skill effected list has been populated with players
 	private void castSkill()
 	{
-		//artifact attack by newlife
+		// Artifact attack by newlife
 		PacketSendUtility.broadcastPacket(getOwner(),
 		         new SM_EMOTION(getOwner(), EmotionType.ATTACKMODE, 97, 0));
 		
 
-		//Cast the Artifact Skill 
+		// Cast the Artifact Skill 
 		for(Player p : World.getInstance().getPlayers())
 		{
 			Skill skill = SkillEngine.getInstance().getSkill(getOwner(), skillTemplate.getSkillId(), 1, getOwner());
@@ -315,21 +315,17 @@ public class ArtifactController extends NpcController
 	}
 			skill.endCast();
 		}
-		//pauza
+		// Pause
 		try {
 			Thread.sleep(15000);
 		} catch (InterruptedException e) {
 		}
-		//perehod v son by newlife
+		// Sleep mode by newlife
 		PacketSendUtility.broadcastPacket(getOwner(),
 		         new SM_EMOTION(getOwner(), EmotionType.NEUTRALMODE, 97, 0));
-
-
-
 	}
 	
 	/**
-	 * 
 	 * @param player
 	 * @return
 	 * 
@@ -344,11 +340,11 @@ public class ArtifactController extends NpcController
 		int artRegion = getOwner().getActiveRegion().getRegionId();
 		int playerRegion = player.getActiveRegion().getRegionId();
 		
-		//NOTE: check if player already has effect from this artifact
+		// NOTE: Check if player already has effect from this artifact
 		if(player.getEffectController() != null && player.getEffectController().hasAbnormalEffect(skillTemplate.getSkillId()))
 			return false;
 		
-		//NOTE: BUFF & CHANT are applyes only on the players of same race(positive effects)
+		// NOTE: BUFF & CHANT are applyes only on the players of same race(positive effects)
 		if (skillTemplate.getSubType()==SkillSubType.BUFF || skillTemplate.getSubType()==SkillSubType.CHANT || skillTemplate.getSubType()==SkillSubType.NONE)
 		{
 			if (getOwner().getObjectTemplate().getRace()==player.getCommonData().getRace())
@@ -360,8 +356,8 @@ public class ArtifactController extends NpcController
 			}
 			return false;
 		}
-		//NOTE: All other SkillSubTypes applyes only on enemy race(negative effects)_
-		//TODO: Hit count on enemyes
+		// NOTE: All other SkillSubTypes applyes only on enemy race(negative effects)_
+		// TODO: Hit count on enemyes
 		else
 		{
 			if (getOwner().getObjectTemplate().getRace()!=player.getCommonData().getRace())
