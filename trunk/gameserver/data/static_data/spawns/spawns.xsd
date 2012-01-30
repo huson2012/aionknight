@@ -11,12 +11,12 @@
   ===============================================================================================================
   Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
   Веб-cайт разработчиков: http://aion-knight.ru
+  =============================================
+  Последняя редакция: 19/01/2012 (Frost)
    
  -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
 	<xs:include schemaLocation="../import.xsd" />
-
 	<xs:element name="spawns">
 		<xs:complexType>
 			<xs:sequence>
@@ -26,7 +26,6 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-
 	<xs:complexType name="SpawnGroup">
 		<xs:sequence>
 			<xs:element name="object" minOccurs="0" maxOccurs="unbounded">
@@ -55,26 +54,22 @@
 		<xs:attribute name="npcid_li" type="xs:int" default="0"/>
 		<xs:attribute name="boss" type="xs:boolean" default="false"/>
 	</xs:complexType>
-	
 	<xs:simpleType name="Heading">
 		<xs:restriction base="xs:byte">
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="120"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
 	<xs:simpleType name="SpawnHandlerType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="RIFT" />
 			<xs:enumeration value="STATIC" />
 		</xs:restriction>
 	</xs:simpleType>
-
 	<xs:simpleType name="SpawnTime">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="DAY" />
 			<xs:enumeration value="NIGHT" />
 		</xs:restriction>
 	</xs:simpleType>
-	
 </xs:schema>

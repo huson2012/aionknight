@@ -1,24 +1,27 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
 
 import org.apache.log4j.Logger;
-
 import commons.database.DatabaseFactory;
 import gameserver.controllers.SummonController.UnsummonType;
 import gameserver.model.EmotionType;
@@ -41,7 +44,6 @@ import gameserver.utils.ThreadPoolManager;
 import gameserver.model.gameobjects.stats.modifiers.Executor;
 import gameserver.world.World;
 import commons.utils.Rnd;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -311,11 +313,9 @@ public class EmpyreanCrucibleService
 
 	public static boolean isInEmpyreanCrucible(int worldId)
 	{
-		if(worldId == mapId)
-			return true;
+        return worldId == mapId;
 
-		return false;
-	}
+    }
 	/**
 	 * @param player
 	 * @param lastAttacker
@@ -400,14 +400,14 @@ public class EmpyreanCrucibleService
         TeleportService.teleportTo(paramPlayer, 120080000,  571 + i, 260 + j, 93.480003356933594F, 2200);
       else
         TeleportService.teleportTo(paramPlayer, 110070000,  510 + i, 230 + j, 126.97586822509766F, 2200);
-    PlayerGroup localPlayerGroup = paramPlayer.getPlayerGroup();
-    Iterator localIterator = localPlayerGroup.getMembers().iterator();
-    while (localIterator.hasNext())
-    {
-      Player localPlayer = (Player)localIterator.next();
-      if (!(localPlayer.equals(paramPlayer)))
-        PacketSendUtility.sendPacket(localPlayer, SM_SYSTEM_MESSAGE.STR_MSG_FRIENDLY_LEAVE_IDARENA(paramPlayer.getName()));
-    }
+
+      PlayerGroup localPlayerGroup = paramPlayer.getPlayerGroup();
+
+      for (Player localPlayer : localPlayerGroup.getMembers())
+      {
+          if (!(localPlayer.equals(paramPlayer)))
+              PacketSendUtility.sendPacket(localPlayer, SM_SYSTEM_MESSAGE.STR_MSG_FRIENDLY_LEAVE_IDARENA(paramPlayer.getName()));
+      }
     paramPlayer.setInstancePlayerScore(0);
   }
 

@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -70,7 +74,7 @@ public class EmpyreanCrucibleInstanceService
             SpawnEngine.getInstance().spawnObject(AdministratorArminos, group.getGroupLeader().getInstanceId());
         }
 		
-		// Round-7 kill  B�h�moth de la Montagne rocheuse go round8
+		// Round-7 kill  BР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В Р вЂ№Р В Р вЂ Р В РІР‚С™Р Р†Р вЂљРЎСљР В Р’В Р вЂ™Р’В Р В Р’В Р В РІР‚в„–Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р вЂ Р В РІР‚С™Р РЋРЎС™Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В РІР‚в„ўР вЂ™Р’В¦hР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В Р вЂ№Р В Р вЂ Р В РІР‚С™Р Р†Р вЂљРЎСљР В Р’В Р вЂ™Р’В Р В Р’В Р В РІР‚в„–Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р вЂ Р В РІР‚С™Р РЋРЎС™Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В РІР‚в„ўР вЂ™Р’В¦moth de la Montagne rocheuse go round8
         if(monster.getObjectTemplate().getTemplateId() == 217598) {
             SpawnTemplate Andre;
             Andre = SpawnEngine.getInstance().addNewSpawn(300300000, group.getGroupLeader().getInstanceId(), 217594, 1625.8f, 148.939f, 126.0f, (byte)15, 0, 0, true);
@@ -84,7 +88,7 @@ public class EmpyreanCrucibleInstanceService
             SpawnEngine.getInstance().spawnObject(CrabNorris, group.getGroupLeader().getInstanceId());
         }
 		
-		// Round-9 kill Ing�nieur Lahulahu et parler a l'assistant administrateur go round10
+		// Round-9 kill IngР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В Р вЂ№Р В Р вЂ Р В РІР‚С™Р Р†Р вЂљРЎСљР В Р’В Р вЂ™Р’В Р В Р’В Р В РІР‚в„–Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р вЂ Р В РІР‚С™Р РЋРЎС™Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В РІР‚в„ўР вЂ™Р’В¦nieur Lahulahu et parler a l'assistant administrateur go round10
         if(monster.getObjectTemplate().getTemplateId() == 217554) {
             SpawnTemplate Ingenieur;
             Ingenieur = SpawnEngine.getInstance().addNewSpawn(300300000, group.getGroupLeader().getInstanceId(), 205506, 1625.8f, 148.939f, 126.0f, (byte)15, 0, 0, true);

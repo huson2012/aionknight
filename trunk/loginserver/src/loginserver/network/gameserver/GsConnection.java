@@ -1,22 +1,22 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.network.gameserver;
@@ -39,224 +39,227 @@ import commons.network.Dispatcher;
  */
 public class GsConnection extends AConnection
 {
-	/**
-	 * Logger for this class.
-	 */
-	private static final Logger	log	= Logger.getLogger(GsConnection.class);
+    /**
+     * Logger for this class.
+     */
+    private static final Logger log = Logger.getLogger(GsConnection.class);
 
-	/**
-	 * Possible states of GsConnection
-	 */
-	public static enum State
-	{
-		/**
-		 * Means that GameServer just connect, but is not authenticated yet
-		 */
-		CONNECTED,
-		/**
-		 * GameServer is authenticated
-		 */
-		AUTHED
-	}
+    /**
+     * Possible states of GsConnection
+     */
+    public static enum State
+    {
+        /**
+         * Means that GameServer just connect, but is not authenticated yet
+         */
+        CONNECTED,
+        /**
+         * GameServer is authenticated
+         */
+        AUTHED
+    }
 
-	/**
-	 * Server Packet "to send" Queue
-	 */
-	private final Deque<GsServerPacket>	sendMsgQueue	= new ArrayDeque<GsServerPacket>();
+    /**
+     * Server Packet "to send" Queue
+     */
+    private final Deque<GsServerPacket> sendMsgQueue = new ArrayDeque<GsServerPacket>();
 
-	/**
-	 * Current state of this connection
-	 */
-	private State						state;
+    /**
+     * Current state of this connection
+     */
+    private State state;
 
-	/**
-	 * GameServerInfo for this GsConnection.
-	 */
-	private GameServerInfo				gameServerInfo	= null;
+    /**
+     * GameServerInfo for this GsConnection.
+     */
+    private GameServerInfo gameServerInfo = null;
 
-	/**
-	 * Constructor.
-	 * 
-	 * @param sc
-	 * @param d
-	 * @throws IOException
-	 */
-	public GsConnection(SocketChannel sc, Dispatcher d) throws IOException
-	{
-		super(sc, d);
-		state = State.CONNECTED;
+    /**
+     * Constructor.
+     *
+     * @param sc
+     * @param d
+     * @throws IOException
+     */
+    public GsConnection(SocketChannel sc, Dispatcher d) throws IOException
+    {
+        super(sc, d);
+        state = State.CONNECTED;
 
-		String ip = getIP();
-		log.debug("GS connection from: " + ip);
-	}
+        String ip = getIP();
+        log.debug("GS connection from: " + ip);
+    }
 
-	/**
-	 * Called by Dispatcher. ByteBuffer data contains one packet that should be processed.
-	 * 
-	 * @param data
-	 * @return True if data was processed correctly, False if some error occurred and connection should be closed NOW.
-	 */
-	@Override
-	public boolean processData(ByteBuffer data)
-	{
-		GsClientPacket pck = GsPacketHandler.handle(data, this);
-		log.info("recived packet: " + pck);
+    /**
+     * Called by Dispatcher. ByteBuffer data contains one packet that should be processed.
+     *
+     * @param data
+     * @return True if data was processed correctly, False if some error occurred and connection should be closed NOW.
+     */
+    @Override
+    public boolean processData(ByteBuffer data)
+    {
+        GsClientPacket pck = GsPacketHandler.handle(data, this);
+        log.info("recived packet: " + pck);
 
-		if (pck != null && pck.read())
-			ThreadPoolManager.getInstance().executeGsPacket(pck);
+        if (pck != null && pck.read())
+        {
+            ThreadPoolManager.getInstance().executeGsPacket(pck);
+        }
 
-		return true;
-	}
+        return true;
+    }
 
-	/**
-	 * This method will be called by Dispatcher, and will be repeated till return false.
-	 * 
-	 * @param data
-	 * @return True if data was written to buffer, False indicating that there are not any more data to write.
-	 */
-	@Override
-	protected boolean writeData(ByteBuffer data)
-	{
-		GsServerPacket packet = sendMsgQueue.pollFirst();
-		if (packet == null)
-			return false;
+    /**
+     * This method will be called by Dispatcher, and will be repeated till return false.
+     *
+     * @param data
+     * @return True if data was written to buffer, False indicating that there are not any more data to write.
+     */
+    @Override
+    protected boolean writeData(ByteBuffer data)
+    {
+        GsServerPacket packet = sendMsgQueue.pollFirst();
+        if (packet == null)
+        {
+            return false;
+        }
 
-		packet.write(this, data);
-		return true;
-	}
+        packet.write(this, data);
+        return true;
+    }
 
-	/**
-	 * This method is called by Dispatcher when connection is ready to be closed.
-	 * 
-	 * @return time in ms after witch onDisconnect() method will be called. Always return 0.
-	 */
-	@Override
-	protected final long getDisconnectionDelay()
-	{
-		return 0;
-	}
+    /**
+     * This method is called by Dispatcher when connection is ready to be closed.
+     *
+     * @return time in ms after witch onDisconnect() method will be called. Always return 0.
+     */
+    @Override
+    protected final long getDisconnectionDelay()
+    {
+        return 0;
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected final void onDisconnect()
-	{
-		log.info(this + " disconnected");
-		if (gameServerInfo != null)
-		{
-			gameServerInfo.setGsConnection(null);
-			gameServerInfo.clearAccountsOnGameServer();
-			DAOManager.getDAO(GameServersDAO.class).writeGameServerStatus(gameServerInfo);
-			gameServerInfo = null;
-		}
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected final void onDisconnect()
+    {
+        log.info(this + " disconnected");
+        if (gameServerInfo != null)
+        {
+            gameServerInfo.setGsConnection(null);
+            gameServerInfo.clearAccountsOnGameServer();
+            DAOManager.getDAO(GameServersDAO.class).writeGameServerStatus(gameServerInfo);
+            gameServerInfo = null;
+        }
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected final void onServerClose()
-	{
-		// TODO mb some packet should be send to gameserver before closing?
-		close(/** packet, */true);
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected final void onServerClose()
+    {
+        // TODO mb some packet should be send to gameserver before closing?
+        close(/** packet, */true);
+    }
 
-	/**
-	 * Sends GsServerPacket to this client.
-	 * 
-	 * @param bp
-	 *           GsServerPacket to be sent.
-	 */
-	public final void sendPacket(GsServerPacket bp)
-	{
-		/**
-		 * Connection is already closed or waiting for last (close packet) to be sent
-		 */
-		if (isWriteDisabled())
-			return;
+    /**
+     * Sends GsServerPacket to this client.
+     *
+     * @param bp GsServerPacket to be sent.
+     */
+    public final void sendPacket(GsServerPacket bp)
+    {
+        /**
+         * Connection is already closed or waiting for last (close packet) to be sent
+         */
+        if (isWriteDisabled())
+        {
+            return;
+        }
 
-		log.info("sending packet: " + bp);
+        log.info("sending packet: " + bp);
 
-		sendMsgQueue.addLast(bp);
-		enableWriteInterest();
-	}
+        sendMsgQueue.addLast(bp);
+        enableWriteInterest();
+    }
 
-	/**
-	 * Its guaranted that closePacket will be sent before closing connection, but all past and future packets wont.
-	 * Connection will be closed [by Dispatcher Thread], and onDisconnect() method will be called to clear all other
-	 * things. forced means that server shouldn't wait with removing this connection.
-	 * 
-	 * @param closePacket
-	 *           Packet that will be send before closing.
-	 * @param forced
-	 *           have no effect in this implementation.
-	 */
-	public final void close(GsServerPacket closePacket, boolean forced)
-	{
-		if (isWriteDisabled())
-			return;
+    /**
+     * Its guaranted that closePacket will be sent before closing connection, but all past and future packets wont.
+     * Connection will be closed [by Dispatcher Thread], and onDisconnect() method will be called to clear all other
+     * things. forced means that server shouldn't wait with removing this connection.
+     *
+     * @param closePacket Packet that will be send before closing.
+     * @param forced      have no effect in this implementation.
+     */
+    public final void close(GsServerPacket closePacket, boolean forced)
+    {
+        if (isWriteDisabled())
+        {
+            return;
+        }
 
-		log.info("sending packet: " + closePacket + " and closing connection after that.");
+        log.info("sending packet: " + closePacket + " and closing connection after that.");
 
-		pendingClose = true;
-		isForcedClosing = forced;
-		sendMsgQueue.clear();
-		sendMsgQueue.addLast(closePacket);
-		enableWriteInterest();
-	}
+        pendingClose = true;
+        isForcedClosing = forced;
+        sendMsgQueue.clear();
+        sendMsgQueue.addLast(closePacket);
+        enableWriteInterest();
+    }
 
-	/**
-	 * @return Current state of this connection.
-	 */
-	public State getState()
-	{
-		return state;
-	}
+    /**
+     * @return Current state of this connection.
+     */
+    public State getState()
+    {
+        return state;
+    }
 
-	/**
-	 * @param state
-	 *           Set current state of this connection.
-	 */
-	public void setState(State state)
-	{
-		this.state = state;
-	}
+    /**
+     * @param state Set current state of this connection.
+     */
+    public void setState(State state)
+    {
+        this.state = state;
+    }
 
-	/**
-	 * @return GameServerInfo for this GsConnection or null if this GsConnection is not authenticated yet.
-	 */
-	public GameServerInfo getGameServerInfo()
-	{
-		return gameServerInfo;
-	}
+    /**
+     * @return GameServerInfo for this GsConnection or null if this GsConnection is not authenticated yet.
+     */
+    public GameServerInfo getGameServerInfo()
+    {
+        return gameServerInfo;
+    }
 
-	/**
-	 * @param gameServerInfo
-	 *           Set GameServerInfo for this GsConnection.
-	 */
-	public void setGameServerInfo(GameServerInfo gameServerInfo)
-	{
-		this.gameServerInfo = gameServerInfo;
-	}
+    /**
+     * @param gameServerInfo Set GameServerInfo for this GsConnection.
+     */
+    public void setGameServerInfo(GameServerInfo gameServerInfo)
+    {
+        this.gameServerInfo = gameServerInfo;
+    }
 
-	/**
-	 * @return String info about this connection
-	 */
-	@Override
-	public String toString()
-	{
-		StringBuilder sb = new StringBuilder();
-		sb.append("GameServer [ID:");
-		if (gameServerInfo != null)
-		{
-			sb.append(gameServerInfo.getId());
-		}
-		else
-		{
-			sb.append("null");
-		}
-		sb.append("] ").append(getIP());
-		return sb.toString();
-	}
+    /**
+     * @return String info about this connection
+     */
+    @Override
+    public String toString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append("GameServer [ID:");
+        if (gameServerInfo != null)
+        {
+            sb.append(gameServerInfo.getId());
+        }
+        else
+        {
+            sb.append("null");
+        }
+        sb.append("] ").append(getIP());
+        return sb.toString();
+    }
 }

@@ -1,22 +1,23 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers.instances;
@@ -64,10 +65,9 @@ public class SteelRakeController extends NpcController
 		getOwner().getAggroList().clear();
 		
 		cancelTask(TaskId.DECAY);
-
 		Npc owner = getOwner();
 
-		//set state from npc templates
+		// Set state from npc templates
 		if(owner.getObjectTemplate().getState() != 0)
 			owner.setState(owner.getObjectTemplate().getState());
 		else
@@ -75,7 +75,7 @@ public class SteelRakeController extends NpcController
 
 		switch (owner.getNpcId())
 		{
-			//list of npc ids
+			// List of npc ids
 			case exception_enums.NPC_INSTANCE_SR_SPAWN_T1:
 			case exception_enums.NPC_INSTANCE_SR_SPAWN_T2:
 			case exception_enums.NPC_INSTANCE_SR_SPAWN_T3:
@@ -104,7 +104,7 @@ public class SteelRakeController extends NpcController
 	{
 		getOwner().getAi().handleEvent(Event.TALK);
 		
-		//steel rake teleporters
+		// Steel rake teleporters
 		NpcTemplate npctemplate = DataManager.NPC_DATA.getNpcTemplate(getOwner().getNpcId());
 		if (npctemplate.getTitleId() == 370118)
 		{
@@ -114,10 +114,10 @@ public class SteelRakeController extends NpcController
 		
 		switch (getOwner().getNpcId())
 		{
-			//Central Deck Mobile Cannon
+			// Central Deck Mobile Cannon
 			case exception_enums.NPC_INSTANCE_SR_DECK:
 			{
-				if (player.getInventory().getItemCountByItemId(185000052) < 1)//Largimark's Flint
+				if (player.getInventory().getItemCountByItemId(185000052) < 1) // Largimark's Flint
 					return;
 				final int defaultUseTime = 3000;
 				PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), 
@@ -132,8 +132,8 @@ public class SteelRakeController extends NpcController
 							getOwner().getObjectId(), defaultUseTime, 0));
 						
 						player.getInventory().removeFromBagByItemId(185000052, 1);
-						//sets target for cannon
 						
+						// Sets target for cannon						
 						player.getKnownList().doOnAllNpcs(new Executor<Npc>(){
 							@Override
 							public boolean run(Npc object)
@@ -151,7 +151,8 @@ public class SteelRakeController extends NpcController
 						}, true);
 						
 						SkillEngine.getInstance().getSkill(getOwner(), 18572, 1, getOwner()).useSkill();
-						//kills mobs
+						
+						// Kills mobs
 						player.getKnownList().doOnAllNpcs(new Executor<Npc>(){
 							@Override
 							public boolean run (Npc object)
@@ -165,7 +166,7 @@ public class SteelRakeController extends NpcController
 				}, defaultUseTime);
 				break;
 			}				
-			//Suspicious Cannon
+			// Suspicious Cannon
 			case exception_enums.NPC_INSTANCE_SR_CANNON:
 				PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 73001, 0));
 				break;
@@ -178,7 +179,7 @@ public class SteelRakeController extends NpcController
 		Npc npc = getOwner();
 		int targetObjectId = npc.getObjectId();
 		
-		//steel rake teleporter
+		// Steel rake teleporter
 		if (dialogId == 1012 && (npc.getNpcId() == exception_enums.NPC_INSTANCE_SR_TP_ELYOS || npc.getNpcId() == exception_enums.NPC_INSTANCE_SR_TP_ASMO))
 		{
 			int completedquestid = 0;
@@ -203,8 +204,8 @@ public class SteelRakeController extends NpcController
 				return;
 			}
 			
-			//check instance cool time
-			//TODO: show proper name for instance
+			// Check instance cool time
+			// TODO: Show proper name for instance
 			WorldMapTemplate world = DataManager.WORLD_MAPS_DATA.getTemplate(300100000);
 			if (!InstanceService.canEnterInstance(player, world.getInstanceMapId(), 0))
 			{
@@ -235,7 +236,6 @@ public class SteelRakeController extends NpcController
 			TeleportService.teleportTo(player, exit.getMapId(), instance.getInstanceId(),
 				exit.getX(),exit.getY(),exit.getZ(), 0);
 			PortalController.setInstanceCooldown(player, 300100000, instance.getInstanceId());
-			return;
-		} 
+        }
 	}	
 }

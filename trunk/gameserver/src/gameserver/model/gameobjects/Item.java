@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects;
@@ -28,15 +32,10 @@ import gameserver.model.templates.item.ItemQuality;
 import gameserver.model.templates.item.ItemTemplate;
 import gameserver.model.templates.item.ItemType;
 import gameserver.services.ItemService;
-
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
-
-/**
-
- */
 public class Item extends AionObject
 {	
 	private long itemCount = 1;
@@ -158,10 +157,8 @@ public class Item extends AionObject
 	
 	public boolean hasOptionalSocket()
 	{
-		if(optionalSocket == 0)
-			return false;
-		return true;
-	}
+        return optionalSocket != 0;
+    }
 	
 	public void setOptionalSocket(int optionalSocket)
 	{
@@ -175,10 +172,8 @@ public class Item extends AionObject
 	
 	public boolean hasOptionalFusionSocket()
 	{
-		if(optionalFusionSocket == 0)
-			return false;
-		return true;
-	}
+        return optionalFusionSocket != 0;
+    }
 	
 	public void setOptionalFusionSocket(int optionalFusionSocket)
 	{
@@ -294,13 +289,13 @@ public class Item extends AionObject
 	
 	public boolean isReadable()
 	{
-		ItemActions actions = this.getItemTemplate().getActions();
+		ItemActions actions = this.itemTemplate.getActions();
 		return actions != null && actions.getReadActions().size() > 0;
 	}
 	
 	public boolean canStartQuest()
 	{
-		ItemActions actions = this.getItemTemplate().getActions();
+		ItemActions actions = this.itemTemplate.getActions();
 		return actions != null && actions.getQuestStartActions().size() > 0;		
 	}
 
@@ -587,16 +582,16 @@ public class Item extends AionObject
 		{
 			if(isFusionItem)
 			{
-				ItemTemplate fusedTemp = DataManager.ITEM_DATA.getItemTemplate(getFusionedItem());
+				ItemTemplate fusedTemp = DataManager.ITEM_DATA.getItemTemplate(fusionedItemId);
 				numSockets = basicSocket(fusedTemp.getItemQuality());
 				numSockets += extendedSocket(fusedTemp.getItemType());
-				numSockets += hasOptionalFusionSocket() ? getOptionalFusionSocket() : 0;
+				numSockets += hasOptionalFusionSocket() ? optionalFusionSocket : 0;
 			}
 			else
 			{
-				numSockets = basicSocket(getItemTemplate().getItemQuality());
-				numSockets += extendedSocket(getItemTemplate().getItemType());
-				numSockets += hasOptionalSocket() ? getOptionalSocket() : 0;
+				numSockets = basicSocket(itemTemplate.getItemQuality());
+				numSockets += extendedSocket(itemTemplate.getItemType());
+				numSockets += hasOptionalSocket() ? optionalSocket : 0;
 			}
 			if(numSockets < 6)
 				return numSockets;
@@ -612,15 +607,15 @@ public class Item extends AionObject
 			case 0: 
 				return true;
 			case 1://regular warehouse
-				if (this.getItemTemplate().isStorableinCharWarehouse())
+				if (this.itemTemplate.isStorableinCharWarehouse())
 					return true;
 			break;
 			case 2://account warehouse
-				if (this.getItemTemplate().isStorableinAccWarehouse())
+				if (this.itemTemplate.isStorableinAccWarehouse())
 					return true;
 			break;
 			case 3://legion warehouse
-				if (this.getItemTemplate().isStorableinLegionWarehouse())
+				if (this.itemTemplate.isStorableinLegionWarehouse())
 					return true;
 			break;
 			case 32:

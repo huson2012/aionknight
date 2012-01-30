@@ -1,22 +1,22 @@
-/**
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.itemengine.actions;
@@ -37,12 +37,14 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+import java.util.regex.Pattern;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CmotionAction")
 public class CmotionAction extends AbstractItemAction
 {
-	@XmlAttribute
+    private static final Pattern COMPILE = Pattern.compile("\\,");
+    @XmlAttribute
 	protected String cmotionid;
 	@XmlAttribute
 	protected int expire;
@@ -51,18 +53,18 @@ public class CmotionAction extends AbstractItemAction
 	protected String[] cmotionName;
 	protected int[] cmid = {0,0,0,0};
 	protected int[] cm_dsc = {600533, 600535, 600537, 600539, 600571, 600573, 600575, 600577};
+	
 	/**
 	 * Gets the value of the id property.
 	 */
 	public void getCmotionId() 
 	{
 		
-		arraystr = cmotionid.split("\\,");
+		arraystr = COMPILE.split(cmotionid);
 		for (int i = 0; i < arraystr.length; i++)
 		{
-			cmid[i] = Integer.valueOf (arraystr[i]).intValue();
+			cmid[i] = Integer.valueOf(arraystr[i]);
 		}
-		
 	}
 	
 	/**
@@ -73,14 +75,14 @@ public class CmotionAction extends AbstractItemAction
 	{	
 		boolean valid = false;
 		getCmotionId();
-		
-		for (int i = 0; i < cmid.length; i++)
-		{
-			if(player.getCmotionList().canAdd(cmid[i]))
-				valid = true;
-			else
-			    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400907));
-		}
+
+        for (int aCmid : cmid)
+        {
+            if (player.getCmotionList().canAdd(aCmid))
+                valid = true;
+            else
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400907));
+        }
 
 		return valid;
 	}
@@ -95,19 +97,17 @@ public class CmotionAction extends AbstractItemAction
 		
 			if(player.getInventory().removeFromBag(item, true))
 			{				
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),	parentItem.getObjectId(), itemTemplate.getTemplateId()), true);				
-				for (int i = 0; i < cmid.length; i++)
-				{
-					
-					if(player.getCmotionList().add(cmid[i],  false, System.currentTimeMillis(),(expire  * 60L)))
-					{
-						int dummy = cmid[i] - 1;
-						if(expire > 0)
-						    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401029, new DescriptionId(cm_dsc[dummy]*2+1)));			    
-						else
-						    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400917, new DescriptionId(cm_dsc[dummy]*2+1)));
-					}
-				}
+				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(),	parentItem.getObjectId(), itemTemplate.getTemplateId()), true);
+                for (int aCmid : cmid) {
+
+                    if (player.getCmotionList().add(aCmid, false, System.currentTimeMillis(), (expire * 60L))) {
+                        int dummy = aCmid - 1;
+                        if (expire > 0)
+                            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401029, new DescriptionId(cm_dsc[dummy] * 2 + 1)));
+                        else
+                            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400917, new DescriptionId(cm_dsc[dummy] * 2 + 1)));
+                    }
+                }
 				
 				DAOManager.getDAO(PlayerCmotionListDAO.class).AddCmotions(player);
 				for (Cmotion cmotion : player.getCmotionList().getCmotions()) 
@@ -123,7 +123,7 @@ public class CmotionAction extends AbstractItemAction
 	            		else
 	            			dummy = cmotion.getCmotionId();
 	            			
-	            		PacketSendUtility.sendPacket(player, new SM_CMOTION(player, dummy, cmotion.getCmotionId()));
+	            		PacketSendUtility.sendPacket(player, new SM_CMOTION(dummy, cmotion.getCmotionId()));
 	            	}
 	            }
 	            DAOManager.getDAO(PlayerCmotionListDAO.class).storeCmotions(player);

@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.dataholders;
@@ -32,151 +32,151 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class StaticData
 {
 	@XmlElement(name = "world_maps")
-	public WorldMapsData			worldMapsData;
+	public WorldMapsData worldMapsData;
 
 	@XmlElement(name = "npc_trade_list")
-	public TradeListData			tradeListData;
+	public TradeListData tradeListData;
 
 	@XmlElement(name = "npc_teleporter")
-	public TeleporterData			teleporterData;
+	public TeleporterData teleporterData;
 
 	@XmlElement(name = "teleport_location")
-	public TeleLocationData			teleLocationData;
+	public TeleLocationData teleLocationData;
 	
 	@XmlElement(name = "custom_presets")
-	public PresetData				customPresets;
+	public PresetData customPresets;
 
 	@XmlElement(name = "bind_points")
-	public BindPointData			bindPointData;
+	public BindPointData bindPointData;
 
 	@XmlElement(name = "quests")
-	public QuestsData				questData;
+	public QuestsData questData;
 
 	@XmlElement(name = "bonuses")
-	public BonusData				bonusData;
+	public BonusData bonusData;
 
 	@XmlElement(name = "quest_scripts")
-	public QuestScriptsData			questsScriptData;
+	public QuestScriptsData questsScriptData;
 
 	@XmlElement(name = "player_experience_table")
-	public PlayerExperienceTable	playerExperienceTable;
+	public PlayerExperienceTable playerExperienceTable;
 
 	@XmlElement(name = "player_stats_templates")
-	public PlayerStatsData			playerStatsData;
+	public PlayerStatsData playerStatsData;
 	
 	@XmlElement(name = "summon_stats_templates")
-	public SummonStatsData			summonStatsData;
+	public SummonStatsData summonStatsData;
 
 	@XmlElement(name = "item_templates")
-	public ItemData					itemData;
+	public ItemData itemData;
 
 	@XmlElement(name = "wrapped_items")
-	public WrappedItemData			wrappedItemData;
+	public WrappedItemData wrappedItemData;
 	
 	@XmlElement(name = "pet_feed")
-	public PetFeedData				petFeedData;
+	public PetFeedData petFeedData;
 
 	@XmlElement(name = "windstreams")
-	public WindstreamData			windstreamsData;
+	public WindstreamData windstreamsData;
 	
 	@XmlElement(name = "npc_templates")
-	public NpcData					npcData;
+	public NpcData npcData;
 
 	@XmlElement(name = "player_initial_data")
-	public PlayerInitialData		playerInitialData;
+	public PlayerInitialData playerInitialData;
 
 	@XmlElement(name = "skill_data")
-	public SkillData				skillData;
+	public SkillData skillData;
 
 	@XmlElement(name = "skill_tree")
-	public SkillTreeData			skillTreeData;
+	public SkillTreeData skillTreeData;
 
 	@XmlElement(name = "cube_expander")
-	public CubeExpandData			cubeExpandData;
+	public CubeExpandData cubeExpandData;
 
 	@XmlElement(name = "warehouse_expander")
-	public WarehouseExpandData		warehouseExpandData;
+	public WarehouseExpandData warehouseExpandData;
 
 	@XmlElement(name = "player_titles")
-	public TitleData				titleData;
+	public TitleData titleData;
 
 	@XmlElement(name = "gatherable_templates")
-	public GatherableData			gatherableData;
+	public GatherableData gatherableData;
 	
 	@XmlElement(name = "guild_templates")
-	public GuildsData			guildsData;
+	public GuildsData guildsData;
 
 	@XmlElement(name = "npc_walker")
-	public WalkerData				walkerData;
+	public WalkerData walkerData;
 
 	@XmlElement(name = "zones")
-	public ZoneData					zoneData;
+	public ZoneData	zoneData;
 	
 	@XmlElement(name = "flight_zones")
-	public FlightZoneData			flightZoneData;
+	public FlightZoneData flightZoneData;
 
 	@XmlElement(name = "goodslists")
-	public GoodsListData			goodsListData;
+	public GoodsListData goodsListData;
 
 	@XmlElement(name = "spawns")
-	public SpawnsData				spawnsData;
+	public SpawnsData spawnsData;
 
 	@XmlElement(name = "tribe_relations")
-	public TribeRelationsData		tribeRelationsData;
+	public TribeRelationsData tribeRelationsData;
 
 	@XmlElement(name = "recipe_templates")
-	public RecipeData				recipeData;
+	public RecipeData recipeData;
 
 	@XmlElement(name = "portal_templates")
-	public PortalData				portalData;
+	public PortalData portalData;
 	
 	@XmlElement(name = "chest_templates")
-	public ChestData				chestData;
+	public ChestData chestData;
 
 	@XmlElement(name = "item_sets")
-	public ItemSetData				itemSetData;
+	public ItemSetData itemSetData;
 
 	@XmlElement(name = "npc_skill_templates")
-	public NpcSkillData				npcSkillData;
+	public NpcSkillData npcSkillData;
 	
 	@XmlElement(name = "pet_skill_templates")
-	public PetSkillData				petSkillData;
+	public PetSkillData	petSkillData;
 
 	@XmlElement(name = "siege_locations")
-	public SiegeLocationData		siegeLocationData;
+	public SiegeLocationData siegeLocationData;
 	
 	@XmlElement(name = "siege_spawns")
-	public SiegeSpawnData			siegeSpawnData;
+	public SiegeSpawnData siegeSpawnData;
 	
 	@XmlElement(name = "shields")
-	public ShieldData				shieldData;
+	public ShieldData shieldData;
 	
 	@XmlElement(name = "fly_rings")
-	public FlyRingData				flyRingData;
+	public FlyRingData flyRingData;
 	
 	@XmlElement(name = "pets")
-	public PetData					petData;
+	public PetData petData;
 	
 	@XmlElement(name = "roads")
-	public RoadData                roadData;
+	public RoadData roadData;
 	
 	@XmlElement(name = "droplist")
-	public DroplistData				droplistData;
+	public DroplistData	droplistData;
 	
 	@XmlElement(name = "npc_shouts")
-	public NpcShoutsData 			npcShoutsData;
+	public NpcShoutsData npcShoutsData;
 	
 	@XmlElement(name = "levelup_surveys")
-	public LevelUpSurveyData		levelUpSurveys;
+	public LevelUpSurveyData levelUpSurveys;
 
 	@XmlElement(name = "staticdoor_templates")
-	public StaticDoorData			staticDoorData;
+	public StaticDoorData staticDoorData;
 
 	@SuppressWarnings("unused")
 	private void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
 		DataManager.log.info("Loaded world maps data: " + worldMapsData.size() + " maps");
-		DataManager.log.info("Loaded player exp table: " + playerExperienceTable.getMaxLevel() + " levels");
+		DataManager.log.info("Loaded player EXP table: " + playerExperienceTable.getMaxLevel() + " levels");
 		DataManager.log.info("Loaded " + playerStatsData.size() + " player stat templates");
 		DataManager.log.info("Loaded " + summonStatsData.size() + " summon stat templates");
 		DataManager.log.info("Loaded " + itemData.size() + " item templates");

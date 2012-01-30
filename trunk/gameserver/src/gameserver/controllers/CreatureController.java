@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers;
@@ -57,7 +57,6 @@ import java.util.concurrent.Future;
 public abstract class CreatureController<T extends Creature> extends VisibleObjectController<Creature>
 {
 	private FastMap<Integer, Future<?>> tasks = new FastMap<Integer, Future<?>>().shared();
-	
 	private float healRate = 1.00f;
 	
 	/**
@@ -75,10 +74,8 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	 * extend aura range
 	 */
 	private float auraRangeRate = 1.00f;
-	
 	private long lastAttackMilis = 0;
 
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -149,8 +146,8 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	public void onAttack(Creature creature, int skillId, TYPE type, int damage, int logId, AttackStatus status, boolean notifyAttackedObservers, boolean sendPacket)
 	{
 		// Reduce the damage to exactly what is required to ensure death. 
-		// - Important that we don't include 7k worth of damage when the 
-		//   creature only has 100 hp remaining. (For AggroList dmg count.) 
+		// Important that we don't include 7k worth of damage when the 
+		// creature only has 100 hp remaining. (For AggroList dmg count.) 
 		if (damage > getOwner().getLifeStats().getCurrentHp()) 
 			damage = getOwner().getLifeStats().getCurrentHp() + 1;
 		
@@ -159,7 +156,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 		{
 			int cancelRate = skill.getSkillTemplate().getCancelRate();
 		
-			//default cancel rate 90 for magical skills of players
+			// Default cancel rate 90 for magical skills of players
 			if(cancelRate == 0 && skill.getSkillTemplate().getType()== SkillType.MAGICAL && getOwner() instanceof Player)
 				cancelRate = 90;
 			else if (getOwner() instanceof Npc)
@@ -186,7 +183,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 			}
 		}
 
-		//set involved creatures to combat state
+		// Set involved creatures to combat state
 		creature.setCombatState(8);//8s taken from client's hide combat restriction
 		getOwner().setCombatState(8);
 		
@@ -206,15 +203,14 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 			}
 		}
 		
-		//transfer hate from SkillAreaNpc,Homing,Trap,Totem,Servant to master
+		// Transfer hate from SkillAreaNpc,Homing,Trap,Totem,Servant to master
 		if (creature instanceof NpcWithCreator)
 			creature = creature.getActingCreature();
 		
 		getOwner().getAggroList().addDamage(creature, damage);
 		
-		//send SM_ATTACK_STATUS
-		//for now send every time, because it updates hp of mob
-		//if (sendPacket)
+		// Send SM_ATTACK_STATUS
+		// For now send every time, because it updates hp of mob if (sendPacket)
 			sendOnAttackPacket(type, damage, skillId, logId);
 		
 		getOwner().getLifeStats().reduceHp(damage, creature);
@@ -239,7 +235,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	
 	/**
 	 * Perform reward operation
-	 * 
 	 */
 	public void doReward()
 	{
@@ -254,9 +249,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 
 	}
 
-	
 	/**
-	 * 
 	 * @param target
 	 */
 	public void attackTarget(Creature target)
@@ -272,7 +265,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 		/**
 		 * Check all prerequisites
 		 */
-		//npc specific checks
+		// NPC specific checks
 		if(attacker instanceof Npc) 
 		{
 			if (!attacker.isSpawned())
@@ -283,7 +276,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 				return;
 			}
 		}
-		//player specific checks
+		// Player specific checks
 		else if (attacker.getActingCreature() instanceof Player)
 		{
 			if(Math.abs(attacker.getZ() - target.getZ()) > 6)
@@ -291,7 +284,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 			if(!RestrictionsManager.canAttack((Player)attacker.getActingCreature(), target))
 				return;
 
-			//temporary hack check
+			// Temporary hack check
 			int attackSpeed = attacker.getGameStats().getCurrentStat(StatEnum.ATTACK_SPEED);
 			long milis = System.currentTimeMillis();
 			if (milis - lastAttackMilis < attackSpeed)
@@ -315,7 +308,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 				PacketSendUtility.sendPacket((Player) attacker, SM_SYSTEM_MESSAGE.STR_ATTACK_OBSTACLE_EXIST);
 			return;
 		}
-		
 
 		CreatureGameStats gameStats = attacker.getGameStats();
 
@@ -340,7 +332,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 		PacketSendUtility.broadcastPacketAndReceive(attacker, new SM_ATTACK(attacker, target, gameStats.getAttackCounter(),
 			time, attackType, attackResult));
 		
-		//TODO synchronize attackcounter with packet atknumber
+		// TODO: Synchronize attackcounter with packet atknumber
 		gameStats.increaseAttackCounter();
 		
 		/**
@@ -354,7 +346,8 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 			case CRITICAL_RESIST:
 				break;
 			default:
-				//observers
+				
+				// Observers
 				attacker.getObserveController().notifyAttackObservers(target);
 				target.getObserveController().notifyHittedObservers(getOwner(), DamageType.PHYSICAL);
 				break;
@@ -406,11 +399,10 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	 */
 	public void onDialogSelect(int dialogId, Player player, int questId)
 	{
-		// TODO Auto-generated method stub
+		// TODO: Auto-generated method stub
 	}
 
 	/**
-	 * 
 	 * @param taskId
 	 * @return
 	 */
@@ -420,7 +412,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	}
 	
 	/**
-	 * 
 	 * @param taskId
 	 * @return
 	 */
@@ -430,7 +421,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	}
 
 	/**
-	 * 
 	 * @param taskId
 	 */
 	public void cancelTask(TaskId taskId)
@@ -438,7 +428,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 		cancelTask(taskId, false);
 	}
 	/**
-	 * 
 	 * @param taskId
 	 * @param forced
 	 */
@@ -485,6 +474,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 				task.cancel(true);
 			}
 		}
+		
 		// FIXME: This can fill error logs with NPE if left null. Should never happen...
 		tasks = new FastMap<Integer, Future<?>>().shared();
 	}
@@ -505,7 +495,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	}
 	
 	/**
-	 * 
 	 * @param skillId
 	 */
 	public void useSkill(int skillId)
@@ -513,7 +502,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 		Creature creature = getOwner();
 
 		Skill skill = SkillEngine.getInstance().getSkill(creature, skillId, 1, creature.getTarget());
-		Logger.getLogger(getClass()).debug(creature.getName()+"using skill #"+skillId+":"+skill);
+		Logger.getLogger(getClass()).debug(creature.getName()+"using skill #"+skillId+ ':' +skill);
 		if(skill != null)
 		{
 			skill.useSkill();
@@ -570,8 +559,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	 */
 	public void createSummon(int npcId, int skillLvl)
 	{
-		// TODO Auto-generated method stub
-		
+		// TODO: Auto-generated method stub	
 	}
 	
 	public float getHealRate() 
@@ -586,7 +574,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	
 	/**
 	 * BoostCastingTimeEffects rates
-	 * 
 	 */
 	public void addBoostCastingRate(SkillSubType type, int value)
 	{
@@ -616,7 +603,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 			return 0;
 	}
 	
-	//extend aura range
+	// Extend Aura range
 	public float getAuraRangeRate() 
 	{
 		return auraRangeRate;

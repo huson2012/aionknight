@@ -1,19 +1,24 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.skill.model;
 
 import commons.utils.Rnd;
@@ -218,14 +223,12 @@ public class Skill
 		}
 		effector.setCasting(null);
 		
-		if (getTargetType() != 1 && (effectedList == null || effectedList.size() == 0) && !checkNonTargetAOE())
-			return false;
-		
-		if(getTargetType() == 3 && effector.isInInstance())
+		if (targetType != 1 && (effectedList == null || effectedList.isEmpty()) && !checkNonTargetAOE())
 			return false;
 
-		return true;
-	}
+        return !(targetType == 3 && effector.isInInstance());
+
+    }
 
 	/**
 	 * Skill entry point
@@ -266,7 +269,7 @@ public class Skill
 				currentStat = effector.getGameStats().getCurrentStat(StatEnum.BOOST_CASTING_TIME) - 100;
 
 			float finalRate = ((float)effector.getController().getBoostCastingRate(SkillSubType.NONE) + 
-				(float)effector.getController().getBoostCastingRate(getSkillTemplate().getSubType()) + 
+				(float)effector.getController().getBoostCastingRate(skillTemplate.getSubType()) +
 				(float)currentStat)/100f;
 			this.duration = (int)(skillDuration * (1-finalRate));
 		}
@@ -296,7 +299,7 @@ public class Skill
 		else if (skillType == SkillType.ITEM && duration > 0 && this.itemObjectId != 0 && effector instanceof Player)
 		{
 			PacketSendUtility.broadcastPacket((Player)effector, new SM_ITEM_USAGE_ANIMATION(effector.getObjectId(), firstTarget.getObjectId(),
-				itemObjectId, itemTemplate.getTemplateId(), this.getSkillTemplate().getDuration(), 0, 0), true);
+				itemObjectId, itemTemplate.getTemplateId(), this.skillTemplate.getDuration(), 0, 0), true);
 		}
 		
 		//only 1 toggle skill at the time
@@ -406,7 +409,7 @@ public class Skill
 			return;
 		
 		//remove item if it was used through SkillUseAction
-		if (skillType == SkillType.ITEM && this.itemObjectId != 0 && !this.itemTemplate.IsArena().booleanValue() && effector instanceof Player)
+		if (skillType == SkillType.ITEM && this.itemObjectId != 0 && !this.itemTemplate.IsArena() && effector instanceof Player)
 		{
 			if(!((Player)effector).getInventory().removeFromBagByObjectId(itemObjectId, 1))
 				return;
@@ -477,7 +480,7 @@ public class Skill
 					pulledEffect = true;
 			}
 			//exception for SummonSkillAreaNpc
-			if (getTargetType() == 1 && effectedList.size() == 0)
+			if (getTargetType() == 1 && effectedList.isEmpty())
 			{
 				for (EffectTemplate et : skillTemplate.getEffects().getEffects())
 				{
@@ -501,20 +504,12 @@ public class Skill
             // Check if Chain Skill Trigger Enabled
     		if(CustomConfig.SKILL_CHAIN_TRIGGER){
 				int chainProb = skillTemplate.getChainSkillProb();
-    	        if (Rnd.get(100) < CustomConfig.SKILL_CHAIN_RATE || chainProb == 100) {
-						this.chainSuccess = true;
-                } else {
-                	this.chainSuccess = false;
-				}
+                this.chainSuccess = Rnd.get(100) < CustomConfig.SKILL_CHAIN_RATE || chainProb == 100;
     		} else {
                 // Check Chain Skill Result
             	int chainProb = skillTemplate.getChainSkillProb();
                 if (chainProb != 0) {
-                    if (Rnd.get(100) < chainProb) {
-					this.chainSuccess = true;
-			}else{
-    					this.chainSuccess = false;
-                    }
+                    this.chainSuccess = Rnd.get(100) < chainProb;
                 }
 			}
 		}
@@ -745,7 +740,7 @@ public class Skill
 				range += (float)((Player)effector).getGameStats().getCurrentStat(StatEnum.ATTACK_RANGE) / 1000f;
 			
 			//remove creatures from effectedlist who are no longer in range of aoe skill
-			if (range != 0 && effectedList != null && effectedList.size() > 0)
+			if (range != 0 && effectedList != null && !effectedList.isEmpty())
 			{
 				//tolerance
 				range += 3.0f;//maybe need fix?

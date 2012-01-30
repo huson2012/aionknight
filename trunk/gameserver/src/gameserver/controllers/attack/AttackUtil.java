@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers.attack;
@@ -185,7 +185,7 @@ public class AttackUtil
 		
 		int damage = StatFunctions.calculateMagicalAttackToTarget(attacker, attacked, element);
 
-		//calculate status
+		// Calculate status
 		AttackStatus status = calculateMagicalStatus(attacker, attacked);
 		
 		if (status == AttackStatus.CRITICAL)
@@ -195,10 +195,10 @@ public class AttackUtil
 			damage = Math.round(damage - (damage * criticalReduce / 1000f));
 		}
 		
-		//adjusting baseDamages according to attacker and target level
+		// Adjusting baseDamages according to attacker and target level
 		damage = adjustDamages(attacker, attacked, damage);
 
-		//damage multiplier
+		// Damage multiplier
 		damage = Math.round(damage * damageMultiplier);
 		
 		if (damage <= 0)
@@ -264,7 +264,7 @@ public class AttackUtil
 			break;
 		}
 		
-		//effector status
+		// Effector status
 		int criticalReduce = attacked.getGameStats().getCurrentStat(StatEnum.PHYSICAL_CRITICAL_DAMAGE_REDUCE);
 		switch(status)
 		{
@@ -277,7 +277,7 @@ public class AttackUtil
 			break;
 		}
 
-		//adjust damage
+		// Adjust damage
 		damage = adjustDamages(attacker, attacked, damage);
 	
 		return damage;
@@ -343,7 +343,7 @@ public class AttackUtil
 		
 		int damage = StatFunctions.calculatePhysicDamageToTarget(effector, effected, skillDamage, bonusDamage);
 		
-		//effected status
+		// Effected status
 		AttackStatus status = calculateSkillPhysicalStatus(effector, effected);
 		switch(status)
 		{
@@ -380,14 +380,14 @@ public class AttackUtil
 			damage *= 2;
 		}
 		
-		//multiply damage
+		// Multiply damage
 		float damageMultiplier = effector.getObserveController().getBasePhysicalDamageMultiplier();
 		damage *= damageMultiplier;
 		
-		//adjust damamge
+		// Adjust damamge
 		damage = adjustDamages(effector, effected, damage);
 		
-		//implementation of random damage for skills like Stunning Shot, etc
+		// Implementation of random damage for skills like Stunning Shot, etc
 		if (rng > 0)
 		{
 			int randomChance = Rnd.get(100);
@@ -412,9 +412,10 @@ public class AttackUtil
 					if (randomChance <= 30)
 						damage *= 2f;
 					break;
-				//TODO rest of the cases
+				
+				// TODO: rest of the cases
 				default:
-					Logger.getLogger(AttackUtil.class).debug("Missing handled rng: "+rng+" for skillId: "+effect.getSkillId());
+					Logger.getLogger(AttackUtil.class).debug("Missing handled RNG: "+rng+" for skillId: "+effect.getSkillId());
 				break;
 			}
 		}
@@ -467,10 +468,10 @@ public class AttackUtil
 			damage = Math.round(damage - (damage * criticalReduce / 1000f));
 		}
 		
-		//adjusting baseDamages according to attacker and target level
+		// Adjusting baseDamages according to attacker and target level
 		damage = adjustDamages(effector, effected, damage);
 		
-		//damage multiplier
+		// Damage multiplier
 		damage = Math.round(damage * damageMultiplier);
 		
 		if (damage <= 0)
@@ -512,10 +513,10 @@ public class AttackUtil
 		}
 	
 		
-		//adjusting baseDamages according to attacker and target level
+		// Adjusting baseDamages according to attacker and target level
 		damage = adjustDamages(effector, effected, damage);
 
-		//damage multiplier
+		// Damage multiplier
 		damage = Math.round(damage * damageMultiplier);
 		
 		if (damage <= 0)
@@ -535,7 +536,7 @@ public class AttackUtil
 			return AttackStatus.DODGE;
 		
 		if( attacked instanceof Player && ((Player)attacked).getEquipment().getMainHandWeaponType() != null                  // PARRY can only be done with weapon, also weapon can have humanoid mobs,
-			&& Rnd.get( 0, 100 ) < StatFunctions.calculatePhysicalParryRate(attacker, attacked) ) // but for now there isnt implementation of monster category
+			&& Rnd.get( 0, 100 ) < StatFunctions.calculatePhysicalParryRate(attacker, attacked) ) // But for now there isnt implementation of monster category
 			return AttackStatus.PARRY;
 
 		if( attacked instanceof Player && ((Player) attacked).getEquipment().isShieldEquipped()
@@ -601,14 +602,14 @@ public class AttackUtil
 	 * @param target lvl
 	 * @param baseDamages
 	 *
-	 **/
+	 */
 	public static int adjustDamages(Creature attacker, Creature target, int damages) {
 
 		int attackerLevel = attacker.getLevel();
 		int targetLevel = target.getLevel();
 		int baseDamages = damages;
 
-		//fix this for better monster target condition please
+		// Fix this for better monster target condition please
 		if ( (attacker instanceof Player) && target instanceof Npc) 
 		{
 			if(targetLevel > attackerLevel) 
@@ -624,10 +625,9 @@ public class AttackUtil
 				else if (differ >= 10)
 					baseDamages -= Math.round((baseDamages * 0.80f));
 			}
-		} //end of damage to monster
+		} // End of damage to monster
 
-		//PVP damages is capped at 50% of the actual baseDamage
-		//http://www.aionsource.com/topic/123367-base-pvp-damage-reduction
+		// PVP damages is capped at 50% of the actual baseDamage
 		else if((attacker instanceof Player)
 			&& (target instanceof Player || target instanceof Summon)) 
 		{
@@ -637,9 +637,10 @@ public class AttackUtil
 			baseDamages = Math.round((baseDamages * (1 + pvpAttackBonus - pvpDefenceBonus)) * StatFunctions.calculatePvPMultipler((Player)attacker));
 			
 			/**
-			 * Blessing of Azphel/Triniel
+			 *  Blessing of Azphel/Triniel
 			 *
 			 *	other 	my		boost
+			 *
 			 *	81+   	10-		20%
 			 *	81+   	11+		15%
 			 *	71+   	10- 	15%
@@ -674,7 +675,8 @@ public class AttackUtil
 						break;
 					}
 				}
-				//custom dmg reduction according to lvl of attacker and target
+				
+				// Custom DMG reduction according to lvl of attacker and target
 				if(targetLevel > attackerLevel && CustomConfig.DMG_REDUCTION_LVL_DIFF_PVP) 
 				{
 					int diff = targetLevel - attackerLevel;
@@ -700,7 +702,6 @@ public class AttackUtil
 			}
 
 		return baseDamages;
-
 	}
 	
 	public static void launchEffectOnCritical(Player attacker, Creature attacked)
@@ -724,7 +725,7 @@ public class AttackUtil
 		if (template == null)
 			return;
 		
-		if (Rnd.get(100) > 10)//hardcoded 15% chance
+		if (Rnd.get(100) > 10) // Hard Coded - 15% chance
 			return;
 		
 		Effect e = new Effect(attacker, attacked, template, template.getLvl(), template.getEffectsDuration());

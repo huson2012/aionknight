@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Emu.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight Emu. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.road;
@@ -27,7 +31,8 @@ import gameserver.utils.idfactory.IDFactory;
 import gameserver.world.RoadKnownList;
 import gameserver.world.World;
 
-	public class Road extends Creature {
+public class Road extends Creature 
+{
 	private RoadTemplate template = null;
 	private String name = null;
 	private Plane3D plane = null;
@@ -35,7 +40,8 @@ import gameserver.world.World;
 	private Point3D p1 = null;
 	private Point3D p2 = null;
 
-	public Road(RoadTemplate template) {
+	public Road(RoadTemplate template) 
+	{
 		super(IDFactory.getInstance().nextId(), new RoadController(), null, null, World.getInstance().createPosition(template.getMap(), template.getCenter().getX(), template.getCenter().getY(), template.getCenter().getZ(), (byte)  0));
 
 		((RoadController)getController()).setOwner(this);
@@ -48,31 +54,37 @@ import gameserver.world.World;
 		setKnownlist(new RoadKnownList(this));
 	}
 
-	public Plane3D getPlane() {
+	public Plane3D getPlane() 
+	{
 		return plane;
 	}
 
-	public RoadTemplate getTemplate() {
+	public RoadTemplate getTemplate() 
+	{
 		return template;
 	}
 
 	@Override
-	public String getName() {
+	public String getName() 
+	{
 		return name;
 	}
 
     @Override
-	public byte getLevel() {
+	public byte getLevel() 
+	{
 		return 0;
 	}
 
     @Override
-	public void initializeAi() {
+	public void initializeAi() 
+	{
 		ai = new DummyAi();
 		ai.setOwner(this);
 	}
 
-	public void spawn() {
+	public void spawn() 
+	{
 		World w = World.getInstance();
 		w.storeObject(this);
 		w.spawn(this);

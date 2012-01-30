@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects;
@@ -179,12 +183,10 @@ public class Npc extends Creature
 		if(DataManager.TRIBE_RELATIONS_DATA.isAggressiveRelation(getTribe(), creature.getTribe())
 			|| DataManager.TRIBE_RELATIONS_DATA.isHostileRelation(getTribe(), creature.getTribe()))
 			return true;
-		
-		if(creature instanceof Npc && guardAgainst((Npc)creature))
-			return true;
 
-		return false;
-	}
+        return creature instanceof Npc && guardAgainst((Npc) creature);
+
+    }
 	
 	@Override
 	public boolean isAggroFrom(Npc npc)
@@ -304,11 +306,9 @@ public class Npc extends Creature
 	protected boolean isEnemyPlayer(Player visibleObject)
 	{
 		Player player = (Player)visibleObject;
-		if (getObjectTemplate().getRace() == player.getCommonData().getRace())
-			return false;
-		
-		return true;//TODO
-	}
+        return getObjectTemplate().getRace() != player.getCommonData().getRace();
+
+    }
 	
 	@Override
 	protected boolean isEnemySummon(Summon visibleObject)
@@ -333,12 +333,10 @@ public class Npc extends Creature
 		
 		if (player.getVisualState() == 2 && (getObjectTemplate().getRank() == NpcRank.ELITE || getObjectTemplate().getRank() == NpcRank.NORMAL))
 		   return false;
-		
-		if (player.getVisualState() >= 3)
-		   return false;
-		
-		return true;
-	}
+
+        return player.getVisualState() < 3;
+
+    }
 	
 	@Override
 	public void setKnownlist(KnownList knownList)
@@ -393,7 +391,7 @@ public class Npc extends Creature
 		int startLevel = template.getLevel() / 10 * 10;
 		List<Integer> itemIds = DataManager.ITEM_DATA.getBonusItems(dropType, startLevel, startLevel + 5);
 
-		if (itemIds.size() == 0)
+		if (itemIds.isEmpty())
 			return null;
 		
 		Set<DropTemplate> dropTemplates = new HashSet<DropTemplate>();

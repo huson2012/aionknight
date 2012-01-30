@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.network.aion;
@@ -30,19 +30,19 @@ import java.util.Set;
 
 public class ServerPacketsOpcodes
 {
-
 	private static ServerPacketsOpcodes serverPackets = new ServerPacketsOpcodes();
-
 	protected Map<Class<? extends AionServerPacket>, Integer> opcodes = new HashMap<Class<? extends AionServerPacket>, Integer>();
-
 	private ServerPacketsOpcodes()
 	{
 		if(GSConfig.SERVER_VERSION.startsWith("2.7"))
 			initPacketsFor_2_7();
+		
 		if(GSConfig.SERVER_VERSION.startsWith("2.6"))
 			initPacketsFor_2_6();
+		
 		if(GSConfig.SERVER_VERSION.startsWith("2.5"))
 			initPacketsFor_2_5();
+		
 		if(GSConfig.SERVER_VERSION.startsWith("1.9"))
 			initPacketsFor_1_9();
 	}
@@ -83,8 +83,8 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_MACRO_RESULT.class, 0x0106, idSet);// 2.6 0x06, 2.7
 		addPacketOpcode(SM_MACRO_LIST.class, 0x0107, idSet);// 2.6 0x07, 2.7
 		addPacketOpcode(SM_NICKNAME_CHECK_RESPONSE.class, 0x0109, idSet);// 2.6 0x09, 2.7
-		addPacketOpcode(SM_RIFT_ANNOUNCE.class, 0x0A, idSet);// 2.1
-		addPacketOpcode(SM_RIFT_STATUS.class, 0x010A, idSet);// 2.7
+		addPacketOpcode(SM_RIFT_ANNOUNCE.class, 0x0152, idSet); // 2.7
+		addPacketOpcode(SM_RIFT_STATUS.class, 0x010A, idSet); // 2.7
 		addPacketOpcode(SM_SET_BIND_POINT.class, 0x010B, idSet);// 2.6 0x0B, 2.7
 		addPacketOpcode(SM_ABYSS_RANK.class, 0x010D, idSet);// 2.6 0x0D, 2.7
 		addPacketOpcode(SM_FRIEND_UPDATE.class, 0x000E, idSet);// 2.6 0x0E, 2.7
@@ -192,7 +192,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_FRIEND_LIST.class, 0x01A2, idSet);// 2.6 0xA2, 2.7
 		addPacketOpcode(SM_PRIVATE_STORE.class, 0x01A4, idSet); // 2.6 0xA4, 2.7
 		addPacketOpcode(SM_ABYSS_RANK_UPDATE.class, 0xA6, idSet);// 2.1
-		addPacketOpcode(SM_GROUP_LOOT.class, 0xA7, idSet);// 2.1
+		addPacketOpcode(SM_GROUP_LOOT.class, 0x1A7, idSet);// 2.1
 		addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class, 0x01A8, idSet);// 2.6 0xA8, 2.7
 		addPacketOpcode(SM_MAY_LOGIN_INTO_GAME.class, 0x01A9, idSet);// 2.6 0xA9, 2.7
 		addPacketOpcode(SM_STAGE_STEP_STATUS.class, 0x01AA, idSet); // 2.7 - NEW!
@@ -249,7 +249,6 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_LOOT_STATUS.class, 0x01ED, idSet);// 2.6 0xED, 2.7
 		addPacketOpcode(SM_MANTRA_EFFECT.class, 0x01EE, idSet);// 2.6 0xEE, 2.7
 		addPacketOpcode(SM_RECIPE_LIST.class, 0x01EF, idSet);// 2.6 0xEF, 2.7
-		// 2.7 Unknown - F0 01 54 8F FE 6B 04 00 00 02 00 00 00 00   
 		addPacketOpcode(SM_SIEGE_LOCATION_INFO.class, 0x01F1, idSet);// 2.6 0xF1, 2.7
 		addPacketOpcode(SM_FLY_TIME.class, 0x01F2, idSet);// 2.6 0xF2, 2.7
 		addPacketOpcode(SM_FORTRESS_INFO.class, 0x01F3, idSet);// 2.6 0xF3, 2.7

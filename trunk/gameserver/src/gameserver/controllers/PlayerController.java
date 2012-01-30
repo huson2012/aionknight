@@ -1,22 +1,22 @@
-/**
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers;
@@ -69,8 +69,8 @@ import java.util.concurrent.Future;
  */
 public class PlayerController extends CreatureController<Player>
 {
-	private boolean			isInShutdownProgress = false;
-	private boolean			canAutoRevive = true;
+	private boolean	isInShutdownProgress = false;
+	private boolean	canAutoRevive = true;
 
 	/**
 	 * Zone update mask
@@ -230,7 +230,7 @@ public class PlayerController extends CreatureController<Player>
         Player player = getOwner();
 		QuestEngine.getInstance().onEnterZone(new QuestCookie(null, player, 0, 0), zoneInstance.getTemplate().getName());
 		
-        if (player.getFlyController().canFly(true) == false) {
+        if (!player.getFlyController().canFly(true)) {
                 checkNoFly(player);
         }
 	}
@@ -273,7 +273,7 @@ public class PlayerController extends CreatureController<Player>
 
 		for (Effect ef : getOwner().getEffectController().getAbnormalEffects())
 		{
-			//remove abyss transformation if worldtype != abyss && worldtype != balaurea
+			// Remove abyss transformation if worldtype != abyss && worldtype != balaurea
 			if (ef.isAvatar())
 			{
 				if (getOwner().getWorldType() != WorldType.ABYSS && 
@@ -285,7 +285,7 @@ public class PlayerController extends CreatureController<Player>
 					break;
 				}
 			}
-			//remove Instance Transformation if player is not in instance (Kromede, Taloc....)
+			// Remove Instance Transformation if player is not in instance (Kromede, Taloc....)
 			if (ef.getStack().contains("POLYMORPH_CROMEDE"))
 			{
 				if (getOwner().getWorldId() != 300230000)
@@ -391,9 +391,6 @@ public class PlayerController extends CreatureController<Player>
 		player.getObserveController().notifyDeath(player);
 	}
 
-
-
-
 	@Override
 	public void doReward()
 	{
@@ -402,9 +399,9 @@ public class PlayerController extends CreatureController<Player>
 		
 		// DP reward 
 		// TODO: Figure out what DP reward should be for PvP
-		//int currentDp = winner.getCommonData().getDp();
-		//int dpReward = StatFunctions.calculateSoloDPReward(winner, getOwner());
-		//winner.getCommonData().setDp(dpReward + currentDp);
+		// int currentDp = winner.getCommonData().getDp();
+		// int dpReward = StatFunctions.calculateSoloDPReward(winner, getOwner());
+		// winner.getCommonData().setDp(dpReward + currentDp);
 		
 	}
 	
@@ -529,9 +526,6 @@ public class PlayerController extends CreatureController<Player>
 		}	
 	}
 
-	/**
-	 * 
-	 */
 	public void updatePassiveStats()
 	{
 		Player player = getOwner();
@@ -552,7 +546,6 @@ public class PlayerController extends CreatureController<Player>
 	}
 
 	/**
-	 * 
 	 * @param player
 	 * @return
 	 */
@@ -605,11 +598,11 @@ public class PlayerController extends CreatureController<Player>
 		PlayerStatsTemplate statsTemplate = DataManager.PLAYER_STATS_DATA.getTemplate(player);
 		player.setPlayerStatsTemplate(statsTemplate);
 		
-		// update stats after setting new template
+		// Update stats after setting new template
 		player.getGameStats().doLevelUpgrade();
 		player.getLifeStats().synchronizeWithMaxStats();
 		player.getLifeStats().updateCurrentStats();
-		
+
 		PacketSendUtility.broadcastPacket(player, new SM_LEVEL_UPDATE(player.getObjectId(), 0, level), true);
 
 		// Temporal
@@ -627,7 +620,7 @@ public class PlayerController extends CreatureController<Player>
 			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player));
 			player.getSkillList().addSkill(player, 30002, skillLevel, true);
 		}
-		// add new skills
+		// Add new skills
 		SkillLearnService.addNewSkills(player, false);
 		
 		/**
@@ -755,9 +748,6 @@ public class PlayerController extends CreatureController<Player>
 		ZoneService.getInstance().findZoneInCurrentMap(getOwner());
 	}
 
-	/**
-	 * 
-	 */
 	public void ban()
 	{
 		// sp.getTeleportService().teleportTo(this.getOwner(), 510010000, 256f, 256f, 49f, 0);
@@ -785,7 +775,7 @@ public class PlayerController extends CreatureController<Player>
 		if(currentZone != null && currentZone.isBreath())
 			return;
 		
-		//TODO need fix character height
+		// TODO: need fix character height
 		float playerheight = player.getPlayerAppearance().getHeight() * 1.6f;
 		if(z < world.getWorldMap(player.getWorldId()).getWaterLevel() - playerheight)
 			ZoneService.getInstance().startDrowning(player);
@@ -798,7 +788,7 @@ public class PlayerController extends CreatureController<Player>
 	{
 		Player master = getOwner();
 		
-		if (master.getSummon() != null) //check to avoid spawns of multiple summons
+		if (master.getSummon() != null) // Check to avoid spawns of multiple summons
 			return;
 		
 		Summon summon = SpawnEngine.getInstance().spawnSummon(master, npcId, skillLvl);
@@ -870,5 +860,4 @@ public class PlayerController extends CreatureController<Player>
 			return true;
 		}
 	}
-
 }

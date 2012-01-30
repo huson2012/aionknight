@@ -1,25 +1,28 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects;
 
 import gameserver.model.broker.BrokerRace;
 import gameserver.model.gameobjects.player.Player;
-
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Comparator;
@@ -219,8 +222,7 @@ public class BrokerItem implements Comparable<BrokerItem>
 
 	public int daysLeft()
 	{
-		int days = (int) ((expireTime.getTime() - System.currentTimeMillis()) / 86400000);
-		return days;
+		return (int) ((expireTime.getTime() - System.currentTimeMillis()) / 86400000);
 	}
 
 	public long getItemCount()
@@ -241,7 +243,7 @@ public class BrokerItem implements Comparable<BrokerItem>
 	 */
 	private long getPiecePrice()
 	{
-		return getPrice() / getItemCount();
+		return price / itemCount;
 	}
 
 	/**
@@ -258,7 +260,7 @@ public class BrokerItem implements Comparable<BrokerItem>
 	@Override
 	public int compareTo(BrokerItem o)
 	{
-		return itemUniqueId > o.getItemUniqueId() ? 1 : -1;
+		return itemUniqueId > o.itemUniqueId ? 1 : -1;
 	}
 
 	/**

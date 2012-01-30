@@ -1,22 +1,22 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.network.gameserver.clientpackets;
@@ -39,95 +39,94 @@ import commons.network.IPRange;
  */
 public class CM_GS_AUTH extends GsClientPacket
 {
-	/**
-	 * Password for authentication
-	 */
-	private String		password;
+    /**
+     * Password for authentication
+     */
+    private String password;
 
-	/**
-	 * Id of GameServer
-	 */
-	private byte			gameServerId;
+    /**
+     * Id of GameServer
+     */
+    private byte gameServerId;
 
-	/**
-	 * Maximum number of players that this Gameserver can accept.
-	 */
-	private int			maxPlayers;
-	
-	/**
-	 * Required access level to login
-	 */
-	private int			requiredAccess;
-	
-	/**
-	 * Port of this Gameserver.
-	 */
-	private int			port;
+    /**
+     * Maximum number of players that this Gameserver can accept.
+     */
+    private int maxPlayers;
 
-	/**
-	 * Default address for server
-	 */
-	private byte[]		defaultAddress;
+    /**
+     * Required access level to login
+     */
+    private int requiredAccess;
 
-	/**
-	 * List of IPRanges for this gameServer
-	 */
-	private List<IPRange>	ipRanges;
+    /**
+     * Port of this Gameserver.
+     */
+    private int port;
 
-	/**
-	 * Constructor.
-	 * 
-	 * @param buf
-	 * @param client
-	 */
-	public CM_GS_AUTH(ByteBuffer buf, GsConnection client)
-	{
-		super(buf, client, 0x00);
-	}
+    /**
+     * Default address for server
+     */
+    private byte[] defaultAddress;
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected void readImpl()
-	{
-		gameServerId = (byte) readC();
+    /**
+     * List of IPRanges for this gameServer
+     */
+    private List<IPRange> ipRanges;
 
-		defaultAddress = readB(readC());
-		int size = readD();
-		ipRanges = new ArrayList<IPRange>(size);
-		for (int i = 0; i < size; i++)
-		{
-			ipRanges.add(new IPRange(readB(readC()), readB(readC()), readB(readC())));
-		}
+    /**
+     * Constructor.
+     *
+     * @param buf
+     * @param client
+     */
+    public CM_GS_AUTH(ByteBuffer buf, GsConnection client)
+    {
+        super(buf, client, 0x00);
+    }
 
-		port = readH();
-		maxPlayers = readD();
-		requiredAccess = readD();
-		password = readS();
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void readImpl()
+    {
+        gameServerId = (byte) readC();
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected void runImpl()
-	{
-		GsConnection client = getConnection();
+        defaultAddress = readB(readC());
+        int size = readD();
+        ipRanges = new ArrayList<IPRange>(size);
+        for (int i = 0; i < size; i++)
+        {
+            ipRanges.add(new IPRange(readB(readC()), readB(readC()), readB(readC())));
+        }
 
-		GsAuthResponse resp = GameServerTable.registerGameServer(client, gameServerId, defaultAddress, ipRanges, port,
-			maxPlayers, requiredAccess, password);
+        port = readH();
+        maxPlayers = readD();
+        requiredAccess = readD();
+        password = readS();
+    }
 
-		switch (resp)
-		{
-			case AUTHED:
-				getConnection().setState(State.AUTHED);
-				DAOManager.getDAO(GameServersDAO.class).writeGameServerStatus(GameServerTable.getGameServerInfo(gameServerId));
-				sendPacket(new SM_GS_AUTH_RESPONSE(resp));
-				break;
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void runImpl()
+    {
+        GsConnection client = getConnection();
 
-			default:
-				client.close(new SM_GS_AUTH_RESPONSE(resp), true);
-		}
-	}
+        GsAuthResponse resp = GameServerTable.registerGameServer(client, gameServerId, defaultAddress, ipRanges, port, maxPlayers, requiredAccess, password);
+
+        switch (resp)
+        {
+            case AUTHED:
+                getConnection().setState(State.AUTHED);
+                DAOManager.getDAO(GameServersDAO.class).writeGameServerStatus(GameServerTable.getGameServerInfo(gameServerId));
+                sendPacket(new SM_GS_AUTH_RESPONSE(resp));
+                break;
+
+            default:
+                client.close(new SM_GS_AUTH_RESPONSE(resp), true);
+        }
+    }
 }

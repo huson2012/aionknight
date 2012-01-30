@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.ai.desires.impl;
@@ -41,6 +41,7 @@ public class AttackDesire extends AbstractDesire
 	private int attackNotPossibleCounter;
 	private int maxAtkTry		= 6;
 	private int attackCounter 	= 1;
+	
 	/**
 	 * Target of this desire
 	 */
@@ -74,7 +75,7 @@ public class AttackDesire extends AbstractDesire
 		if(target == null || target.getLifeStats().isAlreadyDead() || target.getLifeStats().getCurrentHp() <= 0 || 
 			owner instanceof FortressGate || owner instanceof Kisk)
 		{
-			//TODO lower hate and not reset
+			// TODO: lower hate and not reset
 			owner.getAggroList().stopHating(target);
 			owner.getAggroList().remove(target);
 			owner.getAi().handleEvent(Event.TIRED_ATTACKING_TARGET);
@@ -95,14 +96,16 @@ public class AttackDesire extends AbstractDesire
 		if(target.getVisualState() != 0 && owner instanceof Npc)
 		{
 			NpcRank npcrank = owner.getObjectTemplate().getRank();
-			/** 3 currently GM invis
+			
+			/** 
+			 * 3 currently GM invis
 			 * This will only exclude elites from hide1
 			 */
 			if(target.getVisualState() == 3 || (npcrank != NpcRank.LEGENDARY && npcrank != NpcRank.HERO &&
 			(target.getVisualState() != 1 || npcrank != NpcRank.ELITE)))
 			{
 				owner.getAggroList().stopHating(target);
-				owner.getController().cancelCurrentSkill();//prevent npc from ending cast of skill
+				owner.getController().cancelCurrentSkill(); // Prevent npc from ending cast of skill
 				owner.getAggroList().remove(target);
 				owner.getAi().handleEvent(Event.TIRED_ATTACKING_TARGET);
 				return false;
@@ -122,7 +125,7 @@ public class AttackDesire extends AbstractDesire
 
 		//TODO: We should use isIn3dRange but should be implemented after we have leaks fixed for performance issues
 		if((MathUtil.isIn3dRange(owner, target, (float) owner.getGameStats().getCurrentStat(StatEnum.ATTACK_RANGE)/1000f + 1.5f)) ||
-			(distance * 1000 <= owner.getGameStats().getCurrentStat(StatEnum.SPEED) && owner.canPerformMove()))// Added 1.5 as tolerance
+			(distance * 1000 <= owner.getGameStats().getCurrentStat(StatEnum.SPEED) && owner.canPerformMove())) // Added 1.5 as tolerance
 		{
 			owner.getController().attackTarget(target);
 			attackNotPossibleCounter = 0;
@@ -190,5 +193,4 @@ public class AttackDesire extends AbstractDesire
 	{
 		owner.unsetState(CreatureState.WEAPON_EQUIPPED);
 	}
-	
 }

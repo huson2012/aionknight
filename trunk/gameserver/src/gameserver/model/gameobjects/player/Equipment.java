@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects.player;
@@ -81,7 +85,7 @@ public class Equipment
 		
 		if (itemTemplate.getGenderPermitted() != Gender.ALL && itemTemplate.getGenderPermitted() != owner.getGender())
 		{
-			PacketSendUtility.sendMessage(owner, "You cannot wear this object because it can be weared only by " + (itemTemplate.getGenderPermitted() == Gender.MALE ? "a guy" : "a woman") + ".");
+			PacketSendUtility.sendMessage(owner, "You cannot wear this object because it can be weared only by " + (itemTemplate.getGenderPermitted() == Gender.MALE ? "a guy" : "a woman") + '.');
 			return null;
 		}
 
@@ -225,7 +229,7 @@ public class Equipment
 			ItemEquipmentListener.onItemEquipment(item, owner);
 			owner.getObserveController().notifyItemEquip(item, owner);
 			owner.getLifeStats().updateCurrentStats();
-			setPersistentState(PersistentState.UPDATE_REQUIRED);
+            persistentState = PersistentState.UPDATE_REQUIRED;
 			return item;
 		}	
 	}
@@ -740,11 +744,9 @@ public class Equipment
 	{
 		Item arrow = equipment.get(ItemSlot.SUB_HAND.getSlotIdMask());
 
-		if(arrow != null && arrow.getItemTemplate().getArmorType() == ArmorType.ARROW)
-			return true;
-		
-		return false;
-	}
+        return arrow != null && arrow.getItemTemplate().getArmorType() == ArmorType.ARROW;
+
+    }
 	
 	public boolean isPowerShardEquipped()
 	{
@@ -753,11 +755,9 @@ public class Equipment
 			return true;
 		
 		Item rightPowershard = equipment.get(ItemSlot.POWER_SHARD_RIGHT.getSlotIdMask());
-		if(rightPowershard != null)
-			return true;
+        return rightPowershard != null;
 
-		return false;
-	}
+    }
 
 	public Item getMainHandPowerShard()
 	{
@@ -833,7 +833,7 @@ public class Equipment
 		}
 		
 		PacketSendUtility.sendPacket(owner, new SM_UPDATE_ITEM(equippedItem));
-		setPersistentState(PersistentState.UPDATE_REQUIRED);
+        persistentState = PersistentState.UPDATE_REQUIRED;
 	}
 
 	/**
@@ -904,7 +904,7 @@ public class Equipment
 		}
 
 		owner.getLifeStats().updateCurrentStats();
-		setPersistentState(PersistentState.UPDATE_REQUIRED);
+        persistentState = PersistentState.UPDATE_REQUIRED;
 	}
 
 	/**
@@ -917,14 +917,10 @@ public class Equipment
 		{
 			return true;
 		}
-		if(equipment.get(ItemSlot.MAIN_HAND.getSlotIdMask()) == null  //check this later
-			&&	equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()) != null 
-			&&	equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()).getItemTemplate().getWeaponType() == weaponType)
-		{
-			return true;
-		}
-		return false;
-	}
+        return equipment.get(ItemSlot.MAIN_HAND.getSlotIdMask()) == null  //check this later
+                && equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()) != null
+                && equipment.get(ItemSlot.SUB_HAND.getSlotIdMask()).getItemTemplate().getWeaponType() == weaponType;
+    }
 	
 	/**
 	 * @param armorType
@@ -941,10 +937,8 @@ public class Equipment
 			else if (equipment.get(slot) != null && equipment.get(slot).getItemTemplate().getArmorType() == armorType)
 				equiped = true;
 		}
-		if (!equiped)
-			return false;
-		return true;
-	}
+        return equiped;
+    }
 	
 	public Item getMainHandWeapon()
 	{

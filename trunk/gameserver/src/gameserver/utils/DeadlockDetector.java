@@ -1,22 +1,22 @@
-/**
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.utils;
@@ -85,18 +85,18 @@ public class DeadlockDetector implements Runnable
 	private void printThreadInfo(ThreadInfo threadInfo) 
 	{
 		printThread(threadInfo);
-		sb.append(INDENT + threadInfo.toString() + "\n");
+        sb.append(INDENT).append(threadInfo.toString()).append('\n');
 		StackTraceElement[] stacktrace = threadInfo.getStackTrace();
 		MonitorInfo[] monitors = threadInfo.getLockedMonitors();
 
 		for (int i = 0; i < stacktrace.length; i++) 
 		{
 			StackTraceElement ste = stacktrace[i];
-			sb.append(INDENT + "at " + ste.toString() + "\n");
+            sb.append(INDENT).append("at ").append(ste.toString()).append('\n');
 			for (MonitorInfo mi : monitors) 
 			{
 				if (mi.getLockedStackDepth() == i) {
-					sb.append(INDENT + "  - locked " + mi + "\n");
+                    sb.append(INDENT).append("  - locked ").append(mi).append('\n');
 				}
 			}
 		}
@@ -105,44 +105,41 @@ public class DeadlockDetector implements Runnable
 	private void printThread(ThreadInfo ti) 
 	{
 		sb.append("\nPrintThread\n");
-		sb.append("\"" + ti.getThreadName() + "\"" + " Id="
-				+ ti.getThreadId() + " in " + ti.getThreadState() + "\n");
+        sb.append('\"').append(ti.getThreadName()).append('\"' + " Id=").append(ti.getThreadId()).append(" in ").append(ti.getThreadState()).append('\n');
 		if (ti.getLockName() != null) 
 		{
-			sb.append(" on lock=" + ti.getLockName() + "\n");
+            sb.append(" on lock=").append(ti.getLockName()).append('\n');
 		}
 		if (ti.isSuspended())
 		{
-			sb.append(" (suspended)" + "\n");
+			sb.append(" (suspended)" + '\n');
 		}
 		if (ti.isInNative()) 
 		{
-			sb.append(" (running in native)" + "\n");
+			sb.append(" (running in native)" + '\n');
 		}
 		if (ti.getLockOwnerName() != null) 
 		{
-			sb.append(INDENT + " owned by " + ti.getLockOwnerName() + " Id="
-					+ ti.getLockOwnerId() + "\n");
+            sb.append(INDENT).append(" owned by ").append(ti.getLockOwnerName()).append(" Id=").append(ti.getLockOwnerId()).append('\n');
 		}
 	}
 
 	private void printMonitorInfo(ThreadInfo threadInfo, MonitorInfo[] monitorInfos) 
 	{
-		sb.append(INDENT + "Locked monitors: count = " + monitorInfos.length + "\n");
+        sb.append(INDENT).append("Locked monitors: count = ").append(monitorInfos.length).append('\n');
 		for (MonitorInfo monitorInfo : monitorInfos)
 		{
-			sb.append(INDENT + "  - " + monitorInfo + " locked at " + "\n");
-			sb.append(INDENT + "      " + monitorInfo.getLockedStackDepth() + " "
-					+ monitorInfo.getLockedStackFrame() + "\n");
+            sb.append(INDENT).append("  - ").append(monitorInfo).append(" locked at " + '\n');
+            sb.append(INDENT).append("      ").append(monitorInfo.getLockedStackDepth()).append(' ').append(monitorInfo.getLockedStackFrame()).append('\n');
 		}
 	}
 
 	private void printLockInfo(LockInfo[] lockInfos) 
 	{
-		sb.append(INDENT + "Locked synchronizers: count = " + lockInfos.length + "\n");
+        sb.append(INDENT).append("Locked synchronizers: count = ").append(lockInfos.length).append('\n');
 		for (LockInfo lockInfo : lockInfos)
 		{
-			sb.append(INDENT + "  - " + lockInfo + "\n");
+            sb.append(INDENT).append("  - ").append(lockInfo).append('\n');
 		}
 	}
 }

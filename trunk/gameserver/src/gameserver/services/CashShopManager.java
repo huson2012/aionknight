@@ -1,22 +1,22 @@
-/**
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.services;
@@ -87,12 +87,11 @@ public class CashShopManager
 
 	public CashShopManager()
 	{
-		// TODO: Переместить DAO
+		// TODO : Relocate the DAO
 
 		log.info("Loading ingame shop...");
 
-		// Первая категория (id 1) выводит на экран все элементы. Любые дополнительные категории, 
-		// должны быть id 2 и т.д.
+		// The first category (id 1) display all the items. Any additionnal category must be id 2 and +
 		@SuppressWarnings("unused")
 		int catId = 1;
 		@SuppressWarnings("unused")
@@ -223,13 +222,13 @@ public class CashShopManager
 
 		if(item == null)
 		{
-			// Вы не смогли приобрести товар.
+			// You have failed to purchase the item.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400105));
 			return;
 		}
 		if(player.shopMoney < item.price)
 		{
-			// Вам не хватает денежных средств.
+			// You do not have enough Cash Points.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400108));
 			return;
 		}
@@ -249,9 +248,9 @@ public class CashShopManager
 	void decreaseAndUpdate(Player player, long value)
 	{
 		/**
-		 * param value : кредиты провел
+		 * param value : the credits spent
 		 *
-		 * Добавить свой код перед отправкой пакета обновления кредитов, если вам нужно конечно.
+		 * Add your own code before sending credit update packet if you need.
 		 * PacketSendUtility.sendPacket(player, new SM_INGAMESHOP_BALANCE());
 		 *
 		 */
@@ -261,9 +260,9 @@ public class CashShopManager
 	void increaseAndUpdate(Player player, long value)
 	{
 		/**
-		 * param value : кредиты провел
+		 * param value : the credits spent
 		 *
-		 * Добавить свой код перед отправкой пакета обновления кредитов, если вам нужно конечно.
+		 * Add your own code before sending credit update packet if you need.
 		 * PacketSendUtility.sendPacket(player, new SM_INGAMESHOP_BALANCE());
 		 *
 		 */
@@ -274,6 +273,7 @@ public class CashShopManager
 	{
 		ShopItem item = getItem(id);
 
+		//vorerst deaktiviert.
 		if(!CustomConfig.AIONSHOP_GIFT_ENABLE)
 		{
 			PacketSendUtility.sendMessage(player, "Gift service is not enabled");
@@ -281,13 +281,13 @@ public class CashShopManager
 		}
 		if(item == null)
 		{
-			// Вы не смогли приобрести товар.
+			// You have failed to purchase the item.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400105));
 			return;
 		}
 		if(player.shopMoney < item.price)
 		{
-			// Вам не хватает денежных средств.
+			// You do not have enough Cash Points.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400108));
 			return;
 		}
@@ -296,27 +296,26 @@ public class CashShopManager
 
 		if(pcd == null || pcd.getRace() != player.getCommonData().getRace())
 		{
-			// Вы выбрали неверную цель, чтобы дарить подарок.
+			// You have chosen an invalid target to give the gift.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400106));
 			return;
 		}
 
 		if(player.getName() == receiver)
 		{
-			// Вы не можете дарить подарки самому себе.
+			// You cannot give gifts to yourself.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400116));
 			return;
 		}
 
-		// Проверки прошли, перейдем к пункту отправки:
+		// Checks passed, we proceed to the item send.
 		decreaseAndUpdate(player, item.price);
 
 		MailService.getInstance().sendSystemMail("CASH_ITEM_MAIL", "Gift from " + player.getName(), message, pcd.getPlayerObjId(), ItemService.newItem(item.itemId, item.count, "Purchased at Black Cloud Traders Shop", pcd.getPlayerObjId(), 0, 0), 0);
 
-		// Подарок был успешно доставлен.
+		// The gift has been delivered successfully.
 		PacketSendUtility.sendMessage(player, "Your gift has been delivered successfully");
-		return;
-	}
+    }
 
 	public void logPurchase(Player player, int itemUniqueId)
 	{

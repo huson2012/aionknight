@@ -48,9 +48,9 @@ public class SignetBurstEffect extends DamageEffect
 		Effect signetEffect = null;
 		for (int i=1;i <= 5;i++)
 		{
-			if (effected.getEffectController().getAbnormalEffect(signet+"_"+i) != null)
+			if (effected.getEffectController().getAbnormalEffect(signet+ '_' +i) != null)
 			{
-				signetEffect = effected.getEffectController().getAbnormalEffect(signet+"_"+i);
+				signetEffect = effected.getEffectController().getAbnormalEffect(signet+ '_' +i);
 				break;
 			}
 		}

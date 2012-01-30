@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers.instances;
@@ -36,7 +36,6 @@ import java.util.TimerTask;
 
 public class EmpyreanCrucibleController extends NpcController
 {
-
 	@Override
 	public void onDie(Creature lastAttacker)
 	{
@@ -58,17 +57,17 @@ public class EmpyreanCrucibleController extends NpcController
 		if(npctemplate.getNameId() == 354983 || npctemplate.getNameId() == 354984 || npctemplate.getNameId() == 354985 || npctemplate.getNameId() == 354986 || npctemplate.getNameId() == 354987 || npctemplate.getNameId() == 354988 || npctemplate.getNameId() == 354989 || npctemplate.getNameId() == 354648 || npctemplate.getNameId() == 354649 || npctemplate.getNameId() == 354650 || npctemplate.getNameId() == 354651 || npctemplate.getNameId() == 354652 || npctemplate.getNameId() == 354653 || npctemplate.getNameId() == 354654 || npctemplate.getNameId() == 354655 || npctemplate.getNameId() == 354656 || npctemplate.getNameId() == 354657 || npctemplate.getNameId() == 354658 || npctemplate.getNameId() == 354659 || npctemplate.getNameId() == 354660 || npctemplate.getNameId() == 354661 || npctemplate.getNameId() == 355036 || npctemplate.getNameId() == 355037 || npctemplate.getNameId() == 355038 || npctemplate.getNameId() == 355039 || npctemplate.getNameId() == 355040 || npctemplate.getNameId() == 355041)
 		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 1011));
-			return;
-		}
+        }
 	}
 
 	@Override
 	public void onDialogSelect(int dialogId, final Player player, int questId)
 	{
 		Npc npc = getOwner();
-		//int targetObjectId = npc.getObjectId();
-		//starting npc.. only after dialog will the event start
-		//TODO: We need something like that
+		
+		// Int targetObjectId = npc.getObjectId();
+		// Starting npc.. only after dialog will the event start
+		// TODO: We need something like that
 		if(dialogId == 10000 && (npc.getNpcId() == 799573 || npc.getNpcId() == 205426 || npc.getNpcId() == 205427 || npc.getNpcId() == 205428 || npc.getNpcId() == 205429 || npc.getNpcId() == 205430 || npc.getNpcId() == 205431))
 		{
 			if(player.getCommonData().getRace().getRaceId() == 0)
@@ -100,7 +99,7 @@ public class EmpyreanCrucibleController extends NpcController
 				@Override
 				public void run()
 				{
-					//PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400931, 1, 1));
+					// PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400931, 1, 1));
 
 					if(player.getPlayerGroup().getEmpyreanCrucible() == null)
 					{
@@ -111,8 +110,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 799568))
 		{
@@ -130,9 +128,9 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
-		//next ones are not used
+        }
+		
+		// Next ones are not used
 		else if(dialogId == 10000 && (npc.getNpcId() == 799569))
 		{
 
@@ -149,8 +147,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 799570))
 		{
@@ -168,8 +165,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 799571))
 		{
@@ -187,8 +183,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 799572))
 		{
@@ -206,8 +201,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 205331))
 		{
@@ -225,8 +219,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 205332))
 		{
@@ -244,8 +237,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 205333))
 		{
@@ -263,8 +255,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205334))
 		{
 
@@ -281,8 +272,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 205335))
 		{
@@ -300,8 +290,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 205336))
 		{
@@ -319,8 +308,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 
 		else if(dialogId == 10000 && (npc.getNpcId() == 205337))
 		{
@@ -338,8 +326,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205338))
 		{
 
@@ -356,8 +343,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205339))
 		{
 
@@ -374,8 +360,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205340))
 		{
 
@@ -392,8 +377,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205341))
 		{
 
@@ -410,8 +394,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205342))
 		{
 
@@ -428,8 +411,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205343))
 		{
 
@@ -446,8 +428,7 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 		else if(dialogId == 10000 && (npc.getNpcId() == 205344))
 		{
 
@@ -464,7 +445,6 @@ public class EmpyreanCrucibleController extends NpcController
 				}
 			}, 1000);
 			delete();
-			return;
-		}
+        }
 	}
 }

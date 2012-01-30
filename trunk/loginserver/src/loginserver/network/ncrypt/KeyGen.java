@@ -1,22 +1,22 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.network.ncrypt;
@@ -35,67 +35,68 @@ import commons.utils.Rnd;
  */
 public class KeyGen
 {
-	/**
-	 * Logger for this class.
-	 */
-	protected static final Logger log = Logger.getLogger(KeyGen.class);
-
-	/**
-	 * Key generator for blowfish
-	 */
-	private static KeyGenerator	blowfishKeyGen;
-
-	/**
-	 * Public/Static RSA KeyPairs with encrypted modulus N
-	 */
-	private static EncryptedRSAKeyPair[] encryptedRSAKeyPairs;
+    /**
+     * Logger for this class.
+     */
+    private static final Logger log = Logger.getLogger(KeyGen.class);
 
     /**
-	 * Initialize Key Generator (Blowfish keygen and RSA keygen)
-	 *
-	 * @throws GeneralSecurityException
-	 */
-	public static void init() throws GeneralSecurityException
-	{
-		log.info("Initializing Key Generator...");
+     * Key generator for blowfish
+     */
+    private static KeyGenerator blowfishKeyGen;
 
-		blowfishKeyGen = KeyGenerator.getInstance("Blowfish");
+    /**
+     * Public/Static RSA KeyPairs with encrypted modulus N
+     */
+    private static EncryptedRSAKeyPair[] encryptedRSAKeyPairs;
 
-		KeyPairGenerator rsaKeyPairGenerator = KeyPairGenerator.getInstance("RSA");
+    /**
+     * Initialize Key Generator (Blowfish keygen and RSA keygen)
+     *
+     * @throws GeneralSecurityException
+     */
+    public static void init() throws GeneralSecurityException
+    {
+        log.info("Initializing Key Generator...");
 
-		RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
+        blowfishKeyGen = KeyGenerator.getInstance("Blowfish");
 
-		rsaKeyPairGenerator.initialize(spec);
+        KeyPairGenerator rsaKeyPairGenerator = KeyPairGenerator.getInstance("RSA");
 
-		encryptedRSAKeyPairs = new EncryptedRSAKeyPair[10];
+        RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 
-		for(int i = 0; i < 10; i++)
-		{
-			encryptedRSAKeyPairs[i] = new EncryptedRSAKeyPair(rsaKeyPairGenerator.generateKeyPair());
-		}
+        rsaKeyPairGenerator.initialize(spec);
 
-		// Pre-init RSA cipher.. saving about 300ms
-		Cipher	rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+        encryptedRSAKeyPairs = new EncryptedRSAKeyPair[10];
 
-		rsaCipher.init(Cipher.DECRYPT_MODE, encryptedRSAKeyPairs[0].getRSAKeyPair().getPrivate());
-	}
+        for (int i = 0; i < 10; i++)
+        {
+            encryptedRSAKeyPairs[i] = new EncryptedRSAKeyPair(rsaKeyPairGenerator.generateKeyPair());
+        }
 
-	/**
-	 * Generate and return blowfish key
-	 *
-	 * @return Random generated blowfish key
-	 */
-	public static SecretKey generateBlowfishKey()
-	{
-		return blowfishKeyGen.generateKey();
-	}
+        // Pre-init RSA cipher.. saving about 300ms
+        Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 
-	/**
-	 * Get common RSA Public/Static Key Pair with encrypted modulus N
-	 * @return encryptedRSAkeypairs
-	 */
-	public static EncryptedRSAKeyPair getEncryptedRSAKeyPair()
-	{
-		return encryptedRSAKeyPairs[Rnd.nextInt(10)];
-	}
+        rsaCipher.init(Cipher.DECRYPT_MODE, encryptedRSAKeyPairs[0].getRSAKeyPair().getPrivate());
+    }
+
+    /**
+     * Generate and return blowfish key
+     *
+     * @return Random generated blowfish key
+     */
+    public static SecretKey generateBlowfishKey()
+    {
+        return blowfishKeyGen.generateKey();
+    }
+
+    /**
+     * Get common RSA Public/Static Key Pair with encrypted modulus N
+     *
+     * @return encryptedRSAkeypairs
+     */
+    public static EncryptedRSAKeyPair getEncryptedRSAKeyPair()
+    {
+        return encryptedRSAKeyPairs[Rnd.nextInt(10)];
+    }
 }

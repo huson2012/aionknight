@@ -1,18 +1,22 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.model.gameobjects.player;
@@ -37,7 +41,6 @@ import gameserver.utils.stats.XPLossEnum;
 import gameserver.world.World;
 import gameserver.world.WorldPosition;
 import org.apache.log4j.Logger;
-
 import java.sql.Timestamp;
 
 public class PlayerCommonData extends VisibleObjectTemplate
@@ -161,8 +164,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 			this.exp = this.exp - this.getExpShown();
 		}
 		if(this.getPlayer() != null)
-			PacketSendUtility.sendPacket(this.getPlayer(), new SM_STATUPDATE_EXP(this.getExpShown(), this
-				.getExpRecoverable(), this.getExpNeed()));
+			PacketSendUtility.sendPacket(this.getPlayer(), new SM_STATUPDATE_EXP(this.getExpShown(), this.expRecoverable, this.getExpNeed()));
 	}
 
 	public void setRecoverableExp(long expRecoverable)
@@ -183,11 +185,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 	}
 
     public boolean isXPGainOn() {
-        if (CustomConfig.PLAYER_EXPERIENCE_CONTROL && getPlayer().isNoExperienceGain()) {
-            return false;
-        } else {
-        	return true;
-        }
+        return !(CustomConfig.PLAYER_EXPERIENCE_CONTROL && getPlayer().isNoExperienceGain());
     }
 
 	/**
@@ -217,7 +215,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 		long repletionBonus = 0;
 		if(this.getRepletionState() > 0)
 		{
-			repletionBonus = (value / 100) * (getPlayer().getCommonData().getLevel() < 45 ? 40 : 30);
+			repletionBonus = (value / 100) * (getPlayer().getCommonData().level < 45 ? 40 : 30);
 			long finalState = this.getRepletionState() - repletionBonus;
 			this.setRepletionState(finalState);
 		}
@@ -263,7 +261,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 		// maxLevel is 51 but in game 50 should be shown with full XP bar
 		int maxLevel = DataManager.PLAYER_EXPERIENCE_TABLE.getMaxLevel();
 
-		if(getPlayerClass() != null && getPlayerClass().isStartingClass())
+		if(playerClass != null && playerClass.isStartingClass())
 			maxLevel = 10;
 
 		long maxExp = DataManager.PLAYER_EXPERIENCE_TABLE.getStartExpForLevel(maxLevel);
@@ -285,15 +283,15 @@ public class PlayerCommonData extends VisibleObjectTemplate
 			if(GSConfig.FACTIONS_RATIO_LIMITED && getPlayer() != null)
 			{
 				if(level > this.level && level >= GSConfig.FACTIONS_RATIO_LEVEL
-					&& getPlayer().getPlayerAccount().getNumberOf(getRace()) == 1)
+					&& getPlayer().getPlayerAccount().getNumberOf(race) == 1)
 				{
-					GameServer.updateRatio(getRace(), 1);
+					GameServer.updateRatio(race, 1);
 				}
 
 				if(level < this.level && this.level >= GSConfig.FACTIONS_RATIO_LEVEL
-					&& getPlayer().getPlayerAccount().getNumberOf(getRace()) == 1)
+					&& getPlayer().getPlayerAccount().getNumberOf(race) == 1)
 				{
-					GameServer.updateRatio(getRace(), -1);
+					GameServer.updateRatio(race, -1);
 				}
 			}
 
@@ -312,8 +310,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 
 			if(this.getPlayer() != null)
 			{
-				PacketSendUtility.sendPacket(this.getPlayer(), new SM_STATUPDATE_EXP(this.getExpShown(), this
-					.getExpRecoverable(), this.getExpNeed()));
+				PacketSendUtility.sendPacket(this.getPlayer(), new SM_STATUPDATE_EXP(this.getExpShown(), this.expRecoverable, this.getExpNeed()));
 			}
 		}
 	}
@@ -413,14 +410,14 @@ public class PlayerCommonData extends VisibleObjectTemplate
 		switch(rank.getRank().getId())
 		{
 			case 14:
-				if(this.getRace().getRaceId() == 0)
+				if(this.race.getRaceId() == 0)
 					player.getSkillList().addSkill(player, 11885, 1, false);// trans I elyos
 				else
 					player.getSkillList().addSkill(player, 11890, 1, false);// trans I asmo
 				player.getSkillList().addSkill(player, 11895, 1, false);// abyssal fury I
 				break;
 			case 15:
-				if(this.getRace().getRaceId() == 0)
+				if(this.race.getRaceId() == 0)
 				{
 					player.getSkillList().addSkill(player, 11886, 1, false);// trans II elyos
 					player.getSkillList().addSkill(player, 11899, 1, false);// summon abyssal energy I elyos
@@ -433,7 +430,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 				player.getSkillList().addSkill(player, 11896, 1, false);// abyssal fury II
 				break;
 			case 16:
-				if(this.getRace().getRaceId() == 0)
+				if(this.race.getRaceId() == 0)
 				{
 					player.getSkillList().addSkill(player, 11887, 1, false);// trans III elyos
 					player.getSkillList().addSkill(player, 11899, 1, false);// summon abyssal energy I elyos
@@ -447,7 +444,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 				player.getSkillList().addSkill(player, 11903, 1, false);// aegis I
 				break;
 			case 17:
-				if(this.getRace().getRaceId() == 0)
+				if(this.race.getRaceId() == 0)
 				{
 					player.getSkillList().addSkill(player, 11888, 1, false);// trans IV elyos
 					player.getSkillList().addSkill(player, 11900, 1, false);// summon abyssal energy II elyos
@@ -462,7 +459,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 				player.getSkillList().addSkill(player, 11904, 1, false);// abyssal wave I
 				break;
 			case 18:
-				if(this.getRace().getRaceId() == 0)
+				if(this.race.getRaceId() == 0)
 				{
 					player.getSkillList().addSkill(player, 11889, 1, false);// trans V elyos
 					player.getSkillList().addSkill(player, 11900, 1, false);// summon abyssal energy II elyos
@@ -617,7 +614,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 	 */
 	public Player getPlayer()
 	{
-		if(online && getPosition() != null)
+		if(online && position != null)
 		{
 			return World.getInstance().findPlayer(playerObjId);
 		}
@@ -650,7 +647,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 		}
 		else
 		{
-			log.warn("CHECKPOINT : getPlayer in PCD return null for setDP " + isOnline() + " " + getPosition());
+			log.warn("CHECKPOINT : getPlayer in PCD return null for setDP " + online + " " + position);
 		}
 	}
 
@@ -704,7 +701,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 	 */
 	public void setRepletionState(long repletionAmount)
 	{
-		if(this.getLevel() >= 20)
+		if(this.level >= 20)
 			this.repletionstate = repletionAmount;
 	}
 	
@@ -713,7 +710,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 	 */
 	public long getRepletionState()
 	{
-		if(this.getLevel() >= 20)
+		if(this.level >= 20)
 			return repletionstate;
 		else
 			return 0;

@@ -30,7 +30,7 @@ public class _1022KrallDesecration extends QuestHandler
 {
 
 	private final static int questId = 1022;
-	private final static int[] mob_ids = { 210158, 210178, 216892 };
+	private final static int[]	mob_ids	= { 210178 };
 
 	public _1022KrallDesecration()
 	{
@@ -89,7 +89,7 @@ public class _1022KrallDesecration extends QuestHandler
 		else if(qs.getStatus() == QuestStatus.REWARD)
 		{
 			if(targetId == 203178)
-				return defaultQuestEndDialog(env, (1017));
+				return defaultQuestEndDialog(env);
 		}
 		return false;
 	}
@@ -97,7 +97,7 @@ public class _1022KrallDesecration extends QuestHandler
 	@Override
 	public boolean onKillEvent(QuestCookie env)
 	{
-		if(defaultQuestOnKillEvent(env, 210158, 1, 5) || defaultQuestOnKillEvent(env, 210178, 1, 5) || defaultQuestOnKillEvent(env, 216892, 5, true))
+		if(defaultQuestOnKillEvent(env, 210178, 1, 5) || defaultQuestOnKillEvent(env, 210178, 5, true))
 			return true;
 		else
 			return false;

@@ -2,16 +2,18 @@
 <!--
 	
 	Назначение файла: Описание и координаты расположения NPC
-	====================================================================================================
+	========================================================
 	Название локации: Интердика (ID: 210040000)
-	====================================================================================================
 	Описание: Территория Элиоса, на которую благодаря нестабильности эфирного барьера могут проникать 
 	балауры.
-	====================================================================================================
+	================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: Aion 2.7 (Иннова)
+	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	====================================================================================================
-	Редакция: 21/12/2011 (Frost)
+	=============================================
+	Последняя редакция: 19/01/2012 (Frost)
  
  -->
 <spawns>
@@ -473,52 +475,78 @@
 	<spawn map="210040000" npcid="205282" pool="1" interval="295">
 		<object x="2420.563" y="355.95282" z="415.4011" h="92"/>
 	</spawn>
-	<!-- Camana (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204541" pool="1" interval="295">
 		<object x="1667.67050" y="2685.50050" z="116.00000" h="120"/>
 	</spawn>
-	<!-- Catid (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204538" pool="1" interval="295">
 		<object x="1581.73380" y="2676.77200" z="118.00000" h="90"/>
 	</spawn>
-	<!-- Chasing Eye (Object Normal lvl:1)-->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700788" pool="4" interval="295">
 		<object x="222.59306" y="1524.9688" z="113.55065" h="61"/>
 		<object x="1472.4927" y="1301.6912" z="166.11351" h="85"/>
 		<object x="1671.8948" y="2703.3604" z="115.38158" h="84"/>
 		<object x="2661.033" y="416.73328" z="399.87088" h="56"/>
 	</spawn>
-	<!-- Cheerinrinerk (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="798095" pool="1" interval="295">
 		<object x="774.8232" y="1673.3119" z="104.072754" h="22"/>
 	</spawn>
-	<!-- Confidential Document Scraps (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700789" pool="3" interval="295">
 		<object x="223.65262" y="1416.4388" z="110.52171" h="70"/>
 		<object x="1746.5984" y="2598.594" z="118.962875" h="46"/>
 		<object x="1452.13" y="1289.606" z="167.875" h="5"/>
 	</spawn>
-	<!-- Cursed Ganges (NPC Normal lvl:41) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204613" pool="1" interval="295">
 		<object x="1326.54270" y="1448.99990" z="112.13033" h="100"/>
 	</spawn>
-	<!-- Kromede's Trial 
-	<spawn map="210040000" npcid="281906" pool="1" interval="295">
-		<object x="132.76828" y="1560.3718" z="120.25" h="14"/>
-	</spawn> -->
-	<!-- Daruka (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204517" pool="1" interval="295">
 		<object x="2545.86800" y="357.37427" z="412.00000" h="82"/>
 	</spawn>
-	<!-- Defense Commander (NPC Hero lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="207569" pool="1" interval="295">
 		<object x="2609.0989" y="416.2217" z="399.0" h="11" w="97"/>
 	</spawn>
-	<!-- Destroyed Teleport Statue (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="730033" pool="1" interval="295">
 		<object x="184.10000" y="2703.95000" z="115.50000" h="63"/>
 	</spawn>
-	<!-- Discolored Bones (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700195" pool="17" interval="295">
 		<object x="403.66000" y="1564.13000" z="119.00000" h="56"/>
 		<object x="354.70000" y="1642.92000" z="114.98000" h="15"/>
@@ -538,19 +566,31 @@
 		<object x="439.27000" y="1895.57000" z="117.88000" h="54"/>
 		<object x="398.43000" y="1927.80000" z="112.50000" h="32"/>
 	</spawn>
-	<!-- Dokurunerk (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="798071" pool="1" interval="295">
 		<object x="160.00000" y="1629.00000" z="123.00000" h="120"/>
 	</spawn>
-	<!-- Dolla (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204511" pool="1" interval="295">
 		<object x="2503.51030" y="306.19610" z="417.00000" h="45"/>
 	</spawn>
-	<!-- Drake Stone Statue (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700239" pool="1" interval="295">
 		<object x="182.18000" y="2703.97000" z="143.65000" h="19"/>
 	</spawn>
-	<!-- Drifting Wooden Box (Object Normal lvl:33) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="211067" pool="6" interval="295">
 		<object x="1158.15080" y="1386.33730" z="105.37500" h="75"/>
 		<object x="1158.72290" y="1376.13920" z="104.75000" h="99"/>
@@ -559,231 +599,402 @@
 		<object x="1173.06000" y="1415.59000" z="104.77563" h="119"/>
 		<object x="1202.04000" y="1416.28000" z="104.75000" h="2"/>
 	</spawn>
-	<!-- Drouh (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204560" pool="1" interval="295">
 		<object x="134.09000" y="1629.58000" z="121.75169" h="114"/>
 	</spawn>
-	<!-- Earth Spirit (NPC Elite lvl:43) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204565" pool="1" interval="295">
 		<object x="242.27882" y="1664.2046" z="114.232574" h="120"/>
 	</spawn>
-	<!-- Earth Spirit (NPC Elite lvl:42) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204605" pool="1" interval="295">
 		<object x="147.61722" y="1596.3263" z="120.37147" h="104"/>
 	</spawn>
-	<!-- Earth Spirit (NPC Elite lvl:43) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204567" pool="1" interval="295">
 		<object x="186.65755" y="1501.408" z="109.59961" h="95"/>
 	</spawn>
-	<!-- Earth Spirit (NPC Elite lvl:43) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204566" pool="1" interval="295">
 		<object x="177.46031" y="1627.7965" z="120.60399" h="52"/>
 	</spawn>
-	<!-- Earth Spirit (NPC Elite lvl:43) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204564" pool="1" interval="295">
 		<object x="242.95767" y="1659.4802" z="114.19015" h="5"/>
 	</spawn>
-	<!-- Earth Spirit (NPC Elite lvl:42) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204563" pool="1" interval="295">
 		<object x="191.09749" y="1500.8364" z="109.608475" h="93"/>
 	</spawn>
-	<!-- Edoras (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204559" pool="1" interval="295">
 		<object x="175.16324" y="1650.65390" z="122.00000" h="74"/>
 	</spawn>
-	<!-- Ekseus (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204593" pool="1" interval="295">
 		<object x="1692.10700" y="2701.95970" z="117.00000" h="30"/>
 	</spawn>
-	<!-- Eladora (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204597" pool="1" interval="295">
 		<object x="1701.40340" y="2665.26460" z="114.25011" h="75"/>
 	</spawn>
-	<!-- Elanos (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="205272" pool="1" interval="295">
 		<object x="1997.161" y="1401.17" z="118.30187" h="114"/>
 	</spawn>
-	<!-- Empty Stone Coffin (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700270" pool="1" interval="295">
 		<object x="197.89534" y="1916.57010" z="114.37500" h="120"/>
 	</spawn>
-	<!-- Endyon (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204537" pool="1" interval="295">
 		<object x="1569.78600" y="2673.18770" z="115.62500" h="115"/>
 	</spawn>
-	<!-- Engraved Stone Tablet (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700217" pool="1" interval="295">
 		<object x="2114.67940" y="400.37875" z="235.74312" h="86"/>
 	</spawn>
-	<!-- Eopede (NPC Hero lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204518" pool="1" interval="295">
 		<object x="2428.22830" y="371.87048" z="414.79404" h="25"/>
 	</spawn>
-	<!-- Ephos (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204522" pool="1" interval="295">
 		<object x="2484.70830" y="336.74014" z="412.00000" h="27"/>
 	</spawn>
-	<!-- Erato (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204630" pool="1" interval="295">
 		<object x="1594.44980" y="2764.01680" z="128.00000" h="99"/>
 	</spawn>
-	<!-- Erdina (NPC Normal lvl:30) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="205257" pool="1" interval="295">
 		<object x="918.20465" y="2255.6482" z="157.55992" h="68"/>
 	</spawn>
-	<!-- Erone (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204568" pool="1" interval="295">
 		<object x="139.37701" y="1631.72440" z="121.71547" h="85"/>
 	</spawn>
-	<!-- Euphrosyne (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="205255" pool="1" interval="295">
 		<object x="970.2826" y="685.72766" z="135.41365" h="18"/>
 	</spawn>
-	<!-- Euripia (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204548" pool="1" interval="295">
 		<object x="1573.00520" y="2748.55640" z="118.43024" h="35"/>
 	</spawn>
-	<!-- Fallen Lapontos (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700218" pool="1" interval="295">
 		<object x="1781.69000" y="469.94000" z="181.00000" h="120"/>
 	</spawn>
-	<!-- Finn (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204574" pool="1" interval="295">
 		<object x="717.25464" y="625.57970" z="130.00000" h="72" w="483"/>
 	</spawn>
-	<!-- First Stone Plate (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700356" pool="1" interval="295">
 		<object x="303.00000" y="307.25000" z="119.82000" h="120"/>
 	</spawn>
-	<!-- Gairos (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204551" pool="1" interval="295">
 		<object x="1442.53830" y="1322.18650" z="174.62500" h="97"/>
 	</spawn>
-	<!-- Gamedes (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204588" pool="1" interval="295">
 		<object x="1116.0598" y="1694.547" z="108.75" h="60"/>
 	</spawn>
-	<!-- Garrett (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204575" pool="1" interval="295">
 		<object x="704.79710" y="641.14280" z="130.00000" h="92"/>
 	</spawn>
-	<!-- Gasuto (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204506" pool="1" interval="295">
 		<object x="2441.70580" y="328.16670" z="416.00000" h="24"/>
 	</spawn>
-	<!-- Gella (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204591" pool="1" interval="295">
 		<object x="1690.48290" y="2656.54200" z="116.00000" h="32"/>
 	</spawn>
-	<!-- Genes (NPC Normal lvl:3) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204520" pool="1" interval="295">
 		<object x="2518.03880" y="418.28348" z="408.74030" h="87"/>
 	</spawn>
-	<!-- Gorgos (NPC Hero lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204590" pool="1" interval="295">
 		<object x="1669.883" y="2667.301" z="115.125" h="80"/>
 	</spawn>
-	<!-- Graa (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204530" pool="1" interval="295">
 		<object x="2465.4556" y="350.88925" z="411.11" h="78"/>
 	</spawn>
-	<!-- Gunes (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204529" pool="1" interval="295">
 		<object x="2514.99020" y="358.63620" z="410.00000" h="60" w="500"/>
 	</spawn>
-	<!-- Guunrunerk (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="205242" pool="1" interval="295">
 		<object x="2445.2786" y="405.43527" z="412.59967" h="74"/>
 	</spawn>
-	<!-- Harmone (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="798386" pool="1" interval="295">
 		<object x="2524.1106" y="314.47507" z="415.91635" h="53"/>
 	</spawn>
-	<!-- Heiron Abyss Gate (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn interval="295" npcid="730061" map="210040000" pool="1">
 		<object h="30" x="2484.928" y="351.7729" z="531.4409" staticid="206"/>
 	</spawn>
-	<!-- Henobe (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204521" pool="1" interval="295">
 		<object x="2518.82520" y="317.28090" z="417.00000" h="120"/>
 	</spawn>
-	<!-- Heraloene (NPC Normal lvl:10) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="790018" pool="1" interval="295">
 		<object x="1659.78000" y="2724.50000" z="117.00000" h="60" w="329"/>
 	</spawn>
-	<!-- Herthia (NPC Elite lvl:40) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="205228" pool="1" interval="295">
 		<object x="2505.0" y="418.0" z="411.65765" h="94"/>
 	</spawn>
-	<!-- Hideros (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204539" pool="1" interval="295">
 		<object x="1584.20860" y="2734.12330" z="120.00000" h="103" w="492"/>
 	</spawn>
-	<!-- Hokuma (NPC Normal lvl:45) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204618" pool="1" interval="295">
 		<object x="2755.00000" y="1401.00000" z="269.00000" h="120"/>
 	</spawn>
-	<!-- Hypnus (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="799809" pool="1" interval="295">
 		<object x="2507.1323" y="345.37296" z="409.8826" h="47"/>
 	</spawn>
-	<!-- Ibelia (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204582" pool="1" interval="295">
 		<object x="2244.92940" y="614.89430" z="272.00000" h="8"/>
 	</spawn>
-	<!-- Illisos (NPC Elite lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="205284" pool="1" interval="295">
 		<object x="1661.1476" y="2688.7085" z="115.375" h="26"/>
 	</spawn>
-	<!-- Indratu Fortress Abyss Gate -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700565" pool="1" interval="295">
 		<object x="1875.06" y="2585.26" z="140.745" h="9"/>
 	</spawn>
-	<!-- Iorene (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204581" pool="1" interval="295">
 		<object x="2242.58640" y="605.68823" z="272.00000" h="115"/>
 	</spawn>
-	<!-- Jaiorunerk's Tomb (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="730141" pool="1" interval="295">
 		<object x="194.48851" y="2019.2664" z="112.73192" h="3"/>
 	</spawn>
-	<!-- Jewel Box (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700188" pool="1" interval="295">
 		<object x="970.44293" y="2193.9727" z="129.75" h="40"/>
 	</spawn>
-	<!-- Jewel Box (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="730032" pool="1" interval="295">
 		<object staticid="1409" x="134.44017" y="1598.0187" z="120.25" h="62"/>
 	</spawn>
-	<!-- Junior Soldier (NPC Elite lvl:45)-->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="207845" interval="295">
 		<object x="173.94011" y="1659.813" z="122" h="87" />
 	</spawn>
-	<!-- Jukabe (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204523" pool="1" interval="295">
 		<object x="2439.5994" y="402.80905" z="412.59766" h="106"/>
 	</spawn>
-	<!-- Kacias (NPC Normal lvl:41) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204625" pool="1" interval="295">
 		<object x="344.00000" y="1620.00000" z="116.00000" h="120"/>
 	</spawn>
-	<!-- Kakuna Egg (Object Normal lvl:1) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="700192" pool="1" interval="295">
 		<object x="834.92000" y="1088.02000" z="116.88000" h="120"/>
 	</spawn>
-	<!-- Kalione (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204577" pool="1" interval="295">
 		<object x="723.1081" y="639.61886" z="128.994391" h="10"/>
 	</spawn>
-	<!-- Kalkas (NPC Normal lvl:41) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204628" pool="1" interval="295">
 		<object x="401.64026" y="1794.61170" z="112.00000" h="88"/>
 	</spawn>
-	<!-- Karanus (NPC Elite lvl:43) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="204572" pool="1" interval="295">
 		<object x="137.94060" y="1571.04980" z="120.00000" h="100" rw="10"/>
 	</spawn>
-	<!-- Karinerk (NPC Normal lvl:50) -->
+	<!-- 
+	Название: 
+	Описание: 
+	-->
 	<spawn map="210040000" npcid="798070" pool="1" interval="295">
 		<object x="2513.8506" y="295.26843" z="416.67737" h="45"/>
 	</spawn>

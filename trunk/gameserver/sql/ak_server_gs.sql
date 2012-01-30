@@ -1,5 +1,5 @@
 /*
- Source Server         : Aion-Knight RC1 [Beta]
+ Source Server         : Aion-Knight 2.7 [Beta]
  Source Server Type    : MySQL
  Source Server Version : 50045
  Source Host           : 192.168.0.1
@@ -416,7 +416,7 @@ CREATE TABLE `players` (
   `cube_size` tinyint(1) NOT NULL DEFAULT '0',
   `advanced_stigma_slot_size` tinyint(1) NOT NULL DEFAULT '0',
   `warehouse_size` tinyint(1) NOT NULL DEFAULT '0',
-  `mailboxLetters` tinyint(4) NOT NULL DEFAULT '0',
+  `mailboxLetters` int(11) NOT NULL DEFAULT '0',
   `bind_point` int(11) NOT NULL DEFAULT '0',
   `title_id` int(3) NOT NULL DEFAULT '-1',
   `online` tinyint(1) NOT NULL DEFAULT '0',

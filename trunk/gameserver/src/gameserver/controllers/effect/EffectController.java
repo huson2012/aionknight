@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package gameserver.controllers.effect;
@@ -42,12 +42,11 @@ public class EffectController
 	private Creature owner;
 
 	@SuppressWarnings("unused")
-	private static final Logger	log			= Logger.getLogger(EffectController.class);
+	private static final Logger	log	= Logger.getLogger(EffectController.class);
 	
 	protected Map<String, Effect> passiveEffectMap = new FastMap<String, Effect>().shared();
 	protected Map<String, Effect> noshowEffects = new FastMap<String, Effect>().shared();
 	protected Map<String, Effect> abnormalEffectMap = new FastMap<String, Effect>().shared();
-
 	protected int abnormals;
 
 	public EffectController(Creature owner)
@@ -74,7 +73,6 @@ public class EffectController
 	}
 
 	/**
-	 * 
 	 * @param effect
 	 */
 	public void addEffect(Effect effect)
@@ -84,10 +82,11 @@ public class EffectController
 		Effect existingEffect = mapToUpdate.get(effect.getStack());
 		if(existingEffect != null)
 		{
-			// check stack level
+			// Check stack level
 			if(existingEffect.getSkillStackLvl() > effect.getSkillStackLvl())
 				return;
-			// check skill level (when stack level same)
+			
+			// Check skill level (when stack level same)
 			if(existingEffect.getSkillStackLvl() == effect.getSkillStackLvl()
 				&& existingEffect.getSkillLevel() > effect.getSkillLevel())
 				return;
@@ -113,7 +112,6 @@ public class EffectController
 	}
 
 	/**
-	 * 
 	 * @param effect
 	 * @return
 	 */
@@ -129,7 +127,6 @@ public class EffectController
 	}
 
 	/**
-	 * 
 	 * @param stack
 	 * @return abnormalEffectMap
 	 */
@@ -165,8 +162,7 @@ public class EffectController
 			abnormals, effects));
 	}
 
-	/**
-	 * 
+	/** 
 	 * @param effect
 	 */
 	public void clearEffect(Effect effect)
@@ -227,7 +223,6 @@ public class EffectController
 	}
 
 	/**
-	 * 
 	 * @param effectId
 	 */
 	public void removeEffectByEffectId(int effectId)
@@ -241,7 +236,6 @@ public class EffectController
 	}
 	
 	/**
-	 * 
 	 * @param targetSlot
 	 * @param count
 	 */
@@ -264,7 +258,6 @@ public class EffectController
 	}
 	
 	/**
-	 * 
 	 * @param dispelCat
 	 * @param targetSlot
 	 * @param count
@@ -353,7 +346,6 @@ public class EffectController
 	}
 
 	/**
-	 * 
 	 * @param skillid
 	 */
 	public void removeNoshowEffect(int skillid)
@@ -379,6 +371,7 @@ public class EffectController
 			}
 		}
 	}
+	
 	/**
 	 * Removes all effects from controllers and ends them appropriately
 	 * Passive effect will not be removed
@@ -429,7 +422,6 @@ public class EffectController
 	/**
 	 * ABNORMAL EFFECTS
 	 */
-
 	public void setAbnormal(int mask)
 	{
 		abnormals |= mask;
@@ -481,7 +473,6 @@ public class EffectController
 	}
 
 	/**
-	 * 
 	 * @return
 	 */
 	public Iterator<Effect> iterator()

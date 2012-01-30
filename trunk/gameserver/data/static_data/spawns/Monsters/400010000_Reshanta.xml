@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
 	
-	Назначение файла: Описание и координаты расположения NPC
-	========================================================	
+	Назначение файла: Описание и координаты расположения Монстров
+	=============================================================	
 	Название локации: Арэшурат (Бездна)
 	Описание: Пространство другого измерения, появившееся после уничтожения 
 	Башни Вечности, когда поток эфира дестабилизировался. Связано с Атреей 
 	в некоторых местах посредством каналов.
 	=======================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: Aion 2.7 (Иннова)
+	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	Редакция: 20/12/2011 (Frost)
+	=============================================
+	Последняя редакция: 19/01/2012 (Frost)
  
  -->
 <spawns>
@@ -1383,29 +1387,13 @@
 		<object x="2522.75" y="2186.75" z="2996.5278" h="100"/>
 		<object x="2637.0" y="2111.25" z="3001.627" h="74"/>
 	</spawn>
-	<!-- Hemera (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="266553" pool="1" interval="210" rw="5">
-		<object x="2705.621" y="797.0386" z="2865.1409" h="43"/>
-	</spawn>
 	<!-- Henchman Ladun (Named Mob Hero lvl:41)  -->
 	<spawn map="400010000" npcid="255705" pool="1" interval="14400"  rw="4">
 		<object x="2145.64" y="2486.65" z="2891.3315" h="0"/>
 	</spawn>
-	<!-- Herat (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="266554" pool="1" interval="10800" rw="6">
-		<object x="2705.621" y="797.0386" z="2865.1409" h="29"/>
-	</spawn>
-	<!-- Herder (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="270166" pool="1" interval="210" rw="5">
-		<object x="1817.465" y="2321.328" z="2931.5413" h="31"/>
-	</spawn>
 	<!-- Herona (Monster Normal lvl:50)  -->
 	<spawn map="400010000" npcid="268017" pool="1" interval="210" rw="5">
 		<object x="2084.07" y="1249.34" z="2963.5488" h="17"/>
-	</spawn>
-	<!-- Hespheria (Monster Normal lvl:5)  -->
-	<spawn map="400010000" npcid="268016" pool="1" interval="210" rw="5">
-		<object x="1996.37" y="1259.09" z="2945.788" h="106"/>
 	</spawn>
 	<!-- Highmage Nobris (Named Mob Normal lvl:26)  -->
 	<spawn map="400010000" npcid="253011" pool="1" interval="10800" rw="6">
@@ -1454,18 +1442,6 @@
 		<object x="2136.95" y="3274.43" z="1659.3912" h="26"/>
 		<object x="2204.7" y="3283.59" z="1656.4243" h="27"/>
 		<object x="2146.17" y="3143.89" z="1654.8877" h="79"/>
-	</spawn>
-	<!-- Hildebrant (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="268052" pool="1" interval="210" rw="5">
-		<object x="2057.733" y="1245.032" z="2956.286" h="120"/>
-	</spawn>
-	<!-- Himir (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="271018" pool="1" interval="210" rw="5">
-		<object x="740.64" y="2952.3" z="2884.2969" h="50"/>
-	</spawn>
-	<!-- Hohen (Monster Normal lvl:40)  -->
-	<spawn map="400010000" npcid="263217" pool="1" interval="210" rw="5">
-		<object x="2764.12" y="2582.75" z="1504.068" h="1"/>
 	</spawn>
 	<!-- Horrid Ancient Mage (Monster Normal lvl:27)  -->
 	<spawn map="400010000" npcid="252552" pool="9" interval="210" rw="5">
@@ -1768,18 +1744,6 @@
 		<object x="823.9191" y="2934.935" z="1634.521" h="10"/>
 		<object x="709.508" y="2890.533" z="1593.6052" h="45"/>
 	</spawn>
-	<!-- Kbest (Monster Elite lvl:50)  -->
-	<spawn map="400010000" npcid="266523" pool="1" interval="390" rw="6">
-		<object x="2712.33" y="771.37" z="2872.3818" h="101"/>
-	</spawn>
-	<!-- Keabarah (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="271067" pool="1" interval="210" rw="5">
-		<object x="707.67" y="2923.97" z="2877.5059" h="106"/>
-	</spawn>
-	<!-- Kercopes (NPC Normal lvl:40)  -->
-	<spawn map="400010000" npcid="263264" pool="1" interval="210" rw="5">
-		<object x="2763.37" y="2635.57" z="1504.068" h="22"/>
-	</spawn>
 	<!-- Klaw Combat Prime (Monster Normal lvl:40)  -->
 	<spawn map="400010000" npcid="255154" pool="1" interval="210" rw="5">
 		<object x="2414.642" y="1708.775" z="2879.7202" h="41"/>
@@ -2067,10 +2031,6 @@
 	<spawn map="400010000" npcid="255145" pool="1" interval="210" rw="5">
 		<object x="2345.137" y="1770.682" z="2875.8853" h="15"/>
 	</spawn>
-	<!-- Lienhart (Monster Elite lvl:45)  -->
-	<spawn map="400010000" npcid="263220" pool="1" interval="390" rw="6">
-		<object x="2811.38" y="2635.25" z="1504.068" h="25"/>
-	</spawn>
 	<!-- Life Reaper (Monster Normal lvl:27)  -->
 	<spawn map="400010000" npcid="253039" pool="19" interval="210" rw="5">
 		<object x="3200.57" y="3335.648" z="1531.9489" h="70"/>
@@ -2093,10 +2053,6 @@
 		<object x="3049.79" y="3419.489" z="1522.5997" h="56"/>
 		<object x="3237.842" y="3282.055" z="1540.443" h="62"/>
 	</spawn>
-	<!-- Lifton (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="268081" pool="1" interval="210" rw="5">
-		<object x="2008.964" y="1252.901" z="2945.4092" h="34"/>
-	</spawn>
 	<!-- Light's Defender (Monster Normal lvl:50)  -->
 	<spawn map="400010000" npcid="251033" pool="6" interval="210" rw="5">
 		<object x="2265.08" y="1828.4" z="2264.4392" h="109"/>
@@ -2105,14 +2061,6 @@
 		<object x="2268.63" y="1770.78" z="2237.6985" h="33"/>
 		<object x="2361.31" y="1760.35" z="2272.6233" h="59"/>
 		<object x="2336.56" y="1813.31" z="2225.3337" h="1"/>
-	</spawn>
-	<!-- Lirhel (Monster Normal lvl:40)  -->
-	<spawn map="400010000" npcid="263267" pool="1" interval="210" rw="5">
-		<object x="2760.24" y="2609.366" z="1489.6635" h="16"/>
-	</spawn>
-	<!-- Lote (NPC Normal lvl:40)  -->
-	<spawn map="400010000" npcid="263265" pool="1" interval="210" rw="5">
-		<object x="2763.37" y="2635.57" z="1504.068" h="11"/>
 	</spawn>
 	<!-- Lumion (Named Mob Normal lvl:26)  -->
 	<spawn map="400010000" npcid="253024" pool="1" interval="10800" rw="6">
@@ -2165,10 +2113,6 @@
 		<object x="1082.058" y="1646.159" z="1590.7701" h="110"/>
 		<object x="1251.451" y="1626.022" z="1591.2216" h="41"/>
 		<object x="923.2958" y="1504.918" z="1608.4525" h="110"/>
-	</spawn>
-	<!-- Mahd (Monster Normal lvl:50)  -->
-	<spawn map="400010000" npcid="266517" pool="1" interval="210" rw="5">
-		<object x="2705.98" y="824.08" z="2872.3818" h="97"/>
 	</spawn>
 	<!-- Memory Reaper (Monster Normal lvl:27)  -->
 	<spawn map="400010000" npcid="252539" pool="21" interval="210" rw="5">
@@ -2417,16 +2361,6 @@
 		<object x="2782.88" y="1423.84" z="2837.9172" h="13"/>
 		<object x="2785.89" y="1418.71" z="2838.8582" h="44"/>
 		<object x="2783.39" y="1420.16" z="2838.449" h="93"/>
-	</spawn>
-	<!-- Primus General (Monster Legendary lvl:40)  -->
-	<spawn map="400010000" npcid="271813" pool="1" interval="21600" rw="3">
-		<object x="2744.86" y="2657.83" z="1457.4062" h="53"/>
-		<object x="2744.86" y="2657.83" z="1457.4062" h="33"/>
-		<object x="2660.28" y="2806.66" z="1480.3668" h="105"/>
-		<object x="1299.9" y="1184.44" z="1481.2083" h="90"/>
-		<object x="1299.9" y="1184.44" z="1481.2083" h="33"/>
-		<object x="1374.01" y="1228.64" z="1491.0833" h="81"/>
-		<object x="1984.37" y="1286.19" z="2963.2314" h="31"/>
 	</spawn>
 	<!-- Prison Camp Asmodian Search Squad (Monster Normal lvl:28)  -->
 	<spawn map="400010000" npcid="253641" pool="20" interval="210" rw="5">
@@ -3226,25 +3160,6 @@
 	<!-- Team Leader Lahu (Named Mob Elite lvl:32)  -->
 	<spawn map="400010000" npcid="253613" pool="1" interval="10800" rw="6">
 		<object x="1046.13" y="1736.623" z="1596.9674" h="116"/>
-	</spawn>
-	<!-- Tertius General (Monster Legendary lvl:40)  -->
-	<spawn map="400010000" npcid="271806" pool="1" interval="21600" rw="4">
-		<object x="2744.86" y="2657.83" z="1457.4062" h="88"/>
-		<object x="2660.28" y="2806.66" z="1480.3668" h="55"/>
-		<object x="1299.9" y="1184.44" z="1481.2083" h="103"/>
-	</spawn>
-	<!-- Tertius General (Monster Legendary lvl:27)  -->
-	<spawn map="400010000" npcid="271811" pool="1" interval="21600" rw="4">
-		<object x="2744.86" y="2657.83" z="1457.4062" h="73"/>
-		<object x="2744.86" y="2657.83" z="1457.4062" h="29"/>
-		<object x="2660.28" y="2806.66" z="1480.3668" h="37"/>
-		<object x="2660.28" y="2806.66" z="1480.3668" h="11"/>
-		<object x="1299.9" y="1184.44" z="1481.2083" h="0"/>
-		<object x="1299.9" y="1184.44" z="1481.2083" h="115"/>
-	</spawn>
-	<!-- Tevenaz (Monster Normal lvl:40)  -->
-	<spawn map="400010000" npcid="263598" pool="1" interval="210" rw="5">
-		<object x="2543.069" y="2854.181" z="1488.8108" h="85"/>
 	</spawn>
 	<!-- The Everwatcher (Named Mob Normal lvl:30)  -->
 	<spawn map="400010000" npcid="253705" pool="1" interval="10800" rw="6">

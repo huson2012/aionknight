@@ -1,19 +1,24 @@
-/**
- * This file is part of Aion-Knight Dev. Team [http://aion-knight.ru]
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Aion-Knight is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
  *
- * Aion-Knight is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+ * Cambridge, MA 02139, USA
  *
- * You should have received a copy of the GNU General Public License
- * along with Aion-Knight. If not, see <http://www.gnu.org/licenses/>.
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
+
 package gameserver.network.aion.clientpackets;
 
 import commons.database.dao.DAOManager;
@@ -56,14 +61,10 @@ import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 import gameserver.utils.rates.Rates;
 import gameserver.world.World;
-
 import java.util.List;
 
 /**
  * In this packets aion client is asking if given char [by oid] may login into game [ie start playing].
- * 
- * @author -Nemesiss-, Avol, ginho1, Mugen
- * 
  */
 public class CM_ENTER_WORLD extends AionClientPacket
 {
@@ -226,7 +227,7 @@ public class CM_ENTER_WORLD extends AionClientPacket
 			// items
 			Storage inventory = player.getInventory();
 			List<Item> equipedItems = player.getEquipment().getEquippedItems();
-			if(equipedItems.size() != 0)
+			if(!equipedItems.isEmpty())
 			{
 				client.sendPacket(new SM_INVENTORY_INFO(player.getEquipment().getEquippedItems(), cubeSize));
 			}

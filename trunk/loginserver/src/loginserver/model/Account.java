@@ -1,22 +1,22 @@
-/**
- * Игровой эмулятор от команды разработчиков 'Aion-Knight Dev. Team' является свободным 
- * программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного 
- * программного обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой 
- * более поздней версии.
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
  *
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова)
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package loginserver.model;
@@ -26,299 +26,291 @@ package loginserver.model;
  */
 public class Account
 {
-	/**
-	 * Id of account, object if assigned, null if not
-	 */
-	private Integer		id;
+    /**
+     * Id of account, object if assigned, null if not
+     */
+    private Integer id;
 
-	/**
-	 * Account name
-	 */
-	private String		name;
+    /**
+     * Account name
+     */
+    private String name;
 
-	/**
-	 * Password hash
-	 */
-	private String		passwordHash;
+    /**
+     * Password hash
+     */
+    private String passwordHash;
 
-	/**
-	 * Access level of account 0 = regular user, > 0 = GM
-	 */
-	private byte		accessLevel;
-	
-	/**
-	 * Membership of this account (regular, premium etc)
-	 */
-	private byte		membership;
+    /**
+     * Access level of account 0 = regular user, > 0 = GM
+     */
+    private byte accessLevel;
 
-	/**
-	 * Account activated
-	 */
-	private byte		activated;
+    /**
+     * Membership of this account (regular, premium etc)
+     */
+    private byte membership;
 
-	/**
-	 * last server visited by user -1 if none
-	 */
-	private byte		lastServer;
+    /**
+     * Account activated
+     */
+    private byte activated;
 
-	/**
-	 * Last ip of user -1 if none
-	 */
-	private String		lastIp;
+    /**
+     * last server visited by user -1 if none
+     */
+    private byte lastServer;
 
-	/**
-	 * The only ip that is allowed to this account
-	 */
-	private String		ipForce;
+    /**
+     * Last ip of user -1 if none
+     */
+    private String lastIp;
 
-	/**
-	 * AccountTime data
-	 */
-	private AccountTime	accountTime;
-	
-	/**
-	 * Returns account id, null if not stored in DB
-	 *
-	 * @return account id
-	 */
-	public Integer getId()
-	{
-		return id;
-	}
+    /**
+     * The only ip that is allowed to this account
+     */
+    private String ipForce;
 
-	/**
-	 * Sets account id
-	 *
-	 * @param id
-	 *           account id
-	 */
-	public void setId(Integer id)
-	{
-		this.id = id;
-	}
+    /**
+     * AccountTime data
+     */
+    private AccountTime accountTime;
 
-	/**
-	 * Returns account name
-	 *
-	 * @return account name
-	 */
-	public String getName()
-	{
-		return name;
-	}
+    /**
+     * Returns account id, null if not stored in DB
+     *
+     * @return account id
+     */
+    public Integer getId()
+    {
+        return id;
+    }
 
-	/**
-	 * Sets account name
-	 *
-	 * @param name
-	 *           account name
-	 */
-	public void setName(String name)
-	{
-		this.name = name;
-	}
+    /**
+     * Sets account id
+     *
+     * @param id account id
+     */
+    public void setId(Integer id)
+    {
+        this.id = id;
+    }
 
-	/**
-	 * Returns password hash
-	 *
-	 * @return password hash
-	 */
-	public String getPasswordHash()
-	{
-		return passwordHash;
-	}
+    /**
+     * Returns account name
+     *
+     * @return account name
+     */
+    public String getName()
+    {
+        return name;
+    }
 
-	/**
-	 * Sets password hash
-	 *
-	 * @param passwordHash
-	 *           password hash
-	 */
-	public void setPasswordHash(String passwordHash)
-	{
-		this.passwordHash = passwordHash;
-	}
+    /**
+     * Sets account name
+     *
+     * @param name account name
+     */
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-	/**
-	 * Returns access level of account
-	 *
-	 * @return access level of account
-	 */
-	public byte getAccessLevel()
-	{
-		return accessLevel;
-	}
+    /**
+     * Returns password hash
+     *
+     * @return password hash
+     */
+    public String getPasswordHash()
+    {
+        return passwordHash;
+    }
 
-	/**
-	 * Sets access level of account
-	 *
-	 * @param accessLevel
-	 *           access level of account
-	 */
-	public void setAccessLevel(byte accessLevel)
-	{
-		this.accessLevel = accessLevel;
-	}
+    /**
+     * Sets password hash
+     *
+     * @param passwordHash password hash
+     */
+    public void setPasswordHash(String passwordHash)
+    {
+        this.passwordHash = passwordHash;
+    }
 
-	/**
-	 * @return the membership
-	 */
-	public byte getMembership()
-	{
-		return membership;
-	}
+    /**
+     * Returns access level of account
+     *
+     * @return access level of account
+     */
+    public byte getAccessLevel()
+    {
+        return accessLevel;
+    }
 
-	/**
-	 * @param membership the membership to set
-	 */
-	public void setMembership(byte membership)
-	{
-		this.membership = membership;
-	}
+    /**
+     * Sets access level of account
+     *
+     * @param accessLevel access level of account
+     */
+    public void setAccessLevel(byte accessLevel)
+    {
+        this.accessLevel = accessLevel;
+    }
 
-	/**
-	 * Returns account activated
-	 *
-	 * @return access level of account
-	 */
-	public byte getActivated()
-	{
-		return activated;
-	}
+    /**
+     * @return the membership
+     */
+    public byte getMembership()
+    {
+        return membership;
+    }
 
-	/**
-	 * Sets access level of account
-	 * @param activated 
-	 *           access level of account
-	 */
-	public void setActivated(byte activated)
-	{
-		this.activated = activated;
-	}
-	
-	/**
-	 * Returns last server that player visited
-	 *
-	 * @return last server that player visited
-	 */
-	public byte getLastServer()
-	{
-		return lastServer;
-	}
+    /**
+     * @param membership the membership to set
+     */
+    public void setMembership(byte membership)
+    {
+        this.membership = membership;
+    }
 
-	/**
-	 * Sets last server that player visited
-	 *
-	 * @param lastServer
-	 *           last server that player visited
-	 */
-	public void setLastServer(byte lastServer)
-	{
-		this.lastServer = lastServer;
-	}
+    /**
+     * Returns account activated
+     *
+     * @return access level of account
+     */
+    public byte getActivated()
+    {
+        return activated;
+    }
 
-	/**
-	 * Returns last ip that player played from
-	 *
-	 * @return last ip that player played from
-	 */
-	public String getLastIp()
-	{
-		return lastIp;
-	}
+    /**
+     * Sets access level of account
+     *
+     * @param activated access level of account
+     */
+    public void setActivated(byte activated)
+    {
+        this.activated = activated;
+    }
 
-	/**
-	 * Sets last ip that player players from
-	 *
-	 * @param lastIp
-	 *           last ip that player played from
-	 */
-	public void setLastIp(String lastIp)
-	{
-		this.lastIp = lastIp;
-	}
+    /**
+     * Returns last server that player visited
+     *
+     * @return last server that player visited
+     */
+    public byte getLastServer()
+    {
+        return lastServer;
+    }
 
-	/**
-	 * Returns IP that player is forced to use with his account
-	 *
-	 * @return ip that player is forsed to use with his account
-	 */
-	public String getIpForce()
-	{
-		return ipForce;
-	}
+    /**
+     * Sets last server that player visited
+     *
+     * @param lastServer last server that player visited
+     */
+    public void setLastServer(byte lastServer)
+    {
+        this.lastServer = lastServer;
+    }
 
-	/**
-	 * Sets ip that player has to use with his account
-	 *
-	 * @param ipForce
-	 *           sets ip that players has to use with his account
-	 */
-	public void setIpForce(String ipForce)
-	{
-		this.ipForce = ipForce;
-	}
+    /**
+     * Returns last ip that player played from
+     *
+     * @return last ip that player played from
+     */
+    public String getLastIp()
+    {
+        return lastIp;
+    }
 
-	/**
-	 * @return accountTime
-	 */
-	public AccountTime getAccountTime()
-	{
-		return accountTime;
-	}
+    /**
+     * Sets last ip that player players from
+     *
+     * @param lastIp last ip that player played from
+     */
+    public void setLastIp(String lastIp)
+    {
+        this.lastIp = lastIp;
+    }
 
-	/**
-	 * @param accountTime
-	 */
-	public void setAccountTime(AccountTime accountTime)
-	{
-		this.accountTime = accountTime;
-	}
+    /**
+     * Returns IP that player is forced to use with his account
+     *
+     * @return ip that player is forsed to use with his account
+     */
+    public String getIpForce()
+    {
+        return ipForce;
+    }
 
-	/**
-	 * Retunrns true if players name and password has are equals
-	 *
-	 * @param o
-	 *           another player to check
-	 * @return true if names and password hash matches
-	 */
-	@Override
-	public boolean equals(Object o)
-	{
-		if(this == o)
-		{
-			return true;
-		}
+    /**
+     * Sets ip that player has to use with his account
+     *
+     * @param ipForce sets ip that players has to use with his account
+     */
+    public void setIpForce(String ipForce)
+    {
+        this.ipForce = ipForce;
+    }
 
-		if(!(o instanceof Account))
-		{
-			return false;
-		}
+    /**
+     * @return accountTime
+     */
+    public AccountTime getAccountTime()
+    {
+        return accountTime;
+    }
 
-		Account	account = (Account) o;
+    /**
+     * @param accountTime
+     */
+    public void setAccountTime(AccountTime accountTime)
+    {
+        this.accountTime = accountTime;
+    }
 
-		// noinspection SimplifiableIfStatement
-		if(name != null ? !name.equals(account.name) : account.name != null)
-		{
-			return false;
-		}
+    /**
+     * Retunrns true if players name and password has are equals
+     *
+     * @param o another player to check
+     * @return true if names and password hash matches
+     */
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o)
+        {
+            return true;
+        }
 
-		return !(passwordHash != null ? !passwordHash.equals(account.passwordHash) : account.passwordHash != null);
+        if (!(o instanceof Account))
+        {
+            return false;
+        }
 
-	}
+        Account account = (Account) o;
 
-	/**
-	 * Returns player hashcode.
-	 *
-	 * @return player hashcode
-	 */
-	@Override
-	public int hashCode()
-	{
-		int	result = name != null ? name.hashCode() : 0;
+        // noinspection SimplifiableIfStatement
+        if (name != null ? !name.equals(account.name) : account.name != null)
+        {
+            return false;
+        }
 
-		result = 31 * result + (passwordHash != null ? passwordHash.hashCode() : 0);
+        return !(passwordHash != null ? !passwordHash.equals(account.passwordHash) : account.passwordHash != null);
 
-		return result;
-	}
+    }
+
+    /**
+     * Returns player hashcode.
+     *
+     * @return player hashcode
+     */
+    @Override
+    public int hashCode()
+    {
+        int result = name != null ? name.hashCode() : 0;
+
+        result = 31 * result + (passwordHash != null ? passwordHash.hashCode() : 0);
+
+        return result;
+    }
 }
