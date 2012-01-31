@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-	Назначение файла	: 
-	================================================================
-	Версия сервера		: Aion-Knight 2.7 (Beta version)
-	Версия клиента		: 2.7 (Иннова)
+	Назначение файла: Характеристики классов в зависимости от уровня
+	====================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: 2.7 (Иннова)
 	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	Редакция: 13.12.2011 (Frost)
+	=============================================
+	Последняя редакция: 30/01/2012 (Frost)
 
  -->
 <player_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
@@ -199,5 +200,25 @@
 	<!-- Checked By Cali 12/2010 at US Retail -->
 	<player_stats class="TEMPLAR" level="55">
 		<stats_template maxHp="6950" maxMp="4025" power="115" health="100" agility="100" accuracy="100" knowledge="90" will="105" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.5" evasion="744" block="744" parry="744" main_hand_attack="19" main_hand_accuracy="630" main_hand_crit_rate="2" magic_accuracy="784"/>
+	</player_stats>
+	<!-- Checked By Dragon 05/2010 at US Retail -->
+	<player_stats class="TEMPLAR" level="56">
+		<stats_template maxHp="6500" maxMp="3950" power="125" health="115" agility="110" accuracy="100" knowledge="90" will="105" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="725" block="725" parry="725" main_hand_attack="20" main_hand_accuracy="600" main_hand_crit_rate="2" magic_accuracy="740"/>
+	</player_stats>
+	<!-- Checked By Dragon 05/2010 at US Retail -->
+	<player_stats class="TEMPLAR" level="57">
+		<stats_template maxHp="6600" maxMp="4000" power="125" health="115" agility="110" accuracy="100" knowledge="100" will="105" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="725" block="725" parry="725" main_hand_attack="20" main_hand_accuracy="600" main_hand_crit_rate="2" magic_accuracy="745"/>
+	</player_stats>
+	<!-- Checked By Dragon 05/2010 at US Retail -->
+	<player_stats class="TEMPLAR" level="58">
+		<stats_template maxHp="6700" maxMp="4050" power="125" health="115" agility="110" accuracy="100" knowledge="100" will="110" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="730" block="730" parry="730" main_hand_attack="20" main_hand_accuracy="600" main_hand_crit_rate="3" magic_accuracy="745"/>
+	</player_stats>
+	<!-- Checked By Dragon 05/2010 at US Retail -->
+	<player_stats class="TEMPLAR" level="59">
+		<stats_template maxHp="6800" maxMp="4150" power="125" health="115" agility="110" accuracy="100" knowledge="100" will="110" walk_speed="1.6" run_speed="6" fly_speed="9" attack_speed="1.7" evasion="735" block="735" parry="735" main_hand_attack="20" main_hand_accuracy="600" main_hand_crit_rate="3" magic_accuracy="745"/>
+	</player_stats>
+	<!-- Checked By Dragon 05/2010 at US Retail -->
+	<player_stats class="TEMPLAR" level="60">
+		<stats_template maxHp="6900" maxMp="4200" power="125" health="115" agility="110" accuracy="100" knowledge="100" will="115" walk_speed="1.6" run_speed="6" fly_speed="9" attack_speed="1.7" evasion="735" block="735" parry="735" main_hand_attack="25" main_hand_accuracy="610" main_hand_crit_rate="3" magic_accuracy="750"/>
 	</player_stats>
 </player_stats_templates>

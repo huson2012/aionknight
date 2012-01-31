@@ -32,7 +32,6 @@ import gameserver.world.WorldMapType;
 
 public class GoTo extends AdminCommand
 {
-
 	/**
 	 * Constructor.
 	 */
@@ -565,16 +564,19 @@ public class GoTo extends AdminCommand
 			TeleportService.teleportTo(admin, 210050000, 1335, 276, 590, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Inggison.");
 		}
+		
 		else if (params[0].toLowerCase().equals("ufob"))
 		{
 			TeleportService.teleportTo(admin, 210050000, 382, 951, 460, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Underground Fortress Observation Base.");
 		}
+		
 		else if (params[0].toLowerCase().equals("soteria"))
 		{
 			TeleportService.teleportTo(admin, 210050000, 2713, 1477, 382, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Soteria Sanctuary Village.");
 		}
+		
 		else if (params[0].toLowerCase().equals("hanarkand"))
 		{
 			TeleportService.teleportTo(admin, 210050000, 1892, 1748, 327, 0);
@@ -586,189 +588,266 @@ public class GoTo extends AdminCommand
 			TeleportService.teleportTo(admin, 220070000, 1763, 2911, 554, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Gelkmaros.");
 		}
+		
 		else if (params[0].toLowerCase().equals("subterranea"))
 		{
 			TeleportService.teleportTo(admin, 220070000, 2503, 2147, 464, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Subterranea Observation Post.");
 		}
+		
 		else if (params[0].toLowerCase().equals("rhonnam"))
 		{
 			TeleportService.teleportTo(admin, 220070000, 845, 1737, 354, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Rhonnam Refugee Village.");
 		}
+		
 		else if (params[0].toLowerCase().equals("kaisinel"))
 		{
 			TeleportService.teleportTo(admin, 110020000, 2155, 1567, 1205, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Cloister of Kaisinel.");
 		}
+		
 		else if (params[0].toLowerCase().equals("marchutan"))
 		{
 			TeleportService.teleportTo(admin, 120020000, 1557, 1429, 266, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Convent of Marchutan.");
 		}
+		
 		else if (params[0].toLowerCase().equals("udas"))
 		{
 			TeleportService.teleportTo(admin, 300150000, getInstanceId(300150000, admin), 637, 657, 134, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Udas Temple.");
 		}
+		
 		else if (params[0].toLowerCase().equals("silentera"))
 		{
 			TeleportService.teleportTo(admin, 600010000, 583, 767, 300, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Silentera Canyon.");
 		}
+		
 		else if (params[0].toLowerCase().equals("adma"))
 		{
 			TeleportService.teleportTo(admin, 320130000, getInstanceId(320130000, admin), 450, 200, 168, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Adma Stronghold.");
 		}
+		
 		else if (params[0].toLowerCase().equals("sulfur"))
 		{
 			TeleportService.teleportTo(admin, 300060000, getInstanceId(300060000, admin), 462, 345, 163, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Sulfur tree nest.");
 		}
+		
 		else if (params[0].toLowerCase().equals("asteria"))
 		{
 			TeleportService.teleportTo(admin, 300050000, getInstanceId(300050000, admin), 469, 568, 202, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Asteria chamber.");
 		}
+		
 		else if (params[0].toLowerCase().equals("rightwing"))
 		{
 			TeleportService.teleportTo(admin, 300090000, getInstanceId(300090000, admin), 263, 386, 103, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Right Wing Chamber.");
 		}
+		
 		else if (params[0].toLowerCase().equals("leftwing"))
 		{
 			TeleportService.teleportTo(admin, 300080000, getInstanceId(300080000, admin), 672, 606, 321, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Left Wing Chamber.");
 		}
+		
 		else if (params[0].toLowerCase().equals("miren"))
 		{
 			TeleportService.teleportTo(admin, 300130000, getInstanceId(300130000, admin), 527, 120, 176, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Miren Chamber.");
 		}
+		
 		else if (params[0].toLowerCase().equals("kysis"))
 		{
 			TeleportService.teleportTo(admin, 300120000, getInstanceId(300120000, admin), 528, 121, 176, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Kysis Chamber.");
 		}
+		
 		else if (params[0].toLowerCase().equals("krotan"))
 		{
 			TeleportService.teleportTo(admin, 300140000, getInstanceId(300140000, admin), 528, 109, 176, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Krotan Chamber.");
 		}
+		
 		else if (params[0].toLowerCase().equals("roah"))
 		{
 			TeleportService.teleportTo(admin, 300070000, getInstanceId(300070000, admin), 504, 396, 94, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Chamber of Roah.");
 		}
+		
 		else if (params[0].toLowerCase().equals("alquimia"))
 		{
 			TeleportService.teleportTo(admin, 320110000, getInstanceId(320110000, admin), 603, 527, 200, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Alquimia Research Center.");
 		}
+		
 		else if (params[0].toLowerCase().equals("nochsana"))
 		{
 			TeleportService.teleportTo(admin, 300030000, getInstanceId(300030000, admin), 513, 668, 331, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Nochsana Training Camp.");
 		}
+		
 		else if (params[0].toLowerCase().equals("draupnir"))
 		{
 			TeleportService.teleportTo(admin, 320080000, getInstanceId(320080000, admin), 491, 373, 622, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Draupnir Cave.");
 		}
+		
 		else if (params[0].toLowerCase().equals("darkpoeta"))
 		{
 			TeleportService.teleportTo(admin, 300040000, getInstanceId(300040000, admin), 1214, 412, 140, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Dark Poeta.");
 		}
+		
 		else if (params[0].toLowerCase().equals("fireroom"))
 		{
 			TeleportService.teleportTo(admin, 320050000, getInstanceId(320050000, admin), 102, 24, 611, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Sky Temple Fire Room.");
 		}
+		
 		else if (params[0].toLowerCase().equals("theolab"))
 		{
 			TeleportService.teleportTo(admin, 310110000, getInstanceId(310110000, admin), 477, 201, 170, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Theobomos Lab.");
 		}
+		
 		else if (params[0].toLowerCase().equals("steelrake"))
 		{
 			TeleportService.teleportTo(admin, 300100000, getInstanceId(300100000, admin), 237, 506, 948, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Steel Rake.");
 		}
+		
 		else if (params[0].toLowerCase().equals("steelrakelower"))
 		{
 			TeleportService.teleportTo(admin, 300100000, getInstanceId(300100000, admin), 283, 453, 903, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Steel Rake lower deck.");
 		}
+		
 		else if (params[0].toLowerCase().equals("steelrakemiddle"))
 		{
 			TeleportService.teleportTo(admin, 300100000, getInstanceId(300100000, admin), 283, 453, 953, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Steel Rake middle deck.");
 		}
+		
 		else if (params[0].toLowerCase().equals("taloc"))
 		{
 			TeleportService.teleportTo(admin, 300190000, getInstanceId(300190000, admin), 200, 214, 1099, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Taloc's Hollow.");
 		}
+		
 		else if (params[0].toLowerCase().equals("haramel"))
 		{
 			TeleportService.teleportTo(admin, 300200000, getInstanceId(300200000, admin), 176, 21, 144, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Haramel.");
 		}
+		
 		else if (params[0].toLowerCase().equals("beshmundir"))
 		{
 			TeleportService.teleportTo(admin, 300170000, getInstanceId(300170000, admin), 1477, 237, 243, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Beshmundir Temple.");
 		}
+		
 		else if (params[0].toLowerCase().equals("udaslower"))
 		{
 			TeleportService.teleportTo(admin, 300160000, getInstanceId(300160000, admin), 1146, 277, 116, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Lower Udas Temple.");
 		}
+		
 		else if (params[0].toLowerCase().equals("splinter"))
 		{
 			TeleportService.teleportTo(admin, 300220000, getInstanceId(300220000, admin), 704, 153, 453, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Abyssal Splinter.");
-                }
-                else if (params[0].toLowerCase().equals("kaisinel2")) 
-           	{	
-                        TeleportService.teleportTo(admin, 110070000, 504, 287, 128, 0);
-            		PacketSendUtility.sendMessage(admin, "Teleported to Kaisinel Academy");
-       		} 
-		else if (params[0].toLowerCase().equals("marchutan2"))
-            	{	
-                        TeleportService.teleportTo(admin, 120080000, 575, 248, 94, 0);
-            		PacketSendUtility.sendMessage(admin, "Teleported to Marchutan Priory");
-        	} 
-		else if (params[0].toLowerCase().equals("esoterrace"))
-           	{	
-                        TeleportService.teleportTo(admin, 300250000, 363, 535, 325, 0);
-           		PacketSendUtility.sendMessage(admin, "Teleported to Esoterrace");
-       		} 
-		else if (params[0].toLowerCase().equals("empyream"))
-           	{	
-                        TeleportService.teleportTo(admin, 300300000, 1787, 797, 470, 0);
-            		PacketSendUtility.sendMessage(admin, "Teleported to Empyream Crucible");
 		}
+		
+		else if (params[0].toLowerCase().equals("kaisinel2")) 
+		{	
+			TeleportService.teleportTo(admin, 110070000, 504, 287, 128, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Kaisinel Academy");
+       	} 
+		
+		else if (params[0].toLowerCase().equals("marchutan2"))
+        {	
+			TeleportService.teleportTo(admin, 120080000, 575, 248, 94, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Marchutan Priory");
+        } 
+		
+		else if (params[0].toLowerCase().equals("esoterrace"))
+		{	
+			TeleportService.teleportTo(admin, 300250000, 363, 535, 325, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Esoterrace");
+		} 
+		
+		else if (params[0].toLowerCase().equals("empyrean"))
+		{
+			TeleportService.teleportTo(admin, 300300000, 1787, 797, 470, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Empyrean Crucible");
+		}
+		
 		else if (params[0].toLowerCase().equals("kromede"))
 		{
 			TeleportService.teleportTo(admin, 300230000, getInstanceId(300230000, admin), 248, 244, 189, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Kromede Trial.");
 		}
+		
 		else if (params[0].toLowerCase().equals("dredgion"))
 		{
 			TeleportService.teleportTo(admin, 300110000, getInstanceId(300110000, admin), 414, 193, 431, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Dredgion Instance.");
 		}
+		
 		else if (params[0].toLowerCase().equals("chantra"))
 		{
 			TeleportService.teleportTo(admin, 300210000, getInstanceId(300210000, admin), 414, 193, 431, 0);
 			PacketSendUtility.sendMessage(admin, "Teleported to Chantra Dredgion.");
 		}
+		
+		else if (params[0].toLowerCase().equals("chantra"))
+		{
+			TeleportService.teleportTo(admin, 300210000, getInstanceId(300210000, admin), 414, 193, 431, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Chantra Dredgion.");
+		}
+		
+		/*
+		 * Next is a description of the locations Aion 3.0
+		 */
+		
+		else if (params[0].toLowerCase().equals("aturam")) 
+		{
+			TeleportService.teleportTo(admin, 300240000, getInstanceId(300240000, admin), 636, 446, 655, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Aturam Sky Fortress.");
+        }
+	
+		else if (params[0].toLowerCase().equals("ladis")) 
+		{
+			TeleportService.teleportTo(admin, 300260000, getInstanceId(300260000, admin), 176, 612, 231, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Ladis Forest.");
+        }
+		
+		else if (params[0].toLowerCase().equals("lentor")) 
+		{
+			TeleportService.teleportTo(admin, 300280000, getInstanceId(300280000, admin), 579, 606, 153, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Lentor Outpost.");
+		}
+		
+		else if (params[0].toLowerCase().equals("lentor1")) 
+		{
+			TeleportService.teleportTo(admin, 300280000, getInstanceId(300280000, admin), 212, 496, 197, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Lentor Outpost.");
+		}
+		
+		else if (params[0].toLowerCase().equals("tahmes")) 
+		{
+			TeleportService.teleportTo(admin, 300310000, getInstanceId(300310000, admin), 665, 735, 1188, 0);
+			PacketSendUtility.sendMessage(admin, "Teleported to Tahmes.");
+		}
+		
 		else 
 			PacketSendUtility.sendMessage(admin, "Target location was not found!");
-	}
+		}
 	
 	int getInstanceId(int worldId, Player player)
 	{

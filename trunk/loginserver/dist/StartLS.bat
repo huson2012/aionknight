@@ -2,7 +2,7 @@
 title [ LS Console ]
 
 :start
-java -Xms8m -Xmx32m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;ak-login.jar loginserver.LoginServer
+java -Xms8m -Xmx32m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;./libs/ak-login.jar loginserver.LoginServer
 
 SET CLASSPATH=%OLDCLASSPATH%
 

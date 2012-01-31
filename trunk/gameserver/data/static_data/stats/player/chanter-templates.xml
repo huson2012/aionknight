@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-	Назначение файла	: 
-	================================================================
-	Версия сервера		: Aion-Knight 2.7 (Beta version)
-	Версия клиента		: 2.7 (Иннова)
+	Назначение файла: Характеристики классов в зависимости от уровня
+	====================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: 2.7 (Иннова)
 	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	Редакция: 13.12.2011 (Frost)
+	=============================================
+	Последняя редакция: 30/01/2012 (Frost)
 
  -->
 <player_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
@@ -199,5 +200,25 @@
 	<!-- Checked By Cali 12/2010 at US Retail -->
 	<player_stats class="CHANTER" level="55">
 		<stats_template maxHp="5457" maxMp="6067" power="110" health="105" agility="90" accuracy="90" knowledge="105" will="110" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.5" evasion="713" block="713" parry="713" main_hand_attack="19" main_hand_accuracy="610" main_hand_crit_rate="1" magic_accuracy="784"/>
+	</player_stats>
+	<!-- Checked By Dragon 06/2010 at US Retail -->
+	<player_stats class="CHANTER" level="56">
+		<stats_template maxHp="5000" maxMp="5850" power="110" health="105" agility="90" accuracy="90" knowledge="120" will="125" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="651" block="651" parry="651" main_hand_attack="19" main_hand_accuracy="570" main_hand_crit_rate="1" magic_accuracy="720" />
+	</player_stats>
+	<!-- Checked By Dragon 06/2010 at US Retail -->
+	<player_stats class="CHANTER" level="57">
+		<stats_template maxHp="5100" maxMp="5900" power="120" health="115" agility="100" accuracy="90" knowledge="120" will="125" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="651" block="651" parry="651" main_hand_attack="19" main_hand_accuracy="570" main_hand_crit_rate="1" magic_accuracy="720" />
+	</player_stats>
+	<!-- Checked By Dragon 06/2010 at US Retail -->
+	<player_stats class="CHANTER" level="58">
+		<stats_template maxHp="5200" maxMp="6000" power="125" health="120" agility="100" accuracy="90" knowledge="120" will="125" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="651" block="651" parry="651" main_hand_attack="19" main_hand_accuracy="570" main_hand_crit_rate="1" magic_accuracy="725" />
+	</player_stats>
+	<!-- Checked By Dragon 06/2010 at US Retail -->
+	<player_stats class="CHANTER" level="59">
+		<stats_template maxHp="5300" maxMp="6100" power="125" health="120" agility="100" accuracy="90" knowledge="120" will="125" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="655" block="655" parry="655" main_hand_attack="19" main_hand_accuracy="570" main_hand_crit_rate="2" magic_accuracy="725" />
+	</player_stats>
+	<!-- Checked By Dragon 06/2010 at US Retail -->
+	<player_stats class="CHANTER" level="60">
+		<stats_template maxHp="5400" maxMp="6200" power="125" health="120" agility="100" accuracy="90" knowledge="120" will="125" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="655" block="655" parry="655" main_hand_attack="19" main_hand_accuracy="570" main_hand_crit_rate="3" magic_accuracy="740" />
 	</player_stats>
 </player_stats_templates>
