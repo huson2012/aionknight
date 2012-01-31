@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-	Назначение файла	: 
-	================================================================
-	Версия сервера		: Aion-Knight 2.7 (Beta version)
-	Версия клиента		: 2.7 (Иннова)
+	Назначение файла: Характеристики классов в зависимости от уровня
+	====================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: 2.7 (Иннова)
 	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	Редакция: 13.12.2011 (Frost)
+	=============================================
+	Последняя редакция: 30/01/2012 (Frost)
 
  -->
 <player_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
@@ -152,5 +153,20 @@
 	</player_stats>
 	<player_stats class="ASSASSIN" level="55">
 		<stats_template maxHp="5439" maxMp="3965" power="110" health="100" agility="110" accuracy="110" knowledge="90" will="90" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.5" evasion="775" block="775" parry="775" main_hand_attack="19" main_hand_accuracy="650" main_hand_crit_rate="3" magic_accuracy="784"/>
+	</player_stats>
+	<player_stats class="ASSASSIN" level="56">
+		<stats_template maxHp="5000" maxMp="4000" power="110" health="100" agility="110" accuracy="110" knowledge="90" will="90" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.6" evasion="735" block="735" parry="735" main_hand_attack="19" main_hand_accuracy="610" main_hand_crit_rate="3" magic_accuracy="713" />
+	</player_stats>
+	<player_stats class="ASSASSIN" level="57">
+		<stats_template maxHp="5100" maxMp="4100" power="110" health="100" agility="110" accuracy="110" knowledge="90" will="90" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.7" evasion="740" block="740" parry="740" main_hand_attack="19" main_hand_accuracy="610" main_hand_crit_rate="3" magic_accuracy="713" />
+	</player_stats>
+	<player_stats class="ASSASSIN" level="58">
+		<stats_template maxHp="5200" maxMp="4200" power="110" health="100" agility="110" accuracy="110" knowledge="90" will="90" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.7" evasion="740" block="740" parry="740" main_hand_attack="19" main_hand_accuracy="610" main_hand_crit_rate="3" magic_accuracy="720" />
+	</player_stats>
+	<player_stats class="ASSASSIN" level="59">
+		<stats_template maxHp="5300" maxMp="4300" power="110" health="100" agility="110" accuracy="110" knowledge="90" will="90" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.7" evasion="750" block="750" parry="750" main_hand_attack="19" main_hand_accuracy="610" main_hand_crit_rate="3" magic_accuracy="730" />
+	</player_stats>
+	<player_stats class="ASSASSIN" level="60">
+		<stats_template maxHp="5400" maxMp="4400" power="110" health="100" agility="110" accuracy="110" knowledge="90" will="90" walk_speed="1.5" run_speed="6" fly_speed="9" attack_speed="1.7" evasion="750" block="750" parry="750" main_hand_attack="19" main_hand_accuracy="615" main_hand_crit_rate="4" magic_accuracy="730" />
 	</player_stats>
 </player_stats_templates>

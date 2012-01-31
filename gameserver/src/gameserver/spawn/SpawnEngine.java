@@ -292,7 +292,7 @@ public class SpawnEngine
 		trap.setEffectController(new EffectController(trap));
 		trap.setCreator(creator);
 		trap.setSkillId(skillId);
-		trap.setVisualState(CreatureVisualState.HIDE3);
+		trap.setVisualState(CreatureVisualState.HIDE1);
 		trap.getController().onRespawn();
 		bringIntoWorld(trap, spawn, instanceIndex);
 		return trap;
@@ -305,7 +305,8 @@ public class SpawnEngine
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(fgNpcId);
 		SpawnTemplate sTemplate = addNewSpawn(mapId, 1, fgNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
 		FortressGeneral gen = new FortressGeneral(IDFactory.getInstance().nextId(), new FortressGeneralController(), sTemplate, DataManager.NPC_DATA.getNpcTemplate(fgNpcId), fortressId);
-	        gen.setNpcSkillList(DataManager.NPC_SKILL_DATA.getNpcSkillList(npcTemplate.getTemplateId()));
+		
+		gen.setNpcSkillList(DataManager.NPC_SKILL_DATA.getNpcSkillList(npcTemplate.getTemplateId()));
 		gen.setKnownlist(new NpcKnownList(gen));
 		gen.setEffectController(new EffectController(gen));
 		gen.setLifeStats(new NpcLifeStats(gen));
@@ -320,11 +321,13 @@ public class SpawnEngine
 		int ipNpcId = template.getBaseInfo().getNpcId(race);
 		SpawnTemplate sTemplate = addNewSpawn(mapId, 1, ipNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
 		InstancePortal portal = new InstancePortal(IDFactory.getInstance().nextId(), new PortalController(), sTemplate, DataManager.NPC_DATA.getNpcTemplate(ipNpcId), fortressId, template.getBaseInfo().getStaticId());
+		
 		portal.setKnownlist(new StaticObjectKnownList(portal));
 		portal.setEffectController(new EffectController(portal));
 		portal.setLifeStats(new NpcLifeStats(portal));
 		portal.getController().onRespawn();
 		bringIntoWorld(portal, sTemplate, 1);
+		
 		return portal;
 	}
 	
@@ -334,11 +337,13 @@ public class SpawnEngine
 		int fgNpcId = template.getBaseInfo().getNpcId(race);
 		SpawnTemplate sTemplate = addNewSpawn(mapId, 1, fgNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
 		FortressGate gate = new FortressGate(IDFactory.getInstance().nextId(), new FortressGateController(), sTemplate, DataManager.NPC_DATA.getNpcTemplate(fgNpcId), fortressId, template.getBaseInfo().getStaticId());
+		
 		gate.setKnownlist(new StaticObjectKnownList(gate));
 		gate.setEffectController(new EffectController(gate));
 		gate.setLifeStats(new NpcLifeStats(gate));
 		gate.getController().onRespawn();
 		bringIntoWorld(gate, sTemplate, 1);
+		
 		return gate;
 	}
 	
@@ -348,11 +353,13 @@ public class SpawnEngine
 		int fgaNpcId = template.getBaseInfo().getNpcId(race);
 		SpawnTemplate sTemplate = addNewSpawn(mapId, 1, fgaNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
 		FortressGateArtifact artifact = new FortressGateArtifact(IDFactory.getInstance().nextId(), new FortressGateArtifactController(), sTemplate, DataManager.NPC_DATA.getNpcTemplate(fgaNpcId), fortressId, template.getBaseInfo().getStaticId(), template.getHealGatePercent());
+		
 		artifact.setKnownlist(new StaticObjectKnownList(artifact));
 		artifact.setEffectController(new EffectController(artifact));
 		artifact.setLifeStats(new NpcLifeStats(artifact));
 		artifact.getController().onRespawn();
 		bringIntoWorld(artifact, sTemplate, 1);
+		
 		return artifact;
 	}
 	
@@ -364,10 +371,12 @@ public class SpawnEngine
 		int artifactNpcId = template.getBaseInfo().getNpcId(race);
 		SpawnTemplate artifactSpawnTemplate = addNewSpawn(mapId, 1, artifactNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
 		Artifact af = new Artifact(IDFactory.getInstance().nextId(), new ArtifactController(), artifactSpawnTemplate, DataManager.NPC_DATA.getNpcTemplate(artifactNpcId), artifactId, template.getBaseInfo().getStaticId());
+		
 		af.setKnownlist(new StaticObjectKnownList(af));
 		af.setEffectController(new EffectController(af));
 		af.getController().onRespawn();
 		af.setTemplate(template);
+		
 		bringIntoWorld(af, artifactSpawnTemplate, 1);
 
 		// Spawn and register protector
@@ -376,10 +385,12 @@ public class SpawnEngine
 			int pNpcId = template.getProtectorTemplate().getBaseInfo().getNpcId(race);
 			SpawnTemplate pSpawnTemplate = addNewSpawn(mapId, 1, pNpcId, template.getProtectorTemplate().getBaseInfo().getX(), template.getProtectorTemplate().getBaseInfo().getY(), template.getProtectorTemplate().getBaseInfo().getZ(), (byte)template.getProtectorTemplate().getBaseInfo().getH(), 0, 0, true, true);
 			ArtifactProtector protector = new ArtifactProtector(IDFactory.getInstance().nextId(), new ArtifactProtectorController(), pSpawnTemplate, DataManager.NPC_DATA.getNpcTemplate(pNpcId));
+			
 			protector.setKnownlist(new NpcKnownList(protector));
 			protector.setEffectController(new EffectController(protector));
 			protector.setLifeStats(new NpcLifeStats(protector));
 			protector.getController().onRespawn();
+			
 			bringIntoWorld(protector, pSpawnTemplate, 1);
 			af.registerRelatedSpawn(protector.getObjectId());
 			af.setProtector(protector);
@@ -394,10 +405,12 @@ public class SpawnEngine
 		int generatorNpcId = template.getBaseInfo().getNpcId(race);
 		SpawnTemplate sTemplate = addNewSpawn(mapId, 1, generatorNpcId, template.getBaseInfo().getX(), template.getBaseInfo().getY(), template.getBaseInfo().getZ(), (byte)template.getBaseInfo().getH(), 0, 0, true, true);
 		AethericField generator = new AethericField(IDFactory.getInstance().nextId(), new AethericFieldController(), sTemplate, DataManager.NPC_DATA.getNpcTemplate(generatorNpcId) ,fortressId);
+		
 		generator.setKnownlist(new NpcKnownList(generator));
 		generator.setEffectController(new EffectController(generator));
 		generator.setLifeStats(new NpcLifeStats(generator));
 		generator.getController().onRespawn();
+		
 		bringIntoWorld(generator, sTemplate, 1);
 		return generator;
 	}
@@ -413,11 +426,13 @@ public class SpawnEngine
 		int objectId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
 		GroupGate groupgate = new GroupGate(IDFactory.getInstance().nextId(), new GroupGateController(), spawn,
-			npcTemplate);
+		npcTemplate);
+		
 		groupgate.setKnownlist(new NpcKnownList(groupgate));
 		groupgate.setEffectController(new EffectController(groupgate));
 		groupgate.setCreator(creator);
 		groupgate.getController().onRespawn();
+		
 		bringIntoWorld(groupgate, spawn, instanceIndex);
 		return groupgate;
 	}
@@ -432,10 +447,12 @@ public class SpawnEngine
 	{
 		int npcId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate template = DataManager.NPC_DATA.getNpcTemplate(npcId);
+		
 		Kisk kisk = new Kisk(IDFactory.getInstance().nextId(), new KiskController(), spawn, template, creator);
 		kisk.setKnownlist(new StaticObjectKnownList(kisk));
 		kisk.setEffectController(new EffectController(kisk));
 		kisk.getController().onRespawn();
+		
 		bringIntoWorld(kisk, spawn, instanceIndex);
 		return kisk;
 	}
@@ -452,17 +469,20 @@ public class SpawnEngine
 		int objectId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
 		Servant servant = new Servant(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn,
-			npcTemplate);
+		npcTemplate);
+		
 		servant.setKnownlist(new NpcKnownList(servant));
 		servant.setEffectController(new EffectController(servant));
 		servant.setCreator(creator);
 		servant.setSkillId(skillId);
 		servant.setTarget(creator.getTarget());
 		servant.getGameStats().setStat(StatEnum.MAXHP, Math.round((float)creator.getLifeStats().getMaxHp() * hpRatio / 100));
+		
 		//since servants are op and we dont have proper stats
 		servant.getGameStats().setStat(StatEnum.BOOST_MAGICAL_SKILL, 300);
 		servant.getObjectTemplate().setLevel(creator.getLevel());
 		servant.getController().onRespawn();
+		
 		bringIntoWorld(servant, spawn, instanceIndex);
 		return servant;
 	}
@@ -479,13 +499,15 @@ public class SpawnEngine
 		int objectId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
 		SkillAreaNpc saNpc = new SkillAreaNpc(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn,
-			npcTemplate);
+		npcTemplate);
+		
 		saNpc.setNpcSkillList(DataManager.NPC_SKILL_DATA.getNpcSkillList(objectId));
 		saNpc.setKnownlist(new NpcKnownList(saNpc));
 		saNpc.setEffectController(new EffectController(saNpc));
 		saNpc.setCreator(creator);
 		saNpc.setSkillId(skillId);
 		saNpc.getController().onRespawn();
+		
 		bringIntoWorld(saNpc, spawn, instanceIndex);
 		return saNpc;
 	}
@@ -502,12 +524,14 @@ public class SpawnEngine
 		int objectId = spawn.getSpawnGroup().getNpcid();
 		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
 		Totem totem = new Totem(IDFactory.getInstance().nextId(), new NpcWithCreatorController(), spawn, npcTemplate);
+		
 		totem.setKnownlist(new NpcKnownList(totem));
 		totem.setEffectController(new EffectController(totem));
 		totem.setCreator(creator);
 		totem.setSkillId(skillId);
 		totem.getController().onRespawn();
 		totem.getObjectTemplate().setLevel(creator.getLevel());
+		
 		bringIntoWorld(totem, spawn, instanceIndex);
 		return totem;
 	}
@@ -525,6 +549,7 @@ public class SpawnEngine
 		//sets players lvl till we figure out retail like lvls
 		npcTemplate.setLevel(masterLevel);
 		Homing homing = new Homing(IDFactory.getInstance().nextId(), new HomingController(), spawn, npcTemplate);
+		
 		homing.setState(CreatureState.WEAPON_EQUIPPED);
 		homing.setKnownlist(new NpcKnownList(homing));
 		homing.setEffectController(new EffectController(homing));
@@ -532,9 +557,11 @@ public class SpawnEngine
 		homing.setAttackCount(attackCount);
 		homing.setSkillId(skillId);
 		homing.setTarget(creator.getTarget());
+		
 		//set accurancy and magical accurancy, completly custom: lvl 55 has 2200 both
 		homing.getGameStats().setStat(StatEnum.MAIN_HAND_ACCURACY, Math.round((float)homing.getLevel()*(2200f/55f)));
 		homing.getGameStats().setStat(StatEnum.MAGICAL_ACCURACY, Math.round((float)homing.getLevel()*(2200f/55f)));
+		
 		//set custom power to prevent really low dmg of energies/servants
 		//lvl 55 has 40 power(aprox. 200 per hit on a player)
 		if (homing.getGameStats().getCurrentStat(StatEnum.MAIN_HAND_PHYSICAL_ATTACK) < (homing.getLevel()*40/55))
@@ -564,7 +591,7 @@ public class SpawnEngine
 		byte level = (byte) (npcTemplate.getLevel() + skillLvl - 1);
 		SummonStatsTemplate statsTemplate = DataManager.SUMMON_STATS_DATA.getSummonTemplate(npcId, level);
 		Summon summon = new Summon(IDFactory.getInstance().nextId(), new SummonController(), spawn,
-			npcTemplate, statsTemplate, level);
+		npcTemplate, statsTemplate, level);
 		summon.setKnownlist(new NpcKnownList(summon));
 		summon.setEffectController(new EffectController(summon));
 		summon.setMaster(creator);
@@ -613,8 +640,7 @@ public class SpawnEngine
 	public SpawnTemplate addNewSpawn(int worldId, int instanceId, int objectId, float x, float y, float z,
 		byte heading, int walkerid, int randomwalk, boolean noRespawn)
 	{
-		return this
-		.addNewSpawn(worldId, instanceId, objectId, x, y, z, heading, walkerid, randomwalk, noRespawn, false);
+		return this .addNewSpawn(worldId, instanceId, objectId, x, y, z, heading, walkerid, randomwalk, noRespawn, false);
 	}
 
 	/**

@@ -9,10 +9,14 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================
-	Редакция: 20/12/2011 (Frost)
+	Редакция: 01/02/2011 (Frost)
 	
  -->
-<player_initial_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="player_initial_data.xsd">
+<player_initial_data 
+	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="player_initial_data.xsd">
+	
 	<!-- Начальная точка спавна для Асмодиан -->
 	<asmodian_spawn_location map_id="220010000" heading="32" x="571.0388" y="2787.3420" z="299.8750"/>
 	<!-- Начальная точка спавна для Элийцев -->
