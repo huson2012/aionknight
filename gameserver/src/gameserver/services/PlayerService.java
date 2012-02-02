@@ -127,6 +127,7 @@ public class PlayerService
 		DAOManager.getDAO(PlayerQuestListDAO.class).store(player);
 		DAOManager.getDAO(PlayerTitleListDAO.class).storeTitles(player);
 		DAOManager.getDAO(PlayerEmotionListDAO.class).storeEmotions(player);
+		DAOManager.getDAO(PlayerCmotionListDAO.class).storeCmotions(player);
 		DAOManager.getDAO(AbyssRankDAO.class).storeAbyssRank(player);
 		DAOManager.getDAO(PlayerPunishmentsDAO.class).storePlayerPunishments(player);
 		DAOManager.getDAO(InventoryDAO.class).store(player);
@@ -184,7 +185,7 @@ public class PlayerService
 		player.setBlockList(DAOManager.getDAO(BlockListDAO.class).load(player));
 		player.setTitleList(DAOManager.getDAO(PlayerTitleListDAO.class).loadTitleList(playerObjId));
 		player.setEmotionList(DAOManager.getDAO(PlayerEmotionListDAO.class).loadEmotionList(playerObjId));
-
+		player.setCmotionList(DAOManager.getDAO(PlayerCmotionListDAO.class).loadCmotionList(playerObjId));
 		DAOManager.getDAO(PlayerSettingsDAO.class).loadSettings(player);
 		DAOManager.getDAO(AbyssRankDAO.class).loadAbyssRank(player);
 		DAOManager.getDAO(GuildDAO.class).loadGuild(player);

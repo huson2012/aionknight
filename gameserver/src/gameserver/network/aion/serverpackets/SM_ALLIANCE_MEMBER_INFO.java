@@ -82,7 +82,7 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket
 		writeC(buf, pcd.getGender().getGenderId());
 		writeC(buf, pcd.getLevel());
 		writeC(buf, this.event.getId());
-		writeH(buf, 0x01);
+		writeH(buf, 0x00);
 		writeC(buf, 0x00);
 		switch(this.event)
 		{

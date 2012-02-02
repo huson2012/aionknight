@@ -18,36 +18,36 @@
  * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
  * The version of the server : Aion-Knight 2.7 (Beta version)
  */
-
+ 
 package gameserver.network.aion.serverpackets;
 
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import java.nio.ByteBuffer;
 
-public class SM_RIFT_STATUS extends AionServerPacket
+public class SM_RIFT_STATUS extends AionServerPacket 
 {
 	private int usedEntries;
-	private int maxEntries;
-	private int maxLevel;
-	private int targetObjectId;
-	
-	public SM_RIFT_STATUS(int targetObjId, int usedEntries, int maxEntries, int maxLevel)
-	{
-		this.targetObjectId = targetObjId;
-		this.usedEntries = usedEntries;
-		this.maxEntries = maxEntries;
-		this.maxLevel = maxLevel;
-	}
+    private int maxEntries;
+    private int maxLevel;
+    private int targetObjectId;
 
-	@Override
-	protected void writeImpl(AionConnection con, ByteBuffer buf)
+    public SM_RIFT_STATUS(int targetObjId, int usedEntries, int maxEntries, int maxLevel) 
 	{
-		writeD(buf, targetObjectId);
-		writeD(buf, usedEntries);
-		writeD(buf, maxEntries);
-		writeD(buf, 6793); //unk
-		writeD(buf, 25); // min level
-		writeD(buf, maxLevel);	
-	}
+        this.targetObjectId = targetObjId;
+        this.usedEntries = usedEntries;
+        this.maxEntries = maxEntries;
+        this.maxLevel = maxLevel;
+    }
+
+    @Override
+    protected void writeImpl(AionConnection con, ByteBuffer buf) 
+	{
+        writeD(buf, targetObjectId);
+        writeD(buf, usedEntries);
+        writeD(buf, maxEntries);
+        writeD(buf, 6793); //unk
+        writeD(buf, 25); // min level
+        writeD(buf, maxLevel);
+    }
 }

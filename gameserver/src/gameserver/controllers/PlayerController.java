@@ -25,6 +25,7 @@ import gameserver.configs.main.CustomConfig;
 import gameserver.controllers.SummonController.UnsummonType;
 import gameserver.controllers.attack.AttackStatus;
 import gameserver.controllers.instances.FortressInstanceTimer;
+import gameserver.dao.PlayerCmotionListDAO;
 import gameserver.dataholders.DataManager;
 import gameserver.model.EmotionType;
 import gameserver.model.ShoutEventType;
@@ -61,6 +62,9 @@ import gameserver.world.WorldMapInstance;
 import gameserver.world.WorldType;
 import gameserver.world.zone.ZoneInstance;
 import org.apache.log4j.Logger;
+
+import commons.database.dao.DAOManager;
+
 import java.util.Collections;
 import java.util.concurrent.Future;
 
@@ -260,6 +264,8 @@ public class PlayerController extends CreatureController<Player>
 
 	public void onEnterWorld()
 	{
+		PacketSendUtility.sendPacket(getOwner(), new SM_CMOTION(getOwner()));
+		
 		// Display Dark Poeta counter when entering 300040000
 		if(getOwner().getWorldId() == 300040000 && !getOwner().getInDarkPoeta() && getOwner().getPlayerGroup() != null){
 			PacketSendUtility.sendPacket(getOwner(), new SM_INSTANCE_SCORE(getOwner().getWorldId(), (int)((getOwner().getPlayerGroup().getInstanceStartTime() + 14400000) - System.currentTimeMillis()), 2097152, getOwner().getPlayerGroup().getGroupInstancePoints(), 0, 0, 7));

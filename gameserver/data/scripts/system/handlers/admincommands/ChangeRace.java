@@ -1,49 +1,81 @@
 /**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
+ * Р­РјСѓР»СЏС‚РѕСЂ РёРіСЂРѕРІРѕРіРѕ СЃРµСЂРІРµСЂР° Aion 2.7 РѕС‚ РєРѕРјР°РЅРґС‹ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ 'Aion-Knight Dev. Team' СЏРІР»СЏРµС‚СЃСЏ 
+ * СЃРІРѕР±РѕРґРЅС‹Рј РїСЂРѕРіСЂР°РјРјРЅС‹Рј РѕР±РµСЃРїРµС‡РµРЅРёРµРј; РІС‹ РјРѕР¶РµС‚Рµ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏС‚СЊ Рё/РёР»Рё РёР·РјРµРЅСЏС‚СЊ РµРіРѕ СЃРѕРіР»Р°СЃРЅРѕ СѓСЃР»РѕРІРёСЏРј 
+ * РЎС‚Р°РЅРґР°СЂС‚РЅРѕР№ РћР±С‰РµСЃС‚РІРµРЅРЅРѕР№ Р›РёС†РµРЅР·РёРё GNU (GNU GPL), РѕРїСѓР±Р»РёРєРѕРІР°РЅРЅРѕР№ Р¤РѕРЅРґРѕРј СЃРІРѕР±РѕРґРЅРѕРіРѕ РїСЂРѕРіСЂР°РјРјРЅРѕРіРѕ 
+ * РѕР±РµСЃРїРµС‡РµРЅРёСЏ (FSF), Р»РёР±Рѕ Р›РёС†РµРЅР·РёРё РІРµСЂСЃРёРё 3, Р»РёР±Рѕ (РЅР° РІР°С€Рµ СѓСЃРјРѕС‚СЂРµРЅРёРµ) Р»СЋР±РѕР№ Р±РѕР»РµРµ РїРѕР·РґРЅРµР№ 
+ * РІРµСЂСЃРёРё.
  * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
+ * РџСЂРѕРіСЂР°РјРјР° СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏРµС‚СЃСЏ РІ РЅР°РґРµР¶РґРµ, С‡С‚Рѕ РѕРЅР° Р±СѓРґРµС‚ РїРѕР»РµР·РЅРѕР№, РЅРѕ Р‘Р•Р— РљРђРљРРҐ Р‘Р« РўРћ РќР Р‘Р«Р›Рћ 
+ * Р“РђР РђРќРўРР™РќР«РҐ РћР‘РЇР—РђРўР•Р›Р¬РЎРўР’; РґР°Р¶Рµ Р±РµР· РєРѕСЃРІРµРЅРЅС‹С…  РіР°СЂР°РЅС‚РёР№РЅС‹С…  РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ, СЃРІСЏР·Р°РЅРЅС‹С… СЃ 
+ * РџРћРўР Р•Р‘РРўР•Р›Р¬РЎРљРРњР РЎР’РћР™РЎРўР’РђРњР Рё РџР РР“РћР”РќРћРЎРўР¬Р® Р”Р›РЇ РћРџР Р•Р”Р•Р›Р•РќРќР«РҐ Р¦Р•Р›Р•Р™. Р”Р»СЏ РїРѕРґСЂРѕР±РЅРѕСЃС‚РµР№ СЃРјРѕС‚СЂРёС‚Рµ 
+ * РЎС‚Р°РЅРґР°СЂС‚РЅСѓСЋ РћР±С‰РµСЃС‚РІРµРЅРЅСѓСЋ Р›РёС†РµРЅР·РёСЋ GNU.
  * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+ * Р’С‹ РґРѕР»Р¶РЅС‹ Р±С‹Р»Рё РїРѕР»СѓС‡РёС‚СЊ РєРѕРїРёСЋ РЎС‚Р°РЅРґР°СЂС‚РЅРѕР№ РћР±С‰РµСЃС‚РІРµРЅРЅРѕР№ Р›РёС†РµРЅР·РёРё GNU РІРјРµСЃС‚Рµ СЃ СЌС‚РѕР№ РїСЂРѕРіСЂР°РјРјРѕР№. 
+ * Р•СЃР»Рё СЌС‚Рѕ РЅРµ С‚Р°Рє, РЅР°РїРёС€РёС‚Рµ РІ Р¤РѕРЅРґ РЎРІРѕР±РѕРґРЅРѕРіРѕ РџРћ (Free Software Foundation, Inc., 675 Mass Ave, 
  * Cambridge, MA 02139, USA
  * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ * Р’РµР±-cР°Р№С‚ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ : http://aion-knight.ru
+ * РџРѕРґРґРµСЂР¶РєР° РєР»РёРµРЅС‚Р° РёРіСЂС‹ : Aion 2.7 - 'РђСЂРµРЅР° РЎРјРµСЂС‚Рё' (РРЅРЅРѕРІР°) 
+ * Р’РµСЂСЃРёСЏ СЃРµСЂРІРµСЂРЅРѕР№ С‡Р°СЃС‚Рё : Aion-Knight 2.7 (Beta version)
  */
 
 package admincommands;
 
+import gameserver.configs.administration.AdminConfig;
 import gameserver.model.Race;
+import gameserver.model.gameobjects.VisibleObject;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
+import gameserver.world.World;
+
+/**
+ * @author DoYrdenDzirt
+ * 
+ **/
 
 public class ChangeRace extends AdminCommand {
 
-    /**
-     * @param commandName
-     */
     public ChangeRace() {
         super("race");
     }
 
     @Override
     public void executeCommand(Player admin, String[] params) {
-        if(admin.getCommonData().getRace() == Race.ASMODIANS)
-            admin.getCommonData().setRace(Race.ELYOS);
+    	VisibleObject target = admin.getTarget();
+    	final Player player;
+    	
+    	if(admin.getAccessLevel() < AdminConfig.COMMAND_RACE)
+    	{
+    		PacketSendUtility.sendMessage(admin, "You dont have enough rights to execute this command");
+			return;
+    	}
+    	
+    	if(target == null)
+    	{
+    		PacketSendUtility.sendMessage(admin, "You should select a player first!");
+    		return;
+    	}
+    	
+    	if(target instanceof Player)
+    		player = (Player) target;
+    	else
+    	{
+    		PacketSendUtility.sendMessage(admin, "Target must be an instance of Player!");
+    		return;
+    	}
+    	
+        if(player.getCommonData().getRace() == Race.ASMODIANS)
+        	player.getCommonData().setRace(Race.ELYOS);
         else
-            admin.getCommonData().setRace(Race.ASMODIANS);
-        
-        PacketSendUtility.sendPacket(admin, new SM_PLAYER_INFO(admin, false));
+        	player.getCommonData().setRace(Race.ASMODIANS);
+
+        PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+        World.getInstance().despawn(player);
+        World.getInstance().spawn(player);
+        	
     }
+    
 
 }

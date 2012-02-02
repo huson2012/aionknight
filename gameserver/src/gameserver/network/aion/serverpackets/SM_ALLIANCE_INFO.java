@@ -79,7 +79,7 @@ public class SM_ALLIANCE_INFO extends AionServerPacket
 			writeD(buf, 1000+i);
 		}
 
-		writeD(buf, 0);
-		writeD(buf, 0);
+		writeD(buf, 0); // System message ID
+		writeS(buf, ""); // System message text
 	}
 }

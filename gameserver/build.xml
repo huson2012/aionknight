@@ -68,7 +68,7 @@
             <fileset dir="${build.classes}"/>
             <manifest>
                 <attribute name="Main-Class" value="gameserver.GameServer"/>
-            	<attribute name="Revision" value="R100"/>
+            	<attribute name="Revision" value="${revision}"/>
             	<attribute name="Date" value="${date}"/>
             </manifest>
         </jar>
