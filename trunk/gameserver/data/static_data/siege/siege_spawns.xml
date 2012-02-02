@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
 
-	Назначение файла: Спавн в крепостях
-	==============================================
-	Версия сервера: Aion-Knight 2.7 (Beta version)
-	Версия клиента: Aion 2.7 (Иннова)
+	Назначение файла	: Спавн в крепостях
+	================================================================
+	Версия сервера		: Aion-Knight 2.7 (Beta version)
+	Версия клиента		: 2.7 (Иннова)
 	================================================================
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
-	=============================================
-	Последняя редакция: 19/01/2012 (Frost)
+	Редакция: 01.02.2012 (OXI)
 
  -->
 <siege_spawns>
@@ -180,7 +179,7 @@
 			<!-- Spawned when Fortress is invulnerable (Only for Fortresses) -->
 			<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
 			<!-- Rodeur de la Forteresse, normal, level 40-->
-			<peace_guard npcid_dr="260257" npcid_da="260256" npcid_li="260255">
+			<peace_guard npcid_dr="260257" npcid_da="263337" npcid_li="260255">
 				<loc x="2523.5" y="2855.2" z="1511.5" h="56"/>
 				<loc x="2538.8" y="2897.8" z="1513.1" h="109"/>
 				<loc x="2561.0" y="2890.6" z="1507.6" h="56"/>
@@ -193,7 +192,7 @@
 				<loc x="2642.0" y="2905.1" z="1503.4" h="2"/>
 			</peace_guard>
 			<!-- Defenseur de la Forteresse, normal, level 40-->
-			<peace_guard npcid_dr="260254" npcid_da="260253" npcid_li="260252">
+			<peace_guard npcid_dr="260254" npcid_da="263571" npcid_li="260252">
 				<loc x="2538.4" y="2822.0" z="1508.2" h="58"/>
 				<loc x="2538.4" y="2865.9" z="1509.4" h="63"/>
 				<loc x="2592.4" y="2928.8" z="1503.2" h="94"/>
@@ -206,7 +205,7 @@
 				<loc x="2640.2" y="3042.4" z="1472.8" h="19"/>
 			</peace_guard>
 			<!-- Mercenaire de la Forteresse, Elite, level 40-->
-			<peace_guard npcid_dr="260197" npcid_da="260196" npcid_li="260195">
+			<peace_guard npcid_dr="260197" npcid_da="263497" npcid_li="260195">
 				<loc x="2596.4" y="2792.9" z="1504.7" h="88"/>
 				<loc x="2641.4" y="2923.4" z="1500.3" h="25"/>
 				<loc x="2617.8" y="2911.5" z="1504.5" h="26"/>
@@ -220,7 +219,7 @@
 				<loc x="2622.0" y="2914.4" z="1465.7" h="56"/>
 			</peace_guard>
 			<!-- Tireur d'elite de la Forteresse, Elite, level 40-->
-			<peace_guard npcid_dr="266981" npcid_da="260199" npcid_li="266979">
+			<peace_guard npcid_dr="266981" npcid_da="263500" npcid_li="266979">
 				<loc x="2575.9" y="2887.1" z="1523.3" h="40"/>
 				<loc x="2554.6" y="2864.3" z="1524.5" h="56"/>
 				<loc x="2565.1" y="2828.8" z="1523.1" h="69"/>
@@ -252,7 +251,7 @@
 				<loc x="2657.5" y="2799.4" z="1479.6" h="89"/>
 			</peace_guard>
 			<!-- Arcaniste de la Forteresse, normal, level 40-->
-			<peace_guard npcid_dr="260260" npcid_da="260259" npcid_li="260258">
+			<peace_guard npcid_dr="260260" npcid_da="263577" npcid_li="260258">
 				<loc x="2596.3" y="3007.1" z="1487.2" h="0"/>
 				<loc x="2607.7" y="3003.5" z="1485.4" h="24"/>
 				<loc x="2625.4" y="2990.0" z="1486.6" h="31"/>
@@ -1613,7 +1612,7 @@
 				<loc x="736.9" y="2979.0" z="2892.6" h="109"/>
 			</peace_guard>
 			<!-- Mage de la forteresse, Elite, level 50-->
-			<peace_guard npcid_dr="266504" npcid_da="266503" npcid_li="266502">
+			<peace_guard npcid_dr="266504" npcid_da="271003" npcid_li="266502">
 				<loc x="760.1" y="3011.6" z="2916.8" h="17"/>
 				<loc x="680.7" y="2908.6" z="2916.8" h="79"/>
 				<loc x="781.8" y="2918.3" z="2907.4" h="2"/>
@@ -1873,18 +1872,15 @@
 			<siege_guard npcid_dr="260029" npcid_da="260024" npcid_li="260019">
 				<loc x="2137.9531" y="1975.3424" z="2321.5718" h="30"/>
 			</siege_guard>
-			<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
-			<!-- Spawned when Fortress is invulnerable (Only for Fortresses) -->
-			<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
 			<!-- Arcaniste de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="268061" npcid_da="268060" npcid_li="268059">
+			<peace_guard npcid_dr="268061" npcid_da="268060" npcid_li="260258">
 				<loc x="2248.6" y="1982.3" z="2313.8" h="101"/>
 				<loc x="2266.0" y="1898.1" z="2311.2" h="67"/>
 				<loc x="2031.8" y="1878.4" z="2313.3" h="87"/>
 				<loc x="2030.4" y="1981.6" z="2318.7" h="31"/>
 			</peace_guard>
 			<!-- Defenseur de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="266557" npcid_da="266556" npcid_li="266555">
+			<peace_guard npcid_dr="266557" npcid_da="266556" npcid_li="260252">
 				<loc x="2151.3" y="2073.9" z="2313.4" h="60"/>
 				<loc x="2124.8" y="2071.6" z="2312.7" h="98"/>
 				<loc x="2192.6" y="2034.4" z="2310.8" h="26"/>
@@ -1896,14 +1892,14 @@
 				<loc x="2083.1" y="2033.0" z="2312.1" h="70"/>
 			</peace_guard>
 			<!-- Initie de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="268064" npcid_da="268063" npcid_li="268062">
+			<peace_guard npcid_dr="268064" npcid_da="268063" npcid_li="260261">
 				<loc x="2138.2" y="2049.1" z="2309.2" h="29"/>
 				<loc x="2238.0" y="2035.6" z="2311.9" h="31"/>
 				<loc x="2257.0" y="1956.3" z="2314.1" h="27"/>
 				<loc x="2019.9" y="1942.3" z="2316.3" h="68"/>
 			</peace_guard>
 			<!-- Rodeur de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="269258" npcid_da="269257" npcid_li="269256">
+			<peace_guard npcid_dr="269258" npcid_da="269257" npcid_li="260255">
 				<loc x="2138.7" y="2106.2" z="2318.5" h="17"/>
 				<loc x="2183.2" y="2068.1" z="2312.0" h="81"/>
 				<loc x="2291.0" y="1934.2" z="2307.3" h="1"/>
@@ -1916,7 +1912,7 @@
 				<loc x="2086.2" y="2072.6" z="2313.8" h="78"/>
 			</peace_guard>
 			<!-- Tireur d'elite de la Forteresse, Elite, level 50-->
-			<peace_guard npcid_dr="269201" npcid_da="269200" npcid_li="269199">
+			<peace_guard npcid_dr="269201" npcid_da="269200" npcid_li="260031">
 				<loc x="2137.4" y="1760.2" z="2300.7" h="91"/>
 				<loc x="2041.3" y="2021.5" z="2316.1" h="4"/>
 				<loc x="2143.9" y="1870.5" z="2334.3" h="89"/>
@@ -1954,7 +1950,7 @@
 				<loc x="2108.5" y="1881.8" z="2505.7" h="39"/>
 			</peace_guard>
 			<!-- Mercenaire de la Forteresse, elite, level 50-->
-			<peace_guard npcid_dr="270998" npcid_da="270997" npcid_li="270996">
+			<peace_guard npcid_dr="270998" npcid_da="270997" npcid_li="260017">
 				<loc x="2148.7" y="1792.1" z="2305.9" h="81"/>
 				<loc x="2138.6" y="2009.0" z="2318.0" h="55"/>
 				<loc x="2138.4" y="1993.6" z="2320.2" h="32"/>
@@ -1975,7 +1971,7 @@
 				<loc x="2143.0" y="1954.8" z="2308.0" h="56"/>
 			</peace_guard>
 			<!-- Mage de la forteresse, Elite, level 50-->
-			<peace_guard npcid_dr="266504" npcid_da="266503" npcid_li="266502">
+			<peace_guard npcid_dr="260203" npcid_da="260202" npcid_li="260201">
 				<loc x="2127.5" y="2049.0" z="2323.1" h="21"/>
 				<loc x="2082.0" y="2007.3" z="2323.6" h="47"/>
 				<loc x="2052.3" y="1968.3" z="2334.6" h="47"/>
@@ -1991,7 +1987,7 @@
 				<loc x="2148.5" y="2048.8" z="2323.1" h="32"/>
 			</peace_guard>
 			<!-- Pretre de la Forteresse, Elite, level 50-->
-			<peace_guard npcid_dr="268007" npcid_da="268006" npcid_li="268005">
+			<peace_guard npcid_dr="268007" npcid_da="268006" npcid_li="260204">
 				<loc x="2134.4" y="1959.2" z="2308.0" h="63"/>
 			</peace_guard>
 			<!-- Brakert / Therenus, Guerisseur d'ame, Elite, level 55-->
@@ -2082,10 +2078,6 @@
 			<!--Antber / Hyprotes, Teleporteur de la Forteresse, Elite, level 50-->
 			<siege_guard npcid_dr="268024" npcid_da="268023" npcid_li="268022">
 				<loc x="2029.9" y="1294.4" z="2963.6" h="0"/>
-			</siege_guard>
-			<!-- Herona / Skilla, Proprietaire d'entrepot, normal, level 50-->
-			<siege_guard npcid_dr="0" npcid_da="268017" npcid_li="268015">
-				<loc x="2084.2" y="1249.4" z="2963.5 " h="60"/>
 			</siege_guard>
 			<!-- Egir / Sirapos, Quartier-maitre de la Forteresse abyssale, normal, level 50-->
 			<siege_guard npcid_dr="268014" npcid_da="268050" npcid_li="268049">
@@ -2193,7 +2185,7 @@
 				<loc x="2149.4" y="1323.7" z="2963.6" h="67"/>
 			</peace_guard>
 			<!-- Defenseur de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="266557" npcid_da="266556" npcid_li="266555">
+			<peace_guard npcid_dr="266557" npcid_da="268054" npcid_li="266555">
 				<loc x="2034.9" y="1362.3" z="2962.3" h="71"/>
 				<loc x="1974.6" y="1326.9" z="2956.0" h="43"/>
 				<loc x="2042.4" y="1196.7" z="2960.8" h="3"/>
@@ -2206,14 +2198,14 @@
 				<loc x="2099.1" y="1336.6" z="2964.9" h="106"/>
 			</peace_guard>
 			<!-- Rodeur de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="269258" npcid_da="269257" npcid_li="269256">
+			<peace_guard npcid_dr="269258" npcid_da="268057" npcid_li="269256">
 				<loc x="2004.7" y="1340.6" z="2959.6" h="34"/>
 				<loc x="1943.7" y="1339.7" z="2944.2" h="47"/>
 				<loc x="1984.7" y="1225.6" z="2961.9" h="73"/>
 				<loc x="2134.7" y="1345.6" z="2965.5" h="47"/>
 			</peace_guard>
 			<!-- Tireur d'elite de la Forteresse, elite, level 50-->
-			<peace_guard npcid_dr="269201" npcid_da="269200" npcid_li="269199">
+			<peace_guard npcid_dr="269201" npcid_da="268000" npcid_li="269199">
 				<loc x="2062.0" y="1339.6" z="2972.1" h="29"/>
 				<loc x="2084.6" y="1325.5" z="2972.1" h="12"/>
 				<loc x="2094.7" y="1276.0" z="2980.7" h="57"/>
@@ -2229,7 +2221,7 @@
 				<loc x="2056.3" y="1329.2" z="2976.9" h="32"/>
 			</peace_guard>
 			<!-- Mercenaire de la Forteresse, elite, level 50-->
-			<peace_guard npcid_dr="270998" npcid_da="270997" npcid_li="270996">
+			<peace_guard npcid_dr="270998" npcid_da="267997" npcid_li="270996">
 				<loc x="2058.9" y="1204.8" z="2961.4" h="86"/>
 				<loc x="2025.2" y="1257.4" z="2967.6" h="30"/>
 				<loc x="2036.7" y="1273.8" z="2963.2" h="1"/>
@@ -2244,7 +2236,7 @@
 				<loc x="2062.8" y="1281.1" z="2917.6" h="40"/>
 			</peace_guard>
 			<!-- Mage de la forteresse, Elite, level 50-->
-			<peace_guard npcid_dr="266504" npcid_da="266503" npcid_li="266502">
+			<peace_guard npcid_dr="266504" npcid_da="268003" npcid_li="266502">
 				<loc x="2099.2" y="1296.9" z="2980.3" h="15"/>
 				<loc x="2112.6" y="1276.0" z="2981.3" h="115"/>
 				<loc x="2100.0" y="1252.4" z="2980.2" h="106"/>
@@ -2339,7 +2331,7 @@
 		</fortress_gate>
 		<!-- Artefact - Assaut de Krotan-->
 		<artifact>
-			<baseinfo npcid_dr="277056" npcid_da="277055" npcid_li="277054" x="2008.227" y="1261.6769" z="2944.5237" h="4" static_id="1271"/>
+			<baseinfo npcid_dr="277056" npcid_da="277055" npcid_li="277054" x="2008.2268" y="1261.6871" z="2945.6238" h="4" static_id="1271"/>
 			<artifact_effect skillid="12075" range="WORLD"/>
 		</artifact>
 		<aetheric_field>
@@ -2466,7 +2458,7 @@
 			<!-- Spawned when Fortress is invulnerable (Only for Fortresses) -->
 			<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
 			<!-- Arcaniste de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="268061" npcid_da="268060" npcid_li="268059">
+			<peace_guard npcid_dr="268061" npcid_da="269260" npcid_li="268059">
 				<loc x="2444.6" y="2058.6" z="3046.6" h="104"/>
 				<loc x="2470.5" y="2053.9" z="3045.9" h="93"/>
 				<loc x="2559.5" y="2074.8" z="3049.4" h="113"/>
@@ -2474,15 +2466,23 @@
 				<loc x="2482.1" y="2174.2" z="3047.1" h="50"/>
 			</peace_guard>
 			<!-- Defenseur de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="266557" npcid_da="266556" npcid_li="266555">
+			<peace_guard npcid_dr="266557" npcid_da="269254" npcid_li="266555">
 				<loc x="2417.4" y="2109.1" z="3046.8" h="51"/>
 				<loc x="2421.1" y="2082.7" z="3047.9" h="57"/>
 				<loc x="2607.0" y="2109.7" z="3041.4" h="114"/>
 				<loc x="2462.3" y="2153.5" z="3047.4" h="31"/>
 			</peace_guard>
 			<!-- Initie de la Forteresse, normal, level 50-->
-			<peace_guard npcid_dr="268064" npcid_da="268063" npcid_li="268062">
+			<peace_guard npcid_dr="268064" npcid_da="269263" npcid_li="268062">
 				<loc x="2431.6" y="2098.6" z="3047.8" h="65"/>
+				<loc x="2490.864" y="2100.6536" z="3050.9834" h="59"/>
+				<loc x="2489.213" y="2111.2866" z="3050.991" h="65"/>
+				<loc x="2495.6787" y="2130.8608" z="3049.6567" h="94"/>
+				<loc x="2502.544" y="2086.252" z="3049.658" h="40"/>
+				<loc x="2521.803" y="2104.4822" z="3050.9448" h="4"/>
+				<loc x="2520.5815" y="2115.109" z="3050.955" h="3"/>
+				<loc x="2577.8447" y="2125.3918" z="3047.6213" h="5"/>
+				<loc x="2579.083" y="2105.9055" z="3046.9517" h="0"/>
 			</peace_guard>
 			<!-- Rodeur de la Forteresse, normal, level 50-->
 			<peace_guard npcid_dr="269258" npcid_da="269257" npcid_li="269256">
@@ -2513,7 +2513,7 @@
 				<loc x="2573.1" y="2116.9" z="3047.5" h="1"/>
 				<loc x="2480.4" y="2099.8" z="3049.6" h="61"/>
 				<loc x="2505.8" y="2131.9" z="3049.7" h="91"/>
-				<loc x="2477.7" y="2100.9" z="3049.6" h="91"/>
+				<loc x="2478.668" y="2109.841" z="3049.6187" h="79"/>
 				<loc x="2512.0" y="2083.5" z="3049.7" h="47"/>
 				<loc x="2542.4" y="2111.6" z="3049.6" h="2"/>
 				<loc x="2518.2" y="2109.7" z="3042.7" h="63"/>
@@ -2526,7 +2526,7 @@
 				<loc x="2450.7" y="2121.3" z="3003.6" h="80"/>
 			</peace_guard>
 			<!-- Mage de la forteresse, Elite, level 50-->
-			<peace_guard npcid_dr="266504" npcid_da="266503" npcid_li="266502">
+			<peace_guard npcid_dr="266504" npcid_da="269203" npcid_li="266502">
 				<loc x="2459.7" y="2073.6" z="3058.6" h="78"/>
 				<loc x="2452.5" y="2130.9" z="3058.6" h="48"/>
 				<loc x="2480.2" y="2148.5" z="3066.9" h="49"/>

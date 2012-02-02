@@ -40,7 +40,12 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 	private int count;
 	private int time;
 
-	public SM_RIFT_ANNOUNCE(int action, int annouce, int count, Race race)
+	public SM_RIFT_ANNOUNCE(Race race) 
+	{
+		this.race = race;
+	}
+  
+	public SM_RIFT_ANNOUNCE(int action, int annouce, int count, Race race)  
 	{
 		this.action = action;
 		this.annouce = annouce;
@@ -48,12 +53,12 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 		this.race = race;
 	}
 
-	public SM_RIFT_ANNOUNCE(int action, int targetObjectId, RiftSpawnManager.RiftEnum rift, SpawnTemplate spawnTemplate, int time)
+	public SM_RIFT_ANNOUNCE(int action, int targetObjectId, RiftSpawnManager.RiftEnum paramRiftEnum, SpawnTemplate paramSpawnTemplate, int time)
 	{
 		this.action = action;
 		this.targetObjectId = targetObjectId;
-		this.rift = rift;
-		this.spawnTemplate = spawnTemplate;
+		this.rift = paramRiftEnum;
+		this.spawnTemplate = paramSpawnTemplate;
 		this.time = time;
 	}
 
@@ -65,40 +70,44 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 		this.time = time;
 	}
 
-	@Override
-	protected void writeImpl(AionConnection con, ByteBuffer buf)
+	protected void writeImpl(AionConnection com, ByteBuffer buf)
 	{
 		writeH(buf, action);
-		switch(action)
-		{
-			case 9:
-				writeC(buf, annouce);
-				writeD(buf, count);
-				switch(race.getRaceId())
-				{
-					case 1:
-						writeD(buf, 0);
-						break;
-					case 2:
-						writeD(buf, 1);
-				}
-				break;
-			case 13:
-				writeC(buf, 3);
-				writeD(buf, targetObjectId);
-				writeD(buf, usedEntries);
-				writeD(buf, time);
-				break;
-			case 33:
-				writeC(buf, 2);
-				writeD(buf, targetObjectId);
-				writeD(buf, rift.getEntries());
-				writeD(buf, time);
-				writeD(buf, 25);
-				writeD(buf, rift.getMaxLevel());
-				writeF(buf, spawnTemplate.getX());
-				writeF(buf, spawnTemplate.getY());
-				writeF(buf, spawnTemplate.getZ());
+		switch (action)
+    {
+		case 9:
+			writeC(buf, annouce);
+			writeD(buf, count);
+			switch (race) // Destination
+			{
+            
+			// Master rift announcements
+            case ASMODIANS:
+                writeD(buf, 1);
+                writeD(buf, 0);
+                break;
+            case ELYOS:
+                writeD(buf, 1);
+                writeD(buf, 0);
+                break;
+			}
+		break;
+		case 13:
+			writeC(buf, 3);
+			writeD(buf, targetObjectId);
+			writeD(buf, usedEntries);
+			writeD(buf, time);
+		break;
+		case 33:
+			writeC(buf, 2);
+			writeD(buf, targetObjectId);
+			writeD(buf, rift.getEntries());
+			writeD(buf, time);
+			writeD(buf, 25);
+			writeD(buf, rift.getMaxLevel());
+			writeF(buf, spawnTemplate.getX());
+			writeF(buf, spawnTemplate.getY());
+			writeF(buf, spawnTemplate.getZ());
 		}
 	}
 }

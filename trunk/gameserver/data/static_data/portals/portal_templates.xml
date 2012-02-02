@@ -185,7 +185,7 @@
 	Точка входа: 
 	Точка выхода: 
 	-->
-	<portal npcid="700459" instance="false" minlevel="40" maxlevel="55" group="false">
+	<portal npcid="700459" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300140000" x="527.79846" y="109.320755" z="175.92393"/>
 		<exitpoint mapid="400010000" x="2011.16" y="1252.53" z="2945.4082"/>
 	</portal>
@@ -270,7 +270,7 @@
 		<exitpoint mapid="320100000" x="148.256" y="460.857" z="141.713"/>
 	</portal>
     <!-- Fire Temple Exit -->
-	<portal npcid="730048" instance="false" minlevel="30" group="false" maxlevel="55">
+	<portal npcid="730048" instance="false" minlevel="30" group="false" maxlevel="60">
 		<entrypoint mapid="320100000" x="149.01385" y="466.66568" z="141.31714"/>
 		<exitpoint mapid="220020000" x="1591.4039" y="970.94464" z="141.00067" race="ASMODIANS"/>
 		<exitpoint mapid="210020000" x="1343.28" y="350.96" z="348.67" race="ELYOS"/>
@@ -292,18 +292,18 @@
 		<entrypoint mapid="220040000" x="589.1326" y="2534.8586" z="288.48273"/>
 		<exitpoint mapid="220040000" x="571" y="2504" z="289"/>
 	</portal>
-	<portal npcid="700177" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="700177" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="210020000" x="2511.48" y="791.962" z="412.805" race="ELYOS"/>
 		<exitpoint mapid="310040000" x="274.884" y="167.971" z="204.347"/>
 	</portal>
-	<portal npcid="700141" instance="false" minlevel="40" maxlevel="55" group="false">
+	<portal npcid="700141" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="310040000" x="276.24802" y="161.69484" z="202.62405" race="ELYOS"/>
 		<exitpoint mapid="210020000" x="2511.48" y="791.962" z="412.805"/>
 	</portal>
 	<!-- Artifact of Circulation / DarkPoeta -->
 	<!-- Model for required item :
 	<portal npcid="730185" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS" itemreq="185000041"> -->
-	<portal npcid="730185" instance="true" minlevel="50" maxlevel="55" group="true" race="ASMODIANS">
+	<portal npcid="730185" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="220040000" x="2420.12" y="2061.31" z="579.7" race="ASMODIANS"/>
 		<exitpoint mapid="300040000" x="1214" y="412" z="140"/>
 		<portalitem id="1" itemid="186000048" quantity="20"/>
@@ -326,27 +326,27 @@
 		<portalitem id="2" itemid="186000050" quantity="1"/>
 	</portal>
 	<!-- Sky Temple Interior / Water Room Entrance-->
-	<portal npcid="730041" instance="true" minlevel="27" maxlevel="55" group="true">
+	<portal npcid="730041" instance="true" minlevel="27" maxlevel="60" group="true">
 		<entrypoint mapid="220020000" x="1673.5468" y="1147.3054" z="200.42954" race="ASMODIANS"/>
 		<exitpoint mapid="320050000" x="473.72284" y="115.55677" z="214.81421"/>
 	</portal>
 	<!-- Sky Temple Interior / Water Room Exit-->
-	<portal npcid="730042" instance="false" minlevel="27" maxlevel="55" group="false">
+	<portal npcid="730042" instance="false" minlevel="27" maxlevel="60" group="false">
 		<entrypoint mapid="320050000" x="380.75192" y="73.82643" z="226.6414"/>
 		<exitpoint mapid="220020000" x="1663" y="1145" z="200"/>
 	</portal>
 	<!-- Sky Temple Interior / Wind Room Entrance-->
-	<portal npcid="730043" instance="true" minlevel="27" maxlevel="55" group="true">
+	<portal npcid="730043" instance="true" minlevel="27" maxlevel="60" group="true">
 		<entrypoint mapid="220020000" x="1684.3113" y="1155.8898" z="200.3536" race="ASMODIANS"/>
 		<exitpoint mapid="320050000" x="308.1934" y="434.4128" z="416.82278"/>
 	</portal>
 	<!-- Sky Temple Interior / Wind Room Exit-->
-	<portal npcid="730044" instance="false" minlevel="27" maxlevel="55" group="false">
+	<portal npcid="730044" instance="false" minlevel="27" maxlevel="60" group="false">
 		<entrypoint mapid="320050000" x="460.03848" y="437.17206" z="375.05527"/>
 		<exitpoint mapid="220020000" x="1686" y="1160" z="200"/>
 	</portal>
 	<!-- Sky Temple Interior / Fire Room Entrance-->
-	<portal npcid="730045" instance="true" minlevel="27" maxlevel="55" group="true">
+	<portal npcid="730045" instance="true" minlevel="27" maxlevel="60" group="true">
 		<entrypoint mapid="220020000" x="1686.6586" y="1142.5929" z="200.3536" race="ASMODIANS"/>
 		<exitpoint mapid="320050000" x="101.47154" y="23.524532" z="611.0359"/>
 	</portal>
@@ -361,7 +361,7 @@
 		<exitpoint mapid="310100000" x="304.16013" y="323.43713" z="1021.4955"/>
 	</portal>
 	<!-- Azoturan Fortress Exit -->
-	<portal npcid="700367" minlevel="43" maxlevel="55" group="false">
+	<portal npcid="700367" minlevel="43" maxlevel="60" group="false">
 		<entrypoint mapid="310100000" x="304.16013" y="323.43713" z="1021.4955"/>
 		<exitpoint mapid="210040000" x="542.84" y="712.9" z="153.03"/>
 	</portal>
@@ -578,80 +578,80 @@
 	</portal>
 	<!-- STEEL RAKE TELEPORTS -->
 	<!-- Escape Anchor -->
-	<portal npcid="730198" instance="false" minlevel="40" maxlevel="55" group="false">
+	<portal npcid="730198" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300100000" x="239.47" y="497.61" z="948.68"/>
 		<exitpoint mapid="110010000" x="1867" y="2068" z="517" race="ELYOS"/>
 		<exitpoint mapid="120010000" x="950" y="1150" z="195" race="ASMODIANS"/>
 	</portal>
 	<!-- Escape Exit -->
-	<portal npcid="700525" instance="false" minlevel="40" maxlevel="55" group="false">
+	<portal npcid="700525" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300100000" x="505.77" y="434.08" z="885.18"/>
 		<exitpoint mapid="110010000" x="1867" y="2068" z="517" race="ELYOS"/>
 		<exitpoint mapid="120010000" x="950" y="1150" z="195" race="ASMODIANS"/>
 	</portal>
 	<!-- Hidden Escape Exit -->
-	<portal npcid="730206" instance="false" minlevel="40" maxlevel="55" group="false">
+	<portal npcid="730206" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300100000" x="732.96" y="508.04" z="941.48"/>
 		<exitpoint mapid="300100000" x="237" y="506" z="948"/>
 	</portal>
 	<!-- Captain's Cabin Teleport Device -->
-	<portal npcid="730197" instance="false" minlevel="40" maxlevel="55" group="false">
+	<portal npcid="730197" instance="false" minlevel="40" maxlevel="60" group="false">
 		<entrypoint mapid="300100000" x="406.9" y="496.21" z="1071.9"/>
 		<exitpoint mapid="110010000" x="1867" y="2068" z="517" race="ELYOS"/>
 		<exitpoint mapid="120010000" x="950" y="1150" z="195" race="ASMODIANS"/>
 	</portal>
 	<!-- Elevator Lever (middle deck to lower deck)-->
-	<portal npcid="730210" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730210" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="282.802" y="453.415" z="952.55"/>
 		<exitpoint mapid="300100000" x="282.802" y="453.415" z="902.55"/>
 	</portal>
 	<!-- Elevator Lever (lower deck to middle deck)-->
-	<portal npcid="730216" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730216" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="282.802" y="453.415" z="902.55"/>
 		<exitpoint mapid="300100000" x="282.802" y="453.415" z="952.55"/>
 	</portal>
 	<!-- Large Gun Deck Entrance-->
-	<portal npcid="730203" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730203" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="720.15" y="509.11" z="1012.9"/>
 		<exitpoint mapid="300100000" x="726.07" y="508.81" z="1012.7"/>
 	</portal>
 	<!-- Large Gun Deck Exit-->
-	<portal npcid="730204" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730204" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="726.07" y="508.81" z="1012.7"/>
 		<exitpoint mapid="300100000" x="720.15" y="509.11" z="1012.9"/>
 	</portal>
 	<!-- Drana Generator Chamber Access Door -->
-	<portal npcid="730202" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730202" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="654.31" y="509.13" z="875.4"/>
 		<exitpoint mapid="300100000" x="665" y="509.35" z="867.50"/>
 	</portal>
 	<!-- Suspicious cannon //temp-->
-	<portal npcid="730207" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730207" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="683.81" y="548.23" z="1022.4"/>
 		<exitpoint mapid="300100000" x="481.72" y="513.18" z="1072.1"/>
 	</portal>
 	<!-- Pirate Ship Anchor (lower deck to upper deck)-->
-	<portal npcid="730209" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730209" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="728.68" y="466.62" z="868.7"/>
 		<exitpoint mapid="300100000" x="708.45" y="459.17" z="1015.2"/>
 	</portal>
 	<!-- Groggets Safe Door -->
-	<portal npcid="730199" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730199" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="688.14" y="500.84" z="942.37"/>
 		<exitpoint mapid="300100000" x="697.64" y="500.25" z="941.5"/>
 	</portal>
 	<!-- Steering House Door -->
-	<portal npcid="730205" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730205" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="393.94" y="547.05" z="1072.1"/>
 		<exitpoint mapid="300100000" x="384.54" y="529.57" z="1072.2"/>
 	</portal>
 	<!-- The Brig Entrance-->
-	<portal npcid="730200" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730200" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="461.45" y="486.63" z="877.714"/>
 		<exitpoint mapid="300100000" x="461.5" y="489.6" z="877.8"/>
 	</portal>
 	<!-- The Brig Exit-->
-	<portal npcid="730201" instance="true" minlevel="40" maxlevel="55" group="true">
+	<portal npcid="730201" instance="true" minlevel="40" maxlevel="60" group="true">
 		<entrypoint mapid="300100000" x="461.807" y="488.18127" z="877.7017"/>
 		<exitpoint mapid="300100000" x="461.5" y="485" z="877.8"/>
 	</portal>
@@ -724,12 +724,12 @@
 		<exitpoint mapid="300200000" x="220" y="213" z="126"/>
 	</portal>
 	<!-- Beshmundir Temple Entrance -->
-	<portal npcid="730231" instance="true" minlevel="55" maxlevel="55" group="true">
+	<portal npcid="730231" instance="true" minlevel="55" maxlevel="60" group="true">
 		<entrypoint mapid="600010000" x="1414.1562" y="767.6203" z="312.77734"/>
 		<exitpoint mapid="300170000" x="1477.0602" y="236.91064" z="243.4899"/>
 	</portal>
 	<!-- Beshmundir Temple Exit -->
-	<portal npcid="730285" instance="false" minlevel="55" maxlevel="55" group="false">
+	<portal npcid="730285" instance="false" minlevel="55" maxlevel="60" group="false">
 		<entrypoint mapid="300170000" x="1477.0602" y="236.91064" z="243.4899"/>
 		<exitpoint mapid="600010000" x="1414.1562" y="767.6203" z="312.77734"/>
 	</portal>
@@ -772,17 +772,17 @@
 		<exitpoint mapid="220070000" x="2256.226" y="1732.7985" z="309.5974" race="ASMODIANS"/>
 	</portal>
 	<!-- Abyssal Splinter Asmodians Entrance -->
-	<portal npcid="730356" instance="true" minlevel="50" maxlevel="55" group="true" race="ASMODIANS">
+	<portal npcid="730356" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="400010000" x="2201.5562" y="1927.8638" z="2303.0366"/>
 		<exitpoint mapid="300220000" x="703.5449" y="153.3634" z="453.34006"/>
 	</portal>
 	<!-- Abyssal Splinter Elyos Entrance -->
-	<portal npcid="730316" instance="true" minlevel="50" maxlevel="55" group="true" race="ELYOS">
+	<portal npcid="730316" instance="true" minlevel="50" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="400010000" x="2201.5562" y="1927.8638" z="2303.0366"/>
 		<exitpoint mapid="300220000" x="703.5449" y="153.3634" z="453.34006"/>
 	</portal>
 	<!-- Abyssal Splinter Exit -->
-	<portal npcid="730317" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730317" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="300220000" x="703.5449" y="153.3634" z="453.34006"/>
 		<exitpoint mapid="400010000" x="2201.5562" y="1927.8638" z="2303.0366"/>
 	</portal>
@@ -801,13 +801,13 @@
 		<exitpoint mapid="300230000" x="576.8141" y="800.0616" z="225.77342"/>
 	</portal>
 	<!-- Kromede Trial's Exit 1-->
-	<portal npcid="700949" instance="false" minlevel="37" maxlevel="55" group="false">
+	<portal npcid="700949" instance="false" minlevel="37" maxlevel="60" group="false">
 		<entrypoint mapid="300230000" x="247.85089" y="244.04916" z="189.284543"/>
 		<exitpoint mapid="220040000" x="1939.3905" y="492.5173" z="412.125" race="ASMODIANS"/>
 		<exitpoint mapid="210040000" x="137.77625" y="1567.5349" z="119.52797" race="ELYOS"/>
 	</portal>
 	<!-- Kromede Trial's Exit 2-->
-	<portal npcid="700928" instance="false" minlevel="37" maxlevel="55" group="false">
+	<portal npcid="700928" instance="false" minlevel="37" maxlevel="60" group="false">
 		<entrypoint mapid="300230000" x="676.99603" y="774.2307" z="216.88036"/>
 		<exitpoint mapid="220040000" x="1939.3905" y="492.5173" z="412.125" race="ASMODIANS"/>
 		<exitpoint mapid="210040000" x="137.77625" y="1567.5349" z="119.52797" race="ELYOS"/>
@@ -835,53 +835,53 @@
 	</portal>
 	<!-- Elyos way out -->
 	<!-- Secret Library Sanctum Exit -->
-	<portal npcid="203895" instance="false" minlevel="20" maxlevel="55" group="false" race="ELYOS">
+	<portal npcid="203895" instance="false" minlevel="20" maxlevel="60" group="false" race="ELYOS">
 		<entrypoint mapid="110010000" x="2037.7122" y="1473.9912" z="592.22534" race="ELYOS"/>
 		<exitpoint mapid="110010000" x="2006.3083" y="1478.7644" z="592.1204"/>
 	</portal>
 	<!-- Hanarkand Pass To Inggison -->
-	<portal npcid="730258" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730258" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="600010000" x="920.4469" y="148.93167" z="347.11508"/>
 		<exitpoint mapid="210050000" x="2763.2144" y="2134.2322" z="245.125"/>
 	</portal>
 	<!-- Angrief's Pass To Inggison -->
-	<portal npcid="730257" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730257" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="600010000" x="481.6511" y="108.14716" z="324.52115"/>
 		<exitpoint mapid="210050000" x="1083.0206" y="2016.9448" z="362.21216"/>
 	</portal>
 	<!-- Primeval Pass To Inggison -->
-	<portal npcid="730259" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730259" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="600010000" x="980.95276" y="561.16156" z="310.82953"/>
 		<exitpoint mapid="210050000" x="404.0378" y="2067.6404" z="334.70285"/>
 	</portal>
 	<!-- Asmodians way out -->
 	<!-- Secret Library Pandaemonium Exit -->
-	<portal npcid="204268" instance="false" minlevel="20" maxlevel="55" group="false" race="ASMODIANS">
+	<portal npcid="204268" instance="false" minlevel="20" maxlevel="60" group="false" race="ASMODIANS">
 		<entrypoint mapid="120010000" x="1403.1074" y="1061.9503" z="206.02371" race="ASMODIANS"/>
 		<exitpoint mapid="120010000" x="1392.8877" y="1060.9097" z="206.06915"/>
 	</portal>
 	<!-- Mitrakand Pass To Gelkmaros -->
-	<portal npcid="730261" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730261" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="600010000" x="493.67923" y="1440.8508" z="329.04456"/>
 		<exitpoint mapid="220070000" x="690.89417" y="621.11426" z="385.26166"/>
 	</portal>
 	<!-- Earthfang Pass To Gelkmaros -->
-	<portal npcid="730263" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730263" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="600010000" x="1019.2403" y="961.7963" z="309.11652"/>
 		<exitpoint mapid="220070000" x="2935.5872" y="879.9197" z="310.58344"/>
 	</portal>
 	<!-- Vorgaltem Pass To Gelkmaros -->
-	<portal npcid="730262" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730262" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="600010000" x="1019.2403" y="961.7963" z="309.11652"/>
 		<exitpoint mapid="220070000" x="1703.9194" y="1114.0623" z="379.39148"/>
 	</portal>
 	<!-- Padmarashka Entrance Elyos -->
-	<portal npcid="730291" instance="true" minlevel="50" maxlevel="55" group="true" race="ELYOS">
+	<portal npcid="730291" instance="true" minlevel="50" maxlevel="60" group="true" race="ELYOS">
 		<entrypoint mapid="210050000" x="136.9814" y="2006.6646" z="434.29237"/>
 		<exitpoint mapid="320150000" x="369.41263" y="528.68994" z="67.28671"/>
 	</portal>
 	<!-- Padmarashka Entrance Asmo -->
-	<portal npcid="730293" instance="true" minlevel="50" maxlevel="55" group="true" race="ASMODIANS">
+	<portal npcid="730293" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
 		<entrypoint mapid="220070000" x="2971.7256" y="1215.9103" z="242.0056"/>
 		<exitpoint mapid="320150000" x="369.41263" y="528.68994" z="67.28671"/>
 	</portal>
@@ -943,7 +943,7 @@
 	Точка входа: 
 	Точка выхода: 
 	-->
-	<portal npcid="250148" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="250148" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
 		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="484.684" y="517.064" z="1032.84" race="ELYOS"/>
@@ -953,7 +953,7 @@
 	Точка входа: 
 	Точка выхода: 
 	-->
-	<portal npcid="250146" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="250146" instance="false" minlevel="50" maxlevel="60" group="false">
 	   <entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
 	   <entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="489.95102" y="498.1902" z="951.7029" race="ELYOS"/>
@@ -963,7 +963,7 @@
 	Точка входа: 
 	Точка выхода: 
 	-->
-	<portal npcid="250147" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="250147" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="220070000" x="1812.5325" y="2929.5986" z="554.7982" race="ASMODIANS"/>
 		<entrypoint mapid="210050000" x="1272.4163" y="330.46143" z="597.85114" race="ELYOS"/>
 		<exitpoint mapid="300100000" x="484.684" y="517.064" z="1032.84" race="ELYOS"/>
@@ -1007,7 +1007,7 @@
 	Точка входа: 
 	Точка выхода: 
 	-->
-	<portal npcid="730301" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730301" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="220070000" x="723.8195" y="2276.3245" z="389.6456" race="ASMODIANS"/>
 		<exitpoint mapid="220070000" x="730.8245" y="2289.9814" z="389.6456"/>
 	</portal>
@@ -1015,7 +1015,7 @@
 	Точка входа: 
 	Точка выхода: 
 	-->
-	<portal npcid="730301" instance="false" minlevel="50" maxlevel="55" group="false">
+	<portal npcid="730301" instance="false" minlevel="50" maxlevel="60" group="false">
 		<entrypoint mapid="220070000" x="730.8245" y="2289.9814" z="389.6456" race="ASMODIANS"/>
 		<exitpoint mapid="220070000" x="723.8195" y="2276.3245" z="389.6456"/>
 	</portal>
@@ -1099,8 +1099,16 @@
 	Точка входа: Кошмар
 	Точка выхода: Кошмар
 	-->
-	<portal npcid="730341" instance="true" minlevel="37" maxlevel="55" group="false">
+	<portal npcid="730341" instance="true" minlevel="37" maxlevel="60" group="false">
 		<entrypoint mapid="300230000" x="350.27" y="168.34" z="147.72"/>
 		<exitpoint mapid="300230000" x="689.42" y="681.90" z="200.28"/>
+	</portal>
+	<!--
+	Точка входа: Подземная арена Элизиума
+	Точка выхода: Подземная арена Элизиума
+	-->
+	<portal npcid="730067" instance="false" minlevel="20" maxlevel="60" group="false">
+		<entrypoint mapid="310080000" x="275.82724" y="293.03287" z="163.0512"/>
+		<exitpoint mapid="110010000" x="1466.929" y="1335.5696" z="566.41583"/>
 	</portal>
 </portal_templates>
