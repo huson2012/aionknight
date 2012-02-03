@@ -175,7 +175,7 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_LEGION_ADD_MEMBER.class, 0x018F, idSet);// 2.7
 		addPacketOpcode(SM_LEGION_UPDATE_TITLE.class, 0x0190, idSet);// 2.7
 		addPacketOpcode(SM_LEGION_UPDATE_MEMBER.class, 0x0191, idSet);// 2.7
-		addPacketOpcode(SM_CMOTION.class, 0x0192, idSet);// 2.6 0x92, 2.7
+		addPacketOpcode(SM_CMOTION.class, 0x0192, idSet);// 2.7
 		addPacketOpcode(SM_TRADEINTRADELIST.class, 0x0197, idSet); // 2.7
 		addPacketOpcode(SM_SUMMON_OWNER_REMOVE.class, 0x0198, idSet); // 2.7
 		addPacketOpcode(SM_SUMMON_PANEL.class, 0x0199, idSet);// 2.7
@@ -185,14 +185,12 @@ public class ServerPacketsOpcodes
 		addPacketOpcode(SM_INGAMESHOP_BALANCE.class, 0x019F, idSet);// 2.7
 		addPacketOpcode(SM_SUMMON_USESKILL.class, 0x01A0, idSet);// 2.7
 		addPacketOpcode(SM_MAIL_SERVICE.class, 0x01A1, idSet);// 2.7
-		addPacketOpcode(SM_FRIEND_LIST.class, 0x01A2, idSet);// 22.7
+		addPacketOpcode(SM_FRIEND_LIST.class, 0x01A2, idSet);// 2.7
 		addPacketOpcode(SM_PRIVATE_STORE.class, 0x01A4, idSet); // 2.7
-		addPacketOpcode(SM_ABYSS_RANK_UPDATE.class, 0xA6, idSet);// 2.1
+		addPacketOpcode(SM_ABYSS_RANK_UPDATE.class, 0x01A6, idSet);// 2.7
 		addPacketOpcode(SM_GROUP_LOOT.class, 0x01A7, idSet);// 2.7
 		addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class, 0x01A8, idSet);// 2.7
 		addPacketOpcode(SM_MAY_LOGIN_INTO_GAME.class, 0x01A9, idSet);// 2.7
-		addPacketOpcode(SM_STAGE_STEP_STATUS.class, 0x01AA, idSet); // 2.7
-		addPacketOpcode(SM_ACADEMY_BOOTCAMP_STAGE.class, 0xAB, idSet); // 2.5
 		addPacketOpcode(SM_ABYSS_RANKING_LEGIONS.class, 0x01AB, idSet);// 2.7
 		addPacketOpcode(SM_PONG.class, 0x01AC, idSet);// 2.7
 		addPacketOpcode(SM_INSTANCE_COOLDOWN.class, 0x01AD, idSet);// 2.7
@@ -381,7 +379,6 @@ addPacketOpcode(SM_STATS_INFO.class, 0x01, idSet);// 2.6
 		addPacketOpcode(SM_GROUP_LOOT.class, 0xA7, idSet);// 2.1
 		addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class, 0xA8, idSet);// 2.6
 		addPacketOpcode(SM_MAY_LOGIN_INTO_GAME.class, 0xA9, idSet);// 2.6
-		addPacketOpcode(SM_STAGE_STEP_STATUS.class, 0xAA, idSet); // 2.6
 		addPacketOpcode(SM_ABYSS_RANKING_LEGIONS.class, 0xAB, idSet);// 2.6
 		addPacketOpcode(SM_PONG.class, 0xAC, idSet);// 2.6
 		addPacketOpcode(SM_INSTANCE_COOLDOWN.class, 0xAD, idSet);// 2.6
@@ -572,7 +569,6 @@ addPacketOpcode(SM_STATS_INFO.class, 0x01, idSet);// 2.6
 		addPacketOpcode(SM_ABYSS_RANKING_PLAYERS.class, 0xA9, idSet); //2.5
 		addPacketOpcode(SM_INSTANCE_COOLDOWN.class, 0xAA, idSet); //2.5
 		addPacketOpcode(SM_RIFT_STATUS.class, 0xAC, idSet); //2.5
-		addPacketOpcode(SM_STAGE_STEP_STATUS.class, 0xAB, idSet); //2.5
 		addPacketOpcode(SM_PONG.class, 0xAD, idSet); //2.5
 		addPacketOpcode(SM_PRIVATE_STORE_NAME.class, 0xAE, idSet); //2.5
 		addPacketOpcode(SM_KISK_UPDATE.class, 0xAF, idSet); //2.5

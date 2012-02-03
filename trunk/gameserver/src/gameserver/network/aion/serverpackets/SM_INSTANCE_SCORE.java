@@ -26,7 +26,6 @@ import gameserver.model.group.PlayerGroup;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
 import gameserver.services.DredgionInstanceService;
-import gameserver.services.EmpyreanCrucibleService;
 import java.nio.ByteBuffer;
 
 public class SM_INSTANCE_SCORE extends AionServerPacket
@@ -181,40 +180,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 
 			writeH(buf, 0);//unk
 			
-		}else if(EmpyreanCrucibleService.isInEmpyreanCrucible(mapId))
-		{
-			writeD(buf, mapId);
-			writeD(buf, instanceTime);
-
-			if(showRank)
-			writeD(buf, 3145728);
-			else
-				writeD(buf, 2097152);
-
-			int count = 0;
-
-			for(Player member : registeredGroup.getMembers())
-			{
-				writeD(buf, member.getObjectId());//playerObjectId
-				writeD(buf, points);//playerScore
-				
-				if(showRank)
-				{
-					writeD(buf, 3);
-				}else{
-					writeD(buf, 1);
-				}
-
-				writeD(buf, signs);//signs
-
-				count++;
-			}
-
-			if(count < 6)
-				writeB(buf, new byte[16 * (6 - count)]);//spaces
-
-			writeH(buf, 0);//unk
-
 		}else{
 			writeD(buf, mapId);
 			writeD(buf, instanceTime); // unknown

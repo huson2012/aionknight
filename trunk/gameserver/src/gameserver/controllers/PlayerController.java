@@ -357,17 +357,7 @@ public class PlayerController extends CreatureController<Player>
 		}
 		
 		super.onDie(lastAttacker);
-		
-		if(player.isInEmpyrean()){
-			if(player.isInGroup()){
-		EmpyreanCrucibleService ec = player.getPlayerGroup().getEmpyreanCrucible();
-			if(ec != null){
-		ec.onDie(player, lastAttacker);
-			return;
-				}
-			}
-		}
-		
+
 		if(master instanceof Npc || master == player)
 		{
 			if(player.getLevel() > 4 && !DredgionInstanceService.isDredgion(player.getWorldId()))

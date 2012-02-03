@@ -27,7 +27,6 @@ import gameserver.model.gameobjects.AionObject;
 import gameserver.model.gameobjects.Npc;
 import gameserver.model.gameobjects.player.Player;
 import gameserver.network.aion.serverpackets.*;
-import gameserver.services.EmpyreanCrucibleService;
 import gameserver.utils.MathUtil;
 import gameserver.utils.PacketSendUtility;
 import javolution.util.FastMap;
@@ -43,7 +42,6 @@ public class PlayerGroup extends AionObject
 	private int instanceKills = 0;
 	private long instanceStartTime = 0;
 	private boolean instanceDisplaycounter = true;
-	private EmpyreanCrucibleService empyreanCrucible = null;
 
 	public PlayerGroup(int groupId, Player groupleader)
 	{
@@ -271,14 +269,6 @@ public class PlayerGroup extends AionObject
 	public boolean getInstanceDisplaycounter()
 	{
 		return instanceDisplaycounter;
-	}
-	public EmpyreanCrucibleService getEmpyreanCrucible()
-	{
-		return empyreanCrucible;
-	}
-	public void setEmpyreanCrucible(EmpyreanCrucibleService empyreanCrucible)
-	{
-		this.empyreanCrucible = empyreanCrucible;
 	}
 	
 	@Override
