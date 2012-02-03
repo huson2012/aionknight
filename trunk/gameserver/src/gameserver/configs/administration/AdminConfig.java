@@ -339,4 +339,7 @@ public class AdminConfig
 	
 	@Property(key = "gameserver.administration.command.upvp", defaultValue = "0")
 	public static int COMMAND_UPVP;
+	
+	@Property(key = "gameserver.administration.command.race", defaultValue = "3")
+    public static int COMMAND_RACE;
 }
