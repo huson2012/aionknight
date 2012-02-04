@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package usercommands;
@@ -32,8 +32,10 @@ import gameserver.utils.chathandlers.UserCommand;
 import gameserver.utils.i18n.CustomMessageId;
 import gameserver.utils.i18n.LanguageHandler;
 
-public class ExchangeToll extends UserCommand {
-    public ExchangeToll() {
+public class ExchangeToll extends UserCommand 
+{
+    public ExchangeToll() 
+	{
         super("exchangetoll");
     }
 
@@ -45,7 +47,8 @@ public class ExchangeToll extends UserCommand {
     @Override
     public void executeCommand(Player player, String params) 
 	{
-            if (player == null) {
+            if (player == null) 
+			{
                     // Этого не должно случиться!
                     return;
             }
@@ -63,7 +66,8 @@ public class ExchangeToll extends UserCommand {
         if (exchangeRestriction == null && (!exchangeRestriction.equals("none") && !exchangeRestriction.equals("ap") && !exchangeRestriction.equals("kinah")))
                 exchangeRestriction = "none";
 
-        if (params == null || params == "") {
+        if (params == null || params == "") 
+		{
                 if (exchangeRestriction.equals("kinah"))
                     PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_KINAH_SYNTAX, kinahExchangeRate));
                 else if (exchangeRestriction.equals("ap"))
@@ -75,8 +79,10 @@ public class ExchangeToll extends UserCommand {
 
         int shopMoneyToGain = 0;
 
-        if (params.toLowerCase().indexOf("ap") != -1) {
-                if (exchangeRestriction.equals("kinah")) {
+        if (params.toLowerCase().indexOf("ap") != -1) 
+		{
+                if (exchangeRestriction.equals("kinah")) 
+				{
                     PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_SYNTAX, kinahExchangeRate));
                     return;
                 }
@@ -91,7 +97,8 @@ public class ExchangeToll extends UserCommand {
                         return;
                 if (apToExchange < 0)
                         return;
-                else if (apToExchange == 0) {
+                else if (apToExchange == 0) 
+				{
                     PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_GAINING_TOLL_VIA_AP, Integer.parseInt(args[1]), apExchangeRate));
                         return;
                 }
@@ -102,7 +109,8 @@ public class ExchangeToll extends UserCommand {
         } else {
                 
                 int baseToExchange = Integer.parseInt(params);
-                if (exchangeRestriction.equals("ap")) {
+                if (exchangeRestriction.equals("ap")) 
+				{
                     AbyssRank rank = player.getAbyssRank();
                     int currentAP = rank.getAp();
 
@@ -111,7 +119,8 @@ public class ExchangeToll extends UserCommand {
                             return;
                     if (apToExchange < 0)
                             return;
-                    else if (apToExchange == 0) {
+                    else if (apToExchange == 0) 
+					{
                         PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_GAINING_TOLL_VIA_AP, baseToExchange, apExchangeRate));
                             return;
                     }
@@ -125,7 +134,8 @@ public class ExchangeToll extends UserCommand {
                                 return;
                         if (kinahToExchange < 0)
                                 return;
-                        else if (kinahToExchange == 0) {
+                        else if (kinahToExchange == 0) 
+						{
                                 PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_GAINING_TOLL_VIA_KINAH, baseToExchange, kinahExchangeRate));
                                 return;
                         }
@@ -149,7 +159,8 @@ public class ExchangeToll extends UserCommand {
 
     private int calculateAPToExchange(Player player, int apToExchange, int accountAP) 
 	{
-        if (accountAP < apToExchange) {
+        if (accountAP < apToExchange) 
+		{
                 PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_AP));
             return -1;
         }
@@ -164,14 +175,16 @@ public class ExchangeToll extends UserCommand {
     private int calculateAPToExchange(Player player, String[] args, int accountAP) 
 	{
         // Обмен AP на ShopMoney.
-        if (args.length < 2) {
+        if (args.length < 2) 
+		{
                 // Для использования необходимо указать кол-во AP!
             PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_SYNTAX, apExchangeRate, kinahExchangeRate));
             return -1;
         }
 
         int apToExchange = Integer.parseInt(args[1]);
-        if (accountAP < apToExchange) {
+        if (accountAP < apToExchange) 
+		{
                 PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.COMMAND_EXCHANGETOLL_NOT_ENOUGH_AP));
             return -1;
         }

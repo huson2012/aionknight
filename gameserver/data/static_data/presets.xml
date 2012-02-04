@@ -9,10 +9,12 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================	
-	Редакция: 20/12/2011 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 	
  -->
-<custom_presets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="presets.xsd">
+<custom_presets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xsi:noNamespaceSchemaLocation="presets.xsd">
+	
 	<preset name="DF1" class="WARRIOR" gender="FEMALE" race="ASMODIANS">
 		<height>1</height>
 		<hair_color>5f5270</hair_color>

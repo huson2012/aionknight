@@ -24,6 +24,7 @@ package gameserver.network.aion.serverpackets;
 import gameserver.model.gameobjects.player.ToyPet;
 import gameserver.network.aion.AionConnection;
 import gameserver.network.aion.AionServerPacket;
+import gameserver.utils.PacketSendUtility;
 import java.nio.ByteBuffer;
 import java.util.List;
 
@@ -83,15 +84,21 @@ public class SM_PET extends AionServerPacket
 		writeH(buf, actionId);
 		switch(actionId)
 		{
-			case 0:
-				// load list on login
+			case 0:	// Load list on login
 				int counter = 0;
-				writeC(buf, 0); // unk
+				writeC(buf, 0); // Unk
 				writeH(buf, pets.size());
 				for(ToyPet p : pets)
 				{
  					counter++;
- 					writeS(buf, p.getName());
+ 					if (counter == 1)
+ 					{
+ 						writeS(buf, p.getName());
+ 					}
+ 					else
+ 					{
+ 						writeS(buf, "  " + p.getName());
+ 					}
  					writeD(buf, p.getPetId());
 					writeD(buf, p.getUid());
 					writeD(buf, p.getMaster().getObjectId()); //unk
@@ -112,7 +119,6 @@ public class SM_PET extends AionServerPacket
 					writeD(buf, 0); // TODO: features1 override ???
 					writeD(buf, 0); //unk 
 					writeC(buf, 1); // hasFunction? 1 / 0
-					
  				}
 				break;
 			case 1:
@@ -154,19 +160,16 @@ public class SM_PET extends AionServerPacket
 					writeF(buf, pet.getMaster().getX());
 					writeF(buf, pet.getMaster().getY());
 					writeF(buf, pet.getMaster().getZ());
-					
 					writeF(buf, pet.getMaster().getX());
 					writeF(buf, pet.getMaster().getY());
-					writeF(buf, pet.getMaster().getZ());
-					
+					writeF(buf, pet.getMaster().getZ());					
 					writeC(buf, pet.getMaster().getHeading());
 				}
 				else
 				{
 					writeF(buf, pet.getX1());
 					writeF(buf, pet.getY1());
-					writeF(buf, pet.getZ1());
-					
+					writeF(buf, pet.getZ1());					
 					writeF(buf, pet.getX2());
 					writeF(buf, pet.getY2());
 					writeF(buf, pet.getZ2());
@@ -176,8 +179,7 @@ public class SM_PET extends AionServerPacket
 				
 				writeD(buf, pet.getMaster().getObjectId()); //unk
 				writeC(buf, 1); //unk
-				writeD(buf, 0); //unk
-				
+				writeD(buf, 0); //unk				
 				writeD(buf, pet.getDecoration());
 				writeD(buf, 0); //wings ID if customize_attach = 1
 				writeD(buf, 0); //unk

@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package admincommands;
@@ -32,7 +32,6 @@ import gameserver.services.TeleportService;
 import gameserver.utils.PacketSendUtility;
 import gameserver.utils.chathandlers.AdminCommand;
 import org.apache.log4j.Logger;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -99,11 +98,11 @@ class Bookmark
 
 public class Bk extends AdminCommand
 {
-	ArrayList<Bookmark>			bookmarks		= new ArrayList<Bookmark>();
-	private static final Logger	log				= Logger.getLogger(ShutdownHook.class);
-	private String				bookmark_name	= "";
+	ArrayList<Bookmark> bookmarks = new ArrayList<Bookmark>();
+	private static final Logger	log = Logger.getLogger(ShutdownHook.class);
+	private String bookmark_name = "";
 
-	Player						admin;
+	Player admin;
 
 	public Bk()
 	{
@@ -167,12 +166,14 @@ public class Bk extends AdminCommand
 
 				updateInfo();
 			}
+			
 			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //bk <add | del | tele> <bookmark name>");
 				return;
 			}
 		}
+		
 		else if (params[0].equals("del"))
 		{
 			Connection con = null;
@@ -186,11 +187,13 @@ public class Bk extends AdminCommand
 				statement.executeUpdate();
 				statement.close();
 			}
+			
 			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //bk <add|del|tele> <bookmark name>");
 				return;
 			}
+			
 			finally
 			{
 				DatabaseFactory.close(con);
@@ -199,6 +202,7 @@ public class Bk extends AdminCommand
 				updateInfo();
 			}
 		}
+		
 		else if (params[0].equals("tele"))
 		{
 			try
@@ -214,10 +218,12 @@ public class Bk extends AdminCommand
 
 				bookmark_name = params[1].toLowerCase();
 				Bookmark tele_bk = null;
+				
 				try
 				{
 					tele_bk = selectByName(bookmark_name);
 				}
+				
 				finally
 				{
 					if (tele_bk != null)
@@ -230,6 +236,7 @@ public class Bk extends AdminCommand
 				}
 
 			}
+			
 			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //bk <add|del|tele> <bookmark name>");
@@ -237,10 +244,12 @@ public class Bk extends AdminCommand
 			}
 
 		}
+		
 		else if (params[0].equals("list"))
 		{
 			updateInfo();
 			PacketSendUtility.sendMessage(admin, "=====Bookmark list begin=====");
+			
 			for (Bookmark b : bookmarks)
 			{
 				PacketSendUtility.sendMessage(admin, " = " + b.getName() + " =  -  ( " + b.getX() + " ," + b.getY()
@@ -317,14 +326,17 @@ public class Bk extends AdminCommand
 			rset.close();
 			statement.close();
 		}
+		
 		catch (Exception e)
 		{
 			log.error("Error in reading db", e);
 		}
+		
 		finally
 		{
 			DatabaseFactory.close(con);
 		}
+		
 		return bkcount > 0;
 	}
 }

@@ -9,10 +9,12 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================	
-	Редакция: 20/12/2011 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 
  -->
-<ae_static_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="static_data.xsd">
+<ae_static_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xsi:noNamespaceSchemaLocation="static_data.xsd">
+
 	<!-- Импорт корневого каталога \Static_Data -->
 	<import file="world_maps.xml"/>
 	<import file="npc_trade_list.xml"/>

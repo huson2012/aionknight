@@ -12,7 +12,9 @@
 	Последняя редакция: 19/01/2012 (Frost)
 	
  -->
-<npc_shouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<npc_shouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			
 	<shout_npc npcid="0">
 		<shout messageid="340000" event="ATK"/>
 		<shout messageid="340001" event="IDLE"/>

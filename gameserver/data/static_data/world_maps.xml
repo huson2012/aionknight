@@ -9,10 +9,12 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================	
-	Редакция: 01/02/2012 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 	
  -->
-<world_maps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="world_maps.xsd">
+<world_maps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="world_maps.xsd">
+	
 	<map id="110010000" name="Sanctum" death_level="400" water_level="16" world_type="ELYSEA" world_size="3072"/>
 	<map id="110020000" name="Kaisinel" death_level="400" water_level="16" world_type="ELYSEA" world_size="3072"/>
 	<map id="110070000" name="Kaisinel Academy" death_level="0" water_level="16" world_type="ELYSEA" world_size="1024"/>

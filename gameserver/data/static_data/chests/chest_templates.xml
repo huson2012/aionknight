@@ -13,7 +13,8 @@
 
  -->
 <chest_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	 xsi:noNamespaceSchemaLocation="chests_template.xsd">
+				 xsi:noNamespaceSchemaLocation="chests_template.xsd">
+	
 	<chest npcid="217100">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>

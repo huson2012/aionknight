@@ -12,7 +12,9 @@
 	Последняя редакция: 22/12/2011 (Proff)
 	
  -->
-<bind_points xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bind_points.xsd">
+<bind_points xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			 xsi:noNamespaceSchemaLocation="bind_points.xsd">
+	
 	<!-- Элизиум -->
 	<bind_point name="Sanctum" npcid="700018" bindid="1" mapid="110010000" posX="1476.3" posY="1595.5" posZ="572.9" price="100"/>
 	<!-- Пандемониум -->

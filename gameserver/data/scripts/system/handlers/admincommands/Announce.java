@@ -1,22 +1,22 @@
-/**   
- * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
- * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
- * Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
- * обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
- * версии.
- * 
- * Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
- * ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
- * ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
- * Стандартную Общественную Лицензию GNU.
- * 
- * Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
- * Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+/*
+ * Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
+ * free software; you can redistribute it and/or modify it under the terms of
+ * GNU affero general Public License (GNU GPL)as published by the free software
+ * security (FSF), or to License version 3 or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranties related to
+ * CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
+ * General Public License is the GNU.
+ *
+ * You should have received a copy of the GNU affero general Public License along with this program.
+ * If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
  * Cambridge, MA 02139, USA
- * 
- * Веб-cайт разработчиков : http://aion-knight.ru
- * Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
- * Версия серверной части : Aion-Knight 2.7 (Beta version)
+ *
+ * Web developers : http://aion-knight.ru
+ * Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
+ * The version of the server : Aion-Knight 2.7 (Beta version)
  */
 
 package admincommands;
@@ -64,6 +64,7 @@ public class Announce extends AdminCommand
 		{
 			message += "Announce: ";
 		}
+		
 		else if (("name").startsWith(params[0].toLowerCase()))
 		{
 			if(CustomConfig.GMTAG_DISPLAY)
@@ -72,10 +73,12 @@ public class Announce extends AdminCommand
 				{
 					message += CustomConfig.GM_LEVEL1.trim();
 				}
+				
 				else if (admin.getAccessLevel() == 2 )
 				{
 					message += CustomConfig.GM_LEVEL2.trim();
 				}
+				
 				else if (admin.getAccessLevel() == 3 )
 				{
 					message += CustomConfig.GM_LEVEL3.trim();
@@ -84,6 +87,7 @@ public class Announce extends AdminCommand
 
 			message += admin.getName() + ": ";
 		}
+		
 		else
 		{
 			PacketSendUtility.sendMessage(admin, "Syntax: //announce <anonymous|name> <message>");
@@ -93,7 +97,8 @@ public class Announce extends AdminCommand
 		message += params[1];
 		final String _message = message;
 
-		World.getInstance().doOnAllPlayers(new Executor<Player> () {
+		World.getInstance().doOnAllPlayers(new Executor<Player> () 
+		{
 			@Override
 			public boolean run(Player player)
 			{

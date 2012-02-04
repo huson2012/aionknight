@@ -12,7 +12,9 @@
 	Последняя редакция: 19/01/2012 (Frost)
 	
  -->
-<cube_expander xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cube_expander.xsd">
+<cube_expander xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			   xsi:noNamespaceSchemaLocation="cube_expander.xsd">
+
 	<!-- Фоэта -->
 	<cube_npc id="798008" name="Baevrunerk">
 		<expand level="1" price="1000"/>
@@ -57,7 +59,7 @@
         <expand level="2" price="12000"/>
         <expand level="3" price="80000"/>
         <expand level="4" price="180000"/>
-       <expand level="5" price="360000"/>
+		<expand level="5" price="360000"/>
 		<expand level="6" price="720000"/>
 		<expand level="7" price="1440000"/>
 		<expand level="8" price="2880000"/>
