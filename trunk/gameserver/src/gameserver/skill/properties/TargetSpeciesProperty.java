@@ -101,6 +101,21 @@ public class TargetSpeciesProperty extends Property
 
 				break;
 			case ALL:
+			    	if (skill.getEffector() instanceof Npc && !(skill.getEffector().getMaster() instanceof Player))
+			    	{
+			    	    for(Iterator<CreatureWithDistance> iter = effectedList.iterator(); iter.hasNext();)
+			    	    {
+					Creature nextEffected = iter.next().getCreature();
+
+					if (nextEffected instanceof Player)
+					{
+					    continue;
+					}
+
+					iter.remove();
+			    	    }
+			    	}
+				break;
 			case NONE:
 				break;
 		}

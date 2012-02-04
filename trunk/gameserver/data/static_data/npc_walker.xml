@@ -9,10 +9,11 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================
-	Редакция: 28/12/2011 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 
  -->
-<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">
+<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="npc_walker.xsd">
 	<!--  -->
 	<walker_template route_id="1">
 		<routes>

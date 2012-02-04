@@ -9,10 +9,12 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================
-	Редакция: 20/12/2011 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 	
  -->
-<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">
+<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">
+
 	<tradelist_template npc_id="203060" name="mune" count="4" sell_rate="1" buy_rate="0.2">
 		<tradelist id="129"/>
 		<tradelist id="130"/>

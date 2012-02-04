@@ -9,10 +9,11 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================	
-	Редакция: 23/12/2011 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 	
  -->
-<teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
+<teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:noNamespaceSchemaLocation="teleport_location.xsd">
 	
 	<!-- ЭЛИОС -->
 	<teleloc_template loc_id="2" mapid="110010000" name="Sanctum" posX="1313.25" posY="1512.011" posZ="568.107" heading="0"/>

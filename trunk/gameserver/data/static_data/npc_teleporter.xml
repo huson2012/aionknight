@@ -9,10 +9,12 @@
 	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
 	Веб-cайт разработчиков: http://aion-knight.ru
 	=============================================
-	Редакция: 20/12/2011 (Frost)
+	Последняя редакция: 03/02/2012 (Frost)
 
  -->
-<npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
+<npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
+	
 	<!-- Асмодиане -->
 	<!-- Пандемониум -->
 	<teleporter_template npc_id="204191" name="Doman" teleportId="50" type="REGULAR">

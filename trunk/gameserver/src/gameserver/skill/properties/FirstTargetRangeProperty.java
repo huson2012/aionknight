@@ -86,9 +86,8 @@ public class FirstTargetRangeProperty extends Property
 		if (!GeoEngine.getInstance().canSee(effector, firstTarget))
 		{
 			if ((effector instanceof Summon) || (effector instanceof Servant) || (effector instanceof Trap) || (effector instanceof NpcWithCreator))
-                {
-				PacketSendUtility.sendPacket((Player) effector, SM_SYSTEM_MESSAGE.STR_SKILL_OBSTACLE);
-			return true;
+            {
+				return true;
 			}
 		}
 		return true;

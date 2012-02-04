@@ -1,30 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
-	Назначение файла	: 
-	Версия сервера		: Aion-Knight 2.7 (Beta version)
-	Версия клиента		: 2.7 (Иннова)
+	Назначение файла: Характеристики суммонов в зависимости от уровня
+	=================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	=============================================
+	Последняя редакция: 04/02/2012 (Frost)
 
  -->
+<summon_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+						xsi:noNamespaceSchemaLocation="../stats.xsd">
 
-<summon_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
+	<!-- Уровень 50 -->
 	<summon_stats npc_id_light="201040" level="50">
-		<stats_template maxHp="9511" pdefense="1611" mresist="1052" main_hand_attack="358" run_speed="10.0"/>
+		<stats_template maxHp="9511" 
+						pdefense="1611"
+						mresist="1052"
+						main_hand_attack="358"
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 51 -->
 	<summon_stats npc_id_light="201040" level="51">
-		<stats_template maxHp="9701" pdefense="1636" mresist="1070" main_hand_attack="362" run_speed="10.0"/>
+		<stats_template maxHp="9701" 
+						pdefense="1636" 
+						mresist="1070" 
+						main_hand_attack="362" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 52 -->
 	<summon_stats npc_id_light="201040" level="52">
-		<stats_template maxHp="9906" pdefense="1661" mresist="1088" main_hand_attack="366" run_speed="10.0"/>
+		<stats_template maxHp="9906" 
+						pdefense="1661" 
+						mresist="1088" 
+						main_hand_attack="366" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 53 -->
 	<summon_stats npc_id_light="201040" level="53">
-		<stats_template maxHp="10112" pdefense="1686" mresist="1106" main_hand_attack="370" run_speed="10.0"/>
+		<stats_template maxHp="10112" 
+						pdefense="1686" 
+						mresist="1106" 
+						main_hand_attack="370" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 54 -->
 	<summon_stats npc_id_light="201040" level="54">
-		<stats_template maxHp="10318" pdefense="1701" mresist="1124" main_hand_attack="374" run_speed="10.0"/>
+		<stats_template maxHp="10318" 
+						pdefense="1701" 
+						mresist="1124" 
+						main_hand_attack="374" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 55 -->
 	<summon_stats npc_id_light="201040" level="55">
-		<stats_template maxHp="10543" pdefense="1726" mresist="1142" main_hand_attack="378" run_speed="10.0"/>
-	</summon_stats>	
+		<stats_template maxHp="10543" 
+						pdefense="1726" 
+						mresist="1142" 
+						main_hand_attack="378" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 56 -->
+	<summon_stats npc_id_light="201040" level="56">
+		<stats_template maxHp="10568" 
+						pdefense="1741" 
+						mresist="1164" 
+						main_hand_attack="382" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 57 -->
+	<summon_stats npc_id_light="201040" level="57">
+		<stats_template maxHp="10574" 
+						pdefense="1766" 
+						mresist="1186" 
+						main_hand_attack="386" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 58 -->
+	<summon_stats npc_id_light="201040" level="58">
+		<stats_template maxHp="10592" 
+						pdefense="1781"
+						mresist="1214"
+						main_hand_attack="390"
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 59 -->
+	<summon_stats npc_id_light="201040" level="59">
+		<stats_template maxHp="10622" 
+						pdefense="1804"
+						mresist="1236"
+						main_hand_attack="394"
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 60 -->
+	<summon_stats npc_id_light="201040" level="60">
+		<stats_template maxHp="10645" 
+						pdefense="1826"
+						mresist="1258"
+						main_hand_attack="398"
+						run_speed="10.0"/>
+	</summon_stats>
 </summon_stats_templates>

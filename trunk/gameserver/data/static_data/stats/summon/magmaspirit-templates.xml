@@ -1,30 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
-	Назначение файла	: 
-	Версия сервера		: Aion-Knight 2.7 (Beta version)
-	Версия клиента		: 2.7 (Иннова)
+	Назначение файла: Характеристики суммонов в зависимости от уровня
+	=================================================================
+	Версия сервера: Aion-Knight 2.7 (Beta version)
+	Версия клиента: 2.7 (Иннова)
+	================================================================
+	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
+	Веб-cайт разработчиков: http://aion-knight.ru
+	=============================================
+	Последняя редакция: 04/02/2012 (Frost)
 
  -->
-
-<summon_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../stats.xsd">
+<summon_stats_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+						xsi:noNamespaceSchemaLocation="../stats.xsd">
+	
+	<!-- Уровень 50 -->
 	<summon_stats npc_id_dark="201041" level="50">
-		<stats_template maxHp="9701" pdefense="1611" mresist="1052" main_hand_attack="358" run_speed="10.0"/>
+		<stats_template maxHp="9701" 
+						pdefense="1611" 
+						mresist="1052" 
+						main_hand_attack="358" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 51 -->
 	<summon_stats npc_id_dark="201041" level="51">
-		<stats_template maxHp="9896" pdefense="1636" mresist="1070" main_hand_attack="362" run_speed="10.0"/>
+		<stats_template maxHp="9896" 
+						pdefense="1636" 
+						mresist="1070" 
+						main_hand_attack="362" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 52 -->
 	<summon_stats npc_id_dark="201041" level="52">
-		<stats_template maxHp="10184" pdefense="1661" mresist="1088" main_hand_attack="366" run_speed="10.0"/>
+		<stats_template maxHp="10184" 
+						pdefense="1661" 
+						mresist="1088" 
+						main_hand_attack="366" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 53 -->
 	<summon_stats npc_id_dark="201041" level="53">
-		<stats_template maxHp="10375" pdefense="1686" mresist="1106" main_hand_attack="370" run_speed="10.0"/>
+		<stats_template maxHp="10375" 
+						pdefense="1686" 
+						mresist="1106" 
+						main_hand_attack="370" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 54 -->
 	<summon_stats npc_id_dark="201041" level="54">
-		<stats_template maxHp="10556" pdefense="1701" mresist="1124" main_hand_attack="374" run_speed="10.0"/>
+		<stats_template maxHp="10556" 
+						pdefense="1701" 
+						mresist="1124" 
+						main_hand_attack="374" 
+						run_speed="10.0"/>
 	</summon_stats>
+	<!-- Уровень 55 -->
 	<summon_stats npc_id_dark="201041" level="55">
-		<stats_template maxHp="10743" pdefense="1726" mresist="1142" main_hand_attack="378" run_speed="10.0"/>
+		<stats_template maxHp="10743" 
+						pdefense="1726" 
+						mresist="1142" 
+						main_hand_attack="382" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 56 -->
+	<summon_stats npc_id_dark="201041" level="56">
+		<stats_template maxHp="10902" 
+						pdefense="1740" 
+						mresist="1166" 
+						main_hand_attack="386" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 57 -->
+	<summon_stats npc_id_dark="201041" level="57">
+		<stats_template maxHp="11104" 
+						pdefense="1796" 
+						mresist="1175" 
+						main_hand_attack="390" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 58 -->
+	<summon_stats npc_id_dark="201041" level="58">
+		<stats_template maxHp="11220" 
+						pdefense="1805" 
+						mresist="1183" 
+						main_hand_attack="394" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 59 -->
+	<summon_stats npc_id_dark="201041" level="59">
+		<stats_template maxHp="11267" 
+						pdefense="1840" 
+						mresist="1192" 
+						main_hand_attack="398" 
+						run_speed="10.0"/>
+	</summon_stats>
+	<!-- Уровень 60 -->
+	<summon_stats npc_id_dark="201041" level="60">
+		<stats_template maxHp="11320" 
+						pdefense="1899" 
+						mresist="1220" 
+						main_hand_attack="402" 
+						run_speed="10.0"/>
 	</summon_stats>	
 </summon_stats_templates>
