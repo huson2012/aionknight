@@ -25,6 +25,9 @@ import commons.configuration.Property;
 
 public class AdminConfig
 {
+	@Property(key = "gameserver.administration.command.arena", defaultValue = "2")
+	public static int COMMAND_ARENA;
+
 	@Property(key = "gameserver.administration.gmlevel", defaultValue = "3")
 	public static int GM_LEVEL;
 	
