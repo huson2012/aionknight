@@ -493,7 +493,8 @@
 	<!--  -->
 	<report_to id="1479" start_npc_id="730020" end_npc_id="203912"/>
 	<!--  -->
-	<item_collecting id="1480" start_npc_id="203912" end_npc_id="203898" action_item_id="211732"/>
+	<!-- Kerubian Weapons -->
+	<item_collecting id="1480" start_npc_id="203912" action_item_id="211732" end_npc_id="203898" />
 	<!--  -->
 	<item_collecting id="1481" start_npc_id="203898"/>
 	<!-- 1482: [Spy] A Teleportation Adventure (ур. 21) -->

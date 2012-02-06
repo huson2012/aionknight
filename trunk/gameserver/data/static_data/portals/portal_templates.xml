@@ -296,11 +296,16 @@
 		<entrypoint mapid="210020000" x="2511.48" y="791.962" z="412.805" race="ELYOS"/>
 		<exitpoint mapid="310040000" x="274.884" y="167.971" z="204.347"/>
 	</portal>
-	<portal npcid="700141" instance="false" minlevel="40" maxlevel="60" group="false">
-		<entrypoint mapid="310040000" x="276.24802" y="161.69484" z="202.62405" race="ELYOS"/>
-		<exitpoint mapid="210020000" x="2511.48" y="791.962" z="412.805"/>
+	<!-- Abyss Gate Bregirun Exit-->
+	<portal npcid="700184" instance="false" minlevel="10"  maxlevel="60" group="false">
+		<entrypoint mapid="320030000" x="275.68" y="164.03" z="205.19" race="ASMODIANS"/>
+		<exitpoint mapid="220030000" x="1748" y="1807" z="254"/>
 	</portal>
+	
+	
+	
 	<!-- Artifact of Circulation / DarkPoeta -->
+	
 	<!-- Model for required item :
 	<portal npcid="730185" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS" itemreq="185000041"> -->
 	<portal npcid="730185" instance="true" minlevel="50" maxlevel="60" group="true" race="ASMODIANS">
@@ -442,9 +447,9 @@
 		<exitpoint mapid="310030000" x="270.5" y="174.3" z="204.3"/>
 	</portal>
 	<!-- Abyss Gate [Crushing the Conspiracy] Asmodians -->
-	<portal npcid="700141" instance="true" group="true" race="ASMODIANS">
+	<portal npcid="700089" instance="false" group="false" race="ASMODIANS">
 		<entrypoint mapid="220030000" x="2452.0867" y="2547.304" z="317.40292" race="ASMODIANS"/>
-		<exitpoint mapid="320030000" x="274.7905" y="168.0982" z="204.34718"/>
+		<exitpoint mapid="320030000" x="275.68" y="164.03" z="205.19"/>
 	</portal>
 	<!-- Abyss Gate [Balaur Conspiracy] Elyos -->
 	<portal npcid="700177" instance="true" group="true" race="ELYOS">
