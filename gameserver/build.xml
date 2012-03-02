@@ -3,24 +3,25 @@
 	
 	<description>
 		
-	Emulator game server Aion 2.7 from the command of developers 'Aion-Knight Dev. Team' is
-	free software; you can redistribute it and/or modify it under the terms of
-	GNU affero general Public License (GNU GPL)as published by the free software
-	security (FSF), or to License version 3 or (at your option) any later
-	version.
-	
-	This program is distributed in the hope that it will be useful, but WITHOUT ANY
-	WARRANTY; without even the implied warranties related to
-	CONSUMER PROPERTIES and SUITABILITY FOR CERTAIN PURPOSES. For details, see
-	General Public License is the GNU.
-	
-	You should have received a copy of the GNU affero general Public License along with this program.
-	If it is not, write to the Free Software Foundation, Inc., 675 Mass Ave,
-	Cambridge, MA 02139, USA
-	
-	Web developers : http://aion-knight.ru
-	Support of the game client : Aion 2.7- 'Arena of Death' (Innova)
-	The version of the server : Aion-Knight 2.7 (Beta version)
+		Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
+		свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
+		Стандартной Общественной Лицензии GNU (GNU GPL), опубликованной Фондом свободного программного 
+		обеспечения (FSF), либо Лицензии версии 3, либо (на ваше усмотрение) любой более поздней 
+		версии.
+		
+		Программа распространяется в надежде, что она будет полезной, но БЕЗ КАКИХ БЫ ТО НИ БЫЛО 
+		ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ; даже без косвенных  гарантийных  обязательств, связанных с 
+		ПОТРЕБИТЕЛЬСКИМИ СВОЙСТВАМИ и ПРИГОДНОСТЬЮ ДЛЯ ОПРЕДЕЛЕННЫХ ЦЕЛЕЙ. Для подробностей смотрите 
+		Стандартную Общественную Лицензию GNU.
+		
+		Вы должны были получить копию Стандартной Общественной Лицензии GNU вместе с этой программой. 
+		Если это не так, напишите в Фонд Свободного ПО (Free Software Foundation, Inc., 675 Mass Ave, 
+		Cambridge, MA 02139, USA
+		
+		Веб-cайт разработчиков : http://aion-knight.ru
+		Поддержка клиента игры : Aion 2.7 - 'Арена Смерти' (Иннова) 
+		Версия серверной части : Aion-Knight 2.7 (Beta version)
+		
     
     </description>
 	
@@ -28,7 +29,6 @@
     <property name="src" location="src"/>
 	<property name="config" location="config"/>
     <property name="lib" location="lib"/>
-	<property name="gui" location="../tools/Compiled/"/>
     <property name="build" location="../tools/Compiled/GameServer"/>
     <property name="build.classes" location="${build}/Classes"/>
     <property name="build.dist" location="${build}/Dist"/>
@@ -64,7 +64,7 @@
 			<format property="date" pattern="yyyy-MM-dd-HH:mm" />
 		</tstamp>
 
-        <jar destfile="${build}/Dist/Libs/ak-server.jar">
+        <jar destfile="${build}/Dist/ak-server.jar">
             <fileset dir="${build.classes}"/>
             <manifest>
                 <attribute name="Main-Class" value="gameserver.GameServer"/>
@@ -78,12 +78,12 @@
     <target name="dist" depends="jar">
     	<mkdir dir="${build.dist}" />
     	<mkdir dir="${build.dist.gs}" />
-    	<mkdir dir="${build.dist.gs}/Config" />
-    	<mkdir dir="${build.dist.gs}/Data" />
-    	<mkdir dir="${build.dist.gs}/Libs" />
-    	<mkdir dir="${build.dist.gs}/Sql" />
-		<mkdir dir="${build.dist.gs}/Doc" />
-		<mkdir dir="${build.dist.gs}/Licenses" />
+    	<mkdir dir="${build.dist.gs}/config" />
+    	<mkdir dir="${build.dist.gs}/data" />
+    	<mkdir dir="${build.dist.gs}/libs" />
+    	<mkdir dir="${build.dist.gs}/sql" />
+		<mkdir dir="${build.dist.gs}/doc" />
+		<mkdir dir="${build.dist.gs}/licenses" />
     	
     	<copy todir="${build.dist.gs}">
             <fileset dir="${build}">
@@ -91,44 +91,45 @@
 			</fileset>
         </copy>
     	
-    	<copy todir="${build.dist.gs}/Libs">
+    	<copy todir="${build.dist.gs}/libs">
 			<fileset dir="${lib}">
 				<include name="*.jar"/>
 			</fileset>
 		</copy>
+
+        <copy todir="${build.dist.gs}">
+            <fileset dir="dist">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
 		
-		<copy todir="${build.dist.gs}/Licenses">
+		<copy todir="${build.dist.gs}/licenses">
 			<fileset dir="licenses">
 				<include name="*.*"/>
 			</fileset>
 		</copy>
 		
-		<copy todir="${build.dist.gs}/Doc">
+		<copy todir="${build.dist.gs}/doc">
 			<fileset dir="doc">
 				<include name="*.*"/>
 			</fileset>
 		</copy>
     	
-    	<copy todir="${build.dist.gs}/Config">
+    	<copy todir="${build.dist.gs}/config">
 			<fileset dir="config">
 				<include name="*.*"/>
 			</fileset>
 		</copy>
     		
-        <copy todir="${build.dist.gs}/Data">
+        <copy todir="${build.dist.gs}/data">
             <fileset dir="data">
                 <include name="**/*"/>
             </fileset>
         </copy>
 
-        <copy todir="${build.dist.gs}/Sql">
+        <copy todir="${build.dist.gs}/sql">
             <fileset dir="sql">
                 <include name="**/*"/>
-            </fileset>
-        </copy>
-		<copy todir="../tools/Compiled">
-            <fileset dir="../tools/">
-                <include name="Aion-Knight.exe"/>
             </fileset>
         </copy>
 

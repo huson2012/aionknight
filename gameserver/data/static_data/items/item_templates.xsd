@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--
-
-  Назначение файла: Схема XML-документа
-  ===============================================================================================================
-  Описание: Файл XSD определяет схему XML-документа - его структуру, порядок элементов; правила, которым должен 
-  соответствовать документ. В схеме определяются: элементы, атрибуты, которые будут присутствовать в документе, 
-  типы данных этих элементов и атрибутов, значения по умолчанию или фиксированные значения. Также возможно добав-
-  ление определений дочерних элементов, их порядка и количества. Данные должны быть записаны в соответствии с 
-  W3C XML Schema language.
-  ===============================================================================================================
-  Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
-  Веб-cайт разработчиков: http://aion-knight.ru
-   
- -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<xs:include schemaLocation="../modifiers.xsd" />
@@ -94,6 +80,10 @@
 		<xs:attribute name="ai" type="xs:int" default="0" />
 		<xs:attribute name="eic" type="xs:int" default="0" />
 		<xs:attribute name="ei" type="xs:int" default="0" />
+		<xs:attribute name="tifc" type="xs:int" default="0" />
+		<xs:attribute name="tif" type="xs:int" default="0" />
+		<xs:attribute name="tisc" type="xs:int" default="0" />
+		<xs:attribute name="tis" type="xs:int" default="0" />
 		<xs:attribute name="cic" type="xs:int" default="0" />
 		<xs:attribute name="ci" type="xs:int" default="0" />
 		<xs:attribute name="ap" type="xs:int" default="0" />
@@ -114,17 +104,10 @@
 		<xs:attribute name="exchange_mins" type="expireMins" />
 		<xs:attribute name="world_drop" type="xs:boolean" default="false" />
 		<xs:attribute name="doping" type="xs:boolean" default="false" />
-		<xs:attribute name="custom_item_type" type="itemCustomType" default="NONE" />
+		<xs:attribute name="arena" type="xs:boolean" default="false" />
+		<xs:attribute name="pvp_zone" type="xs:boolean" default="false" />
 		<xs:attribute name="enchanting" type="xs:boolean" default="false" />
 	</xs:complexType>
-	
-	<xs:simpleType name="itemCustomType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="BATTLEGROUND" />
-			<xs:enumeration value="ARENA" />
-			<xs:enumeration value="NONE" />
-		</xs:restriction>
-	</xs:simpleType>
 
 	<xs:simpleType name="itemSlot">
 		<xs:restriction base="xs:string">
@@ -161,6 +144,8 @@
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="skilluse" type="SkillUseAction"
 				minOccurs="0" maxOccurs="1" />
+			<xs:element name="arenaskilluse" type="ArenaSkillUseAction"
+				minOccurs="0" maxOccurs="1" />
 			<xs:element name="enchant" type="EnchantItemAction"
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="queststart" type="QuestStartAction"
@@ -181,14 +166,16 @@
 				minOccurs="0" maxOccurs="1" />
 			<xs:element name="title" type="TitleAction"
 				minOccurs="0" maxOccurs="1" />
-			<xs:element name="cmotion" type="CmotionAction" 
-				minOccurs="0" maxOccurs="1"/>
 			<xs:element name="emotion" type="EmotionAction"
 				minOccurs="0" maxOccurs="1" />
-            <xs:element name="use" type="UseAction"
-                minOccurs="0" maxOccurs="1"/>				
+			<xs:element name="motion" type="MotionAction"
+				minOccurs="0" maxOccurs="1" />
 			<xs:element name="cosmetic" type="CosmeticAction"
 				minOccurs="0" maxOccurs="1" />
+			<xs:element name="use" type="UseAction" 
+				minOccurs="0" maxOccurs="1"/>
+			<xs:element name="enchanting" type="EnchantingAction" 
+				minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
@@ -204,6 +191,15 @@
 	</xs:complexType>
 
 	<xs:complexType name="SkillUseAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="skillid" type="xs:int" />
+				<xs:attribute name="level" type="xs:int" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ArenaSkillUseAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
 				<xs:attribute name="skillid" type="xs:int" />
@@ -285,16 +281,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	
-	<xs:complexType name="CmotionAction">
-		<xs:complexContent>
-			<xs:extension base="AbstractItemAction">
-				<xs:attribute name="cmotionid" type="xs:string" />
-				<xs:attribute name="expire" type="xs:int" />
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	
+
 	<xs:complexType name="EmotionAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
@@ -304,11 +291,24 @@
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="UseAction">
-        <xs:complexContent>
-            <xs:extension base="AbstractItemAction"/>
-        </xs:complexContent>
-    </xs:complexType>	
+	<xs:complexType name="MotionAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="motionid" type="xs:int" />
+				<xs:attribute name="expire" type="xs:int" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EnchantingAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="lvl" type="xs:int" />
+				<xs:attribute name="count" type="xs:int" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
 	<xs:complexType name="CosmeticAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
@@ -325,6 +325,12 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+
+	<xs:complexType name="UseAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+    </xs:complexType>
 
 	<xs:simpleType name="equipType">
 		<xs:restriction base="xs:string">
@@ -572,6 +578,7 @@
 			<xs:enumeration value="CASH_SHIELD" />
 			<xs:enumeration value="CASH_SHIRT_BODY" />
 			<xs:enumeration value="CASH_SOCKS" />
+			<xs:enumeration value="CASH_SONGPYEON" />
 			<xs:enumeration value="CASH_SPAKY_HEAD" />
 			<xs:enumeration value="CASH_SPRIGG_HEAD" />
 			<xs:enumeration value="CASH_STAFF" />
@@ -837,6 +844,7 @@
 			<xs:enumeration value="TEA" />
 			<xs:enumeration value="TESTTUBE" />
 			<xs:enumeration value="TEXTILE" />
+			<xs:enumeration value="TICKET" />
 			<xs:enumeration value="THORN" />
 			<xs:enumeration value="THREAD" />
 			<xs:enumeration value="TOOL" />
@@ -887,7 +895,7 @@
 		<xs:attribute name="bonusLevel" type="xs:string" />
 	</xs:complexType>
   
-  <xs:simpleType name="typeGender">
+	<xs:simpleType name="typeGender">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="MALE" />
 			<xs:enumeration value="FEMALE" />
@@ -895,7 +903,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-  <xs:simpleType name="EAttackType">
+	<xs:simpleType name="EAttackType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="PHYSICAL" />
 			<xs:enumeration value="MAGICAL_FIRE" />

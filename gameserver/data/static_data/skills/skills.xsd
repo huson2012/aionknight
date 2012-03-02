@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!--
-
-  Назначение файла: Схема XML-документа
-  ===============================================================================================================
-  Описание: Файл XSD определяет схему XML-документа - его структуру, порядок элементов; правила, которым должен 
-  соответствовать документ. В схеме определяются: элементы, атрибуты, которые будут присутствовать в документе, 
-  типы данных этих элементов и атрибутов, значения по умолчанию или фиксированные значения. Также возможно добав-
-  ление определений дочерних элементов, их порядка и количества. Данные должны быть записаны в соответствии с 
-  W3C XML Schema language.
-  ===============================================================================================================
-  Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
-  Веб-cайт разработчиков: http://aion-knight.ru
-   
- -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:include schemaLocation="../import.xsd"/>
 	<xs:include schemaLocation="../items/item_templates.xsd"/>
@@ -55,6 +41,10 @@
 		<xs:attribute name="stance" type="xs:boolean" use="optional" default="false"/>
 		<xs:attribute name="delay_id" type="xs:int"/>
 		<xs:attribute name="skillset_exception" type="xs:int" use="optional" default="0"/>
+		<xs:attribute name="undispellable" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="dispellabledebuff" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="unpottable" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="conflict_id" type="xs:int" />
 	</xs:complexType>
 	<xs:complexType name="Effects">
 		<xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -167,6 +157,7 @@
 			<xs:element name="polymorph" type="PolymorphEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="nofly" type="NoFlyEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="evade" type="EvadeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boostdroprate" type="BoostDropRateEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="xpboost" type="XPBoostEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="buffsilence" type="BuffSilenceEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="buffbind" type="BuffBindEffect" minOccurs="0" maxOccurs="1"/>
@@ -662,6 +653,7 @@
 	<xs:complexType name="SkillAttackInstantEffect">
 		<xs:complexContent>
 			<xs:extension base="DamageEffect">
+				<xs:attribute name="cannotmiss" type="xs:boolean"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -850,6 +842,8 @@
 			<xs:extension base="Effect">
 				<xs:attribute name="npc_id" type="xs:int"/>
 				<xs:attribute name="time" type="xs:int"/>
+				<xs:attribute name="hp_ratio" type="xs:int"/>
+				<xs:attribute name="despawn_time" type="xs:int" default="30"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -869,7 +863,6 @@
 		<xs:complexContent>
 			<xs:extension base="SummonEffect">
 				<xs:attribute name="skill_id" type="xs:int"/>
-				<xs:attribute name="hp_ratio" type="xs:int"/>
 				<xs:attribute name="count" type="xs:int" default="1"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -1127,6 +1120,13 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="XPBoostEffect">
+    <xs:complexContent>
+      <xs:extension base="Effect">
+        <xs:attribute name="percent" type="xs:int"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BoostDropRateEffect">
     <xs:complexContent>
       <xs:extension base="Effect">
         <xs:attribute name="percent" type="xs:int"/>
