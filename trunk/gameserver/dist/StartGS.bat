@@ -2,7 +2,7 @@
 title [ GS Console ]
 
 :start
-java -Xms512m -Xmx1536m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;./libs/ak-server.jar gameserver.GameServer
+java -Xms512m -Xmx1536m -Xbootclasspath/p:./libs/jsr166.jar -cp ./libs/*;ak-server.jar gameserver.GameServer
 
 SET CLASSPATH=%OLDCLASSPATH%
 

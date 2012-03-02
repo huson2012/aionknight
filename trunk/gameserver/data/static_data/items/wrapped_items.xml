@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 
-	Назначение файла: Описание упакованных вещей
-	==============================================
-	Версия сервера: Aion-Knight 2.7 (Beta version)
-	Версия клиента: Aion 2.7 (Иннова)
-	================================================================
-	Разработка серверной части: Copyright (c) Aion-Knight, 2011-2012
-	Веб-cайт разработчиков: http://aion-knight.ru
-	=============================================
-	Последняя редакция: 19/01/2012 (Frost)
 
- -->
+count for wrapper_item specifies the maximum number of items you can get from the list.
+If additional attribute random=true is specified the maximum count is randomized up to the specified value.
+If no count is specified the rolling is performed once from the whole list, otherwise the rolling continues
+until the max count is reached.
+Each item has min and max count to roll at every operation, and if both values are equal, the constant
+amount is rolled.
+The order of item choosing during roll up doesn't matter, it is completely random.
+If specific items have to be rolled only for specific race you may add race attribute with values
+ELYOS or ASMODIANS.
+To include huge lists of items for rolling you may add an item group, the same as for bonuses (see bonuses.xsd),
+for example, type="MEDICINE" level="40", will choose all items from item_templates.xml having bonus
+type MEDICINE and its level 40.
+
+Inside each wrapper_item you may have additional wrapper_item without id. It's an abstract wrapper item.
+Each of them is rolled independantly using the rules specified above.
+You can nest them as deep as you want to make complex rewards.
+
+-->
 <wrapped_items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!-- Red Solorius Stocking -->
 	<wrapper_item id="188050004">
@@ -2276,17 +2284,21 @@
 		<item min="1" max="1" type="MANASTONE" level="50"/>
 	</wrapper_item>
 	<!-- General Radiant Ops Supplies -->
-	<wrapper_item id="188050568" count="1">
+	<wrapper_item id="188050568">
 		<item min="10" max="10" type="FOOD" level="30"/>
 	</wrapper_item>
 	<!-- Fine Radiant Ops Supplies -->
-	<wrapper_item id="188050569"/>
+	<wrapper_item id="188050569">
+		<item min="10" max="10" type="FOOD" level="40"/>
+	</wrapper_item>
 	<!-- General Blood Crusade Supplies -->
 	<wrapper_item id="188050570">
 		<item min="10" max="10" type="FOOD" level="30"/>
 	</wrapper_item>
 	<!-- Fine Blood Crusade Supplies -->
-	<wrapper_item id="188050571"/>
+	<wrapper_item id="188050571">
+		<item min="10" max="10" type="FOOD" level="40"/>
+	</wrapper_item>
 	<!-- Lesser Radiant Ops Reward -->
 	<wrapper_item id="188050572" count="1">
 		<item id="186000063" min="0" max="2" name="Major Ancient Icon"/>
@@ -2496,7 +2508,7 @@
 	<!-- Inggison Jewel Pouch -->
 	<wrapper_item id="188050717"/>
 	<!-- Chunk of Earth -->
-	<wrapper_item id="188050718" count="10">
+	<wrapper_item id="188050718" count="1">
 		<item id="152000001" min="10" max="10" name="Kukuru"/>
 		<item id="152000002" min="10" max="10" name="Liguri"/>
 		<item id="152000003" min="10" max="10" name="Dado"/>
@@ -2578,7 +2590,7 @@
 		<item id="152003001" min="10" max="10" name="Fine-haired Larva"/>
 	</wrapper_item>
 	<!-- Chunk of Sand -->
-	<wrapper_item id="188050719" count="10">
+	<wrapper_item id="188050719" count="1">
 		<item id="152000060" min="10" max="10" name="Kashuron's Memento"/>
 		<item id="152000103" min="10" max="10" name="Greater Gold Ore"/>
 		<item id="152000105" min="10" max="10" name="Greater Platinum Ore"/>
@@ -2625,7 +2637,7 @@
 		<item id="152001054" min="10" max="10" name="Mikaron's Memento"/>
 	</wrapper_item>
 	<!-- Chunk of Rock -->
-	<wrapper_item id="188050720" count="10">
+	<wrapper_item id="188050720" count="1">
 		<item id="152000106" min="10" max="10" name="Pure Platinum Ore"/>
 		<item id="152000109" min="10" max="10" name="Pure Mithril Ore"/>
 		<item id="152000115" min="10" max="10" name="Pure Malevite Ore"/>
@@ -2645,7 +2657,7 @@
 		<item id="152000325" min="10" max="10" name="Big Elatrite Ore"/>
 	</wrapper_item>
 	<!-- Chunk of Gemstone -->
-	<wrapper_item id="188050721" count="10">
+	<wrapper_item id="188050721" count="1">
 		<item id="152000112" min="10" max="10" name="Brilliant Mithril Ore"/>
 		<item id="152000116" min="10" max="10" name="Brilliant Malevite Ore"/>
 		<item id="152000121" min="10" max="10" name="Brilliant Voluspar Ore"/>
@@ -2698,7 +2710,7 @@
 	<!-- Gelkmaros Jewel Pouch -->
 	<wrapper_item id="188050724"/>
 	<!-- Chunk of Earth -->
-	<wrapper_item id="188050725" count="10">
+	<wrapper_item id="188050725" count="1">
 		<item id="152000051" min="10" max="10" name="Briga"/>
 		<item id="152000052" min="10" max="10" name="Krimer"/>
 		<item id="152000053" min="10" max="10" name="Horto"/>
@@ -2780,7 +2792,7 @@
 		<item id="152003001" min="10" max="10" name="Fine-haired Larva"/>
 	</wrapper_item>
 	<!-- Chunk of Sand -->
-	<wrapper_item id="188050726" count="10">
+	<wrapper_item id="188050726" count="1">
 		<item id="152000060" min="10" max="10" name="Kashuron's Memento"/>
 		<item id="152000103" min="10" max="10" name="Greater Gold Ore"/>
 		<item id="152000105" min="10" max="10" name="Greater Platinum Ore"/>
@@ -2827,7 +2839,7 @@
 		<item id="152001054" min="10" max="10" name="Mikaron's Memento"/>
 	</wrapper_item>
 	<!-- Chunk of Rock -->
-	<wrapper_item id="188050727" count="10">
+	<wrapper_item id="188050727" count="1">
 		<item id="152000106" min="10" max="10" name="Pure Platinum Ore"/>
 		<item id="152000109" min="10" max="10" name="Pure Mithril Ore"/>
 		<item id="152000115" min="10" max="10" name="Pure Malevite Ore"/>
@@ -2847,7 +2859,7 @@
 		<item id="152000325" min="10" max="10" name="Big Elatrite Ore"/>
 	</wrapper_item>
 	<!-- Chunk of Gemstone -->
-	<wrapper_item id="188050728" count="10">
+	<wrapper_item id="188050728" count="1">
 		<item id="152000112" min="10" max="10" name="Brilliant Mithril Ore"/>
 		<item id="152000116" min="10" max="10" name="Brilliant Malevite Ore"/>
 		<item id="152000121" min="10" max="10" name="Brilliant Voluspar Ore"/>
@@ -2860,7 +2872,7 @@
 		<item id="152003003" min="10" max="10" name="Simber"/>
 	</wrapper_item>
 	<!-- Unknown Petal -->
-	<wrapper_item id="188050729">
+	<wrapper_item id="188050729" count="1">
 		<item id="169240001" min="0" max="1" name="Wiki Petal"/>
 		<item id="169240002" min="0" max="1" name="Omblic Petal"/>
 		<item id="169240003" min="0" max="1" name="Meon Petal"/>
@@ -2898,11 +2910,11 @@
 		<item id="101700845" min="0" max="1" name="Hudaron's Superior Instrument"/>
 	</wrapper_item>
 	<!-- Radiant Lesser Godstone Pack -->
-	<wrapper_item id="188050731" count="5">
+	<wrapper_item id="188050731" count="1">
 		<item min="1" max="1" type="GODSTONE"/>
 	</wrapper_item>
 	<!-- Crusader's Lesser Godstone Pack -->
-	<wrapper_item id="188050732" count="5">
+	<wrapper_item id="188050732" count="1">
 		<item min="1" max="1" type="GODSTONE"/>
 	</wrapper_item>
 	<!-- Fortuneer's Enchantment Stone Pack -->
@@ -2935,7 +2947,7 @@
 		<item id="168000047" min="1" max="1"/>
 	</wrapper_item>
 	<!-- Daemon's Godstone Pack -->
-	<wrapper_item id="188050736">
+	<wrapper_item id="188050736" count="1">
 		<item id="168000044" min="1" max="1"/>
 		<item id="168000046" min="1" max="1"/>
 		<item id="168000045" min="1" max="1"/>
@@ -2946,9 +2958,17 @@
 		<item id="168000047" min="1" max="1"/>
 	</wrapper_item>
 	<!-- Fortuneer Reward Chest -->
-	<wrapper_item id="188050737"/>
+	<wrapper_item id="188050737" count="1">
+		<item min="5" max="5" type="FOOD" level="50"/>
+		<item min="2" max="2" type="MANASTONE" level="50"/>
+		<item min="5" max="5" type="MEDICINE" level="50"/>
+	</wrapper_item>
 	<!-- Daemon Reward Chest -->
-	<wrapper_item id="188050738"/>
+	<wrapper_item id="188050738" count="1">
+		<item min="5" max="5" type="FOOD" level="50"/>
+		<item min="2" max="2" type="MANASTONE" level="50"/>
+		<item min="5" max="5" type="MEDICINE" level="50"/>
+	</wrapper_item>
 	<!-- Old Mystery Chest -->
 	<wrapper_item id="188050739"/>
 	<!-- Small Mystery Chest -->
@@ -4448,7 +4468,13 @@
 		<item id="152014020" min="0" max="5" name="Lustrous Balaur Meat"/>
 	</wrapper_item>
 	<!-- Major Sunset Drakie Bundle -->
-	<wrapper_item id="188051022"/>
+	<wrapper_item id="188051022" count="1">
+		<item id="152014016" min="0" max="5" name="Firm Balaur Horn"/>
+		<item id="152014017" min="0" max="5" name="Firm Balaur Scale"/>
+		<item id="152014018" min="0" max="5" name="Firm Balaur Skin"/>
+		<item id="152014019" min="0" max="5" name="Burning Balaur Blood Stain"/>
+		<item id="152014020" min="0" max="5" name="Lustrous Balaur Meat"/>
+	</wrapper_item>
 	<!-- Minor Aqua Griffo Bundle -->
 	<wrapper_item id="188051023">
 		<item id="152000901" min="1" max="5" name="Aether Powder"/>
@@ -5543,18 +5569,164 @@
 	<wrapper_item id="188051226"/>
 	<!-- Case of Platinum Medals -->
 	<wrapper_item id="188051227"/>
-	<!-- Minor Headstrong Poroco Bundle -->
-	<wrapper_item id="188051228"/>
-	<!-- Lesser Headstrong Poroco Bundle -->
-	<wrapper_item id="188051229"/>
-	<!-- Headstrong Poroco Bundle -->
-	<wrapper_item id="188051230"/>
-	<!-- Greater Headstrong Poroco Bundle -->
-	<wrapper_item id="188051231"/>
-	<!-- Major Headstrong Poroco Bundle -->
-	<wrapper_item id="188051232"/>
-	<!-- Premium Headstrong Poroco Bundle -->
-	<wrapper_item id="188051233"/>
+	<!-- Minor Headstrong Poroco Bundle I ely -->
+	<wrapper_item id="188051228" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000706" min="5" max="5" name="Meon"/>
+		<item id="152000409" min="5" max="5" name="Nepeta"/>
+		<item id="152000806" min="5" max="5" name="Pleuro"/>
+		<item id="152000603" min="5" max="5" name="Sobi Fiber"/>
+		<item id="152000006" min="5" max="5" name="Zeyla"/>
+		<item id="188051252" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Lesser Headstrong Poroco Bundle II ely -->
+	<wrapper_item id="188051229" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000706" min="5" max="5" name="Meon"/>
+		<item id="152000409" min="5" max="5" name="Nepeta"/>
+		<item id="152000806" min="5" max="5" name="Pleuro"/>
+		<item id="152000603" min="5" max="5" name="Sobi Fiber"/>
+		<item id="152000006" min="5" max="5" name="Zeyla"/>
+		<item id="152000503" min="10" max="10" name="Ulmus Log"/>
+		<item id="152000707" min="10" max="10" name="Ormea"/>
+		<item id="152000807" min="10" max="10" name="Megrim"/>
+		<item id="152000411" min="10" max="10" name="Amalil"/>
+		<item id="152000311" min="10" max="10" name="Moonstone Ore"/>
+		<item id="152000007" min="10" max="10" name="Triora"/>
+		<item id="152000808" min="10" max="10" name="Esosa"/>
+		<item id="188051253" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Headstrong Poroco Bundle III ely -->
+	<wrapper_item id="188051230" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000706" min="5" max="5" name="Meon"/>
+		<item id="152000409" min="5" max="5" name="Nepeta"/>
+		<item id="152000806" min="5" max="5" name="Pleuro"/>
+		<item id="152000603" min="5" max="5" name="Sobi Fiber"/>
+		<item id="152000006" min="5" max="5" name="Zeyla"/>
+		<item id="152000503" min="10" max="10" name="Ulmus Log"/>
+		<item id="152000707" min="10" max="10" name="Ormea"/>
+		<item id="152000807" min="10" max="10" name="Megrim"/>
+		<item id="152000411" min="10" max="10" name="Amalil"/>
+		<item id="152000311" min="10" max="10" name="Moonstone Ore"/>
+		<item id="152000007" min="10" max="10" name="Triora"/>
+		<item id="152000808" min="10" max="10" name="Esosa"/>
+		<item id="152000207" min="15" max="15" name="Orichalcum Ore"/>
+		<item id="152001003" min="15" max="15" name="Litrea"/>
+		<item id="152000413" min="15" max="15" name="Ferilla"/>
+		<item id="152000313" min="15" max="15" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="15" name="Mithril Ore"/>
+		<item id="152000708" min="15" max="15" name="Tange"/>
+		<item id="152000008" min="15" max="15" name="Zigi"/>
+		<item id="152000604" min="15" max="15" name="Linon Fiber"/>
+		<item id="152000504" min="15" max="15" name="Egrasi Log"/>
+		<item id="188051254" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Greater Headstrong Poroco Bundle IV ely -->
+	<wrapper_item id="188051231" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000706" min="5" max="5" name="Meon"/>
+		<item id="152000409" min="5" max="5" name="Nepeta"/>
+		<item id="152000806" min="5" max="5" name="Pleuro"/>
+		<item id="152000603" min="5" max="5" name="Sobi Fiber"/>
+		<item id="152000006" min="5" max="5" name="Zeyla"/>
+		<item id="152000503" min="10" max="10" name="Ulmus Log"/>
+		<item id="152000707" min="10" max="10" name="Ormea"/>
+		<item id="152000807" min="10" max="10" name="Megrim"/>
+		<item id="152000411" min="10" max="10" name="Amalil"/>
+		<item id="152000311" min="10" max="10" name="Moonstone Ore"/>
+		<item id="152000007" min="10" max="10" name="Triora"/>
+		<item id="152000808" min="10" max="10" name="Esosa"/>
+		<item id="152000207" min="15" max="15" name="Orichalcum Ore"/>
+		<item id="152001003" min="15" max="15" name="Litrea"/>
+		<item id="152000413" min="15" max="15" name="Ferilla"/>
+		<item id="152000313" min="15" max="15" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="15" name="Mithril Ore"/>
+		<item id="152000708" min="15" max="15" name="Tange"/>
+		<item id="152000008" min="15" max="15" name="Zigi"/>
+		<item id="152000604" min="15" max="15" name="Linon Fiber"/>
+		<item id="152000504" min="20" max="20" name="Egrasi Log"/>
+		<item id="152000315" min="20" max="20" name="Sapphire Ore"/>
+		<item id="152000709" min="20" max="20" name="Ervio"/>
+		<item id="152000210" min="20" max="20" name="Burning Orichalcum Ore"/>
+		<item id="152000415" min="20" max="20" name="Griffonia"/>
+		<item id="152000009" min="20" max="20" name="Perer"/>
+		<item id="152000317" min="20" max="20" name="Diamond Ore"/>
+		<item id="152000710" min="20" max="20" name="Lunime"/>
+		<item id="188051255" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Major Headstrong Poroco Bundle V ely -->
+	<wrapper_item id="188051232" count="1">
+		<item id="152000204" min="5" max="10" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="10" name="Platinum Ore"/>
+		<item id="152000706" min="5" max="10" name="Meon"/>
+		<item id="152000409" min="5" max="10" name="Nepeta"/>
+		<item id="152000806" min="5" max="10" name="Pleuro"/>
+		<item id="152000603" min="5" max="10" name="Sobi Fiber"/>
+		<item id="152000006" min="5" max="10" name="Zeyla"/>
+		<item id="152000503" min="10" max="15" name="Ulmus Log"/>
+		<item id="152000707" min="10" max="15" name="Ormea"/>
+		<item id="152000807" min="10" max="15" name="Megrim"/>
+		<item id="152000411" min="10" max="15" name="Amalil"/>
+		<item id="152000311" min="10" max="15" name="Moonstone Ore"/>
+		<item id="152000007" min="10" max="15" name="Triora"/>
+		<item id="152000808" min="10" max="15" name="Esosa"/>
+		<item id="152000207" min="15" max="20" name="Orichalcum Ore"/>
+		<item id="152001003" min="15" max="20" name="Litrea"/>
+		<item id="152000413" min="15" max="20" name="Ferilla"/>
+		<item id="152000313" min="15" max="20" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="20" name="Mithril Ore"/>
+		<item id="152000708" min="15" max="20" name="Tange"/>
+		<item id="152000008" min="15" max="20" name="Zigi"/>
+		<item id="152000604" min="15" max="20" name="Linon Fiber"/>
+		<item id="152000504" min="20" max="25" name="Egrasi Log"/>
+		<item id="152000315" min="20" max="25" name="Sapphire Ore"/>
+		<item id="152000709" min="20" max="25" name="Ervio"/>
+		<item id="152000210" min="20" max="25" name="Burning Orichalcum Ore"/>
+		<item id="152000415" min="20" max="25" name="Griffonia"/>
+		<item id="152000009" min="20" max="25" name="Perer"/>
+		<item id="152000317" min="20" max="25" name="Diamond Ore"/>
+		<item id="152000710" min="20" max="25" name="Lunime"/>
+		<item id="188051256" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Premium Headstrong Poroco Bundle VI ely -->
+	<wrapper_item id="188051233" count="1">
+		<item id="152000204" min="5" max="15" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="15" name="Platinum Ore"/>
+		<item id="152000706" min="5" max="15" name="Meon"/>
+		<item id="152000409" min="5" max="15" name="Nepeta"/>
+		<item id="152000806" min="5" max="15" name="Pleuro"/>
+		<item id="152000603" min="5" max="15" name="Sobi Fiber"/>
+		<item id="152000006" min="5" max="15" name="Zeyla"/>
+		<item id="152000503" min="10" max="20" name="Ulmus Log"/>
+		<item id="152000707" min="10" max="20" name="Ormea"/>
+		<item id="152000807" min="10" max="20" name="Megrim"/>
+		<item id="152000411" min="10" max="20" name="Amalil"/>
+		<item id="152000311" min="10" max="20" name="Moonstone Ore"/>
+		<item id="152000007" min="10" max="20" name="Triora"/>
+		<item id="152000808" min="10" max="20" name="Esosa"/>
+		<item id="152000207" min="15" max="25" name="Orichalcum Ore"/>
+		<item id="152001003" min="15" max="25" name="Litrea"/>
+		<item id="152000413" min="15" max="25" name="Ferilla"/>
+		<item id="152000313" min="15" max="25" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="25" name="Mithril Ore"/>
+		<item id="152000708" min="15" max="25" name="Tange"/>
+		<item id="152000008" min="15" max="25" name="Zigi"/>
+		<item id="152000604" min="15" max="25" name="Linon Fiber"/>
+		<item id="152000504" min="20" max="30" name="Egrasi Log"/>
+		<item id="152000315" min="20" max="30" name="Sapphire Ore"/>
+		<item id="152000709" min="20" max="30" name="Ervio"/>
+		<item id="152000210" min="20" max="30" name="Burning Orichalcum Ore"/>
+		<item id="152000415" min="20" max="30" name="Griffonia"/>
+		<item id="152000009" min="20" max="30" name="Perer"/>
+		<item id="152000317" min="20" max="30" name="Diamond Ore"/>
+		<item id="152000710" min="20" max="30" name="Lunime"/>
+		<item id="188051257" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
 	<!-- Minor Azure Drakie Bundle -->
 	<wrapper_item id="188051234"/>
 	<!-- Lesser Azure Drakie Bundle -->
@@ -5567,18 +5739,173 @@
 	<wrapper_item id="188051238"/>
 	<!-- Premium Azure Drakie Bundle -->
 	<wrapper_item id="188051239"/>
-	<!-- Minor Headstrong Poroco Bundle -->
-	<wrapper_item id="188051240"/>
-	<!-- Lesser Headstrong Poroco Bundle -->
-	<wrapper_item id="188051241"/>
-	<!-- Headstrong Poroco Bundle -->
-	<wrapper_item id="188051242"/>
-	<!-- Greater Headstrong Poroco Bundle -->
-	<wrapper_item id="188051243"/>
-	<!-- Major Headstrong Poroco Bundle -->
-	<wrapper_item id="188051244"/>
-	<!-- Premium Headstrong Poroco Bundle -->
-	<wrapper_item id="188051245"/>
+	<!-- Minor Headstrong Poroco Bundle I asmo -->
+	<wrapper_item id="188051240" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000459" min="5" max="5" name="Neunan"/>
+		<item id="152000056" min="5" max="5" name="Rogen"/>
+		<item id="152000756" min="5" max="5" name="Brommel"/>
+		<item id="152000309" min="5" max="5" name=" Lazuli Ore"/>
+		<item id="152000460" min="5" max="5" name="Fresh Neunan"/>
+		<item id="188051258" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Lesser Headstrong Poroco Bundle II asmo -->
+	<wrapper_item id="188051241" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000459" min="5" max="5" name="Neunan"/>
+		<item id="152000056" min="5" max="5" name="Rogen"/>
+		<item id="152000756" min="5" max="5" name="Brommel"/>
+		<item id="152000309" min="5" max="5" name=" Lazuli Ore"/>
+		<item id="152000460" min="5" max="5" name="Fresh Neunan"/>
+		<item id="152000553" min="10" max="10" name="Salix Log"/>
+		<item id="152000856" min="10" max="10" name="Jardine"/>
+		<item id="152000653" min="10" max="10" name="Xilix Fiber"/>
+		<item id="152000461" min="10" max="10" name="Calamot"/>
+		<item id="152000757" min="10" max="10" name="Pressa"/>
+		<item id="152001053" min="10" max="10" name="Almeha"/>
+		<item id="152000311" min="10" max="10" name="Moonstone Ore"/>
+		<item id="152000057" min="10" max="10" name="Zeller"/>
+		<item id="188051259" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Headstrong Poroco Bundle  III asmo -->
+	<wrapper_item id="188051242" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000459" min="5" max="5" name="Neunan"/>
+		<item id="152000056" min="5" max="5" name="Rogen"/>
+		<item id="152000756" min="5" max="5" name="Brommel"/>
+		<item id="152000309" min="5" max="5" name=" Lazuli Ore"/>
+		<item id="152000460" min="5" max="5" name="Fresh Neunan"/>
+		<item id="152000553" min="10" max="10" name="Salix Log"/>
+		<item id="152000856" min="10" max="10" name="Jardine"/>
+		<item id="152000653" min="10" max="10" name="Xilix Fiber"/>
+		<item id="152000461" min="10" max="10" name="Calamot"/>
+		<item id="152000757" min="10" max="10" name="Pressa"/>
+		<item id="152001053" min="10" max="10" name="Almeha"/>
+		<item id="152000311" min="10" max="10" name="Moonstone Ore"/>
+		<item id="152000057" min="10" max="10" name="Zeller"/>
+		<item id="152000207" min="15" max="15" name="Orichalcum Ore"/>
+		<item id="152000463" min="15" max="15" name="Subella"/>
+		<item id="152000857" min="15" max="15" name="Rask"/>
+		<item id="152000313" min="15" max="15" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="15" name="Mithril Ore"/>
+		<item id="152000758" min="15" max="15" name="Merone"/>
+		<item id="152000654" min="15" max="15" name="Anathe Fiber"/>
+		<item id="152000058" min="15" max="15" name="Vigen"/>
+		<item id="152000554" min="15" max="15" name="Asvata Log"/>
+		<item id="152000858" min="15" max="15" name="Carpen"/>
+		<item id="188051260" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Greater Headstrong Poroco Bundle IV asmo -->
+	<wrapper_item id="188051243" count="1">
+		<item id="152000204" min="5" max="5" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="5" name="Platinum Ore"/>
+		<item id="152000459" min="5" max="5" name="Neunan"/>
+		<item id="152000056" min="5" max="5" name="Rogen"/>
+		<item id="152000756" min="5" max="5" name="Brommel"/>
+		<item id="152000309" min="5" max="5" name=" Lazuli Ore"/>
+		<item id="152000460" min="5" max="5" name="Fresh Neunan"/>
+		<item id="152000553" min="10" max="10" name="Salix Log"/>
+		<item id="152000856" min="10" max="10" name="Jardine"/>
+		<item id="152000653" min="10" max="10" name="Xilix Fiber"/>
+		<item id="152000461" min="10" max="10" name="Calamot"/>
+		<item id="152000757" min="10" max="10" name="Pressa"/>
+		<item id="152001053" min="10" max="10" name="Almeha"/>
+		<item id="152000311" min="10" max="10" name="Moonstone Ore"/>
+		<item id="152000057" min="10" max="10" name="Zeller"/>
+		<item id="152000207" min="15" max="15" name="Orichalcum Ore"/>
+		<item id="152000463" min="15" max="15" name="Subella"/>
+		<item id="152000857" min="15" max="15" name="Rask"/>
+		<item id="152000313" min="15" max="15" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="15" name="Mithril Ore"/>
+		<item id="152000758" min="15" max="15" name="Merone"/>
+		<item id="152000654" min="15" max="15" name="Anathe Fiber"/>
+		<item id="152000058" min="15" max="15" name="Vigen"/>
+		<item id="152000554" min="15" max="15" name="Asvata Log"/>
+		<item id="152000858" min="15" max="15" name="Carpen"/>
+		<item id="152000315" min="20" max="20" name="Sapphire Ore"/>
+		<item id="152000759" min="20" max="20" name="Kukar"/>
+		<item id="152000465" min="20" max="20" name="Grobule"/>
+		<item id="152000466" min="20" max="20" name="Fresh Grobule"/>
+		<item id="152000059" min="20" max="20" name="Cippo"/>
+		<item id="152000317" min="20" max="20" name="Diamond Ore"/>
+		<item id="152000760" min="20" max="20" name="Leopis"/>
+		<item id="188051261" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Major Headstrong Poroco Bundle V asmo -->
+	<wrapper_item id="188051244" count="1">
+		<item id="152000204" min="5" max="10" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="10" name="Platinum Ore"/>
+		<item id="152000459" min="5" max="10" name="Neunan"/>
+		<item id="152000056" min="5" max="10" name="Rogen"/>
+		<item id="152000756" min="5" max="10" name="Brommel"/>
+		<item id="152000309" min="5" max="10" name=" Lazuli Ore"/>
+		<item id="152000460" min="5" max="10" name="Fresh Neunan"/>
+		<item id="152000553" min="10" max="15" name="Salix Log"/>
+		<item id="152000856" min="10" max="15" name="Jardine"/>
+		<item id="152000653" min="10" max="15" name="Xilix Fiber"/>
+		<item id="152000461" min="10" max="15" name="Calamot"/>
+		<item id="152000757" min="10" max="15" name="Pressa"/>
+		<item id="152001053" min="10" max="15" name="Almeha"/>
+		<item id="152000311" min="10" max="15" name="Moonstone Ore"/>
+		<item id="152000057" min="10" max="15" name="Zeller"/>
+		<item id="152000207" min="15" max="20" name="Orichalcum Ore"/>
+		<item id="152000463" min="15" max="20" name="Subella"/>
+		<item id="152000857" min="15" max="20" name="Rask"/>
+		<item id="152000313" min="15" max="20" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="20" name="Mithril Ore"/>
+		<item id="152000758" min="15" max="20" name="Merone"/>
+		<item id="152000654" min="15" max="20" name="Anathe Fiber"/>
+		<item id="152000058" min="15" max="20" name="Vigen"/>
+		<item id="152000554" min="15" max="20" name="Asvata Log"/>
+		<item id="152000858" min="15" max="20" name="Carpen"/>
+		<item id="152000315" min="20" max="25" name="Sapphire Ore"/>
+		<item id="152000759" min="20" max="25" name="Kukar"/>
+		<item id="152000465" min="20" max="25" name="Grobule"/>
+		<item id="152000466" min="20" max="25" name="Fresh Grobule"/>
+		<item id="152000059" min="20" max="25" name="Cippo"/>
+		<item id="152000317" min="20" max="25" name="Diamond Ore"/>
+		<item id="152000760" min="20" max="25" name="Leopis"/>
+		<item id="188051262" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
+	<!-- Premium Headstrong Poroco Bundle VI asmo -->
+	<wrapper_item id="188051245" count="1">
+		<item id="152000204" min="5" max="15" name="Adamantium Ore"/>
+		<item id="152000104" min="5" max="15" name="Platinum Ore"/>
+		<item id="152000459" min="5" max="15" name="Neunan"/>
+		<item id="152000056" min="5" max="15" name="Rogen"/>
+		<item id="152000756" min="5" max="15" name="Brommel"/>
+		<item id="152000309" min="5" max="15" name=" Lazuli Ore"/>
+		<item id="152000460" min="5" max="15" name="Fresh Neunan"/>
+		<item id="152000553" min="10" max="20" name="Salix Log"/>
+		<item id="152000856" min="10" max="20" name="Jardine"/>
+		<item id="152000653" min="10" max="20" name="Xilix Fiber"/>
+		<item id="152000461" min="10" max="20" name="Calamot"/>
+		<item id="152000757" min="10" max="20" name="Pressa"/>
+		<item id="152001053" min="10" max="20" name="Almeha"/>
+		<item id="152000311" min="10" max="20" name="Moonstone Ore"/>
+		<item id="152000057" min="10" max="20" name="Zeller"/>
+		<item id="152000207" min="15" max="25" name="Orichalcum Ore"/>
+		<item id="152000463" min="15" max="25" name="Subella"/>
+		<item id="152000857" min="15" max="25" name="Rask"/>
+		<item id="152000313" min="15" max="25" name="Ruby Ore"/>
+		<item id="152000107" min="15" max="25" name="Mithril Ore"/>
+		<item id="152000758" min="15" max="25" name="Merone"/>
+		<item id="152000654" min="15" max="25" name="Anathe Fiber"/>
+		<item id="152000058" min="15" max="25" name="Vigen"/>
+		<item id="152000554" min="15" max="25" name="Asvata Log"/>
+		<item id="152000858" min="15" max="25" name="Carpen"/>
+		<item id="152000315" min="20" max="30" name="Sapphire Ore"/>
+		<item id="152000759" min="20" max="30" name="Kukar"/>
+		<item id="152000465" min="20" max="30" name="Grobule"/>
+		<item id="152000466" min="20" max="30" name="Fresh Grobule"/>
+		<item id="152000059" min="20" max="30" name="Cippo"/>
+		<item id="152000317" min="20" max="30" name="Diamond Ore"/>
+		<item id="152000760" min="20" max="30" name="Leopis"/>
+		<item id="188051263" min="1" max="1" name="Box O' Wings?"/>
+	</wrapper_item>
 	<!-- Minor Azure Drakie Bundle -->
 	<wrapper_item id="188051246"/>
 	<!-- Lesser Azure Drakie Bundle -->
@@ -5713,16 +6040,80 @@
 		<item id="160010112" min="3" max="3" name="[Event] Jumpy Monk Form Candy"/>
 	</wrapper_item>
 	<!-- Siel's Enchantments -->
-	<wrapper_item id="188051311"/>
+	<wrapper_item id="188051311" count="1">
+		<item id="166000121" min="0" max="5" name="L121 Enchantment Stone"/>
+		<item id="166000122" min="0" max="5" name="L122 Enchantment Stone"/>
+		<item id="166000123" min="0" max="5" name="L123 Enchantment Stone"/>
+		<item id="166000124" min="0" max="5" name="L124 Enchantment Stone"/>
+		<item id="166000125" min="0" max="5" name="L125 Enchantment Stone"/>
+		<item id="166000126" min="0" max="5" name="L126 Enchantment Stone"/>
+		<item id="166000127" min="0" max="5" name="L127 Enchantment Stone"/>
+		<item id="166000128" min="0" max="5" name="L128 Enchantment Stone"/>
+		<item id="166000129" min="0" max="5" name="L129 Enchantment Stone"/>
+		<item id="166000130" min="0" max="5" name="L130 Enchantment Stone"/>
+	</wrapper_item>
 	<!-- Bundle of Siel's Enchantments -->
 	<wrapper_item id="188051312">
 		<item id="188051311" min="6" max="6" name="Siel's Enchantments"/>
 	</wrapper_item>
 	<!-- Siel's Manastones -->
-	<wrapper_item id="188051313"/>
+	<wrapper_item id="188051313" count="1">
+		<item id="167000551" min="0" max="10" name="Manastone: HP +95"/>
+		<item id="167000552" min="0" max="10" name="Manastone: MP +95"/>
+		<item id="167000557" min="0" max="10" name="Manastone: Block +27"/>
+		<item id="167000559" min="0" max="10" name="Manastone: Maximum Flight Time +7"/>
+		<item id="167000553" min="0" max="10" name="Manastone: Accuracy +27"/>
+		<item id="167000558" min="0" max="10" name="Manastone: Crit Strike +17"/>
+		<item id="167000554" min="0" max="10" name="Manastone: Evasion +17"/>
+		<item id="167000563" min="0" max="10" name="Manastone: Healing Boost +3"/>
+		<item id="167000555" min="0" max="10" name="Manastone: Magic Boost +27"/>
+		<item id="167000560" min="0" max="10" name="Manastone: Magical Accuracy +14"/>
+		<item id="167000556" min="0" max="10" name="Manastone: Parry +27"/>
+		<item id="167000561" min="0" max="10" name="Manastone: Resist Magic +14"/>
+		<item id="167000518" min="0" max="10" name="Manastone: Attack +5"/>
+	</wrapper_item>
 	<!-- Bundle of Siel's Manastones -->
 	<wrapper_item id="188051314">
 		<item id="188051313" min="6" max="6" name="Siel's Manastones"/>
+	</wrapper_item>
+        <!--  Love Manastone Chest -->
+	<wrapper_item id="188051373" count="1">
+		<item id="167000551" min="0" max="10" name="Manastone: HP +95"/>
+		<item id="167000552" min="0" max="10" name="Manastone: MP +95"/>
+		<item id="167000557" min="0" max="10" name="Manastone: Block +27"/>
+		<item id="167000559" min="0" max="10" name="Manastone: Maximum Flight Time +7"/>
+		<item id="167000553" min="0" max="10" name="Manastone: Accuracy +27"/>
+		<item id="167000558" min="0" max="10" name="Manastone: Crit Strike +17"/>
+		<item id="167000554" min="0" max="10" name="Manastone: Evasion +17"/>
+		<item id="167000563" min="0" max="10" name="Manastone: Healing Boost +3"/>
+		<item id="167000555" min="0" max="10" name="Manastone: Magic Boost +27"/>
+		<item id="167000560" min="0" max="10" name="Manastone: Magical Accuracy +14"/>
+		<item id="167000556" min="0" max="10" name="Manastone: Parry +27"/>
+		<item id="167000561" min="0" max="10" name="Manastone: Resist Magic +14"/>
+		<item id="167000518" min="0" max="10" name="Manastone: Attack +5"/>
+	</wrapper_item>
+	<!-- Love Manastone Box -->
+	<wrapper_item id="188051374">
+		<item id="188051373" min="1" max="5" name="Love Manastone Box"/>
+	</wrapper_item>
+        <!-- Pet's Present -->
+	<wrapper_item id="188051378">
+		<item id="188051379" min="1" max="1" name="Coin Package"/>
+	</wrapper_item>
+	<!-- Coin Package -->
+	<wrapper_item id="188051379" count="1">
+		<item id="186000001" min="2" max="5" race="ELYOS" name="Iron Coin"/>
+		<item id="186000006" min="2" max="5" race="ASMODIANS" name="Iron Coin"/>
+		<item id="186000002" min="2" max="5" race="ELYOS" name="Bronze Coin"/>
+		<item id="186000007" min="2" max="5" race="ASMODIANS" name="Bronze Coin"/>
+		<item id="186000003" min="2" max="5" race="ELYOS" name="Silver Coin"/>
+		<item id="186000008" min="2" max="5" race="ASMODIANS" name="Silver Coin"/>
+		<item id="186000004" min="2" max="5" race="ELYOS" name="Gold Coin"/>
+		<item id="186000009" min="2" max="5" race="ASMODIANS" name="Gold Coin"/>
+		<item id="186000005" min="2" max="5" race="ELYOS" name="Platinum Coin"/>
+		<item id="186000010" min="2" max="5" race="ASMODIANS" name="Platinum Coin"/>
+		<item id="186000018" min="2" max="5" race="ELYOS" name="Mithril Coin"/>
+		<item id="186000019" min="2" max="5" race="ASMODIANS" name="Mithril Coin"/>
 	</wrapper_item>
 	<!-- Sobi Fiber Bundle -->
 	<wrapper_item id="152000609">
@@ -5732,9 +6123,32 @@
 	<wrapper_item id="152000610">
 		<item id="152000604" min="3" max="3" name="Linon Fiber"/>
 	</wrapper_item>
+	<!-- Prolix Fiber Bundle -->
+	<wrapper_item id="152000611">
+		<item id="152000605" min="3" max="3" name="Prolix Fiber"/>
+	</wrapper_item>
 	<!-- Fess Fiber Bundle -->
 	<wrapper_item id="152000608">
 		<item id="152000602" min="3" max="3" name="Fess Fiber"/>
+	</wrapper_item>
+	<wrapper_item id="188051342">
+		<item id="110900064" min="1" max="1" name="Linon Fiber"/>
+	</wrapper_item>
+	<!-- Gift-Wrapped Marra's Party Dress -->
+	<wrapper_item id="188051343">
+		<item id="110900066" min="1" max="1" name="Marra's Party Dress"/>
+	</wrapper_item>
+	<wrapper_item id="188051344">
+		<item id="110900067" min="1" max="1" name="Fess Fiber"/>
+	</wrapper_item>
+	<wrapper_item id="188051346">
+		<item id="110900127" min="1" max="1" name="Linon Fiber"/>
+	</wrapper_item>
+	<wrapper_item id="188051347">
+		<item id="110900128" min="1" max="1" name="Fess Fiber"/>
+	</wrapper_item>
+	<wrapper_item id="188051348">
+		<item id="110900129" min="1" max="1" name="Fess Fiber"/>
 	</wrapper_item>
 	<!-- Xilix Fiber Bundle -->
 	<wrapper_item id="152000659">
@@ -5743,6 +6157,10 @@
 	<!-- Anathe Fiber Bundle -->
 	<wrapper_item id="152000660">
 		<item id="152000654" min="3" max="3" name="Anathe Fiber"/>
+	</wrapper_item>
+	<!-- Hoca Fiber Bundle -->
+	<wrapper_item id="152000661">
+		<item id="152000656" min="3" max="3" name="Anathe Fiber"/>
 	</wrapper_item>
 	<!-- Twisp Fiber Bundle -->
 	<wrapper_item id="152000658">
@@ -5768,32 +6186,907 @@
 	<wrapper_item id="188051341">
 		<item id="110900063" min="1" max="1" name="Andu's Party Dress"/>
 	</wrapper_item>
-	<!-- Gift-Wrapped Daskin's Party Suit -->
-	<wrapper_item id="188051342">
-		<item id="110900064" min="1" max="1" name="Daskin's Party Suit"/>
-	</wrapper_item>
-	<!-- Gift-Wrapped Marra's Party Dress -->
-	<wrapper_item id="188051343">
-		<item id="110900066" min="1" max="1" name="Marra's Party Dress"/>
-	</wrapper_item>
-	<!-- Gift-Wrapped Palentine's Party Dress -->
-	<wrapper_item id="188051344">
-		<item id="110900067" min="1" max="1" name="Palentine's Party Dress"/>
-	</wrapper_item>	
 	<!-- Gift-Wrapped Leather Chic -->
 	<wrapper_item id="188051345">
 		<item id="110900126" min="1" max="1" name="Cinna's Leather Chic"/>
 	</wrapper_item>
-	<!-- Gift-Wrapped Cocktail Scales -->
-	<wrapper_item id="188051346">
-		<item id="110900127" min="1" max="1" name="Gabrez's Cocktail Scales"/>
+	<!-- Box O' Wings? I ely -->
+	<wrapper_item id="188051252" count="1">
+		<item id="182006420" min="5" max="5" name="Black Feather"/>
+		<item id="182006420" min="5" max="10" name="Black Feather"/>
+		<item id="182006420" min="5" max="15" name="Black Feather"/>
+		<item id="182006420" min="5" max="20" name="Black Feather"/>
+		<item id="182006420" min="5" max="25" name="Black Feather"/>
+		<item id="182006420" min="5" max="30" name="Black Feather"/>
+		<item id="182006420" min="5" max="35" name="Black Feather"/>
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000037" min="0" max="1" name="Lucky Wings"/>
 	</wrapper_item>
-	<!-- Gift-Wrapped Formalwear -->
-	<wrapper_item id="188051347">
-		<item id="110900128" min="1" max="1" name="Portia's Formalwear"/>
+	<!-- Box O' Wings? II ely -->
+	<wrapper_item id="188051253" count="1">
+		<item id="182006420" min="5" max="20" name="Black Feather"/>
+		<item id="182006420" min="5" max="25" name="Black Feather"/>
+		<item id="182006420" min="5" max="30" name="Black Feather"/>
+		<item id="182006420" min="5" max="35" name="Black Feather"/>
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000037" min="0" max="1" name="Lucky Wings"/>
 	</wrapper_item>
-	<!-- Gift-Wrapped Celebrity Line -->
-	<wrapper_item id="188051348">
-		<item id="110900129" min="1" max="1" name="Rillard's Celebrity Line"/>
+	<!-- Box O' Wings? III ely -->
+	<wrapper_item id="188051254" count="1">
+		<item id="182006420" min="5" max="30" name="Black Feather"/>
+		<item id="182006420" min="5" max="35" name="Black Feather"/>
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000037" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? IV ely -->
+	<wrapper_item id="188051255" count="1">
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000037" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? V ely -->
+	<wrapper_item id="188051256" count="1">
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000037" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? VI ely -->
+	<wrapper_item id="188051257" count="1">
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000037" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? I asmo -->
+	<wrapper_item id="188051258" count="1">
+		<item id="182006420" min="5" max="5" name="Black Feather"/>
+		<item id="182006420" min="5" max="10" name="Black Feather"/>
+		<item id="182006420" min="5" max="15" name="Black Feather"/>
+		<item id="182006420" min="5" max="20" name="Black Feather"/>
+		<item id="182006420" min="5" max="25" name="Black Feather"/>
+		<item id="182006420" min="5" max="30" name="Black Feather"/>
+		<item id="182006420" min="5" max="35" name="Black Feather"/>
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000038" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? II asmo -->
+	<wrapper_item id="188051259" count="1">
+		<item id="182006420" min="5" max="20" name="Black Feather"/>
+		<item id="182006420" min="5" max="25" name="Black Feather"/>
+		<item id="182006420" min="5" max="30" name="Black Feather"/>
+		<item id="182006420" min="5" max="35" name="Black Feather"/>
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000038" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? III asmo -->
+	<wrapper_item id="188051260" count="1">
+		<item id="182006420" min="5" max="30" name="Black Feather"/>
+		<item id="182006420" min="5" max="35" name="Black Feather"/>
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000038" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? IV asmo -->
+	<wrapper_item id="188051261" count="1">
+		<item id="182006420" min="5" max="40" name="Black Feather"/>
+		<item id="182006420" min="5" max="45" name="Black Feather"/>
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000038" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? V asmo -->
+	<wrapper_item id="188051262" count="1">
+		<item id="182006420" min="5" max="50" name="Black Feather"/>
+		<item id="182006420" min="5" max="55" name="Black Feather"/>
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000038" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Box O' Wings? VI asmo -->
+	<wrapper_item id="188051263" count="1">
+		<item id="182006420" min="5" max="60" name="Black Feather"/>
+		<item id="182006420" min="5" max="65" name="Black Feather"/>
+		<item id="182006420" min="5" max="70" name="Black Feather"/>
+		<item id="182006420" min="5" max="75" name="Black Feather"/>
+		<item id="182006420" min="5" max="80" name="Black Feather"/>
+		<item id="182006420" min="5" max="85" name="Black Feather"/>
+		<item id="182006420" min="5" max="90" name="Black Feather"/>
+		<item id="182006420" min="5" max="95" name="Black Feather"/>
+		<item id="182006420" min="5" max="100" name="Black Feather"/>
+		<item id="182006420" min="5" max="105" name="Black Feather"/>
+		<item id="182006420" min="5" max="110" name="Black Feather"/>
+		<item id="182006420" min="5" max="115" name="Black Feather"/>
+		<item id="182006420" min="5" max="120" name="Black Feather"/>
+		<item id="182006420" min="5" max="125" name="Black Feather"/>
+		<item id="182006420" min="5" max="130" name="Black Feather"/>
+		<item id="182006420" min="5" max="135" name="Black Feather"/>
+		<item id="182006420" min="5" max="140" name="Black Feather"/>
+		<item id="182006420" min="5" max="145" name="Black Feather"/>
+		<item id="182006420" min="5" max="150" name="Black Feather"/>
+		<item id="182006420" min="5" max="155" name="Black Feather"/>
+		<item id="182006420" min="5" max="160" name="Black Feather"/>
+		<item id="182006420" min="5" max="165" name="Black Feather"/>
+		<item id="182006420" min="5" max="170" name="Black Feather"/>
+		<item id="182006420" min="5" max="175" name="Black Feather"/>
+		<item id="182006420" min="5" max="180" name="Black Feather"/>
+		<item id="182006420" min="5" max="185" name="Black Feather"/>
+		<item id="182006420" min="5" max="190" name="Black Feather"/>
+		<item id="182006420" min="5" max="195" name="Black Feather"/>
+		<item id="182006420" min="5" max="200" name="Black Feather"/>
+		<item id="182006420" min="5" max="205" name="Black Feather"/>
+		<item id="182006420" min="5" max="210" name="Black Feather"/>
+		<item id="182006420" min="5" max="215" name="Black Feather"/>
+		<item id="182006420" min="5" max="220" name="Black Feather"/>
+		<item id="182006420" min="5" max="225" name="Black Feather"/>
+		<item id="182006420" min="5" max="230" name="Black Feather"/>
+		<item id="182006420" min="5" max="235" name="Black Feather"/>
+		<item id="182006420" min="5" max="240" name="Black Feather"/>
+		<item id="187000038" min="0" max="1" name="Lucky Wings"/>
+	</wrapper_item>
+	<!-- Common Orichalcum Key Supplies -->
+	<wrapper_item id="188051126" count="1">
+		<item min="5" max="5" type="FOOD" level="40"/>
+		<item min="2" max="2" type="MANASTONE" level="40"/>
+		<item min="5" max="5" type="MEDICINE" level="40"/>
+	</wrapper_item>
+	<!-- Fine Orichalcum Key Supplies -->
+	<wrapper_item id="188051127" count="1">
+		<item min="5" max="5" type="FOOD" level="50"/>
+		<item min="2" max="2" type="MANASTONE" level="50"/>
+		<item min="5" max="5" type="MEDICINE" level="50"/>
+		<item id="186000059" min="0" max="2" name="Major Ancient Seal"/>
+		<item id="186000060" min="0" max="3" name="Greater Ancient Seal"/>
+		<item id="186000055" min="0" max="2" name="Major Ancient Goblet"/>
+		<item id="186000056" min="0" max="3" name="Greater Ancient Goblet"/>
+		<item id="186000051" min="0" max="2" name="Major Ancient Crown"/>
+		<item id="186000052" min="0" max="3" name="Greater Ancient Crown"/>
+		<item id="186000063" min="0" max="2" name="Major Ancient Icon"/>
+		<item id="186000064" min="0" max="3" name="Greater Ancient Icon"/>
+	</wrapper_item>
+	<!-- The Circle Common Supplies -->
+	<wrapper_item id="188051131" count="1">
+		<item min="5" max="5" type="FOOD" level="40"/>
+		<item min="2" max="2" type="MANASTONE" level="40"/>
+		<item min="5" max="5" type="MEDICINE" level="40"/>
+	</wrapper_item>
+	<!-- The Circle Fine Supplies -->
+	<wrapper_item id="188051132" count="1">		<item min="5" max="5" type="FOOD" level="50"/>
+		<item min="2" max="2" type="MANASTONE" level="50"/>
+		<item min="5" max="5" type="MEDICINE" level="50"/>
+		<item id="186000059" min="0" max="2" name="Major Ancient Seal"/>
+		<item id="186000060" min="0" max="3" name="Greater Ancient Seal"/>
+		<item id="186000055" min="0" max="2" name="Major Ancient Goblet"/>
+		<item id="186000056" min="0" max="3" name="Greater Ancient Goblet"/>
+		<item id="186000051" min="0" max="2" name="Major Ancient Crown"/>
+		<item id="186000052" min="0" max="3" name="Greater Ancient Crown"/>
+		<item id="186000063" min="0" max="2" name="Major Ancient Icon"/>
+		<item id="186000064" min="0" max="3" name="Greater Ancient Icon"/>
+	</wrapper_item>
+	<!-- Academy Beginner Supplies I -->
+	<wrapper_item id="188051123" count="1">
+		<item min="5" max="5" type="FOOD" level="10"/>
+		<item min="2" max="2" type="MANASTONE" level="10"/>
+		<item min="5" max="5" type="MEDICINE" level="10"/>
+		<item id="186000002" min="0" max="5" name="Bronze Coin"/>
+	</wrapper_item>
+	<!-- Academy Beginner Supplies II -->
+	<wrapper_item id="188051124" count="1">
+		<item min="5" max="5" type="FOOD" level="20"/>
+		<item min="2" max="2" type="MANASTONE" level="20"/>
+		<item min="5" max="5" type="MEDICINE" level="20"/>
+		<item id="186000003" min="0" max="5" name="Silver Coin"/>
+	</wrapper_item>
+	<!-- Academy Beginner Supplies III -->
+	<wrapper_item id="188051125" count="1">
+		<item min="5" max="5" type="FOOD" level="30"/>
+		<item min="2" max="2" type="MANASTONE" level="30"/>
+		<item min="5" max="5" type="MEDICINE" level="30"/>
+		<item id="186000004" min="0" max="5" name="Gold Coin"/>
+	</wrapper_item>
+	<!-- Priory Beginner Supplies I -->
+	<wrapper_item id="188051128" count="1">
+		<item min="5" max="5" type="FOOD" level="10"/>
+		<item min="2" max="2" type="MANASTONE" level="10"/>
+		<item min="5" max="5" type="MEDICINE" level="10"/>
+		<item id="186000007" min="0" max="5" name="Bronze Coin"/>
+	</wrapper_item>
+	<!-- Priory Beginner Supplies II -->
+	<wrapper_item id="188051129" count="1">
+		<item min="5" max="5" type="FOOD" level="20"/>
+		<item min="2" max="2" type="MANASTONE" level="20"/>
+		<item min="5" max="5" type="MEDICINE" level="20"/>
+		<item id="186000008" min="0" max="5" name="Silver Coin"/>
+	</wrapper_item>
+	<!-- Priory Beginner Supplies III -->
+	<wrapper_item id="188051130" count="1">
+		<item min="5" max="5" type="FOOD" level="30"/>
+		<item min="2" max="2" type="MANASTONE" level="30"/>
+		<item min="5" max="5" type="MEDICINE" level="30"/>
+		<item id="186000009" min="0" max="5" name="Gold Coin"/>
+	</wrapper_item>
+	<!-- Superior Manastone Bundle -->
+	<wrapper_item id="188051349" count="1">
+		<item id="167000514" min="1" max="5" name="Manastone: HP +85"/>
+			<item id="167000515" min="1" max="5" name="Manastone: MP +85"/>
+			<item id="167000521" min="1" max="5" name="Manastone: Block +25"/>
+			<item id="167000523" min="1" max="5" name="Manastone: Maximum Flight Time +6"/>
+			<item id="167000516" min="1" max="5" name="Manastone: Accuracy +25"/>
+			<item id="167000522" min="1" max="5" name="Manastone: Crit Strike +15"/>
+			<item id="167000517" min="1" max="5" name="Manastone: Evasion +15"/>
+			<item id="167000519" min="1" max="5" name="Manastone: Magic Boost +25"/>
+			<item id="167000541" min="1" max="5" name="Manastone: Magical Accuracy +12"/>
+			<item id="167000520" min="1" max="5" name="Manastone: Parry +25"/>
+			<item id="167000542" min="1" max="5" name="Manastone: Resist Magic +12"/>
+			<item id="167000518" min="1" max="5" name="Manastone: Attack +5"/>
+	</wrapper_item>
+	<!-- Asparn's Fabled Weapon Chest -->
+	<wrapper_item id="188051412" count="1">
+		<item id="100200633" min="1" max="1" name="White Flame Dagger"/>
+		<item id="100500527" min="1" max="1" name="White Flame Jewel"/>
+	</wrapper_item>
+	<!-- Grogget's Fabled Weapon Chest -->
+	<wrapper_item id="188051416" count="1">
+		<item id="100100584" min="1" max="1" name="Grogget's Warhammer"/>
+		<item id="100600641" min="1" max="1" name="Grogget's Tome"/>
+		<item id="100900595" min="1" max="1" name="Grogget's Greatsword"/>
+		<item id="101700625" min="1" max="1" name="Grogget's Longbow"/>
+		<item id="100200711" min="1" max="1" name="Grogget's Dagger"/>
+		<item id="101300567" min="1" max="1" name="Grogget's Spear"/>
+       		<item id="100000782" min="1" max="1" name="Grogget's Sword"/>
+        	<item id="100500605" min="1" max="1" name="Grogget's Jewel"/>
+        	<item id="101500608" min="1" max="1" name="Grogget's Staff"/>		
+		</wrapper_item>
+	<!-- Gatneri's Fabled Weapon Chest -->
+	<wrapper_item id="188051411" count="1">
+		<item id="101700547" min="1" max="1" name="White Flame Longbow"/>
+		<item id="100200633" min="1" max="1" name="White Flame Dagger"/>
+		<item id="101300501" min="1" max="1" name="White Flame Spear"/>
+		<item id="100000678" min="1" max="1" name="White Flame Sword"/>
+	</wrapper_item>
+	<!-- Judge's Fabled Weapon Chest -->
+	<wrapper_item id="188051396" count="1">
+		<item id="100100191" min="1" max="1" name="Kromede's Warhammer"/>
+		<item id="100600219" min="1" max="1" name="Kromede's Tome"/>
+		<item id="100900197" min="1" max="1" name="Kromede's Greatsword"/>
+		<item id="101700216" min="1" max="1" name="Kromede's Longbow"/>
+		<item id="101300194" min="1" max="1" name="Kromede's Spear"/>
+		<item id="100000275" min="1" max="1" name="Kromede's Sword"/>
+		<item id="100500204" min="1" max="1" name="Kromede's Jewel"/>
+		<item id="101500205" min="1" max="1" name="Kromede's Staff"/>
+		<item id="100200298" min="1" max="1" name="Kromede's Dagger"/>
+		<item id="100100768" min="1" max="1" name="Warhammer of the Judge"/>
+		<item id="100600843" min="1" max="1" name="Tome of the Judge"/>
+		<item id="100900765" min="1" max="1" name="Greatsword of the Judge"/>
+		<item id="100200903" min="1" max="1" name="Dagger of the Judge"/>
+		<item id="101300737" min="1" max="1" name="Spear of the Judge"/>
+		<item id="101700810" min="1" max="1" name="Longbow of the Judge"/>
+	</wrapper_item>
+	<!-- Mantutu's Fabled Shoe Chest -->
+	<wrapper_item id="188051414" count="1">
+		<item id="114100903" min="1" max="1" name="Steel Beard Pirate's Shoes"/>
+		<item id="114500871" min="1" max="1" name="Steel Beard Pirate's Brogans"/>
+		<item id="114600830" min="1" max="1" name="Steel Beard Pirate's Sabatons"/>
+		<item id="114300928" min="1" max="1" name="Steel Beard Pirate's Boots"/>
+	</wrapper_item>
+	<!-- Lahulahu's Fabled Jacket Chest -->
+	<wrapper_item id="188051415" count="1">
+		<item id="110300919" min="1" max="1" name="Steel Beard Pirate's Jerkin"/>
+		<item id="110600871" min="1" max="1" name="Steel Beard Pirate's Breastplate"/>
+		<item id="110500887" min="1" max="1" name="Steel Beard Pirate's Hauberk"/>
+		<item id="110100974" min="1" max="1" name="Steel Beard Pirate's Tunic"/>
+	</wrapper_item>
+	<!-- Koakoa's Fabled Pants Chest -->
+	<wrapper_item id="188051413" count="1">
+		<item id="113300895" min="1" max="1" name="Steel Beard Pirate's Breeches"/>
+		<item id="113600836" min="1" max="1" name="Steel Beard Pirate's Greaves"/>
+		<item id="113500861" min="1" max="1" name="Steel Beard Pirate's Chausses"/>
+		<item id="113100878" min="1" max="1" name="Steel Beard Pirate's Leggings"/>
+	</wrapper_item>
+	<!-- Hero's Chest -->
+	<wrapper_item id="188051407" count="1">
+		<item id="100900591" min="1" max="1" name="Tahabata's Greatsword"/>
+		<item id="100200834" min="1" max="1" name="Archon Brigade General's Dagger"/>
+	</wrapper_item>
+	<!-- Felicitous Socketing (Fabled) -->
+	<wrapper_item id="188051429" count="1">
+		<item id="166150003" min="1" max="10" name="Felicitous Socketing Fabled"/>
+	</wrapper_item>
+	<!-- Felicitous Socketing (Eternal) -->
+	<wrapper_item id="188051430" count="1">
+		<item id="166150004" min="1" max="10" name="Felicitous Socketing Eternal"/>
+	</wrapper_item>
+	<!-- Refilling Enchantment Stone Box-->
+	<wrapper_item id="188051431" count="1">
+		<item id="166000070" min="1" max="2" name="L70 Enchantment Stone"/>
+		<item id="166000075" min="1" max="2" name="L75 Enchantment Stone"/>
+		<item id="166000080" min="1" max="2" name="L80 Enchantment Stone"/>
+		<item id="166000085" min="1" max="2" name="L85 Enchantment Stone"/>
+		<item id="166000090" min="1" max="2" name="L90 Enchantment Stone"/>
+		<item id="166000095" min="1" max="2" name="L95 Enchantment Stone"/>
+	</wrapper_item>
+	<!-- Refilling Manastone Box -->
+	<wrapper_item id="188051432" count="1">
+		<item id="167000551" min="1" max="5" name="Manastone: HP +95"/>
+		<item id="167000552" min="1" max="5" name="Manastone: MP +95"/>
+		<item id="167000518" min="1" max="5" name="Manastone: Attack +5"/>
+		<item id="167000557" min="1" max="5" name="Manastone: Block +27"/>
+		<item id="167000523" min="1" max="5" name="Manastone: Maximum Flight Time +6"/>
+		<item id="167000561" min="1" max="5" name="Manastone: Resist Magic +14"/>
+		<item id="167000556" min="1" max="5" name="Manastone: Parry +27"/>
+		<item id="167000555" min="1" max="5" name="Manastone: Magic Boost +27"/>
+		<item id="167000553" min="1" max="5" name="Manastone: Accuracy +27"/>
+		<item id="167000554" min="1" max="5" name="Manastone: Evasion +17"/>
+		<item id="167000558" min="1" max="5" name="Manastone: Crit Strike +17"/>
+	</wrapper_item>
+	<!-- Silver Medal Box -->
+	<wrapper_item id="188051439" count="1">
+		<item id="186000031" min="1" max="7" name="Silver Medal"/>
+	</wrapper_item>
+	<!-- Gold Medal Box -->
+	<wrapper_item id="188051440" count="1">
+		<item id="186000030" min="1" max="5" name="Gold Medal"/>
+	</wrapper_item>
+	<!-- Platinum Medal Box -->
+	<wrapper_item id="188051441" count="1">
+		<item id="186000096" min="1" max="3" name="Platinum Medal"/>
+	</wrapper_item>
+	<!-- Pouch of Scrolls -->
+	<wrapper_item id="188051442" count="1">
+		<item id="164000130" min="1" max="5" name="Major Spell Resist Scroll"/>
+		<item id="164000126" min="1" max="5" name="Major Strike Resist Scroll"/>
+		<item id="164000122" min="1" max="5" name="Major Crit Spell Scroll"/>
+		<item id="164000131" min="1" max="5" name="Fine Anti-Shock Scroll"/>
+		<item id="164000118" min="1" max="5" name="Major Crit Strike Scroll"/>
+		<item id="164002010" min="1" max="5" name="[Event] Greater Courage Scroll"/>
+		<item id="164002011" min="1" max="5" name="[Event] Greater Running Scroll"/>
+		<item id="164002012" min="1" max="5" name="[Event] Greater Raging Wind Scroll"/>
+	</wrapper_item>
+	<!-- Box of Enchantment Stones and Manastones I -->
+	<wrapper_item id="188051443" count="1">
+		<item id="167000551" min="1" max="5" name="Manastone: HP +95"/>
+		<item id="167000552" min="1" max="5" name="Manastone: MP +95"/>
+		<item id="167000518" min="1" max="5" name="Manastone: Attack +5"/>
+		<item id="167000557" min="1" max="5" name="Manastone: Block +27"/>
+		<item id="167000523" min="1" max="5" name="Manastone: Maximum Flight Time +6"/>
+		<item id="167000561" min="1" max="5" name="Manastone: Resist Magic +14"/>
+		<item id="167000556" min="1" max="5" name="Manastone: Parry +27"/>
+		<item id="167000555" min="1" max="5" name="Manastone: Magic Boost +27"/>
+		<item id="167000553" min="1" max="5" name="Manastone: Accuracy +27"/>
+		<item id="167000554" min="1" max="5" name="Manastone: Evasion +17"/>
+		<item id="167000558" min="1" max="5" name="Manastone: Crit Strike +17"/>
+		<item id="166000070" min="1" max="2" name="L70 Enchantment Stone"/>
+		<item id="166000075" min="1" max="2" name="L75 Enchantment Stone"/>
+	</wrapper_item>
+	<!-- Box of Enchantment Stones and Manastones II -->
+	<wrapper_item id="188051444" count="1">
+		<item id="167000551" min="2" max="5" name="Manastone: HP +95"/>
+		<item id="167000552" min="2" max="5" name="Manastone: MP +95"/>
+		<item id="167000518" min="2" max="5" name="Manastone: Attack +5"/>
+		<item id="167000557" min="2" max="5" name="Manastone: Block +27"/>
+		<item id="167000523" min="2" max="5" name="Manastone: Maximum Flight Time +6"/>
+		<item id="167000561" min="2" max="5" name="Manastone: Resist Magic +14"/>
+		<item id="167000556" min="2" max="5" name="Manastone: Parry +27"/>
+		<item id="167000555" min="2" max="5" name="Manastone: Magic Boost +27"/>
+		<item id="167000553" min="2" max="5" name="Manastone: Accuracy +27"/>
+		<item id="167000554" min="2" max="5" name="Manastone: Evasion +17"/>
+		<item id="167000558" min="2" max="5" name="Manastone: Crit Strike +17"/>
+		<item id="166000070" min="1" max="2" name="L70 Enchantment Stone"/>
+		<item id="166000075" min="1" max="2" name="L75 Enchantment Stone"/>
+		<item id="166000080" min="1" max="2" name="L80 Enchantment Stone"/>
+		<item id="166000085" min="1" max="2" name="L85 Enchantment Stone"/>
+	</wrapper_item>
+	<!-- Box of Enchantment Stones and Manastones III -->
+	<wrapper_item id="188051445" count="1">
+		<item id="167000551" min="3" max="5" name="Manastone: HP +95"/>
+		<item id="167000552" min="3" max="5" name="Manastone: MP +95"/>
+		<item id="167000518" min="3" max="5" name="Manastone: Attack +5"/>
+		<item id="167000557" min="3" max="5" name="Manastone: Block +27"/>
+		<item id="167000523" min="3" max="5" name="Manastone: Maximum Flight Time +6"/>
+		<item id="167000561" min="3" max="5" name="Manastone: Resist Magic +14"/>
+		<item id="167000556" min="3" max="5" name="Manastone: Parry +27"/>
+		<item id="167000555" min="3" max="5" name="Manastone: Magic Boost +27"/>
+		<item id="167000553" min="3" max="5" name="Manastone: Accuracy +27"/>
+		<item id="167000554" min="3" max="5" name="Manastone: Evasion +17"/>
+		<item id="167000558" min="3" max="5" name="Manastone: Crit Strike +17"/>
+		<item id="166000070" min="1" max="2" name="L70 Enchantment Stone"/>
+		<item id="166000075" min="1" max="2" name="L75 Enchantment Stone"/>
+		<item id="166000080" min="1" max="2" name="L80 Enchantment Stone"/>
+		<item id="166000085" min="1" max="2" name="L85 Enchantment Stone"/>
+		<item id="166000090" min="1" max="2" name="L90 Enchantment Stone"/>
+		<item id="166000095" min="1" max="2" name="L95 Enchantment Stone"/>
+	</wrapper_item>
+	<!-- Box of Balic Materials -->
+	<wrapper_item id="188051446" count="1">
+		<item id="152014001" min="1" max="5" name="Thick Balaur Horn"/>
+		<item id="152014003" min="1" max="5" name="Thick Balaur Skin"/>
+		<item id="152014002" min="1" max="5" name="Thick Balaur Scale"/>
+		<item id="152014020" min="1" max="5" name="Lustrous Balaur Meat"/>
+		<item id="186000032" min="1" max="5" name="Balaur Heart"/>
+		<item id="152014019" min="1" max="5" name="Burning Balaur Blood Stain"/>
+	</wrapper_item>
+	<!-- Box of Fluxes -->
+	<wrapper_item id="188051447" count="1">
+		<item id="152011073" min="1" max="5" name="Master Special Greater Armor Flux"/>
+		<item id="152011061" min="1" max="5" name="Master Superb Armor Flux"/>
+		<item id="152011062" min="1" max="5" name="Master Premium Armor Flux"/>
+		<item id="152011068" min="1" max="5" name="Master Special Greater Weapon Flux"/>
+		<item id="152011059" min="1" max="5" name="Master Superb Weapon Flux"/>
+		<item id="152011060" min="1" max="5" name="Master Premium Weapon Flux"/>
+		<item id="152011078" min="1" max="5" name="Master Special Greater Accessory Flux"/>
+		<item id="152011063" min="1" max="5" name="Master Superb Accessory Flux"/>
+		<item id="152011064" min="1" max="5" name="Master Premium Accessory Flux"/>
+	</wrapper_item>
+	<!-- Alluring Box -->
+	<wrapper_item id="188051448" count="1">
+		<item id="186000031" min="1" max="3" name="Silver Medal"/>
+		<item id="186000030" min="1" max="2" name="Gold Medal"/>
+		<item id="186000096" min="1" max="1" name="Platinum Medal"/>
+		<item id="166000080" min="1" max="1" name="L80 Enchantment Stone"/>
+		<item id="166000090" min="1" max="1" name="L90 Enchantment Stone"/>
+		<item id="166000100" min="1" max="1" name="L100 Enchantment Stone"/>
+		<item id="168000137" min="1" max="1" name="Godstone: Tymora's Training"/>
+		<item id="168000140" min="1" max="1" name="Godstone: Walzen's Vow"/>
+		<item id="168000139" min="1" max="1" name="Godstone: Kijan's Outcry"/>
+		<item id="168000135" min="1" max="1" name="Godstone: Inggness's Calmness"/>
+		<item id="168000138" min="1" max="1" name="Godstone: Mazion's Order"/>
+		<item id="168000136" min="1" max="1" name="Godstone: Vanktrist's Tears"/>
+		<item id="168000134" min="1" max="1" name="Godstone: Inggril's Terror"/>
+	</wrapper_item>
+	<!-- Lesser Relic Sack -->
+	<wrapper_item id="188051449" count="1">
+		<item id="186000054" min="0" max="5" name="Lesser Ancient Crown"/>
+		<item id="186000058" min="0" max="5" name="Lesser Ancient Goblet"/>
+		<item id="186000062" min="0" max="5" name="Lesser Ancient Seal"/>
+		<item id="186000066" min="0" max="5" name="Lesser Ancient Icon"/>
+	</wrapper_item>
+	<!-- Greater Relic Sack -->
+	<wrapper_item id="188051450" count="1">
+		<item id="186000052" min="0" max="3" name="Greater Ancient Crown"/>
+		<item id="186000056" min="0" max="3" name="Greater Ancient Goblet"/>
+		<item id="186000060" min="0" max="3" name="Greater Ancient Seal"/>
+		<item id="186000064" min="0" max="3" name="Greater Ancient Icon"/>
+	</wrapper_item>
+	<!-- Ickulnerk's Package -->
+	<wrapper_item id="188051451" count="1">
+		<item id="186000051" min="0" max="2" name="Major Ancient Crown"/>
+		<item id="186000055" min="0" max="2" name="Major Ancient Goblet"/>
+		<item id="186000059" min="0" max="2" name="Major Ancient Seal"/>
+		<item id="186000063" min="0" max="2" name="Major Ancient Icon"/>
+	</wrapper_item>
+	<!-- [Event] Light Yet Heavy Chest -->
+	<wrapper_item id="188051322" count="1">
+		<item id="169500927" min="0" max="1" race="ELYOS" name="Transformation: Krall IV"/>
+		<item id="169500931" min="0" max="1" race="ASMODIANS" name="Transformation: Krall IV"/>
+		<item id="169500919" min="0" max="1" race="ASMODIANS" name="Transformation: White Tiger IV"/>
+		<item id="169500923" min="0" max="1" race="ASMODIANS" name="Transformation: White Tiger IV"/>
+		<item id="169500933" min="0" max="1" name="Sleep: Scarecrow I"/>
+		<item id="169500932" min="0" max="1" name="Sleep: Frightcorn I"/>
+		<item id="169500947" min="0" max="1" race="ELYOS" name="Summon Divine Crystal IV"/>
+		<item id="169500951" min="0" max="1" race="ASMODIANS" name="Summon Divine Crystal IV"/>
+		<item id="169500939" min="0" max="1" race="ELYOS" name="Summon Divine Mirror IV"/>
+		<item id="169500943" min="0" max="1" race="ASMODIANS" name="Summon Divine Mirror IV"/>
+		<item id="169500935" min="0" max="1" name="Fear: Ginseng I"/>
+		<item id="169500934" min="0" max="1" name="Fear: Poppy I"/>
 	</wrapper_item>
 </wrapped_items>
