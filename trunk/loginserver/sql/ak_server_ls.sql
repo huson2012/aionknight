@@ -28,6 +28,7 @@ CREATE TABLE `account_data` (
   `membership` tinyint(3) NOT NULL default '0',
   `last_server` tinyint(3) NOT NULL default '-1',
   `last_ip` varchar(20) default NULL,
+  `last_mac` varchar(20) default NULL,
   `ip_force` varchar(20) default NULL,
   `credits` bigint(21) NOT NULL default '0',
   `email` varchar(30) default NULL,
@@ -35,6 +36,18 @@ CREATE TABLE `account_data` (
   PRIMARY KEY  (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for `banned_mac`
+-- ----------------------------
+	CREATE TABLE `banned_mac` (
+	  `uniId` int(10) NOT NULL auto_increment,
+	  `address` varchar(20) NOT NULL,
+	  `playerId` int(11) NOT NULL,
+	  `time` timestamp NOT NULL default '0000-00-00 00:00:00' on update CURRENT_TIMESTAMP,
+	  `details` varchar(255) NOT NULL default '',
+	  PRIMARY KEY  (`uniId`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `account_time`

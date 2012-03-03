@@ -139,6 +139,8 @@ public abstract class PlayerDAO implements IDFactoryAwareDAO
 	 */
 	public abstract int getOnlinePlayerCount();
 	
+	public abstract int getPlayerIdByName(final String name);
+	
 	@Override
 	public final String getClassName()
 	{

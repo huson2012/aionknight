@@ -214,6 +214,23 @@ public class MySQL5AccountDAO extends AccountDAO
 		return result > 0;
 	}
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean updateLastMac(final int accountId, final String mac) {
+        return DB.insertUpdate("UPDATE `account_data` SET `last_mac` = ? WHERE `id` = ?", new IUStH() {
+
+            @Override
+            public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException {
+                preparedStatement.setString(1, mac);
+                preparedStatement.setInt(2, accountId);
+                preparedStatement.execute();
+            }
+        });
+    }
+    
+	
 	/**
 	 * {@inheritDoc}
 	 */

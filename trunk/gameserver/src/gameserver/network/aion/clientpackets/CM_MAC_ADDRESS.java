@@ -22,12 +22,17 @@
 package gameserver.network.aion.clientpackets;
 
 import gameserver.network.aion.AionClientPacket;
+import gameserver.network.aion.AionConnection;
+import gameserver.network.loginserver.BannedMacManager;
+
+import org.apache.log4j.Logger;
 
 /**
  * In this packet client is sending Mac Address - haha.
  */
 public class CM_MAC_ADDRESS extends AionClientPacket
 {
+	private static final Logger                             log         = Logger.getLogger(CM_MAC_ADDRESS.class);
 	/**
 	 * Mac Addres send by client in the same format as: ipconfig /all [ie: xx-xx-xx-xx-xx-xx]
 	 * 
@@ -50,7 +55,10 @@ public class CM_MAC_ADDRESS extends AionClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readB(22);// some shit
+        readC();
+        short counter = (short)readH();
+        for(short i = 0; i < counter; i++)
+        readD();
 		macAddress = readS();
 	}
 
@@ -60,5 +68,13 @@ public class CM_MAC_ADDRESS extends AionClientPacket
 	@Override
 	protected void runImpl()
 	{
+	   if(BannedMacManager.getInstance().isBanned(macAddress)) {
+	           AionConnection client = getConnection();
+	            //TODO some information packets
+	            log.info("[MAC_AUDIT] "+macAddress+" ("+this.getConnection().getIP()+") was kicked due to mac ban");
+	            client.close(false);
+	        }
+	        else
+	            this.getConnection().setMacAddress(macAddress);
 	}
 }

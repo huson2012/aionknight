@@ -33,6 +33,7 @@ import gameserver.network.Crypt;
 import gameserver.network.aion.serverpackets.SM_KEY;
 import gameserver.network.factories.AionPacketHandlerFactory;
 import gameserver.network.loginserver.LoginServer;
+import gameserver.network.loginserver.serverpackets.SM_MAC;
 import gameserver.services.PlayerService;
 import gameserver.task.FIFORunnableQueue;
 import gameserver.utils.ThreadPoolManager;
@@ -66,6 +67,7 @@ public class AionConnection extends AConnection
 	private long lastPingTimeMS;
 	private int nbInvalidPackets = 0;
 	private final static int MAX_INVALID_PACKETS = 3;
+	private String macAddress;
 	public AionConnection(SocketChannel sc, Dispatcher d) throws IOException
 	{
 		super(sc, d);
@@ -205,8 +207,14 @@ public class AionConnection extends AConnection
 		/**
 		 * Client starts authentication procedure
 		 */
-		if(account != null)
+		if(account != null){
 			LoginServer.getInstance().aionClientDisconnected(account.getId());
+            
+            if(getMacAddress() != null)
+        	LoginServer.getInstance().sendBanMacPacket(new SM_MAC(getAccount().getId(), getMacAddress()));
+
+			log.info("[MAC_AUDIT] AccName=" + getAccount().getName() + ",MacAddress=" + getMacAddress() + "");
+        }
 		if(activePlayer != null)
 		{
 			final Player player = activePlayer;
@@ -358,6 +366,16 @@ public class AionConnection extends AConnection
 		this.account = account;
 	}
 
+	public void setMacAddress(String mac) 
+	{
+       this.macAddress = mac;
+    }
+
+    public String getMacAddress() 
+    {
+        return macAddress;
+    }
+		
 	/**
 	 * Sets Active player to new value. Update connection state to correct value.
 	 * 
@@ -405,5 +423,10 @@ public class AionConnection extends AConnection
 	public void setLastPingTimeMS(long lastPingTimeMS)
 	{
 		this.lastPingTimeMS = lastPingTimeMS;
+	}
+	
+	public void closeNow()
+	{
+		this.close(false);		
 	}
 }

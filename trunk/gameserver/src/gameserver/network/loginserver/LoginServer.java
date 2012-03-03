@@ -414,6 +414,15 @@ public class LoginServer
 			loginServer.sendPacket(new SM_BAN(type, accountId, ip, time, adminObjId));
 	}
 	
+	public boolean sendBanMacPacket(LsServerPacket pk) {
+		if (loginServer != null && loginServer.getState() == State.AUTHED) {
+			loginServer.sendPacket(pk);
+			return true;
+		}
+		else
+			return false;
+	}
+	
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
