@@ -101,4 +101,16 @@ public abstract class AccountDAO implements DAO
     {
         return AccountDAO.class.getName();
     }
+    
+	/**
+	 * Updates last mac that was used to access an account
+	 * 
+	 * @param accountId
+	 *          account id
+	 * @param mac
+	 *          mac address
+	 * @return was update successful or not
+	 */
+	public abstract boolean updateLastMac(int accountId, String mac);
+    
 }

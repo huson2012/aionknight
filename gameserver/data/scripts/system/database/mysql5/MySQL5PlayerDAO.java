@@ -427,7 +427,28 @@ public class MySQL5PlayerDAO extends PlayerDAO
 		}
 		return count;
 	}
-
+    @Override
+    public int getPlayerIdByName(final String name) {
+        Connection con = null;
+        int playerId = 0;
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement s = con.prepareStatement("SELECT `id` FROM `players` WHERE `name` = ?");
+            s.setString(1, name);
+            ResultSet rs = s.executeQuery();
+            rs.next();
+            playerId = rs.getInt("id");
+            rs.close();
+            s.close();
+        }
+        catch (Exception e) {
+            return 0;
+        }
+        finally {
+            DatabaseFactory.close(con);
+        }
+        return playerId;
+    }
 	/**
 	 * {@inheritDoc}
 	 */

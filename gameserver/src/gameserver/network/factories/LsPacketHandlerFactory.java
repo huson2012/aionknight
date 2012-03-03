@@ -47,6 +47,8 @@ public class LsPacketHandlerFactory
 		addPacket(new CM_REQUEST_KICK_ACCOUNT(0x02), State.AUTHED);
 		addPacket(new CM_LS_CONTROL_RESPONSE(0x04), State.AUTHED);
 		addPacket(new CM_BAN_RESPONSE(0x05), State.AUTHED);
+		addPacket(new CM_MACBAN_LIST(0x09), State.AUTHED);
+		addPacket(new CM_MACBAN_REQUEST_MAC(0x10), State.AUTHED);
 		addPacket(new CM_LS_REQUEST_CHARACTER_COUNT(0x06), State.AUTHED);
 
 	}

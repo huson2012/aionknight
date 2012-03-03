@@ -444,4 +444,18 @@ public class AccountController
 
         accountsCharacterCounts.get(accountId).put(gsid, characterCount);
     }
+    
+	/**
+	 * Refresh last_mac of account
+	 * 
+	 * @param accountId
+	 *          id of account
+	 * @param adress
+	 *          new macAdress
+	 * @return refreshed or not
+	 */
+	public static boolean refreshAccountsLastMac(int accountId, String address) {
+		return getAccountDAO().updateLastMac(accountId, address);
+	}
+	
 }

@@ -26,19 +26,25 @@ import java.util.ArrayList;
 import java.util.List;
 import loginserver.GameServerTable;
 import loginserver.dao.GameServersDAO;
+import loginserver.network.aion.AionConnection;
 import loginserver.network.gameserver.GsAuthResponse;
 import loginserver.network.gameserver.GsClientPacket;
 import loginserver.network.gameserver.GsConnection;
 import loginserver.network.gameserver.GsConnection.State;
 import loginserver.network.gameserver.serverpackets.SM_GS_AUTH_RESPONSE;
+import loginserver.network.gameserver.serverpackets.SM_MACBAN_LIST;
+import loginserver.utils.ThreadPoolManager;
 import commons.database.dao.DAOManager;
 import commons.network.IPRange;
+
+import org.apache.log4j.Logger;
 
 /**
  * This is authentication packet that gs will send to login server for registration.
  */
 public class CM_GS_AUTH extends GsClientPacket
 {
+	private static final Logger log = Logger.getLogger(AionConnection.class);
     /**
      * Password for authentication
      */
@@ -113,16 +119,22 @@ public class CM_GS_AUTH extends GsClientPacket
     @Override
     protected void runImpl()
     {
-        GsConnection client = getConnection();
+    	final GsConnection client = this.getConnection();
 
         GsAuthResponse resp = GameServerTable.registerGameServer(client, gameServerId, defaultAddress, ipRanges, port, maxPlayers, requiredAccess, password);
 
         switch (resp)
         {
             case AUTHED:
+            	log.info("Gameserver #"+gameServerId+" is now online.");
                 getConnection().setState(State.AUTHED);
                 DAOManager.getDAO(GameServersDAO.class).writeGameServerStatus(GameServerTable.getGameServerInfo(gameServerId));
                 sendPacket(new SM_GS_AUTH_RESPONSE(resp));
+				ThreadPoolManager.getInstance().schedule(new Runnable() {
+				@Override
+				public void run() {
+					client.sendPacket(new SM_MACBAN_LIST());
+			}}, 500);
                 break;
 
             default:

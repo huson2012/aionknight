@@ -345,4 +345,7 @@ public class AdminConfig
 	
 	@Property(key = "gameserver.administration.command.race", defaultValue = "3")
     public static int COMMAND_RACE;
+	
+	@Property(key = "gameserver.administration.command.banmac", defaultValue = "3")
+	public static int	COMMAND_BANMAC;
 }

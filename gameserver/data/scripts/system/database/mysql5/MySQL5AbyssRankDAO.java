@@ -1,3 +1,4 @@
+package mysql5;
 /**   
  * Эмулятор игрового сервера Aion 2.7 от команды разработчиков 'Aion-Knight Dev. Team' является 
  * свободным программным обеспечением; вы можете распространять и/или изменять его согласно условиям 
@@ -19,7 +20,6 @@
  * Версия серверной части : Aion-Knight 2.7 (Beta version)
  */
 
-package mysql5;
 
 import commons.database.DatabaseFactory;
 import gameserver.dao.AbyssRankDAO;

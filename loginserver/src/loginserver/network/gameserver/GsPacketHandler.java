@@ -31,6 +31,10 @@ import loginserver.network.gameserver.clientpackets.CM_BAN;
 import loginserver.network.gameserver.clientpackets.CM_GS_AUTH;
 import loginserver.network.gameserver.clientpackets.CM_GS_CHARACTER_COUNT;
 import loginserver.network.gameserver.clientpackets.CM_LS_CONTROL;
+import loginserver.network.gameserver.clientpackets.CM_MAC;
+import loginserver.network.gameserver.clientpackets.CM_MACBAN_CONTROL;
+import loginserver.network.gameserver.clientpackets.CM_REQUEST_MAC;
+
 import org.apache.log4j.Logger;
 
 class GsPacketHandler
@@ -92,6 +96,16 @@ class GsPacketHandler
                     case 0x07:
                         msg = new CM_GS_CHARACTER_COUNT(data, client);
                         break;
+                        
+                    case 0x10:
+                    	msg = new CM_MAC(data, client);
+                       	break;
+                    case 0x11:
+                      	msg = new CM_MACBAN_CONTROL(data, client);
+                       	break;
+                    case 0x12:
+                       	msg = new CM_REQUEST_MAC(data, client);
+                    break;
                     default:
                         unknownPacket(state, id);
                 }
