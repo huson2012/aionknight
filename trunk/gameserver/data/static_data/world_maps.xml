@@ -75,7 +75,7 @@
 	<map id="320060000" name="IDDF1B" instance="true" instanceMapId="38" cooldown="0" death_level="0" water_level="16" world_size="3072"/>
 	<map id="320070000" name="IDSpace" instance="true" instanceMapId="42" cooldown="0" death_level="0" water_level="16" world_size="512"/>
 	<map id="320080000" name="IDDF3_Dragon" nameid="401022" instance="true" instanceMapId="2" cooldown="360" death_level="0" water_level="16" world_size="1024"/>
-	<map id="320090000" name="IDDC1_arena" instance="true" death_level="0" water_level="16" world_size="512"/>
+	<map id="320090000" name="IDDC1_arena" death_level="0" water_level="16" world_size="512"/>
 	<map id="320100000" name="IDDF2_Dflame" nameid="400836" instance="true" instanceMapId="3" cooldown="30" death_level="0" water_level="16" world_size="512"/>
 	<map id="320110000" name="IDDF3_LP" nameid="401023" instance="true" instanceMapId="5" cooldown="10" death_level="0" water_level="16" world_size="1024"/>
 	<map id="320120000" name="IDDC1_Arena_3F" death_level="0" water_level="16" world_size="1024"/>
