@@ -25,6 +25,7 @@ import commons.database.dao.DAOManager;
 import gameserver.controllers.*;
 import gameserver.controllers.effect.EffectController;
 import gameserver.controllers.instances.*;
+import gameserver.controllers.instances.bosses.PadmarashkaController;
 import gameserver.dao.SpawnDAO;
 import gameserver.dataholders.DataManager;
 import gameserver.dataholders.NpcData;
@@ -49,6 +50,9 @@ import gameserver.world.NpcKnownList;
 import gameserver.world.StaticObjectKnownList;
 import gameserver.world.World;
 import org.apache.log4j.Logger;
+
+import gameserver.model.gameobjects.Monster;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -183,7 +187,13 @@ public class SpawnEngine
                 npc = new Npc(iDFactory.nextId(), new HaramelController(), spawn, template);
                 npc.setKnownlist(new StaticObjectKnownList(npc));
             }
-            
+			//Padmarashka
+			else if(objectId == 216580)
+			{
+				npc = null;
+				npc = new Monster(iDFactory.nextId(), new PadmarashkaController(), spawn, template);
+				npc.setKnownlist(new NpcKnownList(npc));
+			}
 			if (objectId == 216922 || objectId == 700852) 
 			{
                 npc = new Npc(iDFactory.nextId(), new HaramelController(), spawn, template);

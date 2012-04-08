@@ -777,15 +777,15 @@
 		<object x="273.92773" y="379.79358" z="236.16125" h="85" w="269"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220040000" npcid="700301" pool="1" interval="295">
+	<spawn map="220040000" npcid="730072" pool="1" interval="295">
 		<object staticid="276" x="2469.5613" y="2070.5999" z="577.19354" h="0"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220040000" npcid="700297" pool="1" interval="295">
+	<spawn map="220040000" npcid="700298" pool="1" interval="295">
 		<object staticid="279" x="318.48642" y="334.04617" z="229.62701" h="0"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220040000" npcid="700298" pool="1" interval="295">
+	<spawn map="220040000" npcid="700300" pool="1" interval="295">
 		<object staticid="458" x="2270.2322" y="1191.8589" z="469.47696" h="0"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
@@ -793,7 +793,7 @@
 		<object staticid="217" x="513.85345" y="1894.1755" z="261.23822" h="0"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220040000" npcid="700300" pool="1" interval="295">
+	<spawn map="220040000" npcid="700301" pool="1" interval="295">
 		<object staticid="63" x="1902.731" y="504.05188" z="412.11911" h="0"/>
 	</spawn>
 	<!-- Ocho (NPC Elite lvl:50)-->

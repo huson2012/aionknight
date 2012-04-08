@@ -759,23 +759,23 @@
 		<object x="2347.3225" y="2224.931" z="128.23569" h="120"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700258" pool="1" interval="295">
+	<spawn map="220020000" npcid="700213" pool="1" interval="295">
 		<object x="1095.8608" y="2482.1711" z="240.43764" h="45"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700260" pool="1" interval="295">
+	<spawn map="220020000" npcid="700068" pool="1" interval="295">
 		<object x="2803.048" y="1101.1567" z="171.84885" h="65"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700259" pool="1" interval="295">
+	<spawn map="220020000" npcid="700067" pool="1" interval="295">
 		<object x="1782.7863" y="1669.5" z="199.17012" h="75"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700232" pool="1" interval="295">
+	<spawn map="220020000" npcid="700066" pool="1" interval="295">
 		<object x="2384.385" y="1750.1564" z="102.37332" h="5"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700231" pool="1" interval="295">
+	<spawn map="220020000" npcid="700064" pool="1" interval="295">
 		<object x="268.0237" y="2338.6914" z="444.12332" h="3"/>
 	</spawn>
 	<!-- Odella Rope (Object Normal lvl:1)-->
