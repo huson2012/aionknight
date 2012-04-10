@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<spawns>
+  <spawn map="900100000" npcid="700012" pool="1" interval="105">
+    <object x="500.149017" y="529.290344" z="22.144632" h="0" />
+  </spawn>
+  <spawn map="900100000" npcid="700062" pool="1" interval="105">
+    <object x="502.689484" y="529.336060" z="22.144632" h="0" />
+  </spawn>
+</spawns>

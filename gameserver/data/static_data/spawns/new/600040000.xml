@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spawns>
+    <spawn map="600040000" npcid="205957" pool="1" interval="105">
+        <object x="753.570984" y="125.951820" z="1198.619507" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="205958" pool="1" interval="105">
+        <object x="754.218445" y="187.022064" z="1203.753296" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="205959" pool="1" interval="105">
+        <object x="753.570984" y="1409.987305" z="1199.940918" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="205960" pool="1" interval="105">
+        <object x="754.218445" y="1352.442871" z="1205.074707" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="206232" pool="1" interval="105">
+        <object x="145.637024" y="768.059631" z="1207.756592" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="206233" pool="1" interval="105">
+        <object x="145.618103" y="768.255676" z="1207.768066" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="701304" pool="1" interval="105">
+        <object x="754.778992" y="13.973127" z="1198.661743" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="701305" pool="1" interval="105">
+        <object x="754.233521" y="1522.359497" z="1198.207642" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="730578" pool="1" interval="105">
+        <object x="754.182861" y="232.954666" z="1185.260498" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="730579" pool="1" interval="105">
+        <object x="754.182861" y="1300.984741" z="1185.260498" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="730586" pool="1" interval="105">
+        <object x="1356.514038" y="612.971252" z="1184.369751" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="730587" pool="1" interval="105">
+        <object x="1356.514038" y="918.673401" z="1184.369751" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="800303" pool="1" interval="105">
+        <object x="754.215515" y="1295.237305" z="1184.618286" h="0" />
+    </spawn>
+    <spawn map="600040000" npcid="800304" pool="2" interval="105">
+        <object x="749.128235" y="1304.524902" z="1185.554199" h="0" />
+        <object x="759.262390" y="236.446884" z="1185.593872" h="0" />
+    </spawn>
+</spawns>
