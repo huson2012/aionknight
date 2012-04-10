@@ -140,7 +140,7 @@ public class _2018ReconstructingImpetusium extends QuestHandler
 										PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_LOOT, 0,
 											targetObjectId), true);
 
-										QuestService.addNewSpawn(player.getWorldId(), player.getInstanceId(), 210752, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true);
+										QuestService.addNewSpawn(220030000, 1, 210752, (float) 2896.0222,(float) 1742.4811, (float) 256.0247, (byte) 87, true);
 										npc.getController().onDie(null);
 										
 									}
