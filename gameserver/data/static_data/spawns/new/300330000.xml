@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <spawns>
-  <spawn map="300330000" npcid="205795" pool="1" interval="105">
-    <object x="250.331360" y="245.210098" z="127.651199" h="0" />
-  </spawn>
-  <spawn map="300330000" npcid="207070" pool="1" interval="105">
-    <object x="220.370941" y="244.475113" z="127.080170" h="0" />
-  </spawn>
-  <spawn map="300330000" npcid="730493" pool="1" interval="105">
-    <object x="250.348007" y="245.209717" z="126.629387" h="0" />
-  </spawn>
-  <spawn map="300330000" npcid="730498" pool="1" interval="105">
-    <object x="211.819763" y="244.358536" z="127.636017" h="0" />
-  </spawn>
+    <spawn map="300330000" npcid="205795" pool="1" interval="105">
+        <object x="250.331360" y="245.210098" z="127.651199" h="0" />
+    </spawn>
+    <spawn map="300330000" npcid="207070" pool="1" interval="105">
+        <object x="220.370941" y="244.475113" z="127.080170" h="0" />
+    </spawn>
+    <spawn map="300330000" npcid="730493" pool="1" interval="105">
+        <object x="250.348007" y="245.209717" z="126.629387" h="0" />
+    </spawn>
+    <spawn map="300330000" npcid="730498" pool="1" interval="105">
+        <object x="211.819763" y="244.358536" z="127.636017" h="0" />
+    </spawn>
 </spawns>
