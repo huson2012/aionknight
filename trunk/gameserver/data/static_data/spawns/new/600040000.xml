@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <spawns>
     <spawn map="600040000" npcid="205957" pool="1" interval="105">
         <object x="753.570984" y="125.951820" z="1198.619507" h="0" />

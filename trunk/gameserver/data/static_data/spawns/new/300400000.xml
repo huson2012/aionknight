@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <spawns>
-  <spawn map="300400000" npcid="800021" pool="2" interval="105">
-    <object x="540.255066" y="675.179932" z="187.269653" h="0" />
-    <object x="540.155029" y="675.153625" z="187.269653" h="0" />
-  </spawn>
+    <spawn map="300400000" npcid="800021" pool="2" interval="105">
+        <object x="540.255066" y="675.179932" z="187.269653" h="0" />
+        <object x="540.155029" y="675.153625" z="187.269653" h="0" />
+    </spawn>
 </spawns>
