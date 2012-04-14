@@ -442,12 +442,12 @@
 		<exitpoint mapid="220020000" x="1243.5" y="263.9" z="531.3"/>
 	</portal>
 	<!-- Abyss Gate [Sealing the Abyss Gate] Elyos -->
-	<portal npcid="700141" instance="true" group="true" race="ELYOS">
+	<portal npcid="700089" instance="true" group="true" race="ELYOS">
 		<entrypoint mapid="210030000" x="2684.308" y="1068.7382" z="199.375" race="ELYOS"/>
 		<exitpoint mapid="310030000" x="270.5" y="174.3" z="204.3"/>
 	</portal>
 	<!-- Abyss Gate [Crushing the Conspiracy] Asmodians -->
-	<portal npcid="700089" instance="false" group="false" race="ASMODIANS">
+	<portal npcid="700141" instance="false" group="false" race="ASMODIANS">
 		<entrypoint mapid="220030000" x="2452.0867" y="2547.304" z="317.40292" race="ASMODIANS"/>
 		<exitpoint mapid="320030000" x="275.68" y="164.03" z="205.19"/>
 	</portal>
@@ -1115,5 +1115,25 @@
 	<portal npcid="730067" instance="false" minlevel="20" maxlevel="60" group="false">
 		<entrypoint mapid="310080000" x="275.82724" y="293.03287" z="163.0512"/>
 		<exitpoint mapid="110010000" x="1466.929" y="1335.5696" z="566.41583"/>
+	</portal>
+	<!--Портал в ПВП Тахмес у элийцев-->
+	<portal npcid="880011" instance="false" minlevel="40" maxlevel="60" group="false" race="ELYOS">
+        <entrypoint mapid="110010000" x="1366.326" y="1476.1835" z="569.03845"/>
+        <exitpoint mapid="300310000" x="859.3971" y="950.1172" z="1206.625"/>
+	</portal>
+	<!--Портал в Элизиум из Тахмес-->
+	<portal npcid="880022" instance="false" minlevel="40" maxlevel="60" group="false" race="ELYOS">
+        <entrypoint mapid="300310000" x="859.3971" y="950.1172" z="1206.625"/>
+        <exitpoint mapid="110010000" x="1366.326" y="1476.1835" z="569.03845"/>
+	</portal>
+	<!--Портал в ПВП Тахмес у асмодиан-->
+	<portal npcid="880033" instance="false" minlevel="40" maxlevel="60" group="false" race="ASMODIANS">
+        <entrypoint mapid="120010000" x="1599.8307" y="1416.4928" z="193.12859"/>
+        <exitpoint mapid="300310000" x="611.12146" y="687.7791" z="1184.5709"/>
+	</portal>
+	<!--Портал в Пандемониум из Тахмес-->
+	<portal npcid="880044" instance="false" minlevel="40" maxlevel="60" group="false" race="ASMODIANS">
+        <entrypoint mapid="300310000" x="611.12146" y="687.7791" z="1184.5709"/>
+		<exitpoint mapid="120010000" x="1599.8307" y="1416.4928" z="193.12859"/>
 	</portal>
 </portal_templates>
