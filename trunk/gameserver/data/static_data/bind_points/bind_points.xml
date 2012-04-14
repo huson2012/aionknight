@@ -38,7 +38,7 @@
 	<bind_point name="Observatory Village" npcid="700255" bindid="21" mapid="210060000" posX="2277.6" posY="2250.0" posZ="61.9" price="22000"/>
 	<bind_point name="Jamanok Inn" npcid="700256" bindid="22" mapid="210060000" posX="546.7" posY="1241.8" posZ="89.6" price="24750"/>
 	<bind_point name="Anangke Scavation Camp" npcid="700816" bindid="61" mapid="210060000" posX="2676.1" posY="811.9" posZ="138.3" price="24750"/>
-	<bind_point name="Josnack Vigil" npcid="700817" bindid="62" mapid="210060000" posX="910.5" posY="2780.5" posZ="62.1" price="24750"/>
+	<!--<bind_point name="Josnack Vigil" npcid="700817" bindid="62" mapid="210060000" posX="910.5" posY="2780.5" posZ="62.1" price="24750"/> Не работает Кибелиск-->
 	<!-- Ishalgen -->
 	<bind_point name="Aldelle Village" npcid="700062" bindid="23" mapid="220010000" posX="589.9" posY="2464.8" posZ="278.7" price="110"/>
 	<bind_point name="Anturoon Sentry Post" npcid="700063" bindid="24" mapid="220010000" posX="936.3" posY="1708.9" posZ="259.5" price="330"/>
@@ -60,7 +60,7 @@
 	<bind_point name="Beluslan Fortress" npcid="700298" bindid="34" mapid="220040000" posX="321.8" posY="335.0" posZ="229.6" price="8800"/>
 	<bind_point name="Besfer Refugee Camp" npcid="700299" bindid="35" mapid="220040000" posX="516.9" posY="1892.5" posZ="261.3" price="13530"/>
 	<bind_point name="Red Mane Cavern" npcid="700300" bindid="36" mapid="220040000" posX="2269.9" posY="1194.7" posZ="469.6" price="15180"/>
-	<bind_point name="Camp Kistenian" npcid="700301" bindid="37" mapid="220040000" posX="1903.4" posY="500.6" posZ="412.1" price="10780"/>
+	<!--<bind_point name="Camp Kistenian" npcid="700301" bindid="37" mapid="220040000" posX="1903.4" posY="500.6" posZ="412.1" price="10780"/> Кибелиск под землей-->
 	<bind_point name="Hoarfrost Shelter" npcid="730072" bindid="38" mapid="220040000" posX="2466.6" posY="2072.4" posZ="577.2" price="13860"/>
 	<!-- Brusthonin -->
 	<bind_point name="Settlers Campsite" npcid="700258" bindid="39" mapid="220050000" posX="2926.2" posY="2430.3" posZ="17.0" price="2970"/>
@@ -77,7 +77,7 @@
 	<bind_point name="Soteria Sanctuary Village" npcid="730236" bindid="50" mapid="210050000" posX="2713.138" posY="1477.9487" posZ="382.73615" price="2500"/>
 	<bind_point name="Inggison Illusion Fortress" npcid="730235" bindid="51" mapid="210050000" posX="1383.5642" posY="307.56992" posZ="588.8713" price="2500"/>
 	<!-- Gelkmaros -->
-	<bind_point name="Subterranea Observation Post" npcid="730283" bindid="59" mapid="220070000" posX="2503.7341" posY="2147.3342" posZ="464.5959" price="2500"/>
+	<!--<bind_point name="Subterranea Observation Post" npcid="730283" bindid="59" mapid="220070000" posX="2503.7341" posY="2147.3342" posZ="464.5959" price="2500"/> Кибелиск под землей-->
 	<bind_point name="Rhonnam Refugee Village" npcid="730239" bindid="57" mapid="220070000" posX="845.4408" posY="1737.7224" posZ="354.39233" price="2500"/>
 	<bind_point name="Gelkmaros Fortress" npcid="730238" bindid="56" mapid="220070000" posX="1763.5935" posY="2911.5764" posZ="554.7982" price="2500"/>
         <bind_point name="Vorgaltem Scout Post" npcid="730284" bindid="62" mapid="220070000" posX="1294.6537" posY="1562.8391" posZ="304.375" price="3540"/>

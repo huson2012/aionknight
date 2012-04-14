@@ -1198,15 +1198,15 @@
 		<object x="1620.66660" y="2740.50830" z="123.60840" h="108"/>
 	</spawn>
 	<!-- Obelisk Arbolus Haven (Object Normal lvl:3) -->
-	<spawn map="210040000" npcid="700026" pool="1" interval="295">
+	<spawn map="210040000" npcid="700399" pool="1" interval="295">
 		<object x="153.92722" y="1613.04040" z="121.80013" h="110"/>
 	</spawn>
 	<!-- Obelisk New Heiron Gate (Object Normal lvl:3) -->
-	<spawn map="210040000" npcid="700024" pool="1" interval="295">
+	<spawn map="210040000" npcid="700025" pool="1" interval="295">
 		<object x="2468.51860" y="300.03873" z="416.21384" h="25"/>
 	</spawn>
 	<!-- Obelisk Heiron Observatory (Object Normal lvl:3) -->
-	<spawn map="210040000" npcid="700025" pool="1" interval="295">
+	<spawn map="210040000" npcid="700026" pool="1" interval="295">
 		<object x="1450.84020" y="1346.63930" z="175.43262" h="115"/>
 	</spawn>
 	<!-- Obelisk Senea Campsite (Object Normal lvl:3) -->

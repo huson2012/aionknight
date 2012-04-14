@@ -729,7 +729,7 @@
 		<object x="1800.19590" y="711.43225" z="262.62534" h="3"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220030000" npcid="700097" pool="1" interval="295">
+	<spawn map="220030000" npcid="700297" pool="1" interval="295">
 		<object staticid="238" x="2656.6917" y="1660.3958" z="324.78445" h="0"/>
 	</spawn>
 	<!-- Observatory Guard (NPC Normal lvl:20)-->

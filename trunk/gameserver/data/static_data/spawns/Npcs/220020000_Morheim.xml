@@ -751,7 +751,7 @@
 		<object x="224.0129" y="2320.1252" z="446.31628" h="19"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
-	<spawn map="220020000" npcid="700213" pool="1" interval="295">
+	<spawn map="220020000" npcid="700065" pool="1" interval="295">
 		<object x="626.35565" y="907.8696" z="360.8784" h="3"/>
 	</spawn>
 	<!-- Obelisk (Object Normal lvl:3)-->
