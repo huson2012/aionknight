@@ -141,10 +141,11 @@
 		<object x="408.5752" y="508.37042" z="359.01425" h="92"/>
 		<object x="290.68695" y="733.0676" z="364.93622" h="73"/>
 	</spawn>
-	<!-- Shining Magic Ward (Object Normal lvl:1) -->
+	<!-- Shining Magic Ward (Object Normal lvl:1) 
 	<spawn map="300080000" npcid="700530" pool="1" interval="295">
 		<object staticid="1" x="672.83" y="606.22" z="321.19" h="66"/>
 	</spawn>
+	-->
 	<!-- TreasureRoom_Sensory_C (NPC Normal lvl:3) -->
 	<spawn map="300080000" npcid="206089" pool="1" interval="295">
 		<object x="572.7178" y="585.92645" z="354.0" h="60"/>

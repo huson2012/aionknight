@@ -314,7 +314,7 @@
 		</guards>
 		<!-- Fortress Instance: Right Wing Chamber -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700531" npcid_li="700456" x="2541.48" y="2856" z="1490.21" h="0" static_id="1213"/>
+			<baseinfo npcid_dr="0" npcid_da="700531" npcid_li="700456" x="2541.48" y="2856" z="1490.21" h="59" static_id="1213"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -589,7 +589,7 @@
 		</instance_portal> -->
 		<!-- Fortress Instance: Miren -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700536" npcid_li="700483" x="1815.42" y="2321.04" z="2932.57" h="0" static_id="1217"/>
+			<baseinfo npcid_dr="0" npcid_da="700536" npcid_li="700483" x="1815.0714" y="2321.572" z="2931.347" h="43" static_id="1217"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -1398,7 +1398,7 @@
 		</guards>
 		<!-- Fortress Instance: Sulfur -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700529" npcid_li="700452" x="1344.0713" y="1243.7053" z="1498.3137" h="0" static_id="34"/>
+			<baseinfo npcid_dr="0" npcid_da="700529" npcid_li="700452" x="1344.0713" y="1243.7053" z="1498.3137" h="9" static_id="34"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -1653,7 +1653,7 @@
 		</guards>
 		<!-- Instance Fortress: Asteria -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700533" npcid_li="700460" x="705.446" y="2921.74" z="2880.84" h="0" static_id="71"/>
+			<baseinfo npcid_dr="0" npcid_da="700533" npcid_li="700460" x="704.9808" y="2922.2163" z="2880.9604" h="46" static_id="71"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -1683,7 +1683,7 @@
   		</fortress_gate>
 		<!-- Artefact - Regard apaisant d'Asteria-->
 		<artifact>
-			<baseinfo npcid_dr="277065" npcid_da="277064" npcid_li="277063" x="708.0636" y="2915.918" z="2876.2573" h="6"/>
+			<baseinfo npcid_dr="277065" npcid_da="277064" npcid_li="277063" x="708.0636" y="2915.918" z="2876.2573" h="106"/>
 			<artifact_effect skillid="12074" range="WORLD"/>
 		</artifact>
 		<!-- Fortress Instance 
@@ -2305,7 +2305,7 @@
 		</guards>
 		<!-- Fortress Instance: Krotan -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700534" npcid_li="700458" x="2011.16" y="1252.54" z="2947.0" h="0" static_id="1218"/>
+			<baseinfo npcid_dr="0" npcid_da="700534" npcid_li="700458" x="2011.3734" y="1251.6195" z="2945.3445" h="94" static_id="1218"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -2592,7 +2592,7 @@
 		</guards>
 		<!-- Instance Fortress: Kysis -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700535" npcid_li="700481" x="2532.26" y="2064.39" z="3034.0" h="0" static_id="32"/>
+			<baseinfo npcid_dr="0" npcid_da="700535" npcid_li="700481" x="2532.26" y="2064.39" z="3034.0" h="5" static_id="32"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -2952,7 +2952,7 @@
 		</guards>
 		<!-- Fortress Instance: Roah -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700532" npcid_li="700479" x="2712.53" y="757.886" z="2855.45" h="0" static_id="1210"/>
+			<baseinfo npcid_dr="0" npcid_da="700532" npcid_li="700479" x="2712.5066" y="757.6218" z="2854.295" h="66" static_id="1210"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
