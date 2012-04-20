@@ -1653,7 +1653,7 @@
 		</guards>
 		<!-- Instance Fortress: Asteria -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700533" npcid_li="700460" x="704.9808" y="2922.2163" z="2880.9604" h="46" static_id="71"/>
+			<baseinfo npcid_dr="0" npcid_da="700533" npcid_li="700460" x="704.9808" y="2922.2163" z="2880.9604" h="224" static_id="71"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -2592,7 +2592,7 @@
 		</guards>
 		<!-- Instance Fortress: Kysis -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700535" npcid_li="700481" x="2532.26" y="2064.39" z="3034.0" h="5" static_id="32"/>
+			<baseinfo npcid_dr="0" npcid_da="700535" npcid_li="700481" x="2533.1843" y="2064.735" z="3031.8384" h="5" static_id="32"/>
 		</instance_portal>
 		<!-- Fortress General -->
 		<fortress_general>
@@ -5116,7 +5116,7 @@
 		</guards>
 		<!-- Esoterrace Entrance Asmodian -->
 		<instance_portal>
-			<baseinfo npcid_dr="0" npcid_da="700138" npcid_li="0" x="1123.99" y="854.81" z="310.71" h="0"/>
+			<baseinfo npcid_dr="0" npcid_da="700138" npcid_li="0" x="1123.99" y="854.81" z="327.56" h="0"/>
 		</instance_portal>
 		<!-- Fortress General - Ulsarak/ Stallari /Dux -->
 		<fortress_general>
